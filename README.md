@@ -39,6 +39,6 @@ npx wrangler pages deploy site --project-name temp-btf --branch rebuild-initial
 - [x] Route inventory
 - [x] Assets and fonts copied
 - [x] Pages rebuilt
-- [ ] Side-by-side check against live site
-- [ ] Draft deployed to temp-btf
+- [x] Side-by-side check against live site (page text matches on `/`; `/resources` differs only by the draft placeholders)
+- [x] Draft deployed to temp-btf (preview: https://rebuild-initial.temp-btf.pages.dev)
 - [ ] Integrations approved (forms, WhatsApp, analytics)
