@@ -8,8 +8,9 @@ Make a close visual and functional copy of the current Framer site first. No red
 
 ## Layout
 
-- `source-framer/` : original Framer export, kept unmodified for comparison
-- `site/` : rebuilt site (deployed to Cloudflare Pages)
+- `source-framer/` : local-only copy of the Framer export, kept unmodified for comparison. It is NOT committed (it is listed in `.gitignore`) because the export contains Google Apps Script deployment IDs and this repo is public.
+- `site/` : rebuilt site (deployed to Cloudflare Pages). Deployment IDs are removed from it.
+- `scripts/build_site.py` : rebuilds `site/` from `source-framer/` and applies the draft rules.
 - `docs/route-inventory.md` : every route found, marked included, skipped, or redirected
 
 ## Workflow
@@ -18,13 +19,14 @@ Make a close visual and functional copy of the current Framer site first. No red
 - Do not push to `main` without approval. The Pages project treats `main` as production.
 - Deploy directly with Wrangler to the `temp-btf` Pages project as a preview/branch deployment.
 - Use only existing `wrangler login` or `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ACCOUNT_ID` environment variables. Never print, paste, or commit tokens.
+- Before every commit and every deploy, two leak checks must return nothing: a `git grep` for the Google Apps Script macros URL, and a `grep -r` of `site/` for the Apps Script deployment ID prefix. The exact commands are in the build log.
 
 ## Draft-deploy rules
 
-- Contact and waitlist forms are non-submitting placeholders, clearly marked "Draft - not live".
-- WhatsApp and other outbound links are real only if approved; otherwise they point to `#`.
-- No analytics scripts.
-- `noindex` meta tag and `robots.txt` disallow on the temp site.
+- Contact and waitlist forms are non-submitting placeholders, clearly marked "Draft - not live". The two embedded Apps Script resource widgets on `/resources` are replaced by the same kind of disabled placeholder.
+- WhatsApp and other outbound links are real only if approved; otherwise they point to `#`. The `cdm-sep2026.biketourfrance.net` link on the home page points to `#`.
+- No analytics scripts. Framer editor and `api.framer.com` calls are removed or blocked.
+- `noindex` meta tag on every page, `X-Robots-Tag` header, and `robots.txt` with `Disallow: /` on the temp site.
 
 ## Deploy (example)
 
@@ -34,9 +36,9 @@ npx wrangler pages deploy site --project-name temp-btf --branch rebuild-initial
 
 ## Status
 
-- [ ] Route inventory
-- [ ] Assets and fonts copied
-- [ ] Pages rebuilt
+- [x] Route inventory
+- [x] Assets and fonts copied
+- [x] Pages rebuilt
 - [ ] Side-by-side check against live site
 - [ ] Draft deployed to temp-btf
 - [ ] Integrations approved (forms, WhatsApp, analytics)
