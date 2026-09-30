@@ -1,0 +1,34 @@
+# Secrets
+.env
+.env.*
+!.env.example
+.dev.vars
+*.pem
+*.key
+
+# Cloudflare / Wrangler
+.wrangler/
+.cloudflare/
+
+# Dependencies and builds
+node_modules/
+dist/
+build/
+.cache/
+.next/
+.astro/
+
+# Logs
+*.log
+npm-debug.log*
+
+# macOS
+.DS_Store
+.AppleDouble
+.Spotlight-V100
+.Trashes
+
+# Editors
+.vscode/
+.idea/
+*.swp
