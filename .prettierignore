@@ -1,0 +1,6 @@
+dist
+site
+node_modules
+.astro
+package-lock.json
+docs

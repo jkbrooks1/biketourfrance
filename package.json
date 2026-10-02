@@ -3,16 +3,30 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Staging static site for btf.net (Framer rebuild), built with Astro and deployed to Cloudflare Pages project temp-btf.",
+  "description": "BikeTourFrance website: native Astro build deployed to Cloudflare Pages (project temp-btf) from GitHub.",
   "scripts": {
     "build:site": "python3 scripts/build_site.py",
+    "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "check": "astro check",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "verify": "node scripts/verify-dist.mjs",
+    "test": "npm run check && npm run build && npm run verify"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
+    "@fontsource-variable/montserrat": "^5.3.0",
     "astro": "7.3.5"
   },
   "engines": {
     "node": ">=22.12.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "prettier": "^3.9.9",
+    "prettier-plugin-astro": "^1.1.0",
+    "typescript": "^6.0.3"
   }
 }
