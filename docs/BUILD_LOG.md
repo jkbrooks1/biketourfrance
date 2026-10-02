@@ -7,5 +7,5 @@ Append-only. Concise timestamped entries. No secrets. Each entry is also appende
 - Added minimal Astro setup (astro.config.mjs publicDir=site, package.json, .node-version 22, src/pages/404.astro). Build: npm run build -> dist/ (404.html plus site files unchanged).
 - Staging protections: robots meta "noindex, nofollow, noarchive" on every page including 404; X-Robots-Tag "noindex, nofollow, noarchive" via _headers; robots.txt Disallow /. No forms or analytics exist; none added.
 - Added docs/cutover.md (future process only; no DNS or custom-domain action taken). README updated.
-- Local test: / 200, /resources/ 200, unknown path 404 with X-Robots-Tag. Leak checks (macros URL, AKfycb) empty.
+- Local test: / 200, /resources/ 200, unknown path 404 with X-Robots-Tag. Both leak checks (Apps Script macros URL; Apps Script deployment ID prefix) returned nothing.
 - Pre-push baseline of Pages Production deployments: 33307963 (main@420030a) and b12b3456. Expect no new Production deployment after the preview push.
