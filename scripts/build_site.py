@@ -11,7 +11,7 @@ Draft-deploy transformations (nothing else is changed):
   - Framer api.framer.com calls in the runtime pointed at an inert URL
   - Framer runtime page metadata robots value set to noindex, nofollow (the runtime
     rewrites the robots meta tag after load)
-  - robots.txt (Disallow: /) and _headers (X-Robots-Tag: noindex)
+  - robots.txt (Disallow: /) and _headers (X-Robots-Tag: noindex, nofollow, noarchive)
   - Framer editor-only folders (api.framer.com, events.framer.com, framer.com) left out
 
 source-framer/ is gitignored because the export contains Apps Script deployment IDs.
@@ -36,7 +36,7 @@ IFRAME = re.compile(r"<iframe\b.*?</iframe>(?:\s*\\?`\\?`\\?`)?", re.S | re.I)
 APPS_SCRIPT = re.compile(r"https://script\.google\.com/macros/s/[A-Za-z0-9_-]+/exec")
 FRAMER_API = "https://api.framer.com/"
 CDM_LINK = 'href="https://cdm-sep2026.biketourfrance.net"'
-NOINDEX = '<meta name="robots" content="noindex">'
+NOINDEX = '<meta name="robots" content="noindex, nofollow, noarchive">'
 
 RESOURCES_URL = "https://resources.biketourfrance.net/"
 PLACEHOLDER = (
@@ -49,7 +49,7 @@ PLACEHOLDER = (
 )
 
 ROBOTS = "User-agent: *\nDisallow: /\n"
-HEADERS = "/*\n  X-Robots-Tag: noindex, nofollow\n"
+HEADERS = "/*\n  X-Robots-Tag: noindex, nofollow, noarchive\n"
 
 
 def transform(text, is_html, counts):
@@ -60,7 +60,7 @@ def transform(text, is_html, counts):
     if FRAMER_API in text:
         counts["framer_api_calls_blocked"] += text.count(FRAMER_API)
         text = text.replace(FRAMER_API, "about:blank#blocked-")
-    text, n = re.subn(r"robots:`max-image-preview:large`", "robots:`noindex, nofollow`", text)
+    text, n = re.subn(r"robots:`max-image-preview:large`", "robots:`noindex, nofollow, noarchive`", text)
     counts["runtime_robots_patched"] += n
     if is_html:
         text, n = re.subn(re.escape(CDM_LINK), 'href="#"', text)
