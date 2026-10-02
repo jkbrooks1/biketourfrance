@@ -1,0 +1,45 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/brand/btf-logo-white.png';
+import { CONTACT_LINKS, LEGAL_NAV, NAV, SITE } from '../data/site';
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div>
+        <p class="site-footer__brand">
+          <Image src={logo} alt="" width={48} height={48} loading="lazy" />
+          <span>{SITE.name}</span>
+        </p>
+        <p>Small-group, self-supported bicycle tours in France, led by John Brooks. {SITE.tagline}</p>
+        <p>
+          <a href={CONTACT_LINKS.general}>{SITE.email}</a>
+        </p>
+      </div>
+      <nav aria-label="Site">
+        <h2>Explore</h2>
+        <ul>
+          {NAV.map((item) => (
+            <li>
+              <a href={item.href}>{item.label}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <nav aria-label="Legal">
+        <h2>Legal</h2>
+        <ul>
+          {LEGAL_NAV.map((item) => (
+            <li>
+              <a href={item.href}>{item.label}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
+    <small>
+      &copy; {new Date().getUTCFullYear()} {SITE.name}
+    </small>
+  </div>
+</footer>

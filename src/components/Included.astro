@@ -1,0 +1,38 @@
+---
+// The single "What's included / What you arrange separately" statement. Used on the home page and the CDM page.
+import { CDM_FACTS, INCLUDED, SEPARATE } from '../data/cdm2027';
+
+interface Props {
+  headingLevel?: 'h2' | 'h3';
+}
+const { headingLevel = 'h2' } = Astro.props;
+const Heading = headingLevel;
+const SubHeading = headingLevel === 'h2' ? 'h3' : 'h4';
+---
+
+<div class="included">
+  <Heading>What is included, and what you arrange separately</Heading>
+  <div class="notice">
+    <p>
+      <strong>Dates and pricing are not final.</strong> {CDM_FACTS.datesNote} {CDM_FACTS.pricingNote}
+    </p>
+  </div>
+  <div class="two-col" style="margin-top: 1.5rem">
+    <div class="card">
+      <SubHeading>Included</SubHeading>
+      <ul>
+        {INCLUDED.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    </div>
+    <div class="card">
+      <SubHeading>You arrange separately</SubHeading>
+      <ul>
+        {SEPARATE.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,145 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Photo from '../components/Photo.astro';
+import Included from '../components/Included.astro';
+import Gallery from '../components/Gallery.astro';
+import ContactCta from '../components/ContactCta.astro';
+import { CDM_FACTS, CDM_STATS } from '../data/cdm2027';
+import { GALLERY, PHOTOS } from '../data/photos';
+import { CONTACT_LINKS } from '../data/site';
+---
+
+<BaseLayout
+  home
+  path="/"
+  title="BikeTourFrance.net: small-group bicycle tours in France"
+  description="Small-group, self-supported bicycle tours in France led by John Brooks, including four Canal des Deux Mers departures in 2027, plus help planning your own trip."
+>
+  <section class="hero">
+    <div class="hero__media">
+      <Photo
+        src={PHOTOS.hero.src}
+        alt={PHOTOS.hero.alt}
+        priority
+        widths={[640, 960, 1440, 2000]}
+        sizes="100vw"
+      />
+    </div>
+    <div class="container hero__body">
+      <p class="eyebrow">Small-group bike tours in France</p>
+      <h1>Choose your own bike adventure in France</h1>
+      <p class="lede">
+        Join a small, self-supported group tour in 2027, or plan an independent trip with help from someone
+        who has ridden it.
+      </p>
+      <div class="btn-row">
+        <a class="btn" href="/canal-des-deux-mers/">
+          See the 2027 Canal des Deux Mers tour
+        </a>
+        <a class="btn btn--secondary" href={CONTACT_LINKS.waitlist}>
+          Ask to join the waitlist
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="ways-heading">
+    <div class="container">
+      <h2 id="ways-heading">Two ways to ride</h2>
+      <div class="two-col">
+        <div class="card">
+          <h3>Small-group tour, 2027</h3>
+          <p>
+            Four Canal des Deux Mers departures in 2027, in small groups of up to twelve riders. John leads
+            the ride and explains each day's plan in detail.
+          </p>
+          <p>
+            <a href="/canal-des-deux-mers/">Read about the 2027 tour</a>
+          </p>
+        </div>
+        <div class="card">
+          <h3>Plan your own trip</h3>
+          <p>
+            Want to plan your own adventure in France and just need coaching? Send John an email. Planning
+            sessions are by arrangement, and John will tell you how they work. Materials for independent tours
+            are coming soon.
+          </p>
+          <p>
+            <a href={CONTACT_LINKS.planning}>Email John about trip planning</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--beige" aria-labelledby="cdm-heading">
+    <div class="container split">
+      <div>
+        <p class="eyebrow">Canal des Deux Mers, 2027</p>
+        <h2 id="cdm-heading">Cross France by bike along the great canals</h2>
+        <p>{CDM_FACTS.route} Nine riding days, one rest day in Toulouse, and 11 nights.</p>
+        <ul class="stats">
+          {CDM_STATS.map((s) => (
+            <li>
+              <strong>{s.value}</strong>
+              {s.label}
+            </li>
+          ))}
+        </ul>
+        <p>
+          {CDM_FACTS.departures} {CDM_FACTS.datesNote}
+        </p>
+        <div class="btn-row">
+          <a class="btn" href="/canal-des-deux-mers/">
+            Learn about the Canal des Deux Mers tour
+          </a>
+        </div>
+      </div>
+      <div class="rounded">
+        <Photo
+          src={PHOTOS.twoRidersShade.src}
+          alt={PHOTOS.twoRidersShade.alt}
+          sizes="(min-width: 820px) 45vw, 92vw"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <Included />
+    </div>
+  </section>
+
+  <section class="section section--beige" aria-labelledby="about-heading">
+    <div class="container split split--reverse">
+      <div>
+        <p class="eyebrow">About BikeTourFrance.net</p>
+        <h2 id="about-heading">Eat. Sleep. Roll. Repeat.</h2>
+        <p>
+          I'm John, the cyclist behind BikeTourFrance.net. I help riders carry out extraordinary bicycle tours
+          in France. I lead small, self-supported group tours, so I can plan each day with you, explain it in
+          depth, and give the group the attention it needs.
+        </p>
+        <p>
+          <a href="/about/">More about John and how the tours work</a>
+        </p>
+      </div>
+      <div class="rounded">
+        <Photo src={PHOTOS.cafeTable.src} alt={PHOTOS.cafeTable.alt} sizes="(min-width: 820px) 45vw, 92vw" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="gallery-heading">
+    <div class="container">
+      <h2 id="gallery-heading">Tour gallery</h2>
+      <Gallery photos={GALLERY.slice(0, 8)} />
+      <p style="margin-top: 1rem">
+        <a href="/canal-des-deux-mers/#gallery-heading">More photos on the Canal des Deux Mers page</a>
+      </p>
+    </div>
+  </section>
+
+  <ContactCta />
+</BaseLayout>

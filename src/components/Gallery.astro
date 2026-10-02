@@ -1,0 +1,25 @@
+---
+import Photo from './Photo.astro';
+import type { Photo as PhotoData } from '../data/photos';
+
+interface Props {
+  photos: readonly PhotoData[];
+}
+const { photos } = Astro.props;
+---
+
+<ul class="gallery">
+  {photos.map((photo) => (
+    <li>
+      <figure>
+        <Photo
+          src={photo.src}
+          alt={photo.alt}
+          widths={[320, 480, 640, 800]}
+          sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw"
+        />
+        {photo.caption && <figcaption>{photo.caption}</figcaption>}
+      </figure>
+    </li>
+  ))}
+</ul>

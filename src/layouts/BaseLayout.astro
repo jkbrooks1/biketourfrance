@@ -1,0 +1,85 @@
+---
+// Shared page shell: head metadata, skip link, header, main landmark, footer.
+// Each page supplies one <h1> inside the slot. Staging protections come from SITE.indexingEnabled.
+import '../styles/global.css';
+import { getImage } from 'astro:assets';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import logo from '../assets/brand/logo-mark.png';
+import appleIcon from '../assets/brand/apple-touch-icon.png';
+import { PHOTOS } from '../data/photos';
+import { SITE } from '../data/site';
+
+interface Props {
+  title: string; // Page title without the brand suffix. The home page passes its full title and sets home.
+  description: string;
+  path: string; // Site path, for example /resources/. Used for canonical and nav state.
+  home?: boolean;
+  notFound?: boolean;
+}
+const { title, description, path, home = false, notFound = false } = Astro.props;
+
+const fullTitle = home ? title : `${title} | ${SITE.name}`;
+const canonical = new URL(path, SITE.origin).href;
+const og = await getImage({ src: PHOTOS.hero.src, width: 1200, height: 630, fit: 'cover', format: 'jpg' });
+const logoImg = await getImage({ src: logo, width: 512, format: 'png' });
+const touch = await getImage({ src: appleIcon, width: 180, format: 'png' });
+const ogUrl = new URL(og.src, SITE.origin).href;
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: SITE.name,
+    url: SITE.origin,
+    logo: new URL(logoImg.src, SITE.origin).href,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: SITE.name,
+    url: SITE.origin,
+  },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    {!notFound && <link rel="canonical" href={canonical} />}
+    {!SITE.indexingEnabled && <meta name="robots" content="noindex, nofollow, noarchive" />}
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    {!notFound && <meta property="og:url" content={canonical} />}
+    <meta property="og:image" content={ogUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href={touch.src} />
+    <script is:inline>
+      document.documentElement.classList.add('js');
+    </script>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">
+      Skip to main content
+    </a>
+    {!SITE.indexingEnabled && (
+      <div class="staging-banner" role="note">
+        Staging preview. This site is not indexed by search engines and is not the live BikeTourFrance.net
+        site.
+      </div>
+    )}
+    <Header path={path} />
+    <main id="main" tabindex="-1">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { CONTACT_LINKS, SITE } from '../../data/site';
+---
+
+<BaseLayout
+  path="/contact/"
+  title="Contact John"
+  description="Email John Brooks with questions about the 2027 Canal des Deux Mers tours, the waitlist, or planning your own bike trip in France."
+>
+  <section class="section">
+    <div class="container prose">
+      <p class="eyebrow">Contact</p>
+      <h1>Contact John</h1>
+      <p class="lede">Email is the best way to reach BikeTourFrance.net.</p>
+      <p>
+        <a class="btn" href={CONTACT_LINKS.general}>
+          Email {SITE.email}
+        </a>
+      </p>
+
+      <h2>Choose a starting point</h2>
+      <ul>
+        <li>
+          <a href={CONTACT_LINKS.waitlist}>Ask to join the 2027 Canal des Deux Mers waitlist</a>
+        </li>
+        <li>
+          <a href={CONTACT_LINKS.planning}>Ask about planning your own trip</a>
+        </li>
+        <li>
+          <a href={CONTACT_LINKS.general}>Ask any other question</a>
+        </li>
+      </ul>
+      <p>
+        Each link opens your email program with a short message ready to fill in. If it does not open, write
+        to {SITE.email} directly.
+      </p>
+
+      <h2>About the waitlist and the mailing list</h2>
+      <p>
+        This website does not have an online sign-up form yet. To hear about exact 2027 dates and pricing when
+        they are announced, email John and ask to be added to the waitlist.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
