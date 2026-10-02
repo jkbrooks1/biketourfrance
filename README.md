@@ -23,7 +23,7 @@ Make a close visual and functional copy of the current Framer site first. No red
 
 ## Draft-deploy rules
 
-- Contact and waitlist forms are non-submitting placeholders, clearly marked "Draft - not live". The two embedded Apps Script resource widgets on `/resources` are replaced by the same kind of disabled placeholder.
+- Contact and waitlist forms are non-submitting placeholders, clearly marked "Draft - not live". The two embedded Apps Script resource widgets on `/resources` (broken on the live Framer page) are replaced by a link block to `https://resources.biketourfrance.net/`.
 - WhatsApp and other outbound links are real only if approved; otherwise they point to `#`. The `cdm-sep2026.biketourfrance.net` link on the home page points to `#`.
 - No analytics scripts. Framer editor and `api.framer.com` calls are removed or blocked.
 - `noindex` meta tag on every page, `X-Robots-Tag` header, and `robots.txt` with `Disallow: /` on the temp site.

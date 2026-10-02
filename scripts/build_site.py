@@ -4,8 +4,9 @@
 Draft-deploy transformations (nothing else is changed):
   - noindex meta tag on every HTML page
   - outbound link to the CDM subdomain points to "#"
-  - Apps Script <iframe> resource widgets replaced by an inert, disabled
-    "Draft - not live" placeholder form (HTML pages and the Framer embed component)
+  - Apps Script <iframe> resource widgets (broken on the live Framer page: missing
+    Google document) replaced by a plain link block to resources.biketourfrance.net
+    (HTML pages and the Framer embed component). No iframe, no script.
   - embed url values pointing at Apps Script blanked
   - Framer api.framer.com calls in the runtime pointed at an inert URL
   - Framer runtime page metadata robots value set to noindex, nofollow (the runtime
@@ -30,23 +31,21 @@ SKIP_DIRS = {
     os.path.join("assets", "framer.com"),
 }
 
-IFRAME = re.compile(r"<iframe\b.*?</iframe>", re.S | re.I)
+# Also consumes the stray ``` (markdown fence typo) that follows the first Framer embed.
+IFRAME = re.compile(r"<iframe\b.*?</iframe>(?:\s*\\?`\\?`\\?`)?", re.S | re.I)
 APPS_SCRIPT = re.compile(r"https://script\.google\.com/macros/s/[A-Za-z0-9_-]+/exec")
 FRAMER_API = "https://api.framer.com/"
 CDM_LINK = 'href="https://cdm-sep2026.biketourfrance.net"'
 NOINDEX = '<meta name="robots" content="noindex">'
 
+RESOURCES_URL = "https://resources.biketourfrance.net/"
 PLACEHOLDER = (
-    '<div style="width:100%;box-sizing:border-box;border:1px dashed #999;padding:24px;'
-    'text-align:center;font-family:inherit;color:#555">'
-    '<form onsubmit="return false" novalidate>'
-    '<fieldset disabled style="border:0;margin:0;padding:0">'
-    '<input type="email" placeholder="Email" disabled style="padding:8px;margin-right:8px">'
-    '<button type="button" disabled>Submit</button>'
-    "</fieldset>"
-    "<p><strong>Draft - not live</strong><br>"
-    "This section is switched off on the draft site.</p>"
-    "</form></div>"
+    '<div style="width:100%;box-sizing:border-box;padding:24px;text-align:center;font-family:inherit">'
+    "<p style=\"font-size:18px;line-height:1.5;margin:0 0 16px\">Templates, audio guides, and trusted sites now live in the BikeTourFrance resource library.</p>"
+    '<p><a href="' + RESOURCES_URL + '" target="_blank" rel="noopener" '
+    'style="display:inline-block;font-size:16px;padding:12px 24px;background:#2f5d1f;color:#fff;'
+    'text-decoration:none;border-radius:4px">Open the resource library</a></p>'
+    "</div>"
 )
 
 ROBOTS = "User-agent: *\nDisallow: /\n"
