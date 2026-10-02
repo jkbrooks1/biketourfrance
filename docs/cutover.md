@@ -1,5 +1,7 @@
 # Production cutover (future work, not part of staging)
 
+The current, detailed checklist is `docs/PRODUCTION_CUTOVER_PREFLIGHT.md`. This file keeps the original safeguards.
+
 Nothing in this document is to be done during staging work.
 
 ## Status
@@ -15,9 +17,9 @@ Nothing in this document is to be done during staging work.
 3. **Verify that MX records and unrelated TXT records remain unchanged.** Take a read-only DNS snapshot before and after, and compare them. Email for the domain depends on those records (mail routing, SPF, and domain verification).
 4. **Remove the staging no-index protections only after the production domain resolves to the approved build.** The protections are:
    - the `noindex` robots meta tag on every page
-   - the `X-Robots-Tag: noindex, nofollow, noarchive` response header (`site/_headers`)
+   - the `X-Robots-Tag: noindex, nofollow, noarchive` response header (`public/_headers`)
    - `robots.txt` with `Disallow: /`
-   - the robots value set in the Framer runtime page metadata (patched by `scripts/build_site.py`)
+   - `SITE.indexingEnabled` in `src/data/site.ts` (the native build's noindex meta tag and staging banner; the Framer runtime patch in `scripts/build_site.py` no longer applies)
 
    Keep all of them in place until that check passes.
 

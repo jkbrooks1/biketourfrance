@@ -1,0 +1,9 @@
+BEFORE live Framer home   390px requests=44 totalKB=5192 imageKB=3571 imgReqs=18 {"lcp":488,"imgTotal":18,"lazy":0,"eager":18,"cls":0}
+AFTER  new home (local)     390px requests=6 totalKB=234 imageKB=163 imgReqs=3 {"lcp":44,"imgTotal":13,"lazy":11,"eager":2,"cls":0}
+AFTER  new CDM page (local)  390px requests=5 totalKB=132 imageKB=57 imgReqs=2 {"lcp":40,"imgTotal":16,"lazy":14,"eager":2,"cls":0}
+BEFORE live Framer home   1440px requests=43 totalKB=5162 imageKB=3623 imgReqs=18 {"lcp":384,"imgTotal":18,"lazy":0,"eager":18,"cls":0}
+AFTER  new home (local)     1440px requests=15 totalKB=1243 imageKB=1173 imgReqs=12 {"lcp":92,"imgTotal":13,"lazy":11,"eager":2,"cls":0}
+AFTER  new CDM page (local)  1440px requests=6 totalKB=455 imageKB=380 imgReqs=3 {"lcp":60,"imgTotal":16,"lazy":14,"eager":2,"cls":0}
+before horizontal overflow at 320 = 0
+before horizontal overflow at 375 = 0
+before horizontal overflow at 1440 = 0

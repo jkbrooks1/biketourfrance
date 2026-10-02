@@ -1,0 +1,17 @@
+# npm run check
+Result (25 files): 
+- 0 errors
+- 0 warnings
+- 0 hints
+
+
+# prettier --check
+Checking formatting...
+All matched files use Prettier code style!
+
+# npm run build
+14:33:31 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
+14:33:31 [build] 11 page(s) built in 1.61s
+
+# npm run verify
+verify-dist: 11 pages OK

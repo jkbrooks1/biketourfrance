@@ -1,0 +1,41 @@
+# responsive 320/375/390/768/1024/1440 x 11 pages
+RESPONSIVE: all pages x all widths clean
+console/network errors: 6 [
+  '320 Failed to load resource: the server responded with a status of 404 (Not Found)',
+
+# keyboard, skip link, focus, menu, cookies
+ok   1440 / stops=27
+ok   1440 /tours/ stops=24
+ok   1440 /canal-des-deux-mers/ stops=24
+ok   1440 /canal-des-deux-mers/practical-info/ stops=26
+ok   1440 /resources/ stops=95
+ok   1440 /about/ stops=20
+ok   1440 /contact/ stops=22
+ok   1440 /privacy/ stops=21
+ok   1440 /terms/ stops=19
+ok   1440 /cookies/ stops=18
+ok   1440 /nope/ stops=26
+ok   375 / stops=22
+ok   375 /tours/ stops=19
+ok   375 /canal-des-deux-mers/ stops=19
+ok   375 /canal-des-deux-mers/practical-info/ stops=21
+ok   375 /resources/ stops=90
+ok   375 /about/ stops=15
+ok   375 /contact/ stops=17
+ok   375 /privacy/ stops=16
+ok   375 /terms/ stops=14
+ok   375 /cookies/ stops=13
+ok   375 /nope/ stops=21
+menu: {
+  closedInitially: true,
+  opensWithKeyboard: true,
+  ariaExpandedWhenOpen: 'true',
+  escapeCloses: true
+no-JS nav visible: true
+KEYBOARD: all pages pass
+
+# lazy images load
+IMAGES: every image loads after scrolling (320 and 1440)
+
+# report-only CSP trial
+report-only violations: 0
