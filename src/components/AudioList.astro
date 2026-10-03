@@ -1,0 +1,32 @@
+---
+// Audio players from one approved copy field: "- [Title](https://file-url)". Files load only on play.
+import { raw, t } from '../lib/copy.mjs';
+import { parseBlocks, parseLinkItem } from '../lib/copy-markup.mjs';
+
+interface Props {
+  field: string;
+  itemHeading?: 'h3' | 'h4';
+}
+const { field, itemHeading = 'h3' } = Astro.props;
+const Heading = itemHeading;
+const fallback = t('resources/audio_fallback');
+const downloadLabel = t('resources/audio_download_label');
+const items = parseBlocks(raw(field))
+  .flatMap((b) => (b.type === 'ul' ? b.items : []))
+  .map(parseLinkItem)
+  .filter((i): i is NonNullable<typeof i> => i !== null);
+---
+
+<ul class="resource-list">
+  {items.map((item) => (
+    <li class="audio-item">
+      <Heading class="audio-title">{item.title}</Heading>
+      <audio controls preload="none" src={item.target}>
+        {fallback}
+      </audio>
+      <a class="dl" href={item.target} download rel="noopener">
+        {downloadLabel} {item.title}
+      </a>
+    </li>
+  ))}
+</ul>

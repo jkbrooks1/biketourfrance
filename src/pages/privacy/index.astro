@@ -1,51 +1,17 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Copy from '../../components/Copy.astro';
 import ReviewNote from '../../components/ReviewNote.astro';
-import { CONTACT_LINKS, SITE } from '../../data/site';
+import { t } from '../../lib/copy.mjs';
 ---
 
-<BaseLayout
-  path="/privacy/"
-  title="Privacy"
-  description="What the BikeTourFrance.net website does and does not collect, and how email you send to John is handled."
->
+<BaseLayout path="/privacy/" title={t('privacy/seo_title')} description={t('privacy/seo_description')}>
   <section class="section">
     <div class="container prose">
-      <h1>Privacy</h1>
-      <p class="lede">This page describes what this website does today. Last updated October 2, 2026.</p>
+      <h1>{t('privacy/page_heading')}</h1>
+      <Copy field="privacy/page_lede" class="lede" />
       <ReviewNote />
-
-      <h2>What this website collects</h2>
-      <p>
-        This website has no sign-up form, no account system, and no analytics or advertising tools. It does
-        not set cookies of its own. See the <a href="/cookies/">Cookies page</a>.
-      </p>
-
-      <h2>When you email John</h2>
-      <p>
-        If you write to <a href={CONTACT_LINKS.general}>{SITE.email}</a>, John receives your message and your
-        email address in his BikeTourFrance.net email account. He uses them to reply to you. Nothing in this
-        website's code sends your message anywhere else.
-      </p>
-
-      <h2>Hosting and technical logs</h2>
-      <p>
-        Web servers normally record technical details of each visit, such as the page requested and the
-        visitor's IP address. This website is hosted on Cloudflare Pages, which handles those records. John
-        does not receive a copy of them through this website.
-      </p>
-
-      <h2>Other sites and media</h2>
-      <p>
-        The Resources page loads audio files from BikeTourFrance.net's media storage only when you press play.
-        It also links to Google Docs and Google Sheets and to other websites. Those sites have their own
-        privacy practices.
-      </p>
-
-      <h2>Questions</h2>
-      <p>
-        Write to <a href={CONTACT_LINKS.general}>{SITE.email}</a>.
-      </p>
+      <Copy field="privacy/page_copy" />
     </div>
   </section>
 </BaseLayout>

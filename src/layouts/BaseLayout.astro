@@ -1,6 +1,9 @@
 ---
 // Shared page shell: head metadata, skip link, header, main landmark, footer.
 // Each page supplies one <h1> inside the slot. Staging protections come from SITE.indexingEnabled.
+// All visible text comes from approved copy (src/lib/copy.mjs). The head records which copy
+// source built the page (btf-copy-source) and a fingerprint of that copy (btf-copy-id), which
+// scripts/copy/verify-rendered.mjs checks against the validated artifact.
 import '../styles/global.css';
 import { getImage } from 'astro:assets';
 import Header from '../components/Header.astro';
@@ -9,6 +12,7 @@ import logo from '../assets/brand/logo-mark.png';
 import appleIcon from '../assets/brand/apple-touch-icon.png';
 import { PHOTOS } from '../data/photos';
 import { SITE } from '../data/site';
+import { COPY_ID, COPY_SOURCE, FIXTURE_BANNER, has, t } from '../lib/copy.mjs';
 
 interface Props {
   title: string; // Page title without the brand suffix. The home page passes its full title and sets home.
@@ -19,7 +23,8 @@ interface Props {
 }
 const { title, description, path, home = false, notFound = false } = Astro.props;
 
-const fullTitle = home ? title : `${title} | ${SITE.name}`;
+const brand = t('site/brand_name');
+const fullTitle = home ? title : `${title} | ${brand}`;
 const canonical = new URL(path, SITE.origin).href;
 const og = await getImage({ src: PHOTOS.hero.src, width: 1200, height: 630, fit: 'cover', format: 'jpg' });
 const logoImg = await getImage({ src: logo, width: 512, format: 'png' });
@@ -30,14 +35,14 @@ const jsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: SITE.name,
+    name: brand,
     url: SITE.origin,
     logo: new URL(logoImg.src, SITE.origin).href,
   },
   {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: SITE.name,
+    name: brand,
     url: SITE.origin,
   },
 ];
@@ -50,9 +55,11 @@ const jsonLd = [
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
+    <meta name="btf-copy-source" content={COPY_SOURCE} />
+    <meta name="btf-copy-id" content={COPY_ID} />
     {!notFound && <link rel="canonical" href={canonical} />}
     {!SITE.indexingEnabled && <meta name="robots" content="noindex, nofollow, noarchive" />}
-    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:site_name" content={brand} />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
@@ -68,12 +75,16 @@ const jsonLd = [
   </head>
   <body>
     <a class="skip-link" href="#main">
-      Skip to main content
+      {t('site/skip_link')}
     </a>
-    {!SITE.indexingEnabled && (
+    {COPY_SOURCE === 'fixture' && (
+      <div class="fixture-banner" role="alert">
+        {FIXTURE_BANNER}
+      </div>
+    )}
+    {!SITE.indexingEnabled && has('site/staging_banner') && (
       <div class="staging-banner" role="note">
-        Staging preview. This site is not indexed by search engines and is not the live BikeTourFrance.net
-        site.
+        {t('site/staging_banner')}
       </div>
     )}
     <Header path={path} />

@@ -1,42 +1,33 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Photo from '../../components/Photo.astro';
+import Copy from '../../components/Copy.astro';
 import ContactCta from '../../components/ContactCta.astro';
-import { CDM_FACTS } from '../../data/cdm2027';
 import { PHOTOS } from '../../data/photos';
 import { CONTACT_LINKS } from '../../data/site';
+import { t } from '../../lib/copy.mjs';
 ---
 
-<BaseLayout
-  path="/tours/"
-  title="Bike tours in France: small-group and self-guided"
-  description="BikeTourFrance.net offers small-group, self-supported bicycle tours in France, a self-guided tour package, and trip-planning help from John Brooks."
->
+<BaseLayout path="/tours/" title={t('tours/seo_title')} description={t('tours/seo_description')}>
   <section class="section">
     <div class="container">
-      <p class="eyebrow">Tours</p>
-      <h1>Ways to ride in France with BikeTourFrance.net</h1>
-      <p class="lede">
-        All BikeTourFrance.net tours are self-supported. You carry your own gear from place to place, and John
-        helps you plan the rest.
-      </p>
+      <p class="eyebrow">{t('tours/page_eyebrow')}</p>
+      <h1>{t('tours/page_heading')}</h1>
+      <Copy field="tours/page_lede" class="lede" />
     </div>
   </section>
 
   <section class="section section--beige" aria-labelledby="group-heading">
     <div class="container split">
       <div>
-        <h2 id="group-heading">Canal des Deux Mers, 2027</h2>
-        <p>{CDM_FACTS.route}</p>
-        <p>
-          {CDM_FACTS.departures} {CDM_FACTS.datesNote} {CDM_FACTS.pricingNote}
-        </p>
+        <h2 id="group-heading">{t('tours/group_heading')}</h2>
+        <Copy field="tours/group_body" />
         <div class="btn-row">
           <a class="btn" href="/canal-des-deux-mers/">
-            See the 2027 tour
+            {t('tours/group_cta')}
           </a>
           <a class="btn btn--secondary" href={CONTACT_LINKS.waitlist}>
-            Ask to join the waitlist
+            {t('tours/group_waitlist_cta')}
           </a>
         </div>
       </div>
@@ -53,16 +44,11 @@ import { CONTACT_LINKS } from '../../data/site';
 
   <section class="section" aria-labelledby="self-guided-heading">
     <div class="container">
-      <h2 id="self-guided-heading">Self-guided tour package</h2>
-      <p>
-        If you prefer to travel on your own schedule, John offers a self-guided tour package. He builds the
-        routes, books your accommodations, and gives practical support as you prepare. You ride independently,
-        with a sound plan and help when you need it.
-      </p>
-      <p>Details and rates are shared by email, because each trip is different.</p>
+      <h2 id="self-guided-heading">{t('tours/self_guided_heading')}</h2>
+      <Copy field="tours/self_guided_body" />
       <p>
         <a class="btn btn--secondary" href={CONTACT_LINKS.planning}>
-          Email John about a self-guided trip
+          {t('tours/self_guided_cta')}
         </a>
       </p>
     </div>
@@ -70,18 +56,15 @@ import { CONTACT_LINKS } from '../../data/site';
 
   <section class="section section--beige" aria-labelledby="coaching-heading">
     <div class="container">
-      <h2 id="coaching-heading">Trip-planning help</h2>
-      <p>
-        Want to plan your own adventure in France and only need coaching? Send John an email. He loves helping
-        fellow bike travelers plan a great trip. Materials and support for independent tours are coming soon.
-      </p>
+      <h2 id="coaching-heading">{t('tours/coaching_heading')}</h2>
+      <Copy field="tours/coaching_body" />
       <p>
         <a class="btn btn--secondary" href={CONTACT_LINKS.planning}>
-          Ask about trip planning
+          {t('tours/coaching_cta')}
         </a>
       </p>
     </div>
   </section>
 
-  <ContactCta />
+  <ContactCta headingField="tours/ready_to_ride_heading" bodyField="tours/contact_cta" />
 </BaseLayout>

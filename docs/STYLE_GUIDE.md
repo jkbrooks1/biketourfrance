@@ -65,7 +65,7 @@ Additions that are not brand colors: body ink `#1a1a1a`, muted ink `#4a4a44`, ha
 
 ## Images
 
-- Photos live in `src/assets/photos/` and are added to `src/data/photos.ts` with alt text. Alt text describes only what is visible. People are not named. A place is named only when a sign or other visible text proves it.
+- Photos live in `src/assets/photos/` and are added to `src/data/photos.ts`; their alt text and captions are approved copy fields (`photos/..._alt`, `photos/..._caption`). Alt text describes only what is visible. People are not named. A place is named only when a sign or other visible text proves it.
 - Captions appear only where a place is proven ("Créon", "Canal du Midi route signs").
 - Decorative images use empty alt text. Only the header and footer logos are decorative.
 - Use the `Photo` component: AVIF and WebP at several widths; `priority` only for the single hero image on a page; everything else lazy-loads.
@@ -74,7 +74,7 @@ Additions that are not brand colors: body ink `#1a1a1a`, muted ink `#4a4a44`, ha
 
 ## Public facts
 
-Public 2027 facts come only from `src/data/cdm2027.ts` (see `docs/2027_CDM_CONTENT_AUTHORITY.md`). No prices, deposits, cancellation terms, or exact dates until the owner approves them.
+All public copy, including the 2027 facts, comes only from the Google Sheet BTF_Approved_Site_Copy (see `docs/APPROVED_COPY_GATE.md` and `docs/2027_CDM_CONTENT_AUTHORITY.md`). No prices, deposits, cancellation terms, or exact dates until the owner approves them.
 
 ## Deviations from the owner guide (owner to confirm)
 

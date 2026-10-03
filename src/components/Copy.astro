@@ -1,0 +1,21 @@
+---
+// Renders one approved copy field (page/field_name) from the generated artifact.
+// Block mode (default) makes <p>, <h2>, <h3>, and <ul>. With `inline`, it renders only the first
+// paragraph's inline content, for use inside an element the page already provides.
+import { raw } from '../lib/copy.mjs';
+import { blocksHtml } from '../lib/copy-html.mjs';
+import { CONTACT_LINKS } from '../data/site';
+
+interface Props {
+  field: string;
+  class?: string;
+  listClass?: string;
+  inline?: boolean;
+}
+const { field, class: paragraphClass, listClass, inline = false } = Astro.props;
+const hrefFor = (target: string) =>
+  target.startsWith('mail:') ? CONTACT_LINKS[target.slice(5) as keyof typeof CONTACT_LINKS] : target;
+const html = blocksHtml(raw(field), { hrefFor, paragraphClass, listClass, inline });
+---
+
+<Fragment set:html={html} />

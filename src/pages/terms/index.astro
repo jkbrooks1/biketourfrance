@@ -1,49 +1,17 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Copy from '../../components/Copy.astro';
 import ReviewNote from '../../components/ReviewNote.astro';
-import { CONTACT_LINKS, SITE } from '../../data/site';
+import { t } from '../../lib/copy.mjs';
 ---
 
-<BaseLayout
-  path="/terms/"
-  title="Terms"
-  description="Terms for using the BikeTourFrance.net website: tour information may change, no bookings are taken on this site, and links lead to other sites."
->
+<BaseLayout path="/terms/" title={t('terms/seo_title')} description={t('terms/seo_description')}>
   <section class="section">
     <div class="container prose">
-      <h1>Terms</h1>
-      <p class="lede">How to read the information on this website. Last updated October 2, 2026.</p>
+      <h1>{t('terms/page_heading')}</h1>
+      <Copy field="terms/page_lede" class="lede" />
       <ReviewNote />
-
-      <h2>Tour information</h2>
-      <p>
-        The tour descriptions on this website are plans, and they can change. Exact dates and pricing for the
-        2027 tours have not been announced. Deposit, payment, and cancellation terms have not been published.
-      </p>
-
-      <h2>No bookings on this website</h2>
-      <p>
-        You cannot book or pay for a tour on this website. Asking to join the waitlist by email does not
-        reserve a place. Any booking terms will be given to you in writing before you commit.
-      </p>
-
-      <h2>Advice and planning help</h2>
-      <p>
-        Information here, including the Practical Information and Resources pages, is general guidance from
-        John's own experience. Transport schedules, fares, and rules come from other organizations and change.
-        Check them with the operator before you travel.
-      </p>
-
-      <h2>Links to other sites</h2>
-      <p>
-        This website links to other websites and to files stored elsewhere. BikeTourFrance.net does not
-        control them.
-      </p>
-
-      <h2>Contact</h2>
-      <p>
-        Write to <a href={CONTACT_LINKS.general}>{SITE.email}</a>.
-      </p>
+      <Copy field="terms/page_copy" />
     </div>
   </section>
 </BaseLayout>

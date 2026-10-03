@@ -1,5 +1,7 @@
 # 2026-10-02 audit remediation report
 
+> **Later change (2026-10-02, after this report):** all public copy now comes from the Google Sheet BTF_Approved_Site_Copy, enforced by the build (`docs/APPROVED_COPY_GATE.md`). The files `src/data/cdm2027.ts`, `src/data/resources.ts`, and `src/data/practical-info-data.json` named below were removed. The page text is unchanged: all 11 pages read identically before and after.
+
 Branch: `rebuild/2026-10-02-audit-remediation` (from `rebuild/initial`). Repository: `github.com/jkbrooks1/biketourfrance`. Staging project: Cloudflare Pages `temp-btf`.
 Commit hashes and the preview URL are in the closing entry of `docs/BUILD_LOG.md`, because a file cannot contain its own commit hash.
 

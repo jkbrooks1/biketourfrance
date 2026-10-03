@@ -1,0 +1,25 @@
+---
+// A list of links from one approved copy field: "- [Title](https://...) — optional note".
+import { raw } from '../lib/copy.mjs';
+import { parseBlocks, parseLinkItem } from '../lib/copy-markup.mjs';
+
+interface Props {
+  field: string;
+}
+const { field } = Astro.props;
+const items = parseBlocks(raw(field))
+  .flatMap((b) => (b.type === 'ul' ? b.items : []))
+  .map(parseLinkItem)
+  .filter((i): i is NonNullable<typeof i> => i !== null);
+---
+
+<ul class="resource-list">
+  {items.map((item) => (
+    <li>
+      <a class="title" href={item.target} rel="noopener">
+        {item.title}
+      </a>
+      {item.note && <p class="note">{item.note}</p>}
+    </li>
+  ))}
+</ul>

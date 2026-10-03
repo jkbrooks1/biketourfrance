@@ -699,3 +699,28 @@ audio:focus-within {
   max-width: var(--measure);
   font-size: 0.95rem;
 }
+
+.audio-title {
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+/* Shown only when a local development build uses fixture copy. */
+.fixture-banner {
+  background: #b00020;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  padding: 10px 20px;
+}
+
+.detail {
+  margin-bottom: 12px;
+}
+.detail summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+}

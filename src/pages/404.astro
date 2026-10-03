@@ -1,33 +1,30 @@
 ---
 // Cloudflare Pages serves dist/404.html with HTTP 404 for unknown paths.
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Copy from '../components/Copy.astro';
 import { NAV } from '../data/site';
+import { t } from '../lib/copy.mjs';
 ---
 
-<BaseLayout
-  path="/404/"
-  notFound
-  title="Page not found"
-  description="That page is not on the BikeTourFrance.net website. Use these links to find the tour, resources, or contact page."
->
+<BaseLayout path="/404/" notFound title={t('404/seo_title')} description={t('404/seo_description')}>
   <section class="section">
     <div class="container">
-      <p class="eyebrow">Error 404</p>
-      <h1>We could not find that page</h1>
-      <p class="lede">The link may be old, or the page may have moved. These pages can help:</p>
+      <p class="eyebrow">{t('404/eyebrow')}</p>
+      <h1>{t('404/heading')}</h1>
+      <Copy field="404/body" class="lede" />
       <ul>
         {NAV.map((item) => (
           <li>
-            <a href={item.href}>{item.label}</a>
+            <a href={item.href}>{t(item.field)}</a>
           </li>
         ))}
       </ul>
       <div class="btn-row">
         <a class="btn" href="/">
-          Go to the home page
+          {t('404/home_button')}
         </a>
         <a class="btn btn--secondary" href="/canal-des-deux-mers/">
-          See the 2027 tour
+          {t('404/tour_button')}
         </a>
       </div>
     </div>

@@ -1,13 +1,13 @@
 ---
 // Shown on staging only. Production launch requires the owner to resolve the items listed in
 // docs/PRODUCTION_CUTOVER_PREFLIGHT.md, after which indexingEnabled is switched on and this note disappears.
+import Copy from './Copy.astro';
 import { SITE } from '../data/site';
+import { has } from '../lib/copy.mjs';
 ---
 
-{!SITE.indexingEnabled && (
+{!SITE.indexingEnabled && has('site/review_note') && (
   <div class="review-note" role="note">
-    <strong>Draft for owner review.</strong> This page states only facts that can be confirmed from this
-    website's code. The owner must review it, and any legal or service-provider details, before launch. The
-    open items are listed in docs/PRODUCTION_CUTOVER_PREFLIGHT.md.
+    <Copy field="site/review_note" inline />
   </div>
 )}
