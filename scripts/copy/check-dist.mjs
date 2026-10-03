@@ -11,6 +11,7 @@ import { relative, resolve } from 'node:path';
 import {
   FIELD_MAP_PATH,
   NOT_FOUND_KEYS,
+  OVERRIDES,
   ROOT,
   SNAPSHOT_PATH,
   assignParts,
@@ -30,6 +31,7 @@ const read = (f) => readFileSync(resolve(DIST, f), 'utf8');
 
 // Which Sheet rows are visible, by page. Meta rows are counted separately.
 const META = new Set(['/meta_title', '/meta_description', '/resources/meta_title', '/resources/meta_description']);
+const blankRows = [];
 const visibleByPage = { '/': [], '/resources/': [], '/404/': [] };
 const metaByPage = { '/': [], '/resources/': [], '/404/': [] };
 
@@ -40,7 +42,10 @@ for (const [key, field] of Object.entries(map.fields)) {
   const assigned = field.parts.length === 1 ? new Map([[0, value.trim()]]) : assignParts(key, field.parts, value);
   for (const t of field.targets) {
     const text = read(t.file);
-    const needle = t.left + escapeFor(t.esc, assigned.get(t.part)) + t.right;
+    // Count the new text itself. The neighbouring characters recorded in the map come from
+    // the original export and can overlap another field that the Sheet has since changed.
+    const needle = escapeFor(t.esc, assigned.get(t.part));
+    if (needle === '') continue; // an explicitly empty row renders no text
     let n = 0;
     for (let i = text.indexOf(needle); i >= 0; i = text.indexOf(needle, i + 1)) n += 1;
     if (n < t.nth.length) failures.push(`${key}: found ${n} of ${t.nth.length} expected sites in dist/${t.file}`);
@@ -49,7 +54,13 @@ for (const [key, field] of Object.entries(map.fields)) {
     if (p.br) return;
     currentText.add((assigned.get(i) ?? p.baseline).trim());
   });
-  (META.has(key) ? metaByPage : visibleByPage)[field.page].push(key);
+  if (value === '') blankRows.push(key);
+  else (META.has(key) ? metaByPage : visibleByPage)[field.page].push(key);
+}
+
+for (const [file, cssFile] of Object.entries(OVERRIDES)) {
+  const css = readFileSync(resolve(ROOT, cssFile), 'utf8').trim();
+  if (!read(file).includes(css)) failures.push(`Design override ${cssFile} is not in dist/${file}`);
 }
 
 const notFound = read('404.html');
@@ -90,6 +101,7 @@ const out = {
   rowCount: snapshot.rowCount,
   visibleRowsByPage: Object.fromEntries(Object.entries(visibleByPage).map(([k, v]) => [k, v.length])),
   metaRowsByPage: Object.fromEntries(Object.entries(metaByPage).map(([k, v]) => [k, v.length])),
+  blankRows,
   htmlPagesChecked: htmlFiles.map((f) => relative(DIST, f)),
   failures,
 };

@@ -19,6 +19,13 @@ export const SHEET_TAB = 'Approved Site Copy';
 export const SHEET_HEADER = ['page/field_name', 'copy'];
 export const KEY_PATTERN = /^\/[a-z0-9_\-/]+$/;
 
+// Design overrides: page file (under site/) -> CSS file injected into its <head>.
+export const OVERRIDES = { 'index.html': 'overrides/home.css' };
+
+// Rows that may be left empty in the Sheet. An empty cell renders no text for that
+// paragraph; nothing is substituted. Every other row must have text.
+export const EMPTY_ALLOWED_KEYS = ['/hero/body_3'];
+
 // Rows for the Astro 404 page (src/pages/404.astro). They are not in the field map.
 export const NOT_FOUND_KEYS = [
   '/404/meta_title',
@@ -76,7 +83,9 @@ export function validateSnapshot(snap) {
   const seen = new Set();
   for (const r of snap.rows) {
     if (!KEY_PATTERN.test(r.key)) throw new Error(`Bad row key: ${JSON.stringify(r.key)}`);
-    if (typeof r.copy !== 'string' || r.copy.trim() === '') throw new Error(`Empty copy for ${r.key}`);
+    if (typeof r.copy !== 'string') throw new Error(`Bad copy for ${r.key}`);
+    if (r.copy.trim() === '' && !EMPTY_ALLOWED_KEYS.includes(r.key)) throw new Error(`Empty copy for ${r.key}`);
+    if (r.copy.trim() === '' && r.copy !== '') throw new Error(`Copy for ${r.key} must be empty or contain text, not only spaces.`);
     if (seen.has(r.key)) throw new Error(`Duplicate row key: ${r.key}`);
     seen.add(r.key);
   }

@@ -2,9 +2,9 @@
   "schema": 1,
   "sheetId": "1vzlhoekeVcx437ajMMFU--1kIrE7DfKYvi8rKhlE9aw",
   "tab": "Approved Site Copy",
-  "fetchedAt": "2026-10-03T21:01:19.168Z",
+  "fetchedAt": "2026-10-03T22:33:52.400Z",
   "rowCount": 57,
-  "contentSha256": "769521d41fc833358a1078c09874e433f8b2c68684a422f8f275dc85ec63ba42",
+  "contentSha256": "c8e307810122cbf12e2e50ef314f6fe7ed4540b8aa242243c857c0eaa9758592",
   "rows": [
     {
       "key": "/meta_title",
@@ -24,15 +24,15 @@
     },
     {
       "key": "/hero/body_1",
-      "copy": "Join us for a small group guided tour in the Spring or Fall of 2027 or run your independent tour with our remote support."
+      "copy": "Join us for a small group guided tour of the historic Canal des Deux Mers between Bordeaux on the Atlantic and Sète on the Mediterranean! We roll in the Spring and Fall of 2027. Or, do the same tour on your own and we'll help with remote support."
     },
     {
       "key": "/hero/body_2",
-      "copy": "I love bike touring in France. And I love to help fellow bike travelers plan a great trip. If you want to plan your own adventure in France and just want my coaching send me an email. I charge $250 for a 50-minute planning session that includes two follow up emails."
+      "copy": "I love bike touring in France. And I love to help fellow bike travelers have great trips! Roll with one of my small groups or buy a package so you can do the tour on your own (package coming soon!.) Or, if you want a hand planning your own bike adventure in France and just want my coaching send me an email. I charge $250 for a 50-minute planning session that includes two follow up emails."
     },
     {
       "key": "/hero/body_3",
-      "copy": "Or, coming soon, purchase the materials and support you need for an independent tour."
+      "copy": ""
     },
     {
       "key": "/hero/mailing_list_cta",
@@ -40,7 +40,7 @@
     },
     {
       "key": "/hero/waitlist_cta",
-      "copy": "Get on the waitlist for Spring or Fall 2027 tours!"
+      "copy": "Get on the free waitlist for Spring or Fall 2027 tours!"
     },
     {
       "key": "/ready-to-ride/heading",
@@ -76,11 +76,11 @@
     },
     {
       "key": "/ready-to-ride/included_2",
-      "copy": "Hotels & B&B's for Ride Day 00 through Ride Day 09"
+      "copy": "Hotels & B&B's for Ride Day Zero (arrival) in Bordeaux (RD00) through Ride Day 09 in Sète (RD09)."
     },
     {
       "key": "/ready-to-ride/included_3",
-      "copy": "Dinners together for all Ride Days except RD04 arrival in Toulouse and RD06, arrival in Carcassonne which are \"Dine on your own\" nights"
+      "copy": "Dinners together for all Ride Days except RD04 arrival in Toulouse and RD06, arrival in Carcassonne which are \"Dine on your own\" nights. I've learned these are the places people most want to explore on their own."
     },
     {
       "key": "/ready-to-ride/included_4",

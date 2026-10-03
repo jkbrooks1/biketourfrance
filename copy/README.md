@@ -23,6 +23,8 @@ The staging site renders its text from a committed snapshot of the Google Sheet
 - Every Sheet row must have a place on the site, and every mapped field must have a Sheet row. A mismatch fails the build.
 - Single-line fields cannot contain line breaks.
 - Two fields keep fixed text that must stay in the Sheet value, in order: the bold labels in `/footer/policies` (`Privacy Policy:`, `Terms of Service:`, `Cookie Policy:`, `Disclaimer:`) and the first words of `/ready-to-ride/cdm_heading` (`Canal des Deux Mers`). That heading also needs exactly three lines.
+- `/hero/body_3` is the only row allowed to be empty (`EMPTY_ALLOWED_KEYS` in `scripts/copy/lib.mjs`). An empty cell renders no text for that paragraph. Any other empty cell fails the fetch.
+- Small design changes live in `overrides/*.css` and are injected into the page head by the renderer (`OVERRIDES` in `scripts/copy/lib.mjs`). `overrides/home.css` sets the left padding of the "Ready to ride?" text frame to 50px (five times the 10px in the Framer export).
 - The Framer page JavaScript re-renders text after load, so the renderer patches the modules as well as the HTML.
 
 ## Known limits

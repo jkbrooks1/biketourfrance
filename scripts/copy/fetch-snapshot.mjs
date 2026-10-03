@@ -9,6 +9,7 @@
 import { createSign } from 'node:crypto';
 import { readFileSync, writeFileSync } from 'node:fs';
 import {
+  EMPTY_ALLOWED_KEYS,
   KEY_PATTERN,
   SHEET_HEADER,
   SHEET_ID,
@@ -72,9 +73,11 @@ if (values[0][0] !== SHEET_HEADER[0] || values[0][1] !== SHEET_HEADER[1] || valu
   throw new Error(`Unexpected header row: ${JSON.stringify(values[0])}`);
 }
 const rows = values.slice(1).map((v, i) => {
-  if (v.length !== 2 || !v[0] || !v[1]) throw new Error(`Sheet row ${i + 2} is blank or incomplete.`);
+  if (!v[0] || v.length > 2) throw new Error(`Sheet row ${i + 2} is blank or has extra cells.`);
   if (!KEY_PATTERN.test(v[0])) throw new Error(`Sheet row ${i + 2} has a bad key: ${JSON.stringify(v[0])}`);
-  return { key: v[0], copy: v[1] };
+  const copy = v[1] ?? '';
+  if (copy === '' && !EMPTY_ALLOWED_KEYS.includes(v[0])) throw new Error(`Sheet row ${i + 2} (${v[0]}) is empty and may not be.`);
+  return { key: v[0], copy };
 });
 
 const snapshot = {

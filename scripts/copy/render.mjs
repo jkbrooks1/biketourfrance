@@ -4,13 +4,15 @@
 // and the page JavaScript modules (Framer re-renders text from those modules after load,
 // so both must change), and writes the result to .generated/site/. Astro serves that
 // folder. No network access. Fails loudly on any mismatch instead of skipping a row.
-import { cpSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import {
   FIELD_MAP_PATH,
   GENERATED_DIR,
   GENERATED_SITE_DIR,
   NOT_FOUND_KEYS,
+  OVERRIDES,
+  ROOT,
   SITE_DIR,
   SNAPSHOT_PATH,
   assignParts,
@@ -51,7 +53,7 @@ for (const [key, field] of Object.entries(map.fields)) {
   let assigned;
   if (field.parts.length === 1) {
     if (value.includes('\n')) throw new Error(`${key}: line breaks are not supported in this field.`);
-    assigned = new Map([[0, value.trim()]]);
+    assigned = new Map([[0, value.trim()]]); // may be '' only for EMPTY_ALLOWED_KEYS (checked at load)
   } else {
     assigned = assignParts(key, field.parts, value);
   }
@@ -92,6 +94,19 @@ for (const [file, list] of edits) {
   writeFileSync(dest, out);
 }
 
+// Design overrides: small committed CSS files injected into a page's <head>.
+let overridesApplied = 0;
+for (const [file, cssFile] of Object.entries(OVERRIDES)) {
+  const cssPath = resolve(ROOT, cssFile);
+  if (!existsSync(cssPath)) throw new Error(`Override file missing: ${cssFile}`);
+  const dest = resolve(GENERATED_SITE_DIR, file);
+  const html = readFileSync(dest, 'utf8');
+  if (html.indexOf('</head>') < 0) throw new Error(`No </head> in ${file} for override ${cssFile}`);
+  const css = readFileSync(cssPath, 'utf8').trim();
+  writeFileSync(dest, html.replace('</head>', `<style data-btf-override="${cssFile}">\n${css}\n</style>\n</head>`));
+  overridesApplied += 1;
+}
+
 const report = {
   snapshotSha256: snapshot.contentSha256,
   sheetId: snapshot.sheetId,
@@ -102,9 +117,10 @@ const report = {
   replacementSites: sites,
   fieldsDifferingFromExport: changedFields,
   filesPatchedWithChanges: filesChanged,
+  overridesApplied,
 };
 writeFileSync(resolve(GENERATED_DIR, 'render-report.json'), `${JSON.stringify(report, null, 2)}\n`);
 console.log(
   `copy:render ok. Snapshot ${snapshot.contentSha256.slice(0, 12)} (${snapshot.rowCount} rows, fetched ${snapshot.fetchedAt}); ` +
-    `${Object.keys(map.fields).length} fields, ${sites} sites; ${changedFields} fields differ from the committed export; ${filesChanged} files changed.`,
+    `${Object.keys(map.fields).length} fields, ${sites} sites; ${changedFields} fields differ from the committed export; ${filesChanged} files changed; ${overridesApplied} design overrides.`,
 );
