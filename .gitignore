@@ -17,6 +17,7 @@ build/
 .cache/
 .next/
 .astro/
+.generated/
 
 # Logs
 *.log
