@@ -144,11 +144,18 @@ a:hover {
   top: 8px;
 }
 
-/* Container standard from the guide. */
+/* Container standard from the guide (20px side edge on phones). From 768px up the left and
+   right content edge is at least 80px (owner instruction, 2026-10-03). At 1440px and wider the
+   container stops at 1280px, so the edge is 80px or more. */
 .container {
   width: calc(100% - 40px);
   max-width: var(--container);
   margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: calc(100% - 160px);
+  }
 }
 
 .section {

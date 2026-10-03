@@ -1,0 +1,13 @@
+ok    320px /                        min-required=20  lefts=20
+ok    320px /canal-des-deux-mers/    min-required=20  lefts=20
+ok    375px /                        min-required=20  lefts=20
+ok    375px /canal-des-deux-mers/    min-required=20  lefts=20
+ok    390px /                        min-required=20  lefts=20
+ok    390px /canal-des-deux-mers/    min-required=20  lefts=20
+ok    768px /                        min-required=80  lefts=80
+ok    768px /canal-des-deux-mers/    min-required=80  lefts=80
+ok   1024px /                        min-required=80  lefts=80
+ok   1024px /canal-des-deux-mers/    min-required=80  lefts=80
+ok   1440px /                        min-required=80  lefts=80
+ok   1440px /canal-des-deux-mers/    min-required=80  lefts=80
+EDGE: all blocks share one left edge, minimum met at every width

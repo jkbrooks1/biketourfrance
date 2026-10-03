@@ -35,7 +35,7 @@ Additions that are not brand colors: body ink `#1a1a1a`, muted ink `#4a4a44`, ha
 
 ## Layout
 
-- Container: `width: calc(100% - 40px); max-width: 1280px; margin: 0 auto`, exactly as the guide states. Reading text is capped at 68 characters.
+- Container: `width: calc(100% - 40px); max-width: 1280px; margin: 0 auto` on phones (20 px side edge), as the guide states. From 768 px up the owner raised the side edge to 80 px (`width: calc(100% - 160px)`, still capped at 1280 px), so left and right content edges are at least 80 px on tablet and desktop. Reading text is capped at 68 characters.
 - Sections alternate white and beige. Section padding is `clamp(40px, 6vw, 80px)`.
 - Multi-column layouts collapse to a single stack on phones and never overflow (tested at 320, 375, 390, 768, 1024, and 1440 px).
 
@@ -86,4 +86,5 @@ Public 2027 facts come only from `src/data/cdm2027.ts` (see `docs/2027_CDM_CONTE
 | 4 | Not specified for dark bands. | The closing "Ready to ride?" band is beige with a green top rule, not dark green. | Lets both buttons keep the exact guide colors. |
 | 5 | The guide shows engraving and panda illustrations as the illustration systems. | The site has no engraving artwork yet. Photographs from earlier rides fill that role. | Only the existing live-site photographs were available. |
 | 6 | "Avoid startup SaaS cards." | Content groups use plain bordered boxes with a 6 px radius and no shadow. | Keeps structure without a card-grid look. |
+| 8 | Container side edge is 20 px at every width. | 80 px from 768 px up, 20 px on phones. | Owner instruction of 2026-10-03. |
 | 7 | Hero should answer "what, where, why" in seconds. | The home hero states small-group tours in France, the 2027 Canal des Deux Mers tour, and the two actions. | Meets the guide; noted here for review. |
