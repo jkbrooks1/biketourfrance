@@ -1,7 +1,7 @@
-/* Owner request, 2026-10-03: five times the left padding on the "Ready to ride?" text frame
-   (10px in the Framer export, 50px here). The selector is more specific than the export's
+/* Owner request, 2026-10-03: more left padding on the "Ready to ride?" text frame
+   (10px in the Framer export; 50px was too little, so 100px here). The selector is more specific than the export's
    rule so Framer's runtime styles cannot win. Injected into the home page by
    scripts/copy/render.mjs. */
 body .framer-RbKqQ .framer-wormha {
-  padding-left: 50px;
+  padding-left: 100px;
 }
