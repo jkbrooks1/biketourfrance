@@ -28,3 +28,10 @@ Append-only. Concise timestamped entries. No secrets. Each entry is also appende
 - Docs added: 2027_CDM_CONTENT_AUTHORITY, SUBDOMAIN_MIGRATION_AUDIT, PRODUCTION_CUTOVER_PREFLIGHT, 2026-10-02_AUDIT_REMEDIATION_REPORT, STYLE_GUIDE, OWNER_STYLE_GUIDE_v4.3, SECURITY_CSP_AUDIT; README and cutover.md updated. Proof in docs/proof/2026-10-02/.
 - Read-only live checks only against public hosts (GET/HEAD). No DNS, Cloudflare setting, domain binding, redirect, production header, Framer, or Production deployment change. main not touched.
 - Note: the brief named /Users/jkbrookspersonal/JBLocal FilesTEMP/00_GENERAL_BUILDLOG.md as a fallback log; that path is retired. Logged to the canonical general log instead.
+
+## 2026-10-03T03:59:06Z — Branch pushed; Cloudflare Pages preview verified
+- Pushed rebuild/2026-10-02-audit-remediation (commits 4fdf064, af941d2, aa239b4). Tested build commit: aa239b4acfd30fd510e89f2eedc5c0f6c7cd544c.
+- Cloudflare Pages (temp-btf) built it via Git integration: preview https://e476b72c.temp-btf.pages.dev, branch preview https://rebuild-2026-10-02-audit-rem.temp-btf.pages.dev. No Wrangler deploy.
+- Staging proof: 10 pages plus sitemap-index.xml and robots.txt return 200; unknown path returns 404 with the branded page; X-Robots-Tag noindex, nofollow, noarchive on 200 and 404; robots.txt Disallow /; noindex meta present; canonical points to https://biketourfrance.net/; no Set-Cookie, CSP, or HSTS header added; Playwright responsive run against the preview (11 pages x 6 widths) clean.
+- Proof ZIP: /Users/jkbrookspersonal/Downloads/BTF_AUDIT_REMEDIATION_PROOF_20261002.zip. Helper scripts archived to /Users/jkbrookspersonal/00_SCRIPTS (prefix 20261002T205204_).
+- Not done: merge to main, DNS, domain binding, redirects, production headers, production deploy, Framer. Pull request not opened.
