@@ -1,0 +1,1346 @@
+[
+  {
+    "field": "site/skip_link",
+    "route": "*",
+    "required": true,
+    "codeLocation": "src/layouts/BaseLayout.astro"
+  },
+  {
+    "field": "site/staging_banner",
+    "route": "*",
+    "required": false,
+    "codeLocation": "src/layouts/BaseLayout.astro"
+  },
+  {
+    "field": "site/brand_name",
+    "route": "*",
+    "required": true,
+    "codeLocation": "src/components/Header.astro"
+  },
+  {
+    "field": "site/menu_button",
+    "route": "*",
+    "required": true,
+    "codeLocation": "src/components/Header.astro"
+  },
+  {
+    "field": "site/nav_tours",
+    "route": "*",
+    "required": true,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "site/nav_cdm_tour",
+    "route": "*",
+    "required": true,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "site/nav_practical_information",
+    "route": "*",
+    "required": true,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "site/nav_resources",
+    "route": "*",
+    "required": true,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "site/nav_about",
+    "route": "*",
+    "required": true,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "site/nav_contact",
+    "route": "*",
+    "required": true,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "site/footer_tagline",
+    "route": "*",
+    "required": true,
+    "codeLocation": "src/components/Footer.astro"
+  },
+  {
+    "field": "site/footer_email",
+    "route": "*",
+    "required": true,
+    "codeLocation": "src/components/Footer.astro"
+  },
+  {
+    "field": "site/footer_explore_heading",
+    "route": "*",
+    "required": true,
+    "codeLocation": "src/components/Footer.astro"
+  },
+  {
+    "field": "site/footer_legal_heading",
+    "route": "*",
+    "required": true,
+    "codeLocation": "src/components/Footer.astro"
+  },
+  {
+    "field": "site/legal_privacy",
+    "route": "*",
+    "required": true,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "site/legal_terms",
+    "route": "*",
+    "required": true,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "site/legal_cookies",
+    "route": "*",
+    "required": true,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "site/footer_copyright",
+    "route": "*",
+    "required": true,
+    "codeLocation": "src/components/Footer.astro"
+  },
+  {
+    "field": "site/cta_waitlist_label",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/components/ContactCta.astro"
+  },
+  {
+    "field": "site/cta_email_label",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/components/ContactCta.astro"
+  },
+  {
+    "field": "site/review_note",
+    "route": "/privacy/",
+    "required": false,
+    "codeLocation": "src/components/ReviewNote.astro"
+  },
+  {
+    "field": "home/seo_title",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/seo_description",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/hero_eyebrow",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/hero_heading",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/hero_body",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/hero_cta_tour",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/tour_waitlist_cta",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/ways_heading",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/ways_group_heading",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/ways_group_body",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/ways_group_link",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/ways_own_heading",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/ways_own_body",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/ways_own_link",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/cdm_eyebrow",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/cdm_heading",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/cdm_summary",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/cdm_stats",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/cdm_departures",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/cdm_cta",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/whats_included_heading",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/whats_included_notice",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/whats_included_label",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/whats_included",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/what_you_arrange_separately_label",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/what_you_arrange_separately",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/about_eyebrow",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/about_heading",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/about_body",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/about_link",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/gallery_heading",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/gallery_link",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/ready_to_ride_heading",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "home/contact_cta",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "tours/seo_title",
+    "route": "/tours/",
+    "required": true,
+    "codeLocation": "src/pages/tours/index.astro"
+  },
+  {
+    "field": "tours/seo_description",
+    "route": "/tours/",
+    "required": true,
+    "codeLocation": "src/pages/tours/index.astro"
+  },
+  {
+    "field": "tours/page_eyebrow",
+    "route": "/tours/",
+    "required": true,
+    "codeLocation": "src/pages/tours/index.astro"
+  },
+  {
+    "field": "tours/page_heading",
+    "route": "/tours/",
+    "required": true,
+    "codeLocation": "src/pages/tours/index.astro"
+  },
+  {
+    "field": "tours/page_lede",
+    "route": "/tours/",
+    "required": true,
+    "codeLocation": "src/pages/tours/index.astro"
+  },
+  {
+    "field": "tours/group_heading",
+    "route": "/tours/",
+    "required": true,
+    "codeLocation": "src/pages/tours/index.astro"
+  },
+  {
+    "field": "tours/group_body",
+    "route": "/tours/",
+    "required": true,
+    "codeLocation": "src/pages/tours/index.astro"
+  },
+  {
+    "field": "tours/group_cta",
+    "route": "/tours/",
+    "required": true,
+    "codeLocation": "src/pages/tours/index.astro"
+  },
+  {
+    "field": "tours/group_waitlist_cta",
+    "route": "/tours/",
+    "required": true,
+    "codeLocation": "src/pages/tours/index.astro"
+  },
+  {
+    "field": "tours/self_guided_heading",
+    "route": "/tours/",
+    "required": true,
+    "codeLocation": "src/pages/tours/index.astro"
+  },
+  {
+    "field": "tours/self_guided_body",
+    "route": "/tours/",
+    "required": true,
+    "codeLocation": "src/pages/tours/index.astro"
+  },
+  {
+    "field": "tours/self_guided_cta",
+    "route": "/tours/",
+    "required": true,
+    "codeLocation": "src/pages/tours/index.astro"
+  },
+  {
+    "field": "tours/coaching_heading",
+    "route": "/tours/",
+    "required": true,
+    "codeLocation": "src/pages/tours/index.astro"
+  },
+  {
+    "field": "tours/coaching_body",
+    "route": "/tours/",
+    "required": true,
+    "codeLocation": "src/pages/tours/index.astro"
+  },
+  {
+    "field": "tours/coaching_cta",
+    "route": "/tours/",
+    "required": true,
+    "codeLocation": "src/pages/tours/index.astro"
+  },
+  {
+    "field": "tours/ready_to_ride_heading",
+    "route": "/tours/",
+    "required": true,
+    "codeLocation": "src/pages/tours/index.astro"
+  },
+  {
+    "field": "tours/contact_cta",
+    "route": "/tours/",
+    "required": true,
+    "codeLocation": "src/pages/tours/index.astro"
+  },
+  {
+    "field": "cdm-tour/seo_title",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "cdm-tour/seo_description",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "cdm-tour/hero_eyebrow",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "cdm-tour/hero_heading",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "cdm-tour/hero_body",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "cdm-tour/dates_pricing_notice",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "cdm-tour/hero_cta_question",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "cdm-tour/glance_heading",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "cdm-tour/glance_stats",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "cdm-tour/glance_points",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "cdm-tour/route_heading",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "cdm-tour/route_intro",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "cdm-tour/route_stops",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "cdm-tour/week_heading",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "cdm-tour/week_plan",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "cdm-tour/toulouse_dinner_heading",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "cdm-tour/toulouse_dinner",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "cdm-tour/whats_included_heading",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "cdm-tour/whats_included_notice",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "cdm-tour/whats_included_label",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "cdm-tour/whats_included",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "cdm-tour/what_you_arrange_separately_label",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "cdm-tour/what_you_arrange_separately",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "cdm-tour/self_supported_heading",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "cdm-tour/self_supported_points",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "cdm-tour/practical_link",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "cdm-tour/history_heading",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "cdm-tour/history_body",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "cdm-tour/gallery_heading",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "cdm-tour/ready_to_ride_heading",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "cdm-tour/contact_cta",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "practical-information/seo_title",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/seo_description",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/page_eyebrow",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/page_heading",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/page_intro",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/data_notice",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/options_heading",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/tram_heading",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/tram_summary",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/bus_heading",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/bus_summary",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/choose_heading",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/tram_choose_heading",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/tram_choose",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/bus_choose_heading",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/bus_choose",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/details_heading",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/detail_1_question",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/detail_1_tram",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/detail_1_bus",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/detail_2_question",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/detail_2_tram",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/detail_2_bus",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/detail_3_question",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/detail_3_tram",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/detail_3_bus",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/detail_4_question",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/detail_4_tram",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/detail_4_bus",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/detail_5_question",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/detail_5_tram",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/detail_5_bus",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/detail_6_question",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/detail_6_tram",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/detail_6_bus",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/ready_to_ride_heading",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "practical-information/contact_cta",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "resources/seo_title",
+    "route": "/resources/",
+    "required": true,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "resources/seo_description",
+    "route": "/resources/",
+    "required": true,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "resources/page_eyebrow",
+    "route": "/resources/",
+    "required": true,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "resources/page_heading",
+    "route": "/resources/",
+    "required": true,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "resources/intro_copy",
+    "route": "/resources/",
+    "required": true,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "resources/page_nav",
+    "route": "/resources/",
+    "required": true,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "resources/templates_heading",
+    "route": "/resources/",
+    "required": true,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "resources/templates_list",
+    "route": "/resources/",
+    "required": true,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "resources/audio_heading",
+    "route": "/resources/",
+    "required": true,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "resources/audio_intro",
+    "route": "/resources/",
+    "required": true,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "resources/audio_guides",
+    "route": "/resources/",
+    "required": true,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "resources/audio_fallback",
+    "route": "/resources/",
+    "required": true,
+    "codeLocation": "src/components/AudioList.astro"
+  },
+  {
+    "field": "resources/audio_download_label",
+    "route": "/resources/",
+    "required": true,
+    "codeLocation": "src/components/AudioList.astro"
+  },
+  {
+    "field": "resources/food_heading",
+    "route": "/resources/",
+    "required": true,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "resources/food_audio",
+    "route": "/resources/",
+    "required": true,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "resources/french_heading",
+    "route": "/resources/",
+    "required": true,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "resources/french_copy",
+    "route": "/resources/",
+    "required": true,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "resources/narratives_heading",
+    "route": "/resources/",
+    "required": true,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "resources/narratives_list",
+    "route": "/resources/",
+    "required": true,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "resources/helpful_sites_heading",
+    "route": "/resources/",
+    "required": true,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "resources/helpful_sites_intro",
+    "route": "/resources/",
+    "required": true,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "resources/helpful_sites_list",
+    "route": "/resources/",
+    "required": true,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "resources/ready_to_ride_heading",
+    "route": "/resources/",
+    "required": true,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "resources/contact_cta",
+    "route": "/resources/",
+    "required": true,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "about/seo_title",
+    "route": "/about/",
+    "required": true,
+    "codeLocation": "src/pages/about/index.astro"
+  },
+  {
+    "field": "about/seo_description",
+    "route": "/about/",
+    "required": true,
+    "codeLocation": "src/pages/about/index.astro"
+  },
+  {
+    "field": "about/page_eyebrow",
+    "route": "/about/",
+    "required": true,
+    "codeLocation": "src/pages/about/index.astro"
+  },
+  {
+    "field": "about/page_heading",
+    "route": "/about/",
+    "required": true,
+    "codeLocation": "src/pages/about/index.astro"
+  },
+  {
+    "field": "about/page_lede",
+    "route": "/about/",
+    "required": true,
+    "codeLocation": "src/pages/about/index.astro"
+  },
+  {
+    "field": "about/intro_body",
+    "route": "/about/",
+    "required": true,
+    "codeLocation": "src/pages/about/index.astro"
+  },
+  {
+    "field": "about/how_heading",
+    "route": "/about/",
+    "required": true,
+    "codeLocation": "src/pages/about/index.astro"
+  },
+  {
+    "field": "about/how_body",
+    "route": "/about/",
+    "required": true,
+    "codeLocation": "src/pages/about/index.astro"
+  },
+  {
+    "field": "about/who_heading",
+    "route": "/about/",
+    "required": true,
+    "codeLocation": "src/pages/about/index.astro"
+  },
+  {
+    "field": "about/who_body",
+    "route": "/about/",
+    "required": true,
+    "codeLocation": "src/pages/about/index.astro"
+  },
+  {
+    "field": "about/ready_to_ride_heading",
+    "route": "/about/",
+    "required": true,
+    "codeLocation": "src/pages/about/index.astro"
+  },
+  {
+    "field": "about/contact_cta",
+    "route": "/about/",
+    "required": true,
+    "codeLocation": "src/pages/about/index.astro"
+  },
+  {
+    "field": "contact/seo_title",
+    "route": "/contact/",
+    "required": true,
+    "codeLocation": "src/pages/contact/index.astro"
+  },
+  {
+    "field": "contact/seo_description",
+    "route": "/contact/",
+    "required": true,
+    "codeLocation": "src/pages/contact/index.astro"
+  },
+  {
+    "field": "contact/page_eyebrow",
+    "route": "/contact/",
+    "required": true,
+    "codeLocation": "src/pages/contact/index.astro"
+  },
+  {
+    "field": "contact/page_heading",
+    "route": "/contact/",
+    "required": true,
+    "codeLocation": "src/pages/contact/index.astro"
+  },
+  {
+    "field": "contact/page_lede",
+    "route": "/contact/",
+    "required": true,
+    "codeLocation": "src/pages/contact/index.astro"
+  },
+  {
+    "field": "contact/starting_heading",
+    "route": "/contact/",
+    "required": true,
+    "codeLocation": "src/pages/contact/index.astro"
+  },
+  {
+    "field": "contact/starting_list",
+    "route": "/contact/",
+    "required": true,
+    "codeLocation": "src/pages/contact/index.astro"
+  },
+  {
+    "field": "contact/starting_note",
+    "route": "/contact/",
+    "required": true,
+    "codeLocation": "src/pages/contact/index.astro"
+  },
+  {
+    "field": "contact/lists_heading",
+    "route": "/contact/",
+    "required": true,
+    "codeLocation": "src/pages/contact/index.astro"
+  },
+  {
+    "field": "contact/lists_body",
+    "route": "/contact/",
+    "required": true,
+    "codeLocation": "src/pages/contact/index.astro"
+  },
+  {
+    "field": "privacy/seo_title",
+    "route": "/privacy/",
+    "required": true,
+    "codeLocation": "src/pages/privacy/index.astro"
+  },
+  {
+    "field": "privacy/seo_description",
+    "route": "/privacy/",
+    "required": true,
+    "codeLocation": "src/pages/privacy/index.astro"
+  },
+  {
+    "field": "privacy/page_heading",
+    "route": "/privacy/",
+    "required": true,
+    "codeLocation": "src/pages/privacy/index.astro"
+  },
+  {
+    "field": "privacy/page_lede",
+    "route": "/privacy/",
+    "required": true,
+    "codeLocation": "src/pages/privacy/index.astro"
+  },
+  {
+    "field": "privacy/page_copy",
+    "route": "/privacy/",
+    "required": true,
+    "codeLocation": "src/pages/privacy/index.astro"
+  },
+  {
+    "field": "terms/seo_title",
+    "route": "/terms/",
+    "required": true,
+    "codeLocation": "src/pages/terms/index.astro"
+  },
+  {
+    "field": "terms/seo_description",
+    "route": "/terms/",
+    "required": true,
+    "codeLocation": "src/pages/terms/index.astro"
+  },
+  {
+    "field": "terms/page_heading",
+    "route": "/terms/",
+    "required": true,
+    "codeLocation": "src/pages/terms/index.astro"
+  },
+  {
+    "field": "terms/page_lede",
+    "route": "/terms/",
+    "required": true,
+    "codeLocation": "src/pages/terms/index.astro"
+  },
+  {
+    "field": "terms/page_copy",
+    "route": "/terms/",
+    "required": true,
+    "codeLocation": "src/pages/terms/index.astro"
+  },
+  {
+    "field": "cookies/seo_title",
+    "route": "/cookies/",
+    "required": true,
+    "codeLocation": "src/pages/cookies/index.astro"
+  },
+  {
+    "field": "cookies/seo_description",
+    "route": "/cookies/",
+    "required": true,
+    "codeLocation": "src/pages/cookies/index.astro"
+  },
+  {
+    "field": "cookies/page_heading",
+    "route": "/cookies/",
+    "required": true,
+    "codeLocation": "src/pages/cookies/index.astro"
+  },
+  {
+    "field": "cookies/page_lede",
+    "route": "/cookies/",
+    "required": true,
+    "codeLocation": "src/pages/cookies/index.astro"
+  },
+  {
+    "field": "cookies/page_copy",
+    "route": "/cookies/",
+    "required": true,
+    "codeLocation": "src/pages/cookies/index.astro"
+  },
+  {
+    "field": "404/seo_title",
+    "route": "/404.html",
+    "required": true,
+    "codeLocation": "src/pages/404.astro"
+  },
+  {
+    "field": "404/seo_description",
+    "route": "/404.html",
+    "required": true,
+    "codeLocation": "src/pages/404.astro"
+  },
+  {
+    "field": "404/eyebrow",
+    "route": "/404.html",
+    "required": true,
+    "codeLocation": "src/pages/404.astro"
+  },
+  {
+    "field": "404/heading",
+    "route": "/404.html",
+    "required": true,
+    "codeLocation": "src/pages/404.astro"
+  },
+  {
+    "field": "404/body",
+    "route": "/404.html",
+    "required": true,
+    "codeLocation": "src/pages/404.astro"
+  },
+  {
+    "field": "404/home_button",
+    "route": "/404.html",
+    "required": true,
+    "codeLocation": "src/pages/404.astro"
+  },
+  {
+    "field": "404/tour_button",
+    "route": "/404.html",
+    "required": true,
+    "codeLocation": "src/pages/404.astro"
+  },
+  {
+    "field": "photos/hero_alt",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "photos/two_riders_shade_alt",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "photos/creon_alt",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "photos/rider_canal_path_alt",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "photos/route_signs_alt",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "photos/cafe_table_alt",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "photos/narrow_bank_alt",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "photos/three_riders_town_alt",
+    "route": "/about/",
+    "required": true,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "photos/church_alt",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "photos/greenway_alt",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "photos/matching_jerseys_alt",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "photos/wheel_repair_alt",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "photos/pine_forest_alt",
+    "route": "/canal-des-deux-mers/",
+    "required": true,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "photos/panda_airport_alt",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": true,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "photos/creon_caption",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "photos/route_signs_caption",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/photos.ts"
+  }
+]

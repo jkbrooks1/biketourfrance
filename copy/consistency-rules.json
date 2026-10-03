@@ -1,0 +1,30 @@
+[
+  {
+    "rule": "identical",
+    "fields": ["home/whats_included_heading", "cdm-tour/whats_included_heading"]
+  },
+  {
+    "rule": "identical",
+    "fields": ["home/whats_included_notice", "cdm-tour/whats_included_notice"]
+  },
+  {
+    "rule": "identical",
+    "fields": ["home/whats_included_label", "cdm-tour/whats_included_label"]
+  },
+  {
+    "rule": "identical",
+    "fields": ["home/whats_included", "cdm-tour/whats_included"]
+  },
+  {
+    "rule": "identical",
+    "fields": ["home/what_you_arrange_separately_label", "cdm-tour/what_you_arrange_separately_label"]
+  },
+  {
+    "rule": "identical",
+    "fields": ["home/what_you_arrange_separately", "cdm-tour/what_you_arrange_separately"]
+  },
+  {
+    "rule": "identical",
+    "fields": ["home/cdm_stats", "cdm-tour/glance_stats"]
+  }
+]

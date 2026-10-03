@@ -6,14 +6,21 @@
   "description": "BikeTourFrance website: native Astro build deployed to Cloudflare Pages (project temp-btf) from GitHub.",
   "scripts": {
     "build:site": "python3 scripts/build_site.py",
-    "dev": "astro dev",
-    "build": "astro build",
+    "copy:sync": "node scripts/copy/sync.mjs",
+    "copy:validate": "node scripts/copy/validate.mjs",
+    "copy:verify-rendered": "node scripts/copy/verify-rendered.mjs",
+    "copy:test": "node scripts/copy/negative-tests.mjs",
+    "dev": "npm run copy:sync && npm run copy:validate && astro dev",
+    "dev:fixture": "BTF_COPY_FIXTURE=1 npm run dev",
+    "build": "npm run copy:sync && npm run copy:validate && astro build && npm run copy:verify-rendered && npm run verify",
+    "build:fixture": "BTF_COPY_FIXTURE=1 npm run build",
+    "predeploy": "BTF_DEPLOY_ENV=production npm run build && node scripts/copy/assert-deployable.mjs",
     "preview": "astro preview",
     "check": "astro check",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "verify": "node scripts/verify-dist.mjs",
-    "test": "npm run check && npm run build && npm run verify"
+    "test": "npm run build:fixture && npm run copy:test && npm run check"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",

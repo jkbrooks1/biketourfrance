@@ -1,0 +1,47 @@
+# Required check before any production deployment. Branch protection on `main` must list the job
+# "Approved copy check" as a required status check (see docs/APPROVED_COPY_GATE.md, "GitHub Actions").
+#
+# The job runs the exact production pre-deploy command: it reads BTF_Approved_Site_Copy with a
+# read-only Google service account, validates every field, builds the site, and verifies that every
+# page matches the approved copy. It fails if the secrets are missing, so a pull request from a fork
+# (which gets no secrets) cannot pass.
+name: Approved copy check
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: approved-copy-check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  approved-copy-check:
+    name: Approved copy check
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Production pre-deploy check (copy sync, validation, build, rendered verification)
+        env:
+          # Stored as GitHub Actions secrets. Never printed, never written to the repository.
+          BTF_COPY_SHEET_ID: ${{ secrets.BTF_COPY_SHEET_ID }}
+          BTF_COPY_GOOGLE_SA_JSON: ${{ secrets.BTF_COPY_GOOGLE_SA_JSON }}
+        run: npm run predeploy

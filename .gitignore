@@ -39,3 +39,6 @@ framer-site.zip
 
 # Framer export (contains form endpoint IDs; keep local only)
 source-framer/
+
+# Generated approved-copy artifacts (no secrets; rebuilt on every build)
+.copy/
