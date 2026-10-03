@@ -1,35 +1,46 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Photo from '../../components/Photo.astro';
-import Copy from '../../components/Copy.astro';
 import Included from '../../components/Included.astro';
 import Gallery from '../../components/Gallery.astro';
 import ContactCta from '../../components/ContactCta.astro';
+import {
+  CDM_FACTS,
+  CDM_STATS,
+  SELF_SUPPORTED_POINTS,
+  STOPS,
+  TOULOUSE_DINNER,
+  WEEK_PLAN,
+} from '../../data/cdm2027';
 import { GALLERY, PHOTOS } from '../../data/photos';
 import { CONTACT_LINKS } from '../../data/site';
-import { t } from '../../lib/copy.mjs';
 ---
 
 <BaseLayout
   path="/canal-des-deux-mers/"
-  title={t('cdm-tour/seo_title')}
-  description={t('cdm-tour/seo_description')}
+  title="Canal des Deux Mers by bike, 2027 small-group tour"
+  description="Ride from Bordeaux to Sète along the Canal des Deux Mers with a small, self-supported group. Four departures in 2027: nine riding days, one rest day in Toulouse, 11 nights."
 >
   <section class="section">
     <div class="container split">
       <div>
-        <p class="eyebrow">{t('cdm-tour/hero_eyebrow')}</p>
-        <h1>{t('cdm-tour/hero_heading')}</h1>
-        <Copy field="cdm-tour/hero_body" class="lede" />
+        <p class="eyebrow">2027 small-group tour</p>
+        <h1>Canal des Deux Mers by bike, Bordeaux to Sète</h1>
+        <p class="lede">
+          {CDM_FACTS.route} Nine riding days, one rest day in Toulouse, and 11 nights, led by John Brooks.
+        </p>
         <div class="notice">
-          <Copy field="cdm-tour/dates_pricing_notice" />
+          <p>
+            <strong>Dates and pricing are not final.</strong> {CDM_FACTS.departures} {CDM_FACTS.datesNote}{' '}
+            {CDM_FACTS.pricingNote}
+          </p>
         </div>
         <div class="btn-row">
           <a class="btn" href={CONTACT_LINKS.waitlist}>
-            {t('site/cta_waitlist_label')}
+            Ask to join the 2027 waitlist
           </a>
           <a class="btn btn--secondary" href={CONTACT_LINKS.general}>
-            {t('cdm-tour/hero_cta_question')}
+            Ask a question
           </a>
         </div>
       </div>
@@ -41,44 +52,69 @@ import { t } from '../../lib/copy.mjs';
 
   <section class="section section--beige" aria-labelledby="at-a-glance">
     <div class="container">
-      <h2 id="at-a-glance">{t('cdm-tour/glance_heading')}</h2>
-      <Copy field="cdm-tour/glance_stats" listClass="stats" />
-      <Copy field="cdm-tour/glance_points" />
+      <h2 id="at-a-glance">The tour at a glance</h2>
+      <ul class="stats">
+        {CDM_STATS.map((s) => (
+          <li>
+            <strong>{s.value}</strong>
+            {s.label}
+          </li>
+        ))}
+      </ul>
+      <ul>
+        <li>The route is the same on every departure.</li>
+        <li>
+          Groups run with a minimum of {CDM_FACTS.minRiders} riders. The target is {CDM_FACTS.targetRiders},
+          and the maximum is {CDM_FACTS.maxRiders}.
+        </li>
+      </ul>
     </div>
   </section>
 
   <section class="section" aria-labelledby="route-heading">
     <div class="container">
-      <h2 id="route-heading">{t('cdm-tour/route_heading')}</h2>
-      <Copy field="cdm-tour/route_intro" />
-      <Copy field="cdm-tour/route_stops" listClass="stops" />
-      <h3>{t('cdm-tour/week_heading')}</h3>
-      <Copy field="cdm-tour/week_plan" listClass="week" />
-      <h3>{t('cdm-tour/toulouse_dinner_heading')}</h3>
-      <Copy field="cdm-tour/toulouse_dinner" />
+      <h2 id="route-heading">The route and the week</h2>
+      <p>From the Atlantic to the Mediterranean, the tour passes through these stops:</p>
+      <ol class="stops" aria-label="Route stops in order">
+        {STOPS.map((stop) => (
+          <li>{stop}</li>
+        ))}
+      </ol>
+      <h3>How the week runs</h3>
+      <ul class="week">
+        {WEEK_PLAN.map((step) => (
+          <li>
+            <strong>{step.day}</strong>
+            <span>{step.text}</span>
+          </li>
+        ))}
+      </ul>
+      <h3>Dinner in Toulouse</h3>
+      <p>
+        {TOULOUSE_DINNER.text} {TOULOUSE_DINNER.dress}
+      </p>
     </div>
   </section>
 
   <section class="section section--beige">
     <div class="container">
-      <Included
-        headingField="cdm-tour/whats_included_heading"
-        noticeField="cdm-tour/whats_included_notice"
-        includedLabelField="cdm-tour/whats_included_label"
-        includedField="cdm-tour/whats_included"
-        separateLabelField="cdm-tour/what_you_arrange_separately_label"
-        separateField="cdm-tour/what_you_arrange_separately"
-      />
+      <Included />
     </div>
   </section>
 
   <section class="section" aria-labelledby="self-supported-heading">
     <div class="container two-col">
       <div>
-        <h2 id="self-supported-heading">{t('cdm-tour/self_supported_heading')}</h2>
-        <Copy field="cdm-tour/self_supported_points" />
+        <h2 id="self-supported-heading">Self-supported means you carry your own gear</h2>
+        <ul>
+          {SELF_SUPPORTED_POINTS.map((point) => (
+            <li>{point}</li>
+          ))}
+        </ul>
         <p>
-          <a href="/canal-des-deux-mers/practical-info/">{t('cdm-tour/practical_link')}</a>
+          <a href="/canal-des-deux-mers/practical-info/">
+            Getting from Bordeaux Airport to the station and hotels
+          </a>
         </p>
       </div>
       <div class="rounded">
@@ -89,17 +125,21 @@ import { t } from '../../lib/copy.mjs';
 
   <section class="section section--beige" aria-labelledby="history-heading">
     <div class="container">
-      <h2 id="history-heading">{t('cdm-tour/history_heading')}</h2>
-      <Copy field="cdm-tour/history_body" />
+      <h2 id="history-heading">Earlier tours on this route</h2>
+      <p>
+        BikeTourFrance.net rode the Canal des Deux Mers in September 2026. That tour is finished and is not
+        open for booking. The audio route guides and a historical narrative written for it are still useful
+        for planning, and they live on the <a href="/resources/">Resources page</a>.
+      </p>
     </div>
   </section>
 
   <section class="section" aria-labelledby="gallery-heading">
     <div class="container">
-      <h2 id="gallery-heading">{t('cdm-tour/gallery_heading')}</h2>
+      <h2 id="gallery-heading">Photos from the route</h2>
       <Gallery photos={GALLERY} />
     </div>
   </section>
 
-  <ContactCta headingField="cdm-tour/ready_to_ride_heading" bodyField="cdm-tour/contact_cta" />
+  <ContactCta />
 </BaseLayout>

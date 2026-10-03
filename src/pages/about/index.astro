@@ -1,20 +1,33 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Photo from '../../components/Photo.astro';
-import Copy from '../../components/Copy.astro';
 import ContactCta from '../../components/ContactCta.astro';
 import { PHOTOS } from '../../data/photos';
-import { t } from '../../lib/copy.mjs';
 ---
 
-<BaseLayout path="/about/" title={t('about/seo_title')} description={t('about/seo_description')}>
+<BaseLayout
+  path="/about/"
+  title="About John Brooks"
+  description="John Brooks leads small, self-supported bicycle tours in France. Learn who he is, how the tours work, and why he plans each day in detail."
+>
   <section class="section">
     <div class="container split">
       <div>
-        <p class="eyebrow">{t('about/page_eyebrow')}</p>
-        <h1>{t('about/page_heading')}</h1>
-        <Copy field="about/page_lede" class="lede" />
-        <Copy field="about/intro_body" />
+        <p class="eyebrow">About BikeTourFrance.net</p>
+        <h1>Eat. Sleep. Roll. Repeat.</h1>
+        <p class="lede">
+          I'm John, the cyclist behind BikeTourFrance.net. I help riders carry out extraordinary bicycle tours
+          in France.
+        </p>
+        <p>
+          I personally lead four very small, self-supported group tours each year. Groups have no more than
+          twelve riders, so I can lead the ride, explain each day's plan in depth, and give the group the
+          attention it needs.
+        </p>
+        <p>
+          If you prefer to travel on your own schedule, I offer a self-guided tour package. I build the
+          routes, book your accommodations, and give practical support as you prepare for the trip.
+        </p>
       </div>
       <div class="rounded">
         <Photo
@@ -29,17 +42,39 @@ import { t } from '../../lib/copy.mjs';
 
   <section class="section section--beige" aria-labelledby="how-heading">
     <div class="container prose">
-      <h2 id="how-heading">{t('about/how_heading')}</h2>
-      <Copy field="about/how_body" />
+      <h2 id="how-heading">How the tours work</h2>
+      <p>
+        All BikeTourFrance.net tours are self-supported. You carry your own gear from place to place. The
+        Canal des Deux Mers is fairly flat, so you do not need to obsess over every gram, but space still
+        matters. Pack less than you think you need.
+      </p>
+      <p>
+        Planning a bicycle tour in France gets complex fast. Where you ride, how far you go, where you eat,
+        where you sleep, how trains fit in, and when you stop to see a place all affect one another. A small
+        choice early in the plan can cause a hard day later.
+      </p>
     </div>
   </section>
 
   <section class="section" aria-labelledby="who-heading">
     <div class="container prose">
-      <h2 id="who-heading">{t('about/who_heading')}</h2>
-      <Copy field="about/who_body" />
+      <h2 id="who-heading">Who is planning your trip</h2>
+      <p>
+        I have planned and ridden self-supported tours across France, and I have traveled on foot in many
+        parts of the country. I know what works on the ground: routes that make sense, days that fit real
+        riders, places to stay, food stops, train options, and the small details that keep a trip moving well.
+        I also know that coordinating your arrival time with your lodging makes a big difference for everyone.
+      </p>
+      <p>
+        Outside of touring, I lead rides for Cascade Bicycle Club in Seattle, work in enterprise technology,
+        and hold DELF B2 certification in French. I'm not a camper. I like a good route, a real bed, a warm
+        shower, and a solid meal at the end of the day. It is France, after all, and I love to eat well.
+      </p>
     </div>
   </section>
 
-  <ContactCta headingField="about/ready_to_ride_heading" bodyField="about/contact_cta" />
+  <ContactCta
+    heading="Want to talk it through?"
+    text="Email John with your questions about the 2027 tours or about planning your own trip."
+  />
 </BaseLayout>

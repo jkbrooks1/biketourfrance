@@ -1,60 +1,79 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Photo from '../../../components/Photo.astro';
-import Copy from '../../../components/Copy.astro';
 import ContactCta from '../../../components/ContactCta.astro';
+import practicalInfoData from '../../../data/practical-info-data.json';
 import { PHOTOS } from '../../../data/photos';
-import { t } from '../../../lib/copy.mjs';
 
-// The six detail questions. Each has its own approved copy field for the question and for the
-// tram and bus answers.
-const details = [
-  {
-    questionField: 'practical-information/detail_1_question',
-    tramField: 'practical-information/detail_1_tram',
-    busField: 'practical-information/detail_1_bus',
-  },
-  {
-    questionField: 'practical-information/detail_2_question',
-    tramField: 'practical-information/detail_2_tram',
-    busField: 'practical-information/detail_2_bus',
-  },
-  {
-    questionField: 'practical-information/detail_3_question',
-    tramField: 'practical-information/detail_3_tram',
-    busField: 'practical-information/detail_3_bus',
-  },
-  {
-    questionField: 'practical-information/detail_4_question',
-    tramField: 'practical-information/detail_4_tram',
-    busField: 'practical-information/detail_4_bus',
-  },
-  {
-    questionField: 'practical-information/detail_5_question',
-    tramField: 'practical-information/detail_5_tram',
-    busField: 'practical-information/detail_5_bus',
-  },
-  {
-    questionField: 'practical-information/detail_6_question',
-    tramField: 'practical-information/detail_6_tram',
-    busField: 'practical-information/detail_6_bus',
-  },
+// Data comes from the existing Practical Info sheet export (see docs/BUILD_LOG.md). Only the labels are cleaned up here.
+const { questions, generated_at } = practicalInfoData;
+const byQuestion = Object.fromEntries(
+  questions.map((entry: { question: string; tram: string; shuttle: string }) => [entry.question, entry]),
+);
+const checked = new Date(generated_at).toLocaleDateString('en-US', {
+  month: 'long',
+  year: 'numeric',
+  timeZone: 'UTC',
+});
+
+const tramSummary = [
+  'Cost: €1.90',
+  'Travel time: about 45 minutes',
+  'Frequency: every 10–15 minutes',
+  'Bike in a case: always allowed',
+  'Tickets: TBM app or machines',
+  'Best for: lowest cost and flexibility',
 ];
+const busSummary = [
+  'Cost: €9–10',
+  'Travel time: about 30 minutes',
+  'Schedule: limited window',
+  'Bike in a case: accepted',
+  'Tickets: online or onboard',
+  'Best for: fastest public option',
+];
+const tramChoose = [
+  'Lowest cost matters',
+  'You arrive early or late',
+  'You have a bike case',
+  'You want flexibility',
+];
+const busChoose = [
+  'Fastest journey matters',
+  'You arrive during operating hours',
+  'Extra cost is okay',
+  'You want the simplest trip',
+];
+
+const details = [
+  ['1. What is it?', 'What is it?'],
+  ['2. How frequently does it run?', 'How often does it run?'],
+  ['3. How long does it take?', 'How long does it take?'],
+  ['4. How much does it cost?', 'How much does it cost?'],
+  ['5. What about my bike?!?!', 'What about my bike?'],
+  ['6. How do I book?', 'How do I book?'],
+].map(([key, title]) => ({ title, tram: byQuestion[key]?.tram ?? '', bus: byQuestion[key]?.shuttle ?? '' }));
 ---
 
 <BaseLayout
   path="/canal-des-deux-mers/practical-info/"
-  title={t('practical-information/seo_title')}
-  description={t('practical-information/seo_description')}
+  title="Bordeaux Airport to Gare Saint-Jean: tram or airport bus"
+  description="How to get from Bordeaux Airport (Mérignac) to Gare Saint-Jean station and nearby hotels: Tram Line F or the 30'Direct airport bus, with times, costs, and bike rules."
 >
   <section class="section">
     <div class="container split">
       <div>
-        <p class="eyebrow">{t('practical-information/page_eyebrow')}</p>
-        <h1>{t('practical-information/page_heading')}</h1>
-        <Copy field="practical-information/page_intro" class="lede" />
+        <p class="eyebrow">Practical information</p>
+        <h1>Bordeaux Airport to Gare Saint-Jean and your hotel</h1>
+        <p class="lede">
+          Gare Saint-Jean is Bordeaux's main railway station. All recommended hotels are within about 500 m of
+          the station.
+        </p>
         <div class="notice">
-          <Copy field="practical-information/data_notice" />
+          <p>
+            Schedules and fares come from the transport operators and were last checked in {checked}. Confirm
+            them with TBM and 30'Direct before you travel.
+          </p>
         </div>
       </div>
       <div class="rounded" style="max-width: 360px">
@@ -71,15 +90,23 @@ const details = [
 
   <section class="section section--beige" aria-labelledby="summary-heading">
     <div class="container">
-      <h2 id="summary-heading">{t('practical-information/options_heading')}</h2>
+      <h2 id="summary-heading">Your two options</h2>
       <div class="two-col">
         <div class="card">
-          <h3>{t('practical-information/tram_heading')}</h3>
-          <Copy field="practical-information/tram_summary" />
+          <h3>Tram Line F</h3>
+          <ul>
+            {tramSummary.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
         </div>
         <div class="card">
-          <h3>{t('practical-information/bus_heading')}</h3>
-          <Copy field="practical-information/bus_summary" />
+          <h3>30'Direct airport bus</h3>
+          <ul>
+            {busSummary.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
@@ -87,15 +114,23 @@ const details = [
 
   <section class="section" aria-labelledby="choose-heading">
     <div class="container">
-      <h2 id="choose-heading">{t('practical-information/choose_heading')}</h2>
+      <h2 id="choose-heading">Which should I choose?</h2>
       <div class="two-col">
         <div class="card">
-          <h3>{t('practical-information/tram_choose_heading')}</h3>
-          <Copy field="practical-information/tram_choose" />
+          <h3>Choose Tram Line F if:</h3>
+          <ul>
+            {tramChoose.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
         </div>
         <div class="card">
-          <h3>{t('practical-information/bus_choose_heading')}</h3>
-          <Copy field="practical-information/bus_choose" />
+          <h3>Choose the 30'Direct airport bus if:</h3>
+          <ul>
+            {busChoose.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
@@ -103,18 +138,20 @@ const details = [
 
   <section class="section section--beige" aria-labelledby="details-heading">
     <div class="container">
-      <h2 id="details-heading">{t('practical-information/details_heading')}</h2>
+      <h2 id="details-heading">Details</h2>
       {details.map((d) => (
-        <details class="card detail">
-          <summary>{t(d.questionField)}</summary>
+        <details class="card" style="margin-bottom: 12px">
+          <summary style="min-height: 44px; display: flex; align-items: center; cursor: pointer; font-weight: 700">
+            {d.title}
+          </summary>
           <div class="two-col" style="margin-top: 12px">
             <div>
-              <h3>{t('practical-information/tram_heading')}</h3>
-              <Copy field={d.tramField} />
+              <h3>Tram Line F</h3>
+              <p style="white-space: pre-line">{d.tram}</p>
             </div>
             <div>
-              <h3>{t('practical-information/bus_heading')}</h3>
-              <Copy field={d.busField} />
+              <h3>30'Direct airport bus</h3>
+              <p style="white-space: pre-line">{d.bus}</p>
             </div>
           </div>
         </details>
@@ -123,7 +160,7 @@ const details = [
   </section>
 
   <ContactCta
-    headingField="practical-information/ready_to_ride_heading"
-    bodyField="practical-information/contact_cta"
+    heading="Questions about getting to Bordeaux?"
+    text="Email John and he will help you plan your arrival."
   />
 </BaseLayout>

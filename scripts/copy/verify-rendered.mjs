@@ -1,21 +1,17 @@
-// Step 4 of the build: after `astro build`, confirm the built pages match the validated approved copy.
+// Production check, last step: after `astro build`, confirm the built pages match the validated approved copy.
 //  1. Every required field appears on its expected route, in display order.
 //  2. No visible text, image alt text, page title, or meta description on any page is missing from the
 //     approved fields (public copy with no approved field fails the build).
-//  3. The pages were built from this exact artifact (copy source and fingerprint in the page head).
 // Usage: node scripts/copy/verify-rendered.mjs [--artifact path] [--dist path]
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
-import { createHash } from 'node:crypto';
 import { join, relative } from 'node:path';
-import { PATHS, fail, loadManifest } from './lib.mjs';
-import { fragmentTexts as blockTexts } from '../../src/lib/copy-markup.mjs';
+import { PATHS, fail, loadManifest, writeJson } from './lib.mjs';
+import { fragmentTexts as blockTexts } from './markup.mjs';
 
 const args = process.argv.slice(2);
 const opt = (name, fallback) => (args.includes(name) ? args[args.indexOf(name) + 1] : fallback);
 const artifactPath = opt('--artifact', PATHS.artifact);
 const distPath = opt('--dist', PATHS.dist);
-const FIXTURE_BANNER =
-  'FIXTURE COPY. This is a local development build. The text on this page is not approved copy. Never deploy it.';
 
 if (!existsSync(artifactPath))
   fail(
@@ -43,12 +39,23 @@ const decode = (s) =>
     .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)))
     .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(Number(d)))
     .replace(/&nbsp;/g, ' ')
+    .replace(/&copy;/g, '©')
+    .replace(/&mdash;/g, '—')
+    .replace(/&ndash;/g, '–')
+    .replace(/&hellip;/g, '…')
+    .replace(/&rsquo;/g, '’')
+    .replace(/&lsquo;/g, '‘')
+    .replace(/&rdquo;/g, '”')
+    .replace(/&ldquo;/g, '“')
     .replace(/&lt;/g, '<')
     .replace(/&gt;/g, '>')
     .replace(/&quot;/g, '"')
     .replace(/&apos;/g, "'")
     .replace(/&amp;/g, '&');
 const ws = (s) => s.replace(/\s+/g, ' ').trim();
+// Comparisons ignore all whitespace, because markup can join or split words (for example <strong>4</strong>departures)
+// without changing the copy a visitor reads.
+const sq = (s) => s.replace(/\s+/g, '');
 const INLINE = /<\/?(?:a|strong|em|b|i|span|small|picture|source)\b[^>]*>/gi;
 
 function pageText(html) {
@@ -62,26 +69,8 @@ for (const file of walk(distPath).filter((f) => f.endsWith('.html'))) {
   const rel = relative(distPath, file);
   const route = rel.endsWith('index.html') ? '/' + rel.slice(0, -'index.html'.length) : '/' + rel;
   const html = readFileSync(file, 'utf8');
-  pages.set(route, { html, text: pageText(html) });
-}
-
-// ----------------------------------------------------------------------------- built from this artifact
-const copyId = createHash('sha256').update(JSON.stringify(artifact.fields)).digest('hex').slice(0, 16);
-for (const [route, page] of pages) {
-  const source = page.html.match(/<meta name="btf-copy-source" content="([^"]*)"/)?.[1];
-  const id = page.html.match(/<meta name="btf-copy-id" content="([^"]*)"/)?.[1];
-  if (source !== artifact.source)
-    problem(
-      '(page head)',
-      route,
-      `built from copy source "${source}", but the artifact source is "${artifact.source}"`,
-    );
-  if (id !== copyId)
-    problem(
-      '(page head)',
-      route,
-      'page was not built from this approved copy artifact (copy fingerprint differs)',
-    );
+  const text = pageText(html);
+  pages.set(route, { html, text, compact: sq(text) });
 }
 
 // ----------------------------------------------------------------------------- expected strings
@@ -103,7 +92,6 @@ for (const m of manifest) {
   allBlocks.push(...blocks);
   if (m.field.endsWith('_alt')) altSet.add(ws(blocks.join(' ')));
 }
-if (artifact.source === 'fixture') allBlocks.push(FIXTURE_BANNER);
 
 // ----------------------------------------------------------------------------- per-route checks
 const routeFields = (route) => manifest.filter((m) => m.route === route || m.route === '*');
@@ -136,7 +124,7 @@ for (const [route, page] of pages) {
         problem(m.field, route, 'image alt text with the approved wording is not on the page');
     } else {
       for (const block of m.required ? blocks : []) {
-        if (!page.text.includes(block))
+        if (!page.compact.includes(sq(block)))
           problem(m.field, route, `approved text not found on the page: "${block.slice(0, 60)}"`);
       }
       // Display order: fields owned by this page must appear in manifest order (shared site/ and photos/ fields are exempt).
@@ -146,22 +134,25 @@ for (const [route, page] of pages) {
         !m.field.startsWith('photos/') &&
         blocks.length
       ) {
-        const at = page.text.indexOf(blocks[0], cursor);
+        const at = page.compact.indexOf(sq(blocks[0]), cursor);
         if (at === -1) {
-          if (page.text.includes(blocks[0])) problem(m.field, route, 'appears out of display order');
-        } else cursor = at + blocks[0].length;
+          if (page.compact.includes(sq(blocks[0]))) problem(m.field, route, 'appears out of display order');
+        } else cursor = at + sq(blocks[0]).length;
       }
     }
   }
   // Fields that belong to another route must still not be required here; nothing to check.
 
   // Public copy with no approved field: remove every approved fragment (longest first); nothing may remain.
-  let rest = ` ${page.text} `;
-  for (const block of [...new Set(allBlocks)].sort((a, b) => b.length - a.length))
-    rest = rest.split(block).join(' ');
-  rest = ws(rest);
+  let rest = page.compact;
+  for (const block of [...new Set(allBlocks.map(sq))].sort((a, b) => b.length - a.length))
+    rest = rest.split(block).join('');
   if (rest)
-    problem('(uncovered text)', route, `visible text with no approved field: "${rest.slice(0, 120)}"`);
+    problem(
+      '(uncovered text)',
+      route,
+      `visible text with no approved field (spaces removed): "${rest.slice(0, 120)}"`,
+    );
 
   for (const alt of [...page.html.matchAll(/<img\b[^>]*\salt(?:="([^"]*)")?/g)].map((x) =>
     ws(decode(x[1] ?? '')),
@@ -175,6 +166,15 @@ if (problems.length) {
   fail(
     `copy:verify-rendered FAILED: ${problems.length} problem${problems.length === 1 ? '' : 's'}\n  field | route | code location | issue\n${problems.slice(0, 60).join('\n')}${problems.length > 60 ? `\n  ... and ${problems.length - 60} more` : ''}`,
   );
+}
+// Record that this exact artifact was checked against the built pages. assert-deployable requires it.
+if (artifactPath === PATHS.artifact) {
+  writeJson(PATHS.stamp, {
+    source: artifact.source,
+    fetchedAt: artifact.fetchedAt,
+    verifiedAt: new Date().toISOString(),
+    pages: pages.size,
+  });
 }
 console.log(
   `copy:verify-rendered  OK: ${pages.size} pages, ${manifest.filter((m) => artifact.fields[m.field]).length} fields confirmed on their routes (source: ${artifact.source})`,

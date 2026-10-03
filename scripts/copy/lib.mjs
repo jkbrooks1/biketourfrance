@@ -2,9 +2,10 @@
 // Nothing here prints credentials. Error messages name the setting that is wrong, never its value.
 import { readFileSync, writeFileSync, existsSync, mkdirSync, unlinkSync } from 'node:fs';
 import { createSign } from 'node:crypto';
-import { resolve, dirname } from 'node:path';
+import { resolve, dirname, join } from 'node:path';
+import { homedir } from 'node:os';
 import { fileURLToPath } from 'node:url';
-import { normalizeCell, parseBlocks, linkTargets, MAIL_TARGETS } from '../../src/lib/copy-markup.mjs';
+import { normalizeCell, parseBlocks, linkTargets, MAIL_TARGETS } from './markup.mjs';
 
 export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 // BTF_COPY_OUT_DIR lets the test suite write its artifacts somewhere else; normal builds never set it.
@@ -16,10 +17,16 @@ export const PATHS = {
   outDir: OUT_DIR,
   rows: resolve(OUT_DIR, 'sheet-rows.json'),
   artifact: resolve(OUT_DIR, 'approved-copy.generated.json'),
-  dist: resolve(ROOT, 'dist'),
+  stamp: resolve(OUT_DIR, 'rendered-verified.json'),
+  // BTF_COPY_DIST_DIR lets the test suite point the checks at a copy of dist/; normal runs never set it.
+  dist: process.env.BTF_COPY_DIST_DIR ? resolve(process.env.BTF_COPY_DIST_DIR) : resolve(ROOT, 'dist'),
 };
 
 export const SHEET_TITLE = 'BTF_Approved_Site_Copy';
+// The only service account the gate accepts. It already exists (Google Cloud project btf-general).
+export const EXPECTED_SERVICE_ACCOUNT = 'btf-sheets-access@btf-general.iam.gserviceaccount.com';
+// Where the existing key lives on the owner's Mac. Used only for local runs (never in CI).
+export const DEFAULT_KEY_FILE = join(homedir(), '.config/btf/google/service-account.json');
 export const HEADERS = ['page/field_name', 'copy'];
 export const FIELD_PATTERN = /^[a-z0-9-]+\/[a-z0-9_]+$/;
 const SCOPE = 'https://www.googleapis.com/auth/spreadsheets.readonly';
@@ -52,7 +59,7 @@ export function loadRules() {
 }
 
 export function cleanArtifacts() {
-  for (const file of [PATHS.rows, PATHS.artifact]) if (existsSync(file)) unlinkSync(file);
+  for (const file of [PATHS.rows, PATHS.artifact, PATHS.stamp]) if (existsSync(file)) unlinkSync(file);
 }
 
 export function writeJson(file, data) {
@@ -108,20 +115,42 @@ function parseServiceAccount(text, origin) {
   return data;
 }
 
+function requireExpectedAccount(account, origin) {
+  if (account.client_email !== EXPECTED_SERVICE_ACCOUNT) {
+    throw new CopyError(
+      `${origin} is for a different service account. The approved copy gate accepts only ${EXPECTED_SERVICE_ACCOUNT}.`,
+    );
+  }
+  return account;
+}
+
 export function readCredentials(env, inCI) {
   const json = env.BTF_COPY_GOOGLE_SA_JSON;
-  const file = env.BTF_COPY_GOOGLE_SA_FILE;
-  if (json && json.trim()) return parseServiceAccount(json.trim(), 'BTF_COPY_GOOGLE_SA_JSON');
+  if (json && json.trim())
+    return requireExpectedAccount(
+      parseServiceAccount(json.trim(), 'BTF_COPY_GOOGLE_SA_JSON'),
+      'BTF_COPY_GOOGLE_SA_JSON',
+    );
+  // Local runs may use a key file: BTF_COPY_GOOGLE_SA_FILE, or the existing BTF key at its usual path.
+  const file = env.BTF_COPY_GOOGLE_SA_FILE || (inCI ? '' : DEFAULT_KEY_FILE);
   if (file && !inCI) {
-    if (!existsSync(file))
-      throw new CopyError('BTF_COPY_GOOGLE_SA_FILE points to a file that does not exist.');
-    return parseServiceAccount(readFileSync(file, 'utf8'), 'BTF_COPY_GOOGLE_SA_FILE');
+    if (!existsSync(file)) {
+      throw new CopyError(
+        env.BTF_COPY_GOOGLE_SA_FILE
+          ? 'BTF_COPY_GOOGLE_SA_FILE points to a file that does not exist.'
+          : 'No key file was found at the usual BTF key location, and BTF_COPY_GOOGLE_SA_JSON is not set.',
+      );
+    }
+    return requireExpectedAccount(
+      parseServiceAccount(readFileSync(file, 'utf8'), 'The key file'),
+      'The key file',
+    );
   }
   throw new CopyError(
-    'No Google credential is configured. Set BTF_COPY_GOOGLE_SA_JSON (a GitHub or Cloudflare secret holding the read-only service account key). ' +
+    'No Google credential is configured. Set BTF_COPY_GOOGLE_SA_JSON (the existing btf-sheets-access service account key, stored as a secret). ' +
       (inCI
-        ? 'BTF_COPY_GOOGLE_SA_FILE is not accepted in CI.'
-        : 'For local use only, BTF_COPY_GOOGLE_SA_FILE may name a key file.'),
+        ? 'Key files are not accepted in CI.'
+        : 'For local use the key file may be named in BTF_COPY_GOOGLE_SA_FILE.'),
   );
 }
 

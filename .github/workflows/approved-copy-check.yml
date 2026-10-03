@@ -1,17 +1,22 @@
-# Required check before any production deployment. Branch protection on `main` must list the job
-# "Approved copy check" as a required status check (see docs/APPROVED_COPY_GATE.md, "GitHub Actions").
+# Approved copy check: NOT ACTIVE. It runs only when started by hand (workflow_dispatch).
 #
-# The job runs the exact production pre-deploy command: it reads BTF_Approved_Site_Copy with a
-# read-only Google service account, validates every field, builds the site, and verifies that every
-# page matches the approved copy. It fails if the secrets are missing, so a pull request from a fork
-# (which gets no secrets) cannot pass.
+# It runs the production-only command `npm run predeploy:approved-copy`, which reads the Google Sheet
+# BTF_Approved_Site_Copy with the existing service account btf-sheets-access@btf-general.iam.gserviceaccount.com
+# and fails unless the built site matches the approved copy. Without the two secrets below it fails, which is
+# the intended behavior.
+#
+# To ACTIVATE (only after the owner approves; see docs/APPROVED_COPY_GATE.md, section 5):
+#   1. Add the secrets BTF_COPY_GOOGLE_SA_JSON and BTF_COPY_SHEET_ID in the GitHub repository settings.
+#   2. Add these triggers under "on:":
+#        pull_request:
+#          branches: [main]
+#        push:
+#          branches: [main]
+#   3. Make the check "Approved copy check" required by branch protection on main.
+# The normal Cloudflare Pages build command stays `npm run build` and does not use this workflow.
 name: Approved copy check
 
 on:
-  pull_request:
-    branches: [main]
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -39,9 +44,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Production pre-deploy check (copy sync, validation, build, rendered verification)
+      - name: Production check (Sheet sync, validation, build, rendered-page verification)
         env:
-          # Stored as GitHub Actions secrets. Never printed, never written to the repository.
+          # GitHub Actions secrets. Never printed, never written to the repository.
           BTF_COPY_SHEET_ID: ${{ secrets.BTF_COPY_SHEET_ID }}
           BTF_COPY_GOOGLE_SA_JSON: ${{ secrets.BTF_COPY_GOOGLE_SA_JSON }}
-        run: npm run predeploy
+        run: npm run predeploy:approved-copy

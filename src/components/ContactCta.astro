@@ -1,27 +1,26 @@
 ---
-// Closing call-to-action band. Heading and body are approved copy fields chosen by the page;
-// the two button labels are shared (site/cta_waitlist_label, site/cta_email_label).
-import Copy from './Copy.astro';
-import { CONTACT_LINKS } from '../data/site';
-import { t } from '../lib/copy.mjs';
+import { CONTACT_LINKS, SITE } from '../data/site';
 
 interface Props {
-  headingField: string;
-  bodyField: string;
+  heading?: string;
+  text?: string;
 }
-const { headingField, bodyField } = Astro.props;
+const {
+  heading = 'Ready to ride?',
+  text = 'Email John with your questions, or ask to be added to the 2027 waitlist. He answers every message himself.',
+} = Astro.props;
 ---
 
 <section class="section section--cta" aria-labelledby="cta-heading">
   <div class="container">
-    <h2 id="cta-heading">{t(headingField)}</h2>
-    <Copy field={bodyField} />
+    <h2 id="cta-heading">{heading}</h2>
+    <p>{text}</p>
     <div class="btn-row">
       <a class="btn" href={CONTACT_LINKS.waitlist}>
-        {t('site/cta_waitlist_label')}
+        Ask to join the 2027 waitlist
       </a>
       <a class="btn btn--secondary" href={CONTACT_LINKS.general}>
-        {t('site/cta_email_label')}
+        Email {SITE.email}
       </a>
     </div>
   </div>

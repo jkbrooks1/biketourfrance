@@ -1,8 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import logo from '../assets/brand/btf-logo-white.png';
-import { CONTACT_LINKS, LEGAL_NAV, NAV } from '../data/site';
-import { t } from '../lib/copy.mjs';
+import { CONTACT_LINKS, LEGAL_NAV, NAV, SITE } from '../data/site';
 ---
 
 <footer class="site-footer">
@@ -11,34 +10,36 @@ import { t } from '../lib/copy.mjs';
       <div>
         <p class="site-footer__brand">
           <Image src={logo} alt="" width={48} height={48} loading="lazy" />
-          <span>{t('site/brand_name')}</span>
+          <span>{SITE.name}</span>
         </p>
-        <p>{t('site/footer_tagline')}</p>
+        <p>Small-group, self-supported bicycle tours in France, led by John Brooks. {SITE.tagline}</p>
         <p>
-          <a href={CONTACT_LINKS.general}>{t('site/footer_email')}</a>
+          <a href={CONTACT_LINKS.general}>{SITE.email}</a>
         </p>
       </div>
       <nav aria-label="Site">
-        <h2>{t('site/footer_explore_heading')}</h2>
+        <h2>Explore</h2>
         <ul>
           {NAV.map((item) => (
             <li>
-              <a href={item.href}>{t(item.field)}</a>
+              <a href={item.href}>{item.label}</a>
             </li>
           ))}
         </ul>
       </nav>
       <nav aria-label="Legal">
-        <h2>{t('site/footer_legal_heading')}</h2>
+        <h2>Legal</h2>
         <ul>
           {LEGAL_NAV.map((item) => (
             <li>
-              <a href={item.href}>{t(item.field)}</a>
+              <a href={item.href}>{item.label}</a>
             </li>
           ))}
         </ul>
       </nav>
     </div>
-    <small>{t('site/footer_copyright')}</small>
+    <small>
+      &copy; {new Date().getUTCFullYear()} {SITE.name}
+    </small>
   </div>
 </footer>

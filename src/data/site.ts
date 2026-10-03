@@ -1,34 +1,32 @@
-// Site-wide settings that are not public copy: origin, contact address, link targets, and the
-// staging switch. All visible text (brand name, navigation labels, and so on) comes from the approved
-// copy sheet through src/lib/copy.mjs and is keyed by page/field_name.
+// Site-wide facts. One place to change the brand name, contact route, and navigation.
 
 export const SITE = {
+  // Standard visible brand form (see docs/STYLE_GUIDE.md).
+  name: 'BikeTourFrance.net',
   // Canonical production origin. Canonical URLs always use this, even on staging.
   origin: 'https://biketourfrance.net',
   email: 'john@biketourfrance.net',
+  tagline: 'Eat. Sleep. Roll. Repeat.',
   // Staging protection. Stays false until the owner approves production launch.
   // When false, every page carries a noindex meta tag (public/_headers and public/robots.txt also block crawlers).
   indexingEnabled: false,
 } as const;
 
-// Navigation: each label is an approved copy field.
 export const NAV = [
-  { field: 'site/nav_tours', href: '/tours/' },
-  { field: 'site/nav_cdm_tour', href: '/canal-des-deux-mers/' },
-  { field: 'site/nav_practical_information', href: '/canal-des-deux-mers/practical-info/' },
-  { field: 'site/nav_resources', href: '/resources/' },
-  { field: 'site/nav_about', href: '/about/' },
-  { field: 'site/nav_contact', href: '/contact/' },
+  { label: 'Tours', href: '/tours/' },
+  { label: 'Canal des Deux Mers', href: '/canal-des-deux-mers/' },
+  { label: 'Practical Information', href: '/canal-des-deux-mers/practical-info/' },
+  { label: 'Resources', href: '/resources/' },
+  { label: 'About', href: '/about/' },
+  { label: 'Contact', href: '/contact/' },
 ] as const;
 
 export const LEGAL_NAV = [
-  { field: 'site/legal_privacy', href: '/privacy/' },
-  { field: 'site/legal_terms', href: '/terms/' },
-  { field: 'site/legal_cookies', href: '/cookies/' },
+  { label: 'Privacy', href: '/privacy/' },
+  { label: 'Terms', href: '/terms/' },
+  { label: 'Cookies', href: '/cookies/' },
 ] as const;
 
-// The subject and starting message of each mailto link open in the visitor's own email program.
-// They are not page text, so they live here with the address.
 export function mailto(subject: string, body = ''): string {
   const params = new URLSearchParams({ subject });
   if (body) params.set('body', body);
@@ -36,7 +34,6 @@ export function mailto(subject: string, body = ''): string {
   return `mailto:${SITE.email}?${params.toString().replace(/\+/g, '%20')}`;
 }
 
-// Copy cells link to these by symbolic target: mail:general, mail:waitlist, mail:planning.
 export const CONTACT_LINKS = {
   general: mailto('Question about BikeTourFrance.net'),
   waitlist: mailto(

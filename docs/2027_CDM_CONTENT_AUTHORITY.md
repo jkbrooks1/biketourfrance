@@ -1,8 +1,8 @@
 # 2027 Canal des Deux Mers: content authority
 
-> **Superseded in part (2026-10-02).** The authority for the actual public text is now the Google Sheet **BTF_Approved_Site_Copy**, enforced by the build (`docs/APPROVED_COPY_GATE.md`). `src/data/cdm2027.ts` has been removed. This document stays as the record of which 2027 facts the owner confirmed and which items still need the owner's confirmation. Check each of them against the sheet before approving it.
+> **Planned change (not active).** After the owner approves activation, the Google Sheet **BTF_Approved_Site_Copy** becomes the authority for public text, and a production-only check compares the built site to it (`docs/APPROVED_COPY_GATE.md`). Until then, this document and the files in `src/` remain the source.
 
-Record of the confirmed 2027 tour facts. The home page (`src/pages/index.astro`) and the CDM page (`src/pages/canal-des-deux-mers/index.astro`) show them through the shared `src/components/Included.astro`, each from its own approved fields (`home/whats_included` and `cdm-tour/whats_included`, and so on). A consistency rule in `copy/consistency-rules.json` makes the build fail if the two differ.
+Single source of truth for public 2027 tour facts. The code reads them from `src/data/cdm2027.ts`. The home page (`src/pages/index.astro`), the CDM page (`src/pages/canal-des-deux-mers/index.astro`), and the shared `src/components/Included.astro` all use that file. Change a fact there and every page follows.
 
 Last reviewed: 2026-10-02. Owner confirmation source: the owner's remediation brief of 2026-10-02 ("confirmed 2027 CDM facts").
 
@@ -65,4 +65,4 @@ These came from the current live copy and are not contradicted by the brief. The
 
 ## Rule for future edits
 
-Do not add a date, price, deposit, cancellation term, or supplier promise to `BTF_Approved_Site_Copy` until the owner approves it in writing. `scripts/verify-dist.mjs` fails the build check if a dollar amount, a 2026 "upcoming" phrase, or consent-by-use wording appears in any page.
+Do not add a date, price, deposit, cancellation term, or supplier promise to `src/data/cdm2027.ts` until the owner approves it in writing. `scripts/verify-dist.mjs` fails the build check if a dollar amount, a 2026 "upcoming" phrase, or consent-by-use wording appears in any page.

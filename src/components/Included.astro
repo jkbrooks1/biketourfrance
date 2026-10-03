@@ -1,35 +1,38 @@
 ---
-// The "What is included / what you arrange separately" statement. Used on the home page and the CDM
-// page, each with its own approved fields (kept identical by a consistency rule in
-// copy/consistency-rules.json).
-import Copy from './Copy.astro';
-import { t } from '../lib/copy.mjs';
+// The single "What's included / What you arrange separately" statement. Used on the home page and the CDM page.
+import { CDM_FACTS, INCLUDED, SEPARATE } from '../data/cdm2027';
 
 interface Props {
-  headingField: string;
-  noticeField: string;
-  includedLabelField: string;
-  includedField: string;
-  separateLabelField: string;
-  separateField: string;
+  headingLevel?: 'h2' | 'h3';
 }
-const { headingField, noticeField, includedLabelField, includedField, separateLabelField, separateField } =
-  Astro.props;
+const { headingLevel = 'h2' } = Astro.props;
+const Heading = headingLevel;
+const SubHeading = headingLevel === 'h2' ? 'h3' : 'h4';
 ---
 
 <div class="included">
-  <h2>{t(headingField)}</h2>
+  <Heading>What is included, and what you arrange separately</Heading>
   <div class="notice">
-    <Copy field={noticeField} />
+    <p>
+      <strong>Dates and pricing are not final.</strong> {CDM_FACTS.datesNote} {CDM_FACTS.pricingNote}
+    </p>
   </div>
   <div class="two-col" style="margin-top: 1.5rem">
     <div class="card">
-      <h3>{t(includedLabelField)}</h3>
-      <Copy field={includedField} />
+      <SubHeading>Included</SubHeading>
+      <ul>
+        {INCLUDED.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
     </div>
     <div class="card">
-      <h3>{t(separateLabelField)}</h3>
-      <Copy field={separateField} />
+      <SubHeading>You arrange separately</SubHeading>
+      <ul>
+        {SEPARATE.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
     </div>
   </div>
 </div>

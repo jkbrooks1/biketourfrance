@@ -1,0 +1,41 @@
+# Normal build works without secrets; approved copy gate is local and inactive (2026-10-03)
+
+## 1. Normal build in a stripped environment (no BTF_*, no Google settings): npm run build
+> astro build
+08:03:18 [build] 11 page(s) built in 654ms
+exit status: 0
+
+## 2. npm run verify
+verify-dist: 11 pages OK
+
+## 3. Type check and formatting
+- 0 warnings - 0 hints  
+All matched files use Prettier code style!
+
+## 4. Dependencies unchanged since the last successful Cloudflare preview (aa239b4)
+package-lock.json diff lines: 0
+
+## 5. npm run copy:check-local (built pages vs snapshot of current copy)
+> BTF_COPY_FIXTURE=1 npm run copy:sync && npm run copy:validate && npm run copy:verify-rendered
+copy:validate  OK: 224 fields from fixture  (FIXTURE copy: not deployable)
+> btf-migration@0.1.0 copy:verify-rendered
+copy:verify-rendered  OK: 11 pages, 224 fields confirmed on their routes (source: fixture)
+
+## 6. npm run copy:test
+
+copy:test  38 passed, 0 failed
+
+## 7. npm run predeploy:approved-copy with no settings (fresh machine or CI)
+copy:sync FAILED. BTF_COPY_SHEET_ID is not set. It must hold the spreadsheet ID of BTF_Approved_Site_Copy.
+exit status: 1
+
+## 8. npm run predeploy:approved-copy against the real Sheet with the existing key (Sheet not yet shared; ID not recorded)
+copy:sync FAILED. Reading spreadsheet details failed (HTTP 403 PERMISSION_DENIED). Share the spreadsheet read-only (Viewer) with the service account, and enable the Google Sheets API for its project.
+exit status: 1
+
+## 9. Browser checks on the normal build
+RESPONSIVE: all pages x all widths clean
+KEYBOARD: all pages pass
+IMAGES: every image loads after scrolling (320 and 1440)
+EDGE: all blocks share one left edge, minimum met at every width
+report-only violations: 0

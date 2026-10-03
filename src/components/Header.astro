@@ -1,8 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import logo from '../assets/brand/btf-logo-white.png';
-import { NAV } from '../data/site';
-import { t } from '../lib/copy.mjs';
+import { NAV, SITE } from '../data/site';
 
 interface Props {
   path: string;
@@ -19,17 +18,17 @@ const current = [...NAV]
   <div class="container site-header__bar">
     <a class="brand" href="/">
       <Image src={logo} alt="" width={52} height={52} loading="eager" />
-      <span>{t('site/brand_name')}</span>
+      <span>{SITE.name}</span>
     </a>
     <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
-      {t('site/menu_button')}
+      Menu
     </button>
     <nav class="site-nav" id="site-nav" data-nav data-open="true" aria-label="Main">
       <ul>
         {NAV.map((item) => (
           <li>
             <a href={item.href} aria-current={item.href === current ? 'page' : undefined}>
-              {t(item.field)}
+              {item.label}
             </a>
           </li>
         ))}

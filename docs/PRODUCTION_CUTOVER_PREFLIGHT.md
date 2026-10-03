@@ -38,7 +38,7 @@ Read first: the system-change register entries of 2026-10-02 ("biketourfrance.ne
 
 ## 3. Technical gates
 
-0. **The approved copy gate is live** (`docs/APPROVED_COPY_GATE.md`): the sheet BTF_Approved_Site_Copy is filled in and approved by the owner; `BTF_COPY_GOOGLE_SA_JSON` and `BTF_COPY_SHEET_ID` are stored in GitHub and in the Cloudflare Pages project (Preview and Production); the service account has read-only access to the sheet; branch protection on `main` requires the check **Approved copy check**; and `npm run predeploy` passes against the real sheet. Production cannot deploy otherwise.
+0. **The approved copy gate** (`docs/APPROVED_COPY_GATE.md`) is a planned production check, not yet active. Before it is activated: the owner has reviewed `docs/COPY_FIELD_MAP_REVIEW.md`; `BTF_Approved_Site_Copy` is shared with `btf-sheets-access@btf-general.iam.gserviceaccount.com` as Viewer, populated, and approved; the GitHub secrets `BTF_COPY_GOOGLE_SA_JSON` and `BTF_COPY_SHEET_ID` exist; the workflow triggers are added; branch protection on `main` requires **Approved copy check**; and `npm run predeploy:approved-copy` passes against the real Sheet. The Cloudflare build command stays `npm run build`.
 
 1. `npm run check`, `npm run build`, and `npm run verify` pass on the branch to be merged.
 2. The preview deployment is checked in a browser at 320, 375, 390, 768, 1024, and 1440 px, and with the keyboard.

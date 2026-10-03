@@ -1,0 +1,41 @@
+{
+  "generated_at": "2026-06-05T06:30:52.424Z",
+  "spreadsheet_title": "CDMv3_2026_Canonical_Tour_Data",
+  "tab_name": "TRANSPORT_BOD_GARE.STJEAN",
+  "sheet_row_count": 999,
+  "non_empty_row_count": 9,
+  "section_title": "Getting to Gare Saint-Jean",
+  "intro_text": "Getting from Bordeaux Airport (Mérignac) to the main train station is straightforward. You have two main options:",
+  "questions": [
+    {
+      "question": "1. What is it?",
+      "tram": "Direct tram connection from Bordeaux Airport (Mérignac) to Gare Saint-Jean (main train station). Launched Dec 6, 2025.",
+      "shuttle": "Direct coach shuttle from Bordeaux Airport to Gare Saint-Jean. No intermediate stops, no transfers."
+    },
+    {
+      "question": "2. How frequently does it run?",
+      "tram": "Every 10 min (Mon–Sat) / Every 15 min (Sun/holidays). First: ~5am. Last: Midnight (Mon–Wed), 1am (Thu–Sat)",
+      "shuttle": "Limited: 07:30–20:05 daily. Mon–Fri: ~22 runs. Sat/Sun: ~14 runs. Not available early morning or late evening."
+    },
+    {
+      "question": "3. How long does it take?",
+      "tram": "~45 minutes. Direct, no transfers.",
+      "shuttle": "~30 minutes (traffic dependent)"
+    },
+    {
+      "question": "4. How much does it cost?",
+      "tram": "€1.90 per ticket",
+      "shuttle": "€9 online / €10 on board"
+    },
+    {
+      "question": "5. What about my bike?!?!",
+      "tram": "✅ Bikes in cases: Always\n✅ Bikes not in cases: 9am–4pm only\n❌ NOT 7am–9am or 4pm–7pm\nPack in case to avoid rush hours.\nTBM Bicycle Rules: 05 57 57 88 88",
+      "shuttle": "✅ Bikes in cases: Yes\n✅ Bikes not in cases: Yes\nRequirement: Closed bag, labeled with name, phone, address.\nCarrier may refuse oversized items.\nBikes not in cases = anytime transport (no restrictions).\n30'Direct FAQ: 30direct.com"
+    },
+    {
+      "question": "6. How do I book?",
+      "tram": "No booking required. Buy ticket at tram stop (vending machine), TBM mobile app (Bordeaux transit app), or Relay newsstand at airport.\n\nTo board: Validate your ticket on the platform or onboard validators (card readers, white validators, or TBM app via Bluetooth). Self-validate and board—no ticket inspection.",
+      "shuttle": "Book online at 30direct.com or pay €10 on board. Book in advance for €9 rate.\n\nTo board: Show your ticket to the driver (printed, phone e-ticket, or mobile). Tickets can be purchased directly from the driver. Visa/Mastercard accepted onboard (American Express not accepted)."
+    }
+  ]
+}

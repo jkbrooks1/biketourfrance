@@ -1,3 +1,5 @@
+NOTE (2026-10-03): this file records the earlier design, where the normal build required the Sheet. That design was replaced. See 06_normal_build_and_inactive_gate_proof.txt for the current state.
+
 # Approved copy gate proof (2026-10-02)
 
 ## 1. Negative tests: node scripts/copy/negative-tests.mjs

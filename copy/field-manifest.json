@@ -225,19 +225,19 @@
     "field": "home/cdm_summary",
     "route": "/",
     "required": true,
-    "codeLocation": "src/pages/index.astro"
+    "codeLocation": "src/data/cdm2027.ts"
   },
   {
     "field": "home/cdm_stats",
     "route": "/",
     "required": true,
-    "codeLocation": "src/pages/index.astro"
+    "codeLocation": "src/data/cdm2027.ts"
   },
   {
     "field": "home/cdm_departures",
     "route": "/",
     "required": true,
-    "codeLocation": "src/pages/index.astro"
+    "codeLocation": "src/data/cdm2027.ts"
   },
   {
     "field": "home/cdm_cta",
@@ -249,37 +249,37 @@
     "field": "home/whats_included_heading",
     "route": "/",
     "required": true,
-    "codeLocation": "src/pages/index.astro"
+    "codeLocation": "src/components/Included.astro"
   },
   {
     "field": "home/whats_included_notice",
     "route": "/",
     "required": true,
-    "codeLocation": "src/pages/index.astro"
+    "codeLocation": "src/components/Included.astro"
   },
   {
     "field": "home/whats_included_label",
     "route": "/",
     "required": true,
-    "codeLocation": "src/pages/index.astro"
+    "codeLocation": "src/components/Included.astro"
   },
   {
     "field": "home/whats_included",
     "route": "/",
     "required": true,
-    "codeLocation": "src/pages/index.astro"
+    "codeLocation": "src/data/cdm2027.ts"
   },
   {
     "field": "home/what_you_arrange_separately_label",
     "route": "/",
     "required": true,
-    "codeLocation": "src/pages/index.astro"
+    "codeLocation": "src/components/Included.astro"
   },
   {
     "field": "home/what_you_arrange_separately",
     "route": "/",
     "required": true,
-    "codeLocation": "src/pages/index.astro"
+    "codeLocation": "src/data/cdm2027.ts"
   },
   {
     "field": "home/about_eyebrow",
@@ -369,7 +369,7 @@
     "field": "tours/group_body",
     "route": "/tours/",
     "required": true,
-    "codeLocation": "src/pages/tours/index.astro"
+    "codeLocation": "src/data/cdm2027.ts"
   },
   {
     "field": "tours/group_cta",
@@ -459,13 +459,13 @@
     "field": "cdm-tour/hero_body",
     "route": "/canal-des-deux-mers/",
     "required": true,
-    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+    "codeLocation": "src/data/cdm2027.ts"
   },
   {
     "field": "cdm-tour/dates_pricing_notice",
     "route": "/canal-des-deux-mers/",
     "required": true,
-    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+    "codeLocation": "src/data/cdm2027.ts"
   },
   {
     "field": "cdm-tour/hero_cta_question",
@@ -483,13 +483,13 @@
     "field": "cdm-tour/glance_stats",
     "route": "/canal-des-deux-mers/",
     "required": true,
-    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+    "codeLocation": "src/data/cdm2027.ts"
   },
   {
     "field": "cdm-tour/glance_points",
     "route": "/canal-des-deux-mers/",
     "required": true,
-    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+    "codeLocation": "src/data/cdm2027.ts"
   },
   {
     "field": "cdm-tour/route_heading",
@@ -507,7 +507,7 @@
     "field": "cdm-tour/route_stops",
     "route": "/canal-des-deux-mers/",
     "required": true,
-    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+    "codeLocation": "src/data/cdm2027.ts"
   },
   {
     "field": "cdm-tour/week_heading",
@@ -519,7 +519,7 @@
     "field": "cdm-tour/week_plan",
     "route": "/canal-des-deux-mers/",
     "required": true,
-    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+    "codeLocation": "src/data/cdm2027.ts"
   },
   {
     "field": "cdm-tour/toulouse_dinner_heading",
@@ -531,43 +531,43 @@
     "field": "cdm-tour/toulouse_dinner",
     "route": "/canal-des-deux-mers/",
     "required": true,
-    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+    "codeLocation": "src/data/cdm2027.ts"
   },
   {
     "field": "cdm-tour/whats_included_heading",
     "route": "/canal-des-deux-mers/",
     "required": true,
-    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+    "codeLocation": "src/components/Included.astro"
   },
   {
     "field": "cdm-tour/whats_included_notice",
     "route": "/canal-des-deux-mers/",
     "required": true,
-    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+    "codeLocation": "src/components/Included.astro"
   },
   {
     "field": "cdm-tour/whats_included_label",
     "route": "/canal-des-deux-mers/",
     "required": true,
-    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+    "codeLocation": "src/components/Included.astro"
   },
   {
     "field": "cdm-tour/whats_included",
     "route": "/canal-des-deux-mers/",
     "required": true,
-    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+    "codeLocation": "src/data/cdm2027.ts"
   },
   {
     "field": "cdm-tour/what_you_arrange_separately_label",
     "route": "/canal-des-deux-mers/",
     "required": true,
-    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+    "codeLocation": "src/components/Included.astro"
   },
   {
     "field": "cdm-tour/what_you_arrange_separately",
     "route": "/canal-des-deux-mers/",
     "required": true,
-    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+    "codeLocation": "src/data/cdm2027.ts"
   },
   {
     "field": "cdm-tour/self_supported_heading",
@@ -579,7 +579,7 @@
     "field": "cdm-tour/self_supported_points",
     "route": "/canal-des-deux-mers/",
     "required": true,
-    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+    "codeLocation": "src/data/cdm2027.ts"
   },
   {
     "field": "cdm-tour/practical_link",
@@ -729,13 +729,13 @@
     "field": "practical-information/detail_1_tram",
     "route": "/canal-des-deux-mers/practical-info/",
     "required": true,
-    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+    "codeLocation": "src/data/practical-info-data.json"
   },
   {
     "field": "practical-information/detail_1_bus",
     "route": "/canal-des-deux-mers/practical-info/",
     "required": true,
-    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+    "codeLocation": "src/data/practical-info-data.json"
   },
   {
     "field": "practical-information/detail_2_question",
@@ -747,13 +747,13 @@
     "field": "practical-information/detail_2_tram",
     "route": "/canal-des-deux-mers/practical-info/",
     "required": true,
-    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+    "codeLocation": "src/data/practical-info-data.json"
   },
   {
     "field": "practical-information/detail_2_bus",
     "route": "/canal-des-deux-mers/practical-info/",
     "required": true,
-    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+    "codeLocation": "src/data/practical-info-data.json"
   },
   {
     "field": "practical-information/detail_3_question",
@@ -765,13 +765,13 @@
     "field": "practical-information/detail_3_tram",
     "route": "/canal-des-deux-mers/practical-info/",
     "required": true,
-    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+    "codeLocation": "src/data/practical-info-data.json"
   },
   {
     "field": "practical-information/detail_3_bus",
     "route": "/canal-des-deux-mers/practical-info/",
     "required": true,
-    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+    "codeLocation": "src/data/practical-info-data.json"
   },
   {
     "field": "practical-information/detail_4_question",
@@ -783,13 +783,13 @@
     "field": "practical-information/detail_4_tram",
     "route": "/canal-des-deux-mers/practical-info/",
     "required": true,
-    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+    "codeLocation": "src/data/practical-info-data.json"
   },
   {
     "field": "practical-information/detail_4_bus",
     "route": "/canal-des-deux-mers/practical-info/",
     "required": true,
-    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+    "codeLocation": "src/data/practical-info-data.json"
   },
   {
     "field": "practical-information/detail_5_question",
@@ -801,13 +801,13 @@
     "field": "practical-information/detail_5_tram",
     "route": "/canal-des-deux-mers/practical-info/",
     "required": true,
-    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+    "codeLocation": "src/data/practical-info-data.json"
   },
   {
     "field": "practical-information/detail_5_bus",
     "route": "/canal-des-deux-mers/practical-info/",
     "required": true,
-    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+    "codeLocation": "src/data/practical-info-data.json"
   },
   {
     "field": "practical-information/detail_6_question",
@@ -819,13 +819,13 @@
     "field": "practical-information/detail_6_tram",
     "route": "/canal-des-deux-mers/practical-info/",
     "required": true,
-    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+    "codeLocation": "src/data/practical-info-data.json"
   },
   {
     "field": "practical-information/detail_6_bus",
     "route": "/canal-des-deux-mers/practical-info/",
     "required": true,
-    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+    "codeLocation": "src/data/practical-info-data.json"
   },
   {
     "field": "practical-information/ready_to_ride_heading",
@@ -885,7 +885,7 @@
     "field": "resources/templates_list",
     "route": "/resources/",
     "required": true,
-    "codeLocation": "src/pages/resources/index.astro"
+    "codeLocation": "src/data/resources.ts"
   },
   {
     "field": "resources/audio_heading",
@@ -903,19 +903,19 @@
     "field": "resources/audio_guides",
     "route": "/resources/",
     "required": true,
-    "codeLocation": "src/pages/resources/index.astro"
+    "codeLocation": "src/data/resources.ts"
   },
   {
     "field": "resources/audio_fallback",
     "route": "/resources/",
     "required": true,
-    "codeLocation": "src/components/AudioList.astro"
+    "codeLocation": "src/pages/resources/index.astro"
   },
   {
     "field": "resources/audio_download_label",
     "route": "/resources/",
     "required": true,
-    "codeLocation": "src/components/AudioList.astro"
+    "codeLocation": "src/pages/resources/index.astro"
   },
   {
     "field": "resources/food_heading",
@@ -927,7 +927,7 @@
     "field": "resources/food_audio",
     "route": "/resources/",
     "required": true,
-    "codeLocation": "src/pages/resources/index.astro"
+    "codeLocation": "src/data/resources.ts"
   },
   {
     "field": "resources/french_heading",
@@ -939,7 +939,7 @@
     "field": "resources/french_copy",
     "route": "/resources/",
     "required": true,
-    "codeLocation": "src/pages/resources/index.astro"
+    "codeLocation": "src/data/resources.ts"
   },
   {
     "field": "resources/narratives_heading",
@@ -951,7 +951,7 @@
     "field": "resources/narratives_list",
     "route": "/resources/",
     "required": true,
-    "codeLocation": "src/pages/resources/index.astro"
+    "codeLocation": "src/data/resources.ts"
   },
   {
     "field": "resources/helpful_sites_heading",
@@ -969,7 +969,7 @@
     "field": "resources/helpful_sites_list",
     "route": "/resources/",
     "required": true,
-    "codeLocation": "src/pages/resources/index.astro"
+    "codeLocation": "src/data/resources.ts"
   },
   {
     "field": "resources/ready_to_ride_heading",
