@@ -1,0 +1,4 @@
+## rebuild/2026-10-02-audit-remediation...origin/rebuild/2026-10-02-audit-remediation
+ M .gitignore
+ M scripts/assert-canonical-root.mjs
+?? docs/proof/2026-10-04_btf_governance_closeout/

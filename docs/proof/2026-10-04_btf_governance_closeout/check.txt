@@ -1,0 +1,16 @@
+
+> btf-migration@0.1.0 check
+> astro check
+
+07:43:10 [types] Generated 49ms
+07:43:10 [check] Getting diagnostics for Astro files in /Users/jkbrookspersonal/LocalSiteBuildFiles/00_BTF_MAIN_SITE_CLOUDFLARE_ROOT...
+[96msrc/components/Footer.astro[0m:[93m5[0m:[93m10[0m - [93mwarning[0m[90m ts(6133): [0m'COPY' is declared but its value is never read.
+
+[7m5[0m import { COPY, footerPolicyParts } from '../data/approved-copy';
+[7m [0m [93m         ~~~~[0m
+
+Result (27 files): 
+- 0 errors
+- 0 warnings
+- 1 hint
+

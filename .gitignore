@@ -42,3 +42,5 @@ source-framer/
 
 # Generated approved-copy artifacts (no secrets; rebuilt on every build)
 .copy/
+
+docs/proof/2026-10-03/ready_to_ride_deployed_1440.png
