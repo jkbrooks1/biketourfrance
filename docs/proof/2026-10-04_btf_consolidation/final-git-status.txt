@@ -1,0 +1,8 @@
+## rebuild/2026-10-02-audit-remediation...origin/rebuild/2026-10-02-audit-remediation
+ M docs/BUILD_LOG.md
+?? AGENTS.md
+?? docs/BTF_DRIVE_AUTHORITIES.md
+?? docs/BTF_MIGRATION_CONSOLIDATION_PLAN.md
+?? docs/BTF_MV_CANONICAL_DECISIONS.md
+?? docs/proof/2026-10-03/ready_to_ride_deployed_1440.png
+?? docs/proof/2026-10-04_btf_consolidation/

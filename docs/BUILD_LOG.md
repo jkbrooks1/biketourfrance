@@ -189,3 +189,77 @@ Append-only. Concise timestamped entries. No secrets. Each entry is also appende
 ## 2026-10-04T04:26:11Z — IN PROGRESS — Audit remediation to style guide v4.4
 - Write the v4.4 remediation report, commit in two commits on rebuild/2026-10-02-audit-remediation, push. Not merging; waitlist files and production untouched.
 - Secrets: none recorded.
+
+## 2026-10-04T04:27:56Z — DONE — Audit remediation to style guide v4.4
+- v4.4 remediation pushed to rebuild/2026-10-02-audit-remediation (d394f73; code commit 91fa32a). Cloudflare Pages preview f8b1cde4 built successfully. Not merged; waitlist files and production untouched.
+- Secrets: none recorded.
+
+## 2026-10-04T04:30:32Z — IN PROGRESS — Audit remediation to style guide v4.4
+- Investigate Ready-to-ride defects on rebuild/initial (Framer-based staging): read override CSS, render script, snapshot, and Sheet cell formatting (read-only).
+- Secrets: none recorded.
+
+## 2026-10-04T04:30:46Z — IN PROGRESS — Audit remediation to style guide v4.4
+- Inspect Framer export markup for the CDM CTA heading and the What's included list (empty li), via grep on site/index.html and DIST.
+- Secrets: none recorded.
+
+## 2026-10-04T04:31:10Z — IN PROGRESS — Audit remediation to style guide v4.4
+- Read render.mjs and locate the Framer JS module text for the CDM heading and the What's included list.
+- Secrets: none recorded.
+
+## 2026-10-04T04:31:39Z — IN PROGRESS — Audit remediation to style guide v4.4
+- Measure the live Ready-to-ride structure on the latest staging preview (143a5bbd) with Playwright (read-only) to find the real card and content wrapper.
+- Secrets: none recorded.
+
+## 2026-10-04T04:32:52Z — IN PROGRESS — Audit remediation to style guide v4.4
+- Edit SCRIPTS/copy/render.mjs (structural fixes: drop empty trailing li in HTML and Framer module; make Tour bold) and OVERRIDES/home.css (24px mobile padding). Then build and check.
+- Secrets: none recorded.
+
+## 2026-10-04T04:33:20Z — IN PROGRESS — Audit remediation to style guide v4.4
+- Commit scripts/copy/render.mjs and overrides/home.css only on rebuild/initial and push; waitlist files and docs/BUILD_LOG.md left uncommitted.
+- Secrets: none recorded.
+
+## 2026-10-04T04:34:44Z — DONE — Audit remediation to style guide v4.4
+- Commit 275326b on rebuild/initial; preview https://18ff2674.temp-btf.pages.dev. Measured at 1440: card-to-heading 100px, 0 empty li, Tour bold (weight 900 via Framer strong), no strikethrough (Sheet has none). Dead buttons found: 4 Framer buttons have href null or #; fix exists on the remediation branch, not applied to rebuild/initial.
+- Secrets: none recorded.
+
+## 2026-10-04T04:36:02Z — IN PROGRESS — Audit remediation to style guide v4.4
+- Map the Ready to Ride Frame subtree in site/index.html and the Framer module (read-only) before rebuilding it as one contained section in the render step.
+- Secrets: none recorded.
+
+## 2026-10-04T04:38:44Z — IN PROGRESS — Audit remediation to style guide v4.4
+- Extract exact module and HTML fragments of the Ready to Ride frame (read-only) to design the contained-section replacement.
+- Secrets: none recorded.
+
+## 2026-10-04T04:39:46Z — IN PROGRESS — Audit remediation to style guide v4.4
+- Rebuild Ready to ride as one contained grid section: edit SCRIPTS/copy/render.mjs structural list and rewrite OVERRIDES/home.css; add copy/rich-text.json documenting the Sheet's rich text runs. Then build and render at 1440, 1024, 390.
+- Secrets: none recorded.
+
+## 2026-10-04T04:40:06Z — IN PROGRESS — Audit remediation to style guide v4.4
+- Render the rebuilt Ready to ride card locally at 1440, 1024, 390 with Playwright; measure padding, overflow, empty li, bold; save screenshots to the scratchpad.
+- Secrets: none recorded.
+
+## 2026-10-04 — PLANNED — Native Astro consolidation planning audit
+- Planning-only audit. Commands run: `cat` of current rules/readmes/logs; Drive metadata/search reads; `git rev-parse`, `status`, `remote`, `for-each-ref`, `worktree list`, `diff`, `ls-files`, `ls-remote`; `find`, `rg`, `stat`, `shasum`, `du`, `mkdir`, and `tail`. No Git state, source, dependencies, Drive, GitHub, Cloudflare, deployment, or production setting changed.
+- PROVEN: this native worktree is `rebuild/2026-10-02-audit-remediation` at `d394f730e8c65b2d263a29c8dd0d2ac29c91fa3c`; it depends on `/Users/jkbrookspersonal/LocalSiteBuildFiles/00_BTF_MAIN_SITE_CLOUDFLARE_ROOT/.git/worktrees/00_BTF_AUDIT_REMEDIATION_WORKTREE`.
+- Proposed only: preserve both checkout states and create a Git-aware transition to the target root; wrapper content stays separate. Drive operational home proposed under BTF Website; `BTF_Approved_Site_Copy` remains authoritative in place. See `docs/BTF_MIGRATION_CONSOLIDATION_PLAN.md`, `docs/BTF_MV_CANONICAL_DECISIONS.md`, and `docs/proof/2026-10-04_consolidation_plan/`.
+- Planning records are the sole current-tree writes. Secrets: none recorded.
+
+## 2026-10-04 — PLANNED — Consolidation planning handoff packaged
+- Created sanitized proof ZIP `/Users/jkbrookspersonal/Downloads/BTF_MIGRATION_CONSOLIDATION_PLAN_PROOF_20261004.zip` from the plan, decisions, preservation manifest, and sanitized audit evidence only; SHA-256 `8ec6d7e665ef10b4715eeb82035a3aab8cb823f4dc9cf716054b337700bba005`.
+- Copied the final handoff note to John’s clipboard and verified it with `pbpaste`. No source archive, secret, Drive file, Git state, or system setting changed.
+
+## 2026-10-04 — DONE — BTF consolidation preservation gate
+- Created verified preservation folder `/Users/jkbrookspersonal/BTF_PRESERVATION_20261004T134432Z_02` before any worktree/root operation. Captured 6 native local-work files, 2 ignored native generated-copy files, 7 target-wrapper local-work files, 156 stale-checkout local-only Framer-export files, and a 33-file scoped scaffold inventory. Reproducible dependency/build/cache directories were excluded.
+- Created and verified `biketourfrance-shared.bundle` (shared native/target repository) and `btf-migration.bundle` (independent stale checkout). Before/after branch, HEAD, status, remotes, worktree, refs, and submodule metadata matched. No source-tree change occurred during capture.
+- Open preview/build handles existed only under excluded `.astro` and `DIST` target-root paths. Sensitive filename-pattern matches were recorded only as counts; no secret value or separate credential file was copied.
+- Created sanitized ZIP `/Users/jkbrookspersonal/Downloads/BTF_PRESERVATION_PROOF_20261004T134432Z_02.zip`, SHA-256 `3a611ddd86b15af27ae8269cae10e62dd5cca4018b8a6dc7df2f73a03649bd16`. No Git worktree/root, GitHub, Cloudflare, Drive, deployment, or production change occurred. Stop before consolidation.
+
+## 2026-10-04 — DONE — BTF preservation continuation verification
+- Re-audited the interrupted preservation task without changing any checkout. The final set remains `/Users/jkbrookspersonal/BTF_PRESERVATION_20261004T134432Z_02`; its two bundles pass `git bundle verify`, its ZIP passes `unzip -t`, and the ZIP SHA-256 remains `3a611ddd86b15af27ae8269cae10e62dd5cca4018b8a6dc7df2f73a03649bd16`.
+- Independent source comparison: 5/6 native, 2/2 native ignored, 6/7 wrapper, and 156/156 stale-export captured files byte-match. The two exceptions are each checkout's `docs/BUILD_LOG.md`, changed only by the required preservation completion entry added after that snapshot. Branches, full HEADs, remotes, statuses, and shared-worktree relationship still match the capture metadata.
+- No source, Git state, Cloudflare, Drive, GitHub, deployment, or production setting changed. Stop before consolidation.
+
+## 2026-10-04 — DONE — Native BTF consolidation
+- Converted the approved permanent path into a fresh standalone clone on `rebuild/2026-10-02-audit-remediation` at `d394f730e8c65b2d263a29c8dd0d2ac29c91fa3c`; restored native-only preserved planning/proof/generated-copy work. Former roots are retained under `99_ARCHIVE/BTF_MIGRATION_2026-10-04` and are inactive.
+- Created Drive folder `BTF_Migration` (`1XmvuhM_iyMbZWPf5qH1TqvaHmtaCMW2R`) under BTF_Website with Source Assets, Reviews and Briefs, and Handoffs. Approved-copy Sheet stayed unmoved.
+- `npm ci`, native `npm run build`, and `npm run check` passed. `npm run verify` and `npm run copy:test` fail because the inactive copy gate/verifier still uses stale expectations; no copy or deployment change was made.

@@ -1,0 +1,23 @@
+path=/Users/jkbrookspersonal/LocalSiteBuildFiles/00_BTF_AUDIT_REMEDIATION_WORKTREE
+rebuild/2026-10-02-audit-remediation
+d394f730e8c65b2d263a29c8dd0d2ac29c91fa3c
+## rebuild/2026-10-02-audit-remediation
+ M docs/BUILD_LOG.md
+?? docs/BTF_MIGRATION_CONSOLIDATION_PLAN.md
+?? docs/BTF_MV_CANONICAL_DECISIONS.md
+?? docs/proof/2026-10-03/ready_to_ride_deployed_1440.png
+?? docs/proof/2026-10-04_consolidation_plan/AUDIT_EVIDENCE.md
+?? docs/proof/2026-10-04_consolidation_plan/PRESERVATION_MANIFEST.md
+origin	https://github.com/jkbrooks1/biketourfrance.git (fetch)
+origin	https://github.com/jkbrooks1/biketourfrance.git (push)
+/Users/jkbrookspersonal/LocalSiteBuildFiles/00_BTF_MAIN_SITE_CLOUDFLARE_ROOT/.git
+worktree /Users/jkbrookspersonal/LocalSiteBuildFiles/00_BTF_MAIN_SITE_CLOUDFLARE_ROOT
+HEAD 275326ba181aa3ff297072a19221c34cbdad14c4
+branch refs/heads/rebuild/initial
+
+worktree /Users/jkbrookspersonal/LocalSiteBuildFiles/00_BTF_AUDIT_REMEDIATION_WORKTREE
+HEAD d394f730e8c65b2d263a29c8dd0d2ac29c91fa3c
+branch refs/heads/rebuild/2026-10-02-audit-remediation
+
+refs/heads/rebuild/2026-10-02-audit-remediation d394f730e8c65b2d263a29c8dd0d2ac29c91fa3c
+refs/heads/rebuild/initial 275326ba181aa3ff297072a19221c34cbdad14c4

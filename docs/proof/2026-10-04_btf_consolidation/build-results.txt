@@ -1,0 +1,5 @@
+build: PASS
+check: PASS (0 errors; 1 hint)
+verify: FAIL (missing sitemap-index.xml and 404.html expected by stale verifier)
+copy:test: FAIL (6 failures due inactive copy gate/snapshot mismatch)
+No deployment performed.

@@ -1,0 +1,2 @@
+origin	https://github.com/jkbrooks1/biketourfrance.git (fetch)
+origin	https://github.com/jkbrooks1/biketourfrance.git (push)

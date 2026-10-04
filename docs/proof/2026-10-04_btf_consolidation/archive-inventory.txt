@@ -1,0 +1,6 @@
+/Users/jkbrookspersonal/LocalSiteBuildFiles/99_ARCHIVE/BTF_MIGRATION_2026-10-04/ARCHIVE_NOTICE.md
+/Users/jkbrookspersonal/LocalSiteBuildFiles/99_ARCHIVE/BTF_MIGRATION_2026-10-04/incomplete-scaffold-BTF_MV_BTF_TO_CLOUDFLARE_PROJECT
+/Users/jkbrookspersonal/LocalSiteBuildFiles/99_ARCHIVE/BTF_MIGRATION_2026-10-04/native-retired-worktree-files
+/Users/jkbrookspersonal/LocalSiteBuildFiles/99_ARCHIVE/BTF_MIGRATION_2026-10-04/stale-checkout-btf-migration
+/Users/jkbrookspersonal/LocalSiteBuildFiles/99_ARCHIVE/BTF_MIGRATION_2026-10-04/supplemental-preconsolidation-20261004T140100Z
+/Users/jkbrookspersonal/LocalSiteBuildFiles/99_ARCHIVE/BTF_MIGRATION_2026-10-04/wrapper-checkout-rebuild-initial

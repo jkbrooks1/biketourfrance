@@ -1,0 +1,4 @@
+worktree /Users/jkbrookspersonal/LocalSiteBuildFiles/00_BTF_MAIN_SITE_CLOUDFLARE_ROOT
+HEAD d394f730e8c65b2d263a29c8dd0d2ac29c91fa3c
+branch refs/heads/rebuild/2026-10-02-audit-remediation
+
