@@ -2,6 +2,7 @@
 // other visible text proves the place. People are not named. See docs/STYLE_GUIDE.md (Images).
 import type { ImageMetadata } from 'astro';
 
+import heroCanalPath from '../assets/photos/hero-canal-path.jpg';
 import canalTowpath from '../assets/photos/canal-towpath-gravel.jpg';
 import cafeTable from '../assets/photos/cafe-table-riders.jpg';
 import creon from '../assets/photos/creon-bikes-parked.jpg';
@@ -29,8 +30,8 @@ export interface Photo {
 
 export const PHOTOS = {
   hero: {
-    src: twoRidersShade,
-    alt: 'A rider in a red helmet smiling at the camera on a shaded canal path, with a second rider behind.',
+    src: heroCanalPath,
+    alt: 'A cyclist riding away on a paved canal path, with water and green vegetation on both sides and trees in the distance.',
   },
   cafeTable: {
     src: cafeTable,
