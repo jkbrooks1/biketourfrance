@@ -94,6 +94,48 @@ for (const [file, list] of edits) {
   writeFileSync(dest, out);
 }
 
+// Structural fixes to the home page (owner request, 2026-10-03). Each replacement must match exactly once per file or the
+// build fails, so a changed export cannot silently skip a fix.
+const HOME_HTML = resolve(GENERATED_SITE_DIR, 'index.html');
+const HOME_MODULE = resolve(
+  GENERATED_SITE_DIR,
+  'assets/framerusercontent.com/sites/2Ukbahq5dqkKAVHqKdIQ4q/LpnyAzOkU9IXmrpQpGLSSnQy67SWFToUfPQ-7ITCPN4.DakdoxNX.mjs',
+);
+const structural = [
+  {
+    file: HOME_HTML,
+    // Empty trailing bullet in "What's included" (a stray blank line in the Framer export).
+    from: '<li data-preset-tag="p" class="framer-text"><p class="framer-text"><br class="framer-text trailing-break"></p></li>',
+    to: '',
+  },
+  {
+    file: HOME_MODULE,
+    from: 'o(`li`,{"data-preset-tag":`p`,children:o(`p`,{children:o(`br`,{className:`trailing-break`})})})',
+    to: null, // removed together with its separating comma below
+  },
+  {
+    file: HOME_HTML,
+    // "Tour" is bold in the approved-copy Sheet (the cell's first line is bold).
+    from: '<strong class="framer-text">Canal des Deux Mers</strong> Tour (CDM)',
+    to: '<strong class="framer-text">Canal des Deux Mers Tour</strong> (CDM)',
+  },
+  {
+    file: HOME_MODULE,
+    from: 'o(`strong`,{children:`Canal des Deux Mers`}),` Tour (CDM)  `',
+    to: 'o(`strong`,{children:`Canal des Deux Mers Tour`}),` (CDM)  `',
+  },
+];
+for (const fix of structural) {
+  let text = readFileSync(fix.file, 'utf8');
+  const needle = fix.to === null ? ',' + fix.from : fix.from;
+  const count = text.split(needle).length - 1;
+  if (count !== 1) {
+    throw new Error(`Structural fix expected exactly 1 match in ${fix.file}, found ${count}: ${fix.from.slice(0, 60)}`);
+  }
+  text = text.replace(needle, () => fix.to ?? '');
+  writeFileSync(fix.file, text);
+}
+
 // Design overrides: small committed CSS files injected into a page's <head>.
 let overridesApplied = 0;
 for (const [file, cssFile] of Object.entries(OVERRIDES)) {
