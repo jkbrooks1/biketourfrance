@@ -531,7 +531,7 @@ a:active {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 60%;
+  object-position: center 20%;
 }
 .hero__media::after {
   content: '';
