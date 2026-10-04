@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+import logo from '../assets/brand/btf-logo-white.png';
+
 // 2027 Tour Waitlist page. Static form that POSTs JSON to the n8n intake webhook
 // (workflow "v0001 BTF 2027 Waitlist Intake"). No build-time data fetching.
 // Staging protections stay on: noindex meta here, X-Robots-Tag via site/_headers, robots.txt.
@@ -172,7 +175,7 @@ const consentNotice =
     <a class="skip-link" href="#main">Skip to main content</a>
     <header>
       <a href="/" class="site-home">
-        <img src="/assets/brand/btf-logo-white.png" alt="BikeTourFrance.net home" width="40" height="40" />
+        <Image src={logo} alt="BikeTourFrance.net home" width={40} height={40} />
         <span>BikeTourFrance.net</span>
       </a>
     </header>

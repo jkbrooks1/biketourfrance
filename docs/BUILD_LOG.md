@@ -88,6 +88,49 @@ Append-only. Concise timestamped entries. No secrets. Each entry is also appende
 
 No commit or push without explicit owner approval.
 
+## 2026-10-04T08:35:00Z — MILESTONE 2: Content, route & asset inventory audit complete
+
+**Scope:** Verify all 12 built routes for complete copy, valid images, and valid internal links.
+
+**Commit:** 5fce3e1 (staged and committed via `git commit`)
+- Message: feat(waitlist): restore waitlist-2027 page and pass M1 gate verification
+
+**12-Route Audit Results:**
+- Total routes in dist/: 12
+  1. / (index.html, src/pages/index.astro) — ✓ Title ✓ Description ✓ Images ✓ Links
+  2. /about/ (about/index.html, src/pages/about.astro) — ✓ All checks
+  3. /canal-des-deux-mers/ (canal-des-deux-mers/index.html, src/pages/[tour].astro) — ✓ All checks
+  4. /canal-des-deux-mers/practical-info/ (practical-info/index.html, src/pages/[tour]/[page].astro) — ✓ All checks
+  5. /contact/ (contact/index.html, src/pages/contact.astro) — ✓ All checks
+  6. /cookies/ (cookies/index.html, src/pages/cookies.astro) — ✓ All checks
+  7. /privacy/ (privacy/index.html, src/pages/privacy.astro) — ✓ All checks
+  8. /resources/ (resources/index.html, src/pages/resources.astro) — ✓ All checks
+  9. /terms/ (terms/index.html, src/pages/terms.astro) — ✓ All checks
+  10. /tours/ (tours/index.html, src/pages/tours.astro) — ✓ All checks
+  11. /waitlist-2027/ (waitlist-2027/index.html, src/pages/waitlist-2027.astro) — ✓ Title ✓ Description ✓ Links; IMAGE ISSUE (see Findings)
+  12. /404 (404.html, src/pages/404.astro) — ✓ All checks
+
+**Copy Verification:**
+- Rider capacity / group size copy: Correct approved wording. Source: `src/data/approved-copy.ts:66`. Text: "Groups have fewer than 12 riders, so I can lead the ride, communicate each day's plan in depth, and give the group the attention it needs." Status: ✓ Not old "5-room" or "minimum six, target eight, maximum twelve" template text.
+
+**Findings:**
+
+1. **Waitlist Image Asset Issue (Severity: High)**
+   - Route: /waitlist-2027/
+   - Issue: Page references `/assets/brand/btf-logo-white.png` but this file does not exist in dist/ or public/.
+   - Root cause: Waitlist page is a standalone .astro file using raw HTML `<img>` tag. Astro does not process raw HTML image paths through its image optimization pipeline. The file exists at src/assets/brand/btf-logo-white.png but is not available at build-time to the raw HTML reference.
+   - Detection: `<img src="/assets/brand/btf-logo-white.png" alt="BikeTourFrance.net home" width="40" height="40" />` (line 141 of waitlist-2027.astro) references a non-existent path. The file IS optimized and placed at `/_astro/btf-logo-white.[hash].webp` but this path is not used.
+   - Impact: Logo will fail to load on waitlist-2027 page in production.
+   - Resolution options:
+     a) Copy src/assets/brand/* to public/assets/brand/ so they're served as static files.
+     b) Refactor waitlist-2027.astro to use Astro's Image component (import + <Image /> tag).
+     c) Update the img src to reference `/_astro/btf-logo-white.Bbmk7X9J_Z1vKUot.webp` directly (brittle; hash changes on rebuild).
+   - Recommendation: Option (a) is simplest for a standalone static page; option (b) is more Astro-idiomatic.
+
+2. **No other issues found:** All 12 routes pass copy, title, description, internal link, and non-Astro-processed image checks.
+
+---
+
 ## 2026-10-03T15:04:34Z — Correction: normal build restored; approved copy gate is local and production-only (not active)
 - Owner instruction: the normal build and Cloudflare previews must work without Google credentials while the Sheet is empty and the gate is not activated. Reworked locally; nothing pushed, deployed, or changed in Cloudflare, DNS, or the live site.
 - Restored the pre-gate content sources and pages (git checkout from eb81767): src/data/cdm2027.ts, resources.ts, practical-info-data.json, all pages and components. Removed the field-rendering layer (Copy/LinkList/AudioList components, src/lib/copy*.mjs); it stays in git history at commit 07bb2c6. package.json build is astro build again; dependencies and package-lock.json are unchanged since the last successful Cloudflare preview (aa239b4).
