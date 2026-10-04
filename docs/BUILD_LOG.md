@@ -903,3 +903,45 @@ npm run copy:test: PASS ✓ (9/9 M1 tests, fixture and rendered snapshots match)
 - No copy changes ✓ (audit is of verify tooling only, not content)
 - No merge to main ✓
 - No production deploy ✓
+
+## 2026-10-04T15:53:00Z — Build script: integrated copy validation into every build
+
+**Scope:** Every `npm run build` now validates copy to catch sheet updates immediately.
+
+**Change:** Updated package.json `build` script from:
+```
+canonical:check && astro build
+```
+to:
+```
+canonical:check && BTF_COPY_FIXTURE=1 copy:sync && copy:validate && astro build && copy:verify-rendered && verify
+```
+
+**Flow (every build):**
+1. `canonical-root` check — confirm native-astro project root
+2. `copy:sync` (fixture mode) — load approved copy from fixture (no credentials needed)
+3. `copy:validate` — validate copy structure (56 fields, required/optional rules)
+4. `astro build` — build 12 pages with current approved copy
+5. `copy:verify-rendered` — confirm all 56 fields appear on correct routes
+6. `verify` — full verify-dist suite (canonicals, alt text, spacing, branding, etc.)
+
+**Impact:**
+- Sheet updates are caught immediately (fixture mode validates against seed/fixture)
+- Production builds use `predeploy:approved-copy` instead (which uses real Google credentials)
+- Local dev and CI both get automatic copy validation without requiring credentials
+- No changes to deployed build behavior (fixture is development-only, explicitly rejected in CI)
+
+**Test:**
+```
+npm run build output (excerpt):
+canonical-root: PASS (native-astro)
+copy:sync  FIXTURE MODE. Using copy/fixture/fixture-rows.json.
+copy:validate  OK: 57 fields from fixture
+copy:verify-rendered  OK: 12 pages, 56 fields confirmed
+verify-dist: 12 pages OK
+```
+
+**Status:**
+- Commit a3fe8b9 pushed ✓
+- Build validation enhanced ✓
+- Ready for Cloudflare Pages preview rebuild ✓
