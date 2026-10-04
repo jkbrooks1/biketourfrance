@@ -1,0 +1,287 @@
+---
+// 2027 Tour Waitlist page. Static form that POSTs JSON to the n8n intake webhook
+// (workflow "v0001 BTF 2027 Waitlist Intake"). No build-time data fetching.
+// Staging protections stay on: noindex meta here, X-Robots-Tag via site/_headers, robots.txt.
+// Remove the noindex meta only at launch, after the owner approves the copy and the cutover.
+//
+// Build-time setting (optional): PUBLIC_WAITLIST_WEBHOOK_URL overrides the webhook URL below.
+// The URL is public by design: it is visible to every visitor's browser.
+const webhookUrl =
+  import.meta.env.PUBLIC_WAITLIST_WEBHOOK_URL ||
+  'https://n8n.biketourfrance.net/webhook/btf-waitlist-2027-intake';
+
+const consentNotice =
+  'By clicking Join the 2027 Waitlist, I agree to receive BikeTourFrance emails about tours, route guides, and services. I can unsubscribe at any time.';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <title>Join the BikeTourFrance 2027 Tour Waitlist</title>
+    <meta name="description" content="Join the BikeTourFrance 2027 tour waitlist and hear first when 2027 tours are finalized." />
+    <link rel="icon" href="/assets/framerusercontent.com/sites/icons/default-favicon-light.v1.png" />
+    <style>
+      :root {
+        --bar: #dadfeb;
+        --ink: #1c1c1c;
+        --green: #2D5016;
+        --green-dark: #1f3a0f;
+        --line: #c9cfc2;
+        --error: #9b1c1c;
+        --soft: #f4f1ea;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        font-family: Montserrat, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--ink);
+        background: #fff;
+      }
+      header {
+        background: var(--bar);
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 10px 24px;
+      }
+      header a {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        color: var(--ink);
+        text-decoration: none;
+        font-size: 18px;
+      }
+      header img { width: 40px; height: 40px; }
+      .hero {
+        background: var(--green);
+        color: #fff;
+        text-align: center;
+        padding: 56px 24px 48px;
+      }
+      .hero h1 { font-size: 40px; line-height: 1.15; margin: 0 auto 16px; max-width: 760px; }
+      .hero p { font-size: 18px; line-height: 1.5; margin: 0 auto; max-width: 620px; }
+      main {
+        flex: 1;
+        width: 100%;
+        max-width: 560px;
+        margin: 0 auto;
+        padding: 40px 24px 56px;
+      }
+      .intro { font-size: 17px; line-height: 1.6; margin: 0 0 28px; }
+      form { display: block; }
+      .field { margin: 0 0 20px; }
+      label, legend { display: block; font-weight: 600; font-size: 15px; margin: 0 0 6px; padding: 0; }
+      input[type="text"], input[type="email"] {
+        width: 100%;
+        font: inherit;
+        font-size: 16px;
+        padding: 12px 14px;
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        background: #fff;
+        color: var(--ink);
+      }
+      input[type="text"]:focus-visible, input[type="email"]:focus-visible,
+      .button:focus-visible, .choice input:focus-visible {
+        outline: 3px solid #7aa35a;
+        outline-offset: 2px;
+      }
+      fieldset { border: 0; margin: 0 0 20px; padding: 0; }
+      .choice { display: flex; align-items: center; gap: 10px; padding: 8px 0; font-size: 16px; font-weight: 400; }
+      .choice input { width: 20px; height: 20px; margin: 0; accent-color: var(--green); flex: none; }
+      .choice label { margin: 0; font-weight: 400; font-size: 16px; }
+      .error-text { color: var(--error); font-size: 14px; margin: 6px 0 0; min-height: 0; }
+      input[aria-invalid="true"] { border-color: var(--error); }
+      .notice { font-size: 13px; line-height: 1.5; color: #444; margin: 8px 0 16px; }
+      .button {
+        display: block;
+        width: 100%;
+        padding: 14px 24px;
+        border: 0;
+        border-radius: 4px;
+        background: var(--green);
+        color: #fff;
+        font: inherit;
+        font-size: 17px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .button:hover { background: var(--green-dark); }
+      .button[disabled] { opacity: 0.6; cursor: not-allowed; }
+      .status { margin: 16px 0 0; font-size: 15px; line-height: 1.5; }
+      .status.error { color: var(--error); }
+      .success {
+        background: var(--soft);
+        border-left: 4px solid var(--green);
+        padding: 24px;
+        border-radius: 4px;
+      }
+      .success h2 { margin: 0 0 8px; font-size: 22px; color: var(--green); }
+      .success p { margin: 0; font-size: 16px; line-height: 1.6; }
+      .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+      [hidden] { display: none !important; }
+      footer { padding: 16px 24px; text-align: center; font-size: 14px; color: #555; }
+      @media (max-width: 600px) {
+        .hero { padding: 40px 20px 32px; }
+        .hero h1 { font-size: 30px; }
+        main { padding: 28px 20px 40px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="/">
+        <img src="/assets/framerusercontent.com/images/6ZiXS9xFDDZg9KFI1k8jKh1qzY.png" alt="" />
+        <span>BikeTourFrance</span>
+      </a>
+    </header>
+
+    <section class="hero">
+      <h1>Join the BikeTourFrance 2027 Tour Waitlist</h1>
+      <p>Be among the first to hear when our 2027 tours are ready.</p>
+    </section>
+
+    <main>
+      <p class="intro">
+        The waitlist is the simplest way to show interest in a 2027 tour. Tell us your name and the season you prefer.
+        When 2027 tours are finalized, you will hear from us by email. Joining does not commit you to anything.
+      </p>
+
+      <div id="success" class="success" role="status" tabindex="-1" hidden>
+        <h2>You're on the list.</h2>
+        <p>Thank you for joining the 2027 waitlist. A confirmation email is on its way. If you don't see it within a few minutes, check your spam folder.</p>
+      </div>
+
+      <form id="waitlist-form" novalidate data-endpoint={webhookUrl}>
+        <div class="field">
+          <label for="first_name">First name</label>
+          <input type="text" id="first_name" name="first_name" autocomplete="given-name" maxlength="80" required aria-describedby="first_name-error" />
+          <p class="error-text" id="first_name-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" inputmode="email" maxlength="254" required aria-describedby="email-error" />
+          <p class="error-text" id="email-error" aria-live="polite"></p>
+        </div>
+
+        <fieldset aria-describedby="interest-error">
+          <legend>Which tours interest you?</legend>
+          <div class="choice"><input type="radio" id="interest-spring" name="interest" value="Spring 2027" required /><label for="interest-spring">Spring 2027</label></div>
+          <div class="choice"><input type="radio" id="interest-fall" name="interest" value="Fall 2027" /><label for="interest-fall">Fall 2027</label></div>
+          <div class="choice"><input type="radio" id="interest-either" name="interest" value="Either" /><label for="interest-either">Either</label></div>
+          <p class="error-text" id="interest-error" aria-live="polite"></p>
+        </fieldset>
+
+        <div class="field">
+          <div class="choice">
+            <input type="checkbox" id="marketing_consent" name="marketing_consent" />
+            <label for="marketing_consent">Send me BikeTourFrance updates by email</label>
+          </div>
+        </div>
+
+        <div class="hp" aria-hidden="true">
+          <label for="company_website">Leave this field empty</label>
+          <input type="text" id="company_website" name="company_website" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <p class="notice" id="consent-notice">{consentNotice}</p>
+        <button type="submit" class="button" id="submit-button">Join the 2027 Waitlist</button>
+        <p class="status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </main>
+
+    <footer>BikeTourFrance</footer>
+
+    <script is:inline>
+      (function () {
+        var form = document.getElementById('waitlist-form');
+        var button = document.getElementById('submit-button');
+        var statusEl = document.getElementById('form-status');
+        var success = document.getElementById('success');
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+        function setError(id, message) {
+          var el = document.getElementById(id + '-error');
+          if (el) el.textContent = message || '';
+          var input = document.getElementById(id);
+          if (input) {
+            if (message) input.setAttribute('aria-invalid', 'true');
+            else input.removeAttribute('aria-invalid');
+          }
+        }
+
+        function validate() {
+          var ok = true;
+          var firstName = form.elements.first_name.value.trim();
+          var email = form.elements.email.value.trim();
+          var interest = form.querySelector('input[name="interest"]:checked');
+          setError('first_name', firstName ? '' : 'Please enter your first name.');
+          setError('email', emailPattern.test(email) && email.length <= 254 ? '' : 'Please enter a valid email address.');
+          document.getElementById('interest-error').textContent = interest ? '' : 'Please choose Spring 2027, Fall 2027, or Either.';
+          if (!firstName || !emailPattern.test(email) || email.length > 254 || !interest) ok = false;
+          return ok;
+        }
+
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+          statusEl.textContent = '';
+          statusEl.className = 'status';
+          if (!validate()) {
+            var firstInvalid = form.querySelector('[aria-invalid="true"]') || form.querySelector('input[name="interest"]');
+            if (firstInvalid) firstInvalid.focus();
+            return;
+          }
+
+          var payload = {
+            first_name: form.elements.first_name.value.trim(),
+            email: form.elements.email.value.trim(),
+            interest: form.querySelector('input[name="interest"]:checked').value,
+            marketing_consent: form.elements.marketing_consent.checked,
+            source: 'biketourfrance.net-waitlist',
+            company_website: form.elements.company_website.value
+          };
+
+          button.disabled = true;
+          button.textContent = 'Joining...';
+
+          fetch(form.getAttribute('data-endpoint'), {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          })
+            .then(function (response) {
+              return response.json().catch(function () { return {}; }).then(function (data) {
+                return { ok: response.ok, data: data };
+              });
+            })
+            .then(function (result) {
+              if (result.ok && result.data && result.data.ok) {
+                form.hidden = true;
+                success.hidden = false;
+                success.focus();
+                return;
+              }
+              var message = (result.data && result.data.error) || 'Something went wrong. Please try again.';
+              statusEl.textContent = message;
+              statusEl.className = 'status error';
+              button.disabled = false;
+              button.textContent = 'Join the 2027 Waitlist';
+            })
+            .catch(function () {
+              statusEl.textContent = 'We could not reach the server. Please check your connection and try again.';
+              statusEl.className = 'status error';
+              button.disabled = false;
+              button.textContent = 'Join the 2027 Waitlist';
+            });
+        });
+      })();
+    </script>
+  </body>
+</html>
