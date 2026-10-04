@@ -1,4 +1,5 @@
 // Progressive enhancement for the mobile menu. Without JavaScript the full link list stays visible.
+// At 768px and wider the menu is always shown, so the toggle only works on small screens.
 const toggle = document.querySelector<HTMLButtonElement>('[data-nav-toggle]');
 const nav = document.querySelector<HTMLElement>('[data-nav]');
 

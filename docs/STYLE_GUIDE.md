@@ -88,3 +88,20 @@ Public 2027 facts come only from `src/data/cdm2027.ts` (see `docs/2027_CDM_CONTE
 | 6 | "Avoid startup SaaS cards." | Content groups use plain bordered boxes with a 6 px radius and no shadow. | Keeps structure without a card-grid look. |
 | 8 | Container side edge is 20 px at every width. | 80 px from 768 px up, 20 px on phones. | Owner instruction of 2026-10-03. |
 | 7 | Hero should answer "what, where, why" in seconds. | The home hero states small-group tours in France, the 2027 Canal des Deux Mers tour, and the two actions. | Meets the guide; noted here for review. |
+
+## Style guide v4.4 implementation (2026-10-03)
+
+The site now follows the BikeTourFrance.net Unified Style & Positioning Guide v4.4 (Google Doc "2026-q4.v4.4_Style Guide for web and presentations"). Owner decisions applied:
+
+- `#2D5016` is the primary green and is approved for white text on buttons, header, and footer.
+- One container: `width: calc(100% - 40px); max-width: 1280px`. Reading text stops at 70ch.
+- Navigation labels are Home, Tours, About, Resources, Contact (site level, not the guide's single-tour examples).
+- Shadows: 0 2px 4px at rest, 0 4px 12px on hover, none when pressed.
+- Focus: 2px solid `#2D5016`, 4px offset. On green and photo bands a 4px white ring fills the offset gap so the mark stays visible.
+- Spacing tokens `--s1`..`--s7` (4, 8, 16, 24, 32, 48, 64). Exceptions: the guide's own 12px button padding and the owner's 40px left padding on the home "Ready to ride?" block from 768px up.
+- All buttons use `src/components/Button.astro`. It throws at build time if a label is over 24 characters or the destination is empty or `#`.
+- Images: AVIF with WebP fallback, CSS crops of 16:9, 1:1, or 3:4, 6px radius. Source photos are 290 KB or less. The home hero is a full-bleed cover image (cropped to 16:9 at the source) under a flat dark-green tint at 74% for text contrast (6.3:1 or better measured).
+- No sign-up service exists, so "join" actions are `mailto:` links with a subject line.
+- Page copy comes from the approved-copy Sheet through `src/data/approved-copy.ts`. Corrections to the Sheet's wording are marked there.
+- `npm run verify` checks heading and label length, exclamation marks, `#` links, alt text, CSS scale, and Framer leftovers. `npm run check:browser` (Playwright) tests 11 routes at 375, 768, 1024, and 1440 px.
+- The inactive approved-copy gate (`copy:check-local`, `copy/field-manifest.json`) still maps the v4.3 text and fails against these pages. Regenerate the manifest before activating the gate.

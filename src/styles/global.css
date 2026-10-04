@@ -1,24 +1,64 @@
 /* BikeTourFrance.net shared visual system.
-   Implements the owner's Unified Style & Positioning Guide v4.3. See docs/STYLE_GUIDE.md. */
-@import '@fontsource-variable/montserrat';
+   Implements the owner's Unified Style & Positioning Guide v4.4. See docs/STYLE_GUIDE.md.
+   Rules this file keeps: spacing only from the 4/8/16/24/32/48/64 scale (plus the owner's 40px left padding on the
+   home "Ready to ride?" block), type only from the guide's scale, one container, one button system. */
+
+/* Montserrat Variable from the fontsource package, declared under the guide's family name. */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('../../node_modules/@fontsource-variable/montserrat/files/montserrat-latin-wght-normal.woff2')
+    format('woff2-variations');
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('../../node_modules/@fontsource-variable/montserrat/files/montserrat-latin-ext-wght-normal.woff2')
+    format('woff2-variations');
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF,
+    U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
 
 :root {
-  /* Guide v4.3 color system */
-  --green: #2d5016; /* primary brand green: header, footer, primary buttons */
-  --green-dark: #1f3d11; /* hover, secondary emphasis */
-  --green-pressed: #17300c; /* active and pressed states */
-  --beige: #f5f0e8; /* secondary buttons, warm section backgrounds */
-  --blue: #1b4f72; /* informational accents and tertiary hover only */
+  /* Color system (guide v4.4) */
+  --green: #2d5016; /* primary brand green: header, footer, primary buttons, borders */
+  --green-dark: #1f3d11; /* hover */
+  --green-pressed: #17300c; /* active and pressed */
+  --beige: #f5f0e8; /* secondary buttons, warm sections */
+  --beige-hover: #e8e0d0;
+  --beige-pressed: #ddd3c5;
+  --blue: #1b4f72; /* informational accents only */
   --white: #ffffff;
   --ink: #1a1a1a;
   --ink-muted: #4a4a44;
-  --line: #d9d2c3;
-  --focus: #0a58ca;
-  --focus-on-dark: #ffd166;
+  --line: #e8e4dc; /* subtle border color from the guide */
+
+  /* Spacing scale (guide v4.4): 4, 8, 16, 24, 32, 48, 64 */
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 16px;
+  --s4: 24px;
+  --s5: 32px;
+  --s6: 48px;
+  --s7: 64px;
+
+  /* Shadows (guide: subtle, moderate) */
+  --shadow-1: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-2: 0 4px 12px rgba(0, 0, 0, 0.15);
+
   --radius: 6px;
-  --container: 1280px; /* hard upper limit from the guide */
-  --measure: 68ch;
-  --font: 'Montserrat Variable', Montserrat, system-ui, sans-serif;
+  --container: 1280px; /* the one site-wide upper limit */
+  --measure: 70ch; /* reading text never runs wider than this */
+  --font: Montserrat, system-ui, sans-serif;
+  --ease: 200ms ease-in-out;
 }
 
 *,
@@ -41,6 +81,9 @@ html {
   *::after {
     transition: none !important;
   }
+  .btn:hover {
+    transform: none !important;
+  }
 }
 
 body {
@@ -49,8 +92,8 @@ body {
   color: var(--ink);
   font-family: var(--font);
   font-weight: 400;
-  font-size: 1rem; /* 16px */
-  line-height: 1.7;
+  font-size: 16px;
+  line-height: 1.6;
   overflow-wrap: break-word;
 }
 
@@ -61,105 +104,157 @@ picture {
   height: auto;
 }
 
-/* Sentence case everywhere: no all-caps text. */
+/* Headings: sentence case, tight tracking only on large sizes. Mobile sizes scale up at 1024px. */
 h1,
 h2,
 h3,
 h4 {
   font-family: var(--font);
-  line-height: 1.25;
-  margin: 0 0 0.6em;
+  margin: 0 0 var(--s3);
   color: var(--green);
 }
 h1 {
-  font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+  font-size: 40px;
   font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -1px;
 }
 h2 {
-  font-size: clamp(1.4rem, 3vw, 1.85rem);
-  font-weight: 600;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
 }
 h3 {
-  font-size: 1.15rem;
-  font-weight: 600;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.25px;
 }
 h4 {
-  font-size: 1rem;
+  font-size: 24px;
   font-weight: 600;
+  line-height: 1.5;
 }
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 56px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  h3 {
+    font-size: 28px;
+  }
+}
+
 p {
-  margin: 0 0 1em;
+  margin: 0 0 var(--s3);
   max-width: var(--measure);
 }
 ul,
 ol {
-  margin: 0 0 1em;
-  padding-left: 1.3em;
+  margin: 0 0 var(--s3);
+  padding-left: var(--s4);
   max-width: var(--measure);
 }
 li {
-  margin-bottom: 0.45em;
+  margin-bottom: var(--s2);
 }
 strong {
   font-weight: 600;
 }
+/* Standalone link lists: each link is a full 44px target. */
+.link-list {
+  list-style: none;
+  padding: 0;
+}
+.link-list li {
+  margin: 0;
+}
+.link-list a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  min-width: 44px;
+}
 
-/* Links read as links: underlined, with a color change on hover. */
+small,
+.small {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Links read as links: underlined, darker with a thicker underline on hover (guide tertiary behavior). */
 a {
   color: var(--green);
   text-decoration: underline;
-  text-decoration-thickness: 0.08em;
-  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
   cursor: pointer;
+  transition:
+    color var(--ease),
+    text-decoration-thickness var(--ease);
 }
 a:hover {
-  color: var(--blue);
+  color: var(--green-dark);
+  text-decoration-thickness: 2px;
+}
+a:active {
+  color: var(--green-pressed);
 }
 
-/* Focus: always visible for keyboard users, offset 3px (guide minimum is 2px). */
+/* Focus: 2px solid green, 4px offset, on every interactive element. On green and photo bands the green outline
+   would vanish, so a white 4px ring fills the offset gap and keeps the focus mark visible. */
 :focus-visible {
-  outline: 3px solid var(--focus);
-  outline-offset: 3px;
-  border-radius: 2px;
+  outline: 2px solid var(--green);
+  outline-offset: 4px;
 }
 .site-header :focus-visible,
 .site-footer :focus-visible,
 .hero :focus-visible {
-  outline-color: var(--focus-on-dark);
+  box-shadow: 0 0 0 4px var(--white);
+}
+.site-footer :focus-visible {
+  border-radius: 2px;
 }
 
 .skip-link {
   position: absolute;
-  left: 8px;
+  left: var(--s2);
   top: -80px;
   z-index: 100;
   background: var(--ink);
   color: #fff;
-  padding: 12px 18px;
+  padding: var(--s3) var(--s4);
   min-height: 44px;
   border-radius: var(--radius);
   font-weight: 600;
 }
 .skip-link:focus {
-  top: 8px;
+  top: var(--s2);
 }
 
-/* Container standard from the guide (20px side edge on phones). From 768px up the left and
-   right content edge is at least 80px (owner instruction, 2026-10-03). At 1440px and wider the
-   container stops at 1280px, so the edge is 80px or more. */
+/* The single content container: 20px side gutters, never wider than 1280px. */
 .container {
   width: calc(100% - 40px);
   max-width: var(--container);
   margin: 0 auto;
 }
-@media (min-width: 768px) {
-  .container {
-    width: calc(100% - 160px);
-  }
+/* Header and footer inner width: 24px side padding from the guide, same 1280px limit. */
+.band__inner {
+  width: calc(100% - 48px);
+  max-width: var(--container);
+  margin: 0 auto;
 }
 
 .section {
-  padding-block: clamp(40px, 6vw, 80px);
+  padding-block: var(--s6);
+}
+@media (min-width: 768px) {
+  .section {
+    padding-block: var(--s7);
+  }
 }
 .section--beige {
   background: var(--beige);
@@ -171,16 +266,17 @@ a:hover {
 
 .eyebrow {
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 14px;
+  line-height: 1.5;
   color: var(--green);
-  margin: 0 0 0.5em;
+  margin: 0 0 var(--s2);
 }
 .lede {
-  font-size: 1.1rem;
+  font-size: 18px;
   color: var(--ink-muted);
 }
 
-/* Buttons. Primary, secondary, tertiary as defined by the guide. */
+/* Buttons: one system. Primary, secondary, tertiary. 44px minimum height and width. */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -190,59 +286,92 @@ a:hover {
   padding: 12px 24px;
   border: 2px solid var(--green);
   border-radius: var(--radius);
-  background: var(--green);
-  color: #fff;
   font-family: var(--font);
   font-weight: 600;
-  font-size: 1rem;
-  line-height: 1.25;
+  font-size: 16px;
+  line-height: 1.5;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   transition:
-    transform 0.15s ease,
-    background-color 0.15s ease,
-    box-shadow 0.15s ease;
+    transform var(--ease),
+    background-color var(--ease),
+    border-color var(--ease),
+    color var(--ease),
+    box-shadow var(--ease);
 }
-.btn:hover {
+.btn--primary {
+  background: var(--green);
+  color: #fff;
+  box-shadow: var(--shadow-1);
+}
+.btn--primary:hover {
   background: var(--green-dark);
   border-color: var(--green-dark);
   color: #fff;
+  text-decoration: none;
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.28);
+  box-shadow: var(--shadow-2);
 }
-.btn:active {
+.btn--primary:active {
   background: var(--green-pressed);
   border-color: var(--green-pressed);
+  color: #fff;
   transform: translateY(0);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: none;
 }
 .btn--secondary {
   background: var(--beige);
   color: var(--green);
   border-color: var(--green);
-  box-shadow: none;
+  box-shadow: var(--shadow-1);
 }
 .btn--secondary:hover {
-  background: #fff;
-  color: var(--green-dark);
+  background: var(--beige-hover);
+  color: var(--green);
   border-color: var(--green-dark);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-2);
 }
 .btn--secondary:active {
-  background: var(--beige);
+  background: var(--beige-pressed);
   color: var(--green-pressed);
   border-color: var(--green-pressed);
+  transform: translateY(0);
+  box-shadow: none;
+}
+/* Tertiary: underlined text, no container, still a 44px target. */
+.btn--tertiary {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--green);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.btn--tertiary:hover {
+  color: var(--green-dark);
+  text-decoration-thickness: 2px;
+}
+.btn--tertiary:active {
+  color: var(--green-pressed);
 }
 .btn-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 1.25rem;
+  gap: var(--s3);
+  margin-top: var(--s4);
+}
+/* Keep the focus ring and the lift/shadow working together. */
+.site-header .btn:focus-visible,
+.hero .btn:focus-visible {
+  box-shadow:
+    0 0 0 4px var(--white),
+    var(--shadow-1);
 }
 
-/* Header band: full-width green, 72px on desktop, logo left, navigation right. */
+/* Header band: full-width green. 72px desktop, 64px tablet, 56px mobile. Logo left, navigation right. */
 .site-header {
   background: var(--green);
   color: #fff;
@@ -253,47 +382,71 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  min-height: 72px;
+  flex-wrap: wrap;
+  gap: var(--s2) var(--s4);
+  min-height: 56px;
+}
+@media (min-width: 768px) {
+  .site-header__bar {
+    flex-wrap: nowrap;
+    min-height: 64px;
+  }
+}
+@media (min-width: 1024px) {
+  .site-header__bar {
+    min-height: 72px;
+  }
 }
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  min-height: 56px;
+  gap: var(--s2);
+  min-height: 44px;
   color: #fff;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 16px;
+  line-height: 1.5;
   text-decoration: none;
 }
 .brand:hover {
   color: #fff;
+  text-decoration: none;
 }
-.brand img {
-  width: 52px;
-  height: 52px;
+.brand__logo {
+  width: 40px;
+  height: 40px;
+}
+@media (min-width: 768px) {
+  .brand__logo {
+    width: 48px;
+    height: 48px;
+  }
 }
 .nav-toggle {
   display: none;
   min-height: 44px;
   min-width: 44px;
-  padding: 8px 16px;
+  padding: var(--s2) var(--s3);
   border: 2px solid #fff;
   border-radius: var(--radius);
   background: transparent;
   color: #fff;
   font-family: var(--font);
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 16px;
   cursor: pointer;
+  transition: background-color var(--ease);
 }
 .nav-toggle:hover {
   background: var(--green-dark);
 }
+.nav-toggle:active {
+  background: var(--green-pressed);
+}
 .site-nav ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px 8px;
+  gap: var(--s1) var(--s3);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -306,29 +459,28 @@ a:hover {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
-  padding: 8px 10px;
+  padding: var(--s2);
   color: #fff;
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 16px;
   text-decoration: none;
-  border-bottom: 3px solid transparent;
-  transition: border-color 0.15s ease;
+  border-bottom: 2px solid transparent;
+  transition: border-color var(--ease);
 }
 .site-nav a:hover {
   color: #fff;
   border-bottom-color: rgba(255, 255, 255, 0.7);
 }
-/* Current page is shown by a heavier underline and weight, not by color alone. */
+.site-nav a:active {
+  border-bottom-color: #fff;
+}
+/* The current page is shown by heavier weight and a solid underline, not by color alone. */
 .site-nav a[aria-current='page'] {
   font-weight: 700;
   border-bottom-color: #fff;
 }
 
-@media (max-width: 1080px) {
-  .site-header__bar {
-    flex-wrap: wrap;
-    padding-block: 8px;
-  }
+@media (max-width: 767px) {
   .js .nav-toggle {
     display: inline-flex;
     align-items: center;
@@ -342,10 +494,11 @@ a:hover {
   .site-nav ul {
     flex-direction: column;
     gap: 0;
-    padding-bottom: 12px;
+    padding-bottom: var(--s3);
   }
   .site-nav a {
     width: 100%;
+    padding-inline: var(--s3);
     border-bottom: 1px solid rgba(255, 255, 255, 0.25);
     border-left: 4px solid transparent;
   }
@@ -359,7 +512,8 @@ a:hover {
   }
 }
 
-/* Hero: calm, photographic, text on a darkened image. */
+/* Hero: calm and photographic. The picture fills the band; a flat dark-green tint (no blur, no translucent plate)
+   keeps the white text readable. */
 .hero {
   position: relative;
   background: var(--green-dark);
@@ -377,43 +531,44 @@ a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 55%;
+  object-position: center 60%;
 }
 .hero__media::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(15, 28, 6, 0.55) 0%, rgba(15, 28, 6, 0.78) 100%);
+  background: rgba(23, 48, 12, 0.74);
 }
 .hero__body {
   position: relative;
-  padding-block: clamp(48px, 10vw, 112px);
+  padding-block: var(--s7);
 }
 .hero h1 {
   color: #fff;
-  max-width: 22ch;
+  max-width: 24ch;
 }
-.hero .lede,
-.hero .eyebrow {
+.hero p {
+  font-size: 18px;
+  max-width: 60ch;
+}
+.hero a:not(.btn) {
   color: #fff;
 }
-.hero .lede {
-  max-width: 52ch;
-}
-/* On the dark photo the primary button gets a white edge so it stays visible. */
-.hero .btn:not(.btn--secondary) {
+/* On the photo the buttons get a white edge so they stay visible. */
+.hero .btn--primary {
   border-color: #fff;
 }
 
 /* Layout helpers */
 .split {
   display: grid;
-  gap: clamp(24px, 5vw, 56px);
+  gap: var(--s5);
   align-items: center;
 }
-@media (min-width: 820px) {
+@media (min-width: 768px) {
   .split {
     grid-template-columns: 1.05fr 1fr;
+    gap: var(--s6);
   }
   .split--reverse > :first-child {
     order: 2;
@@ -428,16 +583,46 @@ a:hover {
 }
 .rounded img {
   width: 100%;
-  height: auto;
+}
+
+/* Picture crops allowed by the guide: 16:9, 1:1, 3:4. */
+img.ratio-16x9 {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+img.ratio-1x1 {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+img.ratio-3x4 {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+/* Home: the "Ready to ride?" block keeps at least 40px of left padding from 768px up (owner instruction). */
+.ready__body {
+  padding-left: 0;
+}
+@media (min-width: 768px) {
+  .ready__body {
+    padding-left: 40px;
+  }
+}
+.ready__facts {
+  font-weight: 600;
+  color: var(--green);
 }
 
 .stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(136px, 1fr));
+  gap: var(--s3);
   list-style: none;
   padding: 0;
-  margin: 1.5rem 0;
+  margin: var(--s4) 0;
   max-width: none;
 }
 .stats li {
@@ -445,20 +630,20 @@ a:hover {
   background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 16px;
+  padding: var(--s3);
 }
 .stats strong {
   display: block;
-  font-size: 2rem;
+  font-size: 28px;
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.4;
   color: var(--green);
 }
 
 .notice {
-  border-left: 5px solid var(--green);
+  border-left: 4px solid var(--green);
   background: var(--beige);
-  padding: 14px 18px;
+  padding: var(--s3) var(--s4);
   border-radius: 0 var(--radius) var(--radius) 0;
   max-width: var(--measure);
 }
@@ -471,11 +656,15 @@ a:hover {
 
 .two-col {
   display: grid;
-  gap: clamp(20px, 4vw, 48px);
+  gap: var(--s4);
 }
-@media (min-width: 820px) {
+.two-col--spaced {
+  margin-top: var(--s4);
+}
+@media (min-width: 768px) {
   .two-col {
     grid-template-columns: 1fr 1fr;
+    gap: var(--s5);
   }
 }
 .two-col > * {
@@ -485,7 +674,8 @@ a:hover {
   background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: clamp(18px, 3vw, 28px);
+  padding: var(--s4);
+  box-shadow: var(--shadow-1);
 }
 .card ul {
   margin-bottom: 0;
@@ -498,9 +688,9 @@ a:hover {
 }
 .week li {
   display: grid;
-  grid-template-columns: 8.5rem 1fr;
-  gap: 4px 16px;
-  padding: 12px 0;
+  grid-template-columns: 136px 1fr;
+  gap: var(--s1) var(--s3);
+  padding: var(--s3) 0;
   border-bottom: 1px solid var(--line);
   margin: 0;
 }
@@ -513,40 +703,40 @@ a:hover {
   }
 }
 
+/* Route stops: plain labels with a 6px radius (the guide has no pill buttons or pill labels in use here). */
 .stops {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: var(--s2);
   list-style: none;
   padding: 0;
-  margin: 0 0 1rem;
+  margin: 0 0 var(--s3);
   max-width: none;
 }
 .stops li {
   margin: 0;
-  padding: 8px 14px;
+  padding: var(--s2) var(--s3);
   border: 1px solid var(--green);
-  border-radius: 999px;
+  border-radius: var(--radius);
   background: var(--beige);
   color: var(--green);
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 16px;
 }
 
-/* Gallery: one crop ratio and one rhythm; captions only where a place is known. */
+/* Gallery: one 1:1 crop and one rhythm; captions only where a place is known. */
 .gallery {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  gap: var(--s3);
   list-style: none;
   padding: 0;
   margin: 0;
   max-width: none;
 }
-@media (min-width: 720px) {
+@media (min-width: 768px) {
   .gallery {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 16px;
   }
 }
 @media (min-width: 1024px) {
@@ -561,17 +751,15 @@ a:hover {
   margin: 0;
 }
 .gallery img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  object-position: center 40%;
   border-radius: var(--radius);
   background: var(--line);
+  object-position: center 40%;
 }
 .gallery figcaption {
-  font-size: 0.95rem;
+  font-size: 14px;
+  line-height: 1.5;
   color: var(--ink-muted);
-  padding-top: 6px;
+  padding-top: var(--s2);
 }
 
 /* Resources */
@@ -581,11 +769,11 @@ a:hover {
   margin: 0;
   max-width: none;
   display: grid;
-  gap: 12px;
+  gap: var(--s3);
 }
 .resource-list li {
   margin: 0;
-  padding: 14px 16px;
+  padding: var(--s3);
   background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -599,51 +787,84 @@ a:hover {
 .resource-list .note {
   margin: 0;
   color: var(--ink-muted);
-  font-size: 0.95rem;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.audio-title {
+  font-weight: 600;
+  margin: 0;
 }
 .audio-item audio {
   width: 100%;
-  margin-top: 8px;
+  margin-top: var(--s2);
 }
 .audio-item .dl {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
-  font-size: 0.95rem;
+  font-size: 14px;
 }
 audio:focus-within {
-  outline: 3px solid var(--focus);
-  outline-offset: 3px;
-  border-radius: 4px;
+  outline: 2px solid var(--green);
+  outline-offset: 4px;
+  border-radius: var(--radius);
+}
+.subhead {
+  margin-top: var(--s5);
+}
+.library {
+  margin-top: var(--s5);
 }
 
-/* Footer band: full-width green. */
+/* Practical information accordions */
+.accordion {
+  margin-bottom: var(--s3);
+}
+.accordion summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+}
+.accordion .two-col {
+  margin-top: var(--s3);
+}
+.preline {
+  white-space: pre-line;
+}
+.narrow-media {
+  max-width: 360px;
+}
+
+/* Footer band: full-width green, logo 40px, navigation, approved legal copy at 14px. */
 .site-footer {
   background: var(--green);
   color: #fff;
-  padding-block: 40px;
+  padding-block: var(--s6);
 }
 .site-footer a {
   color: #fff;
 }
 .site-footer a:hover {
   color: #fff;
-  text-decoration-thickness: 0.16em;
 }
 .site-footer__grid {
   display: grid;
-  gap: 28px;
+  gap: var(--s5);
 }
-@media (min-width: 820px) {
+@media (min-width: 768px) {
   .site-footer__grid {
     grid-template-columns: 1.3fr 1fr 1fr;
   }
 }
 .site-footer h2 {
   color: #fff;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 600;
-  margin-bottom: 0.5em;
+  line-height: 1.5;
+  letter-spacing: 0;
+  margin-bottom: var(--s2);
 }
 .site-footer ul {
   list-style: none;
@@ -653,7 +874,7 @@ audio:focus-within {
 .site-footer li {
   margin: 0;
 }
-.site-footer li a {
+.footer-link {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
@@ -662,40 +883,55 @@ audio:focus-within {
 .site-footer__brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
+  gap: var(--s2);
+  margin-bottom: var(--s3);
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 16px;
 }
-.site-footer__brand img {
-  width: 48px;
-  height: 48px;
+.site-footer__logo {
+  width: 40px;
+  height: 40px;
 }
-.site-footer small {
-  display: block;
-  margin-top: 28px;
-  font-size: 0.9rem;
+.site-footer__legal {
+  margin-top: var(--s5);
+  padding-top: var(--s4);
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.site-footer__legal p {
+  margin-bottom: var(--s3);
+}
+.site-footer__copyright {
+  margin: var(--s4) 0 0;
 }
 
 .staging-banner {
   background: #fff3cd;
   color: #4a3b00;
   text-align: center;
-  padding: 8px 20px;
-  font-size: 0.9rem;
+  padding: var(--s2) var(--s3);
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .prose h2 {
-  margin-top: 1.6em;
+  margin-top: var(--s5);
 }
 .prose h3 {
-  margin-top: 1.4em;
+  margin-top: var(--s4);
 }
 .review-note {
   border: 2px dashed #b45309;
   background: #fff7ed;
-  padding: 14px 18px;
+  padding: var(--s3) var(--s4);
   border-radius: var(--radius);
   max-width: var(--measure);
-  font-size: 0.95rem;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.page-note {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-muted);
 }

@@ -15,8 +15,9 @@ const { photos } = Astro.props;
         <Photo
           src={photo.src}
           alt={photo.alt}
+          ratio="1:1"
           widths={[320, 480, 640, 800]}
-          sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw"
+          sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
         />
         {photo.caption && <figcaption>{photo.caption}</figcaption>}
       </figure>

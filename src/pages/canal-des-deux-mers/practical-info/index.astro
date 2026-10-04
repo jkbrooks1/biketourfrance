@@ -76,13 +76,14 @@ const details = [
           </p>
         </div>
       </div>
-      <div class="rounded" style="max-width: 360px">
+      <div class="rounded narrow-media">
         <Photo
           src={PHOTOS.pandaAirport.src}
           alt={PHOTOS.pandaAirport.alt}
           priority
+          ratio="3:4"
           widths={[360, 540, 720]}
-          sizes="(min-width: 820px) 360px, 92vw"
+          sizes="(min-width: 768px) 360px, calc(100vw - 40px)"
         />
       </div>
     </div>
@@ -140,18 +141,16 @@ const details = [
     <div class="container">
       <h2 id="details-heading">Details</h2>
       {details.map((d) => (
-        <details class="card" style="margin-bottom: 12px">
-          <summary style="min-height: 44px; display: flex; align-items: center; cursor: pointer; font-weight: 700">
-            {d.title}
-          </summary>
-          <div class="two-col" style="margin-top: 12px">
+        <details class="card accordion">
+          <summary>{d.title}</summary>
+          <div class="two-col">
             <div>
               <h3>Tram Line F</h3>
-              <p style="white-space: pre-line">{d.tram}</p>
+              <p class="preline">{d.tram}</p>
             </div>
             <div>
               <h3>30'Direct airport bus</h3>
-              <p style="white-space: pre-line">{d.bus}</p>
+              <p class="preline">{d.bus}</p>
             </div>
           </div>
         </details>

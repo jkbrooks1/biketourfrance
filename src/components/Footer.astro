@@ -1,20 +1,33 @@
 ---
+// Site footer band: full-width green, logo (40px), navigation, contact, and the approved legal copy at 14px or larger.
 import { Image } from 'astro:assets';
 import logo from '../assets/brand/btf-logo-white.png';
-import { CONTACT_LINKS, LEGAL_NAV, NAV, SITE } from '../data/site';
+import { COPY, footerPolicyParts } from '../data/approved-copy';
+import { CONTACT_LINKS, FOOTER_TOUR_LINKS, LEGAL_NAV, NAV, SITE } from '../data/site';
+
+const policies = footerPolicyParts();
 ---
 
 <footer class="site-footer">
-  <div class="container">
+  <div class="band__inner">
     <div class="site-footer__grid">
       <div>
         <p class="site-footer__brand">
-          <Image src={logo} alt="" width={48} height={48} loading="lazy" />
+          <Image
+            class="site-footer__logo"
+            src={logo}
+            alt="BikeTourFrance.net logo: a bicycle over a map of France"
+            width={80}
+            height={80}
+            loading="lazy"
+          />
           <span>{SITE.name}</span>
         </p>
         <p>Small-group, self-supported bicycle tours in France, led by John Brooks. {SITE.tagline}</p>
         <p>
-          <a href={CONTACT_LINKS.general}>{SITE.email}</a>
+          <a class="footer-link" href={CONTACT_LINKS.general}>
+            {SITE.email}
+          </a>
         </p>
       </div>
       <nav aria-label="Site">
@@ -22,7 +35,16 @@ import { CONTACT_LINKS, LEGAL_NAV, NAV, SITE } from '../data/site';
         <ul>
           {NAV.map((item) => (
             <li>
-              <a href={item.href}>{item.label}</a>
+              <a class="footer-link" href={item.href}>
+                {item.label}
+              </a>
+            </li>
+          ))}
+          {FOOTER_TOUR_LINKS.map((item) => (
+            <li>
+              <a class="footer-link" href={item.href}>
+                {item.label}
+              </a>
             </li>
           ))}
         </ul>
@@ -32,14 +54,23 @@ import { CONTACT_LINKS, LEGAL_NAV, NAV, SITE } from '../data/site';
         <ul>
           {LEGAL_NAV.map((item) => (
             <li>
-              <a href={item.href}>{item.label}</a>
+              <a class="footer-link" href={item.href}>
+                {item.label}
+              </a>
             </li>
           ))}
         </ul>
       </nav>
     </div>
-    <small>
-      &copy; {new Date().getUTCFullYear()} {SITE.name}
-    </small>
+    <div class="site-footer__legal">
+      {policies.map((part) => (
+        <p>
+          <strong>{part.label}:</strong> {part.text}
+        </p>
+      ))}
+      <p class="site-footer__copyright">
+        &copy; {new Date().getUTCFullYear()} {SITE.name}
+      </p>
+    </div>
   </div>
 </footer>

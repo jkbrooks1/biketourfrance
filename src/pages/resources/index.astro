@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Button from '../../components/Button.astro';
 import ContactCta from '../../components/ContactCta.astro';
+import { COPY } from '../../data/approved-copy';
 import {
   AUDIO_GUIDES,
   FOOD_AUDIO,
@@ -9,31 +11,42 @@ import {
   TEMPLATES,
   TRUSTED_SITES,
 } from '../../data/resources';
+
+const { resources } = COPY;
+// The BikeTourFrance.net resource library lives on its own subdomain (live, HTTP 200 on 2026-10-03).
+const LIBRARY_URL = 'https://resources.biketourfrance.net/';
 ---
 
 <BaseLayout
   path="/resources/"
   title="Resources for planning a self-supported bike tour in France"
-  description="Free planning resources from BikeTourFrance.net: a packing list template, audio route guides for the Canal des Deux Mers, a historical narrative, and trusted cycling and travel sites."
+  description={resources.metaDescription}
 >
   <section class="section">
     <div class="container">
       <p class="eyebrow">Resources</p>
       <h1>Resources for planning and riding</h1>
-      <p class="lede">
-        Planning a successful self-supported bike tour in France takes good structure. These are the
-        templates, audio guides, and sites John uses and trusts. They are free. Change them to fit your trip.
-      </p>
+      <p class="lede">{resources.metaDescription}</p>
       <p>
         On this page: <a href="#templates">Templates</a>, <a href="#audio">Audio guides</a>,{' '}
-        <a href="#narratives">Reading</a>, <a href="#sites">Trusted sites</a>.
+        <a href="#narratives">Reading</a>, <a href="#sites">Helpful sites</a>.
       </p>
+      <div class="btn-row">
+        <Button href="/" variant="tertiary">
+          {resources.backLink}
+        </Button>
+      </div>
     </div>
   </section>
 
-  <section class="section section--beige" id="templates" aria-labelledby="templates-heading">
+  <section class="section section--beige" aria-labelledby="stuff-heading">
     <div class="container">
-      <h2 id="templates-heading">Templates</h2>
+      <h2 id="stuff-heading">{resources.helpfulStuffHeading}</h2>
+      <p>{resources.helpfulStuffBody}</p>
+
+      <h3 id="templates" class="subhead">
+        Templates
+      </h3>
       <ul class="resource-list">
         {TEMPLATES.map((item) => (
           <li>
@@ -44,12 +57,10 @@ import {
           </li>
         ))}
       </ul>
-    </div>
-  </section>
 
-  <section class="section" id="audio" aria-labelledby="audio-heading">
-    <div class="container">
-      <h2 id="audio-heading">Audio guides for the Canal des Deux Mers</h2>
+      <h3 id="audio" class="subhead">
+        Audio guides for the Canal des Deux Mers
+      </h3>
       <p>
         A short history guide for each riding day, from Bordeaux to Sète. Press play to listen here, or
         download a file to listen offline. The files load only when you press play.
@@ -57,7 +68,7 @@ import {
       <ul class="resource-list">
         {AUDIO_GUIDES.map((item) => (
           <li class="audio-item">
-            <h3 style="font-size: 1.05rem; margin: 0">{item.title}</h3>
+            <p class="audio-title">{item.title}</p>
             <audio controls preload="none" src={item.url}>
               Your browser cannot play this audio. Use the download link instead.
             </audio>
@@ -68,10 +79,10 @@ import {
         ))}
       </ul>
 
-      <h3 style="margin-top: 2rem">Food</h3>
+      <h3 class="subhead">Food</h3>
       <ul class="resource-list">
         <li class="audio-item">
-          <h4 style="font-size: 1.05rem; margin: 0">{FOOD_AUDIO.title}</h4>
+          <p class="audio-title">{FOOD_AUDIO.title}</p>
           <audio controls preload="none" src={FOOD_AUDIO.url}>
             Your browser cannot play this audio. Use the download link instead.
           </audio>
@@ -81,7 +92,7 @@ import {
         </li>
       </ul>
 
-      <h3 style="margin-top: 2rem">French practice</h3>
+      <h3 class="subhead">French practice</h3>
       <p>
         Simple French phrases to listen to and repeat are in the BikeTourFrance.net resource library:{' '}
         <a href={FRENCH_AUDIO_URL} rel="noopener">
@@ -89,12 +100,10 @@ import {
         </a>
         .
       </p>
-    </div>
-  </section>
 
-  <section class="section section--beige" id="narratives" aria-labelledby="narratives-heading">
-    <div class="container">
-      <h2 id="narratives-heading">Reading</h2>
+      <h3 id="narratives" class="subhead">
+        Reading
+      </h3>
       <ul class="resource-list">
         {NARRATIVES.map((item) => (
           <li>
@@ -110,10 +119,8 @@ import {
 
   <section class="section" id="sites" aria-labelledby="sites-heading">
     <div class="container">
-      <h2 id="sites-heading">Trusted cycling and travel sites</h2>
-      <p>
-        These are sites John trusts for accuracy, depth, and real-world relevance when planning bike tours.
-      </p>
+      <h2 id="sites-heading">{resources.helpfulSitesHeading}</h2>
+      <p>{resources.helpfulSitesBody}</p>
       <ul class="resource-list">
         {TRUSTED_SITES.map((item) => (
           <li>
@@ -123,6 +130,13 @@ import {
           </li>
         ))}
       </ul>
+
+      <div class="library">
+        <p>{resources.libraryText}</p>
+        <div class="btn-row">
+          <Button href={LIBRARY_URL}>{resources.libraryCta}</Button>
+        </div>
+      </div>
     </div>
   </section>
 

@@ -1,0 +1,26 @@
+---
+// The one shared button/link-button. Every call to action on the site uses it.
+// Variants follow style guide v4.4: primary (green fill), secondary (beige fill, green border), tertiary (underlined text).
+// A label is at most 24 characters (guide text rules); the build fails if a label is longer, so a long label cannot ship.
+interface Props {
+  href: string;
+  variant?: 'primary' | 'secondary' | 'tertiary';
+  class?: string;
+}
+const { href, variant = 'primary', class: className } = Astro.props;
+
+if (href === '#' || href === '')
+  throw new Error('Button needs a real destination, not "#" or an empty value.');
+const label = (await Astro.slots.render('default'))
+  .replace(/<[^>]*>/g, '')
+  .replace(/\s+/g, ' ')
+  .trim();
+if (label.length === 0) throw new Error(`Button to ${href} has no label.`);
+if (label.length > 24)
+  throw new Error(`Button label "${label}" is ${label.length} characters; the limit is 24.`);
+const external = /^https?:\/\//.test(href);
+---
+
+<a class:list={['btn', `btn--${variant}`, className]} href={href} rel={external ? 'noopener' : undefined}>
+  {label}
+</a>

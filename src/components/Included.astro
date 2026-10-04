@@ -1,5 +1,5 @@
 ---
-// The single "What's included / What you arrange separately" statement. Used on the home page and the CDM page.
+// The "What is included / What you arrange separately" statement for the CDM page.
 import { CDM_FACTS, INCLUDED, SEPARATE } from '../data/cdm2027';
 
 interface Props {
@@ -17,7 +17,7 @@ const SubHeading = headingLevel === 'h2' ? 'h3' : 'h4';
       <strong>Dates and pricing are not final.</strong> {CDM_FACTS.datesNote} {CDM_FACTS.pricingNote}
     </p>
   </div>
-  <div class="two-col" style="margin-top: 1.5rem">
+  <div class="two-col two-col--spaced">
     <div class="card">
       <SubHeading>Included</SubHeading>
       <ul>

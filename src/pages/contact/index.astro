@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Button from '../../components/Button.astro';
+import { COPY } from '../../data/approved-copy';
 import { CONTACT_LINKS, SITE } from '../../data/site';
 ---
 
@@ -14,13 +16,14 @@ import { CONTACT_LINKS, SITE } from '../../data/site';
       <h1>Contact John</h1>
       <p class="lede">Email is the best way to reach BikeTourFrance.net.</p>
       <p>
-        <a class="btn" href={CONTACT_LINKS.general}>
-          Email {SITE.email}
-        </a>
+        Write to <a href={CONTACT_LINKS.general}>{SITE.email}</a>, or use the button.
       </p>
+      <div class="btn-row">
+        <Button href={CONTACT_LINKS.general}>{COPY.contact.emailCta}</Button>
+      </div>
 
       <h2>Choose a starting point</h2>
-      <ul>
+      <ul class="link-list">
         <li>
           <a href={CONTACT_LINKS.waitlist}>Ask to join the 2027 Canal des Deux Mers waitlist</a>
         </li>

@@ -1,13 +1,16 @@
 ---
-import { CONTACT_LINKS, SITE } from '../data/site';
+// Closing call to action. The site has no sign-up form, so both buttons open an email to John.
+import Button from './Button.astro';
+import { COPY } from '../data/approved-copy';
+import { CONTACT_LINKS } from '../data/site';
 
 interface Props {
   heading?: string;
   text?: string;
 }
 const {
-  heading = 'Ready to ride?',
-  text = 'Email John with your questions, or ask to be added to the 2027 waitlist. He answers every message himself.',
+  heading = 'Questions about a tour?',
+  text = 'Email John with your questions, or ask to be added to the 2027 waitlist.',
 } = Astro.props;
 ---
 
@@ -16,12 +19,10 @@ const {
     <h2 id="cta-heading">{heading}</h2>
     <p>{text}</p>
     <div class="btn-row">
-      <a class="btn" href={CONTACT_LINKS.waitlist}>
-        Ask to join the 2027 waitlist
-      </a>
-      <a class="btn btn--secondary" href={CONTACT_LINKS.general}>
-        Email {SITE.email}
-      </a>
+      <Button href={CONTACT_LINKS.general}>{COPY.contact.emailCta}</Button>
+      <Button href={CONTACT_LINKS.waitlist} variant="secondary">
+        {COPY.hero.waitlistCta}
+      </Button>
     </div>
   </div>
 </section>

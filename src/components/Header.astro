@@ -1,24 +1,29 @@
 ---
+// Site header band: full-width green, logo left, navigation right. 72px desktop, 64px tablet, 56px mobile.
+// The same header is used on every page through BaseLayout.
 import { Image } from 'astro:assets';
 import logo from '../assets/brand/btf-logo-white.png';
-import { NAV, SITE } from '../data/site';
+import { NAV, SITE, currentNavHref } from '../data/site';
 
 interface Props {
   path: string;
 }
 const { path } = Astro.props;
-
-// The longest matching nav href wins, so /canal-des-deux-mers/practical-info/ does not also mark the CDM link.
-const current = [...NAV]
-  .filter((item) => path === item.href || path.startsWith(item.href))
-  .sort((a, b) => b.href.length - a.href.length)[0]?.href;
+const current = currentNavHref(path);
 ---
 
 <header class="site-header">
-  <div class="container site-header__bar">
+  <div class="band__inner site-header__bar">
     <a class="brand" href="/">
-      <Image src={logo} alt="" width={52} height={52} loading="eager" />
-      <span>{SITE.name}</span>
+      <Image
+        class="brand__logo"
+        src={logo}
+        alt="BikeTourFrance.net logo: a bicycle over a map of France"
+        width={96}
+        height={96}
+        loading="eager"
+      />
+      <span class="brand__name">{SITE.name}</span>
     </a>
     <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
       Menu

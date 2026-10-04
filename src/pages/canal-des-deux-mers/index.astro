@@ -4,6 +4,8 @@ import Photo from '../../components/Photo.astro';
 import Included from '../../components/Included.astro';
 import Gallery from '../../components/Gallery.astro';
 import ContactCta from '../../components/ContactCta.astro';
+import Button from '../../components/Button.astro';
+import { COPY } from '../../data/approved-copy';
 import {
   CDM_FACTS,
   CDM_STATS,
@@ -36,16 +38,20 @@ import { CONTACT_LINKS } from '../../data/site';
           </p>
         </div>
         <div class="btn-row">
-          <a class="btn" href={CONTACT_LINKS.waitlist}>
-            Ask to join the 2027 waitlist
-          </a>
-          <a class="btn btn--secondary" href={CONTACT_LINKS.general}>
+          <Button href={CONTACT_LINKS.waitlist}>{COPY.hero.waitlistCta}</Button>
+          <Button href={CONTACT_LINKS.general} variant="secondary">
             Ask a question
-          </a>
+          </Button>
         </div>
       </div>
       <div class="rounded">
-        <Photo src={PHOTOS.hero.src} alt={PHOTOS.hero.alt} priority sizes="(min-width: 820px) 45vw, 92vw" />
+        <Photo
+          src={PHOTOS.hero.src}
+          alt={PHOTOS.hero.alt}
+          priority
+          ratio="16:9"
+          sizes="(min-width: 768px) 45vw, calc(100vw - 40px)"
+        />
       </div>
     </div>
   </section>
@@ -118,7 +124,12 @@ import { CONTACT_LINKS } from '../../data/site';
         </p>
       </div>
       <div class="rounded">
-        <Photo src={PHOTOS.creon.src} alt={PHOTOS.creon.alt} sizes="(min-width: 820px) 45vw, 92vw" />
+        <Photo
+          src={PHOTOS.creon.src}
+          alt={PHOTOS.creon.alt}
+          ratio="3:4"
+          sizes="(min-width: 768px) 45vw, calc(100vw - 40px)"
+        />
       </div>
     </div>
   </section>

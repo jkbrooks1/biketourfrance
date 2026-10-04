@@ -2,6 +2,8 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Photo from '../../components/Photo.astro';
 import ContactCta from '../../components/ContactCta.astro';
+import Button from '../../components/Button.astro';
+import { COPY } from '../../data/approved-copy';
 import { CDM_FACTS } from '../../data/cdm2027';
 import { PHOTOS } from '../../data/photos';
 import { CONTACT_LINKS } from '../../data/site';
@@ -32,12 +34,10 @@ import { CONTACT_LINKS } from '../../data/site';
           {CDM_FACTS.departures} {CDM_FACTS.datesNote} {CDM_FACTS.pricingNote}
         </p>
         <div class="btn-row">
-          <a class="btn" href="/canal-des-deux-mers/">
-            See the 2027 tour
-          </a>
-          <a class="btn btn--secondary" href={CONTACT_LINKS.waitlist}>
-            Ask to join the waitlist
-          </a>
+          <Button href="/canal-des-deux-mers/">See the 2027 tour</Button>
+          <Button href={CONTACT_LINKS.waitlist} variant="secondary">
+            {COPY.hero.waitlistCta}
+          </Button>
         </div>
       </div>
       <div class="rounded">
@@ -45,7 +45,8 @@ import { CONTACT_LINKS } from '../../data/site';
           src={PHOTOS.riderCanalPath.src}
           alt={PHOTOS.riderCanalPath.alt}
           priority
-          sizes="(min-width: 820px) 45vw, 92vw"
+          ratio="3:4"
+          sizes="(min-width: 768px) 45vw, calc(100vw - 40px)"
         />
       </div>
     </div>
@@ -60,11 +61,11 @@ import { CONTACT_LINKS } from '../../data/site';
         with a sound plan and help when you need it.
       </p>
       <p>Details and rates are shared by email, because each trip is different.</p>
-      <p>
-        <a class="btn btn--secondary" href={CONTACT_LINKS.planning}>
-          Email John about a self-guided trip
-        </a>
-      </p>
+      <div class="btn-row">
+        <Button href={CONTACT_LINKS.planning} variant="secondary">
+          Ask about self-guided
+        </Button>
+      </div>
     </div>
   </section>
 
@@ -75,11 +76,11 @@ import { CONTACT_LINKS } from '../../data/site';
         Want to plan your own adventure in France and only need coaching? Send John an email. He loves helping
         fellow bike travelers plan a great trip. Materials and support for independent tours are coming soon.
       </p>
-      <p>
-        <a class="btn btn--secondary" href={CONTACT_LINKS.planning}>
+      <div class="btn-row">
+        <Button href={CONTACT_LINKS.planning} variant="secondary">
           Ask about trip planning
-        </a>
-      </p>
+        </Button>
+      </div>
     </div>
   </section>
 

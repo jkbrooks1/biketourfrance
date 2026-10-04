@@ -2,6 +2,9 @@
 // Covers: one H1, landmarks, skip link, heading order, unique titles and descriptions, canonical URLs,
 // alt text, internal links and fragments, staging noindex, banned content (prices, consent-by-use,
 // stale "upcoming 2026"), JSON-LD types, outline suppression, sitemap, robots.txt, _headers, and the 404 page.
+// Style guide v4.4 checks: headings at most 60 characters, button labels at most 24, no exclamation marks,
+// no "#" or empty links, every image has alt text, the audited copy defects stay fixed, spacing and font sizes in
+// the CSS stay on the guide's scale, and no Framer files or references ship.
 import { readdirSync, readFileSync, statSync, existsSync } from 'node:fs';
 import { join, relative } from 'node:path';
 
@@ -94,8 +97,7 @@ for (const { rel, html } of pages) {
   }
   // The minifier writes alt="" as a bare alt attribute.
   const emptyAlt = [...html.matchAll(/<img\b[^>]*\salt(=""|(?=[\s/>]))[^>]*>/g)].length;
-  if (emptyAlt > 2)
-    fail(name, `${emptyAlt} images with empty alt (only the header and footer logos may be decorative)`);
+  if (emptyAlt > 0) fail(name, `${emptyAlt} images with empty alt (every image on this site is informative)`);
 
   for (const m of html.matchAll(/<a\b[^>]*\shref="([^"]+)"/g)) {
     const href = m[1];
@@ -117,18 +119,74 @@ for (const { rel, html } of pages) {
     .replace(/<script[\s\S]*?<\/script>/g, '')
     .replace(/<style[\s\S]*?<\/style>/g, '')
     .replace(/<[^>]+>/g, ' ');
-  if (/\$\s?\d/.test(text)) fail(name, 'dollar price found');
+  // The only approved dollar amount is the $250 planning session in the approved-copy Sheet (hero/body_2).
+  if (/\$\s?\d/.test(text.replace('$250 for a 50-minute planning session', '')))
+    fail(name, 'dollar price found');
   if (/3,?500|2,?000/.test(text.replace(/2000/g, ''))) fail(name, 'provisional price figure found');
   // Brand spelling from the owner's style guide v4.3: always BikeTourFrance.net.
   if (/Bike Tour France/i.test(text)) fail(name, 'brand written as "Bike Tour France"');
   if (/BikeTourFrance(?!\.net)/.test(text)) fail(name, 'brand written without .net');
-  if (/by continuing|continued use/i.test(text)) fail(name, 'consent-by-use wording found');
+  // The approved-copy Sheet's footer legal paragraph (cookie consent wording) is allowed inside the footer only.
+  const textOutsideFooter = html
+    .replace(/<footer[\s\S]*?<\/footer>/g, ' ')
+    .replace(/<script[\s\S]*?<\/script>/g, '')
+    .replace(/<style[\s\S]*?<\/style>/g, '')
+    .replace(/<[^>]+>/g, ' ');
+  if (/by continuing|continued use/i.test(textOutsideFooter)) fail(name, 'consent-by-use wording found');
   if (/upcoming[^.]{0,80}2026|2026[^.]{0,80}upcoming/i.test(text)) fail(name, 'upcoming-2026 wording found');
   if (/€/.test(text) && !rel.includes('practical-info'))
     fail(name, 'euro amount outside the third-party transport page');
   if (/script-src|googletagmanager|google-analytics|gtag\(/i.test(html))
     fail(name, 'analytics or tracking code found');
   if (/document\.cookie/.test(html)) fail(name, 'cookie access found');
+
+  // ---- Style guide v4.4 checks ----
+  const decode = (t) =>
+    t
+      .replace(/<[^>]+>/g, ' ')
+      .replace(/&amp;/g, '&')
+      .replace(/&#39;|&apos;/g, "'")
+      .replace(/&quot;/g, '"')
+      .replace(/\s+/g, ' ')
+      .trim();
+  for (const h of html.matchAll(/<h([1-6])\b[^>]*>([\s\S]*?)<\/h\1>/g)) {
+    const t = decode(h[2]);
+    if (t.length > 60) fail(name, `heading over 60 characters (${t.length}): ${t.slice(0, 50)}...`);
+  }
+  for (const b of html.matchAll(/<a\b[^>]*class="[^"]*\bbtn\b[^"]*"[^>]*>([\s\S]*?)<\/a>/g)) {
+    const t = decode(b[1]);
+    if (t.length === 0 || t.length > 24) fail(name, `button label length ${t.length}: "${t}"`);
+  }
+  for (const a of html.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/g)) {
+    const href = a[1].match(/\shref="([^"]*)"/)?.[1];
+    if (href === undefined || href === '' || href === '#')
+      fail(name, `link without a real destination: ${a[0].slice(0, 80)}`);
+    if (decode(a[2]).length === 0 && !/aria-label=/.test(a[1]) && !/<img\b[^>]*\salt="[^"]+"/.test(a[2]))
+      fail(name, `link with no accessible name: ${a[0].slice(0, 80)}`);
+  }
+  for (const m of html.matchAll(/<button\b[^>]*>([\s\S]*?)<\/button>/g)) {
+    if (decode(m[1]).length === 0) fail(name, 'button with no label');
+  }
+  const visible = decode(
+    html
+      .replace(/<script[\s\S]*?<\/script>/g, '')
+      .replace(/<style[\s\S]*?<\/style>/g, '')
+      .replace(/<head[\s\S]*?<\/head>/g, ''),
+  );
+  if (/!/.test(visible))
+    fail(
+      name,
+      `exclamation mark in page text: ...${visible.slice(Math.max(0, visible.indexOf('!') - 30), visible.indexOf('!') + 10)}`,
+    );
+  for (const bad of ["B&B's", 'Hotels & B', 'each days route', 'soon!.', 'soon.)!']) {
+    if (visible.includes(bad)) fail(name, `audited copy defect present: ${bad}`);
+  }
+  if (/<li[^>]*>\s*<\/li>/.test(html)) fail(name, 'empty list item');
+  if (/framer/i.test(html)) fail(name, 'Framer reference found');
+  if (/\sstyle="/.test(html.replace(/<picture[\s\S]*?<\/picture>/g, ''))) {
+    // Inline styles bypass the spacing and type scale. Astro adds none; any here came from page code.
+    fail(name, 'inline style attribute found');
+  }
 
   for (const block of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
     const data = JSON.parse(block[1]);
@@ -146,6 +204,44 @@ const css = files
 if (/text-transform\s*:\s*uppercase/.test(css))
   fail('css', 'all-caps text found (style guide: sentence case)');
 if (/outline\s*:\s*(none|0)\b/.test(css)) fail('css', 'outline suppression found');
+const flat = css.replace(/\s+/g, '').toLowerCase();
+if (!/--green:#2d5016/.test(flat)) fail('css', 'primary green must be #2d5016');
+if (!/:focus-visible\{outline:2pxsolid(var\(--green\)|#2d5016);outline-offset:(4|3|2)px/.test(flat))
+  fail('css', 'focus style must be a 2px solid #2d5016 outline with an offset of at least 2px');
+if (/border-radius\s*:\s*999px/.test(css)) fail('css', 'pill radius found (no pill buttons)');
+if (/backdrop-filter|filter\s*:\s*blur/.test(css)) fail('css', 'blur or glass effect found');
+// Font sizes: nothing below 14px except 12px UI labels; spacing only from the 4/8/16/24/32/48/64 scale
+// (plus the owner's 40px left padding on the home "Ready to ride?" block).
+for (const m of css.matchAll(/font-size\s*:\s*([\d.]+)px/g)) {
+  if (Number(m[1]) < 12) fail('css', `font-size ${m[1]}px is below the 12px UI minimum`);
+}
+// 12px is the guide's own button padding (12px 24px).
+const SCALE = new Set([0, 4, 8, 12, 16, 24, 32, 48, 64, 40]);
+for (const m of css.matchAll(
+  /(?:^|[;{}])\s*((?:padding|margin|gap|row-gap|column-gap)(?:-[a-z]+)?)\s*:\s*([^;}]+)/g,
+)) {
+  for (const n of m[2].matchAll(/(-?[\d.]+)(px|rem|em)\b/g)) {
+    const px = n[2] === 'px' ? Number(n[1]) : Number(n[1]) * 16;
+    if (!SCALE.has(Math.abs(px))) fail('css', `${m[1]}: ${n[0]} is not on the spacing scale`);
+  }
+}
+if (!/--font:montserrat,system-ui,sans-serif/.test(flat))
+  fail('css', 'font stack must be Montserrat, system-ui, sans-serif');
+
+// No Framer files, runtime, or references anywhere in the deployed output.
+for (const f of files) {
+  if (/framer/i.test(f)) fail('dist', `Framer file shipped: ${relative(DIST, f)}`);
+  else if (
+    /\.(html|css|js|mjs|json|txt|xml)$/.test(f) &&
+    /framerusercontent|framerstatic|framer\.app|sites\.framer/i.test(readFileSync(f, 'utf8'))
+  )
+    fail('dist', `Framer reference in ${relative(DIST, f)}`);
+}
+// Delivered images: 300 KB or less each (guide), except where documented in docs/STYLE_GUIDE.md.
+for (const f of files.filter((f) => /\.(jpe?g|png|webp|avif)$/.test(f))) {
+  const kb = statSync(f).size / 1024;
+  if (kb > 300) fail('images', `${relative(DIST, f)} is ${Math.round(kb)} KB (limit 300)`);
+}
 if (!/:focus-visible/.test(css)) fail('css', 'no :focus-visible styles');
 
 if (!existsSync(join(DIST, 'sitemap-index.xml'))) fail('sitemap', 'sitemap-index.xml missing');
