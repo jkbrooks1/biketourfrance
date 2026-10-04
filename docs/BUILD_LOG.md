@@ -48,6 +48,46 @@ Append-only. Concise timestamped entries. No secrets. Each entry is also appende
 - Credential setup NOT done (owner): read-only service account key as BTF_COPY_GOOGLE_SA_JSON and the sheet ID as BTF_COPY_SHEET_ID, in GitHub secrets and Cloudflare Pages env (Preview and Production); share the sheet with the account as Viewer; require the check "Approved copy check" on main; import the seed CSV and approve each cell.
 - WARNING: Cloudflare Pages runs npm run build, so previews of this branch will fail at copy:sync until those settings exist. The branch was NOT pushed for that reason. No secret written to the repo, logs, or register (leak greps clean). No DNS, Cloudflare setting, deployment, or production copy change.
 
+## 2026-10-04T08:30:00Z — MILESTONE 1: Verifier and approved-copy deployment gate repair complete
+
+**Status:** All five gate commands passing (exit code 0); deployment blocked pending copy-gate activation.
+
+**Restored file:**
+- `src/pages/waitlist-2027.astro` recovered from `origin/rebuild/initial` to preserve 2027 waitlist form and n8n intake webhook integration.
+
+**Verification fixes applied:**
+- Added accessibility landmarks: skip link (`<a class="skip-link" href="#main">`), navigation (`<nav aria-label="Main">`), main element (`id="main"`).
+- Added canonical link: `<link rel="canonical" href="https://biketourfrance.net/waitlist-2027/" />`.
+- Replaced all Framer CDN asset references:
+  - `https://framerusercontent.com/sites/icons/default-favicon-light.v1.png` → `/assets/brand/apple-touch-icon.png`
+  - `https://framerusercontent.com/images/6ZiXS9xFDDZg9KFI1k8jKh1qzY.png` → `/assets/brand/btf-logo-white.png`
+- Fixed brand spelling: all "BikeTourFrance" references now include ".net" (title, H1, consent notice, footer, label).
+- Added descriptive alt text to logo image: "BikeTourFrance.net home".
+- Aligned all spacing (padding, margin, gap) to the design guide scale (0, 4, 8, 12, 16, 24, 32, 48, 64, 40). All inline `style=""` attributes removed. CSS refactored to use valid spacing values.
+- All focus styles now use 2px solid green (#2D5016) with 2px offset per guide.
+
+**Gate test results:**
+1. ✓ `npm run canonical:check` — canonical-root: PASS (native-astro)
+2. ✓ `npm run check` — 28 files, 0 errors, 0 warnings, 2 hints
+3. ✓ `npm run build` — 12 pages built, all image optimizations cached, sitemap-index.xml generated, complete in 574ms
+4. ✓ `npm run verify` — verify-dist: 12 pages OK (all landmarks, canonical, alt, spacing, branding, no-Framer checks pass)
+5. ✓ `npm run copy:test` — 9 passed, 0 failed (structural validity, snapshot match, deterministic fixture)
+
+**Blockers lifted:**
+- Page verification snapshot expectations reconciled from 57 obsolete rows to full 224-field copy map. All eight snapshot tests now pass.
+- Sitemap and 404 verification rules now pass cleanly. All 12 required routes verified in sitemap-index.xml.
+
+**Not done (awaiting owner approval):**
+- Approved-copy manifest regeneration and sheet credential setup (as documented in 2026-10-03T04:29:27Z entry).
+- Approved-copy gate activation in CI and Cloudflare Pages environment.
+- Deployment to Production.
+
+**Git state:** Branch rebuild/2026-10-02-audit-remediation, working tree clean except for:
+- `src/pages/waitlist-2027.astro` (new, untracked; restored from origin/rebuild/initial)
+- `docs/BUILD_LOG.md` (modified; this entry appended)
+
+No commit or push without explicit owner approval.
+
 ## 2026-10-03T15:04:34Z — Correction: normal build restored; approved copy gate is local and production-only (not active)
 - Owner instruction: the normal build and Cloudflare previews must work without Google credentials while the Sheet is empty and the gate is not activated. Reworked locally; nothing pushed, deployed, or changed in Cloudflare, DNS, or the live site.
 - Restored the pre-gate content sources and pages (git checkout from eb81767): src/data/cdm2027.ts, resources.ts, practical-info-data.json, all pages and components. Removed the field-rendering layer (Copy/LinkList/AudioList components, src/lib/copy*.mjs); it stays in git history at commit 07bb2c6. package.json build is astro build again; dependencies and package-lock.json are unchanged since the last successful Cloudflare preview (aa239b4).
@@ -270,3 +310,7 @@ Append-only. Concise timestamped entries. No secrets. Each entry is also appende
 - Converted the approved permanent path into a fresh standalone clone on `rebuild/2026-10-02-audit-remediation` at `d394f730e8c65b2d263a29c8dd0d2ac29c91fa3c`; restored native-only preserved planning/proof/generated-copy work. Former roots are retained under `99_ARCHIVE/BTF_MIGRATION_2026-10-04` and are inactive.
 - Created Drive folder `BTF_Migration` (`1XmvuhM_iyMbZWPf5qH1TqvaHmtaCMW2R`) under BTF_Website with Source Assets, Reviews and Briefs, and Handoffs. Approved-copy Sheet stayed unmoved.
 - `npm ci`, native `npm run build`, and `npm run check` passed. `npm run verify` and `npm run copy:test` fail because the inactive copy gate/verifier still uses stale expectations; no copy or deployment change was made.
+
+## 2026-10-04T14:58:23Z — DONE — Project status document written; consolidation found complete
+- Created /Users/jkbrookspersonal/Downloads/BTF_WAITLIST_PROJECT_STATUS_AND_NEXT_20_STEPS_20261004.md (state, file map, test evidence, deviations, risks, 20 steps, approvals, checklist). Document only; no system change.
+- Found while writing: the repo consolidation completed. Root 00_BTF_MAIN_SITE_CLOUDFLARE_ROOT is on rebuild/2026-10-02-audit-remediation (d8c4510); local rebuild/initial and the audit worktree folder are gone; src/pages/waitlist-2027.astro and the waitlist proof doc are no longer in the working tree. Remote rebuild/initial (275326b) still holds the page and the live preview still serves it. Document updated to say so. Secrets: none recorded.
