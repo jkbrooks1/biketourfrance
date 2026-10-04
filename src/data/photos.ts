@@ -3,6 +3,7 @@
 import type { ImageMetadata } from 'astro';
 
 import heroCanalPath from '../assets/photos/hero-canal-path.jpg';
+import aboutJohn from '../assets/photos/about-john.jpg';
 import canalTowpath from '../assets/photos/canal-towpath-gravel.jpg';
 import cafeTable from '../assets/photos/cafe-table-riders.jpg';
 import creon from '../assets/photos/creon-bikes-parked.jpg';
@@ -36,6 +37,10 @@ export const PHOTOS = {
   cafeTable: {
     src: cafeTable,
     alt: 'Five riders in cycling jerseys sharing coffee at a café table.',
+  },
+  aboutJohn: {
+    src: aboutJohn,
+    alt: 'John and friends seated together at a table, smiling at the camera.',
   },
   creon: {
     src: creon,
