@@ -115,6 +115,18 @@ export const COPY = {
   },
 
   smallCommercialBottom: 'Small-group, self-supported bicycle tours in France, led by John Brooks. Eat. Sleep. Roll. Repeat.',
+
+  buttons: {
+    readMoreAboutJohn: 'Read more about John',
+    moreTourPhotos: 'More tour photos',
+  },
+
+  footerNav: {
+    exploreHeading: 'Explore',
+    legalHeading: 'Legal',
+  },
+
+  copyright: '© 2026 BikeTourFrance.net',
 } as const;
 
 // Splits the one-cell footer policy text into its four labelled parts.

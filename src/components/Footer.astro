@@ -31,7 +31,7 @@ const policies = footerPolicyParts();
         </p>
       </div>
       <nav aria-label="Site">
-        <h2>Explore</h2>
+        <h2>{COPY.footerNav.exploreHeading}</h2>
         <ul>
           {NAV.map((item) => (
             <li>
@@ -50,7 +50,7 @@ const policies = footerPolicyParts();
         </ul>
       </nav>
       <nav aria-label="Legal">
-        <h2>Legal</h2>
+        <h2>{COPY.footerNav.legalHeading}</h2>
         <ul>
           {LEGAL_NAV.map((item) => (
             <li>
@@ -69,7 +69,7 @@ const policies = footerPolicyParts();
         </p>
       ))}
       <p class="site-footer__copyright">
-        &copy; {new Date().getUTCFullYear()} {SITE.name}
+        {COPY.copyright}
       </p>
     </div>
   </div>

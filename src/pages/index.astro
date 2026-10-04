@@ -8,7 +8,7 @@ import { COPY } from '../data/approved-copy';
 import { GALLERY, PHOTOS } from '../data/photos';
 import { CONTACT_LINKS } from '../data/site';
 
-const { hero, readyToRide, about, gallery } = COPY;
+const { hero, readyToRide, about, gallery, buttons } = COPY;
 ---
 
 <BaseLayout
@@ -104,7 +104,7 @@ const { hero, readyToRide, about, gallery } = COPY;
         <p>{about.body3}</p>
         <div class="btn-row">
           <Button href="/about/" variant="secondary">
-            Read more about John
+            {buttons.readMoreAboutJohn}
           </Button>
         </div>
       </div>
@@ -125,7 +125,7 @@ const { hero, readyToRide, about, gallery } = COPY;
       <Gallery photos={GALLERY.slice(0, 8)} />
       <div class="btn-row">
         <Button href="/canal-des-deux-mers/#gallery-heading" variant="tertiary">
-          More tour photos
+          {buttons.moreTourPhotos}
         </Button>
       </div>
     </div>
