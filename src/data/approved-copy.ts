@@ -80,7 +80,7 @@ export const COPY = {
   gallery: { heading: 'Tour Gallery' },
 
   // Sheet: "Send us an email!" (exclamation mark removed)
-  contact: { emailCta: 'Send us an email' },
+  contact: { emailCta: 'Send us an email', contactEmail: 'john@biketourfrance.net' },
 
   // One cell in the Sheet. The footer splits it at the four policy labels. Text is unchanged.
   footerPolicies:
