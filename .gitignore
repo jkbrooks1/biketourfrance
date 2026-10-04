@@ -17,6 +17,7 @@ build/
 .cache/
 .next/
 .astro/
+.generated/
 
 # Logs
 *.log
@@ -32,3 +33,10 @@ npm-debug.log*
 .vscode/
 .idea/
 *.swp
+
+# Framer export archive (never commit the zip)
+framer-site.zip
+*.zip
+
+# Framer export (contains form endpoint IDs; keep local only)
+source-framer/

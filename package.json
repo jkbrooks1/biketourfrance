@@ -1,0 +1,21 @@
+{
+  "name": "btf-migration",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Staging static site for btf.net (Framer rebuild), built with Astro and deployed to Cloudflare Pages project temp-btf.",
+  "scripts": {
+    "build:site": "python3 scripts/build_site.py",
+    "copy:fetch": "node scripts/copy/fetch-snapshot.mjs",
+    "copy:render": "node scripts/copy/render.mjs",
+    "copy:check": "node scripts/copy/check-dist.mjs",
+    "build": "node scripts/copy/render.mjs && astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "7.3.5"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

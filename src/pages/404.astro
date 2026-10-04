@@ -1,0 +1,104 @@
+---
+// Staging 404 page. Cloudflare Pages serves dist/404.html with HTTP 404 for unknown paths.
+// Staging protections stay on: noindex meta here, X-Robots-Tag via site/_headers, robots.txt.
+// Text comes from the committed approved-copy snapshot (rows under /404/). A missing row
+// fails the build; nothing here is a fallback.
+import snapshot from '../../copy/approved-copy.snapshot.json';
+
+const rows = new Map(snapshot.rows.map((r) => [r.key, r.copy]));
+const need = (key) => {
+  const value = rows.get(key);
+  if (!value) throw new Error(`Approved copy snapshot has no row ${key} for the 404 page.`);
+  return value;
+};
+const text = {
+  title: need('/404/meta_title'),
+  logo: need('/404/header_logo_text'),
+  heading: need('/404/heading'),
+  body: need('/404/body'),
+  home: need('/404/home_cta'),
+  resources: need('/404/resources_cta'),
+  note: need('/404/footer_note'),
+};
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <title>{text.title}</title>
+    <link rel="icon" href="/assets/framerusercontent.com/sites/icons/default-favicon-light.v1.png" />
+    <style>
+      :root {
+        --bar: #dadfeb;
+        --ink: #1c1c1c;
+        --green: #2f5d1f;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        font-family: Montserrat, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--ink);
+        background: #fff;
+      }
+      header {
+        background: var(--bar);
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 10px 24px;
+      }
+      header a {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        color: var(--ink);
+        text-decoration: none;
+        font-size: 18px;
+      }
+      header img { width: 40px; height: 40px; }
+      main {
+        flex: 1;
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 64px 24px;
+        text-align: center;
+      }
+      h1 { font-size: 40px; line-height: 1.15; margin: 0 0 16px; }
+      p { font-size: 18px; line-height: 1.5; margin: 0 0 24px; }
+      .links { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+      .button {
+        display: inline-block;
+        padding: 12px 24px;
+        border-radius: 4px;
+        background: var(--green);
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+      }
+      .button.secondary { background: #fff; color: var(--green); border: 1px solid var(--green); }
+      footer { padding: 16px 24px; text-align: center; font-size: 14px; color: #555; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="/">
+        <img src="/assets/framerusercontent.com/images/6ZiXS9xFDDZg9KFI1k8jKh1qzY.png" alt="" />
+        <span>{text.logo}</span>
+      </a>
+    </header>
+    <main>
+      <h1>{text.heading}</h1>
+      <p>{text.body}</p>
+      <div class="links">
+        <a class="button" href="/">{text.home}</a>
+        <a class="button secondary" href="/resources/">{text.resources}</a>
+      </div>
+    </main>
+    <footer>{text.note}</footer>
+  </body>
+</html>
