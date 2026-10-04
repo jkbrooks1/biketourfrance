@@ -113,6 +113,8 @@ export const COPY = {
     resourcesCta: 'Resources',
     footerNote: 'Staging site. Not indexed.',
   },
+
+  smallCommercialBottom: 'Small-group, self-supported bicycle tours in France, led by John Brooks. Eat. Sleep. Roll. Repeat.',
 } as const;
 
 // Splits the one-cell footer policy text into its four labelled parts.
