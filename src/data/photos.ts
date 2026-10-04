@@ -29,8 +29,8 @@ export interface Photo {
 
 export const PHOTOS = {
   hero: {
-    src: canalTowpath,
-    alt: 'A rider with loaded panniers on a gravel towpath beside a canal, under a blue sky with a few clouds.',
+    src: twoRidersShade,
+    alt: 'A rider in a red helmet smiling at the camera on a shaded canal path, with a second rider behind.',
   },
   cafeTable: {
     src: cafeTable,
