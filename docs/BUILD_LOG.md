@@ -845,3 +845,61 @@ All routes verified for responsive scaling, header height at breakpoints, contai
 - No code changes required; audit-ready for production ✓
 
 ---
+
+## 2026-10-04 — Performance, content-governance, and SEO/LLM audit
+
+Ran a four-area audit (content governance, SEO/semantics/AI-citability, Astro/Cloudflare performance, priority fixes) against the staging build, cross-checked first against existing docs (`APPROVED_COPY_GATE.md`, `COPY_FIELD_MAP_REVIEW.md`, `SECURITY_CSP_AUDIT.md`) to avoid duplicating or contradicting work already planned.
+
+**Findings:**
+- Framer migration debt: none found (no Framer references, no animation libraries in `package.json`).
+- Hardcoded per-page copy on `tours`, `canal-des-deux-mers`, `contact`, `resources`, `waitlist-2027`: confirmed this is the designed pre-activation state documented in `APPROVED_COPY_GATE.md`, not a defect. All 224 fields are already catalogued in `COPY_FIELD_MAP_REVIEW.md`.
+- SEO gaps (real, fixed): same OG image on every page; missing `twitter:title`/`twitter:description`/`twitter:image`; no breadcrumb structured data.
+- Performance: clean. Zero `client:*` hydration, zero raw `<img>` tags, all images through `Photo.astro`/`astro:assets`.
+- Security headers: `SECURITY_CSP_AUDIT.md`'s staged CSP/HSTS rollout was left untouched (correctly not yet deployed); the three low-risk headers that doc's §7 already flagged as safe (`X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`) were added.
+
+**Files changed (uncommitted, in working tree for owner review):**
+- `public/_headers` — added `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`.
+- `src/layouts/BaseLayout.astro` — added optional `ogImage` prop, `twitter:title`/`twitter:description`/`twitter:image` meta, mechanical `BreadcrumbList` JSON-LD.
+- `src/pages/about/index.astro` — passes `ogImage={PHOTOS.threeRidersTown.src}` as a worked example.
+- `src/pages/tours/index.astro` — passes `ogImage={PHOTOS.riderCanalPath.src}` as a worked example.
+
+**Validation:** `npx astro check` — 0 errors, 0 warnings (2 pre-existing unrelated hints). `npx astro build` — 12 pages built clean. Verified rendered HTML for `/` and `/about/` shows correct per-page OG/Twitter image and correct 1-item vs 2-item breadcrumb JSON-LD.
+
+**Not done, by design:** no copy moved into `approved-copy.ts` (would create a path competing with the Sheet-backed gate); no CSP/HSTS header added (would contradict the staged rollout plan already on record); no `TouristTrip`/`Offer` schema added (2027 dates/pricing are explicitly not final).
+
+**Deliverable:** `docs/2026-10-04_PERFORMANCE_SEO_AUDIT.md` (full report). Copy archived to `~/Downloads/BTF_audit_2026-10-04.zip`.
+
+**Next required action:** owner reviews the four modified files and decides whether to commit. No commit, push, or deploy was performed.
+
+## 2026-10-04T15:46:00Z — Verification gate fix: allow BreadcrumbList JSON-LD in production schema
+
+**Scope:** Resolve schema validation warnings on all 12 pages; align verify script with implemented schema.
+
+**Issue:**
+- `npm run verify` reported 12 warnings: "unexpected JSON-LD type BreadcrumbList" on all routes.
+- Root cause: BaseLayout generates intentional `BreadcrumbList` schema (from 2026-10-04 SEO audit) for improved breadcrumb rendering in search results and AI citation context.
+- Schema is correct: `{ "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", position: 1, name: "Home", ... }] }` per Schema.org spec.
+- Fix: verify-dist.mjs line 203 allowed only `['Organization', 'WebSite']`; needed `'BreadcrumbList'` in the list.
+
+**Resolution:**
+- File: `scripts/verify-dist.mjs` line 200-206 (JSON-LD type validation)
+- Changed: `['Organization', 'WebSite']` → `['Organization', 'WebSite', 'BreadcrumbList']`
+- Verified: build and full test suite now passes cleanly
+
+**Test Results (Post-Fix):**
+```
+npm run build:   PASS ✓ (12 pages, 136 images optimized, 449ms)
+npm run verify:  PASS ✓ (canonical-root: PASS, verify-dist: 12 pages OK)
+npm run copy:test: PASS ✓ (9/9 M1 tests, fixture and rendered snapshots match)
+```
+
+**Status:**
+- All validation gates passing ✓
+- No regressions ✓
+- Schema semantics correct (BreadcrumbList improves search visibility) ✓
+- Staging site ready for deployment review ✓
+
+**Not done:**
+- No copy changes ✓ (audit is of verify tooling only, not content)
+- No merge to main ✓
+- No production deploy ✓

@@ -200,7 +200,7 @@ for (const { rel, html } of pages) {
   for (const block of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
     const data = JSON.parse(block[1]);
     for (const item of Array.isArray(data) ? data : [data]) {
-      if (!['Organization', 'WebSite'].includes(item['@type']))
+      if (!['Organization', 'WebSite', 'BreadcrumbList'].includes(item['@type']))
         fail(name, `unexpected JSON-LD type ${item['@type']}`);
     }
   }

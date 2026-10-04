@@ -223,7 +223,7 @@
   },
   {
     "field": "/contact/email_cta",
-    "route": "/",
+    "route": "/contact/",
     "required": true,
     "codeLocation": "src/data/approved-copy.ts"
   },
