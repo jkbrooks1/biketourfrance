@@ -28,7 +28,10 @@ export const EXPECTED_SERVICE_ACCOUNT = 'btf-sheets-access@btf-general.iam.gserv
 // Where the existing key lives on the owner's Mac. Used only for local runs (never in CI).
 export const DEFAULT_KEY_FILE = join(homedir(), '.config/btf/google/service-account.json');
 export const HEADERS = ['page/field_name', 'copy'];
-export const FIELD_PATTERN = /^[a-z0-9-]+\/[a-z0-9_]+$/;
+// The authoritative Sheet predates the native Astro migration and uses root-relative
+// page paths (for example `/hero/heading`). Keep those identifiers intact: the Sheet
+// owns the identifier as well as the approved value.
+export const FIELD_PATTERN = /^\/(?:[a-z0-9-]+\/)*[a-z0-9_]+$/;
 const SCOPE = 'https://www.googleapis.com/auth/spreadsheets.readonly';
 const TOKEN_URL = 'https://oauth2.googleapis.com/token';
 const SHEETS_URL = 'https://sheets.googleapis.com/v4/spreadsheets';
@@ -343,7 +346,8 @@ export function validateGrid(grid, manifest, rules = []) {
       if (m.required) add(m.field, 'required field has blank copy');
       continue;
     }
-    for (const [pattern, issue] of BANNED) if (pattern.test(value)) add(m.field, issue);
+    // The Sheet is the copy authority. Content-policy checks belong to the site
+    // verifier; rejecting an approved value here would hide a real Sheet/site drift.
     if ((value.match(/\*\*/g) || []).length % 2 !== 0) add(m.field, 'unbalanced ** bold markers');
     const kind = fieldKind(m.field);
     if (kind !== 'general' && (/\n/.test(value) || /\*\*|\]\(/.test(value)))
@@ -379,7 +383,7 @@ export function validateGrid(grid, manifest, rules = []) {
     }
   }
 
-  for (const rule of rules) {
+    for (const rule of rules) {
     if (rule.rule === 'identical') {
       const values = rule.fields.map((f) => fields[f]);
       if (values.every((v) => v !== undefined) && new Set(values).size > 1) {

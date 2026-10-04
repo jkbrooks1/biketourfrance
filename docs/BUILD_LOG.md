@@ -62,6 +62,13 @@ Append-only. Concise timestamped entries. No secrets. Each entry is also appende
 - Read branch source (package.json, layout, components, pages, data, CSS) for planning.
 - Secrets: none recorded.
 
+## 2026-10-04 — DONE — Native verifier and approved-copy gate repair (milestone 1)
+
+- Repaired the gate for the actual `BTF_Approved_Site_Copy` structure: 57 ordered root-relative `page/field_name` rows, rather than the obsolete 224-field taxonomy. The deterministic fixture is a local current-site snapshot; it is refused in deployment contexts. The real Sheet is read-only and was not changed.
+- The rendered gate now compares only Sheet-governed fields, and native route/layout/assets/CSS/Framer checks remain in `verify-dist`. Required native Astro output routes are now explicit.
+- Real-Sheet comparison deliberately reports 17 site-versus-Sheet content differences; no site or Sheet copy was changed to force a pass. `canonical:check`, `check`, `build`, `verify`, and `copy:test` pass. The deliberate injected `/hero/heading` mismatch fails the gate and was restored.
+- No deployment, Cloudflare/DNS change, production change, or `main` change. Secrets: none recorded.
+
 ## 2026-10-04T03:44:06Z — IN PROGRESS — Audit remediation to style guide v4.4
 - Read pages, data files, and global.css on the branch.
 - Secrets: none recorded.

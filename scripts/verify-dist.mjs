@@ -26,6 +26,15 @@ const pages = htmlFiles.map((file) => {
   const rel = '/' + relative(DIST, file).replace(/index\.html$/, '');
   return { file, rel, html: readFileSync(file, 'utf8') };
 });
+// Astro emits directory routes plus a single dist/404.html. Keep this explicit so
+// a route can never disappear while a generic HTML scan still reports a pass.
+const REQUIRED_ROUTES = [
+  '/', '/about/', '/canal-des-deux-mers/', '/canal-des-deux-mers/practical-info/',
+  '/contact/', '/cookies/', '/privacy/', '/resources/', '/terms/', '/tours/', '/404.html',
+];
+for (const route of REQUIRED_ROUTES) {
+  if (!pages.some((page) => page.rel === route)) fail('routes', `missing required native Astro output ${route}`);
+}
 
 const titles = new Map();
 const descriptions = new Map();
