@@ -17,7 +17,7 @@ if (!ci) {
   const normalize = (url) => url.replace(/\.git$/, '');
   if (normalize(actualRemote) !== normalize(marker.githubRemote)) throw new Error('Origin does not match the canonical remote.');
 }
-const branch = git('branch', '--show-current');
+const branch = process.env.CF_PAGES_BRANCH || git('branch', '--show-current');
 if (!ci && branch !== marker.developmentBranch) throw new Error(`Wrong development branch: ${branch}.`);
 if (ci && ![marker.developmentBranch, marker.productionBranch].includes(branch)) throw new Error(`CI branch is not authorized: ${branch}.`);
 console.log(`canonical-root: PASS (${marker.architecture})`);
