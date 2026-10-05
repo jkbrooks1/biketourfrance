@@ -80,22 +80,21 @@ merged.footerPolicies = nested?.footer?.policies ?? fallback.footerPolicies ?? m
 
 // Ensure merged always has required top-level properties
 // These are checked by the 404 component and must exist
-const final = merged;
+const final = {
+  ...merged,
+  notFound: merged.notFound || fallback.notFound,
+  footerPolicies: merged.footerPolicies || fallback.footerPolicies,
+  buttons: merged.buttons || fallback.buttons,
+  footerNav: merged.footerNav || fallback.footerNav,
+};
+
+// Verify all required properties exist before serializing
 if (!final.notFound || typeof final.notFound !== 'object') {
-  final.notFound = fallback.notFound;
-}
-if (typeof final.footerPolicies !== 'string') {
-  final.footerPolicies = fallback.footerPolicies;
-}
-if (!final.buttons || typeof final.buttons !== 'object') {
-  final.buttons = fallback.buttons;
-}
-if (!final.footerNav || typeof final.footerNav !== 'object') {
-  final.footerNav = fallback.footerNav;
+  throw new Error('notFound property is required and must be an object');
 }
 
 // Generate TypeScript code with proper formatting
-// Using a safer serialization that explicitly sets all required properties
+// Build the COPY object with explicitly declared properties
 const copyStr = JSON.stringify(final, null, 2);
 const header = `// Page copy taken from the approved-copy Google Sheet "${sheetTitle}" (tab "${tab}",
 // read from Sheet during build). The Sheet is the source of truth for this wording.
