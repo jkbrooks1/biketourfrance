@@ -83,11 +83,11 @@ Only copy in `BTF_Approved_Site_Copy` may appear on the site. The Sheet is two c
 
 | Item | Count |
 |---|---|
-| Sheet data rows | 357 |
-| `copy/field-manifest.json` fields | 357 |
-| `copy/fixture/fixture-rows.json` rows | 357 |
-| Fields confirmed on their routes by the gate | 356 (one row, `/hero/body_3`, is intentionally empty) |
-| Rows added 2026-10-05 and still marked YELLOW = unapproved | 293 |
+| Sheet data rows | 351 |
+| `copy/field-manifest.json` fields | 351 |
+| `copy/fixture/fixture-rows.json` rows | 351 |
+| Fields confirmed on their routes by the gate | 351 |
+| Owner copy review | Open (D8); the new `/cdm-practical/last_checked` row is marked yellow |
 
 ### Naming
 
@@ -186,8 +186,7 @@ previously made `assert-deployable` unpassable regardless of copy correctness.
 - It reads the live Sheet and ends with
   `predeploy OK: dist/ matches a current snapshot of BTF_Approved_Site_Copy and is deployable.`
 - There is **no deploy step**. Runs are currently green.
-- The comment block at the top of the file still says the gate is "NOT ACTIVE" and lists activation
-  steps already completed. That is divergence **D6**.
+- The workflow header records that the gate became active on 2026-10-05.
 
 **Cloudflare Pages Git integration — builds and deploys.**
 - Project `temp-btf`, connected to `jkbrooks1/biketourfrance`.
@@ -271,12 +270,12 @@ is `npx astro build`. Never commit a key, paste one into chat, or write one to a
 
 ## 11. Current status
 
-- Staging live at https://temp-btf.pages.dev, serving commit `2976f3c`, matching the Sheet at 357
-  fields. All 11 content routes return 200.
+- The latest local Sheet-mode predeploy passed with 351 fields and 12 built routes. Staging serves
+  the committed version of `approved-copy.ts`; confirm its deployment ID after the next push.
 - GitHub Actions gate green.
 - `biketourfrance.net` still served by Framer (`server: Framer/26fa766`, DNS `31.43.160.6`,
   `31.43.161.6`). No custom domain cutover has occurred.
-- 293 Sheet rows are YELLOW, meaning added but not yet approved by the owner.
+- Owner review of imported Sheet copy remains open (D8). The new last-checked row is yellow.
 - `main` has **no branch protection**, so the gate is not a required check.
 
 See `docs/BTF_BUILD_DEPLOY_FIX_LIST.md` for every point where documented intent and actual

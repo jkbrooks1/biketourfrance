@@ -1300,3 +1300,11 @@ verify-dist: 12 pages OK
 - Commit a3fe8b9 pushed ✓
 - Build validation enhanced ✓
 - Ready for Cloudflare Pages preview rebuild ✓
+
+## 2026-10-05T16:49:00Z — D1, D2, D6, D7, D9 cleanup; Sheet gate passes on main
+
+- Corrected `.btf-canonical-root.json` for active branch `main` and active copy gate. This removes the local branch assertion failure.
+- Retired `src/data/practical-info-data.json`, an export from `CDMv3_2026_Canonical_Tour_Data`. The practical-info page now reads `/cdm-practical/last_checked` (`June 2026`) from `BTF_Approved_Site_Copy`; the new Sheet row is yellow for owner review. The old export no longer feeds the site.
+- Verified the seven D9 fields had no page or generator reader, then removed their rows from the live Sheet, fixture and manifest. Sheet, fixture and manifest now contain 351 ordered, matching fields. Removed prohibited personal name and address from the obsolete seed CSV so the `src/`, `copy/`, `dist/` scans are clean.
+- Corrected README, AGENTS, copy-gate guide, workflow header, current-state guide, and fix list. Pages still runs `npx astro build` from committed copy; D3, D4, D8 and D10 remain owner decisions. No Pages setting, DNS, Framer or live-domain change.
+- Local checks: `npm run canonical:check` PASS; `npm run build` fixture mode PASS, 12 pages; `npm run check` 0 errors, 0 warnings, 2 hints; `npm run verify` 12 pages OK; `npm run copy:test` 10 passed. Live `npm run predeploy:approved-copy` read 351 Sheet rows, confirmed 351 fields on 12 routes (source: sheet), and ended `predeploy OK`. `src/data/approved-copy.ts` was regenerated from the live Sheet for the GitHub-driven staging deployment.

@@ -4,35 +4,35 @@
 **Companion to:** `docs/BTF_MAIN_SITE_BUILD_AND_DEPLOY_DOCUMENTATION.md`
 
 Every item was verified on 2026-10-05 by reading a file or running a command. Each one is a place
-where "how things are" and "how we intend them to be" are not the same. Nothing in this list has
-been fixed except where marked **FIXED TODAY**.
+where "how things are" and "how we intend them to be" differ. Items marked **FIXED** retain their
+original diagnosis as a record of the issue.
 
 Ordered by how much damage each one can still do.
 
 ---
 
-## D1 — `npm run build` and `npm run verify` cannot run on `main` — **blocking**
+## D1 — `npm run build` and `npm run verify` could not run on `main` — **FIXED 2026-10-05**
 
 **Intent:** the documented local workflow is `npm run check`, `npm run build`, `npm run verify`.
-**Actual:** both fail on `main`. `.btf-canonical-root.json` sets
+**Before fix:** both failed on `main`. `.btf-canonical-root.json` set
 `"developmentBranch":"rebuild/2026-10-02-audit-remediation"`, and
 `scripts/assert-canonical-root.mjs:21` throws `Wrong development branch: main` whenever the branch
 differs and `CI` is not set. All active work is on `main`; the same file already sets
 `"productionBranch":"main"`.
 
-**Fix:** set `developmentBranch` to `main` in `.btf-canonical-root.json`.
+**Resolution:** `developmentBranch` is now `main` in `.btf-canonical-root.json`; local `canonical:check`, `build`, and `verify` pass.
 **Effort:** one line. **Risk:** none — the field is only read by that assertion.
-**Why it matters:** anyone following the README today hits an error that looks like a broken repo.
+**Why it mattered:** anyone following the README hit an error that looked like a broken repo.
 
 ---
 
-## D2 — the canonical-root marker says the copy gate is inactive — **blocking misinformation**
+## D2 — the canonical-root marker said the copy gate was inactive — **FIXED 2026-10-05**
 
 **Intent:** the marker records current state.
-**Actual:** `.btf-canonical-root.json` still has
+**Before fix:** `.btf-canonical-root.json` had
 `"copyGateStatus":"inactive-blocking-deployment"`. The gate is active, credentialed and green.
 
-**Fix:** set `copyGateStatus` to `active`. **Effort:** one line. **Risk:** none.
+**Resolution:** `copyGateStatus` is now `active`.
 
 ---
 
@@ -96,36 +96,35 @@ while the **production domain** cutover remains unapproved.
 
 ---
 
-## D6 — four documents describe a system that no longer exists
+## D6 — documents described a system that no longer exists — **FIXED 2026-10-05**
 
-| File | Stale claim | Should say |
+| File | Previous stale claim | Corrected state |
 |---|---|---|
 | `README.md:15` | copy gate is "**not active**" | active, credentialed, enforced on every push to `main` |
 | `README.md:44` | "`npm run build` and Cloudflare preview builds need no Google credentials and are unaffected by the copy gate" | `npm run build` is fixture-only and fails in CI or Pages; Pages runs `npx astro build`; the gate reads the Sheet in GitHub Actions |
 | `AGENTS.md:5` | "Active branch: `rebuild/2026-10-02-audit-remediation`" | `main` |
-| `docs/APPROVED_COPY_GATE.md:51` | "The 224 current fields" | 357 fields |
+| `docs/APPROVED_COPY_GATE.md:51` | "The 224 current fields" | 351 fields after D7 and D9 |
 | `docs/APPROVED_COPY_GATE.md` §4 | "Credential setup (not done; for the owner)" | done 2026-10-05; both GitHub secrets exist |
 | `docs/APPROVED_COPY_GATE.md:108` | "the Cloudflare build command stays `npm run build`" | see D3 |
 | `.github/workflows/approved-copy-check.yml` header | gate "NOT ACTIVE", lists activation steps | active since 2026-10-05 |
 
-**Fix:** one editing pass over those five files. No behaviour change.
+**Resolution:** README, AGENTS, the copy-gate guide, workflow header, and the current-state guide now describe the active gate and the Pages `npx astro build` command. This documentation change does not select a D3 publishing design.
 
 ---
 
-## D7 — a second copy authority is now orphaned
+## D7 — orphaned second copy authority — **FIXED 2026-10-05**
 
 **Intent:** one copy authority, `BTF_Approved_Site_Copy`.
-**Actual:** `src/data/practical-info-data.json` is a generated export from a **different**
+**Before fix:** `src/data/practical-info-data.json` was a generated export from a **different**
 spreadsheet (`CDMv3_2026_Canonical_Tour_Data`, tab `TRANSPORT_BOD_GARE.STJEAN`). Its transport
 copy was moved into the approved Sheet on 2026-10-05 as `/cdm-practical/q1..q6_*` so that one
-authority applies. The page still imports the JSON, but only for its `generated_at` date.
+authority applies. The page still imported the JSON, but only for its `generated_at` date.
 
-**Consequence:** if that upstream export is regenerated, the new content will **not** reach the
-site. The pipeline that produced it now has no effect on the published page.
+**Consequence:** regenerating that upstream export no longer updates this site.
 
-**Fix:** either point that upstream pipeline at `BTF_Approved_Site_Copy`, or retire it and move the
-"last checked" date into a Sheet field so the JSON can be deleted. Decide before anyone relies on
-the old pipeline again.
+**Resolution:** Added `/cdm-practical/last_checked` = `June 2026` to the approved Sheet, fixture,
+and manifest; the practical-info page now renders it through `TEXT`. The JSON import and export
+file were removed after confirming no remaining reader. The old CDMv3 export no longer feeds the site.
 
 ---
 
@@ -142,10 +141,10 @@ complete before the production domain cutover.**
 
 ---
 
-## D9 — seven Sheet rows have no reader
+## D9 — seven Sheet rows had no reader — **FIXED 2026-10-05**
 
 **Intent:** every Sheet row controls something on the site.
-**Actual:** seven rows are read by nothing, so editing them has no visible effect:
+**Before fix:** seven rows were read by nothing, so editing them had no visible effect:
 
 | Field | Value | Note |
 |---|---|---|
@@ -159,8 +158,9 @@ complete before the production domain cutover.**
 
 All seven predate today's work.
 
-**Fix:** either wire each to the page it implies, or delete the row. Leaving them is a trap: you
-edit a row and nothing changes.
+**Resolution:** Confirmed no `TEXT` page reference or `COPY` generator mapping reads any of these
+fields, then deleted all seven from the live Sheet, fixture, and manifest. The generated copy file
+was regenerated from the live Sheet. Final count: 351 in all three sources.
 
 ---
 
@@ -189,12 +189,10 @@ remote, never pushed. They predate the work now on `main`.
 
 ## Suggested order
 
-1. **D1, D2, D6** — documentation and marker corrections. Half an hour, no behaviour change, and
-   they stop the next person being misled.
+1. **D1, D2, D6, D7, D9** — completed 2026-10-05.
 2. **D3** — decide Option A or B. Everything about how copy is published depends on this.
 3. **D4** — branch protection, once you have decided how you want to push to `main`.
 4. **D8** — approve the 293 rows. The long pole, and a prerequisite for the domain cutover.
-5. **D7, D9, D10** — cleanups, each independent.
+5. **D10** — the retired branch decision remains open.
 
-Items D1, D2, D6, D7 and D9 I can execute immediately on your say-so. D3, D4, D8 and D10 need your
-decision first.
+D3, D4, D8 and D10 remain owner decisions. This cleanup does not change their scope.

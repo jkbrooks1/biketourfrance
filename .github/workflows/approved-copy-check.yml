@@ -1,19 +1,8 @@
-# Approved copy check: NOT ACTIVE. It runs only when started by hand (workflow_dispatch).
-#
-# It runs the production-only command `npm run predeploy:approved-copy`, which reads the Google Sheet
-# BTF_Approved_Site_Copy with the existing service account btf-sheets-access@btf-general.iam.gserviceaccount.com
-# and fails unless the built site matches the approved copy. Without the two secrets below it fails, which is
-# the intended behavior.
-#
-# To ACTIVATE (only after the owner approves; see docs/APPROVED_COPY_GATE.md, section 5):
-#   1. Add the secrets BTF_COPY_GOOGLE_SA_JSON and BTF_COPY_SHEET_ID in the GitHub repository settings.
-#   2. Add these triggers under "on:":
-#        pull_request:
-#          branches: [main]
-#        push:
-#          branches: [main]
-#   3. Make the check "Approved copy check" required by branch protection on main.
-# The normal Cloudflare Pages build command stays `npm run build` and does not use this workflow.
+# Approved copy check: active since 2026-10-05. Reads BTF_Approved_Site_Copy and checks
+# rendered pages on every push and pull request to main, and on manual dispatch.
+# Both GitHub secrets are configured. This workflow validates; Cloudflare Pages separately
+# runs `npx astro build` from the committed src/data/approved-copy.ts and deploys through
+# its Git integration. Requiring this check through branch protection remains an open decision.
 name: Approved copy check
 
 on:

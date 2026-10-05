@@ -9,8 +9,8 @@ site/nav_practical_information,Practical Information
 site/nav_resources,Resources
 site/nav_about,About
 site/nav_contact,Contact
-site/footer_tagline,"Small-group, self-supported bicycle tours in France, led by John Brooks. Eat. Sleep. Roll. Repeat."
-site/footer_email,john@biketourfrance.net
+site/footer_tagline,"Small-group, self-supported bicycle tours in France, led by John. Eat. Sleep. Roll. Repeat."
+site/footer_email,contact@biketourfrance.net
 site/footer_explore_heading,Explore
 site/footer_legal_heading,Legal
 site/legal_privacy,Privacy
@@ -18,10 +18,10 @@ site/legal_terms,Terms
 site/legal_cookies,Cookies
 site/footer_copyright,© 2026 BikeTourFrance.net
 site/cta_waitlist_label,Ask to join the 2027 waitlist
-site/cta_email_label,Email john@biketourfrance.net
+site/cta_email_label,Email contact@biketourfrance.net
 site/review_note,"**Draft for owner review.** This page states only facts that can be confirmed from this website's code. The owner must review it, and any legal or service-provider details, before launch. The open items are listed in docs/PRODUCTION_CUTOVER_PREFLIGHT.md."
 home/seo_title,BikeTourFrance.net: small-group bicycle tours in France
-home/seo_description,"Small-group, self-supported bicycle tours in France led by John Brooks, including four Canal des Deux Mers departures in 2027, plus help planning your own trip."
+home/seo_description,"Small-group, self-supported bicycle tours in France led by John, including four Canal des Deux Mers departures in 2027, plus help planning your own trip."
 home/hero_eyebrow,Small-group bike tours in France
 home/hero_heading,Choose your own bike adventure in France
 home/hero_body,"Join a small, self-supported group tour in 2027, or plan an independent trip with help from someone who has ridden it."
@@ -72,7 +72,7 @@ home/gallery_link,More photos on the Canal des Deux Mers page
 home/ready_to_ride_heading,Ready to ride?
 home/contact_cta,"Email John with your questions, or ask to be added to the 2027 waitlist. He answers every message himself."
 tours/seo_title,Bike tours in France: small-group and self-guided
-tours/seo_description,"BikeTourFrance.net offers small-group, self-supported bicycle tours in France, a self-guided tour package, and trip-planning help from John Brooks."
+tours/seo_description,"BikeTourFrance.net offers small-group, self-supported bicycle tours in France, a self-guided tour package, and trip-planning help from John."
 tours/page_eyebrow,Tours
 tours/page_heading,Ways to ride in France with BikeTourFrance.net
 tours/page_lede,"All BikeTourFrance.net tours are self-supported. You carry your own gear from place to place, and John helps you plan the rest."
@@ -96,7 +96,7 @@ cdm-tour/seo_title,"Canal des Deux Mers by bike, 2027 small-group tour"
 cdm-tour/seo_description,"Ride from Bordeaux to Sète along the Canal des Deux Mers with a small, self-supported group. Four departures in 2027: nine riding days, one rest day in Toulouse, 11 nights."
 cdm-tour/hero_eyebrow,2027 small-group tour
 cdm-tour/hero_heading,"Canal des Deux Mers by bike, Bordeaux to Sète"
-cdm-tour/hero_body,"Bordeaux (Atlantic) to Sète (Mediterranean), the same route on every departure. Nine riding days, one rest day in Toulouse, and 11 nights, led by John Brooks."
+cdm-tour/hero_body,"Bordeaux (Atlantic) to Sète (Mediterranean), the same route on every departure. Nine riding days, one rest day in Toulouse, and 11 nights, led by John."
 cdm-tour/dates_pricing_notice,"**Dates and pricing are not final.** Four departures in 2027: two between May 15 and June 15, and two in September. Exact dates are forthcoming. Pricing is to be determined and will be announced before bookings open."
 cdm-tour/hero_cta_question,Ask a question
 cdm-tour/glance_heading,The tour at a glance
@@ -269,8 +269,8 @@ resources/helpful_sites_list,"- [EuroVelo](https://en.eurovelo.com/)
 - [Azure Cycle Tours](https://azurcycletours.com/)"
 resources/ready_to_ride_heading,Missing something?
 resources/contact_cta,Tell John what would make planning easier and he will consider adding it.
-about/seo_title,About John Brooks
-about/seo_description,"John Brooks leads small, self-supported bicycle tours in France. Learn who he is, how the tours work, and why he plans each day in detail."
+about/seo_title,About John
+about/seo_description,"John leads small, self-supported bicycle tours in France. Learn who he is, how the tours work, and why he plans each day in detail."
 about/page_eyebrow,About BikeTourFrance.net
 about/page_heading,Eat. Sleep. Roll. Repeat.
 about/page_lede,"I'm John, the cyclist behind BikeTourFrance.net. I help riders carry out extraordinary bicycle tours in France."
@@ -288,7 +288,7 @@ Outside of touring, I lead rides for Cascade Bicycle Club in Seattle, work in en
 about/ready_to_ride_heading,Want to talk it through?
 about/contact_cta,Email John with your questions about the 2027 tours or about planning your own trip.
 contact/seo_title,Contact John
-contact/seo_description,"Email John Brooks with questions about the 2027 Canal des Deux Mers tours, the waitlist, or planning your own bike trip in France."
+contact/seo_description,"Email John with questions about the 2027 Canal des Deux Mers tours, the waitlist, or planning your own bike trip in France."
 contact/page_eyebrow,Contact
 contact/page_heading,Contact John
 contact/page_lede,Email is the best way to reach BikeTourFrance.net.
@@ -296,7 +296,7 @@ contact/starting_heading,Choose a starting point
 contact/starting_list,"- [Ask to join the 2027 Canal des Deux Mers waitlist](mail:waitlist)
 - [Ask about planning your own trip](mail:planning)
 - [Ask any other question](mail:general)"
-contact/starting_note,"Each link opens your email program with a short message ready to fill in. If it does not open, write to john@biketourfrance.net directly."
+contact/starting_note,"Each link opens your email program with a short message ready to fill in. If it does not open, write to contact@biketourfrance.net directly."
 contact/lists_heading,About the waitlist and the mailing list
 contact/lists_body,"This website does not have an online sign-up form yet. To hear about exact 2027 dates and pricing when they are announced, email John and ask to be added to the waitlist."
 privacy/seo_title,Privacy
@@ -309,7 +309,7 @@ This website has no sign-up form, no account system, and no analytics or adverti
 
 ## When you email John
 
-If you write to [john@biketourfrance.net](mail:general), John receives your message and your email address in his BikeTourFrance.net email account. He uses them to reply to you. Nothing in this website's code sends your message anywhere else.
+If you write to [contact@biketourfrance.net](mail:general), John receives your message and your email address in his BikeTourFrance.net email account. He uses them to reply to you. Nothing in this website's code sends your message anywhere else.
 
 ## Hosting and technical logs
 
@@ -321,7 +321,7 @@ The Resources page loads audio files from BikeTourFrance.net's media storage onl
 
 ## Questions
 
-Write to [john@biketourfrance.net](mail:general)."
+Write to [contact@biketourfrance.net](mail:general)."
 terms/seo_title,Terms
 terms/seo_description,"Terms for using the BikeTourFrance.net website: tour information may change, no bookings are taken on this site, and links lead to other sites."
 terms/page_heading,Terms
@@ -344,7 +344,7 @@ This website links to other websites and to files stored elsewhere. BikeTourFran
 
 ## Contact
 
-Write to [john@biketourfrance.net](mail:general)."
+Write to [contact@biketourfrance.net](mail:general)."
 cookies/seo_title,Cookies
 cookies/seo_description,This BikeTourFrance.net website does not set cookies of its own and runs no analytics or advertising tools.
 cookies/page_heading,Cookies

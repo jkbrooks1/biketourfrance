@@ -3,16 +3,7 @@ import { TEXT } from '../../../data/approved-copy';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Photo from '../../../components/Photo.astro';
 import ContactCta from '../../../components/ContactCta.astro';
-import practicalInfoData from '../../../data/practical-info-data.json';
 import { PHOTOS } from '../../../data/photos';
-
-// Data comes from the existing Practical Info sheet export (see docs/BUILD_LOG.md). Only the labels are cleaned up here.
-const { generated_at } = practicalInfoData;
-const checked = new Date(generated_at).toLocaleDateString('en-US', {
-  month: 'long',
-  year: 'numeric',
-  timeZone: 'UTC',
-});
 
 const tramSummary = [
   TEXT['/cdm-practical/list_1'],
@@ -66,7 +57,7 @@ const details = [
         <p class="lede">{TEXT['/cdm-practical/body_2']}</p>
         <div class="notice">
           <p>
-            {TEXT['/cdm-practical/frag_1']} {checked}{TEXT['/cdm-practical/frag_2']}
+            {TEXT['/cdm-practical/frag_1']} {TEXT['/cdm-practical/last_checked']}{TEXT['/cdm-practical/frag_2']}
           </p>
         </div>
       </div>
