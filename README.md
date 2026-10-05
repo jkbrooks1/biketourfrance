@@ -13,7 +13,7 @@ Native Astro build of the biketourfrance.net marketing site, deployed from GitHu
 - `scripts/verify-dist.mjs`: checks the built site (headings, landmarks, titles, canonicals, alt text, links, banned content, indexing protections).
 - `scripts/build_site.py` and `site/`: the earlier Framer export, kept only as a reference. Astro no longer serves `site/`. `source-framer/` is local only and is not committed.
 - `copy/` and `scripts/copy/`: the active, credentialed approved-copy gate. `copy/field-manifest.json` lists every public copy field. See `docs/APPROVED_COPY_GATE.md`.
-- `.github/workflows/approved-copy-check.yml`: reads the live Sheet and runs the gate on every push and pull request to `main`, and on manual dispatch. Branch protection is a separate open decision (D4).
+- `.github/workflows/approved-copy-check.yml`: reads the live Sheet and runs the gate on ordinary pushes and pull requests to `main`, and on manual dispatch. The scheduled sync runs the same gate before its bot push. Branch protection is a separate open decision (D4).
 - `docs/`: build log, owner style guide, style guide implementation record, 2027 content authority, subdomain migration audit, cutover preflight, security audit, copy gate guide, copy field map for review, and the audit remediation report.
 
 ## Rules
@@ -41,7 +41,7 @@ npm test             # check, build, and verify
 git push origin main # Cloudflare Pages auto-deploys staging
 ```
 
-Cloudflare Pages runs `npx astro build` from the committed `src/data/approved-copy.ts`; it does not read the Sheet. The GitHub Actions gate reads the Sheet independently. After a Sheet edit, run `npm run predeploy:approved-copy` and commit the regenerated file before pushing. `npm run build` uses the fixture and fails under `CI` or `CF_PAGES`. Local preview of the built site: `npm run preview`. See D3 in `docs/BTF_BUILD_DEPLOY_FIX_LIST.md` for the open publishing-workflow decision.
+Cloudflare Pages runs `npx astro build` from the committed `src/data/approved-copy.ts`; it does not read the Sheet. The GitHub Actions **Scheduled approved copy sync** checks the Sheet hourly at minute 17 UTC or on manual dispatch, runs the full predeploy gate, and commits changed copy to `main` for Pages to build. A Sheet edit reaches staging after a successful sync and Pages deployment. `npm run build` uses the fixture and fails under `CI` or `CF_PAGES`. Local preview of the built site: `npm run preview`. See D3 in `docs/BTF_BUILD_DEPLOY_FIX_LIST.md` for the decided publishing workflow.
 
 ## Status
 

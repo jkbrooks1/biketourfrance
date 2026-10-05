@@ -1,0 +1,62 @@
+name: Scheduled approved copy sync
+
+on:
+  schedule:
+    # Avoid the start-of-hour Actions load while still checking once per hour (UTC).
+    - cron: '17 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scheduled-approved-copy-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    name: Sync approved copy from Google Sheet
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24.x'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Sync and verify live approved copy
+        env:
+          BTF_COPY_SHEET_ID: ${{ secrets.BTF_COPY_SHEET_ID }}
+          BTF_COPY_GOOGLE_SA_JSON: ${{ secrets.BTF_COPY_GOOGLE_SA_JSON }}
+        run: npm run predeploy:approved-copy
+
+      - name: Check for copy changes
+        id: changes
+        shell: bash
+        run: |
+          if git status --porcelain -- src/data/approved-copy.ts copy/fixture/fixture-rows.json copy/field-manifest.json | grep -q .; then
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+            echo 'Approved copy changes detected'
+          else
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+            echo 'No copy changes detected in sheet'
+          fi
+
+      - name: Commit and push copy changes
+        if: steps.changes.outputs.changed == 'true'
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- src/data/approved-copy.ts copy/fixture/fixture-rows.json copy/field-manifest.json
+          git commit -m 'chore(copy): automated hourly sync from Google Sheet'
+          git push origin HEAD:main

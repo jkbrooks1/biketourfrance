@@ -1,6 +1,6 @@
 # Approved copy gate
 
-**Status, 2026-10-05:** Active and credentialed. GitHub Actions runs **Approved copy check** on every push and pull request to `main`, and on manual dispatch. The check validates the built pages against the live Google Sheet. Branch protection is not yet enabled, so a push can still reach Cloudflare Pages before or despite a failing check; see D4 in `docs/BTF_BUILD_DEPLOY_FIX_LIST.md`.
+**Status, 2026-10-05:** Active and credentialed. GitHub Actions runs **Approved copy check** on ordinary pushes and pull requests to `main`, and on manual dispatch. GitHub suppresses this separate check for pushes made with the scheduled workflow's `GITHUB_TOKEN`; that workflow runs the same full predeploy pipeline before committing. Branch protection is not yet enabled, so a push can still reach Cloudflare Pages before or despite a failing check; see D4 in `docs/BTF_BUILD_DEPLOY_FIX_LIST.md`.
 
 The copy authority is the Google Sheet `BTF_Approved_Site_Copy`, tab `Approved Site Copy`. Its two columns are `page/field_name` and `copy`. The Sheet, `copy/fixture/fixture-rows.json`, and `copy/field-manifest.json` each have **351 data fields** after D7 and D9. The fixture is an offline mirror for local work, not a deployable copy source. Newly added Sheet rows need owner review; D8 tracks the unapproved yellow rows.
 
@@ -10,7 +10,7 @@ The copy authority is the Google Sheet `BTF_Approved_Site_Copy`, tab `Approved S
 2. `copy:validate` checks the snapshot against `copy/field-manifest.json` for missing, blank required, duplicate, or unrecognized fields and consistency rules.
 3. `copy:generate-ts` writes `src/data/approved-copy.ts`. It exports `COPY` for fields mapped in `scripts/copy/generate-ts.mjs` and `TEXT` for every Sheet field keyed by its exact path. The generator contains no copy text.
 4. `astro build` renders the 12 routes from the generated file.
-5. `copy:verify-rendered` checks the rendered HTML in both directions. Required Sheet fields must appear on their route, and visible page text, titles, descriptions, alt text, and aria labels must be supplied by approved fields. A block can combine multiple approved values. The short allow-list in the verifier covers structural labels and month names; expanding it exempts more text from review.
+5. `copy:verify-rendered` checks the rendered HTML in both directions. Required Sheet fields must appear on their route, and visible page text, titles, descriptions, alt text, and aria labels must be supplied by approved fields. A block can combine multiple approved values. The short allow-list covers structural labels and month names. A separate exact-format exception covers the owner-specified machine-generated footer build timestamp, `updated YYYY-MMDD HH:MM Heure de Paris`; other footer prose still needs a Sheet field.
 6. `verify` checks the built site, and `assert-deployable` confirms the current snapshot came from the Sheet and passed the rendered check.
 
 The regression test **“rendered text with no approved field fails the rendered gate”** in `npm run copy:test` guards the page-to-Sheet direction. Do not remove or weaken it.
@@ -27,7 +27,11 @@ The regression test **“rendered text with no approved field fails the rendered
 
 For a local Sheet-mode run, set `BTF_COPY_SHEET_ID` to the approved Sheet ID in the environment and run `npm run predeploy:approved-copy`. The local service-account key is found automatically outside the repository. Never print or commit the key. GitHub Actions already has the `BTF_COPY_SHEET_ID` and `BTF_COPY_GOOGLE_SA_JSON` secrets; credential setup was completed on 2026-10-05.
 
-Cloudflare Pages project `temp-btf` uses Git integration, with `main` as its production branch. Its build command is **`npx astro build`**, output directory `dist`. Pages builds from the **committed** `src/data/approved-copy.ts`; it does not run this gate or read the Sheet. To publish a Sheet edit under the current workflow, regenerate from the live Sheet, verify, commit the generated file, and push to `main`. A Sheet edit alone does not change staging. The possible one-command publishing workflow or a Pages-side Sheet build is the open D3 decision; do not change Pages configuration as part of routine copy work.
+Cloudflare Pages project `temp-btf` uses Git integration, with `main` as its production branch. Its build command is **`npx astro build`**, output directory `dist`. Pages builds from the **committed** `src/data/approved-copy.ts`; it does not run this gate or read the Sheet. D3 selected Option A: `.github/workflows/scheduled-copy-sync.yml` checks the Sheet hourly at minute 17 UTC and can also be run manually from GitHub Actions. It runs `npm run predeploy:approved-copy`, then commits and pushes changed approved-copy files to `main`. A Sheet edit reaches staging only after that successful sync and the resulting Pages build; it does not change the site immediately. No Google credential is added to Cloudflare Pages.
+
+The scheduled workflow checks `src/data/approved-copy.ts`, `copy/fixture/fixture-rows.json`, and `copy/field-manifest.json` for changes. The current Sheet pipeline generates only `approved-copy.ts`; adding or removing fields requires a coordinated Sheet, fixture, manifest, and source update. An invalid Sheet change fails the validation pipeline and is not committed. If there is no diff, the workflow logs `No copy changes detected in sheet` and exits successfully. GitHub schedules may be delayed, so the cron time is a check cadence rather than a publication deadline.
+
+The workflow pushes with `GITHUB_TOKEN`. GitHub does not start the separate **Approved copy check** workflow from that token's push, so the scheduled job's own full predeploy pipeline is the check for its automated commit. D4 branch protection must account for this direct bot push. D8 owner review of yellow Sheet rows remains open: the sync validates fields and rendered copy but does not inspect Sheet fill colors or certify owner approval.
 
 The live `biketourfrance.net` domain is still served by Framer. No site cutover is authorized by this guide.
 
@@ -45,4 +49,4 @@ Update the live Sheet, fixture, manifest, and page reference together. The Sheet
 - `copy:verify-rendered` fails: compare the rendered string with its approved Sheet field. Do not broaden the allow-list to make prose pass.
 - `assert-deployable` fails: run the full Sheet-mode pipeline again; a fixture or stale snapshot cannot pass.
 
-See `docs/BTF_MAIN_SITE_BUILD_AND_DEPLOY_DOCUMENTATION.md` for the current deployment architecture and `docs/BTF_BUILD_DEPLOY_FIX_LIST.md` for D3, D4, and D8.
+See `docs/BTF_MAIN_SITE_BUILD_AND_DEPLOY_DOCUMENTATION.md` for the current deployment architecture and `docs/BTF_BUILD_DEPLOY_FIX_LIST.md` for the D3 decision and open D4/D8 work.

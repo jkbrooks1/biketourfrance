@@ -1,0 +1,8 @@
+{
+  "production_branch": "main",
+  "source": {
+    "config": {
+      "production_branch": "main"
+    }
+  }
+}

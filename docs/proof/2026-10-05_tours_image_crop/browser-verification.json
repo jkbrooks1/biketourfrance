@@ -1,0 +1,1034 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "route": "/tours/",
+      "viewportWidth": 375,
+      "horizontalOverflow": false,
+      "pictures": [
+        {
+          "class": "photo-crop ratio-4x3",
+          "width": 335,
+          "height": 251.25,
+          "imageWidth": 335,
+          "imageHeight": 251.25,
+          "fit": "cover",
+          "aspect": "4 / 3",
+          "position": "absolute",
+          "alt": "A rider on a pale gravel path beside a straight canal with grass on both sides."
+        }
+      ]
+    },
+    {
+      "route": "/canal-des-deux-mers/",
+      "viewportWidth": 375,
+      "horizontalOverflow": false,
+      "pictures": [
+        {
+          "class": "photo-crop ratio-16x9",
+          "width": 335,
+          "height": 188.4375,
+          "imageWidth": 335,
+          "imageHeight": 188.4375,
+          "fit": "cover",
+          "aspect": "16 / 9",
+          "position": "absolute",
+          "alt": "A cyclist riding away on a paved canal path, with water and green vegetation on both sides and trees in the distance."
+        },
+        {
+          "class": "photo-crop ratio-3x4",
+          "width": 335,
+          "height": 446.65625,
+          "imageWidth": 335,
+          "imageHeight": 446.65625,
+          "fit": "cover",
+          "aspect": "3 / 4",
+          "position": "absolute",
+          "alt": "Two loaded touring bikes parked in front of a wooden building with a sign reading \"Cr\u00e9on f\u00eate le v\u00e9lo\"."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 159.5,
+          "height": 159.5,
+          "imageWidth": 159.5,
+          "imageHeight": 159.5,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A rider in a red helmet smiling at the camera on a shaded canal path, with a second rider behind."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 159.5,
+          "height": 159.5,
+          "imageWidth": 159.5,
+          "imageHeight": 159.5,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Two loaded touring bikes parked in front of a wooden building with a sign reading \"Cr\u00e9on f\u00eate le v\u00e9lo\"."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 159.5,
+          "height": 159.5,
+          "imageWidth": 159.5,
+          "imageHeight": 159.5,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A rider on a pale gravel path beside a straight canal with grass on both sides."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 159.5,
+          "height": 159.5,
+          "imageWidth": 159.5,
+          "imageHeight": 159.5,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Two green signs for the Canal du Midi cycle route, one pointing left and one pointing right."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 159.5,
+          "height": 159.5,
+          "imageWidth": 159.5,
+          "imageHeight": 159.5,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Five riders in cycling jerseys sharing coffee at a caf\u00e9 table."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 159.5,
+          "height": 159.5,
+          "imageWidth": 159.5,
+          "imageHeight": 159.5,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A rider far ahead on a narrow cobbled strip between two stretches of calm water."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 159.5,
+          "height": 159.5,
+          "imageWidth": 159.5,
+          "imageHeight": 159.5,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Three riders in cycling kit posing beside a bike in a town square with a palm tree."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 159.5,
+          "height": 159.5,
+          "imageWidth": 159.5,
+          "imageHeight": 159.5,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A small stone church with a bell tower, with a bicycle leaning near its door."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 159.5,
+          "height": 159.5,
+          "imageWidth": 159.5,
+          "imageHeight": 159.5,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A long straight paved greenway through pine woods, with one rider ahead in the distance."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 159.5,
+          "height": 159.5,
+          "imageWidth": 159.5,
+          "imageHeight": 159.5,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Riders in matching cycling jerseys on a tree-lined path, with more riders behind them."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 159.5,
+          "height": 159.5,
+          "imageWidth": 159.5,
+          "imageHeight": 159.5,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Two people working on a bicycle wheel together in a workshop."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 159.5,
+          "height": 159.5,
+          "imageWidth": 159.5,
+          "imageHeight": 159.5,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A paved path through tall pine trees with a rider in the distance."
+        }
+      ]
+    },
+    {
+      "route": "/canal-des-deux-mers/practical-info/",
+      "viewportWidth": 375,
+      "horizontalOverflow": false,
+      "pictures": [
+        {
+          "class": "photo-crop ratio-3x4",
+          "width": 335,
+          "height": 446.65625,
+          "imageWidth": 335,
+          "imageHeight": 446.65625,
+          "fit": "cover",
+          "aspect": "3 / 4",
+          "position": "absolute",
+          "alt": "Illustration of a panda arriving at Bordeaux Airport with a bike case and a backpack."
+        }
+      ]
+    },
+    {
+      "route": "/about/",
+      "viewportWidth": 375,
+      "horizontalOverflow": false,
+      "pictures": [
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 335,
+          "height": 335,
+          "imageWidth": 335,
+          "imageHeight": 335,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Three riders in cycling kit posing beside a bike in a town square with a palm tree."
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "viewportWidth": 375,
+      "horizontalOverflow": false,
+      "pictures": [
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 335,
+          "height": 335,
+          "imageWidth": 335,
+          "imageHeight": 335,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A rider in a red helmet smiling at the camera on a shaded canal path, with a second rider behind."
+        },
+        {
+          "class": "photo-crop ratio-3x4",
+          "width": 335,
+          "height": 446.65625,
+          "imageWidth": 335,
+          "imageHeight": 446.65625,
+          "fit": "cover",
+          "aspect": "3 / 4",
+          "position": "absolute",
+          "alt": "A rider on a pale gravel path beside a straight canal with grass on both sides."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 335,
+          "height": 335,
+          "imageWidth": 335,
+          "imageHeight": 335,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "John and friends seated together at a table, smiling at the camera."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 159.5,
+          "height": 159.5,
+          "imageWidth": 159.5,
+          "imageHeight": 159.5,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A rider in a red helmet smiling at the camera on a shaded canal path, with a second rider behind."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 159.5,
+          "height": 159.5,
+          "imageWidth": 159.5,
+          "imageHeight": 159.5,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Two loaded touring bikes parked in front of a wooden building with a sign reading \"Cr\u00e9on f\u00eate le v\u00e9lo\"."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 159.5,
+          "height": 159.5,
+          "imageWidth": 159.5,
+          "imageHeight": 159.5,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A rider on a pale gravel path beside a straight canal with grass on both sides."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 159.5,
+          "height": 159.5,
+          "imageWidth": 159.5,
+          "imageHeight": 159.5,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Two green signs for the Canal du Midi cycle route, one pointing left and one pointing right."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 159.5,
+          "height": 159.5,
+          "imageWidth": 159.5,
+          "imageHeight": 159.5,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Five riders in cycling jerseys sharing coffee at a caf\u00e9 table."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 159.5,
+          "height": 159.5,
+          "imageWidth": 159.5,
+          "imageHeight": 159.5,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A rider far ahead on a narrow cobbled strip between two stretches of calm water."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 159.5,
+          "height": 159.5,
+          "imageWidth": 159.5,
+          "imageHeight": 159.5,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Three riders in cycling kit posing beside a bike in a town square with a palm tree."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 159.5,
+          "height": 159.5,
+          "imageWidth": 159.5,
+          "imageHeight": 159.5,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A small stone church with a bell tower, with a bicycle leaning near its door."
+        }
+      ]
+    },
+    {
+      "route": "/tours/",
+      "viewportWidth": 768,
+      "horizontalOverflow": false,
+      "pictures": [
+        {
+          "class": "photo-crop ratio-4x3",
+          "width": 331.71875,
+          "height": 248.78125,
+          "imageWidth": 331.71875,
+          "imageHeight": 248.78125,
+          "fit": "cover",
+          "aspect": "4 / 3",
+          "position": "absolute",
+          "alt": "A rider on a pale gravel path beside a straight canal with grass on both sides."
+        }
+      ]
+    },
+    {
+      "route": "/canal-des-deux-mers/",
+      "viewportWidth": 768,
+      "horizontalOverflow": false,
+      "pictures": [
+        {
+          "class": "photo-crop ratio-16x9",
+          "width": 331.71875,
+          "height": 186.578125,
+          "imageWidth": 331.71875,
+          "imageHeight": 186.578125,
+          "fit": "cover",
+          "aspect": "16 / 9",
+          "position": "absolute",
+          "alt": "A cyclist riding away on a paved canal path, with water and green vegetation on both sides and trees in the distance."
+        },
+        {
+          "class": "photo-crop ratio-3x4",
+          "width": 348,
+          "height": 464,
+          "imageWidth": 348,
+          "imageHeight": 464,
+          "fit": "cover",
+          "aspect": "3 / 4",
+          "position": "absolute",
+          "alt": "Two loaded touring bikes parked in front of a wooden building with a sign reading \"Cr\u00e9on f\u00eate le v\u00e9lo\"."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 232,
+          "height": 232,
+          "imageWidth": 232,
+          "imageHeight": 232,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A rider in a red helmet smiling at the camera on a shaded canal path, with a second rider behind."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 232,
+          "height": 232,
+          "imageWidth": 232,
+          "imageHeight": 232,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Two loaded touring bikes parked in front of a wooden building with a sign reading \"Cr\u00e9on f\u00eate le v\u00e9lo\"."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 232,
+          "height": 232,
+          "imageWidth": 232,
+          "imageHeight": 232,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A rider on a pale gravel path beside a straight canal with grass on both sides."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 232,
+          "height": 232,
+          "imageWidth": 232,
+          "imageHeight": 232,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Two green signs for the Canal du Midi cycle route, one pointing left and one pointing right."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 232,
+          "height": 232,
+          "imageWidth": 232,
+          "imageHeight": 232,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Five riders in cycling jerseys sharing coffee at a caf\u00e9 table."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 232,
+          "height": 232,
+          "imageWidth": 232,
+          "imageHeight": 232,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A rider far ahead on a narrow cobbled strip between two stretches of calm water."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 232,
+          "height": 232,
+          "imageWidth": 232,
+          "imageHeight": 232,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Three riders in cycling kit posing beside a bike in a town square with a palm tree."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 232,
+          "height": 232,
+          "imageWidth": 232,
+          "imageHeight": 232,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A small stone church with a bell tower, with a bicycle leaning near its door."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 232,
+          "height": 232,
+          "imageWidth": 232,
+          "imageHeight": 232,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A long straight paved greenway through pine woods, with one rider ahead in the distance."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 232,
+          "height": 232,
+          "imageWidth": 232,
+          "imageHeight": 232,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Riders in matching cycling jerseys on a tree-lined path, with more riders behind them."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 232,
+          "height": 232,
+          "imageWidth": 232,
+          "imageHeight": 232,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Two people working on a bicycle wheel together in a workshop."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 232,
+          "height": 232,
+          "imageWidth": 232,
+          "imageHeight": 232,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A paved path through tall pine trees with a rider in the distance."
+        }
+      ]
+    },
+    {
+      "route": "/canal-des-deux-mers/practical-info/",
+      "viewportWidth": 768,
+      "horizontalOverflow": false,
+      "pictures": [
+        {
+          "class": "photo-crop ratio-3x4",
+          "width": 331.71875,
+          "height": 442.28125,
+          "imageWidth": 331.71875,
+          "imageHeight": 442.28125,
+          "fit": "cover",
+          "aspect": "3 / 4",
+          "position": "absolute",
+          "alt": "Illustration of a panda arriving at Bordeaux Airport with a bike case and a backpack."
+        }
+      ]
+    },
+    {
+      "route": "/about/",
+      "viewportWidth": 768,
+      "horizontalOverflow": false,
+      "pictures": [
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 331.71875,
+          "height": 331.71875,
+          "imageWidth": 331.71875,
+          "imageHeight": 331.71875,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Three riders in cycling kit posing beside a bike in a town square with a palm tree."
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "viewportWidth": 768,
+      "horizontalOverflow": false,
+      "pictures": [
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 331.71875,
+          "height": 331.71875,
+          "imageWidth": 331.71875,
+          "imageHeight": 331.71875,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A rider in a red helmet smiling at the camera on a shaded canal path, with a second rider behind."
+        },
+        {
+          "class": "photo-crop ratio-3x4",
+          "width": 348.28125,
+          "height": 464.375,
+          "imageWidth": 348.28125,
+          "imageHeight": 464.375,
+          "fit": "cover",
+          "aspect": "3 / 4",
+          "position": "absolute",
+          "alt": "A rider on a pale gravel path beside a straight canal with grass on both sides."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 331.71875,
+          "height": 331.71875,
+          "imageWidth": 331.71875,
+          "imageHeight": 331.71875,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "John and friends seated together at a table, smiling at the camera."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 232,
+          "height": 232,
+          "imageWidth": 232,
+          "imageHeight": 232,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A rider in a red helmet smiling at the camera on a shaded canal path, with a second rider behind."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 232,
+          "height": 232,
+          "imageWidth": 232,
+          "imageHeight": 232,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Two loaded touring bikes parked in front of a wooden building with a sign reading \"Cr\u00e9on f\u00eate le v\u00e9lo\"."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 232,
+          "height": 232,
+          "imageWidth": 232,
+          "imageHeight": 232,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A rider on a pale gravel path beside a straight canal with grass on both sides."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 232,
+          "height": 232,
+          "imageWidth": 232,
+          "imageHeight": 232,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Two green signs for the Canal du Midi cycle route, one pointing left and one pointing right."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 232,
+          "height": 232,
+          "imageWidth": 232,
+          "imageHeight": 232,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Five riders in cycling jerseys sharing coffee at a caf\u00e9 table."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 232,
+          "height": 232,
+          "imageWidth": 232,
+          "imageHeight": 232,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A rider far ahead on a narrow cobbled strip between two stretches of calm water."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 232,
+          "height": 232,
+          "imageWidth": 232,
+          "imageHeight": 232,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Three riders in cycling kit posing beside a bike in a town square with a palm tree."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 232,
+          "height": 232,
+          "imageWidth": 232,
+          "imageHeight": 232,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A small stone church with a bell tower, with a bicycle leaning near its door."
+        }
+      ]
+    },
+    {
+      "route": "/tours/",
+      "viewportWidth": 1440,
+      "horizontalOverflow": false,
+      "pictures": [
+        {
+          "class": "photo-crop ratio-4x3",
+          "width": 600.984375,
+          "height": 450.734375,
+          "imageWidth": 600.984375,
+          "imageHeight": 450.734375,
+          "fit": "cover",
+          "aspect": "4 / 3",
+          "position": "absolute",
+          "alt": "A rider on a pale gravel path beside a straight canal with grass on both sides."
+        }
+      ]
+    },
+    {
+      "route": "/canal-des-deux-mers/",
+      "viewportWidth": 1440,
+      "horizontalOverflow": false,
+      "pictures": [
+        {
+          "class": "photo-crop ratio-16x9",
+          "width": 600.984375,
+          "height": 338.046875,
+          "imageWidth": 600.984375,
+          "imageHeight": 338.046875,
+          "fit": "cover",
+          "aspect": "16 / 9",
+          "position": "absolute",
+          "alt": "A cyclist riding away on a paved canal path, with water and green vegetation on both sides and trees in the distance."
+        },
+        {
+          "class": "photo-crop ratio-3x4",
+          "width": 624,
+          "height": 832,
+          "imageWidth": 624,
+          "imageHeight": 832,
+          "fit": "cover",
+          "aspect": "3 / 4",
+          "position": "absolute",
+          "alt": "Two loaded touring bikes parked in front of a wooden building with a sign reading \"Cr\u00e9on f\u00eate le v\u00e9lo\"."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 308,
+          "height": 308,
+          "imageWidth": 308,
+          "imageHeight": 308,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A rider in a red helmet smiling at the camera on a shaded canal path, with a second rider behind."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 308,
+          "height": 308,
+          "imageWidth": 308,
+          "imageHeight": 308,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Two loaded touring bikes parked in front of a wooden building with a sign reading \"Cr\u00e9on f\u00eate le v\u00e9lo\"."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 308,
+          "height": 308,
+          "imageWidth": 308,
+          "imageHeight": 308,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A rider on a pale gravel path beside a straight canal with grass on both sides."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 308,
+          "height": 308,
+          "imageWidth": 308,
+          "imageHeight": 308,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Two green signs for the Canal du Midi cycle route, one pointing left and one pointing right."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 308,
+          "height": 308,
+          "imageWidth": 308,
+          "imageHeight": 308,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Five riders in cycling jerseys sharing coffee at a caf\u00e9 table."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 308,
+          "height": 308,
+          "imageWidth": 308,
+          "imageHeight": 308,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A rider far ahead on a narrow cobbled strip between two stretches of calm water."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 308,
+          "height": 308,
+          "imageWidth": 308,
+          "imageHeight": 308,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Three riders in cycling kit posing beside a bike in a town square with a palm tree."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 308,
+          "height": 308,
+          "imageWidth": 308,
+          "imageHeight": 308,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A small stone church with a bell tower, with a bicycle leaning near its door."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 308,
+          "height": 308,
+          "imageWidth": 308,
+          "imageHeight": 308,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A long straight paved greenway through pine woods, with one rider ahead in the distance."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 308,
+          "height": 308,
+          "imageWidth": 308,
+          "imageHeight": 308,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Riders in matching cycling jerseys on a tree-lined path, with more riders behind them."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 308,
+          "height": 308,
+          "imageWidth": 308,
+          "imageHeight": 308,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Two people working on a bicycle wheel together in a workshop."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 308,
+          "height": 308,
+          "imageWidth": 308,
+          "imageHeight": 308,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A paved path through tall pine trees with a rider in the distance."
+        }
+      ]
+    },
+    {
+      "route": "/canal-des-deux-mers/practical-info/",
+      "viewportWidth": 1440,
+      "horizontalOverflow": false,
+      "pictures": [
+        {
+          "class": "photo-crop ratio-3x4",
+          "width": 360,
+          "height": 480,
+          "imageWidth": 360,
+          "imageHeight": 480,
+          "fit": "cover",
+          "aspect": "3 / 4",
+          "position": "absolute",
+          "alt": "Illustration of a panda arriving at Bordeaux Airport with a bike case and a backpack."
+        }
+      ]
+    },
+    {
+      "route": "/about/",
+      "viewportWidth": 1440,
+      "horizontalOverflow": false,
+      "pictures": [
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 600.984375,
+          "height": 600.984375,
+          "imageWidth": 600.984375,
+          "imageHeight": 600.984375,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Three riders in cycling kit posing beside a bike in a town square with a palm tree."
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "viewportWidth": 1440,
+      "horizontalOverflow": false,
+      "pictures": [
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 600.984375,
+          "height": 600.984375,
+          "imageWidth": 600.984375,
+          "imageHeight": 600.984375,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A rider in a red helmet smiling at the camera on a shaded canal path, with a second rider behind."
+        },
+        {
+          "class": "photo-crop ratio-3x4",
+          "width": 631.015625,
+          "height": 841.34375,
+          "imageWidth": 631.015625,
+          "imageHeight": 841.34375,
+          "fit": "cover",
+          "aspect": "3 / 4",
+          "position": "absolute",
+          "alt": "A rider on a pale gravel path beside a straight canal with grass on both sides."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 600.984375,
+          "height": 600.984375,
+          "imageWidth": 600.984375,
+          "imageHeight": 600.984375,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "John and friends seated together at a table, smiling at the camera."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 308,
+          "height": 308,
+          "imageWidth": 308,
+          "imageHeight": 308,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A rider in a red helmet smiling at the camera on a shaded canal path, with a second rider behind."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 308,
+          "height": 308,
+          "imageWidth": 308,
+          "imageHeight": 308,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Two loaded touring bikes parked in front of a wooden building with a sign reading \"Cr\u00e9on f\u00eate le v\u00e9lo\"."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 308,
+          "height": 308,
+          "imageWidth": 308,
+          "imageHeight": 308,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A rider on a pale gravel path beside a straight canal with grass on both sides."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 308,
+          "height": 308,
+          "imageWidth": 308,
+          "imageHeight": 308,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Two green signs for the Canal du Midi cycle route, one pointing left and one pointing right."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 308,
+          "height": 308,
+          "imageWidth": 308,
+          "imageHeight": 308,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Five riders in cycling jerseys sharing coffee at a caf\u00e9 table."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 308,
+          "height": 308,
+          "imageWidth": 308,
+          "imageHeight": 308,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A rider far ahead on a narrow cobbled strip between two stretches of calm water."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 308,
+          "height": 308,
+          "imageWidth": 308,
+          "imageHeight": 308,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "Three riders in cycling kit posing beside a bike in a town square with a palm tree."
+        },
+        {
+          "class": "photo-crop ratio-1x1",
+          "width": 308,
+          "height": 308,
+          "imageWidth": 308,
+          "imageHeight": 308,
+          "fit": "cover",
+          "aspect": "1 / 1",
+          "position": "absolute",
+          "alt": "A small stone church with a bell tower, with a bicycle leaning near its door."
+        }
+      ]
+    }
+  ]
+}

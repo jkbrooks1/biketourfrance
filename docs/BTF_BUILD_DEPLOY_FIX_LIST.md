@@ -36,12 +36,11 @@ differs and `CI` is not set. All active work is on `main`; the same file already
 
 ---
 
-## D3 — Pages does not read the Sheet, so a Sheet edit does not change the site — **design decision needed**
+## D3 — publishing Sheet edits while Pages builds committed copy — **FIXED / DECIDED 2026-10-05**
 
-**Intent:** `docs/APPROVED_COPY_GATE.md` line 108 states "No Cloudflare Pages variables are needed,
-because the Cloudflare build command stays `npm run build`", and
-`docs/PRODUCTION_CUTOVER_PREFLIGHT.md` §3.0 repeats it.
-**Actual:** the Pages build command is `npx astro build`. Worse, the documented intent is
+**Original documentation:** `docs/APPROVED_COPY_GATE.md` and
+`docs/PRODUCTION_CUTOVER_PREFLIGHT.md` said the Cloudflare build command would stay `npm run build`.
+**Actual:** the Pages build command is `npx astro build`. That earlier plan is
 impossible: `npm run build` sets `BTF_COPY_FIXTURE=1`, and `resolveMode()` refuses fixture copy
 whenever `CF_PAGES` is set, so a Pages build running `npm run build` would fail outright.
 
@@ -49,10 +48,10 @@ Because Pages runs `npx astro build`, it builds from the **committed**
 `src/data/approved-copy.ts`. Editing the Sheet therefore has no effect on staging until that
 generated file is regenerated and committed.
 
-**Two coherent options — pick one:**
+**Options considered:**
 
 - **Option A, keep today's behaviour and document it.** The Sheet is the authority; the generated
-  file is the committed build input; the gate validates each push. Requires: correcting the two
+  file is the committed build input; the Sheet-mode gate validates copy before publication. Requires: correcting the two
   statements above, and accepting that publishing a Sheet edit means running `copy:generate-ts` and
   committing. Lowest risk; the committed file also makes every deploy reproducible.
 - **Option B, make Pages read the Sheet.** Change the Pages build command to the Sheet-mode
@@ -61,8 +60,16 @@ generated file is regenerated and committed.
   Requires putting the service-account key into a second system, and makes builds depend on Google
   being reachable.
 
-**Recommendation:** Option A, plus a one-command script (`npm run copy:publish`) that syncs,
-verifies and commits the generated file, so publishing a Sheet edit is a single step.
+**Decision:** Option A with automated scheduled sync. `.github/workflows/scheduled-copy-sync.yml`
+runs hourly at minute 17 UTC and on manual dispatch. It reads the live Sheet using the existing
+GitHub secrets, completes `npm run predeploy:approved-copy`, and commits and pushes changed
+approved-copy files to `main`. Cloudflare Pages keeps `npx astro build` and reads only the committed
+`src/data/approved-copy.ts`; no Google credential is added to Pages. If validation fails, the
+workflow does not commit. If no files change, it exits successfully without a push. GitHub's
+`GITHUB_TOKEN` push does not start the separate Approved copy check workflow, so the scheduled job's
+predeploy run is the validation for its own commit. D4 must preserve a path for this direct bot
+push, or the scheduled sync will fail when branch protection is enabled. D8 remains separate:
+yellow Sheet rows are not treated differently by this automation.
 
 ---
 
@@ -193,9 +200,9 @@ remote, never pushed. They predate the work now on `main`.
 ## Suggested order
 
 1. **D1, D2, D5, D6, D7, D9** — completed 2026-10-05.
-2. **D3** — decide Option A or B. Everything about how copy is published depends on this.
-3. **D4** — branch protection, once you have decided how you want to push to `main`.
+2. **D3** — Option A with hourly scheduled sync selected and implemented 2026-10-05.
+3. **D4** — branch protection must account for the scheduled workflow's direct push to `main`.
 4. **D8** — review the current yellow rows. The long pole, and a prerequisite for the domain cutover.
 5. **D10** — the retired branch decision remains open.
 
-D3, D4, D8 and D10 remain owner decisions. This cleanup does not change their scope.
+D4, D8 and D10 remain owner decisions. D3 is decided and implemented.
