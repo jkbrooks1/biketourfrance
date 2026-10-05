@@ -2,7 +2,7 @@
 // Covers: one H1, landmarks, skip link, heading order, unique titles and descriptions, canonical URLs,
 // alt text, internal links and fragments, staging noindex, banned content (prices, consent-by-use,
 // stale "upcoming 2026"), JSON-LD types, outline suppression, sitemap, robots.txt, _headers, and the 404 page.
-// Style guide v4.4 checks (with owner amendments 2026-10-05): headings at most 100 characters, button labels at most 32,
+// Style guide v4.4 checks (with owner amendments 2026-10-05): headings at most 100 characters, button labels at most 42,
 // no "#" or empty links, every image has alt text, the audited copy defects stay fixed, spacing and font sizes in
 // the CSS stay on the guide's scale, and no Framer files or references ship.
 import { readdirSync, readFileSync, statSync, existsSync } from 'node:fs';
@@ -167,7 +167,7 @@ for (const { rel, html } of pages) {
   }
   for (const b of html.matchAll(/<a\b[^>]*class="[^"]*\bbtn\b[^"]*"[^>]*>([\s\S]*?)<\/a>/g)) {
     const t = decode(b[1]);
-    if (t.length === 0 || t.length > 32) fail(name, `button label length ${t.length}: "${t}"`);
+    if (t.length === 0 || t.length > 42) fail(name, `button label length ${t.length}: "${t}"`);
   }
   for (const a of html.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/g)) {
     const href = a[1].match(/\shref="([^"]*)"/)?.[1];

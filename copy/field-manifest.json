@@ -2104,5 +2104,23 @@
     "route": "/waitlist-2027/",
     "required": false,
     "codeLocation": "src/pages/waitlist-2027.astro"
+  },
+  {
+    "field": "/tours/cdm_route",
+    "route": "/tours/",
+    "required": true,
+    "codeLocation": "src/data/approved-copy.ts"
+  },
+  {
+    "field": "/tours/pricing_note",
+    "route": "/tours/",
+    "required": true,
+    "codeLocation": "src/data/approved-copy.ts"
+  },
+  {
+    "field": "/resources-page/on_page_sites_label",
+    "route": "/resources/",
+    "required": true,
+    "codeLocation": "src/data/approved-copy.ts"
   }
 ]

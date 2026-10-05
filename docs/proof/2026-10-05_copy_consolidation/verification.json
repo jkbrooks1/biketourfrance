@@ -1,0 +1,16 @@
+{
+  "live_fields_verified": 354,
+  "approved_fields_cleared": 214,
+  "hidden_tabs_verified": 11,
+  "copy_fill_counts_after": {
+    "#FFFFFF": 237,
+    "#FFFF00": 116,
+    "#FFF2CC": 1
+  },
+  "source_tabs_preserved": true,
+  "predeploy": "passed: live Sheet, 354 fields, 12 pages",
+  "astro_check": "0 errors, 0 warnings, 2 pre-existing hints",
+  "copy_tests": "4 named-tab regressions plus 10 existing copy checks passed",
+  "exact_self_guided_cta": "42 visible characters, no double escaping",
+  "source_tabs_values_verified_unchanged": 11
+}

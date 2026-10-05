@@ -1,8 +1,8 @@
 ---
 // The one shared button/link-button. Every call to action on the site uses it.
 // Variants follow style guide v4.4: primary (green fill), secondary (beige fill, green border), tertiary (underlined text).
-// A label is at most 32 characters; the build fails if a label is longer, so a long label cannot ship.
-// Owner decision 2026-10-05: raised from the guide's 24 so the approved 2027 waitlist CTA fits. Style Guide to be updated.
+// A label is at most 42 characters; the build fails if a label is longer, so a long label cannot ship.
+// Owner decision 2026-10-05: limit 42 so the exact approved self-guided CTA ships unchanged.
 interface Props {
   href: string;
   variant?: 'primary' | 'secondary' | 'tertiary';
@@ -12,16 +12,22 @@ const { href, variant = 'primary', class: className } = Astro.props;
 
 if (href === '#' || href === '')
   throw new Error('Button needs a real destination, not "#" or an empty value.');
+// Count the visible label, not Astro's escaped HTML entity spelling. Render the
+// original slot below so apostrophes are escaped once and approved wording is retained.
+const entities: Record<string, string> = {
+  '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"', '&apos;': "'", '&#39;': "'",
+};
 const label = (await Astro.slots.render('default'))
   .replace(/<[^>]*>/g, '')
+  .replace(/&(amp|lt|gt|quot|apos|#39);/g, (entity) => entities[entity] ?? entity)
   .replace(/\s+/g, ' ')
   .trim();
 if (label.length === 0) throw new Error(`Button to ${href} has no label.`);
-if (label.length > 32)
-  throw new Error(`Button label "${label}" is ${label.length} characters; the limit is 32.`);
+if (label.length > 42)
+  throw new Error(`Button label "${label}" is ${label.length} characters; the limit is 42.`);
 const external = /^https?:\/\//.test(href);
 ---
 
 <a class:list={['btn', `btn--${variant}`, className]} href={href} rel={external ? 'noopener' : undefined}>
-  {label}
+  <slot />
 </a>

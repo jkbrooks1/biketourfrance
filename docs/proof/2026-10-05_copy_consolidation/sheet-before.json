@@ -1,0 +1,4560 @@
+{
+  "metadata": {
+    "spreadsheetId": "1vzlhoekeVcx437ajMMFU--1kIrE7DfKYvi8rKhlE9aw",
+    "spreadsheetUrl": "https://docs.google.com/spreadsheets/d/1vzlhoekeVcx437ajMMFU--1kIrE7DfKYvi8rKhlE9aw/edit?ouid=117419745612447434426",
+    "properties": {
+      "title": "BTF_Approved_Site_Copy",
+      "locale": "en_US",
+      "timeZone": "America/Los_Angeles"
+    },
+    "sheets": [
+      {
+        "properties": {
+          "sheetId": 1957325162,
+          "title": "Approved Site Copy",
+          "index": 0,
+          "sheetType": "GRID",
+          "gridProperties": {
+            "rowCount": 1268,
+            "columnCount": 26,
+            "frozenRowCount": 1,
+            "hideGridlines": true,
+            "rowGroupControlAfter": true,
+            "columnGroupControlAfter": true
+          }
+        }
+      },
+      {
+        "properties": {
+          "sheetId": 536219855,
+          "title": "00_GLOBAL",
+          "index": 1,
+          "sheetType": "GRID",
+          "gridProperties": {
+            "rowCount": 1000,
+            "columnCount": 26
+          }
+        }
+      },
+      {
+        "properties": {
+          "sheetId": 21385337,
+          "title": "02_TOURS",
+          "index": 2,
+          "sheetType": "GRID",
+          "gridProperties": {
+            "rowCount": 1000,
+            "columnCount": 26
+          }
+        }
+      },
+      {
+        "properties": {
+          "sheetId": 1190767201,
+          "title": "03_CONTACT",
+          "index": 3,
+          "sheetType": "GRID",
+          "gridProperties": {
+            "rowCount": 1000,
+            "columnCount": 26
+          }
+        }
+      },
+      {
+        "properties": {
+          "sheetId": 826790427,
+          "title": "04_ABOUT",
+          "index": 4,
+          "sheetType": "GRID",
+          "gridProperties": {
+            "rowCount": 1000,
+            "columnCount": 26
+          }
+        }
+      },
+      {
+        "properties": {
+          "sheetId": 1219934417,
+          "title": "05_CDM_TOUR",
+          "index": 5,
+          "sheetType": "GRID",
+          "gridProperties": {
+            "rowCount": 1000,
+            "columnCount": 26
+          }
+        }
+      },
+      {
+        "properties": {
+          "sheetId": 2125627941,
+          "title": "06_RESOURCES",
+          "index": 6,
+          "sheetType": "GRID",
+          "gridProperties": {
+            "rowCount": 1000,
+            "columnCount": 26
+          }
+        }
+      },
+      {
+        "properties": {
+          "sheetId": 277557714,
+          "title": "07_FORMS",
+          "index": 7,
+          "sheetType": "GRID",
+          "gridProperties": {
+            "rowCount": 1000,
+            "columnCount": 26
+          }
+        }
+      },
+      {
+        "properties": {
+          "sheetId": 104305648,
+          "title": "08_COMPONENTS",
+          "index": 8,
+          "sheetType": "GRID",
+          "gridProperties": {
+            "rowCount": 1000,
+            "columnCount": 26
+          }
+        }
+      },
+      {
+        "properties": {
+          "sheetId": 1991619017,
+          "title": "JB_TOUR_OPERATOR_QUESTIONS",
+          "index": 9,
+          "sheetType": "GRID",
+          "gridProperties": {
+            "rowCount": 1000,
+            "columnCount": 4
+          }
+        }
+      },
+      {
+        "properties": {
+          "sheetId": 455889223,
+          "title": "08_POLICY_PAGES",
+          "index": 10,
+          "sheetType": "GRID",
+          "gridProperties": {
+            "rowCount": 1000,
+            "columnCount": 26
+          }
+        }
+      },
+      {
+        "properties": {
+          "sheetId": 345388221,
+          "title": "09_PRACTICAL_INFO",
+          "index": 11,
+          "sheetType": "GRID",
+          "gridProperties": {
+            "rowCount": 1000,
+            "columnCount": 26
+          }
+        }
+      }
+    ]
+  },
+  "live_rows": [
+    [
+      1,
+      [
+        "page/field_name",
+        "copy"
+      ]
+    ],
+    [
+      2,
+      [
+        "/meta_title",
+        "BikeTourFrance.net: small-group bicycle tours in France"
+      ]
+    ],
+    [
+      3,
+      [
+        "/meta_description",
+        "We help cyclists build extraordinary, self-supported bike tours in France!"
+      ]
+    ],
+    [
+      4,
+      [
+        "/header/logo_text",
+        "BikeTourFrance.net"
+      ]
+    ],
+    [
+      5,
+      [
+        "/hero/heading",
+        "Choose your own bike adventure in France?"
+      ]
+    ],
+    [
+      6,
+      [
+        "/hero/body_1",
+        "Join us for a small group guided tour of the historic Canal des Deux Mers between Bordeaux on the Atlantic and Sète on the Mediterranean! We roll in the Spring and Fall of 2027. Or, do the same tour on your own and we'll help with remote support."
+      ]
+    ],
+    [
+      7,
+      [
+        "/hero/body_2",
+        "I love bike touring in France. And I love to help fellow bike travelers have great trips! Roll with one of my small groups or buy a package so you can do the tour on your own (package coming soon!) Or, if you want a hand planning your own bike adventure in France and just want my coaching send me an email. I charge $250 for a 50-minute planning session that includes two follow up emails."
+      ]
+    ],
+    [
+      8,
+      [
+        "/hero/mailing_list_cta",
+        "Sign up for tour updates"
+      ]
+    ],
+    [
+      9,
+      [
+        "/hero/waitlist_cta",
+        "Join our free 2027 tour waitlist"
+      ]
+    ],
+    [
+      10,
+      [
+        "/ready-to-ride/heading",
+        "Ready to ride?"
+      ]
+    ],
+    [
+      11,
+      [
+        "/ready-to-ride/summary_1",
+        "Cross France by bike along the great canals."
+      ]
+    ],
+    [
+      12,
+      [
+        "/ready-to-ride/summary_2",
+        "Canal des Deux Mers from Bordeaux (Atlantic) to Sète (Mediterranean) \"CDM\""
+      ]
+    ],
+    [
+      13,
+      [
+        "/ready-to-ride/summary_3",
+        "Two Spring 2027 tours"
+      ]
+    ],
+    [
+      14,
+      [
+        "/ready-to-ride/summary_4",
+        "Two Fall 2027 tours"
+      ]
+    ],
+    [
+      15,
+      [
+        "/ready-to-ride/ride_facts",
+        "9 ride days. 320+ miles. One rest day in Toulouse."
+      ]
+    ],
+    [
+      16,
+      [
+        "/ready-to-ride/included_heading",
+        "What's included;"
+      ]
+    ],
+    [
+      17,
+      [
+        "/ready-to-ride/included_1",
+        "Ride briefing every morning at breakfast"
+      ]
+    ],
+    [
+      18,
+      [
+        "/ready-to-ride/included_2",
+        "Lodging for duration of the tour; Ride Day Zero (RD00) (arrival) in Bordeaux through Ride Day 09 (RD09) in Sète."
+      ]
+    ],
+    [
+      19,
+      [
+        "/ready-to-ride/included_3",
+        "Dinners together for all Ride Days except RD04 arrival in Toulouse and RD06, arrival in Carcassonne which are \"Dine on your own\" nights. I've learned these are the places people most want to explore on their own."
+      ]
+    ],
+    [
+      20,
+      [
+        "/ready-to-ride/included_4",
+        "All dinner reservations and host coordination"
+      ]
+    ],
+    [
+      21,
+      [
+        "/ready-to-ride/included_5",
+        "Three dinners with local hosts when we are staying at \"Maison d'Hôtes\" (B&B that serves half-board meaning breakfast and dinner.) We won't eat family style but they will join us for conversation before or after our meal. One couple are British ex-pats and have a great perspective on living in Southwest France."
+      ]
+    ],
+    [
+      22,
+      [
+        "/ready-to-ride/included_6",
+        "Routes in special BikeTourFrance RideWithGPS tour specific collection"
+      ]
+    ],
+    [
+      23,
+      [
+        "/ready-to-ride/included_7",
+        "Information on the route about lunch, water, and restroom options on each day's route."
+      ]
+    ],
+    [
+      24,
+      [
+        "/ready-to-ride/included_8",
+        "Access to helpful resources like example packing lists, simple French practice phrases to listen to and repeat, audio history guides for each ride day, history and background document for the entire ride broken down by ride day and geographic area."
+      ]
+    ],
+    [
+      25,
+      [
+        "/ready-to-ride/cdm_heading",
+        "Canal des Deux Mers Tour (CDM)\nSpring & Fall of 2027! Bordeaux start\nAtlantic to Mediterranean"
+      ]
+    ],
+    [
+      26,
+      [
+        "/ready-to-ride/cdm_cta",
+        "Learn about the CDM Tour"
+      ]
+    ],
+    [
+      27,
+      [
+        "/about/heading",
+        "About BikeTourFrance.net"
+      ]
+    ],
+    [
+      28,
+      [
+        "/about/subheading",
+        "Eat. Sleep. Roll. Repeat."
+      ]
+    ],
+    [
+      29,
+      [
+        "/about/body_1",
+        "I'm John—the cyclist behind BikeTourFrance.net. I help riders execute extraordinary bicycle tours in France."
+      ]
+    ],
+    [
+      30,
+      [
+        "/about/body_2",
+        "I personally lead four very small, self-supported group tours each year. Groups have fewer than 12 riders, so I can lead the ride, communicate each day's plan in depth, and give the group the attention it needs."
+      ]
+    ],
+    [
+      31,
+      [
+        "/about/body_3",
+        "If you prefer to travel on your own schedule, I offer a self-guided tour package. I build the routes, book your accommodations, and provide practical support as you prepare for the trip. You ride independently, with a sound plan and help when you need it."
+      ]
+    ],
+    [
+      32,
+      [
+        "/about/body_4",
+        "All BikeTourFrance tours are self-supported. You carry your own gear from place to place. The Canal des Deux Mers is fairly flat, so you do not need to obsess over every gram. But space still matters. Pack less than you think you need."
+      ]
+    ],
+    [
+      33,
+      [
+        "/about/body_5",
+        "Planning a bicycle tour in France gets complex fast. Where you ride, how far you go, where you eat, where you sleep, how trains fit in, and when you stop to see a place all affect one another. A small choice early in the plan can cause a hard day later."
+      ]
+    ],
+    [
+      34,
+      [
+        "/about/body_6",
+        "I have planned and ridden self-supported tours across France. I have also traveled on foot in many parts of the country. I know what works on the ground: routes that make sense, days that fit real riders, places to stay, food stops, train options, and the small details that keep a trip moving well. I also know that coordinating your arrival time with your lodging can make a big difference for everyone."
+      ]
+    ],
+    [
+      35,
+      [
+        "/about/body_7",
+        "Outside of touring, I lead rides for Cascade Bicycle Club in Seattle, work in enterprise technology, and hold DELF B2 certification in French. I'm not a camper—I like a good route, a real bed, a warm shower, and a solid meal at the end of the day. It is France, after all, and I love to eat well."
+      ]
+    ],
+    [
+      36,
+      [
+        "/footer/policies",
+        "Privacy Policy: We collect email and calendar data for webinar registration and scheduling. Data is stored securely and never shared with third parties. Terms of Service: By using our site, you agree to follow all applicable laws and accept our liability limits. BikeTourFrance.net provides advisory services without warranties; users are responsible for their own tour planning and execution. Cookie Policy: We use cookies to track site usage and improve your experience. By continuing to use this site, you consent to cookie usage as required by GDPR and CCPA. Disclaimer: All content is advisory only. We are not liable for injuries, equipment failure, or planning errors resulting from our guidance."
+      ]
+    ],
+    [
+      37,
+      [
+        "/contact/email_cta",
+        "Send us an email!"
+      ]
+    ],
+    [
+      38,
+      [
+        "/gallery/heading",
+        "Tour Gallery"
+      ]
+    ],
+    [
+      39,
+      [
+        "/resources/meta_description",
+        "For cyclists who value authenticity and agency over curated experiences: plan your own bike tour in France with practical guidance on routes, decisions, and real-world tradeoffs."
+      ]
+    ],
+    [
+      40,
+      [
+        "/resources/back_link",
+        "Back to the home page"
+      ]
+    ],
+    [
+      41,
+      [
+        "/resources/helpful_stuff_heading",
+        "Helpful Stuff"
+      ]
+    ],
+    [
+      42,
+      [
+        "/resources/helpful_sites_heading",
+        "Helpful Sites"
+      ]
+    ],
+    [
+      43,
+      [
+        "/resources/helpful_stuff_body",
+        "Planning a successful self-supported bike tour in France requires good structure. Here are some of the templates and examples of how I do it. They're free. Modify as you see fit. I'd love to see what improvements worked well for you!"
+      ]
+    ],
+    [
+      44,
+      [
+        "/resources/helpful_sites_body",
+        "These are cycling and travel resources I trust for their accuracy, depth, and real-world relevance. I selected them because they provide reliable information riders use to plan better bike tours."
+      ]
+    ],
+    [
+      45,
+      [
+        "/resources/helpful_stuff_library_text",
+        "Templates, audio guides, and trusted sites now live in the BikeTourFrance resource library."
+      ]
+    ],
+    [
+      46,
+      [
+        "/resources/helpful_stuff_library_cta",
+        "Open resource library"
+      ]
+    ],
+    [
+      47,
+      [
+        "/404/heading",
+        "Page not found"
+      ]
+    ],
+    [
+      48,
+      [
+        "/404/body",
+        "We could not find that page. It may have moved, or the link may be mistyped."
+      ]
+    ],
+    [
+      49,
+      [
+        "/404/home_cta",
+        "Back to the home page"
+      ]
+    ],
+    [
+      50,
+      [
+        "/404/resources_cta",
+        "Resources"
+      ]
+    ],
+    [
+      51,
+      [
+        "/404/footer_note",
+        "Staging site. Not indexed."
+      ]
+    ],
+    [
+      52,
+      [
+        "/footer/copyright",
+        "© 2026 BikeTourFrance.net"
+      ]
+    ],
+    [
+      53,
+      [
+        "/footer/small_commercial_bottom",
+        "Small-group, self-supported bicycle tours in France, led by John. Eat. Sleep. Roll. Repeat."
+      ]
+    ],
+    [
+      54,
+      [
+        "/footer/nav_explore_heading",
+        "Explore"
+      ]
+    ],
+    [
+      55,
+      [
+        "/footer/nav_legal_heading",
+        "Legal"
+      ]
+    ],
+    [
+      56,
+      [
+        "/buttons/read_more_about_john",
+        "Read more about John"
+      ]
+    ],
+    [
+      57,
+      [
+        "/buttons/more_tour_photos",
+        "More tour photos"
+      ]
+    ],
+    [
+      58,
+      [
+        "/contact/contact_email",
+        "contact@biketourfrance.net"
+      ]
+    ],
+    [
+      59,
+      [
+        "/404-page/body_1",
+        "These pages can help:"
+      ]
+    ],
+    [
+      60,
+      [
+        "/404-page/meta_description",
+        "That page is not on the BikeTourFrance.net website. Use these links to find the tour, resources, or contact page."
+      ]
+    ],
+    [
+      61,
+      [
+        "/about-page/heading_1",
+        "How the tours work"
+      ]
+    ],
+    [
+      62,
+      [
+        "/about-page/heading_2",
+        "Who is planning your trip"
+      ]
+    ],
+    [
+      63,
+      [
+        "/about-page/meta_description",
+        "John leads small, self-supported bicycle tours in France. Learn who he is, how the tours work, and why he plans each day in detail."
+      ]
+    ],
+    [
+      64,
+      [
+        "/about-page/meta_title",
+        "About John"
+      ]
+    ],
+    [
+      65,
+      [
+        "/cdm-facts/text_1",
+        "departures in 2027"
+      ]
+    ],
+    [
+      66,
+      [
+        "/cdm-facts/text_2",
+        "riding days"
+      ]
+    ],
+    [
+      67,
+      [
+        "/cdm-facts/text_3",
+        "Arrive in Bordeaux. Collect a rental e-bike if you booked one."
+      ]
+    ],
+    [
+      68,
+      [
+        "/cdm-facts/text_4",
+        "Ride briefing at breakfast, then wheels roll in the morning."
+      ]
+    ],
+    [
+      69,
+      [
+        "/cdm-facts/text_5",
+        "The group rides the canal path from Bordeaux to Sète, with one rest day and two nights in Toulouse."
+      ]
+    ],
+    [
+      70,
+      [
+        "/cdm-facts/text_6",
+        "Final group night in Sète."
+      ]
+    ],
+    [
+      71,
+      [
+        "/cdm-facts/text_7",
+        "Guests are on their own from the morning."
+      ]
+    ],
+    [
+      72,
+      [
+        "/cdm-facts/text_8",
+        "The second evening in Toulouse includes a dinner at a Michelin restaurant."
+      ]
+    ],
+    [
+      73,
+      [
+        "/cdm-practical/body_2",
+        "Gare Saint-Jean is Bordeaux's main railway station. All recommended hotels are within about 500 m of the station."
+      ]
+    ],
+    [
+      74,
+      [
+        "/cdm-practical/heading_1",
+        "Bordeaux Airport to Gare Saint-Jean and your hotel"
+      ]
+    ],
+    [
+      75,
+      [
+        "/cdm-practical/heading_2",
+        "Your two options"
+      ]
+    ],
+    [
+      76,
+      [
+        "/cdm-practical/heading_3",
+        "Tram Line F"
+      ]
+    ],
+    [
+      77,
+      [
+        "/cdm-practical/heading_4",
+        "30'Direct airport bus"
+      ]
+    ],
+    [
+      78,
+      [
+        "/cdm-practical/heading_5",
+        "Which should I choose?"
+      ]
+    ],
+    [
+      79,
+      [
+        "/cdm-practical/heading_6",
+        "Choose Tram Line F if:"
+      ]
+    ],
+    [
+      80,
+      [
+        "/cdm-practical/heading_7",
+        "Choose the 30'Direct airport bus if:"
+      ]
+    ],
+    [
+      81,
+      [
+        "/cdm-practical/meta_description",
+        "How to get from Bordeaux Airport (Mérignac) to Gare Saint-Jean station and nearby hotels: Tram Line F or the 30'Direct airport bus, with times, costs, and bike rules."
+      ]
+    ],
+    [
+      82,
+      [
+        "/cdm-practical/meta_title",
+        "Bordeaux Airport to Gare Saint-Jean: tram or airport bus"
+      ]
+    ],
+    [
+      83,
+      [
+        "/cdm/aria_1",
+        "Route stops in order"
+      ]
+    ],
+    [
+      84,
+      [
+        "/cdm/body_1",
+        "2027 small-group tour"
+      ]
+    ],
+    [
+      85,
+      [
+        "/cdm/body_2",
+        "From the Atlantic to the Mediterranean, the tour passes through these stops:"
+      ]
+    ],
+    [
+      86,
+      [
+        "/cdm/cta_1",
+        "Ask a question"
+      ]
+    ],
+    [
+      87,
+      [
+        "/cdm/heading_1",
+        "Canal des Deux Mers by bike, Bordeaux to Sète"
+      ]
+    ],
+    [
+      88,
+      [
+        "/cdm/heading_2",
+        "The tour at a glance"
+      ]
+    ],
+    [
+      89,
+      [
+        "/cdm/heading_3",
+        "The route and the week"
+      ]
+    ],
+    [
+      90,
+      [
+        "/cdm/heading_4",
+        "How the week runs"
+      ]
+    ],
+    [
+      91,
+      [
+        "/cdm/heading_5",
+        "Dinner in Toulouse"
+      ]
+    ],
+    [
+      92,
+      [
+        "/cdm/heading_6",
+        "Self-supported means you carry your own gear"
+      ]
+    ],
+    [
+      93,
+      [
+        "/cdm/heading_7",
+        "Earlier tours on this route"
+      ]
+    ],
+    [
+      94,
+      [
+        "/cdm/heading_8",
+        "Photos from the route"
+      ]
+    ],
+    [
+      95,
+      [
+        "/cdm/item_1",
+        "The route is the same on every departure."
+      ]
+    ],
+    [
+      96,
+      [
+        "/cdm/meta_description",
+        "Ride from Bordeaux to Sète along the Canal des Deux Mers with a small, self-supported group. Four departures in 2027: nine riding days, one rest day in Toulouse, 11 nights."
+      ]
+    ],
+    [
+      97,
+      [
+        "/cdm/meta_title",
+        "Canal des Deux Mers by bike, 2027 small-group tour"
+      ]
+    ],
+    [
+      98,
+      [
+        "/contact-page/body_1",
+        "Email is the best way to reach BikeTourFrance.net."
+      ]
+    ],
+    [
+      99,
+      [
+        "/contact-page/body_2",
+        "This website does not have an online sign-up form yet. To hear about exact 2027 dates and pricing when they are announced, email John and ask to be added to the waitlist."
+      ]
+    ],
+    [
+      100,
+      [
+        "/contact-page/heading_2",
+        "Choose a starting point"
+      ]
+    ],
+    [
+      101,
+      [
+        "/contact-page/heading_3",
+        "About the waitlist and the mailing list"
+      ]
+    ],
+    [
+      102,
+      [
+        "/contact-page/meta_description",
+        "Email John with questions about the 2027 Canal des Deux Mers tours, the waitlist, or planning your own bike trip in France."
+      ]
+    ],
+    [
+      103,
+      [
+        "/contact-page/meta_title",
+        "Contact John"
+      ]
+    ],
+    [
+      104,
+      [
+        "/cookies/body_1",
+        "What this website stores in your browser. Last updated October 2, 2026."
+      ]
+    ],
+    [
+      105,
+      [
+        "/cookies/body_2",
+        "This website's code does not set cookies, and it runs no analytics, advertising, or social-media tracking tools. Because of that, it shows no cookie banner and asks for no consent."
+      ]
+    ],
+    [
+      106,
+      [
+        "/cookies/body_3",
+        "If analytics or marketing tools are added later, this page will be updated first, and the site will ask for your choice before any non-essential tool runs."
+      ]
+    ],
+    [
+      107,
+      [
+        "/cookies/body_4",
+        "Links on the Resources page lead to Google Docs, Google Sheets, and other websites. Those sites may set their own cookies once you open them."
+      ]
+    ],
+    [
+      108,
+      [
+        "/cookies/heading_1",
+        "Cookies and tracking on this site"
+      ]
+    ],
+    [
+      109,
+      [
+        "/cookies/heading_2",
+        "If that changes"
+      ]
+    ],
+    [
+      110,
+      [
+        "/cookies/heading_3",
+        "Other sites"
+      ]
+    ],
+    [
+      111,
+      [
+        "/cookies/meta_description",
+        "This BikeTourFrance.net website does not set cookies of its own and runs no analytics or advertising tools."
+      ]
+    ],
+    [
+      112,
+      [
+        "/footer-ui/alt_1",
+        "BikeTourFrance.net logo: a bicycle over a map of France"
+      ]
+    ],
+    [
+      113,
+      [
+        "/photos/text_1",
+        "A cyclist riding away on a paved canal path, with water and green vegetation on both sides and trees in the distance."
+      ]
+    ],
+    [
+      114,
+      [
+        "/photos/text_10",
+        "A rider far ahead on a narrow cobbled strip between two stretches of calm water."
+      ]
+    ],
+    [
+      115,
+      [
+        "/photos/text_11",
+        "A rider in a red helmet smiling at the camera on a shaded canal path, with a second rider behind."
+      ]
+    ],
+    [
+      116,
+      [
+        "/photos/text_12",
+        "A paved path through tall pine trees with a rider in the distance."
+      ]
+    ],
+    [
+      117,
+      [
+        "/photos/text_13",
+        "A small stone church with a bell tower, with a bicycle leaning near its door."
+      ]
+    ],
+    [
+      118,
+      [
+        "/photos/text_14",
+        "A rider taking a selfie on a train next to loaded touring bikes."
+      ]
+    ],
+    [
+      119,
+      [
+        "/photos/text_15",
+        "Two people working on a bicycle wheel together in a workshop."
+      ]
+    ],
+    [
+      120,
+      [
+        "/photos/text_16",
+        "Riders in matching cycling jerseys on a tree-lined path, with more riders behind them."
+      ]
+    ],
+    [
+      121,
+      [
+        "/photos/text_17",
+        "Three riders in cycling kit posing beside a bike in a town square with a palm tree."
+      ]
+    ],
+    [
+      122,
+      [
+        "/photos/text_18",
+        "A long straight paved greenway through pine woods, with one rider ahead in the distance."
+      ]
+    ],
+    [
+      123,
+      [
+        "/photos/text_19",
+        "Illustration of a panda arriving at Bordeaux Airport with a bike case and a backpack."
+      ]
+    ],
+    [
+      124,
+      [
+        "/photos/text_2",
+        "Five riders in cycling jerseys sharing coffee at a café table."
+      ]
+    ],
+    [
+      125,
+      [
+        "/photos/text_20",
+        "Illustration of a panda in an orange scarf standing beside a loaded touring bike, with the words BikeTourFrance.net."
+      ]
+    ],
+    [
+      126,
+      [
+        "/photos/text_3",
+        "John and friends seated together at a table, smiling at the camera."
+      ]
+    ],
+    [
+      127,
+      [
+        "/photos/text_4",
+        "Two loaded touring bikes parked in front of a wooden building with a sign reading \"Créon fête le vélo\"."
+      ]
+    ],
+    [
+      128,
+      [
+        "/photos/text_5",
+        "Two green signs for the Canal du Midi cycle route, one pointing left and one pointing right."
+      ]
+    ],
+    [
+      129,
+      [
+        "/photos/text_6",
+        "Canal du Midi route signs"
+      ]
+    ],
+    [
+      130,
+      [
+        "/photos/text_7",
+        "A touring bike leaning against the front of a small hotel with a blue balcony."
+      ]
+    ],
+    [
+      131,
+      [
+        "/photos/text_8",
+        "Three riders with loaded bikes standing on the pavement outside a hotel entrance."
+      ]
+    ],
+    [
+      132,
+      [
+        "/photos/text_9",
+        "A rider on a pale gravel path beside a straight canal with grass on both sides."
+      ]
+    ],
+    [
+      133,
+      [
+        "/privacy/body_1",
+        "This page describes what this website does today. Last updated October 2, 2026."
+      ]
+    ],
+    [
+      134,
+      [
+        "/privacy/body_2",
+        "Web servers normally record technical details of each visit, such as the page requested and the visitor's IP address. This website is hosted on Cloudflare Pages, which handles those records. John does not receive a copy of them through this website."
+      ]
+    ],
+    [
+      135,
+      [
+        "/privacy/body_3",
+        "The Resources page loads audio files from BikeTourFrance.net's media storage only when you press play. It also links to Google Docs and Google Sheets and to other websites. Those sites have their own privacy practices."
+      ]
+    ],
+    [
+      136,
+      [
+        "/privacy/heading_1",
+        "What this website collects"
+      ]
+    ],
+    [
+      137,
+      [
+        "/privacy/heading_2",
+        "When you email John"
+      ]
+    ],
+    [
+      138,
+      [
+        "/privacy/heading_3",
+        "Hosting and technical logs"
+      ]
+    ],
+    [
+      139,
+      [
+        "/privacy/heading_4",
+        "Other sites and media"
+      ]
+    ],
+    [
+      140,
+      [
+        "/privacy/heading_5",
+        "Questions"
+      ]
+    ],
+    [
+      141,
+      [
+        "/privacy/meta_description",
+        "What the BikeTourFrance.net website does and does not collect, and how email you send to John is handled."
+      ]
+    ],
+    [
+      142,
+      [
+        "/resources-library/text_1",
+        "Complete Canal des Deux Mers audio route guide"
+      ]
+    ],
+    [
+      143,
+      [
+        "/resources-library/text_10",
+        "Riding day 7: Carcassonne to Lézignan-Corbières"
+      ]
+    ],
+    [
+      144,
+      [
+        "/resources-library/text_11",
+        "Riding day 8: Lézignan-Corbières to Capestang"
+      ]
+    ],
+    [
+      145,
+      [
+        "/resources-library/text_12",
+        "Riding day 9: Capestang to Sète"
+      ]
+    ],
+    [
+      146,
+      [
+        "/resources-library/text_13",
+        "Conclusion"
+      ]
+    ],
+    [
+      147,
+      [
+        "/resources-library/text_14",
+        "The Cooking of Southwest France: introduction"
+      ]
+    ],
+    [
+      148,
+      [
+        "/resources-library/text_15",
+        "Bicycle Touring Pack List v2"
+      ]
+    ],
+    [
+      149,
+      [
+        "/resources-library/text_16",
+        "A Google Sheet. Copy it and change it to fit your trip."
+      ]
+    ],
+    [
+      150,
+      [
+        "/resources-library/text_17",
+        "Canal des Deux Mers historical narrative, mobile version"
+      ]
+    ],
+    [
+      151,
+      [
+        "/resources-library/text_18",
+        "Written for the 2026 tour. The history of the route has not changed. Formatted for a phone."
+      ]
+    ],
+    [
+      152,
+      [
+        "/resources-library/text_19",
+        "EuroVelo"
+      ]
+    ],
+    [
+      153,
+      [
+        "/resources-library/text_2",
+        "Introduction"
+      ]
+    ],
+    [
+      154,
+      [
+        "/resources-library/text_20",
+        "France Vélo Tourisme"
+      ]
+    ],
+    [
+      155,
+      [
+        "/resources-library/text_21",
+        "Komoot"
+      ]
+    ],
+    [
+      156,
+      [
+        "/resources-library/text_22",
+        "AF3V (French greenways)"
+      ]
+    ],
+    [
+      157,
+      [
+        "/resources-library/text_23",
+        "SNCF Connect"
+      ]
+    ],
+    [
+      158,
+      [
+        "/resources-library/text_24",
+        "IGN (French national geographic institute)"
+      ]
+    ],
+    [
+      159,
+      [
+        "/resources-library/text_25",
+        "Vélo & Territoires"
+      ]
+    ],
+    [
+      160,
+      [
+        "/resources-library/text_26",
+        "FreeWheelingFrance.com"
+      ]
+    ],
+    [
+      161,
+      [
+        "/resources-library/text_27",
+        "Adventure Cycling Association: what to look for in a touring bike"
+      ]
+    ],
+    [
+      162,
+      [
+        "/resources-library/text_28",
+        "Peak & Coast Cycling Camp"
+      ]
+    ],
+    [
+      163,
+      [
+        "/resources-library/text_29",
+        "Azure Cycle Tours"
+      ]
+    ],
+    [
+      164,
+      [
+        "/resources-library/text_3",
+        "Riding day 1: Bordeaux to La Réole"
+      ]
+    ],
+    [
+      165,
+      [
+        "/resources-library/text_4",
+        "Riding day 2: La Réole to Agen"
+      ]
+    ],
+    [
+      166,
+      [
+        "/resources-library/text_5",
+        "Riding day 3: Agen to Moissac"
+      ]
+    ],
+    [
+      167,
+      [
+        "/resources-library/text_6",
+        "Riding day 4: Moissac to Toulouse"
+      ]
+    ],
+    [
+      168,
+      [
+        "/resources-library/text_7",
+        "Toulouse rest day"
+      ]
+    ],
+    [
+      169,
+      [
+        "/resources-library/text_8",
+        "Riding day 5: Toulouse to Castelnaudary"
+      ]
+    ],
+    [
+      170,
+      [
+        "/resources-library/text_9",
+        "Riding day 6: Castelnaudary to Carcassonne"
+      ]
+    ],
+    [
+      171,
+      [
+        "/resources-page/body_1",
+        "A short history guide for each riding day, from Bordeaux to Sète. Press play to listen here, or download a file to listen offline. The files load only when you press play."
+      ]
+    ],
+    [
+      172,
+      [
+        "/resources-page/heading_1",
+        "Resources for planning and riding"
+      ]
+    ],
+    [
+      173,
+      [
+        "/resources-page/heading_2",
+        "Audio guides for the Canal des Deux Mers"
+      ]
+    ],
+    [
+      174,
+      [
+        "/resources-page/heading_3",
+        "Reading"
+      ]
+    ],
+    [
+      175,
+      [
+        "/terms/body_1",
+        "How to read the information on this website. Last updated October 2, 2026."
+      ]
+    ],
+    [
+      176,
+      [
+        "/terms/body_2",
+        "The tour descriptions on this website are plans, and they can change. Exact dates and pricing for the 2027 tours have not been announced. Deposit, payment, and cancellation terms have not been published."
+      ]
+    ],
+    [
+      177,
+      [
+        "/terms/body_3",
+        "You cannot book or pay for a tour on this website. Asking to join the waitlist by email does not reserve a place. Any booking terms will be given to you in writing before you commit."
+      ]
+    ],
+    [
+      178,
+      [
+        "/terms/body_4",
+        "Information here, including the Practical Information and Resources pages, is general guidance from John's own experience. Transport schedules, fares, and rules come from other organizations and change. Check them with the operator before you travel."
+      ]
+    ],
+    [
+      179,
+      [
+        "/terms/body_5",
+        "This website links to other websites and to files stored elsewhere. BikeTourFrance.net does not control them."
+      ]
+    ],
+    [
+      180,
+      [
+        "/terms/heading_1",
+        "Tour information"
+      ]
+    ],
+    [
+      181,
+      [
+        "/terms/heading_2",
+        "No bookings on this website"
+      ]
+    ],
+    [
+      182,
+      [
+        "/terms/heading_3",
+        "Advice and planning help"
+      ]
+    ],
+    [
+      183,
+      [
+        "/terms/heading_4",
+        "Links to other sites"
+      ]
+    ],
+    [
+      184,
+      [
+        "/terms/meta_description",
+        "Terms for using the BikeTourFrance.net website: tour information may change, no bookings are taken on this site, and links lead to other sites."
+      ]
+    ],
+    [
+      185,
+      [
+        "/tours/body_1",
+        "All BikeTourFrance.net tours are self-supported. You carry your own gear from place to place, and John helps you plan the rest."
+      ]
+    ],
+    [
+      186,
+      [
+        "/tours/body_2",
+        "If you prefer to travel on your own schedule, John offers a self-guided tour package. He builds the routes, books your accommodations, and gives practical support as you prepare. You ride independently, with a sound plan and help when you need it."
+      ]
+    ],
+    [
+      187,
+      [
+        "/tours/body_3",
+        "Details and rates are shared by email, because each trip is different."
+      ]
+    ],
+    [
+      188,
+      [
+        "/tours/body_4",
+        "Want to plan your own adventure in France and only need coaching? Send John an email. He loves helping fellow bike travelers plan a great trip. Materials and support for independent tours are coming soon."
+      ]
+    ],
+    [
+      189,
+      [
+        "/tours/cta_1",
+        "See the 2027 tour"
+      ]
+    ],
+    [
+      190,
+      [
+        "/tours/cta_2",
+        "Ask about self-guided"
+      ]
+    ],
+    [
+      191,
+      [
+        "/tours/cta_3",
+        "Ask about trip planning"
+      ]
+    ],
+    [
+      192,
+      [
+        "/tours/heading_1",
+        "Ways to ride in France with BikeTourFrance.net"
+      ]
+    ],
+    [
+      193,
+      [
+        "/tours/heading_2",
+        "Canal des Deux Mers, 2027"
+      ]
+    ],
+    [
+      194,
+      [
+        "/tours/heading_3",
+        "Trip-planning help"
+      ]
+    ],
+    [
+      195,
+      [
+        "/tours/meta_description",
+        "BikeTourFrance.net offers small-group, self-supported bicycle tours in France, a self-guided tour package, and trip-planning help from John."
+      ]
+    ],
+    [
+      196,
+      [
+        "/tours/meta_title",
+        "Bike tours in France: small-group and self-guided"
+      ]
+    ],
+    [
+      197,
+      [
+        "/waitlist/body_1",
+        "Be among the first to hear when our 2027 tours are ready."
+      ]
+    ],
+    [
+      198,
+      [
+        "/waitlist/body_2",
+        "The waitlist is the simplest way to show interest in a 2027 tour. Tell us your name and the season you prefer. When 2027 tours are finalized, you will hear from us by email. Joining does not commit you to anything."
+      ]
+    ],
+    [
+      199,
+      [
+        "/waitlist/body_3",
+        "Thank you for joining the 2027 waitlist. A confirmation email is on its way. If you don't see it within a few minutes, check your spam folder."
+      ]
+    ],
+    [
+      200,
+      [
+        "/waitlist/cta_1",
+        "Join the 2027 Waitlist"
+      ]
+    ],
+    [
+      201,
+      [
+        "/waitlist/heading_1",
+        "Join the BikeTourFrance.net 2027 Tour Waitlist"
+      ]
+    ],
+    [
+      202,
+      [
+        "/waitlist/heading_2",
+        "You're on the list."
+      ]
+    ],
+    [
+      203,
+      [
+        "/waitlist/label_1",
+        "First name"
+      ]
+    ],
+    [
+      204,
+      [
+        "/waitlist/label_2",
+        "Either"
+      ]
+    ],
+    [
+      205,
+      [
+        "/waitlist/label_3",
+        "Send me BikeTourFrance.net updates by email"
+      ]
+    ],
+    [
+      206,
+      [
+        "/waitlist/label_4",
+        "Leave this field empty"
+      ]
+    ],
+    [
+      207,
+      [
+        "/cdm-facts/copy_1",
+        "Four departures in 2027: two between May 15 and June 15, and two in September."
+      ]
+    ],
+    [
+      208,
+      [
+        "/cdm-facts/copy_10",
+        "A ride briefing each morning at breakfast."
+      ]
+    ],
+    [
+      209,
+      [
+        "/cdm-facts/copy_11",
+        "Routes in a BikeTourFrance.net RideWithGPS collection built for this tour."
+      ]
+    ],
+    [
+      210,
+      [
+        "/cdm-facts/copy_12",
+        "Route notes on lunch, water, and restroom options for each riding day."
+      ]
+    ],
+    [
+      211,
+      [
+        "/cdm-facts/copy_13",
+        "Access to planning resources: packing lists, French phrases to practice, audio history guides for each riding day, and background reading by ride day and region."
+      ]
+    ],
+    [
+      212,
+      [
+        "/cdm-facts/copy_14",
+        "Your travel to Bordeaux and home from Sète. Guests are on their own from Tuesday morning after the final group night."
+      ]
+    ],
+    [
+      213,
+      [
+        "/cdm-facts/copy_15",
+        "Your bicycle. Guests bring their own bikes."
+      ]
+    ],
+    [
+      214,
+      [
+        "/cdm-facts/copy_16",
+        "An e-bike, if you want one. BikeTourFrance.net helps identify a vetted local rental agency in Bordeaux. You contract directly with that agency and must arrive early enough in Bordeaux to collect the bike."
+      ]
+    ],
+    [
+      215,
+      [
+        "/cdm-facts/copy_17",
+        "Front and rear panniers. They are required, and you carry all your own clothing and equipment."
+      ]
+    ],
+    [
+      216,
+      [
+        "/cdm-facts/copy_18",
+        "A phone with a handlebar mount. RideWithGPS navigation on your phone is required."
+      ]
+    ],
+    [
+      217,
+      [
+        "/cdm-facts/copy_19",
+        "Lunches and snacks."
+      ]
+    ],
+    [
+      218,
+      [
+        "/cdm-facts/copy_2",
+        "Exact dates are forthcoming."
+      ]
+    ],
+    [
+      219,
+      [
+        "/cdm-facts/copy_20",
+        "Your two independent dinners, in Toulouse and Carcassonne."
+      ]
+    ],
+    [
+      220,
+      [
+        "/cdm-facts/copy_21",
+        "There is no support van and no luggage transport. You carry everything you bring."
+      ]
+    ],
+    [
+      221,
+      [
+        "/cdm-facts/copy_22",
+        "The Canal des Deux Mers is fairly flat, but space on the bike still matters. Pack less than you think you need."
+      ]
+    ],
+    [
+      222,
+      [
+        "/cdm-facts/copy_23",
+        "Guests ride with RideWithGPS navigation on a phone mounted to the handlebars."
+      ]
+    ],
+    [
+      223,
+      [
+        "/cdm-facts/copy_24",
+        "Toulouse (rest day)"
+      ]
+    ],
+    [
+      224,
+      [
+        "/cdm-facts/copy_25",
+        "Dress expectation: a collared shirt such as a polo for men, and business-casual clothing for women."
+      ]
+    ],
+    [
+      225,
+      [
+        "/cdm-facts/copy_3",
+        "Pricing is to be determined and will be announced before bookings open."
+      ]
+    ],
+    [
+      226,
+      [
+        "/cdm-facts/copy_4",
+        "Bordeaux (Atlantic) to Sète (Mediterranean), the same route on every departure."
+      ]
+    ],
+    [
+      227,
+      [
+        "/cdm-facts/copy_5",
+        "Friday arrival night in Bordeaux."
+      ]
+    ],
+    [
+      228,
+      [
+        "/cdm-facts/copy_6",
+        "Lodging for every tour night through the final night in Sète."
+      ]
+    ],
+    [
+      229,
+      [
+        "/cdm-facts/copy_7",
+        "All breakfasts."
+      ]
+    ],
+    [
+      230,
+      [
+        "/cdm-facts/copy_8",
+        "All dinners, except two independent evenings: the arrival evening in Toulouse and the evening in Carcassonne."
+      ]
+    ],
+    [
+      231,
+      [
+        "/cdm-facts/copy_9",
+        "A Michelin restaurant dinner on the second evening in Toulouse."
+      ]
+    ],
+    [
+      232,
+      [
+        "/nav/home",
+        "Home"
+      ]
+    ],
+    [
+      233,
+      [
+        "/nav/tours",
+        "Tours"
+      ]
+    ],
+    [
+      234,
+      [
+        "/nav/about",
+        "About"
+      ]
+    ],
+    [
+      235,
+      [
+        "/nav/resources",
+        "Resources"
+      ]
+    ],
+    [
+      236,
+      [
+        "/nav/contact",
+        "Contact"
+      ]
+    ],
+    [
+      237,
+      [
+        "/nav/cdm_tour",
+        "Canal des Deux Mers"
+      ]
+    ],
+    [
+      238,
+      [
+        "/nav/practical_info",
+        "Practical information"
+      ]
+    ],
+    [
+      239,
+      [
+        "/nav/privacy",
+        "Privacy"
+      ]
+    ],
+    [
+      240,
+      [
+        "/nav/terms",
+        "Terms"
+      ]
+    ],
+    [
+      241,
+      [
+        "/nav/cookies",
+        "Cookies"
+      ]
+    ],
+    [
+      242,
+      [
+        "/email/general_subject",
+        "Question about BikeTourFrance.net"
+      ]
+    ],
+    [
+      243,
+      [
+        "/email/waitlist_subject",
+        "2027 Canal des Deux Mers waitlist"
+      ]
+    ],
+    [
+      244,
+      [
+        "/email/waitlist_body",
+        "Hello John,\n\nPlease add me to the waitlist for a 2027 Canal des Deux Mers tour.\n\nName:\nNumber of riders:\nPreferred season (spring or September):\n"
+      ]
+    ],
+    [
+      245,
+      [
+        "/email/mailing_list_subject",
+        "BikeTourFrance.net tour updates"
+      ]
+    ],
+    [
+      246,
+      [
+        "/email/mailing_list_body",
+        "Hello John,\n\nPlease send me updates about BikeTourFrance.net tours.\n\nName:\n"
+      ]
+    ],
+    [
+      247,
+      [
+        "/email/planning_subject",
+        "Trip planning help"
+      ]
+    ],
+    [
+      248,
+      [
+        "/email/planning_body",
+        "Hello John,\n\nI would like help planning a bike trip in France.\n\nName:\nWhere I want to ride:\nApproximate time of year:\n"
+      ]
+    ],
+    [
+      249,
+      [
+        "/cdm-facts/t_1",
+        "rest day in Toulouse"
+      ]
+    ],
+    [
+      250,
+      [
+        "/cdm-facts/t_10",
+        "Moissac"
+      ]
+    ],
+    [
+      251,
+      [
+        "/cdm-facts/t_11",
+        "Castelnaudary"
+      ]
+    ],
+    [
+      252,
+      [
+        "/cdm-facts/t_12",
+        "Carcassonne"
+      ]
+    ],
+    [
+      253,
+      [
+        "/cdm-facts/t_13",
+        "Lézignan-Corbières"
+      ]
+    ],
+    [
+      254,
+      [
+        "/cdm-facts/t_14",
+        "Capestang"
+      ]
+    ],
+    [
+      255,
+      [
+        "/cdm-facts/t_15",
+        "Sète"
+      ]
+    ],
+    [
+      256,
+      [
+        "/cdm-facts/t_2",
+        "Friday"
+      ]
+    ],
+    [
+      257,
+      [
+        "/cdm-facts/t_3",
+        "Saturday"
+      ]
+    ],
+    [
+      258,
+      [
+        "/cdm-facts/t_4",
+        "Nine riding days"
+      ]
+    ],
+    [
+      259,
+      [
+        "/cdm-facts/t_5",
+        "Monday"
+      ]
+    ],
+    [
+      260,
+      [
+        "/cdm-facts/t_6",
+        "Tuesday"
+      ]
+    ],
+    [
+      261,
+      [
+        "/cdm-facts/t_7",
+        "Bordeaux"
+      ]
+    ],
+    [
+      262,
+      [
+        "/cdm-facts/t_8",
+        "La Réole"
+      ]
+    ],
+    [
+      263,
+      [
+        "/cdm-facts/t_9",
+        "Agen"
+      ]
+    ],
+    [
+      264,
+      [
+        "/photos/t_1",
+        "Créon"
+      ]
+    ],
+    [
+      265,
+      [
+        "/resources-library/t_1",
+        "RideWithGPS"
+      ]
+    ],
+    [
+      266,
+      [
+        "/cdm-facts/group_size",
+        "Groups run with a minimum of 6 riders. The target is 8, and the maximum is 12."
+      ]
+    ],
+    [
+      267,
+      [
+        "/cdm-practical/frag_1",
+        "Schedules and fares come from the transport operators and were last checked in"
+      ]
+    ],
+    [
+      268,
+      [
+        "/cdm-practical/last_checked",
+        "June 2026"
+      ]
+    ],
+    [
+      269,
+      [
+        "/cdm-practical/frag_2",
+        ". Confirm them with TBM and 30'Direct before you travel."
+      ]
+    ],
+    [
+      270,
+      [
+        "/cdm-practical/frag_3",
+        "Details"
+      ]
+    ],
+    [
+      271,
+      [
+        "/cdm/frag_1",
+        "Nine riding days, one rest day in Toulouse, and 11 nights, led by John."
+      ]
+    ],
+    [
+      272,
+      [
+        "/cdm/frag_2",
+        "Dates and pricing are not final."
+      ]
+    ],
+    [
+      273,
+      [
+        "/cdm/frag_3",
+        "Getting from Bordeaux Airport to the station and hotels"
+      ]
+    ],
+    [
+      274,
+      [
+        "/cdm/frag_4",
+        "BikeTourFrance.net rode the Canal des Deux Mers in September 2026. That tour is finished and is not open for booking. The audio route guides and a historical narrative written for it are still useful for planning, and they live on the"
+      ]
+    ],
+    [
+      275,
+      [
+        "/cdm/frag_5",
+        "Resources page"
+      ]
+    ],
+    [
+      276,
+      [
+        "/contact-page/frag_1",
+        "Write to"
+      ]
+    ],
+    [
+      277,
+      [
+        "/contact-page/frag_2",
+        ", or use the button."
+      ]
+    ],
+    [
+      278,
+      [
+        "/contact-page/frag_3",
+        "Ask to join the 2027 Canal des Deux Mers waitlist"
+      ]
+    ],
+    [
+      279,
+      [
+        "/contact-page/frag_4",
+        "Ask about planning your own trip"
+      ]
+    ],
+    [
+      280,
+      [
+        "/contact-page/frag_5",
+        "Ask any other question"
+      ]
+    ],
+    [
+      281,
+      [
+        "/contact-page/frag_6",
+        "Each link opens your email program with a short message ready to fill in. If it does not open, write to"
+      ]
+    ],
+    [
+      282,
+      [
+        "/contact-page/frag_7",
+        "directly."
+      ]
+    ],
+    [
+      283,
+      [
+        "/privacy/frag_1",
+        "This website has no sign-up form, no account system, and no analytics or advertising tools. It does not set cookies of its own. See the"
+      ]
+    ],
+    [
+      284,
+      [
+        "/privacy/frag_2",
+        "Cookies page"
+      ]
+    ],
+    [
+      285,
+      [
+        "/privacy/frag_3",
+        "If you write to"
+      ]
+    ],
+    [
+      286,
+      [
+        "/privacy/frag_4",
+        ", John receives your message and your email address in his BikeTourFrance.net email account. He uses them to reply to you. Nothing in this website's code sends your message anywhere else."
+      ]
+    ],
+    [
+      287,
+      [
+        "/resources-page/frag_1",
+        "On this page:"
+      ]
+    ],
+    [
+      288,
+      [
+        "/resources-page/frag_10",
+        "French learning audio"
+      ]
+    ],
+    [
+      289,
+      [
+        "/resources-page/frag_2",
+        "Templates"
+      ]
+    ],
+    [
+      290,
+      [
+        "/resources-page/frag_3",
+        "Audio guides"
+      ]
+    ],
+    [
+      291,
+      [
+        "/resources-page/frag_5",
+        "Food"
+      ]
+    ],
+    [
+      292,
+      [
+        "/resources-page/frag_6",
+        "Your browser cannot play this audio. Use the download link instead."
+      ]
+    ],
+    [
+      293,
+      [
+        "/resources-page/frag_7",
+        "Download"
+      ]
+    ],
+    [
+      294,
+      [
+        "/resources-page/frag_8",
+        "French practice"
+      ]
+    ],
+    [
+      295,
+      [
+        "/resources-page/frag_9",
+        "Simple French phrases to listen to and repeat are in the BikeTourFrance.net resource library:"
+      ]
+    ],
+    [
+      296,
+      [
+        "/tours/frag_1",
+        "Self-guided tour package"
+      ]
+    ],
+    [
+      297,
+      [
+        "/waitlist/frag_1",
+        "Email"
+      ]
+    ],
+    [
+      298,
+      [
+        "/waitlist/frag_2",
+        "Which tours interest you?"
+      ]
+    ],
+    [
+      299,
+      [
+        "/waitlist/frag_3",
+        "Spring 2027"
+      ]
+    ],
+    [
+      300,
+      [
+        "/waitlist/frag_4",
+        "Fall 2027"
+      ]
+    ],
+    [
+      301,
+      [
+        "/about-x/p_1",
+        "Want to talk it through?"
+      ]
+    ],
+    [
+      302,
+      [
+        "/about-x/p_2",
+        "Email John with your questions about the 2027 tours or about planning your own trip."
+      ]
+    ],
+    [
+      303,
+      [
+        "/canal-des-deux-mers-practical-info-x/p_1",
+        "Questions about getting to Bordeaux?"
+      ]
+    ],
+    [
+      304,
+      [
+        "/canal-des-deux-mers-practical-info-x/p_2",
+        "Email John and he will help you plan your arrival."
+      ]
+    ],
+    [
+      305,
+      [
+        "/resources-x/p_1",
+        "Resources for planning a self-supported bike tour in France"
+      ]
+    ],
+    [
+      306,
+      [
+        "/resources-x/p_2",
+        "Missing something?"
+      ]
+    ],
+    [
+      307,
+      [
+        "/resources-x/p_3",
+        "Tell John what would make planning easier and he will consider adding it."
+      ]
+    ],
+    [
+      308,
+      [
+        "/cdm-practical/list_1",
+        "Cost: €1.90"
+      ]
+    ],
+    [
+      309,
+      [
+        "/cdm-practical/list_10",
+        "Bike in a case: accepted"
+      ]
+    ],
+    [
+      310,
+      [
+        "/cdm-practical/list_11",
+        "Tickets: online or onboard"
+      ]
+    ],
+    [
+      311,
+      [
+        "/cdm-practical/list_12",
+        "Best for: fastest public option"
+      ]
+    ],
+    [
+      312,
+      [
+        "/cdm-practical/list_13",
+        "Lowest cost matters"
+      ]
+    ],
+    [
+      313,
+      [
+        "/cdm-practical/list_14",
+        "You arrive early or late"
+      ]
+    ],
+    [
+      314,
+      [
+        "/cdm-practical/list_15",
+        "You have a bike case"
+      ]
+    ],
+    [
+      315,
+      [
+        "/cdm-practical/list_16",
+        "You want flexibility"
+      ]
+    ],
+    [
+      316,
+      [
+        "/cdm-practical/list_17",
+        "Fastest journey matters"
+      ]
+    ],
+    [
+      317,
+      [
+        "/cdm-practical/list_18",
+        "You arrive during operating hours"
+      ]
+    ],
+    [
+      318,
+      [
+        "/cdm-practical/list_19",
+        "Extra cost is okay"
+      ]
+    ],
+    [
+      319,
+      [
+        "/cdm-practical/list_2",
+        "Travel time: about 45 minutes"
+      ]
+    ],
+    [
+      320,
+      [
+        "/cdm-practical/list_20",
+        "You want the simplest trip"
+      ]
+    ],
+    [
+      321,
+      [
+        "/cdm-practical/list_3",
+        "Frequency: every 10–15 minutes"
+      ]
+    ],
+    [
+      322,
+      [
+        "/cdm-practical/list_4",
+        "Bike in a case: always allowed"
+      ]
+    ],
+    [
+      323,
+      [
+        "/cdm-practical/list_5",
+        "Tickets: TBM app or machines"
+      ]
+    ],
+    [
+      324,
+      [
+        "/cdm-practical/list_6",
+        "Best for: lowest cost and flexibility"
+      ]
+    ],
+    [
+      325,
+      [
+        "/cdm-practical/list_7",
+        "Cost: €9–10"
+      ]
+    ],
+    [
+      326,
+      [
+        "/cdm-practical/list_8",
+        "Travel time: about 30 minutes"
+      ]
+    ],
+    [
+      327,
+      [
+        "/cdm-practical/list_9",
+        "Schedule: limited window"
+      ]
+    ],
+    [
+      328,
+      [
+        "/cdm-facts/stat_nights",
+        "nights"
+      ]
+    ],
+    [
+      329,
+      [
+        "/ui-included/frag_1",
+        "What is included, and what you arrange separately"
+      ]
+    ],
+    [
+      330,
+      [
+        "/ui-included/frag_2",
+        "Included"
+      ]
+    ],
+    [
+      331,
+      [
+        "/ui-included/frag_3",
+        "You arrange separately"
+      ]
+    ],
+    [
+      332,
+      [
+        "/cdm-practical/q1_title",
+        "What is it?"
+      ]
+    ],
+    [
+      333,
+      [
+        "/cdm-practical/q1_tram",
+        "Direct tram connection from Bordeaux Airport (Mérignac) to Gare Saint-Jean (main train station). Launched Dec 6, 2025."
+      ]
+    ],
+    [
+      334,
+      [
+        "/cdm-practical/q1_bus",
+        "Direct coach shuttle from Bordeaux Airport to Gare Saint-Jean. No intermediate stops, no transfers."
+      ]
+    ],
+    [
+      335,
+      [
+        "/cdm-practical/q2_title",
+        "How often does it run?"
+      ]
+    ],
+    [
+      336,
+      [
+        "/cdm-practical/q2_tram",
+        "Every 10 min (Mon–Sat) / Every 15 min (Sun/holidays). First: ~5am. Last: Midnight (Mon–Wed), 1am (Thu–Sat)"
+      ]
+    ],
+    [
+      337,
+      [
+        "/cdm-practical/q2_bus",
+        "Limited: 07:30–20:05 daily. Mon–Fri: ~22 runs. Sat/Sun: ~14 runs. Not available early morning or late evening."
+      ]
+    ],
+    [
+      338,
+      [
+        "/cdm-practical/q3_title",
+        "How long does it take?"
+      ]
+    ],
+    [
+      339,
+      [
+        "/cdm-practical/q3_tram",
+        "~45 minutes. Direct, no transfers."
+      ]
+    ],
+    [
+      340,
+      [
+        "/cdm-practical/q3_bus",
+        "~30 minutes (traffic dependent)"
+      ]
+    ],
+    [
+      341,
+      [
+        "/cdm-practical/q4_title",
+        "How much does it cost?"
+      ]
+    ],
+    [
+      342,
+      [
+        "/cdm-practical/q4_tram",
+        "€1.90 per ticket"
+      ]
+    ],
+    [
+      343,
+      [
+        "/cdm-practical/q4_bus",
+        "€9 online / €10 on board"
+      ]
+    ],
+    [
+      344,
+      [
+        "/cdm-practical/q5_title",
+        "What about my bike?"
+      ]
+    ],
+    [
+      345,
+      [
+        "/cdm-practical/q5_tram",
+        "✅ Bikes in cases: Always\n✅ Bikes not in cases: 9am–4pm only\n❌ NOT 7am–9am or 4pm–7pm\nPack in case to avoid rush hours.\nTBM Bicycle Rules: 05 57 57 88 88"
+      ]
+    ],
+    [
+      346,
+      [
+        "/cdm-practical/q5_bus",
+        "✅ Bikes in cases: Yes\n✅ Bikes not in cases: Yes\nRequirement: Closed bag, labeled with name, phone, address.\nCarrier may refuse oversized items.\nBikes not in cases = anytime transport (no restrictions).\n30'Direct FAQ: 30direct.com"
+      ]
+    ],
+    [
+      347,
+      [
+        "/cdm-practical/q6_title",
+        "How do I book?"
+      ]
+    ],
+    [
+      348,
+      [
+        "/cdm-practical/q6_tram",
+        "No booking required. Buy ticket at tram stop (vending machine), TBM mobile app (Bordeaux transit app), or Relay newsstand at airport.\n\nTo board: Validate your ticket on the platform or onboard validators (card readers, white validators, or TBM app via Bluetooth). Self-validate and board—no ticket inspection."
+      ]
+    ],
+    [
+      349,
+      [
+        "/cdm-practical/q6_bus",
+        "Book online at 30direct.com or pay €10 on board. Book in advance for €9 rate.\n\nTo board: Show your ticket to the driver (printed, phone e-ticket, or mobile). Tickets can be purchased directly from the driver. Visa/Mastercard accepted onboard (American Express not accepted)."
+      ]
+    ],
+    [
+      350,
+      [
+        "/waitlist/consent_notice",
+        "By clicking Join the 2027 Waitlist, I agree to receive BikeTourFrance.net emails about tours, route guides, and services. I can unsubscribe at any time."
+      ]
+    ],
+    [
+      351,
+      [
+        "/waitlist/meta_title",
+        "Join the 2027 Tour Waitlist"
+      ]
+    ],
+    [
+      352,
+      [
+        "/waitlist/meta_description",
+        "Join the BikeTourFrance.net 2027 tour waitlist and hear first when 2027 tours are finalized."
+      ]
+    ]
+  ],
+  "source_rows": {
+    "00_GLOBAL": [
+      [
+        1,
+        [
+          "/nav/home",
+          "Home",
+          "",
+          ""
+        ]
+      ],
+      [
+        2,
+        [
+          "/nav/tours",
+          "Tours",
+          "",
+          ""
+        ]
+      ],
+      [
+        3,
+        [
+          "/nav/about",
+          "About",
+          "",
+          ""
+        ]
+      ],
+      [
+        4,
+        [
+          "/nav/resources",
+          "Resources",
+          "",
+          ""
+        ]
+      ],
+      [
+        5,
+        [
+          "/nav/contact",
+          "Contact",
+          "",
+          ""
+        ]
+      ],
+      [
+        6,
+        [
+          "/nav/mobile_toggle",
+          "Menu",
+          "",
+          ""
+        ]
+      ],
+      [
+        7,
+        [
+          "/a11y/skip_link",
+          "Skip to main content",
+          "",
+          ""
+        ]
+      ],
+      [
+        8,
+        [
+          "/footer/explore_heading",
+          "Explore",
+          "",
+          ""
+        ]
+      ],
+      [
+        9,
+        [
+          "/footer/legal_heading",
+          "Legal",
+          "",
+          ""
+        ]
+      ],
+      [
+        10,
+        [
+          "/staging-banner",
+          "",
+          "",
+          ""
+        ]
+      ],
+      [
+        11,
+        [
+          "/home/hero/heading",
+          "Choose your own bike adventure in France?",
+          "",
+          ""
+        ]
+      ],
+      [
+        12,
+        [
+          "/home/hero/body1",
+          "Join us for a small group cycling tour of the historic Canal des Deux Mers between Bordeaux on the Atlantic and Sète on the Mediterranean. We roll in the Spring and Fall of 2027. Or, do the same tour on your own and we'll help with remote support.",
+          "",
+          ""
+        ]
+      ],
+      [
+        13,
+        [
+          "/home/hero/body2",
+          "I love bike touring in France. And I love to help fellow bike travelers have great trips. Join one of my small groups or buy a package so you can do the tour on your own (package coming soon.) Or, if you want a hand planning your own bike adventure in France and just want my coaching send me an email. I charge $250 for a 50-minute planning session that includes two follow up emails.",
+          "",
+          ""
+        ]
+      ],
+      [
+        14,
+        [
+          "/home/readyToRide/heading",
+          "Ready to ride?",
+          "",
+          ""
+        ]
+      ],
+      [
+        15,
+        [
+          "/home/readyToRide/summary1",
+          "Cross southwest France by bike along the great canals.",
+          "",
+          ""
+        ]
+      ],
+      [
+        16,
+        [
+          "/home/readyToRide/summary2",
+          "Canal des Deux Mers from Bordeaux (Atlantic) to Sète (Mediterranean) \"CDM\"",
+          "",
+          ""
+        ]
+      ],
+      [
+        17,
+        [
+          "/home/readyToRide/summary3",
+          "Two Spring 2027 tours",
+          "",
+          ""
+        ]
+      ],
+      [
+        18,
+        [
+          "/home/readyToRide/summary4",
+          "Two Fall 2027 tours",
+          "",
+          ""
+        ]
+      ],
+      [
+        19,
+        [
+          "/home/readyToRide/rideFacts",
+          "9 ride days. 320+ miles. One rest day in Toulouse.",
+          "",
+          ""
+        ]
+      ],
+      [
+        20,
+        [
+          "/home/readyToRide/includedHeading",
+          "What's included",
+          "",
+          ""
+        ]
+      ],
+      [
+        21,
+        [
+          "/home/readyToRide/included/1",
+          "Ride briefing every morning at breakfast",
+          "",
+          ""
+        ]
+      ],
+      [
+        22,
+        [
+          "/home/readyToRide/included/2",
+          "Lodging for duration of the tour; Ride Day Zero (RD00 - arrival) in Bordeaux through Ride Day 09 (RD09) in Sète.",
+          "",
+          ""
+        ]
+      ],
+      [
+        23,
+        [
+          "/home/readyToRide/included/3",
+          "Dinners together for all Ride Days except RD04 arrival in Toulouse and RD06, arrival in Carcassonne which are \"Dine on your own\" nights. I've learned these are the places people most want to explore on their own.",
+          "",
+          ""
+        ]
+      ],
+      [
+        24,
+        [
+          "/home/readyToRide/included/4",
+          "All dinner reservations and host coordination",
+          "",
+          ""
+        ]
+      ],
+      [
+        25,
+        [
+          "/home/readyToRide/included/5",
+          "Three dinners with local hosts when we are staying at \"Maison d'Hôtes\" (B&B that serves half-board meaning breakfast and dinner.) We won't eat family style but they will join us for conversation before or after our meal. One couple are British ex-pats and have a great perspective on living in Southwest France.",
+          "",
+          ""
+        ]
+      ],
+      [
+        26,
+        [
+          "/home/readyToRide/included/6",
+          "Routes in special BikeTourFrance.net RideWithGPS tour specific collection",
+          "",
+          ""
+        ]
+      ],
+      [
+        27,
+        [
+          "/home/readyToRide/included/7",
+          "Information on the route about lunch, water, and restroom options on each day's route.",
+          "",
+          ""
+        ]
+      ],
+      [
+        28,
+        [
+          "/home/readyToRide/included/8",
+          "Access to helpful resources like example packing lists, simple French practice phrases to listen to and repeat, audio history guides for each ride day, history and background document for the entire ride broken down by ride day and geographic area.",
+          "",
+          ""
+        ]
+      ],
+      [
+        29,
+        [
+          "/home/readyToRide/cdmHeading",
+          "Canal des Deux Mers Tour (CDM)",
+          "",
+          ""
+        ]
+      ],
+      [
+        30,
+        [
+          "/home/readyToRide/cdmLines/1",
+          "Spring & Fall of 2027. Bordeaux start",
+          "",
+          ""
+        ]
+      ],
+      [
+        31,
+        [
+          "/home/readyToRide/cdmLines/2",
+          "Atlantic to Mediterranean",
+          "",
+          ""
+        ]
+      ],
+      [
+        32,
+        [
+          "/home/about/heading",
+          "About BikeTourFrance.net",
+          "",
+          ""
+        ]
+      ],
+      [
+        33,
+        [
+          "/home/about/subheading",
+          "Eat. Sleep. Roll. Repeat.",
+          "",
+          ""
+        ]
+      ],
+      [
+        34,
+        [
+          "/home/gallery/heading",
+          "Tour Gallery",
+          "",
+          ""
+        ]
+      ],
+      [
+        35,
+        [
+          "/home/hero/waitlistCta",
+          "Join the 2027 waitlist",
+          "",
+          ""
+        ]
+      ],
+      [
+        36,
+        [
+          "/home/hero/mailingListCta",
+          "Get tour updates",
+          "",
+          ""
+        ]
+      ],
+      [
+        37,
+        [
+          "/contact/emailCta",
+          "Question? Send us an email",
+          "",
+          ""
+        ]
+      ],
+      [
+        38,
+        [
+          "/resources/libraryCta",
+          "Open resource library",
+          "",
+          ""
+        ]
+      ]
+    ],
+    "02_TOURS": [
+      [
+        1,
+        [
+          "/tours/heading",
+          "Ride in France",
+          "",
+          ""
+        ]
+      ],
+      [
+        2,
+        [
+          "/tours/eyebrow",
+          "Tours",
+          "",
+          ""
+        ]
+      ],
+      [
+        3,
+        [
+          "/tours/lede",
+          "BikeTourFrance.net tours are self-supported. You carry your own gear from place to place but we'll help you plan how to do that before you leave home.",
+          "",
+          ""
+        ]
+      ],
+      [
+        4,
+        [
+          "/tours/section_group_heading",
+          "Canal des Deux Mers 2027",
+          "",
+          ""
+        ]
+      ],
+      [
+        5,
+        [
+          "/tours/section_group_cta",
+          "2027 CDM Tour Overview",
+          "",
+          ""
+        ]
+      ],
+      [
+        6,
+        [
+          "/tours/section_selfguided_heading",
+          "Roll on your own",
+          "",
+          ""
+        ]
+      ],
+      [
+        7,
+        [
+          "/tours/section_selfguided_body",
+          "If you prefer to travel on your own schedule, we offer a self-guided tour package. I build the routes, book your accommodations, and provide practical support as you prepare. You ride independently, with a sound plan and help when you need it.",
+          "",
+          ""
+        ]
+      ],
+      [
+        8,
+        [
+          "/tours/section_selfguided_info",
+          "",
+          "",
+          ""
+        ]
+      ],
+      [
+        9,
+        [
+          "/tours/section_selfguided_cta",
+          "I'm interested in a self-guided experience",
+          "",
+          ""
+        ]
+      ],
+      [
+        10,
+        [
+          "/tours/section_coaching_heading",
+          "Trip-planning help",
+          "",
+          ""
+        ]
+      ],
+      [
+        11,
+        [
+          "/tours/section_coaching_body",
+          "Want to plan your own adventure in France and only need coaching? Send me an email. I love helping fellow bike travelers plan a great trip. Materials and support for independent tours are coming soon.",
+          "",
+          ""
+        ]
+      ],
+      [
+        12,
+        [
+          "/tours/section_coaching_cta",
+          "Ask about trip planning",
+          "",
+          ""
+        ]
+      ],
+      [
+        13,
+        [
+          "/tours/cdm_facts/route",
+          "Bordeaux (Atlantic) to Sète (Mediterranean)",
+          "",
+          ""
+        ]
+      ],
+      [
+        14,
+        [
+          "/tours/cdm_facts/departures",
+          "Four departures in 2027: two between May 15 and June 15, and two in September.",
+          "",
+          ""
+        ]
+      ],
+      [
+        15,
+        [
+          "/tours/cdm_facts/datesNote",
+          "Exact dates are forthcoming.",
+          "",
+          ""
+        ]
+      ],
+      [
+        16,
+        [
+          "/tours/cdm_facts/pricingNote",
+          "Pricing is being worked on right now and will be announced before booking opens.",
+          "",
+          ""
+        ]
+      ]
+    ],
+    "03_CONTACT": [
+      [
+        1,
+        [
+          "/contact/eyebrow",
+          ""
+        ]
+      ],
+      [
+        2,
+        [
+          "/contact/h1",
+          ""
+        ]
+      ],
+      [
+        3,
+        [
+          "/contact/lede",
+          "Email is the best way to reach us."
+        ]
+      ],
+      [
+        4,
+        [
+          "/contact/intro_text",
+          "Write to contact@biketourfrance.net. Or hit the button!"
+        ]
+      ],
+      [
+        5,
+        [
+          "/contact/section_heading"
+        ]
+      ],
+      [
+        6,
+        [
+          "/contact/link_1",
+          "Join the free 2027 Canal des Deux Mers waitlist"
+        ]
+      ],
+      [
+        7,
+        [
+          "/contact/link_2"
+        ]
+      ],
+      [
+        8,
+        [
+          "/contact/link_3",
+          "Ask a question"
+        ]
+      ],
+      [
+        9,
+        [
+          "/contact/fallback_text"
+        ]
+      ],
+      [
+        10,
+        [
+          "/contact/section_2_heading",
+          "About the waitlist and the mailing list"
+        ]
+      ],
+      [
+        11,
+        [
+          "/contact/section_2_text"
+        ]
+      ]
+    ],
+    "04_ABOUT": [
+      [
+        1,
+        [
+          "/about/section_how_heading",
+          "How the tours work"
+        ]
+      ],
+      [
+        2,
+        [
+          "/about/section_who_heading",
+          "Who is planning your trip"
+        ]
+      ],
+      [
+        3,
+        [
+          "/about/contact_cta_heading",
+          "Want to talk it through?"
+        ]
+      ],
+      [
+        4,
+        [
+          "/about/contact_cta_text",
+          "Email John with your questions about the 2027 tours or about planning your own trip."
+        ]
+      ]
+    ],
+    "05_CDM_TOUR": [
+      [
+        1,
+        [
+          "/canal-des-deux-mers/eyebrow",
+          "2027 small-group tour",
+          "",
+          ""
+        ]
+      ],
+      [
+        2,
+        [
+          "/canal-des-deux-mers/h1",
+          "Canal des Deux Mers by bike, Bordeaux to Sète",
+          "",
+          ""
+        ]
+      ],
+      [
+        3,
+        [
+          "/canal-des-deux-mers/lede_extra",
+          "Nine riding days, one rest day in Toulouse, and 11 nights, led by John",
+          "",
+          ""
+        ]
+      ],
+      [
+        4,
+        [
+          "/canal-des-deux-mers/button_ask",
+          "Ask a question",
+          "",
+          ""
+        ]
+      ],
+      [
+        5,
+        [
+          "/canal-des-deux-mers/at_a_glance_heading",
+          "The tour at a glance",
+          "",
+          ""
+        ]
+      ],
+      [
+        6,
+        [
+          "/canal-des-deux-mers/route_same",
+          "The route is the same on every departure.",
+          "",
+          ""
+        ]
+      ],
+      [
+        7,
+        [
+          "/canal-des-deux-mers/groups_size",
+          "Groups run with a minimum of {min} riders. The target is {target}, and the maximum is {max}.",
+          "",
+          ""
+        ]
+      ],
+      [
+        8,
+        [
+          "/canal-des-deux-mers/route_heading",
+          "The route and the week",
+          "",
+          ""
+        ]
+      ],
+      [
+        9,
+        [
+          "/canal-des-deux-mers/stops_intro",
+          "From the Atlantic to the Mediterranean, the tour passes through these stops:",
+          "",
+          ""
+        ]
+      ],
+      [
+        10,
+        [
+          "/canal-des-deux-mers/week_runs_heading",
+          "How the week runs",
+          "",
+          ""
+        ]
+      ],
+      [
+        11,
+        [
+          "/canal-des-deux-mers/toulouse_dinner_heading",
+          "Dinner in Toulouse",
+          "",
+          ""
+        ]
+      ],
+      [
+        12,
+        [
+          "/canal-des-deux-mers/self_supported_heading",
+          "Self-supported means you carry your own gear",
+          "",
+          ""
+        ]
+      ],
+      [
+        13,
+        [
+          "/canal-des-deux-mers/practical_link",
+          "Getting from Bordeaux Airport to the station and hotels",
+          "",
+          ""
+        ]
+      ],
+      [
+        14,
+        [
+          "/canal-des-deux-mers/history_heading",
+          "Earlier tours on this route",
+          "",
+          ""
+        ]
+      ],
+      [
+        15,
+        [
+          "/canal-des-deux-mers/history_text",
+          "BikeTourFrance.net rode the Canal des Deux Mers in September 2026. That tour is finished and is not open for booking. The audio route guides and a historical narrative written for it are still useful for planning, and they live on the Resources page.",
+          "",
+          ""
+        ]
+      ],
+      [
+        16,
+        [
+          "/canal-des-deux-mers/gallery_heading",
+          "Photos from the route",
+          "",
+          ""
+        ]
+      ],
+      [
+        17,
+        [
+          "/canal-des-deux-mers/facts/route",
+          "Bordeaux (Atlantic) to Sète (Mediterranean), the same route on every departure.",
+          "",
+          ""
+        ]
+      ],
+      [
+        18,
+        [
+          "/canal-des-deux-mers/facts/departures",
+          "Four departures in 2027: two between May 15 and June 15, and two in September.",
+          "",
+          ""
+        ]
+      ],
+      [
+        19,
+        [
+          "/canal-des-deux-mers/facts/datesNote",
+          "Exact dates are forthcoming.",
+          "",
+          ""
+        ]
+      ],
+      [
+        20,
+        [
+          "/canal-des-deux-mers/facts/pricingNote",
+          "Pricing is to be determined and will be announced before bookings open.",
+          "",
+          ""
+        ]
+      ],
+      [
+        21,
+        [
+          "/canal-des-deux-mers/stats/1",
+          "4 departures in 2027",
+          "",
+          ""
+        ]
+      ],
+      [
+        22,
+        [
+          "/canal-des-deux-mers/stats/2",
+          "9 riding days",
+          "",
+          ""
+        ]
+      ],
+      [
+        23,
+        [
+          "/canal-des-deux-mers/stats/3",
+          "1 rest day in Toulouse",
+          "",
+          ""
+        ]
+      ],
+      [
+        24,
+        [
+          "/canal-des-deux-mers/stats/4",
+          "11 nights",
+          "",
+          ""
+        ]
+      ],
+      [
+        25,
+        [
+          "/canal-des-deux-mers/stops/1",
+          "Bordeaux",
+          "",
+          ""
+        ]
+      ],
+      [
+        26,
+        [
+          "/canal-des-deux-mers/stops/2",
+          "La Réole",
+          "",
+          ""
+        ]
+      ],
+      [
+        27,
+        [
+          "/canal-des-deux-mers/stops/3",
+          "Agen",
+          "",
+          ""
+        ]
+      ],
+      [
+        28,
+        [
+          "/canal-des-deux-mers/stops/4",
+          "Moissac",
+          "",
+          ""
+        ]
+      ],
+      [
+        29,
+        [
+          "/canal-des-deux-mers/stops/5",
+          "Toulouse (rest day)",
+          "",
+          ""
+        ]
+      ],
+      [
+        30,
+        [
+          "/canal-des-deux-mers/stops/6",
+          "Castelnaudary",
+          "",
+          ""
+        ]
+      ],
+      [
+        31,
+        [
+          "/canal-des-deux-mers/stops/7",
+          "Carcassonne",
+          "",
+          ""
+        ]
+      ],
+      [
+        32,
+        [
+          "/canal-des-deux-mers/stops/8",
+          "Lézignan-Corbières",
+          "",
+          ""
+        ]
+      ],
+      [
+        33,
+        [
+          "/canal-des-deux-mers/stops/9",
+          "Capestang",
+          "",
+          ""
+        ]
+      ],
+      [
+        34,
+        [
+          "/canal-des-deux-mers/stops/10",
+          "Sète",
+          "",
+          ""
+        ]
+      ],
+      [
+        35,
+        [
+          "/canal-des-deux-mers/week_plan/friday",
+          "Friday: Arrive in Bordeaux. Collect a rental e-bike if you booked one. Dinner with the group",
+          "",
+          ""
+        ]
+      ],
+      [
+        36,
+        [
+          "/canal-des-deux-mers/week_plan/saturday",
+          "Saturday: Packed and ready to roll at breakfast. Ride briefing at breakfast. Rolling by 8:45AM",
+          "",
+          ""
+        ]
+      ],
+      [
+        37,
+        [
+          "/canal-des-deux-mers/week_plan/riding_days",
+          "Nine riding days: The group rides the canal path from Bordeaux to Sète, with one rest day and two nights in Toulouse.",
+          "",
+          ""
+        ]
+      ],
+      [
+        38,
+        [
+          "/canal-des-deux-mers/week_plan/monday",
+          "Monday: Final group night in Sète; dinner and good-byes.",
+          "",
+          ""
+        ]
+      ],
+      [
+        39,
+        [
+          "/canal-des-deux-mers/week_plan/tuesday",
+          "Tuesday: Participants on their own from the morning. I have had many suggestions that people plan an extra day in Sète because it is a very cool Mediterranean beach town with lots of canals!",
+          "",
+          ""
+        ]
+      ],
+      [
+        40,
+        [
+          "/canal-des-deux-mers/toulouse_dinner/text",
+          "The second evening in Toulouse includes a dinner at a Michelin star'd restaurant. Not at all fancy but may well be one of your favorite meals.",
+          "",
+          ""
+        ]
+      ],
+      [
+        41,
+        [
+          "/canal-des-deux-mers/toulouse_dinner/dress",
+          "Dress expectation: a collared shirt such as a polo for men, and business-casual clothing for women. France in general and particularly the southwest is fairly casual. ",
+          "",
+          ""
+        ]
+      ],
+      [
+        42,
+        [
+          "/canal-des-deux-mers/included/1",
+          "Friday arrival night in Bordeaux.",
+          "",
+          ""
+        ]
+      ],
+      [
+        43,
+        [
+          "/canal-des-deux-mers/included/2",
+          "Lodging for every tour night through the final night in Sète.",
+          "",
+          ""
+        ]
+      ],
+      [
+        44,
+        [
+          "/canal-des-deux-mers/included/3",
+          "All breakfasts.",
+          "",
+          ""
+        ]
+      ],
+      [
+        45,
+        [
+          "/canal-des-deux-mers/included/4",
+          "All dinners, except two independent evenings: the arrival evening in Toulouse and the evening in Carcassonne.",
+          "",
+          ""
+        ]
+      ],
+      [
+        46,
+        [
+          "/canal-des-deux-mers/included/5",
+          "A Michelin star'd restaurant dinner on the second evening in Toulouse.",
+          "",
+          ""
+        ]
+      ],
+      [
+        47,
+        [
+          "/canal-des-deux-mers/included/6",
+          "A ride briefing each morning at breakfast.",
+          "",
+          ""
+        ]
+      ],
+      [
+        48,
+        [
+          "/canal-des-deux-mers/included/7",
+          "Routes in a BikeTourFrance.net RideWithGPS collection built for this tour.",
+          "",
+          ""
+        ]
+      ],
+      [
+        49,
+        [
+          "/canal-des-deux-mers/included/8",
+          "Route notes on lunch, water, and restroom options for each riding day.",
+          "",
+          ""
+        ]
+      ],
+      [
+        50,
+        [
+          "/canal-des-deux-mers/included/9",
+          "Access to planning resources: packing lists, French phrases to practice, audio history guides for each riding day, and background reading by ride day and region.",
+          "",
+          ""
+        ]
+      ]
+    ],
+    "06_RESOURCES": [
+      [
+        1,
+        [
+          "/resources/eyebrow",
+          "Resources"
+        ]
+      ],
+      [
+        2,
+        [
+          "/resources/h1",
+          "Resources for planning and riding",
+          ""
+        ]
+      ],
+      [
+        3,
+        [
+          "/resources/on_page_text",
+          "On this page: Templates, Audio guides, Reading, Helpful sites.",
+          ""
+        ]
+      ],
+      [
+        4,
+        [
+          "/resources/templates_heading",
+          "Templates",
+          ""
+        ]
+      ],
+      [
+        5,
+        [
+          "/resources/audio_heading",
+          "Audio guides for the Canal des Deux Mers",
+          ""
+        ]
+      ],
+      [
+        6,
+        [
+          "/resources/audio_intro",
+          "A short history guide for each riding day, from Bordeaux to Sète. Press play to listen here, or download a file to listen offline. The files load only when you press play.",
+          ""
+        ]
+      ],
+      [
+        7,
+        [
+          "/resources/food_heading",
+          "Food",
+          ""
+        ]
+      ],
+      [
+        8,
+        [
+          "/resources/french_heading",
+          "French practice",
+          ""
+        ]
+      ],
+      [
+        9,
+        [
+          "/resources/french_text",
+          "Simple French phrases to listen to and repeat are in the BikeTourFrance.net resource library: French learning audio.",
+          ""
+        ]
+      ],
+      [
+        10,
+        [
+          "/resources/reading_heading",
+          "Reading",
+          ""
+        ]
+      ],
+      [
+        11,
+        [
+          "/resources/helpful_sites_heading",
+          "Helpful Sites (from approved-copy)",
+          ""
+        ]
+      ],
+      [
+        12,
+        [
+          "/resources/contact_cta_heading",
+          "Missing something?",
+          ""
+        ]
+      ],
+      [
+        13,
+        [
+          "/resources/contact_cta_text",
+          "Tell John what would make planning easier and he will consider adding it.",
+          ""
+        ]
+      ],
+      [
+        14,
+        [
+          "/resources/audio_guides/complete",
+          "Complete Canal des Deux Mers audio route guide",
+          ""
+        ]
+      ],
+      [
+        15,
+        [
+          "/resources/audio_guides/intro",
+          "Introduction",
+          ""
+        ]
+      ],
+      [
+        16,
+        [
+          "/resources/audio_guides/rd1",
+          "Riding day 1: Bordeaux to La Réole",
+          ""
+        ]
+      ],
+      [
+        17,
+        [
+          "/resources/audio_guides/rd2",
+          "Riding day 2: La Réole to Agen",
+          ""
+        ]
+      ],
+      [
+        18,
+        [
+          "/resources/audio_guides/rd3",
+          "Riding day 3: Agen to Moissac",
+          ""
+        ]
+      ],
+      [
+        19,
+        [
+          "/resources/audio_guides/rd4",
+          "Riding day 4: Moissac to Toulouse",
+          ""
+        ]
+      ],
+      [
+        20,
+        [
+          "/resources/audio_guides/rest",
+          "Toulouse rest day",
+          ""
+        ]
+      ],
+      [
+        21,
+        [
+          "/resources/audio_guides/rd5",
+          "Riding day 5: Toulouse to Castelnaudary",
+          ""
+        ]
+      ],
+      [
+        22,
+        [
+          "/resources/audio_guides/rd6",
+          "Riding day 6: Castelnaudary to Carcassonne",
+          ""
+        ]
+      ],
+      [
+        23,
+        [
+          "/resources/audio_guides/rd7",
+          "Riding day 7: Carcassonne to Tourouzelle",
+          ""
+        ]
+      ],
+      [
+        24,
+        [
+          "/resources/audio_guides/rd8",
+          "Riding day 8: Tourouzelle to Capestang",
+          ""
+        ]
+      ],
+      [
+        25,
+        [
+          "/resources/audio_guides/rd9",
+          "Riding day 9: Capestang to Sète",
+          ""
+        ]
+      ],
+      [
+        26,
+        [
+          "/resources/audio_guides/conclusion",
+          "Conclusion",
+          ""
+        ]
+      ],
+      [
+        27,
+        [
+          "/resources/food_audio",
+          "The Cooking of Southwest France: introduction",
+          ""
+        ]
+      ],
+      [
+        28,
+        [
+          "/resources/templates/packing_list",
+          "Bicycle Touring Pack List v2",
+          ""
+        ]
+      ],
+      [
+        29,
+        [
+          "/resources/narratives/historical",
+          "Canal des Deux Mers historical narrative, mobile version",
+          ""
+        ]
+      ],
+      [
+        30,
+        [
+          "/resources/trusted_sites/eurovelo",
+          "EuroVelo",
+          ""
+        ]
+      ],
+      [
+        31,
+        [
+          "/resources/trusted_sites/france_velo",
+          "France Vélo Tourisme",
+          ""
+        ]
+      ],
+      [
+        32,
+        [
+          "/resources/trusted_sites/komoot",
+          "Komoot",
+          ""
+        ]
+      ],
+      [
+        33,
+        [
+          "/resources/trusted_sites/ridewithgps",
+          "RideWithGPS",
+          ""
+        ]
+      ],
+      [
+        34,
+        [
+          "/resources/trusted_sites/af3v",
+          "AF3V (French greenways)",
+          ""
+        ]
+      ],
+      [
+        35,
+        [
+          "/resources/trusted_sites/sncf",
+          "SNCF Connect",
+          ""
+        ]
+      ],
+      [
+        36,
+        [
+          "/resources/trusted_sites/ign",
+          "IGN (French national geographic institute)",
+          ""
+        ]
+      ],
+      [
+        37,
+        [
+          "/resources/trusted_sites/velo_territoires",
+          "Vélo & Territoires",
+          ""
+        ]
+      ],
+      [
+        38,
+        [
+          "/resources/trusted_sites/freewheeling",
+          "FreeWheelingFrance.com",
+          ""
+        ]
+      ],
+      [
+        39,
+        [
+          "/resources/trusted_sites/adventure_cycling",
+          "Adventure Cycling Association: what to look for in a touring bike",
+          ""
+        ]
+      ],
+      [
+        40,
+        [
+          "/resources/trusted_sites/peak_coast",
+          "Peak & Coast Cycling Camp",
+          ""
+        ]
+      ],
+      [
+        41,
+        [
+          "/resources/trusted_sites/azure",
+          "Azure Cycle Tours",
+          ""
+        ]
+      ]
+    ],
+    "07_FORMS": [
+      [
+        1,
+        [
+          "/waitlist-2027/h1",
+          "Join the BikeTourFrance.net 2027 Tour Waitlist",
+          "",
+          ""
+        ]
+      ],
+      [
+        2,
+        [
+          "/waitlist-2027/p",
+          "Stay up to speed on the 2027 tours",
+          "",
+          ""
+        ]
+      ],
+      [
+        3,
+        [
+          "/waitlist-2027/intro",
+          "The waitlist is the simplest way to show interest in a 2027 tour. Tell us your name and the season you prefer. When 2027 tours are finalized, you will hear from us by email. Joining does not commit you to anything.",
+          "",
+          ""
+        ]
+      ],
+      [
+        4,
+        [
+          "/waitlist-2027/success_h2",
+          "You're on the list.",
+          "",
+          ""
+        ]
+      ],
+      [
+        5,
+        [
+          "/waitlist-2027/success_p",
+          "Thank you for joining the 2027 waitlist. A confirmation email is on its way. If you don't see it within a few minutes, check your spam folder.",
+          "",
+          ""
+        ]
+      ],
+      [
+        6,
+        [
+          "/waitlist-2027/first_name_label",
+          "First name",
+          "",
+          ""
+        ]
+      ],
+      [
+        7,
+        [
+          "/waitlist-2027/email_label",
+          "Email",
+          "",
+          ""
+        ]
+      ],
+      [
+        8,
+        [
+          "/waitlist-2027/interest_legend",
+          "Which tours interest you?",
+          "",
+          ""
+        ]
+      ],
+      [
+        9,
+        [
+          "/waitlist-2027/interest_spring",
+          "Spring 2027",
+          "",
+          ""
+        ]
+      ],
+      [
+        10,
+        [
+          "/waitlist-2027/interest_fall",
+          "Fall 2027",
+          "",
+          ""
+        ]
+      ],
+      [
+        11,
+        [
+          "/waitlist-2027/interest_either",
+          "Either",
+          "",
+          ""
+        ]
+      ],
+      [
+        12,
+        [
+          "/waitlist-2027/marketing_label",
+          "Send me BikeTourFrance.net updates by email",
+          "",
+          ""
+        ]
+      ],
+      [
+        13,
+        [
+          "/waitlist-2027/consent_notice",
+          "By clicking Join the 2027 Waitlist, I agree to receive BikeTourFrance.net emails about tours, route guides, and services. I can unsubscribe at any time.",
+          "",
+          ""
+        ]
+      ],
+      [
+        14,
+        [
+          "/waitlist-2027/submit_button",
+          "Join the 2027 Waitlist",
+          "",
+          ""
+        ]
+      ]
+    ],
+    "08_COMPONENTS": [
+      [
+        1,
+        [
+          "/review-note/title",
+          "Draft for owner review."
+        ]
+      ],
+      [
+        2,
+        [
+          "/review-note/body",
+          "This page states only facts that can be confirmed from this"
+        ]
+      ]
+    ],
+    "JB_TOUR_OPERATOR_QUESTIONS": [
+      [
+        1,
+        [
+          "Location ID",
+          "Copy Text",
+          "Notes",
+          "Status"
+        ]
+      ],
+      [
+        2,
+        [
+          "1",
+          "should i tell people what hotels before they book?"
+        ]
+      ]
+    ],
+    "08_POLICY_PAGES": [
+      [
+        1,
+        [
+          "Location ID",
+          "Copy Text",
+          "Notes"
+        ]
+      ],
+      [
+        2,
+        [
+          "/privacy/h1",
+          "Privacy"
+        ]
+      ],
+      [
+        3,
+        [
+          "/privacy/lede",
+          "This page describes what this website does today. Last updated October 2, 2026."
+        ]
+      ],
+      [
+        4,
+        [
+          "/privacy/section_1_heading",
+          "What this website collects"
+        ]
+      ],
+      [
+        5,
+        [
+          "/privacy/section_1_text",
+          "This website has no sign-up form, no account system, and no analytics or advertising tools. It does not set cookies of its own. See the Cookies page."
+        ]
+      ],
+      [
+        6,
+        [
+          "/privacy/section_2_heading",
+          "When you email John"
+        ]
+      ],
+      [
+        7,
+        [
+          "/privacy/section_2_text",
+          "If you write to contact@biketourfrance.net, we receive your message and your email address in our BikeTourFrance.net email account. We use them to reply to you. Nothing in this website code sends your message anywhere else. Your contact info will not be shared or sold"
+        ]
+      ],
+      [
+        8,
+        [
+          "/privacy/section_3_heading",
+          "Hosting and technical logs"
+        ]
+      ],
+      [
+        9,
+        [
+          "/privacy/section_3_text",
+          "Web servers normally record technical details of each visit, such as the page requested and the visitor IP address. This website is hosted on Cloudflare Pages, which handles those records. John does not receive a copy of them through this website."
+        ]
+      ],
+      [
+        10,
+        [
+          "/privacy/section_4_heading",
+          "Other sites and media"
+        ]
+      ],
+      [
+        11,
+        [
+          "/privacy/section_4_text",
+          "The Resources page plays audio files from BikeTourFrance.net via your browser when you press play. Audio files may also be downloaded by pressing \"download.\" It also links to Google Docs and Google Sheets and to other websites. Those sites have their own privacy practices."
+        ]
+      ],
+      [
+        12,
+        [
+          "/privacy/section_5_heading",
+          "Questions"
+        ]
+      ],
+      [
+        13,
+        [
+          "/privacy/section_5_text",
+          "Write to contact@biketourfrance.net."
+        ]
+      ]
+    ],
+    "09_PRACTICAL_INFO": [
+      [
+        1,
+        [
+          "Location ID",
+          "Copy Text",
+          "Notes",
+          ""
+        ]
+      ],
+      [
+        2,
+        [
+          "/canal-des-deux-mers/practical-info/eyebrow",
+          "Practical information",
+          "",
+          ""
+        ]
+      ],
+      [
+        3,
+        [
+          "/canal-des-deux-mers/practical-info/h1",
+          "Bordeaux Airport to Gare Saint-Jean and your hotel",
+          "",
+          ""
+        ]
+      ],
+      [
+        4,
+        [
+          "/canal-des-deux-mers/practical-info/lede",
+          "Gare Saint-Jean is Bordeaux main railway station. All recommended hotels are within about 500 m of the station.",
+          "",
+          ""
+        ]
+      ],
+      [
+        5,
+        [
+          "/canal-des-deux-mers/practical-info/summary_heading",
+          "Your two options",
+          "",
+          ""
+        ]
+      ],
+      [
+        6,
+        [
+          "/canal-des-deux-mers/practical-info/tram_heading",
+          "Tram Line F",
+          "",
+          ""
+        ]
+      ],
+      [
+        7,
+        [
+          "/canal-des-deux-mers/practical-info/bus_heading",
+          "30 Direct airport bus",
+          "",
+          ""
+        ]
+      ],
+      [
+        8,
+        [
+          "/canal-des-deux-mers/practical-info/choose_heading",
+          "Which should I choose?",
+          "",
+          ""
+        ]
+      ],
+      [
+        9,
+        [
+          "/canal-des-deux-mers/practical-info/tram_choose_heading",
+          "Choose Tram Line F if:",
+          "",
+          ""
+        ]
+      ],
+      [
+        10,
+        [
+          "/canal-des-deux-mers/practical-info/bus_choose_heading",
+          "Choose the 30 Direct airport bus if:",
+          "",
+          ""
+        ]
+      ],
+      [
+        11,
+        [
+          "/canal-des-deux-mers/practical-info/details_heading",
+          "Details",
+          "",
+          ""
+        ]
+      ],
+      [
+        12,
+        [
+          "/canal-des-deux-mers/practical-info/contact_cta_heading",
+          "Questions about getting to Bordeaux?",
+          "",
+          ""
+        ]
+      ],
+      [
+        13,
+        [
+          "/canal-des-deux-mers/practical-info/contact_cta_text",
+          "Email John and he will help you plan your arrival.",
+          "",
+          ""
+        ]
+      ],
+      [
+        14,
+        [
+          "/canal-des-deux-mers/practical-info/tram_summary/cost",
+          "Cost: €1.90",
+          "",
+          ""
+        ]
+      ],
+      [
+        15,
+        [
+          "/canal-des-deux-mers/practical-info/tram_summary/time",
+          "Travel time: about 45 minutes",
+          "",
+          ""
+        ]
+      ],
+      [
+        16,
+        [
+          "/canal-des-deux-mers/practical-info/tram_summary/frequency",
+          "Frequency: every 10–15 minutes",
+          "",
+          ""
+        ]
+      ],
+      [
+        17,
+        [
+          "/canal-des-deux-mers/practical-info/tram_summary/bike",
+          "Bike in a case: always allowed",
+          "",
+          ""
+        ]
+      ],
+      [
+        18,
+        [
+          "/canal-des-deux-mers/practical-info/tram_summary/tickets",
+          "Tickets: TBM app or machines",
+          "",
+          ""
+        ]
+      ],
+      [
+        19,
+        [
+          "/canal-des-deux-mers/practical-info/tram_summary/best_for",
+          "Best for: lowest cost and flexibility",
+          "",
+          ""
+        ]
+      ],
+      [
+        20,
+        [
+          "/canal-des-deux-mers/practical-info/bus_summary/cost",
+          "Cost: €9–10",
+          "",
+          ""
+        ]
+      ],
+      [
+        21,
+        [
+          "/canal-des-deux-mers/practical-info/bus_summary/time",
+          "Travel time: about 30 minutes",
+          "",
+          ""
+        ]
+      ],
+      [
+        22,
+        [
+          "/canal-des-deux-mers/practical-info/bus_summary/schedule",
+          "Schedule: limited window",
+          "",
+          ""
+        ]
+      ],
+      [
+        23,
+        [
+          "/canal-des-deux-mers/practical-info/bus_summary/bike",
+          "Bike in a case: accepted",
+          "",
+          ""
+        ]
+      ],
+      [
+        24,
+        [
+          "/canal-des-deux-mers/practical-info/bus_summary/tickets",
+          "Tickets: online or onboard",
+          "",
+          ""
+        ]
+      ],
+      [
+        25,
+        [
+          "/canal-des-deux-mers/practical-info/bus_summary/best_for",
+          "Best for: fastest public option",
+          "",
+          ""
+        ]
+      ],
+      [
+        26,
+        [
+          "/canal-des-deux-mers/practical-info/tram_choose/1",
+          "Lowest cost matters",
+          "",
+          ""
+        ]
+      ],
+      [
+        27,
+        [
+          "/canal-des-deux-mers/practical-info/tram_choose/2",
+          "You arrive early or late",
+          "",
+          ""
+        ]
+      ],
+      [
+        28,
+        [
+          "/canal-des-deux-mers/practical-info/tram_choose/3",
+          "You have a bike case",
+          "",
+          ""
+        ]
+      ],
+      [
+        29,
+        [
+          "/canal-des-deux-mers/practical-info/tram_choose/4",
+          "You want flexibility",
+          "",
+          ""
+        ]
+      ],
+      [
+        30,
+        [
+          "/canal-des-deux-mers/practical-info/bus_choose/1",
+          "Fastest journey matters",
+          "",
+          ""
+        ]
+      ],
+      [
+        31,
+        [
+          "/canal-des-deux-mers/practical-info/bus_choose/2",
+          "You arrive during operating hours",
+          "",
+          ""
+        ]
+      ],
+      [
+        32,
+        [
+          "/canal-des-deux-mers/practical-info/bus_choose/3",
+          "Extra cost is okay",
+          "",
+          ""
+        ]
+      ],
+      [
+        33,
+        [
+          "/canal-des-deux-mers/practical-info/bus_choose/4",
+          "You want the simplest trip",
+          "",
+          ""
+        ]
+      ]
+    ]
+  }
+}

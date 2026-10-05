@@ -1324,3 +1324,80 @@ verify-dist: 12 pages OK
   the retry supplied the documented ID and passed. No secret value was printed or logged.
 - No site source, Pages setting, DNS, production domain, Framer account, or connector schema was
   changed. Documentation changes are pending commit at the time of this note.
+
+## 2026-10-05T17:29:00Z — D3 Option A hourly Sheet sync and Paris build timestamp
+
+- Owner selected D3 Option A. Added `.github/workflows/scheduled-copy-sync.yml`: hourly at minute
+  17 UTC or manual dispatch; Node 24; existing GitHub Sheet secrets; full Sheet-mode predeploy
+  check; commit and direct push to `main` only when approved-copy paths change. Cloudflare Pages
+  remains Git-connected and builds committed `approved-copy.ts` with `npx astro build`.
+- Added an `Europe/Paris` build timestamp in `BaseLayout.astro`, rendered through `Footer.astro` as
+  `updated YYYY-MMDD HH:MM Heure de Paris` in a semantic `<time>` element. The copy gate exempts
+  only this exact machine-generated footer format; other footer text remains Sheet-controlled.
+- Updated the copy-gate guide, build/deploy guide, fix list, preflight, README, and existing workflow
+  header. D3 is decided. D4 branch protection must allow the scheduled bot's direct push or change
+  the publishing design; D8 yellow-row review remains open. A `GITHUB_TOKEN` push does not trigger
+  the separate Approved copy check, so the scheduled job runs the full gate before committing.
+- Local Node 24 Sheet-mode predeploy passed: 351 fields read and verified on 12 pages. The owner's
+  requested `npx astro build`, `node scripts/copy/verify-rendered.mjs`, and
+  `node scripts/verify-dist.mjs` also passed. `npm run check` had 0 errors and 2 existing hints;
+  `npm run copy:test` passed 10/10. All 12 built HTML pages display the required Paris timestamp.
+  Prettier parsed the new workflow YAML; a YAML parser confirmed hourly cron and manual trigger.
+- No Sheet row or credential was changed, and generated approved-copy files match `HEAD`.
+  Repository commit and push are pending the required external-log readback.
+
+
+## 2026-10-05T19:02:00Z — BTF approved-copy consolidation review mapping (read-only)
+
+- Created `docs/v01_COPY_MAPPING_FOR_REVIEW.csv`, matching JSON with source snapshot/color evidence,
+  and `docs/v01_COPY_REVIEW_SUMMARY.md` in the approved BTF active root. Read all 12 tabs via the
+  john@biketourfrance.net connector; no Sheet mutation. Compared 221 source rows against 351 live
+  fields using exact keys and explicit proposed role aliases from current Astro consumers.
+- Result: 153 identical, 55 divergent (including compound/partial-cell structure differences),
+  8 blank source copy cells, 6 unmapped rows (5 site keys plus one internal operator question).
+  Added 133 live-only inventory rows; 354 total review rows. Every row has source/target locations,
+  flags and four decision choices with blank decision/merged-text/reviewer-notes columns.
+- Confirmed 300 yellow live copy cells, one pale-yellow, and 50 white. White is not independently
+  verified approval. Terms and Cookies exist in live; the per-page policy tab contains Privacy only.
+  Tour pricing notes differ in wording, not amounts. Flagged truncation, POV, route stop mismatch,
+  unresolved placeholders, possible editorial/test annotation, privacy/form/cookie contradictions,
+  and Michelin-star promise differences. Recommendations are not approvals or import instructions.
+- Verified CSV/JSON round-trip parity, exact verbatim source/live values (including trailing spaces
+  and newlines), complete source/live coverage, unique IDs, allowed statuses/actions, blank decision
+  fields, CellData/plain-value parity and unchanged Sheet modifiedTime before/after reading.
+- No build needed for review data/docs. No commits, pushes, deployments, Sheet writes, color changes,
+  Pages settings, DNS, live-domain, Framer, source code or connector schema changes. Pre-existing
+  uncommitted work preserved. Temporary generation helper/snapshot remain in /private/tmp only.
+- Rules cadence checked: no new enduring rule update needed. Active root lacks 00_PROJECT RULES.md;
+  referenced canonical file is for the separate CDM successor. Followed the owner's explicit BTF
+  root/Sheet scope and active root AGENTS.md. Appended relevant system dependency findings to the
+  canonical system register; no system configuration was changed.
+
+
+## 2026-10-05T20:19:39Z — Option 1 approved-copy consolidation executed and verified
+
+- Explicit owner authorization: consolidate per-page wording into Approved Site Copy, clear approved
+  row backgrounds, hide per-page tabs, pin the named sync tab, run predeploy, commit and push main.
+  Follow-up owner choice: keep exact 42-character self-guided CTA; button limit becomes 42.
+- Live read/write/readback: 208 mapped nonblank source rows adopted into 214 fields; 45 existing
+  values changed, 3 separate fields added to preserve differing Tours/CDM and Resources label roles.
+  Sheet/manifest/fixture now have 354 fields. Cleared approval fill on adopted A:B rows only; all
+  11 per-page tabs hidden with values unchanged. Remaining B fills: 116 yellow, one pale-yellow.
+  Eight blank and five nonblank unmapped source rows retained; no blanks deleted live content.
+- Hardened lib.mjs to require the exact Approved Site Copy tab, fail if missing and reject conflicting
+  BTF_COPY_SHEET_TAB overrides. Added four meaningful tests for reorder/missing/override cases.
+  Updated both 42-character button enforcement points; corrected escaped-apostrophe counting and
+  double escaping so the exact owner CTA renders. Added three narrow page readers/manifest rows.
+- Validation: deterministic build passed before Sheet write; Astro check 0 errors/0 warnings/2
+  existing hints; copy tests 4+10 passed. Live npm run predeploy:approved-copy passed on 354 fields
+  across 12 pages; generated approved-copy.ts is current and fixture equals expected live values.
+  Complete readback verified values, adopted fills, hidden flags and unchanged source tabs.
+- Evidence/result: docs/v02_COPY_CONSOLIDATION_RESULT.md and docs/proof/2026-10-05_copy_consolidation/
+  (plan, before/after, inverse rollback payload, verification, predeploy log). Original v01 mapping
+  remains unchanged. Pending unrelated hourly-sync/timestamp files preserved outside the commit.
+- No Pages settings, DNS, live-domain cutover, Framer account, V1 or service schema change. This task
+  authorizes a main push and hence Git-connected staging. Commit/push pending at this log entry;
+  append post-push proof to the external logs/register. No secrets printed, logged or committed.
+- Rules cadence checked: current root has no 00_PROJECT RULES.md; required cross-project canonical
+  source was read and owner's explicit BTF scope applied. New tab/limit decisions are recorded in
+  this result, both logs and the canonical system register; no CDM successor rules were changed.

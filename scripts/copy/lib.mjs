@@ -23,6 +23,7 @@ export const PATHS = {
 };
 
 export const SHEET_TITLE = 'BTF_Approved_Site_Copy';
+export const APPROVED_COPY_TAB = 'Approved Site Copy';
 // The only service account the gate accepts. It already exists (Google Cloud project btf-general).
 export const EXPECTED_SERVICE_ACCOUNT = 'btf-sheets-access@btf-general.iam.gserviceaccount.com';
 // Where the existing key lives on the owner's Mac. Used only for local runs (never in CI).
@@ -209,6 +210,12 @@ export async function readSheetGrid(
   env = process.env,
   { inCI = false, fetchImpl = fetch, now = () => Date.now() } = {},
 ) {
+  const requestedTab = (env.BTF_COPY_SHEET_TAB || '').trim();
+  if (requestedTab && requestedTab !== APPROVED_COPY_TAB) {
+    throw new CopyError(
+      `BTF_COPY_SHEET_TAB cannot select another tab. The copy authority is "${APPROVED_COPY_TAB}".`,
+    );
+  }
   const sheetId = (env.BTF_COPY_SHEET_ID || '').trim();
   if (!sheetId)
     throw new CopyError(
@@ -241,8 +248,10 @@ export async function readSheetGrid(
     );
   }
   const tabs = (meta.sheets || []).map((s) => s.properties.title);
-  const tab = (env.BTF_COPY_SHEET_TAB || '').trim() || tabs[0];
-  if (!tab || !tabs.includes(tab)) throw new CopyError(`The spreadsheet has no tab named "${tab}".`);
+  const tab = APPROVED_COPY_TAB;
+  if (!tabs.includes(tab)) {
+    throw new CopyError(`The spreadsheet has no tab named "${APPROVED_COPY_TAB}". No copy was read.`);
+  }
 
   const range = encodeURIComponent(`'${tab.replace(/'/g, "''")}'!A:Z`);
   const values = await getJson(

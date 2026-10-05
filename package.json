@@ -19,7 +19,7 @@
     "copy:generate-ts": "node scripts/copy/generate-ts.mjs",
     "copy:verify-rendered": "node scripts/copy/verify-rendered.mjs",
     "copy:check-local": "BTF_COPY_FIXTURE=1 npm run copy:sync && npm run copy:validate && npm run copy:generate-ts && npm run copy:verify-rendered",
-    "copy:test": "node scripts/copy/negative-tests.mjs",
+    "copy:test": "node --test scripts/copy/lib.test.mjs && node scripts/copy/negative-tests.mjs",
     "copy:field-map": "node scripts/copy/generate-field-map-review.mjs",
     "copy:production-pipeline": "npm run copy:sync && npm run copy:validate && npm run copy:generate-ts && astro build && npm run copy:verify-rendered && npm run verify && node scripts/copy/assert-deployable.mjs",
     "predeploy:approved-copy": "BTF_DEPLOY_ENV=production npm run copy:production-pipeline",

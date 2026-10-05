@@ -1,0 +1,208 @@
+
+> btf-migration@0.1.0 predeploy:approved-copy
+> BTF_DEPLOY_ENV=production npm run copy:production-pipeline
+
+
+> btf-migration@0.1.0 copy:production-pipeline
+> npm run copy:sync && npm run copy:validate && npm run copy:generate-ts && astro build && npm run copy:verify-rendered && npm run verify && node scripts/copy/assert-deployable.mjs
+
+
+> btf-migration@0.1.0 copy:sync
+> node scripts/copy/sync.mjs
+
+copy:sync  read "BTF_Approved_Site_Copy" (tab "Approved Site Copy"), 354 data rows
+
+> btf-migration@0.1.0 copy:validate
+> node scripts/copy/validate.mjs
+
+copy:validate  OK: 354 fields from sheet
+
+> btf-migration@0.1.0 copy:generate-ts
+> node scripts/copy/generate-ts.mjs
+
+copy:generate-ts  OK: 47 fields + 1 list(s) -> /Users/jkbrookspersonal/LocalSiteBuildFiles/00_BTF_MAIN_SITE_CLOUDFLARE_ROOT/src/data/approved-copy.ts
+13:17:14 [types] Generated 79ms
+13:17:14 [build] output: "static"
+13:17:14 [build] mode: "static"
+13:17:14 [build] directory: /Users/jkbrookspersonal/LocalSiteBuildFiles/00_BTF_MAIN_SITE_CLOUDFLARE_ROOT/dist/
+13:17:14 [build] Collecting build info...
+13:17:14 [build] ✓ Completed in 132ms.
+13:17:14 [build] Building static entrypoints...
+13:17:14 [vite] ✓ built in 375ms
+13:17:14 [vite] ✓ built in 11ms
+13:17:14 [build] Rearranging server assets...
+
+ generating static routes
+13:17:14   ├─ /404.html (+26ms)
+13:17:14   ├─ /about/index.html (+4ms)
+13:17:14   ├─ /canal-des-deux-mers/practical-info/index.html (+3ms)
+13:17:14   ├─ /canal-des-deux-mers/index.html (+8ms)
+13:17:14   ├─ /contact/index.html (+2ms)
+13:17:14   ├─ /cookies/index.html (+2ms)
+13:17:14   ├─ /privacy/index.html (+1ms)
+13:17:14   ├─ /resources/index.html (+2ms)
+13:17:14   ├─ /terms/index.html (+3ms)
+13:17:14   ├─ /tours/index.html (+3ms)
+13:17:14   ├─ /waitlist-2027/index.html (+2ms)
+13:17:14   ├─ /index.html (+4ms)
+13:17:14 ✓ Completed in 81ms.
+
+ generating optimized images
+13:17:14   ▶ /_astro/btf-logo-white.Bbmk7X9J_ZxQNiT.webp (reused cache entry) (+3ms) (1/136)
+13:17:14   ▶ /_astro/panda-airport-transport.CEDtc2IK_dJvaM.avif (reused cache entry) (+8ms) (2/136)
+13:17:14   ▶ /_astro/logo-mark.D5iZR7Fd_2csJyn.png (reused cache entry) (+9ms) (3/136)
+13:17:14   ▶ /_astro/apple-touch-icon.DhuvWWDo_Z2bbFnu.png (reused cache entry) (+10ms) (4/136)
+13:17:14   ▶ /_astro/hero-canal-path.D_GkDDUf_Z5ONpV.jpg (reused cache entry) (+11ms) (5/136)
+13:17:14   ▶ /_astro/btf-logo-white.Bbmk7X9J_Z1vKUot.webp (reused cache entry) (+9ms) (6/136)
+13:17:14   ▶ /_astro/two-riders-shaded-path.DUvvcou3_vcY9P.avif (reused cache entry) (+13ms) (7/136)
+13:17:14   ▶ /_astro/three-riders-town.DAdOumEJ_ZzA9Eh.jpg (reused cache entry) (+15ms) (8/136)
+13:17:14   ▶ /_astro/rider-on-canal-path.nGsGMYFR_Z1kfcoB.avif (reused cache entry) (+6ms) (9/136)
+13:17:14   ▶ /_astro/canal-du-midi-route-signs.BoFQLCFo_Z1Sy92i.avif (reused cache entry) (+10ms) (10/136)
+13:17:14   ▶ /_astro/creon-bikes-parked.DJKI0GM3_1qCnSY.avif (reused cache entry) (+22ms) (11/136)
+13:17:14   ▶ /_astro/hero-canal-path.D_GkDDUf_Z1F8HTh.avif (reused cache entry) (+12ms) (12/136)
+13:17:14   ▶ /_astro/cafe-table-riders.2E3667Tr_Z27qTfO.avif (reused cache entry) (+9ms) (13/136)
+13:17:14   ▶ /_astro/panda-airport-transport.CEDtc2IK_1SSnCK.avif (reused cache entry) (+16ms) (14/136)
+13:17:14   ▶ /_astro/three-riders-town.DAdOumEJ_ZGRizw.avif (reused cache entry) (+9ms) (15/136)
+13:17:14   ▶ /_astro/two-riders-shaded-path.DUvvcou3_2pHIaS.avif (reused cache entry) (+12ms) (16/136)
+13:17:14   ▶ /_astro/hero-canal-path.D_GkDDUf_Z27yGN5.webp (reused cache entry) (+6ms) (17/136)
+13:17:14   ▶ /_astro/canal-du-midi-route-signs.BoFQLCFo_Z1aoDb9.avif (reused cache entry) (+8ms) (18/136)
+13:17:14   ▶ /_astro/cafe-table-riders.2E3667Tr_Z18OlKb.avif (reused cache entry) (+6ms) (19/136)
+13:17:14   ▶ /_astro/rider-on-canal-path.nGsGMYFR_8ceBd.avif (reused cache entry) (+14ms) (20/136)
+13:17:14   ▶ /_astro/creon-bikes-parked.DJKI0GM3_Z1ssCh.avif (reused cache entry) (+9ms) (21/136)
+13:17:14   ▶ /_astro/panda-airport-transport.CEDtc2IK_Z2l0IlT.webp (reused cache entry) (+7ms) (22/136)
+13:17:14   ▶ /_astro/three-riders-town.DAdOumEJ_ZIVIqg.avif (reused cache entry) (+7ms) (23/136)
+13:17:14   ▶ /_astro/two-riders-shaded-path.DUvvcou3_Z2pVsTc.avif (reused cache entry) (+7ms) (24/136)
+13:17:14   ▶ /_astro/hero-canal-path.D_GkDDUf_yNnL.webp (reused cache entry) (+4ms) (25/136)
+13:17:14   ▶ /_astro/canal-du-midi-route-signs.BoFQLCFo_2kc2vl.avif (reused cache entry) (+3ms) (26/136)
+13:17:14   ▶ /_astro/cafe-table-riders.2E3667Tr_xcUtG.avif (reused cache entry) (+2ms) (27/136)
+13:17:14   ▶ /_astro/rider-on-canal-path.nGsGMYFR_ZqRiRg.avif (reused cache entry) (+2ms) (28/136)
+13:17:14   ▶ /_astro/panda-airport-transport.CEDtc2IK_Z1tBOGz.webp (reused cache entry) (+3ms) (29/136)
+13:17:14   ▶ /_astro/three-riders-town.DAdOumEJ_ZbJ4Js.avif (reused cache entry) (+3ms) (30/136)
+13:17:14   ▶ /_astro/creon-bikes-parked.DJKI0GM3_ZYr0fS.avif (reused cache entry) (+4ms) (31/136)
+13:17:14   ▶ /_astro/hero-canal-path.D_GkDDUf_ZgPVxf.avif (reused cache entry) (+3ms) (32/136)
+13:17:14   ▶ /_astro/two-riders-shaded-path.DUvvcou3_bXYQ5.avif (reused cache entry) (+3ms) (33/136)
+13:17:14   ▶ /_astro/canal-du-midi-route-signs.BoFQLCFo_ezWEV.avif (reused cache entry) (+5ms) (34/136)
+13:17:14   ▶ /_astro/cafe-table-riders.2E3667Tr_Z1aSLAU.avif (reused cache entry) (+6ms) (35/136)
+13:17:14   ▶ /_astro/rider-on-canal-path.nGsGMYFR_Zn1N23.avif (reused cache entry) (+7ms) (36/136)
+13:17:14   ▶ /_astro/creon-bikes-parked.DJKI0GM3_13aihH.avif (reused cache entry) (+5ms) (37/136)
+13:17:14   ▶ /_astro/three-riders-town.DAdOumEJ_Zorw3I.webp (reused cache entry) (+5ms) (38/136)
+13:17:14   ▶ /_astro/panda-airport-transport.CEDtc2IK_26IJtO.webp (reused cache entry) (+7ms) (39/136)
+13:17:14   ▶ /_astro/two-riders-shaded-path.DUvvcou3_Z23xfmQ.webp (reused cache entry) (+8ms) (40/136)
+13:17:14   ▶ /_astro/canal-du-midi-route-signs.BoFQLCFo_ZJWFnl.webp (reused cache entry) (+7ms) (41/136)
+13:17:14   ▶ /_astro/cafe-table-riders.2E3667Tr_Z1O17J1.webp (reused cache entry) (+5ms) (42/136)
+13:17:14   ▶ /_astro/hero-canal-path.D_GkDDUf_ZIgUr3.webp (reused cache entry) (+8ms) (43/136)
+13:17:14   ▶ /_astro/rider-on-canal-path.nGsGMYFR_ZWsM1U.webp (reused cache entry) (+4ms) (44/136)
+13:17:14   ▶ /_astro/rider-on-narrow-canal-bank.DrRjFZ6Z_2qw5XH.avif (reused cache entry) (+3ms) (45/136)
+13:17:14   ▶ /_astro/three-riders-town.DAdOumEJ_ZqvVTs.webp (reused cache entry) (+5ms) (46/136)
+13:17:14   ▶ /_astro/creon-bikes-parked.DJKI0GM3_Qs3L2.avif (reused cache entry) (+5ms) (47/136)
+13:17:14   ▶ /_astro/two-riders-shaded-path.DUvvcou3_Z92vlN.webp (reused cache entry) (+1ms) (48/136)
+13:17:14   ▶ /_astro/cafe-table-riders.2E3667Tr_ZPozen.webp (reused cache entry) (+1ms) (49/136)
+13:17:14   ▶ /_astro/canal-du-midi-route-signs.BoFQLCFo_Z1Nawc.webp (reused cache entry) (+1ms) (50/136)
+13:17:14   ▶ /_astro/hero-canal-path.D_GkDDUf_Z20mCjL.webp (reused cache entry) (+2ms) (51/136)
+13:17:14   ▶ /_astro/rider-on-canal-path.nGsGMYFR_uXDXT.webp (reused cache entry) (+2ms) (52/136)
+13:17:14   ▶ /_astro/rider-on-narrow-canal-bank.DrRjFZ6Z_2uMIrW.avif (reused cache entry) (+4ms) (53/136)
+13:17:14   ▶ /_astro/creon-bikes-parked.DJKI0GM3_Ckfq1.webp (reused cache entry) (+5ms) (54/136)
+13:17:14   ▶ /_astro/three-riders-town.DAdOumEJ_Z102ddq.webp (reused cache entry) (+5ms) (55/136)
+13:17:14   ▶ /_astro/cafe-table-riders.2E3667Tr_PCH0u.webp (reused cache entry) (+5ms) (56/136)
+13:17:14   ▶ /_astro/two-riders-shaded-path.DUvvcou3_5uqn3.webp (reused cache entry) (+5ms) (57/136)
+13:17:14   ▶ /_astro/canal-du-midi-route-signs.BoFQLCFo_Z1BoCDD.webp (reused cache entry) (+5ms) (58/136)
+13:17:14   ▶ /_astro/stone-church-bike.YdlHOV5m_Z1PKawN.avif (reused cache entry) (+5ms) (59/136)
+13:17:14   ▶ /_astro/rider-on-canal-path.nGsGMYFR_Z45Suz.webp (reused cache entry) (+5ms) (60/136)
+13:17:14   ▶ /_astro/rider-on-narrow-canal-bank.DrRjFZ6Z_1dCY8P.avif (reused cache entry) (+2ms) (61/136)
+13:17:14   ▶ /_astro/cafe-table-riders.2E3667Tr_ZRt057.webp (reused cache entry) (+4ms) (62/136)
+13:17:14   ▶ /_astro/creon-bikes-parked.DJKI0GM3_liVJp.webp (reused cache entry) (+5ms) (63/136)
+13:17:14   ▶ /_astro/two-riders-shaded-path.DUvvcou3_Z2mLeFB.webp (reused cache entry) (+4ms) (64/136)
+13:17:14   ▶ /_astro/stone-church-bike.YdlHOV5m_Z1RYTqJ.avif (reused cache entry) (+5ms) (65/136)
+13:17:14   ▶ /_astro/canal-du-midi-route-signs.BoFQLCFo_IveR.webp (reused cache entry) (+5ms) (66/136)
+13:17:14   ▶ /_astro/three-riders-town.DAdOumEJ_1UPAk1.webp (reused cache entry) (+6ms) (67/136)
+13:17:14   ▶ /_astro/rider-on-canal-path.nGsGMYFR_11EMQq.webp (reused cache entry) (+11ms) (68/136)
+13:17:14   ▶ /_astro/rider-on-narrow-canal-bank.DrRjFZ6Z_Zyeu3s.avif (reused cache entry) (+11ms) (69/136)
+13:17:14   ▶ /_astro/cafe-table-riders.2E3667Tr_Z1AfIrr.webp (reused cache entry) (+9ms) (70/136)
+13:17:14   ▶ /_astro/creon-bikes-parked.DJKI0GM3_pfACA.webp (reused cache entry) (+10ms) (71/136)
+13:17:14   ▶ /_astro/three-riders-town.DAdOumEJ_Z1FtQ5a.avif (reused cache entry) (+10ms) (72/136)
+13:17:14   ▶ /_astro/canal-du-midi-route-signs.BoFQLCFo_1bmqBu.webp (reused cache entry) (+12ms) (73/136)
+13:17:14   ▶ /_astro/stone-church-bike.YdlHOV5m_Z197hKG.avif (reused cache entry) (+12ms) (74/136)
+13:17:14   ▶ /_astro/rider-on-narrow-canal-bank.DrRjFZ6Z_2cEDxD.webp (reused cache entry) (+6ms) (75/136)
+13:17:14   ▶ /_astro/greenway-through-pines.BMwSCAYG_Z17mQI3.avif (reused cache entry) (+4ms) (76/136)
+13:17:14   ▶ /_astro/two-riders-shaded-path.DUvvcou3_12q3TN.webp (reused cache entry) (+14ms) (77/136)
+13:17:14   ▶ /_astro/rider-on-canal-path.nGsGMYFR_1BUi6q.webp (reused cache entry) (+7ms) (78/136)
+13:17:14   ▶ /_astro/creon-bikes-parked.DJKI0GM3_eR9NJ.webp (reused cache entry) (+5ms) (79/136)
+13:17:14   ▶ /_astro/riders-matching-jerseys.Cnh6a-9n_Z2mL1Mg.avif (reused cache entry) (+1ms) (80/136)
+13:17:14   ▶ /_astro/three-riders-town.DAdOumEJ_Y9XEl.avif (reused cache entry) (+4ms) (81/136)
+13:17:14   ▶ /_astro/rider-on-narrow-canal-bank.DrRjFZ6Z_2gVh1S.webp (reused cache entry) (+1ms) (82/136)
+13:17:14   ▶ /_astro/greenway-through-pines.BMwSCAYG_y3qVJ.avif (reused cache entry) (+2ms) (83/136)
+13:17:14   ▶ /_astro/stone-church-bike.YdlHOV5m_1Hev4V.avif (reused cache entry) (+3ms) (84/136)
+13:17:14   ▶ /_astro/rider-on-canal-path.nGsGMYFR_2kcOxw.jpg (reused cache entry) (+4ms) (85/136)
+13:17:14   ▶ /_astro/three-riders-town.DAdOumEJ_Z1n44ym.webp (reused cache entry) (+3ms) (86/136)
+13:17:14   ▶ /_astro/riders-matching-jerseys.Cnh6a-9n_1oCggf.avif (reused cache entry) (+4ms) (87/136)
+13:17:14   ▶ /_astro/creon-bikes-parked.DJKI0GM3_39Ui4.webp (reused cache entry) (+4ms) (88/136)
+13:17:14   ▶ /_astro/two-riders-shaded-path.DUvvcou3_1bQbus.avif (reused cache entry) (+4ms) (89/136)
+13:17:14   ▶ /_astro/wheel-repair-workshop.BUhOIsrn_Z2orxWm.avif (reused cache entry) (+3ms) (90/136)
+13:17:14   ▶ /_astro/stone-church-bike.YdlHOV5m_Z1xko10.webp (reused cache entry) (+6ms) (91/136)
+13:17:14   ▶ /_astro/rider-on-narrow-canal-bank.DrRjFZ6Z_YLwHL.webp (reused cache entry) (+7ms) (92/136)
+13:17:14   ▶ /_astro/greenway-through-pines.BMwSCAYG_22ycVo.avif (reused cache entry) (+7ms) (93/136)
+13:17:14   ▶ /_astro/three-riders-town.DAdOumEJ_1hzKb9.webp (reused cache entry) (+5ms) (94/136)
+13:17:14   ▶ /_astro/pine-forest-path.Dn8Te-1V_mAUM0.avif (reused cache entry) (+5ms) (95/136)
+13:17:14   ▶ /_astro/wheel-repair-workshop.BUhOIsrn_10kYiV.avif (reused cache entry) (+4ms) (96/136)
+13:17:14   ▶ /_astro/riders-matching-jerseys.Cnh6a-9n_Z1RU615.avif (reused cache entry) (+6ms) (97/136)
+13:17:14   ▶ /_astro/stone-church-bike.YdlHOV5m_Z1zz7TV.webp (reused cache entry) (+2ms) (98/136)
+13:17:14   ▶ /_astro/about-john.D4g-xaIv_Z1ruEid.avif (reused cache entry) (+5ms) (99/136)
+13:17:14   ▶ /_astro/two-riders-shaded-path.DUvvcou3_Z2bE1OR.webp (reused cache entry) (+10ms) (100/136)
+13:17:14   ▶ /_astro/greenway-through-pines.BMwSCAYG_22zlr0.avif (reused cache entry) (+7ms) (101/136)
+13:17:14   ▶ /_astro/rider-on-narrow-canal-bank.DrRjFZ6Z_Z2vGhty.webp (reused cache entry) (+8ms) (102/136)
+13:17:14   ▶ /_astro/wheel-repair-workshop.BUhOIsrn_2m7uw.avif (reused cache entry) (+7ms) (103/136)
+13:17:14   ▶ /_astro/pine-forest-path.Dn8Te-1V_ZB3jvD.avif (reused cache entry) (+7ms) (104/136)
+13:17:14   ▶ /_astro/greenway-through-pines.BMwSCAYG_1o42yc.webp (reused cache entry) (+3ms) (105/136)
+13:17:14   ▶ /_astro/stone-church-bike.YdlHOV5m_ZPGveS.webp (reused cache entry) (+10ms) (106/136)
+13:17:14   ▶ /_astro/riders-matching-jerseys.Cnh6a-9n_Z5gjtt.avif (reused cache entry) (+11ms) (107/136)
+13:17:14   ▶ /_astro/about-john.D4g-xaIv_1A0Vcv.avif (reused cache entry) (+7ms) (108/136)
+13:17:14   ▶ /_astro/wheel-repair-workshop.BUhOIsrn_Z1gsSw.avif (reused cache entry) (+5ms) (109/136)
+13:17:14   ▶ /_astro/greenway-through-pines.BMwSCAYG_Z20GMzW.webp (reused cache entry) (+4ms) (110/136)
+13:17:14   ▶ /_astro/pine-forest-path.Dn8Te-1V_Z1mJqDR.avif (reused cache entry) (+6ms) (111/136)
+13:17:14   ▶ /_astro/rider-on-narrow-canal-bank.DrRjFZ6Z_Z16HW5F.webp (reused cache entry) (+7ms) (112/136)
+13:17:14   ▶ /_astro/riders-matching-jerseys.Cnh6a-9n_ZF56iE.webp (reused cache entry) (+3ms) (113/136)
+13:17:14   ▶ /_astro/stone-church-bike.YdlHOV5m_SVmAX.webp (reused cache entry) (+4ms) (114/136)
+13:17:14   ▶ /_astro/wheel-repair-workshop.BUhOIsrn_sB2aT.webp (reused cache entry) (+2ms) (115/136)
+13:17:14   ▶ /_astro/pine-forest-path.Dn8Te-1V_Z4O36N.webp (reused cache entry) (+6ms) (116/136)
+13:17:14   ▶ /_astro/riders-matching-jerseys.Cnh6a-9n_Z1XRW45.webp (reused cache entry) (+6ms) (117/136)
+13:17:14   ▶ /_astro/greenway-through-pines.BMwSCAYG_Zwc1Ai.webp (reused cache entry) (+6ms) (118/136)
+13:17:14   ▶ /_astro/about-john.D4g-xaIv_Z28qMny.avif (reused cache entry) (+8ms) (119/136)
+13:17:14   ▶ /_astro/wheel-repair-workshop.BUhOIsrn_Z1cMymJ.webp (reused cache entry) (+6ms) (120/136)
+13:17:14   ▶ /_astro/pine-forest-path.Dn8Te-1V_Z13tipr.webp (reused cache entry) (+2ms) (121/136)
+13:17:14   ▶ /_astro/riders-matching-jerseys.Cnh6a-9n_Zbeawt.webp (reused cache entry) (+4ms) (122/136)
+13:17:14   ▶ /_astro/about-john.D4g-xaIv_Z1s4iRT.webp (reused cache entry) (+4ms) (123/136)
+13:17:14   ▶ /_astro/greenway-through-pines.BMwSCAYG_Z1kUQSk.webp (reused cache entry) (+5ms) (124/136)
+13:17:14   ▶ /_astro/stone-church-bike.YdlHOV5m_Z1qjyvR.webp (reused cache entry) (+10ms) (125/136)
+13:17:14   ▶ /_astro/wheel-repair-workshop.BUhOIsrn_Z2aLqb9.webp (reused cache entry) (+4ms) (126/136)
+13:17:14   ▶ /_astro/pine-forest-path.Dn8Te-1V_Z1OapxF.webp (reused cache entry) (+6ms) (127/136)
+13:17:14   ▶ /_astro/about-john.D4g-xaIv_1ioO4a.webp (reused cache entry) (+4ms) (128/136)
+13:17:14   ▶ /_astro/wheel-repair-workshop.BUhOIsrn_Z2ep1zc.webp (reused cache entry) (+5ms) (129/136)
+13:17:14   ▶ /_astro/riders-matching-jerseys.Cnh6a-9n_1BpB08.webp (reused cache entry) (+7ms) (130/136)
+13:17:14   ▶ /_astro/pine-forest-path.Dn8Te-1V_2gFmbI.webp (reused cache entry) (+5ms) (131/136)
+13:17:14   ▶ /_astro/greenway-through-pines.BMwSCAYG_ZXAFd5.webp (reused cache entry) (+8ms) (132/136)
+13:17:14   ▶ /_astro/about-john.D4g-xaIv_ZTT7Ym.webp (reused cache entry) (+5ms) (133/136)
+13:17:14   ▶ /_astro/wheel-repair-workshop.BUhOIsrn_Z2mC5IT.webp (reused cache entry) (+4ms) (134/136)
+13:17:14   ▶ /_astro/about-john.D4g-xaIv_Z10jY0g.webp (reused cache entry) (+3ms) (135/136)
+13:17:14   ▶ /_astro/riders-matching-jerseys.Cnh6a-9n_7U5Hf.webp (reused cache entry) (+7ms) (136/136)
+13:17:14 ✓ Completed in 115ms.
+
+13:17:14 [build] ✓ Completed in 616ms.
+13:17:14 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
+13:17:14 [build] 12 page(s) built in 803ms
+13:17:14 [build] Complete!
+
+> btf-migration@0.1.0 copy:verify-rendered
+> node scripts/copy/verify-rendered.mjs
+
+copy:verify-rendered  OK: 12 pages, 354 fields confirmed on their routes (source: sheet)
+
+> btf-migration@0.1.0 verify
+> npm run canonical:check && node scripts/verify-dist.mjs
+
+
+> btf-migration@0.1.0 canonical:check
+> node scripts/assert-canonical-root.mjs
+
+canonical-root: PASS (native-astro)
+verify-dist: 12 pages OK
+predeploy OK: dist/ matches a current snapshot of BTF_Approved_Site_Copy and is deployable.
