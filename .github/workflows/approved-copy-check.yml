@@ -17,11 +17,11 @@
 name: Approved copy check
 
 on:
-  workflow_dispatch
+  workflow_dispatch:
   push:
     branches: [main]
   pull_request:
-    branches: [main]:
+    branches: [main]
 
 permissions:
   contents: read
