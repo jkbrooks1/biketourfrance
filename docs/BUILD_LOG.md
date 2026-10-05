@@ -88,6 +88,42 @@ Append-only. Concise timestamped entries. No secrets. Each entry is also appende
 
 No commit or push without explicit owner approval.
 
+## 2026-10-05T13:15:00Z — Copy gate GREEN end to end; Style Guide v4.5 written; Pages deploy blocked
+
+**Approved copy check passes in full.** Run 37313264334 (push of 8165d18), 1m25s, against the live
+Sheet: `copy:sync` (sheet) -> `copy:validate` -> `copy:generate-ts` (47 fields + 1 list) ->
+`astro build` (12 pages) -> `copy:verify-rendered` (OK: 12 pages, 63 fields, source: sheet) ->
+`canonical:check` PASS -> `verify-dist` 12 pages OK ->
+`predeploy OK: dist/ matches a current snapshot of BTF_Approved_Site_Copy and is deployable.`
+
+**Style Guide v4.5 written.** The four owner amendments are now recorded in the
+"v4.5 BTF Unified Style Guide" tab (`t.nqwnajuyodj0`, index 0) of
+`2026-q4.v4.5_Style Guide for web and presentations`
+(id 1YmXsrQGzVJo6g3JuxJFoRNUayc6tbgsWg_dTPPyt5F0): heading limit 60 -> 100, button label limit
+24 -> 32, "BikeTourFrance" accepted alongside "BikeTourFrance.net" (the spaced forms and "BTF"
+still rejected), exclamation marks explicitly permitted, plus a "CHANGES IN v4.5 (from v4.4)" note.
+The v4.4 tab was verified unchanged afterwards (still 60 / 24, no v4.5 text present).
+Finding: the no-exclamation rule the verifier enforced never appeared in v4.4 at all.
+Limitation: the Google Docs API has no `createTab` request (confirmed by a probe, which applied
+nothing), so the owner duplicated the v4.4 tab and the edits were applied by API against that
+tab id, preserving all original formatting.
+
+**DEPLOYMENT IS BLOCKED — green CI is not a deployed site.** `https://btf-production.pages.dev/`
+returns 200 but serves an older build: it still contains "John Brooks" (the name the owner asked be
+removed), and lacks `contact@biketourfrance.net` and the current CTAs. Cause: the Pages build
+command is `npm run build`, which sets `BTF_COPY_FIXTURE=1`, while `scripts/copy/lib.mjs:79`
+computes `inCI = Boolean(env.CI || env.GITHUB_ACTIONS || env.CF_PAGES)` and refuses fixture copy
+when true. Cloudflare Pages sets `CF_PAGES`, so a Pages build fails at `copy:sync` and cannot
+deploy at all. Also unresolved: the operational docs name Pages project `temp-btf` with production
+auto-deploys OFF, whereas the requested staging host `btf-production.pages.dev` is a different
+project that nothing in the repo wires to. All three items are Cloudflare/Pages configuration and
+need owner approval; none was changed. Logged to the system changes register as a WARNING entry.
+
+**Deliverables:** proof ZIP
+`/Users/jkbrookspersonal/Downloads/BTF_APPROVED_COPY_GATE_PROOF_20261005T060139.zip`; generator
+archived to `/Users/jkbrookspersonal/00_SCRIPTS/20261005T060139_btf_sheet_to_code_copy_generator.mjs`.
+No secret printed or written. No DNS, Cloudflare, or infrastructure change.
+
 ## 2026-10-05T13:00:00Z — Live-Sheet run: copy gate passes; predeploy env-propagation bug fixed
 
 First run that actually tested the pushed fix (run 37312835655, push of 4251258, 1m24s vs the

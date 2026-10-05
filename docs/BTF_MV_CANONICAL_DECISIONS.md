@@ -79,8 +79,13 @@ Two secrets must be configured in GitHub repository settings:
 - ✓ Build artifacts must be deployable
 
 ### Style guide checks, as amended by the owner 2026-10-05
-These four amendments were made so that approved Sheet copy ships unchanged. Style Guide v4.4
-itself still needs updating to record them.
+These four amendments were made so that approved Sheet copy ships unchanged. They are recorded in
+the **v4.5 BTF Unified Style Guide** tab (tab id `t.nqwnajuyodj0`, index 0) of
+`2026-q4.v4.5_Style Guide for web and presentations`
+(docs.google.com/document/d/1YmXsrQGzVJo6g3JuxJFoRNUayc6tbgsWg_dTPPyt5F0). The v4.4 tab is
+retained unchanged as the prior version. Note that the no-exclamation rule the verifier had been
+enforcing never appeared in v4.4 at all; v4.5 states explicitly that exclamation marks are
+permitted, so guide and code now agree.
 1. Button label limit raised from 24 to 32 characters (`src/components/Button.astro`,
    `scripts/verify-dist.mjs`), so "Join our free 2027 tour waitlist" (32) ships as approved.
 2. Brand may be written "BikeTourFrance" or "BikeTourFrance.net". The spaced form
