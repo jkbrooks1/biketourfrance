@@ -124,6 +124,7 @@ const buildObject = (obj, indent = '  ') => {
 };
 
 const copyStr = buildObject(final);
+
 const header = `// Page copy taken from the approved-copy Google Sheet "${sheetTitle}" (tab "${tab}",
 // read from Sheet during build). The Sheet is the source of truth for this wording.
 // Fallback defaults are merged for sections not yet in the sheet.

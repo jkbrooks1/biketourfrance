@@ -5,7 +5,13 @@ import Button from '../components/Button.astro';
 import { COPY } from '../data/approved-copy';
 import { NAV } from '../data/site';
 
-const { notFound } = COPY;
+const notFound = COPY?.notFound || {
+  heading: 'Page not found',
+  body: 'We could not find that page. It may have moved, or the link may be mistyped.',
+  homeCta: 'Back to the home page',
+  resourcesCta: 'Resources',
+  footerNote: 'Staging site. Not indexed.',
+};
 ---
 
 <BaseLayout
