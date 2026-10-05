@@ -114,3 +114,12 @@ export function footerPolicyParts(): { label: string; text: string }[] {
 
 writeFileSync(outputPath, header);
 console.log(`copy:generate-ts  OK: generated ${outputPath}`);
+
+// Log what was actually generated for debugging
+const lines = header.split('\n');
+const copyLine = lines.find(l => l.includes('export const COPY'));
+if (copyLine) {
+  const jsonPart = copyLine.substring(copyLine.indexOf('=') + 1).trim();
+  const preview = jsonPart.substring(0, Math.min(150, jsonPart.length));
+  console.error(`[DEBUG] COPY starts with: ${preview.substring(0, 50)}...`);
+}
