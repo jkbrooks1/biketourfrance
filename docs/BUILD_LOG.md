@@ -1529,3 +1529,9 @@ verify-dist: 12 pages OK
 - **Primary Staging Target:** Consolidated exclusively onto `btf-production` (`https://btf-production.pages.dev`).
 - **Reason:** Prevent dual-build triggers on GitHub pushes and eliminate staging domain ambiguity.
 - **Runbook Update:** Updated operational runbook to v2.3 to reflect `btf-production.pages.dev` as the authoritative staging URL.
+
+## 2026-10-05T23:18:32Z — Staging realign: production deploy of main triggered
+
+- Local main realigned to origin/main at 4beed9596bc198a0e284cf5329b2e46b9a2a5140; prior local state preserved on backup branches (run 20261005T231718Z).
+- Live-Sheet predeploy:approved-copy passed on main; dist/index.html renders "Join the 2027 waitlist" and "Get tour updates".
+- Owner confirmed btf-production Production branch = main. This commit triggers a production deployment.
