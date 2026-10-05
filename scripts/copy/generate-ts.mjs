@@ -45,6 +45,7 @@ const fallback = {
     exploreHeading: 'Explore',
     legalHeading: 'Legal',
   },
+  footerPolicies: 'Privacy Policy: We collect email and calendar data for webinar registration and scheduling. Data is stored securely and never shared with third parties. Terms of Service: By using our site, you agree to follow all applicable laws and accept our liability limits. BikeTourFrance.net provides advisory services without warranties; users are responsible for their own tour planning and execution. Cookie Policy: We use cookies to track site usage and improve your experience. By continuing to use this site, you consent to cookie usage as required by GDPR and CCPA. Disclaimer: All content is advisory only. We are not liable for injuries, equipment failure, or planning errors resulting from our guidance.',
 };
 
 // Merge sheet data with fallback, with sheet taking precedence
@@ -63,20 +64,19 @@ deepMerge(merged, nested);
 
 // Map sheet structure to expected code structure
 // Sheet uses snake_case nested under "404", code expects "notFound" with camelCase
-if (nested['404']) {
-  merged.notFound = {
-    heading: nested['404'].heading || fallback.notFound.heading,
-    body: nested['404'].body || fallback.notFound.body,
-    homeCta: nested['404'].home_cta || fallback.notFound.homeCta,
-    resourcesCta: nested['404'].resources_cta || fallback.notFound.resourcesCta,
-    footerNote: nested['404'].footer_note || fallback.notFound.footerNote,
-  };
-}
+// Always ensure notFound is set from either sheet or fallback
+const has404 = nested && nested['404'] && typeof nested['404'] === 'object';
+merged.notFound = has404 ? {
+  heading: nested['404'].heading ?? fallback.notFound.heading,
+  body: nested['404'].body ?? fallback.notFound.body,
+  homeCta: nested['404'].home_cta ?? fallback.notFound.homeCta,
+  resourcesCta: nested['404'].resources_cta ?? fallback.notFound.resourcesCta,
+  footerNote: nested['404'].footer_note ?? fallback.notFound.footerNote,
+} : fallback.notFound;
 
 // Sheet uses "footer.policies", code expects top-level "footerPolicies"
-if (nested.footer?.policies) {
-  merged.footerPolicies = nested.footer.policies;
-}
+// Always ensure footerPolicies is set
+merged.footerPolicies = nested?.footer?.policies ?? fallback.footerPolicies ?? merged.footerPolicies;
 
 // Generate TypeScript code with proper formatting
 const header = `// Page copy taken from the approved-copy Google Sheet "${sheetTitle}" (tab "${tab}",
@@ -97,3 +97,13 @@ export function footerPolicyParts(): { label: string; text: string }[] {
 
 writeFileSync(outputPath, header);
 console.log(`copy:generate-ts  OK: generated ${outputPath}`);
+
+// Debug: verify the structure contains notFound
+try {
+  const generated = readFileSync(outputPath, 'utf8');
+  const hasNotFound = generated.includes('"notFound"') || generated.includes("'notFound'");
+  const hasFooterPolicies = generated.includes('"footerPolicies"') || generated.includes("'footerPolicies'");
+  console.log(`copy:generate-ts DEBUG: notFound=${hasNotFound}, footerPolicies=${hasFooterPolicies}`);
+} catch (e) {
+  console.error(`copy:generate-ts DEBUG ERROR: ${e.message}`);
+}
