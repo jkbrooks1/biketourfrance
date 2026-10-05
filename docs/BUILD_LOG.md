@@ -1484,3 +1484,48 @@ verify-dist: 12 pages OK
 - Rules cadence reviewed: no new standing instruction requires a rules update; the active-root
   AGENTS.md and owner's explicit BTF Sheet/publication scope apply. Cross-project canonical
   successor rules were read; no successor project file changed.
+
+
+## 2026-10-05T22:00:19Z — Runbook v2.2 copy publication pushed and verified
+
+- Commit 53d3ef64afeb2bb18c3db168aa2c7a6c19bbaedc pushed to origin/main; read-only remote SHA verification matched.
+  Subject: chore(copy): publish approved site copy updates per Runbook v2.2. UTC validation
+  timestamp is recorded in commit body. Three changed paths committed: generated copy, fixture
+  and project build log. Manifest unchanged; all other pending files preserved locally.
+- Approved copy check run 37379113260 completed successfully for this exact commit. Both existing
+  Pages checks succeeded: temp-btf deployment edec3a2d-a69e-48e8-b954-8ebb8a346c93 and
+  btf-production deployment c438759e-b349-48d2-8b50-3c120476ff01.
+- Direct https://temp-btf.pages.dev Tours/CDM readback verified revised body copy, travel/SAG/phone
+  details, and the exact approved 42-character self-guided CTA. The secondary project's exact
+  c438759e.btf-production.pages.dev deployment also has updated Tours copy, but its stable
+  btf-production.pages.dev host still served older copy during readback. Do not treat that stable
+  alias as current without a separate branch/alias investigation; no Pages setting was changed.
+- All requested local checks and PII scans passed; live named-tab predeploy passed for 354 fields
+  and 12 pages. No Sheet writes, DNS, live-domain cutover, Framer, V1 or connector-schema changes.
+  Post-push log entry remains local; publication commit above already includes pre-push proof.
+
+
+## 2026-10-05T22:05:40Z — Owner staging target corrected; btf-production branch mismatch confirmed
+
+- Owner clarified staging is https://btf-production.pages.dev and supplied
+  docs/BTF_BUILD_AND_DEPLOY_RUNBOOK_v2.2.md. Corrected that full local runbook's target references
+  and documented actual configuration versus the required, pending branch alignment.
+- Read-only Cloudflare API confirmed btf-production's project and Git source production branches
+  both remain rebuild/2026-10-02-audit-remediation. Stable canonical deployment 60497f41 points
+  to a6b0ed2 from that branch; current main 53d3ef6 is successful preview c438759e, also aliased
+  at main.btf-production.pages.dev. This explains why the stable staging host is stale.
+- Existing temp-btf uses main and serves current copy, but owner designates btf-production for
+  staging review. Future publication checks must verify that project's stable canonical host.
+- Prepared exact two-field project PATCH, inverse payload, before-state and plan under
+  docs/proof/2026-10-05_btf_staging_branch_alignment/. Only proposed infrastructure change is
+  setting both btf-production production-branch settings to main and building via Git integration.
+- Approval remains pending because active-root AGENTS.md explicitly requires separate approval
+  to change Pages settings. No Cloudflare write, deployment, DNS, domain, Sheet, commit or push
+  executed. No build needed for this documentation-only correction; git diff --check passed.
+  Pending unrelated files preserved. No credential values printed or saved in evidence.
+
+## 2026-10-05 — Cloudflare Pages Project Consolidation
+- **Event:** Deleted legacy duplicate Cloudflare Pages project `temp-btf`.
+- **Primary Staging Target:** Consolidated exclusively onto `btf-production` (`https://btf-production.pages.dev`).
+- **Reason:** Prevent dual-build triggers on GitHub pushes and eliminate staging domain ambiguity.
+- **Runbook Update:** Updated operational runbook to v2.3 to reflect `btf-production.pages.dev` as the authoritative staging URL.
