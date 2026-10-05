@@ -585,21 +585,30 @@ a:active {
   width: 100%;
 }
 
-/* Picture crops allowed by the guide: 16:9, 1:1, 3:4. */
-img.ratio-16x9 {
+/* Reserve the crop on the picture; fill it without stretching the source image. */
+picture.photo-crop {
+  position: relative;
   width: 100%;
+  overflow: hidden;
+}
+picture.photo-crop > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+picture.ratio-16x9 {
   aspect-ratio: 16 / 9;
-  object-fit: cover;
 }
-img.ratio-1x1 {
-  width: 100%;
+picture.ratio-4x3 {
+  aspect-ratio: 4 / 3;
+}
+picture.ratio-1x1 {
   aspect-ratio: 1 / 1;
-  object-fit: cover;
 }
-img.ratio-3x4 {
-  width: 100%;
+picture.ratio-3x4 {
   aspect-ratio: 3 / 4;
-  object-fit: cover;
 }
 
 /* Home: the "Ready to ride?" block keeps at least 40px of left padding from 768px up (owner instruction). */

@@ -5,6 +5,11 @@ import logo from '../assets/brand/btf-logo-white.png';
 import { COPY, footerPolicyParts, TEXT } from '../data/approved-copy';
 import { CONTACT_LINKS, FOOTER_TOUR_LINKS, LEGAL_NAV, NAV, SITE } from '../data/site';
 
+interface Props {
+  buildTimestamp: string;
+  buildTimeIso: string;
+}
+const { buildTimestamp, buildTimeIso } = Astro.props;
 const policies = footerPolicyParts();
 ---
 
@@ -68,8 +73,9 @@ const policies = footerPolicyParts();
           <strong>{part.label}:</strong> {part.text}
         </p>
       ))}
-      <p class="site-footer__copyright">
-        {COPY.copyright}
+      <p class="site-footer__copyright">{COPY.copyright}</p>
+      <p class="site-footer__updated">
+        <time datetime={buildTimeIso}>{buildTimestamp}</time>
       </p>
     </div>
   </div>

@@ -102,20 +102,26 @@ for (const [route, page] of pages) {
     const value = artifact.fields[m.field];
     if (value === undefined || value === '') continue; // absence already reported above when required
     const blocks = blockTexts(value).map(ws);
-    const kind = m.field.endsWith('/seo_title') || m.field.endsWith('/meta_title')
-      ? 'title'
-      : m.field.endsWith('/seo_description') || m.field.endsWith('/meta_description')
-        ? 'description'
-        : m.field.endsWith('_alt')
-          ? 'alt'
-          : 'text';
+    const kind =
+      m.field.endsWith('/seo_title') || m.field.endsWith('/meta_title')
+        ? 'title'
+        : m.field.endsWith('/seo_description') || m.field.endsWith('/meta_description')
+          ? 'description'
+          : m.field.endsWith('_alt')
+            ? 'alt'
+            : 'text';
 
     if (kind === 'title') {
       const expected = blocks.join(' ');
       const actual = attr(page.html, /<title>([\s\S]*?)<\/title>/);
       // BaseLayout appends " | <brand>" to the page title, so the approved value is the prefix.
       const ok = actual === expected || (actual ?? '').startsWith(`${expected} |`);
-      if (!ok) problem(m.field, route, `page title is "${actual}", expected "${expected}" (optionally followed by " | brand")`);
+      if (!ok)
+        problem(
+          m.field,
+          route,
+          `page title is "${actual}", expected "${expected}" (optionally followed by " | brand")`,
+        );
     } else if (kind === 'description') {
       const actual = attr(page.html, /<meta name="description" content="([^"]*)"/);
       if (actual !== blocks.join(' '))
@@ -135,7 +141,6 @@ for (const [route, page] of pages) {
     }
   }
   // Fields that belong to another route must still not be required here; nothing to check.
-
 }
 
 // ------------------------------------------------- 2. no uncovered text (page -> Sheet)
@@ -157,8 +162,18 @@ const CHROME_ALLOWED = [
   'Site',
   'Home',
   // Month names, because dates are rendered from data with toLocaleDateString.
-  'January', 'February', 'March', 'April', 'May', 'June',
-  'July', 'August', 'September', 'October', 'November', 'December',
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
 ].map((s) => ws(s).toLowerCase());
 
 const approvedForCoverage = [...new Set(allBlocks.filter((b) => b && b.length >= 3))]
@@ -166,6 +181,10 @@ const approvedForCoverage = [...new Set(allBlocks.filter((b) => b && b.length >=
   .sort((a, b) => b.length - a.length); // longest first
 
 const BLOCK_TAGS = 'h1|h2|h3|h4|h5|h6|p|li|button|figcaption|blockquote|td|th|dt|dd|label|summary|a';
+// The owner-specified footer build timestamp is machine metadata, not editorial Sheet copy.
+// Exempt only this complete format; other footer prose still needs a Sheet field.
+const BUILD_TIMESTAMP =
+  /^updated \d{4}-(?:0[1-9]|1[0-2])(?:0[1-9]|[12]\d|3[01]) (?:[01]\d|2[0-3]):[0-5]\d Heure de Paris$/;
 
 function residualOf(text) {
   const whole = ws(text).toLowerCase();
@@ -189,6 +208,7 @@ for (const [route, page] of pages) {
   const consider = (raw, kind) => {
     const text = ws(decode(String(raw ?? '')));
     if (!text || !/[A-Za-z]{3}/.test(text)) return;
+    if (kind === '<p>' && BUILD_TIMESTAMP.test(text)) return;
     const key = kind + '|' + text.toLowerCase();
     if (seen.has(key)) return;
     seen.add(key);
@@ -215,7 +235,10 @@ for (const [route, page] of pages) {
 if (uncovered.length) {
   const lines = uncovered
     .slice(0, 40)
-    .map((u) => `  ${u.route} | ${u.kind} | not from the Sheet: "${u.residual.slice(0, 80)}"\n      in: "${u.text.slice(0, 100)}"`);
+    .map(
+      (u) =>
+        `  ${u.route} | ${u.kind} | not from the Sheet: "${u.residual.slice(0, 80)}"\n      in: "${u.text.slice(0, 100)}"`,
+    );
   problems.push(
     `${uncovered.length} rendered string${uncovered.length === 1 ? '' : 's'} contain text that no approved Sheet field supplies:\n${lines.join('\n')}${uncovered.length > 40 ? `\n  ... and ${uncovered.length - 40} more` : ''}`,
   );

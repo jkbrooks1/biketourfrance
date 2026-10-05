@@ -3,6 +3,8 @@
 # Both GitHub secrets are configured. This workflow validates; Cloudflare Pages separately
 # runs `npx astro build` from the committed src/data/approved-copy.ts and deploys through
 # its Git integration. Requiring this check through branch protection remains an open decision.
+# A push made by scheduled-copy-sync.yml with GITHUB_TOKEN does not trigger this workflow;
+# that job runs the same predeploy pipeline before it commits.
 name: Approved copy check
 
 on:

@@ -24,10 +24,28 @@ const { title, description, path, home = false, notFound = false, ogImage } = As
 
 const fullTitle = home ? title : `${title} | ${SITE.name}`;
 const canonical = new URL(path, SITE.origin).href;
-const og = await getImage({ src: ogImage ?? PHOTOS.hero.src, width: 1200, height: 630, fit: 'cover', format: 'jpg' });
+const og = await getImage({
+  src: ogImage ?? PHOTOS.hero.src,
+  width: 1200,
+  height: 630,
+  fit: 'cover',
+  format: 'jpg',
+});
 const logoImg = await getImage({ src: logo, width: 512, format: 'png' });
 const touch = await getImage({ src: appleIcon, width: 180, format: 'png' });
 const ogUrl = new URL(og.src, SITE.origin).href;
+const builtAt = new Date();
+const parisParts = new Intl.DateTimeFormat('en-GB', {
+  timeZone: 'Europe/Paris',
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+  hour: '2-digit',
+  minute: '2-digit',
+  hourCycle: 'h23',
+}).formatToParts(builtAt);
+const parisPart = (type: string) => parisParts.find((part) => part.type === type)?.value ?? '';
+const buildTimestamp = `updated ${parisPart('year')}-${parisPart('month')}${parisPart('day')} ${parisPart('hour')}:${parisPart('minute')} Heure de Paris`;
 
 const jsonLd = [
   {
@@ -48,12 +66,12 @@ const jsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: (home
+    itemListElement: home
       ? [{ '@type': 'ListItem', position: 1, name: 'Home', item: SITE.origin }]
       : [
           { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.origin },
           { '@type': 'ListItem', position: 2, name: title, item: canonical },
-        ]),
+        ],
   },
 ];
 ---
@@ -98,6 +116,6 @@ const jsonLd = [
     <main id="main" tabindex="-1">
       <slot />
     </main>
-    <Footer />
+    <Footer buildTimestamp={buildTimestamp} buildTimeIso={builtAt.toISOString()} />
   </body>
 </html>

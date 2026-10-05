@@ -116,6 +116,12 @@ reference in the file named in `copy/field-manifest.json`.
    the twelve month names, because dates are machine-formatted with `toLocaleDateString`. **Anything
    added to that list stops being checked against the Sheet.**
 
+   The owner-specified footer build timestamp is handled by a separate exact-format exception:
+   `updated YYYY-MMDD HH:MM Heure de Paris`. `BaseLayout.astro` computes it during the Astro
+   build using `Intl.DateTimeFormat` with `Europe/Paris` and a 24-hour clock, then passes it to
+   `Footer.astro`. The verifier exempts only that complete machine-generated `<p>` value; other
+   footer prose remains Sheet-controlled.
+
 Direction 2 had been removed from the script at some earlier point while the file header still
 claimed to enforce it, which let hardcoded copy ship while the gate reported success. 214 unapproved
 strings were on the site when that was found on 2026-10-05. `npm run copy:test` now contains the
@@ -178,7 +184,7 @@ previously made `assert-deployable` unpassable regardless of copy correctness.
 
 ## 7. Deploy
 
-### Two independent mechanisms. Only one deploys.
+### Validation, scheduled publication, and deployment
 
 **GitHub Actions — validates, does not deploy.**
 `.github/workflows/approved-copy-check.yml`, job **Approved copy check**.
@@ -189,6 +195,26 @@ previously made `assert-deployable` unpassable regardless of copy correctness.
   `predeploy OK: dist/ matches a current snapshot of BTF_Approved_Site_Copy and is deployable.`
 - There is **no deploy step**. Runs are currently green.
 - The workflow header records that the gate became active on 2026-10-05.
+
+**Scheduled approved-copy sync — validates and publishes changed copy to Git.**
+`.github/workflows/scheduled-copy-sync.yml`, job **Sync approved copy from Google Sheet**.
+- Triggers: hourly at minute 17 UTC (`17 * * * *`) and manual `workflow_dispatch`.
+- Steps: checkout `main` → Node 24 with npm cache → `npm ci` →
+  `npm run predeploy:approved-copy` using the existing GitHub Sheet secrets.
+- After the full Sheet-mode gate passes, checks `git status --porcelain` for
+  `src/data/approved-copy.ts`, `copy/fixture/fixture-rows.json`, and
+  `copy/field-manifest.json`. If changed, commits only those paths with message
+  `chore(copy): automated hourly sync from Google Sheet` and pushes to `main`. If unchanged, logs
+  `No copy changes detected in sheet` and exits successfully. If validation fails, no commit or
+  push occurs.
+- The current pipeline generates only `approved-copy.ts`; a Sheet field addition or deletion
+  requires a coordinated manifest, fixture, and source update before the scheduled job can pass.
+  The job does not interpret yellow fill as owner approval (D8).
+- The job uses `GITHUB_TOKEN` with `contents: write`. GitHub suppresses other workflow runs from a
+  push made with that token, so its own predeploy check validates automated commits. A future D4
+  branch rule must allow this bot's direct push or change the publishing design.
+- Schedule timing can be delayed by GitHub; a successful hourly check precedes any Pages build of
+  new Sheet copy. No Google credential is stored in Cloudflare Pages.
 
 **Cloudflare Pages Git integration — builds and deploys.**
 - Project `temp-btf`, connected to `jkbrooks1/biketourfrance`.
@@ -204,8 +230,10 @@ previously made `assert-deployable` unpassable regardless of copy correctness.
 Because the Pages build command is `npx astro build` and nothing more, **Pages does not run the gate
 and does not read the Sheet.** It builds from the **committed** `src/data/approved-copy.ts`.
 
-So: **editing the Sheet does not change the staging site.** The generated file has to be regenerated
-and committed. The working sequence is:
+So: **editing the Sheet does not change the staging site immediately.** The scheduled workflow
+regenerates, verifies, and commits the generated file on its next successful run. An owner can also
+run **Scheduled approved copy sync** manually in GitHub Actions to check sooner. For a local manual
+publication, the sequence is:
 
 ```
 export BTF_COPY_SHEET_ID=1vzlhoekeVcx437ajMMFU--1kIrE7DfKYvi8rKhlE9aw
@@ -214,8 +242,11 @@ npx astro build && node scripts/copy/verify-rendered.mjs   # prove it before com
 git add src/data/approved-copy.ts && git commit && git push origin main
 ```
 
-The push triggers both the GitHub Actions gate (validation) and the Pages production deploy. This is
-divergence **D3** — the documented intent was that Pages would read the Sheet itself.
+A human push triggers the separate GitHub Actions gate and the Pages staging deployment. A push
+made by the scheduled job with `GITHUB_TOKEN` does not trigger another GitHub Actions workflow;
+that job already ran the complete Sheet-mode gate before its push. The Pages Git integration builds
+the committed copy on `main`. D3 selected Option A with this hourly sync; D4 branch protection
+and D8 owner review remain open.
 
 ### Rollback
 
@@ -274,6 +305,8 @@ is `npx astro build`. Never commit a key, paste one into chat, or write one to a
 
 - The latest local Sheet-mode predeploy passed with 351 fields and 12 built routes. Staging serves
   the committed version of `approved-copy.ts`; confirm its deployment ID after the next push.
+- D3 uses Option A: hourly or manually dispatched GitHub sync publishes verified Sheet changes
+  through a commit on `main`, then the existing Pages Git integration builds staging.
 - GitHub Actions gate green.
 - `biketourfrance.net` still served by Framer (`server: Framer/26fa766`, DNS `31.43.160.6`,
   `31.43.161.6`). No custom domain cutover has occurred.

@@ -1,0 +1,8 @@
+{
+  "production_branch": "rebuild/2026-10-02-audit-remediation",
+  "source": {
+    "config": {
+      "production_branch": "rebuild/2026-10-02-audit-remediation"
+    }
+  }
+}

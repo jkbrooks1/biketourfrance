@@ -38,7 +38,7 @@ Read first: the system-change register entries of 2026-10-02 ("biketourfrance.ne
 
 ## 3. Technical gates
 
-0. **The approved copy gate** (`docs/APPROVED_COPY_GATE.md`) is active in GitHub Actions and has passed against the real Sheet. Owner review of yellow Sheet rows remains open (D8), and `main` does not yet require **Approved copy check** through branch protection (D4). Cloudflare Pages runs `npx astro build` from committed `src/data/approved-copy.ts`; it does not read the Sheet. The publishing design remains an owner decision (D3). Complete owner copy review and decide the remaining gate controls before the production-domain cutover.
+0. **The approved copy gate** (`docs/APPROVED_COPY_GATE.md`) is active in GitHub Actions and has passed against the real Sheet. D3 selected committed-copy publishing with an hourly GitHub Actions sync; Cloudflare Pages still runs `npx astro build` and does not read the Sheet. Owner review of yellow Sheet rows remains open (D8), and `main` does not yet require **Approved copy check** through branch protection (D4). Any D4 rule must account for the scheduled workflow's direct bot push. Complete owner copy review and decide the remaining gate controls before the production-domain cutover.
 
 1. `npm run check`, `npm run build`, and `npm run verify` pass locally on `main`; the Sheet-mode `npm run predeploy:approved-copy` also passes before the cutover build is committed.
 2. The preview deployment is checked in a browser at 320, 375, 390, 768, 1024, and 1440 px, and with the keyboard.

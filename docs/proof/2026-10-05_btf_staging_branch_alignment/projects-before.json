@@ -1,0 +1,210 @@
+[
+  {
+    "name": "btf-production",
+    "subdomain": "btf-production.pages.dev",
+    "production_branch": "rebuild/2026-10-02-audit-remediation",
+    "source_type": "github",
+    "source_config": {
+      "owner": "jkbrooks1",
+      "repo_name": "biketourfrance",
+      "production_branch": "rebuild/2026-10-02-audit-remediation",
+      "production_deployments_enabled": true,
+      "preview_deployment_setting": "all",
+      "preview_branch_includes": [
+        "*"
+      ],
+      "preview_branch_excludes": []
+    },
+    "build_config": {
+      "build_command": "npx astro build",
+      "destination_dir": "dist",
+      "root_dir": "."
+    },
+    "domains": [
+      "btf-production.pages.dev"
+    ],
+    "canonical_deployment": {
+      "id": "60497f41-bb17-4277-9429-b4cad3686c05",
+      "environment": "production",
+      "url": "https://60497f41.btf-production.pages.dev",
+      "aliases": null,
+      "created_on": "2026-10-04T22:53:11.587244Z",
+      "latest_stage": {
+        "name": "deploy",
+        "started_on": "2026-10-04T22:55:10.048673Z",
+        "ended_on": "2026-10-04T22:55:16.990853Z",
+        "status": "success"
+      },
+      "branch": "rebuild/2026-10-02-audit-remediation",
+      "commit_hash": "a6b0ed2beef5f1358e912132880ddc2196a2a910"
+    },
+    "latest_deployment": {
+      "id": "c438759e-b349-48d2-8b50-3c120476ff01",
+      "environment": "preview",
+      "url": "https://c438759e.btf-production.pages.dev",
+      "aliases": [
+        "https://main.btf-production.pages.dev"
+      ],
+      "created_on": "2026-10-05T21:55:40.373245Z",
+      "latest_stage": {
+        "name": "deploy",
+        "started_on": "2026-10-05T21:56:54.106165Z",
+        "ended_on": "2026-10-05T21:57:06.79364Z",
+        "status": "success"
+      },
+      "branch": "main",
+      "commit_hash": "53d3ef64afeb2bb18c3db168aa2c7a6c19bbaedc"
+    },
+    "recent_deployments": [
+      {
+        "id": "c438759e-b349-48d2-8b50-3c120476ff01",
+        "environment": "preview",
+        "url": "https://c438759e.btf-production.pages.dev",
+        "aliases": [
+          "https://main.btf-production.pages.dev"
+        ],
+        "created_on": "2026-10-05T21:55:40.373245Z",
+        "latest_stage": {
+          "name": "deploy",
+          "started_on": "2026-10-05T21:56:54.106165Z",
+          "ended_on": "2026-10-05T21:57:06.79364Z",
+          "status": "success"
+        },
+        "branch": "main",
+        "commit_hash": "53d3ef64afeb2bb18c3db168aa2c7a6c19bbaedc"
+      },
+      {
+        "id": "9b1eded5-e493-468f-879c-8bd79c3b529f",
+        "environment": "preview",
+        "url": "https://9b1eded5.btf-production.pages.dev",
+        "aliases": null,
+        "created_on": "2026-10-05T20:30:36.197346Z",
+        "latest_stage": {
+          "name": "deploy",
+          "started_on": "2026-10-05T20:31:40.023974Z",
+          "ended_on": "2026-10-05T20:31:50.672424Z",
+          "status": "success"
+        },
+        "branch": "main",
+        "commit_hash": "7e5f80db4df7fdee5ac4a223ca971176ff3bf5ca"
+      },
+      {
+        "id": "96ede954-0c9b-4d7f-90ed-463c3b1ef30f",
+        "environment": "preview",
+        "url": "https://96ede954.btf-production.pages.dev",
+        "aliases": null,
+        "created_on": "2026-10-05T20:22:46.621148Z",
+        "latest_stage": {
+          "name": "deploy",
+          "started_on": "2026-10-05T20:23:47.725444Z",
+          "ended_on": "2026-10-05T20:23:59.148515Z",
+          "status": "success"
+        },
+        "branch": "main",
+        "commit_hash": "a5c3729bc80cff2ad915edf80ef1fb006af8eb65"
+      }
+    ]
+  },
+  {
+    "name": "temp-btf",
+    "subdomain": "temp-btf.pages.dev",
+    "production_branch": "main",
+    "source_type": "github",
+    "source_config": {
+      "owner": "jkbrooks1",
+      "repo_name": "biketourfrance",
+      "production_branch": "main",
+      "production_deployments_enabled": true,
+      "preview_deployment_setting": "all",
+      "preview_branch_includes": [
+        "*"
+      ],
+      "preview_branch_excludes": []
+    },
+    "build_config": {
+      "build_command": "npx astro build",
+      "destination_dir": "dist",
+      "root_dir": "."
+    },
+    "domains": [
+      "temp-btf.pages.dev"
+    ],
+    "canonical_deployment": {
+      "id": "edec3a2d-a69e-48e8-b954-8ebb8a346c93",
+      "environment": "production",
+      "url": "https://edec3a2d.temp-btf.pages.dev",
+      "aliases": null,
+      "created_on": "2026-10-05T21:55:40.373245Z",
+      "latest_stage": {
+        "name": "deploy",
+        "started_on": "2026-10-05T21:58:04.567509Z",
+        "ended_on": "2026-10-05T21:58:14.294376Z",
+        "status": "success"
+      },
+      "branch": "main",
+      "commit_hash": "53d3ef64afeb2bb18c3db168aa2c7a6c19bbaedc"
+    },
+    "latest_deployment": {
+      "id": "edec3a2d-a69e-48e8-b954-8ebb8a346c93",
+      "environment": "production",
+      "url": "https://edec3a2d.temp-btf.pages.dev",
+      "aliases": null,
+      "created_on": "2026-10-05T21:55:40.373245Z",
+      "latest_stage": {
+        "name": "deploy",
+        "started_on": "2026-10-05T21:58:04.567509Z",
+        "ended_on": "2026-10-05T21:58:14.294376Z",
+        "status": "success"
+      },
+      "branch": "main",
+      "commit_hash": "53d3ef64afeb2bb18c3db168aa2c7a6c19bbaedc"
+    },
+    "recent_deployments": [
+      {
+        "id": "edec3a2d-a69e-48e8-b954-8ebb8a346c93",
+        "environment": "production",
+        "url": "https://edec3a2d.temp-btf.pages.dev",
+        "aliases": null,
+        "created_on": "2026-10-05T21:55:40.373245Z",
+        "latest_stage": {
+          "name": "deploy",
+          "started_on": "2026-10-05T21:58:04.567509Z",
+          "ended_on": "2026-10-05T21:58:14.294376Z",
+          "status": "success"
+        },
+        "branch": "main",
+        "commit_hash": "53d3ef64afeb2bb18c3db168aa2c7a6c19bbaedc"
+      },
+      {
+        "id": "bff71c7a-ca36-41cb-bc85-9b54f9a068ea",
+        "environment": "production",
+        "url": "https://bff71c7a.temp-btf.pages.dev",
+        "aliases": null,
+        "created_on": "2026-10-05T20:30:36.197346Z",
+        "latest_stage": {
+          "name": "deploy",
+          "started_on": "2026-10-05T20:33:24.334717Z",
+          "ended_on": "2026-10-05T20:33:32.960549Z",
+          "status": "success"
+        },
+        "branch": "main",
+        "commit_hash": "7e5f80db4df7fdee5ac4a223ca971176ff3bf5ca"
+      },
+      {
+        "id": "974ca7c2-e39d-4863-ba1d-a7c8b85ac5ad",
+        "environment": "production",
+        "url": "https://974ca7c2.temp-btf.pages.dev",
+        "aliases": null,
+        "created_on": "2026-10-05T20:22:46.621148Z",
+        "latest_stage": {
+          "name": "deploy",
+          "started_on": "2026-10-05T20:24:54.780971Z",
+          "ended_on": "2026-10-05T20:25:05.594994Z",
+          "status": "success"
+        },
+        "branch": "main",
+        "commit_hash": "a5c3729bc80cff2ad915edf80ef1fb006af8eb65"
+      }
+    ]
+  }
+]
