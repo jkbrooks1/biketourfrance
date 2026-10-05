@@ -2,7 +2,7 @@
 // Cloudflare Pages serves dist/404.html with HTTP 404 for unknown paths.
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Button from '../components/Button.astro';
-import { COPY } from '../data/approved-copy';
+import { COPY, TEXT } from '../data/approved-copy';
 import { NAV } from '../data/site';
 
 const { notFound } = COPY;
@@ -12,13 +12,13 @@ const { notFound } = COPY;
   path="/404/"
   notFound
   title={notFound.heading}
-  description="That page is not on the BikeTourFrance.net website. Use these links to find the tour, resources, or contact page."
+  description={TEXT['/404-page/meta_description']}
 >
   <section class="section">
     <div class="container">
       <h1>{notFound.heading}</h1>
       <p class="lede">{notFound.body}</p>
-      <p>These pages can help:</p>
+      <p>{TEXT['/404-page/body_1']}</p>
       <ul class="link-list">
         {NAV.filter((item) => item.href !== '/').map((item) => (
           <li>

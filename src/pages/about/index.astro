@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Photo from '../../components/Photo.astro';
 import ContactCta from '../../components/ContactCta.astro';
-import { COPY } from '../../data/approved-copy';
+import { COPY, TEXT } from '../../data/approved-copy';
 import { PHOTOS } from '../../data/photos';
 
 const { about } = COPY;
@@ -10,8 +10,8 @@ const { about } = COPY;
 
 <BaseLayout
   path="/about/"
-  title="About John Brooks"
-  description="John Brooks leads small, self-supported bicycle tours in France. Learn who he is, how the tours work, and why he plans each day in detail."
+  title={TEXT['/about-page/meta_title']}
+  description={TEXT['/about-page/meta_description']}
   ogImage={PHOTOS.threeRidersTown.src}
 >
   <section class="section">
@@ -37,7 +37,7 @@ const { about } = COPY;
 
   <section class="section section--beige" aria-labelledby="how-heading">
     <div class="container">
-      <h2 id="how-heading">How the tours work</h2>
+      <h2 id="how-heading">{TEXT['/about-page/heading_1']}</h2>
       <p>{about.body4}</p>
       <p>{about.body5}</p>
     </div>
@@ -45,14 +45,14 @@ const { about } = COPY;
 
   <section class="section" aria-labelledby="who-heading">
     <div class="container">
-      <h2 id="who-heading">Who is planning your trip</h2>
+      <h2 id="who-heading">{TEXT['/about-page/heading_2']}</h2>
       <p>{about.body6}</p>
       <p>{about.body7}</p>
     </div>
   </section>
 
   <ContactCta
-    heading="Want to talk it through?"
-    text="Email John with your questions about the 2027 tours or about planning your own trip."
+    heading={TEXT['/about-x/p_1']}
+    text={TEXT['/about-x/p_2']}
   />
 </BaseLayout>

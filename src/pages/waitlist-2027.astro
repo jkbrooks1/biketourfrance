@@ -1,4 +1,5 @@
 ---
+import { TEXT } from '../data/approved-copy';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 // 2027 Tour Waitlist page. Static form that POSTs JSON to the n8n intake webhook
@@ -12,11 +13,10 @@ const webhookUrl =
   import.meta.env.PUBLIC_WAITLIST_WEBHOOK_URL ||
   'https://n8n.biketourfrance.net/webhook/btf-waitlist-2027-intake';
 
-const consentNotice =
-  'By clicking Join the 2027 Waitlist, I agree to receive BikeTourFrance.net emails about tours, route guides, and services. I can unsubscribe at any time.';
+const consentNotice = TEXT['/waitlist/consent_notice'];
 
-const pageTitle = 'Join the 2027 Tour Waitlist';
-const pageDescription = 'Join the BikeTourFrance.net 2027 tour waitlist and hear first when 2027 tours are finalized.';
+const pageTitle = TEXT['/waitlist/meta_title'];
+const pageDescription = TEXT['/waitlist/meta_description'];
 const pagePath = '/waitlist-2027/';
 ---
 
@@ -97,56 +97,53 @@ const pagePath = '/waitlist-2027/';
   </style>
 
   <section class="waitlist-hero">
-    <h1>Join the BikeTourFrance.net 2027 Tour Waitlist</h1>
-    <p>Be among the first to hear when our 2027 tours are ready.</p>
+    <h1>{TEXT['/waitlist/heading_1']}</h1>
+    <p>{TEXT['/waitlist/body_1']}</p>
   </section>
 
   <div class="waitlist-container">
-    <p class="waitlist-intro">
-      The waitlist is the simplest way to show interest in a 2027 tour. Tell us your name and the season you prefer.
-      When 2027 tours are finalized, you will hear from us by email. Joining does not commit you to anything.
-    </p>
+    <p class="waitlist-intro">{TEXT['/waitlist/body_2']}</p>
 
     <div id="success" class="waitlist-success" role="status" tabindex="-1" hidden>
-      <h2>You're on the list.</h2>
-      <p>Thank you for joining the 2027 waitlist. A confirmation email is on its way. If you don't see it within a few minutes, check your spam folder.</p>
+      <h2>{TEXT['/waitlist/heading_2']}</h2>
+      <p>{TEXT['/waitlist/body_3']}</p>
     </div>
 
     <form id="waitlist-form" class="waitlist-form" novalidate data-endpoint={webhookUrl}>
       <div class="waitlist-field">
-        <label class="waitlist-label" for="first_name">First name</label>
+        <label class="waitlist-label" for="first_name">{TEXT['/waitlist/label_1']}</label>
         <input class="waitlist-input" type="text" id="first_name" name="first_name" autocomplete="given-name" maxlength="80" required aria-describedby="first_name-error" />
         <p class="waitlist-error" id="first_name-error" aria-live="polite"></p>
       </div>
 
       <div class="waitlist-field">
-        <label class="waitlist-label" for="email">Email</label>
+        <label class="waitlist-label" for="email">{TEXT['/waitlist/frag_1']}</label>
         <input class="waitlist-input" type="email" id="email" name="email" autocomplete="email" inputmode="email" maxlength="254" required aria-describedby="email-error" />
         <p class="waitlist-error" id="email-error" aria-live="polite"></p>
       </div>
 
       <fieldset class="waitlist-fieldset" aria-describedby="interest-error">
-        <legend class="waitlist-legend">Which tours interest you?</legend>
-        <div class="waitlist-choice"><input type="radio" id="interest-spring" name="interest" value="Spring 2027" required /><label class="waitlist-choice-label" for="interest-spring">Spring 2027</label></div>
-        <div class="waitlist-choice"><input type="radio" id="interest-fall" name="interest" value="Fall 2027" /><label class="waitlist-choice-label" for="interest-fall">Fall 2027</label></div>
-        <div class="waitlist-choice"><input type="radio" id="interest-either" name="interest" value="Either" /><label class="waitlist-choice-label" for="interest-either">Either</label></div>
+        <legend class="waitlist-legend">{TEXT['/waitlist/frag_2']}</legend>
+        <div class="waitlist-choice"><input type="radio" id="interest-spring" name="interest" value="Spring 2027" required /><label class="waitlist-choice-label" for="interest-spring">{TEXT['/waitlist/frag_3']}</label></div>
+        <div class="waitlist-choice"><input type="radio" id="interest-fall" name="interest" value="Fall 2027" /><label class="waitlist-choice-label" for="interest-fall">{TEXT['/waitlist/frag_4']}</label></div>
+        <div class="waitlist-choice"><input type="radio" id="interest-either" name="interest" value="Either" /><label class="waitlist-choice-label" for="interest-either">{TEXT['/waitlist/label_2']}</label></div>
         <p class="waitlist-error" id="interest-error" aria-live="polite"></p>
       </fieldset>
 
       <div class="waitlist-field">
         <div class="waitlist-choice">
           <input type="checkbox" id="marketing_consent" name="marketing_consent" />
-          <label class="waitlist-choice-label" for="marketing_consent">Send me BikeTourFrance.net updates by email</label>
+          <label class="waitlist-choice-label" for="marketing_consent">{TEXT['/waitlist/label_3']}</label>
         </div>
       </div>
 
       <div class="waitlist-hp" aria-hidden="true">
-        <label class="waitlist-label" for="company_website">Leave this field empty</label>
+        <label class="waitlist-label" for="company_website">{TEXT['/waitlist/label_4']}</label>
         <input class="waitlist-input" type="text" id="company_website" name="company_website" tabindex="-1" autocomplete="off" />
       </div>
 
       <p class="waitlist-notice" id="consent-notice">{consentNotice}</p>
-      <button type="submit" class="waitlist-button" id="submit-button">Join the 2027 Waitlist</button>
+      <button type="submit" class="waitlist-button" id="submit-button">{TEXT['/waitlist/cta_1']}</button>
       <p class="waitlist-status" id="form-status" role="status" aria-live="polite"></p>
     </form>
 

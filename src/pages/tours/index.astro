@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Photo from '../../components/Photo.astro';
 import Button from '../../components/Button.astro';
-import { COPY } from '../../data/approved-copy';
+import { COPY, TEXT } from '../../data/approved-copy';
 import { CDM_FACTS } from '../../data/cdm2027';
 import { PHOTOS } from '../../data/photos';
 import { CONTACT_LINKS } from '../../data/site';
@@ -10,31 +10,28 @@ import { CONTACT_LINKS } from '../../data/site';
 
 <BaseLayout
   path="/tours/"
-  title="Bike tours in France: small-group and self-guided"
-  description="BikeTourFrance.net offers small-group, self-supported bicycle tours in France, a self-guided tour package, and trip-planning help from John Brooks."
+  title={TEXT['/tours/meta_title']}
+  description={TEXT['/tours/meta_description']}
   ogImage={PHOTOS.riderCanalPath.src}
 >
   <section class="section">
     <div class="container">
-      <p class="eyebrow">Tours</p>
-      <h1>Ways to ride in France with BikeTourFrance.net</h1>
-      <p class="lede">
-        All BikeTourFrance.net tours are self-supported. You carry your own gear from place to place, and John
-        helps you plan the rest.
-      </p>
+      <p class="eyebrow">{TEXT['/nav/tours']}</p>
+      <h1>{TEXT['/tours/heading_1']}</h1>
+      <p class="lede">{TEXT['/tours/body_1']}</p>
     </div>
   </section>
 
   <section class="section section--beige" aria-labelledby="group-heading">
     <div class="container split">
       <div>
-        <h2 id="group-heading">Canal des Deux Mers, 2027</h2>
+        <h2 id="group-heading">{TEXT['/tours/heading_2']}</h2>
         <p>{CDM_FACTS.route}</p>
         <p>
           {CDM_FACTS.departures} {CDM_FACTS.datesNote} {CDM_FACTS.pricingNote}
         </p>
         <div class="btn-row">
-          <Button href="/canal-des-deux-mers/">See the 2027 tour</Button>
+          <Button href="/canal-des-deux-mers/">{TEXT['/tours/cta_1']}</Button>
           <Button href={CONTACT_LINKS.waitlist} variant="secondary">
             {COPY.hero.waitlistCta}
           </Button>
@@ -54,32 +51,21 @@ import { CONTACT_LINKS } from '../../data/site';
 
   <section class="section" aria-labelledby="self-guided-heading">
     <div class="container">
-      <h2 id="self-guided-heading">Self-guided tour package</h2>
-      <p>
-        If you prefer to travel on your own schedule, John offers a self-guided tour package. He builds the
-        routes, books your accommodations, and gives practical support as you prepare. You ride independently,
-        with a sound plan and help when you need it.
-      </p>
-      <p>Details and rates are shared by email, because each trip is different.</p>
+      <h2 id="self-guided-heading">{TEXT['/tours/frag_1']}</h2>
+      <p>{TEXT['/tours/body_2']}</p>
+      <p>{TEXT['/tours/body_3']}</p>
       <div class="btn-row">
-        <Button href={CONTACT_LINKS.planning} variant="secondary">
-          Ask about self-guided
-        </Button>
+        <Button href={CONTACT_LINKS.planning} variant="secondary">{TEXT['/tours/cta_2']}</Button>
       </div>
     </div>
   </section>
 
   <section class="section section--beige" aria-labelledby="coaching-heading">
     <div class="container">
-      <h2 id="coaching-heading">Trip-planning help</h2>
-      <p>
-        Want to plan your own adventure in France and only need coaching? Send John an email. He loves helping
-        fellow bike travelers plan a great trip. Materials and support for independent tours are coming soon.
-      </p>
+      <h2 id="coaching-heading">{TEXT['/tours/heading_3']}</h2>
+      <p>{TEXT['/tours/body_4']}</p>
       <div class="btn-row">
-        <Button href={CONTACT_LINKS.planning} variant="secondary">
-          Ask about trip planning
-        </Button>
+        <Button href={CONTACT_LINKS.planning} variant="secondary">{TEXT['/tours/cta_3']}</Button>
       </div>
     </div>
   </section>

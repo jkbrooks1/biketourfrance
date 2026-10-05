@@ -142,11 +142,21 @@ function serialize(value, indent) {
   return JSON.stringify(value);
 }
 
+// TEXT exposes every approved Sheet field by its exact Sheet path. A component can render approved
+// copy through it without the field needing a hand-written entry in SCALARS, which is what keeps
+// page text and Sheet rows in one-to-one correspondence.
+const textEntries = Object.entries(fields)
+  .filter(([, v]) => typeof v === 'string' && v.trim() !== '')
+  .sort(([a], [b]) => a.localeCompare(b));
+const textStr = `{\n${textEntries.map(([k, v]) => `  ${JSON.stringify(k)}: ${JSON.stringify(v)},`).join('\n')}\n}`;
+
 const source = `// GENERATED FILE - DO NOT EDIT BY HAND.
 // Written by scripts/copy/generate-ts.mjs from the approved-copy Google Sheet
 // "${sheetTitle}" (tab "${tab}"), read during the build. The Sheet is the source of truth.
 
 export const COPY = ${serialize(copy, 0)} as const;
+
+export const TEXT: Record<string, string> = ${textStr};
 
 export function footerPolicyParts(): { label: string; text: string }[] {
   return COPY.footerPolicies

@@ -4,7 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Photo from '../components/Photo.astro';
 import Button from '../components/Button.astro';
 import Gallery from '../components/Gallery.astro';
-import { COPY } from '../data/approved-copy';
+import { COPY, TEXT } from '../data/approved-copy';
 import { GALLERY, PHOTOS } from '../data/photos';
 import { CONTACT_LINKS } from '../data/site';
 
@@ -14,7 +14,7 @@ const { hero, readyToRide, about, gallery, buttons } = COPY;
 <BaseLayout
   home
   path="/"
-  title="BikeTourFrance.net: small-group bicycle tours in France"
+  title={TEXT['/meta_title']}
   description={COPY.metaDescription}
 >
   <section class="hero">

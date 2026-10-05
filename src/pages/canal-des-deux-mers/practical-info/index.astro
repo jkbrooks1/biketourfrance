@@ -1,4 +1,5 @@
 ---
+import { TEXT } from '../../../data/approved-copy';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Photo from '../../../components/Photo.astro';
 import ContactCta from '../../../components/ContactCta.astro';
@@ -6,10 +7,7 @@ import practicalInfoData from '../../../data/practical-info-data.json';
 import { PHOTOS } from '../../../data/photos';
 
 // Data comes from the existing Practical Info sheet export (see docs/BUILD_LOG.md). Only the labels are cleaned up here.
-const { questions, generated_at } = practicalInfoData;
-const byQuestion = Object.fromEntries(
-  questions.map((entry: { question: string; tram: string; shuttle: string }) => [entry.question, entry]),
-);
+const { generated_at } = practicalInfoData;
 const checked = new Date(generated_at).toLocaleDateString('en-US', {
   month: 'long',
   year: 'numeric',
@@ -17,62 +15,58 @@ const checked = new Date(generated_at).toLocaleDateString('en-US', {
 });
 
 const tramSummary = [
-  'Cost: €1.90',
-  'Travel time: about 45 minutes',
-  'Frequency: every 10–15 minutes',
-  'Bike in a case: always allowed',
-  'Tickets: TBM app or machines',
-  'Best for: lowest cost and flexibility',
+  TEXT['/cdm-practical/list_1'],
+  TEXT['/cdm-practical/list_2'],
+  TEXT['/cdm-practical/list_3'],
+  TEXT['/cdm-practical/list_4'],
+  TEXT['/cdm-practical/list_5'],
+  TEXT['/cdm-practical/list_6'],
 ];
 const busSummary = [
-  'Cost: €9–10',
-  'Travel time: about 30 minutes',
-  'Schedule: limited window',
-  'Bike in a case: accepted',
-  'Tickets: online or onboard',
-  'Best for: fastest public option',
+  TEXT['/cdm-practical/list_7'],
+  TEXT['/cdm-practical/list_8'],
+  TEXT['/cdm-practical/list_9'],
+  TEXT['/cdm-practical/list_10'],
+  TEXT['/cdm-practical/list_11'],
+  TEXT['/cdm-practical/list_12'],
 ];
 const tramChoose = [
-  'Lowest cost matters',
-  'You arrive early or late',
-  'You have a bike case',
-  'You want flexibility',
+  TEXT['/cdm-practical/list_13'],
+  TEXT['/cdm-practical/list_14'],
+  TEXT['/cdm-practical/list_15'],
+  TEXT['/cdm-practical/list_16'],
 ];
 const busChoose = [
-  'Fastest journey matters',
-  'You arrive during operating hours',
-  'Extra cost is okay',
-  'You want the simplest trip',
+  TEXT['/cdm-practical/list_17'],
+  TEXT['/cdm-practical/list_18'],
+  TEXT['/cdm-practical/list_19'],
+  TEXT['/cdm-practical/list_20'],
 ];
 
 const details = [
-  ['1. What is it?', 'What is it?'],
-  ['2. How frequently does it run?', 'How often does it run?'],
-  ['3. How long does it take?', 'How long does it take?'],
-  ['4. How much does it cost?', 'How much does it cost?'],
-  ['5. What about my bike?!?!', 'What about my bike?'],
-  ['6. How do I book?', 'How do I book?'],
-].map(([key, title]) => ({ title, tram: byQuestion[key]?.tram ?? '', bus: byQuestion[key]?.shuttle ?? '' }));
+  { title: TEXT['/cdm-practical/q1_title'], tram: TEXT['/cdm-practical/q1_tram'], bus: TEXT['/cdm-practical/q1_bus'] },
+  { title: TEXT['/cdm-practical/q2_title'], tram: TEXT['/cdm-practical/q2_tram'], bus: TEXT['/cdm-practical/q2_bus'] },
+  { title: TEXT['/cdm-practical/q3_title'], tram: TEXT['/cdm-practical/q3_tram'], bus: TEXT['/cdm-practical/q3_bus'] },
+  { title: TEXT['/cdm-practical/q4_title'], tram: TEXT['/cdm-practical/q4_tram'], bus: TEXT['/cdm-practical/q4_bus'] },
+  { title: TEXT['/cdm-practical/q5_title'], tram: TEXT['/cdm-practical/q5_tram'], bus: TEXT['/cdm-practical/q5_bus'] },
+  { title: TEXT['/cdm-practical/q6_title'], tram: TEXT['/cdm-practical/q6_tram'], bus: TEXT['/cdm-practical/q6_bus'] },
+];
 ---
 
 <BaseLayout
   path="/canal-des-deux-mers/practical-info/"
-  title="Bordeaux Airport to Gare Saint-Jean: tram or airport bus"
-  description="How to get from Bordeaux Airport (Mérignac) to Gare Saint-Jean station and nearby hotels: Tram Line F or the 30'Direct airport bus, with times, costs, and bike rules."
+  title={TEXT['/cdm-practical/meta_title']}
+  description={TEXT['/cdm-practical/meta_description']}
 >
   <section class="section">
     <div class="container split">
       <div>
-        <p class="eyebrow">Practical information</p>
-        <h1>Bordeaux Airport to Gare Saint-Jean and your hotel</h1>
-        <p class="lede">
-          Gare Saint-Jean is Bordeaux's main railway station. All recommended hotels are within about 500 m of
-          the station.
-        </p>
+        <p class="eyebrow">{TEXT['/nav/text_1']}</p>
+        <h1>{TEXT['/cdm-practical/heading_1']}</h1>
+        <p class="lede">{TEXT['/cdm-practical/body_2']}</p>
         <div class="notice">
           <p>
-            Schedules and fares come from the transport operators and were last checked in {checked}. Confirm
-            them with TBM and 30'Direct before you travel.
+            {TEXT['/cdm-practical/frag_1']} {checked}{TEXT['/cdm-practical/frag_2']}
           </p>
         </div>
       </div>
@@ -91,10 +85,10 @@ const details = [
 
   <section class="section section--beige" aria-labelledby="summary-heading">
     <div class="container">
-      <h2 id="summary-heading">Your two options</h2>
+      <h2 id="summary-heading">{TEXT['/cdm-practical/heading_2']}</h2>
       <div class="two-col">
         <div class="card">
-          <h3>Tram Line F</h3>
+          <h3>{TEXT['/cdm-practical/heading_3']}</h3>
           <ul>
             {tramSummary.map((item) => (
               <li>{item}</li>
@@ -102,7 +96,7 @@ const details = [
           </ul>
         </div>
         <div class="card">
-          <h3>30'Direct airport bus</h3>
+          <h3>{TEXT['/cdm-practical/heading_4']}</h3>
           <ul>
             {busSummary.map((item) => (
               <li>{item}</li>
@@ -115,10 +109,10 @@ const details = [
 
   <section class="section" aria-labelledby="choose-heading">
     <div class="container">
-      <h2 id="choose-heading">Which should I choose?</h2>
+      <h2 id="choose-heading">{TEXT['/cdm-practical/heading_5']}</h2>
       <div class="two-col">
         <div class="card">
-          <h3>Choose Tram Line F if:</h3>
+          <h3>{TEXT['/cdm-practical/heading_6']}</h3>
           <ul>
             {tramChoose.map((item) => (
               <li>{item}</li>
@@ -126,7 +120,7 @@ const details = [
           </ul>
         </div>
         <div class="card">
-          <h3>Choose the 30'Direct airport bus if:</h3>
+          <h3>{TEXT['/cdm-practical/heading_7']}</h3>
           <ul>
             {busChoose.map((item) => (
               <li>{item}</li>
@@ -139,17 +133,17 @@ const details = [
 
   <section class="section section--beige" aria-labelledby="details-heading">
     <div class="container">
-      <h2 id="details-heading">Details</h2>
+      <h2 id="details-heading">{TEXT['/cdm-practical/frag_3']}</h2>
       {details.map((d) => (
         <details class="card accordion">
           <summary>{d.title}</summary>
           <div class="two-col">
             <div>
-              <h3>Tram Line F</h3>
+              <h3>{TEXT['/cdm-practical/heading_3']}</h3>
               <p class="preline">{d.tram}</p>
             </div>
             <div>
-              <h3>30'Direct airport bus</h3>
+              <h3>{TEXT['/cdm-practical/heading_4']}</h3>
               <p class="preline">{d.bus}</p>
             </div>
           </div>
@@ -159,7 +153,7 @@ const details = [
   </section>
 
   <ContactCta
-    heading="Questions about getting to Bordeaux?"
-    text="Email John and he will help you plan your arrival."
+    heading={TEXT['/canal-des-deux-mers-practical-info-x/p_1']}
+    text={TEXT['/canal-des-deux-mers-practical-info-x/p_2']}
   />
 </BaseLayout>

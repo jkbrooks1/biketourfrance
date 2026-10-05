@@ -382,5 +382,1877 @@
     "route": "/contact/",
     "required": true,
     "codeLocation": "src/components/ContactCta.astro"
+  },
+  {
+    "field": "/404-page/body_1",
+    "route": "/404.html",
+    "required": false,
+    "codeLocation": "src/pages/404.astro"
+  },
+  {
+    "field": "/404-page/meta_description",
+    "route": "/404.html",
+    "required": false,
+    "codeLocation": "src/pages/404.astro"
+  },
+  {
+    "field": "/about-page/heading_1",
+    "route": "/about/",
+    "required": false,
+    "codeLocation": "src/pages/about/index.astro"
+  },
+  {
+    "field": "/about-page/heading_2",
+    "route": "/about/",
+    "required": false,
+    "codeLocation": "src/pages/about/index.astro"
+  },
+  {
+    "field": "/about-page/meta_description",
+    "route": "/about/",
+    "required": false,
+    "codeLocation": "src/pages/about/index.astro"
+  },
+  {
+    "field": "/about-page/meta_title",
+    "route": "/about/",
+    "required": false,
+    "codeLocation": "src/pages/about/index.astro"
+  },
+  {
+    "field": "/cdm-facts/text_1",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/text_2",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/text_3",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/text_4",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/text_5",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/text_6",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/text_7",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/text_8",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-practical/body_2",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/heading_1",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/heading_2",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/heading_3",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/heading_4",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/heading_5",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/heading_6",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/heading_7",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/meta_description",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/meta_title",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm/aria_1",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "/cdm/body_1",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "/cdm/body_2",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "/cdm/cta_1",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "/cdm/heading_1",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "/cdm/heading_2",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "/cdm/heading_3",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "/cdm/heading_4",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "/cdm/heading_5",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "/cdm/heading_6",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "/cdm/heading_7",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "/cdm/heading_8",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "/cdm/item_1",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "/cdm/meta_description",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "/cdm/meta_title",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "/contact-page/body_1",
+    "route": "/contact/",
+    "required": false,
+    "codeLocation": "src/pages/contact/index.astro"
+  },
+  {
+    "field": "/contact-page/body_2",
+    "route": "/contact/",
+    "required": false,
+    "codeLocation": "src/pages/contact/index.astro"
+  },
+  {
+    "field": "/contact-page/heading_2",
+    "route": "/contact/",
+    "required": false,
+    "codeLocation": "src/pages/contact/index.astro"
+  },
+  {
+    "field": "/contact-page/heading_3",
+    "route": "/contact/",
+    "required": false,
+    "codeLocation": "src/pages/contact/index.astro"
+  },
+  {
+    "field": "/contact-page/meta_description",
+    "route": "/contact/",
+    "required": false,
+    "codeLocation": "src/pages/contact/index.astro"
+  },
+  {
+    "field": "/contact-page/meta_title",
+    "route": "/contact/",
+    "required": false,
+    "codeLocation": "src/pages/contact/index.astro"
+  },
+  {
+    "field": "/cookies/body_1",
+    "route": "/cookies/",
+    "required": false,
+    "codeLocation": "src/pages/cookies/index.astro"
+  },
+  {
+    "field": "/cookies/body_2",
+    "route": "/cookies/",
+    "required": false,
+    "codeLocation": "src/pages/cookies/index.astro"
+  },
+  {
+    "field": "/cookies/body_3",
+    "route": "/cookies/",
+    "required": false,
+    "codeLocation": "src/pages/cookies/index.astro"
+  },
+  {
+    "field": "/cookies/body_4",
+    "route": "/cookies/",
+    "required": false,
+    "codeLocation": "src/pages/cookies/index.astro"
+  },
+  {
+    "field": "/cookies/heading_1",
+    "route": "/cookies/",
+    "required": false,
+    "codeLocation": "src/pages/cookies/index.astro"
+  },
+  {
+    "field": "/cookies/heading_2",
+    "route": "/cookies/",
+    "required": false,
+    "codeLocation": "src/pages/cookies/index.astro"
+  },
+  {
+    "field": "/cookies/heading_3",
+    "route": "/cookies/",
+    "required": false,
+    "codeLocation": "src/pages/cookies/index.astro"
+  },
+  {
+    "field": "/cookies/meta_description",
+    "route": "/cookies/",
+    "required": false,
+    "codeLocation": "src/pages/cookies/index.astro"
+  },
+  {
+    "field": "/footer-ui/alt_1",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/components/Footer.astro"
+  },
+  {
+    "field": "/nav/text_1",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/photos/text_1",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "/photos/text_10",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "/photos/text_11",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "/photos/text_12",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "/photos/text_13",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "/photos/text_14",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "/photos/text_15",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "/photos/text_16",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "/photos/text_17",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "/photos/text_18",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "/photos/text_19",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "/photos/text_2",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "/photos/text_20",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "/photos/text_3",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "/photos/text_4",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "/photos/text_5",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "/photos/text_6",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "/photos/text_7",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "/photos/text_8",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "/photos/text_9",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "/privacy/body_1",
+    "route": "/privacy/",
+    "required": false,
+    "codeLocation": "src/pages/privacy/index.astro"
+  },
+  {
+    "field": "/privacy/body_2",
+    "route": "/privacy/",
+    "required": false,
+    "codeLocation": "src/pages/privacy/index.astro"
+  },
+  {
+    "field": "/privacy/body_3",
+    "route": "/privacy/",
+    "required": false,
+    "codeLocation": "src/pages/privacy/index.astro"
+  },
+  {
+    "field": "/privacy/heading_1",
+    "route": "/privacy/",
+    "required": false,
+    "codeLocation": "src/pages/privacy/index.astro"
+  },
+  {
+    "field": "/privacy/heading_2",
+    "route": "/privacy/",
+    "required": false,
+    "codeLocation": "src/pages/privacy/index.astro"
+  },
+  {
+    "field": "/privacy/heading_3",
+    "route": "/privacy/",
+    "required": false,
+    "codeLocation": "src/pages/privacy/index.astro"
+  },
+  {
+    "field": "/privacy/heading_4",
+    "route": "/privacy/",
+    "required": false,
+    "codeLocation": "src/pages/privacy/index.astro"
+  },
+  {
+    "field": "/privacy/heading_5",
+    "route": "/privacy/",
+    "required": false,
+    "codeLocation": "src/pages/privacy/index.astro"
+  },
+  {
+    "field": "/privacy/meta_description",
+    "route": "/privacy/",
+    "required": false,
+    "codeLocation": "src/pages/privacy/index.astro"
+  },
+  {
+    "field": "/resources-library/text_1",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/data/resources.ts"
+  },
+  {
+    "field": "/resources-library/text_10",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/data/resources.ts"
+  },
+  {
+    "field": "/resources-library/text_11",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/data/resources.ts"
+  },
+  {
+    "field": "/resources-library/text_12",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/data/resources.ts"
+  },
+  {
+    "field": "/resources-library/text_13",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/data/resources.ts"
+  },
+  {
+    "field": "/resources-library/text_14",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/data/resources.ts"
+  },
+  {
+    "field": "/resources-library/text_15",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/data/resources.ts"
+  },
+  {
+    "field": "/resources-library/text_16",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/data/resources.ts"
+  },
+  {
+    "field": "/resources-library/text_17",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/data/resources.ts"
+  },
+  {
+    "field": "/resources-library/text_18",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/data/resources.ts"
+  },
+  {
+    "field": "/resources-library/text_19",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/data/resources.ts"
+  },
+  {
+    "field": "/resources-library/text_2",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/data/resources.ts"
+  },
+  {
+    "field": "/resources-library/text_20",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/data/resources.ts"
+  },
+  {
+    "field": "/resources-library/text_21",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/data/resources.ts"
+  },
+  {
+    "field": "/resources-library/text_22",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/data/resources.ts"
+  },
+  {
+    "field": "/resources-library/text_23",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/data/resources.ts"
+  },
+  {
+    "field": "/resources-library/text_24",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/data/resources.ts"
+  },
+  {
+    "field": "/resources-library/text_25",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/data/resources.ts"
+  },
+  {
+    "field": "/resources-library/text_26",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/data/resources.ts"
+  },
+  {
+    "field": "/resources-library/text_27",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/data/resources.ts"
+  },
+  {
+    "field": "/resources-library/text_28",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/data/resources.ts"
+  },
+  {
+    "field": "/resources-library/text_29",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/data/resources.ts"
+  },
+  {
+    "field": "/resources-library/text_3",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/data/resources.ts"
+  },
+  {
+    "field": "/resources-library/text_4",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/data/resources.ts"
+  },
+  {
+    "field": "/resources-library/text_5",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/data/resources.ts"
+  },
+  {
+    "field": "/resources-library/text_6",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/data/resources.ts"
+  },
+  {
+    "field": "/resources-library/text_7",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/data/resources.ts"
+  },
+  {
+    "field": "/resources-library/text_8",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/data/resources.ts"
+  },
+  {
+    "field": "/resources-library/text_9",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/data/resources.ts"
+  },
+  {
+    "field": "/resources-page/body_1",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "/resources-page/heading_1",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "/resources-page/heading_2",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "/resources-page/heading_3",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "/terms/body_1",
+    "route": "/terms/",
+    "required": false,
+    "codeLocation": "src/pages/terms/index.astro"
+  },
+  {
+    "field": "/terms/body_2",
+    "route": "/terms/",
+    "required": false,
+    "codeLocation": "src/pages/terms/index.astro"
+  },
+  {
+    "field": "/terms/body_3",
+    "route": "/terms/",
+    "required": false,
+    "codeLocation": "src/pages/terms/index.astro"
+  },
+  {
+    "field": "/terms/body_4",
+    "route": "/terms/",
+    "required": false,
+    "codeLocation": "src/pages/terms/index.astro"
+  },
+  {
+    "field": "/terms/body_5",
+    "route": "/terms/",
+    "required": false,
+    "codeLocation": "src/pages/terms/index.astro"
+  },
+  {
+    "field": "/terms/heading_1",
+    "route": "/terms/",
+    "required": false,
+    "codeLocation": "src/pages/terms/index.astro"
+  },
+  {
+    "field": "/terms/heading_2",
+    "route": "/terms/",
+    "required": false,
+    "codeLocation": "src/pages/terms/index.astro"
+  },
+  {
+    "field": "/terms/heading_3",
+    "route": "/terms/",
+    "required": false,
+    "codeLocation": "src/pages/terms/index.astro"
+  },
+  {
+    "field": "/terms/heading_4",
+    "route": "/terms/",
+    "required": false,
+    "codeLocation": "src/pages/terms/index.astro"
+  },
+  {
+    "field": "/terms/meta_description",
+    "route": "/terms/",
+    "required": false,
+    "codeLocation": "src/pages/terms/index.astro"
+  },
+  {
+    "field": "/tours/body_1",
+    "route": "/tours/",
+    "required": false,
+    "codeLocation": "src/pages/tours/index.astro"
+  },
+  {
+    "field": "/tours/body_2",
+    "route": "/tours/",
+    "required": false,
+    "codeLocation": "src/pages/tours/index.astro"
+  },
+  {
+    "field": "/tours/body_3",
+    "route": "/tours/",
+    "required": false,
+    "codeLocation": "src/pages/tours/index.astro"
+  },
+  {
+    "field": "/tours/body_4",
+    "route": "/tours/",
+    "required": false,
+    "codeLocation": "src/pages/tours/index.astro"
+  },
+  {
+    "field": "/tours/cta_1",
+    "route": "/tours/",
+    "required": false,
+    "codeLocation": "src/pages/tours/index.astro"
+  },
+  {
+    "field": "/tours/cta_2",
+    "route": "/tours/",
+    "required": false,
+    "codeLocation": "src/pages/tours/index.astro"
+  },
+  {
+    "field": "/tours/cta_3",
+    "route": "/tours/",
+    "required": false,
+    "codeLocation": "src/pages/tours/index.astro"
+  },
+  {
+    "field": "/tours/heading_1",
+    "route": "/tours/",
+    "required": false,
+    "codeLocation": "src/pages/tours/index.astro"
+  },
+  {
+    "field": "/tours/heading_2",
+    "route": "/tours/",
+    "required": false,
+    "codeLocation": "src/pages/tours/index.astro"
+  },
+  {
+    "field": "/tours/heading_3",
+    "route": "/tours/",
+    "required": false,
+    "codeLocation": "src/pages/tours/index.astro"
+  },
+  {
+    "field": "/tours/meta_description",
+    "route": "/tours/",
+    "required": false,
+    "codeLocation": "src/pages/tours/index.astro"
+  },
+  {
+    "field": "/tours/meta_title",
+    "route": "/tours/",
+    "required": false,
+    "codeLocation": "src/pages/tours/index.astro"
+  },
+  {
+    "field": "/waitlist/body_1",
+    "route": "/waitlist-2027/",
+    "required": false,
+    "codeLocation": "src/pages/waitlist-2027.astro"
+  },
+  {
+    "field": "/waitlist/body_2",
+    "route": "/waitlist-2027/",
+    "required": false,
+    "codeLocation": "src/pages/waitlist-2027.astro"
+  },
+  {
+    "field": "/waitlist/body_3",
+    "route": "/waitlist-2027/",
+    "required": false,
+    "codeLocation": "src/pages/waitlist-2027.astro"
+  },
+  {
+    "field": "/waitlist/cta_1",
+    "route": "/waitlist-2027/",
+    "required": false,
+    "codeLocation": "src/pages/waitlist-2027.astro"
+  },
+  {
+    "field": "/waitlist/heading_1",
+    "route": "/waitlist-2027/",
+    "required": false,
+    "codeLocation": "src/pages/waitlist-2027.astro"
+  },
+  {
+    "field": "/waitlist/heading_2",
+    "route": "/waitlist-2027/",
+    "required": false,
+    "codeLocation": "src/pages/waitlist-2027.astro"
+  },
+  {
+    "field": "/waitlist/label_1",
+    "route": "/waitlist-2027/",
+    "required": false,
+    "codeLocation": "src/pages/waitlist-2027.astro"
+  },
+  {
+    "field": "/waitlist/label_2",
+    "route": "/waitlist-2027/",
+    "required": false,
+    "codeLocation": "src/pages/waitlist-2027.astro"
+  },
+  {
+    "field": "/waitlist/label_3",
+    "route": "/waitlist-2027/",
+    "required": false,
+    "codeLocation": "src/pages/waitlist-2027.astro"
+  },
+  {
+    "field": "/waitlist/label_4",
+    "route": "/waitlist-2027/",
+    "required": false,
+    "codeLocation": "src/pages/waitlist-2027.astro"
+  },
+  {
+    "field": "/cdm-facts/copy_1",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/copy_10",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/copy_11",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/copy_12",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/copy_13",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/copy_14",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/copy_15",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/copy_16",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/copy_17",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/copy_18",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/copy_19",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/copy_2",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/copy_20",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/copy_21",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/copy_22",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/copy_23",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/copy_24",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/copy_25",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/copy_3",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/copy_4",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/copy_5",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/copy_6",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/copy_7",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/copy_8",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/copy_9",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/nav/copy_1",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/nav/copy_12",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/nav/copy_14",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/nav/copy_15",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/nav/copy_16",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/nav/copy_18",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/nav/copy_2",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/nav/copy_22",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/nav/copy_23",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/nav/copy_24",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/nav/copy_25",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/nav/copy_26",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/nav/copy_27",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/nav/copy_28",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/nav/copy_29",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/nav/copy_3",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/nav/copy_5",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/nav/copy_6",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/nav/home",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/nav/tours",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/nav/about",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/nav/resources",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/nav/contact",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/nav/cdm_tour",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/nav/practical_info",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/nav/privacy",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/nav/terms",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/nav/cookies",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/email/general_subject",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/email/waitlist_subject",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/email/waitlist_body",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/email/mailing_list_subject",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/email/mailing_list_body",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/email/planning_subject",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/email/planning_body",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/cdm-facts/t_1",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/t_10",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/t_11",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/t_12",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/t_13",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/t_14",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/t_15",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/t_2",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/t_3",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/t_4",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/t_5",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/t_6",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/t_7",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/t_8",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/cdm-facts/t_9",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/photos/t_1",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/photos.ts"
+  },
+  {
+    "field": "/resources-library/t_1",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/data/resources.ts"
+  },
+  {
+    "field": "/cdm-facts/group_size",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "/cdm-practical/frag_1",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/frag_2",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/frag_3",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm/frag_1",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "/cdm/frag_2",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "/cdm/frag_3",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "/cdm/frag_4",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "/cdm/frag_5",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/index.astro"
+  },
+  {
+    "field": "/contact-page/frag_1",
+    "route": "/contact/",
+    "required": false,
+    "codeLocation": "src/pages/contact/index.astro"
+  },
+  {
+    "field": "/contact-page/frag_2",
+    "route": "/contact/",
+    "required": false,
+    "codeLocation": "src/pages/contact/index.astro"
+  },
+  {
+    "field": "/contact-page/frag_3",
+    "route": "/contact/",
+    "required": false,
+    "codeLocation": "src/pages/contact/index.astro"
+  },
+  {
+    "field": "/contact-page/frag_4",
+    "route": "/contact/",
+    "required": false,
+    "codeLocation": "src/pages/contact/index.astro"
+  },
+  {
+    "field": "/contact-page/frag_5",
+    "route": "/contact/",
+    "required": false,
+    "codeLocation": "src/pages/contact/index.astro"
+  },
+  {
+    "field": "/contact-page/frag_6",
+    "route": "/contact/",
+    "required": false,
+    "codeLocation": "src/pages/contact/index.astro"
+  },
+  {
+    "field": "/contact-page/frag_7",
+    "route": "/contact/",
+    "required": false,
+    "codeLocation": "src/pages/contact/index.astro"
+  },
+  {
+    "field": "/privacy/frag_1",
+    "route": "/privacy/",
+    "required": false,
+    "codeLocation": "src/pages/privacy/index.astro"
+  },
+  {
+    "field": "/privacy/frag_2",
+    "route": "/privacy/",
+    "required": false,
+    "codeLocation": "src/pages/privacy/index.astro"
+  },
+  {
+    "field": "/privacy/frag_3",
+    "route": "/privacy/",
+    "required": false,
+    "codeLocation": "src/pages/privacy/index.astro"
+  },
+  {
+    "field": "/privacy/frag_4",
+    "route": "/privacy/",
+    "required": false,
+    "codeLocation": "src/pages/privacy/index.astro"
+  },
+  {
+    "field": "/resources-page/frag_1",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "/resources-page/frag_10",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "/resources-page/frag_2",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "/resources-page/frag_3",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "/resources-page/frag_5",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "/resources-page/frag_6",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "/resources-page/frag_7",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "/resources-page/frag_8",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "/resources-page/frag_9",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "/tours/frag_1",
+    "route": "/tours/",
+    "required": false,
+    "codeLocation": "src/pages/tours/index.astro"
+  },
+  {
+    "field": "/waitlist/frag_1",
+    "route": "/waitlist-2027/",
+    "required": false,
+    "codeLocation": "src/pages/waitlist-2027.astro"
+  },
+  {
+    "field": "/waitlist/frag_2",
+    "route": "/waitlist-2027/",
+    "required": false,
+    "codeLocation": "src/pages/waitlist-2027.astro"
+  },
+  {
+    "field": "/waitlist/frag_3",
+    "route": "/waitlist-2027/",
+    "required": false,
+    "codeLocation": "src/pages/waitlist-2027.astro"
+  },
+  {
+    "field": "/waitlist/frag_4",
+    "route": "/waitlist-2027/",
+    "required": false,
+    "codeLocation": "src/pages/waitlist-2027.astro"
+  },
+  {
+    "field": "/about-x/p_1",
+    "route": "/about/",
+    "required": false,
+    "codeLocation": "src/pages/about/index.astro"
+  },
+  {
+    "field": "/about-x/p_2",
+    "route": "/about/",
+    "required": false,
+    "codeLocation": "src/pages/about/index.astro"
+  },
+  {
+    "field": "/canal-des-deux-mers-practical-info-x/p_1",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/canal-des-deux-mers-practical-info-x/p_2",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/resources-x/p_1",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "/resources-x/p_2",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "/resources-x/p_3",
+    "route": "/resources/",
+    "required": false,
+    "codeLocation": "src/pages/resources/index.astro"
+  },
+  {
+    "field": "/cdm-practical/list_1",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/list_10",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/list_11",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/list_12",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/list_13",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/list_14",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/list_15",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/list_16",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/list_17",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/list_18",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/list_19",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/list_2",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/list_20",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/list_3",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/list_4",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/list_5",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/list_6",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/list_7",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/list_8",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/list_9",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-facts/stat_nights",
+    "route": "/canal-des-deux-mers/",
+    "required": false,
+    "codeLocation": "src/data/cdm2027.ts"
+  },
+  {
+    "field": "/ui-included/frag_1",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src"
+  },
+  {
+    "field": "/ui-included/frag_2",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src"
+  },
+  {
+    "field": "/ui-included/frag_3",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src"
+  },
+  {
+    "field": "/cdm-practical/q1_title",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/q1_tram",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/q1_bus",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/q2_title",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/q2_tram",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/q2_bus",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/q3_title",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/q3_tram",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/q3_bus",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/q4_title",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/q4_tram",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/q4_bus",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/q5_title",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/q5_tram",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/q5_bus",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/q6_title",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/q6_tram",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/cdm-practical/q6_bus",
+    "route": "/canal-des-deux-mers/practical-info/",
+    "required": false,
+    "codeLocation": "src/pages/canal-des-deux-mers/practical-info/index.astro"
+  },
+  {
+    "field": "/waitlist/consent_notice",
+    "route": "/waitlist-2027/",
+    "required": false,
+    "codeLocation": "src/pages/waitlist-2027.astro"
+  },
+  {
+    "field": "/waitlist/meta_title",
+    "route": "/waitlist-2027/",
+    "required": false,
+    "codeLocation": "src/pages/waitlist-2027.astro"
+  },
+  {
+    "field": "/waitlist/meta_description",
+    "route": "/waitlist-2027/",
+    "required": false,
+    "codeLocation": "src/pages/waitlist-2027.astro"
   }
 ]

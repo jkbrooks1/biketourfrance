@@ -1,36 +1,28 @@
 ---
+import { TEXT } from '../../data/approved-copy';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ReviewNote from '../../components/ReviewNote.astro';
 ---
 
 <BaseLayout
   path="/cookies/"
-  title="Cookies"
-  description="This BikeTourFrance.net website does not set cookies of its own and runs no analytics or advertising tools."
+  title={TEXT['/nav/cookies']}
+  description={TEXT['/cookies/meta_description']}
 >
   <section class="section">
     <div class="container prose">
-      <h1>Cookies</h1>
-      <p class="lede">What this website stores in your browser. Last updated October 2, 2026.</p>
+      <h1>{TEXT['/nav/cookies']}</h1>
+      <p class="lede">{TEXT['/cookies/body_1']}</p>
       <ReviewNote />
 
-      <h2>Cookies and tracking on this site</h2>
-      <p>
-        This website's code does not set cookies, and it runs no analytics, advertising, or social-media
-        tracking tools. Because of that, it shows no cookie banner and asks for no consent.
-      </p>
+      <h2>{TEXT['/cookies/heading_1']}</h2>
+      <p>{TEXT['/cookies/body_2']}</p>
 
-      <h2>If that changes</h2>
-      <p>
-        If analytics or marketing tools are added later, this page will be updated first, and the site will
-        ask for your choice before any non-essential tool runs.
-      </p>
+      <h2>{TEXT['/cookies/heading_2']}</h2>
+      <p>{TEXT['/cookies/body_3']}</p>
 
-      <h2>Other sites</h2>
-      <p>
-        Links on the Resources page lead to Google Docs, Google Sheets, and other websites. Those sites may
-        set their own cookies once you open them.
-      </p>
+      <h2>{TEXT['/cookies/heading_3']}</h2>
+      <p>{TEXT['/cookies/body_4']}</p>
     </div>
   </section>
 </BaseLayout>

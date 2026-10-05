@@ -1,3 +1,4 @@
+import { TEXT } from './approved-copy';
 // Photo catalogue. Alt text describes only what is visible. Captions appear only where a sign or
 // other visible text proves the place. People are not named. See docs/STYLE_GUIDE.md (Images).
 import type { ImageMetadata } from 'astro';
@@ -32,81 +33,81 @@ export interface Photo {
 export const PHOTOS = {
   hero: {
     src: heroCanalPath,
-    alt: 'A cyclist riding away on a paved canal path, with water and green vegetation on both sides and trees in the distance.',
+    alt: TEXT['/photos/text_1'],
   },
   cafeTable: {
     src: cafeTable,
-    alt: 'Five riders in cycling jerseys sharing coffee at a café table.',
+    alt: TEXT['/photos/text_2'],
   },
   aboutJohn: {
     src: aboutJohn,
-    alt: 'John and friends seated together at a table, smiling at the camera.',
+    alt: TEXT['/photos/text_3'],
   },
   creon: {
     src: creon,
-    alt: 'Two loaded touring bikes parked in front of a wooden building with a sign reading "Créon fête le vélo".',
-    caption: 'Créon',
+    alt: TEXT['/photos/text_4'],
+    caption: TEXT['/photos/t_1'],
   },
   routeSigns: {
     src: routeSigns,
-    alt: 'Two green signs for the Canal du Midi cycle route, one pointing left and one pointing right.',
-    caption: 'Canal du Midi route signs',
+    alt: TEXT['/photos/text_5'],
+    caption: TEXT['/photos/text_6'],
   },
   hotelBike: {
     src: hotelBike,
-    alt: 'A touring bike leaning against the front of a small hotel with a blue balcony.',
+    alt: TEXT['/photos/text_7'],
   },
   threeRidersHotel: {
     src: threeRidersHotel,
-    alt: 'Three riders with loaded bikes standing on the pavement outside a hotel entrance.',
+    alt: TEXT['/photos/text_8'],
   },
   riderCanalPath: {
     src: riderCanalPath,
-    alt: 'A rider on a pale gravel path beside a straight canal with grass on both sides.',
+    alt: TEXT['/photos/text_9'],
   },
   narrowBank: {
     src: narrowBank,
-    alt: 'A rider far ahead on a narrow cobbled strip between two stretches of calm water.',
+    alt: TEXT['/photos/text_10'],
   },
   twoRidersShade: {
     src: twoRidersShade,
-    alt: 'A rider in a red helmet smiling at the camera on a shaded canal path, with a second rider behind.',
+    alt: TEXT['/photos/text_11'],
   },
   pineForest: {
     src: pineForest,
-    alt: 'A paved path through tall pine trees with a rider in the distance.',
+    alt: TEXT['/photos/text_12'],
   },
   church: {
     src: church,
-    alt: 'A small stone church with a bell tower, with a bicycle leaning near its door.',
+    alt: TEXT['/photos/text_13'],
   },
   trainSelfie: {
     src: trainSelfie,
-    alt: 'A rider taking a selfie on a train next to loaded touring bikes.',
+    alt: TEXT['/photos/text_14'],
   },
   wheelRepair: {
     src: wheelRepair,
-    alt: 'Two people working on a bicycle wheel together in a workshop.',
+    alt: TEXT['/photos/text_15'],
   },
   matchingJerseys: {
     src: matchingJerseys,
-    alt: 'Riders in matching cycling jerseys on a tree-lined path, with more riders behind them.',
+    alt: TEXT['/photos/text_16'],
   },
   threeRidersTown: {
     src: threeRidersTown,
-    alt: 'Three riders in cycling kit posing beside a bike in a town square with a palm tree.',
+    alt: TEXT['/photos/text_17'],
   },
   greenway: {
     src: greenway,
-    alt: 'A long straight paved greenway through pine woods, with one rider ahead in the distance.',
+    alt: TEXT['/photos/text_18'],
   },
   pandaAirport: {
     src: pandaAirport,
-    alt: 'Illustration of a panda arriving at Bordeaux Airport with a bike case and a backpack.',
+    alt: TEXT['/photos/text_19'],
   },
   panda: {
     src: panda,
-    alt: 'Illustration of a panda in an orange scarf standing beside a loaded touring bike, with the words BikeTourFrance.net.',
+    alt: TEXT['/photos/text_20'],
   },
 } satisfies Record<string, Photo>;
 

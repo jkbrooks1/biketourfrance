@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Button from '../../components/Button.astro';
 import ContactCta from '../../components/ContactCta.astro';
-import { COPY } from '../../data/approved-copy';
+import { COPY, TEXT } from '../../data/approved-copy';
 import {
   AUDIO_GUIDES,
   FOOD_AUDIO,
@@ -19,17 +19,17 @@ const LIBRARY_URL = 'https://resources.biketourfrance.net/';
 
 <BaseLayout
   path="/resources/"
-  title="Resources for planning a self-supported bike tour in France"
+  title={TEXT['/resources-x/p_1']}
   description={resources.metaDescription}
 >
   <section class="section">
     <div class="container">
-      <p class="eyebrow">Resources</p>
-      <h1>Resources for planning and riding</h1>
+      <p class="eyebrow">{TEXT['/nav/resources']}</p>
+      <h1>{TEXT['/resources-page/heading_1']}</h1>
       <p class="lede">{resources.metaDescription}</p>
       <p>
-        On this page: <a href="#templates">Templates</a>, <a href="#audio">Audio guides</a>,{' '}
-        <a href="#narratives">Reading</a>, <a href="#sites">Helpful sites</a>.
+        {TEXT['/resources-page/frag_1']} <a href="#templates">{TEXT['/resources-page/frag_2']}</a>, <a href="#audio">{TEXT['/resources-page/frag_3']}</a>,{' '}
+        <a href="#narratives">{TEXT['/resources-page/heading_3']}</a>, <a href="#sites">{TEXT['/resources/helpful_sites_heading']}</a>.
       </p>
       <div class="btn-row">
         <Button href="/" variant="tertiary">
@@ -45,7 +45,7 @@ const LIBRARY_URL = 'https://resources.biketourfrance.net/';
       <p>{resources.helpfulStuffBody}</p>
 
       <h3 id="templates" class="subhead">
-        Templates
+        {TEXT['/resources-page/frag_2']}
       </h3>
       <ul class="resource-list">
         {TEMPLATES.map((item) => (
@@ -58,13 +58,8 @@ const LIBRARY_URL = 'https://resources.biketourfrance.net/';
         ))}
       </ul>
 
-      <h3 id="audio" class="subhead">
-        Audio guides for the Canal des Deux Mers
-      </h3>
-      <p>
-        A short history guide for each riding day, from Bordeaux to Sète. Press play to listen here, or
-        download a file to listen offline. The files load only when you press play.
-      </p>
+      <h3 id="audio" class="subhead">{TEXT['/resources-page/heading_2']}</h3>
+      <p>{TEXT['/resources-page/body_1']}</p>
       <ul class="resource-list">
         {AUDIO_GUIDES.map((item) => (
           <li class="audio-item">
@@ -79,31 +74,29 @@ const LIBRARY_URL = 'https://resources.biketourfrance.net/';
         ))}
       </ul>
 
-      <h3 class="subhead">Food</h3>
+      <h3 class="subhead">{TEXT['/resources-page/frag_5']}</h3>
       <ul class="resource-list">
         <li class="audio-item">
           <p class="audio-title">{FOOD_AUDIO.title}</p>
           <audio controls preload="none" src={FOOD_AUDIO.url}>
-            Your browser cannot play this audio. Use the download link instead.
+            {TEXT['/resources-page/frag_6']}
           </audio>
           <a class="dl" href={FOOD_AUDIO.url} download rel="noopener">
-            Download {FOOD_AUDIO.title}
+            {TEXT['/resources-page/frag_7']} {FOOD_AUDIO.title}
           </a>
         </li>
       </ul>
 
-      <h3 class="subhead">French practice</h3>
+      <h3 class="subhead">{TEXT['/resources-page/frag_8']}</h3>
       <p>
-        Simple French phrases to listen to and repeat are in the BikeTourFrance.net resource library:{' '}
+        {TEXT['/resources-page/frag_9']}{' '}
         <a href={FRENCH_AUDIO_URL} rel="noopener">
-          French learning audio
+          {TEXT['/resources-page/frag_10']}
         </a>
         .
       </p>
 
-      <h3 id="narratives" class="subhead">
-        Reading
-      </h3>
+      <h3 id="narratives" class="subhead">{TEXT['/resources-page/heading_3']}</h3>
       <ul class="resource-list">
         {NARRATIVES.map((item) => (
           <li>
@@ -141,7 +134,7 @@ const LIBRARY_URL = 'https://resources.biketourfrance.net/';
   </section>
 
   <ContactCta
-    heading="Missing something?"
-    text="Tell John what would make planning easier and he will consider adding it."
+    heading={TEXT['/resources-x/p_2']}
+    text={TEXT['/resources-x/p_3']}
   />
 </BaseLayout>

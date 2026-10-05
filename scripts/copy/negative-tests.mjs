@@ -21,5 +21,17 @@ check('fixture is refused in deployment contexts', () => assert.notEqual(run('sc
 check('missing credentials fail closed', () => assert.notEqual(run('scripts/copy/sync.mjs', { BTF_COPY_SHEET_ID: 'x', CI: 'true' }).status, 0));
 check('rendered native site matches the local deterministic snapshot', () => { assert.equal(run('scripts/copy/sync.mjs', { BTF_COPY_FIXTURE: '1' }).status, 0); assert.equal(run('scripts/copy/validate.mjs').status, 0); assert.equal(run('scripts/copy/verify-rendered.mjs').status, 0); });
 check('deliberate copy mismatch fails the rendered gate', () => { const dir = mkdtempSync(join(tmpdir(), 'btf-copy-')); const artifact = JSON.parse(readFileSync(PATHS.artifact, 'utf8')); artifact.fields['/hero/heading'] = 'Deliberate mismatch'; const file = join(dir, 'artifact.json'); writeFileSync(file, JSON.stringify(artifact)); assert.notEqual(run('scripts/copy/verify-rendered.mjs', {}, ['--artifact', file]).status, 0); });
+// Guards the "no uncovered text" (page -> Sheet) check. Dropping a field that a page renders must
+// fail the gate, because that page text then has no approved source. This check was once removed
+// from verify-rendered.mjs while its header still claimed to enforce it, which let hardcoded copy
+// ship for weeks (docs/2026-10-05_UNAPPROVED_COPY_AUDIT.md). This test exists so that cannot recur.
+check('rendered text with no approved field fails the rendered gate', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'btf-copy-'));
+  const artifact = JSON.parse(readFileSync(PATHS.artifact, 'utf8'));
+  delete artifact.fields['/tours/heading_1'];
+  const file = join(dir, 'artifact.json');
+  writeFileSync(file, JSON.stringify(artifact));
+  assert.notEqual(run('scripts/copy/verify-rendered.mjs', {}, ['--artifact', file]).status, 0);
+});
 for (const [ok, name] of checks) console.log(`${ok ? 'PASS' : 'FAIL'}  ${name}`);
 const failed = checks.filter(([ok]) => !ok); console.log(`copy:test  ${checks.length - failed.length} passed, ${failed.length} failed`); if (failed.length) process.exit(1);

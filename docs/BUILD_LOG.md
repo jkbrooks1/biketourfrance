@@ -88,6 +88,61 @@ Append-only. Concise timestamped entries. No secrets. Each entry is also appende
 
 No commit or push without explicit owner approval.
 
+## 2026-10-05T15:30:00Z — RESOLVED: all site copy now comes from the Sheet; reverse check restored
+
+Fix for the 214 unapproved strings reported in the 14:10 entry. Full record in
+`docs/2026-10-05_UNAPPROVED_COPY_AUDIT.md`.
+
+**Reverse check restored** as section 2 of `scripts/copy/verify-rendered.mjs`. Contract: every word
+a visitor reads must come from an approved Sheet field. A block may combine several approved fields
+(layout, not copy) but may not contain prose no field supplies; the check removes every approved
+value it finds, longest first, and requires only punctuation, digits and whitespace to remain.
+Allow-list is short and explicit: Skip to main content, Menu, Main, Site, Home, plus the twelve
+month names for machine-formatted dates.
+
+**Generator emits `TEXT`** beside the existing nested `COPY`: every Sheet field keyed by its exact
+Sheet path, so a component can render approved copy without a hand-written SCALARS entry. `COPY` is
+unchanged, so the previous contract was not disturbed.
+
+**Sheet grew 64 -> 376 fields.** 312 rows appended (rows 66-377), all marked YELLOW = unapproved,
+pending owner approval. The 64 pre-existing rows were not edited. Written with the local service
+account, which proved to have edit access.
+
+**26 files re-pointed** at the Sheet: page templates, components, layouts and the src/data
+catalogues, covering mixed-content templates, string arrays, component props, navigation labels and
+the pre-filled email subjects and bodies.
+
+**Two personal-information leaks fixed**, both invisible to a rendered-HTML audit and both already
+requested by the owner: `src/data/site.ts` still set `email: 'john@biketourfrance.net'`, powering
+every mailto link (now `/contact/contact_email`); and "John Brooks" survived in four meta
+descriptions and the CDM lede (now "John"). dist/ now contains zero occurrences of either, and
+contact@biketourfrance.net on all 12 pages.
+
+**Regression test added** (`copy:test`, 10 checks): dropping a field a page renders must fail the
+gate, so the reverse check cannot be removed silently again.
+
+**Also fixed:** `npm run build` (the Cloudflare Pages command) never ran `copy:generate-ts`, so
+Pages would have built from a stale generated file.
+
+**Verified against the LIVE Sheet:** copy:sync 376 rows; copy:validate OK 376 fields; generate-ts
+OK; astro build 12 pages; copy:verify-rendered OK 12 pages / 375 fields (source: sheet); verify-dist
+12 pages OK; astro check 0 errors; copy:test 10/10. Gate proven: injecting "Book our brand new
+Pyrenees expedition today" into the /tours/ heading fails the gate naming route, element and text;
+restoring the Sheet-backed version passes.
+
+**Known limitation:** the check proves no unapproved words ship, not that text is sourced from the
+Sheet at build time. A literal duplicating an approved value exactly would pass and would then not
+follow a later Sheet edit.
+
+**Owner action outstanding:** approve the 312 YELLOW rows. Field names were generated mechanically;
+renaming one needs the matching `TEXT['...']` reference updated in the file named in
+`copy/field-manifest.json`.
+
+**Process note:** two self-inflicted errors during this work, both caught before pushing. A quote
+scanner desynchronized on an apostrophe inside a comment and mangled `src/data/site.ts` (reverted
+and redone by hand; the tokenizer now masks comments first). And the first pass re-imported "John
+Brooks" into the Sheet via new fields created after the de-naming step had already run.
+
 ## 2026-10-05T14:10:00Z — AUDIT: 214 unapproved strings on the site; the copy gate never checked for them
 
 Owner reported unapproved copy on /tours/ ("Ways to ride in France with BikeTourFrance.net").

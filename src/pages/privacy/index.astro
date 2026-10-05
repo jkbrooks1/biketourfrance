@@ -1,4 +1,5 @@
 ---
+import { TEXT } from '../../data/approved-copy';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ReviewNote from '../../components/ReviewNote.astro';
 import { CONTACT_LINKS, SITE } from '../../data/site';
@@ -6,45 +7,34 @@ import { CONTACT_LINKS, SITE } from '../../data/site';
 
 <BaseLayout
   path="/privacy/"
-  title="Privacy"
-  description="What the BikeTourFrance.net website does and does not collect, and how email you send to John is handled."
+  title={TEXT['/nav/privacy']}
+  description={TEXT['/privacy/meta_description']}
 >
   <section class="section">
     <div class="container prose">
-      <h1>Privacy</h1>
-      <p class="lede">This page describes what this website does today. Last updated October 2, 2026.</p>
+      <h1>{TEXT['/nav/privacy']}</h1>
+      <p class="lede">{TEXT['/privacy/body_1']}</p>
       <ReviewNote />
 
-      <h2>What this website collects</h2>
+      <h2>{TEXT['/privacy/heading_1']}</h2>
       <p>
-        This website has no sign-up form, no account system, and no analytics or advertising tools. It does
-        not set cookies of its own. See the <a href="/cookies/">Cookies page</a>.
+        {TEXT['/privacy/frag_1']} <a href="/cookies/">{TEXT['/privacy/frag_2']}</a>.
       </p>
 
-      <h2>When you email John</h2>
+      <h2>{TEXT['/privacy/heading_2']}</h2>
       <p>
-        If you write to <a href={CONTACT_LINKS.general}>{SITE.email}</a>, John receives your message and your
-        email address in his BikeTourFrance.net email account. He uses them to reply to you. Nothing in this
-        website's code sends your message anywhere else.
+        {TEXT['/privacy/frag_3']} <a href={CONTACT_LINKS.general}>{SITE.email}</a>{TEXT['/privacy/frag_4']}
       </p>
 
-      <h2>Hosting and technical logs</h2>
-      <p>
-        Web servers normally record technical details of each visit, such as the page requested and the
-        visitor's IP address. This website is hosted on Cloudflare Pages, which handles those records. John
-        does not receive a copy of them through this website.
-      </p>
+      <h2>{TEXT['/privacy/heading_3']}</h2>
+      <p>{TEXT['/privacy/body_2']}</p>
 
-      <h2>Other sites and media</h2>
-      <p>
-        The Resources page loads audio files from BikeTourFrance.net's media storage only when you press play.
-        It also links to Google Docs and Google Sheets and to other websites. Those sites have their own
-        privacy practices.
-      </p>
+      <h2>{TEXT['/privacy/heading_4']}</h2>
+      <p>{TEXT['/privacy/body_3']}</p>
 
-      <h2>Questions</h2>
+      <h2>{TEXT['/privacy/heading_5']}</h2>
       <p>
-        Write to <a href={CONTACT_LINKS.general}>{SITE.email}</a>.
+        {TEXT['/contact-page/frag_1']} <a href={CONTACT_LINKS.general}>{SITE.email}</a>.
       </p>
     </div>
   </section>

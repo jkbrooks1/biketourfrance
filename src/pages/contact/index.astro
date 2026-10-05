@@ -1,49 +1,45 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Button from '../../components/Button.astro';
-import { COPY } from '../../data/approved-copy';
+import { COPY, TEXT } from '../../data/approved-copy';
 import { CONTACT_LINKS, SITE } from '../../data/site';
 ---
 
 <BaseLayout
   path="/contact/"
-  title="Contact John"
-  description="Email John Brooks with questions about the 2027 Canal des Deux Mers tours, the waitlist, or planning your own bike trip in France."
+  title={TEXT['/contact-page/meta_title']}
+  description={TEXT['/contact-page/meta_description']}
 >
   <section class="section">
     <div class="container prose">
-      <p class="eyebrow">Contact</p>
-      <h1>Contact John</h1>
-      <p class="lede">Email is the best way to reach BikeTourFrance.net.</p>
+      <p class="eyebrow">{TEXT['/nav/contact']}</p>
+      <h1>{TEXT['/contact-page/meta_title']}</h1>
+      <p class="lede">{TEXT['/contact-page/body_1']}</p>
       <p>
-        Write to <a href={CONTACT_LINKS.general}>{SITE.email}</a>, or use the button.
+        {TEXT['/contact-page/frag_1']} <a href={CONTACT_LINKS.general}>{SITE.email}</a>{TEXT['/contact-page/frag_2']}
       </p>
       <div class="btn-row">
         <Button href={CONTACT_LINKS.general}>{COPY.contact.emailCta}</Button>
       </div>
 
-      <h2>Choose a starting point</h2>
+      <h2>{TEXT['/contact-page/heading_2']}</h2>
       <ul class="link-list">
         <li>
-          <a href={CONTACT_LINKS.waitlist}>Ask to join the 2027 Canal des Deux Mers waitlist</a>
+          <a href={CONTACT_LINKS.waitlist}>{TEXT['/contact-page/frag_3']}</a>
         </li>
         <li>
-          <a href={CONTACT_LINKS.planning}>Ask about planning your own trip</a>
+          <a href={CONTACT_LINKS.planning}>{TEXT['/contact-page/frag_4']}</a>
         </li>
         <li>
-          <a href={CONTACT_LINKS.general}>Ask any other question</a>
+          <a href={CONTACT_LINKS.general}>{TEXT['/contact-page/frag_5']}</a>
         </li>
       </ul>
       <p>
-        Each link opens your email program with a short message ready to fill in. If it does not open, write
-        to {SITE.email} directly.
+        {TEXT['/contact-page/frag_6']} {SITE.email} {TEXT['/contact-page/frag_7']}
       </p>
 
-      <h2>About the waitlist and the mailing list</h2>
-      <p>
-        This website does not have an online sign-up form yet. To hear about exact 2027 dates and pricing when
-        they are announced, email John and ask to be added to the waitlist.
-      </p>
+      <h2>{TEXT['/contact-page/heading_3']}</h2>
+      <p>{TEXT['/contact-page/body_2']}</p>
     </div>
   </section>
 </BaseLayout>
