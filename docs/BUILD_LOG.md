@@ -88,6 +88,49 @@ Append-only. Concise timestamped entries. No secrets. Each entry is also appende
 
 No commit or push without explicit owner approval.
 
+## 2026-10-05T16:05:00Z — STAGING LIVE: temp-btf production branch set to main
+
+The staging site now serves the approved Sheet copy: https://temp-btf.pages.dev
+
+**Correction to the 13:15 entry.** That entry said Cloudflare Pages could not build this repo
+because `npm run build` forces fixture mode while `lib.mjs` refuses fixture when `CF_PAGES` is set.
+That was wrong: the Pages build command for project `temp-btf` is `npx astro build`, so Pages
+builds have been succeeding throughout. I also checked the wrong host for most of today -
+`btf-production.pages.dev`, taken from an earlier instruction - when the staging site the owner
+means is `temp-btf.pages.dev`.
+
+**Actual cause of the stale staging site.** The Pages project's `production_branch` was
+`rebuild/2026-10-02-audit-remediation`. Pushes to `main` built fine but landed in the **Preview**
+environment at hashed URLs, while `temp-btf.pages.dev` served the **Production** environment - the
+last build of that old branch, dated 2026-10-04T22:53Z, which predates both the owner's Sheet edits
+and all of today's work.
+
+**Change made.** `production_branch` set to `main` (both the project field and
+`source.config.production_branch`) via the Cloudflare API, then a production deployment of `main`
+triggered through the Pages Git integration: deployment 0887a2f1, commit 889b68c, deploy succeeded.
+Build command, output directory and preview setting were left untouched.
+
+**Verified live on https://temp-btf.pages.dev :** "Sign up for tour updates" and "Join our free 2027
+tour waitlist" present (the owner's Sheet edits); contact@biketourfrance.net present;
+john@biketourfrance.net absent; "John Brooks" absent; the old "Email for tour updates" wording gone;
+all 12 routes return 200.
+
+**A GitHub Actions deploy step was briefly added and then reverted.** The Pages Git integration
+already builds and deploys from GitHub, so a wrangler step was both unnecessary and wrong - direct
+uploads are not the mechanism for a Git-connected project. The workflow is unchanged from 889b68c.
+
+**Operational fact worth knowing.** Because the Pages build command is `npx astro build`, Pages does
+not run the approved-copy gate and does not read the Sheet. It builds from the committed
+`src/data/approved-copy.ts`. So a Sheet edit does not reach staging until that generated file is
+regenerated and committed. Making Pages read the Sheet directly would require changing its build
+command to the Sheet-mode pipeline and adding `BTF_COPY_SHEET_ID` and `BTF_COPY_GOOGLE_SA_JSON` as
+Pages environment variables. Not done; owner decision.
+
+**Note on /tours/.** "Ways to ride in France with BikeTourFrance.net" and "...John helps you plan
+the rest" still appear, by design: those exact words were imported into the Sheet as rows
+`/tours/heading_1` and `/tours/body_1`, marked YELLOW and awaiting approval. The wording is
+unchanged but is now Sheet-sourced, so editing those rows changes the page.
+
 ## 2026-10-05T15:30:00Z — RESOLVED: all site copy now comes from the Sheet; reverse check restored
 
 Fix for the 214 unapproved strings reported in the 14:10 entry. Full record in
