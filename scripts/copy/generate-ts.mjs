@@ -78,12 +78,30 @@ merged.notFound = has404 ? {
 // Always ensure footerPolicies is set
 merged.footerPolicies = nested?.footer?.policies ?? fallback.footerPolicies ?? merged.footerPolicies;
 
+// Ensure merged always has required top-level properties
+// These are checked by the 404 component and must exist
+const final = merged;
+if (!final.notFound || typeof final.notFound !== 'object') {
+  final.notFound = fallback.notFound;
+}
+if (typeof final.footerPolicies !== 'string') {
+  final.footerPolicies = fallback.footerPolicies;
+}
+if (!final.buttons || typeof final.buttons !== 'object') {
+  final.buttons = fallback.buttons;
+}
+if (!final.footerNav || typeof final.footerNav !== 'object') {
+  final.footerNav = fallback.footerNav;
+}
+
 // Generate TypeScript code with proper formatting
+// Using a safer serialization that explicitly sets all required properties
+const copyStr = JSON.stringify(final, null, 2);
 const header = `// Page copy taken from the approved-copy Google Sheet "${sheetTitle}" (tab "${tab}",
 // read from Sheet during build). The Sheet is the source of truth for this wording.
 // Fallback defaults are merged for sections not yet in the sheet.
 
-export const COPY = ${JSON.stringify(merged, null, 2)} as const;
+export const COPY = ${copyStr} as const;
 
 export function footerPolicyParts(): { label: string; text: string }[] {
   return COPY.footerPolicies
@@ -97,13 +115,3 @@ export function footerPolicyParts(): { label: string; text: string }[] {
 
 writeFileSync(outputPath, header);
 console.log(`copy:generate-ts  OK: generated ${outputPath}`);
-
-// Debug: verify the structure contains notFound
-try {
-  const generated = readFileSync(outputPath, 'utf8');
-  const hasNotFound = generated.includes('"notFound"') || generated.includes("'notFound'");
-  const hasFooterPolicies = generated.includes('"footerPolicies"') || generated.includes("'footerPolicies'");
-  console.log(`copy:generate-ts DEBUG: notFound=${hasNotFound}, footerPolicies=${hasFooterPolicies}`);
-} catch (e) {
-  console.error(`copy:generate-ts DEBUG ERROR: ${e.message}`);
-}
