@@ -88,6 +88,43 @@ Append-only. Concise timestamped entries. No secrets. Each entry is also appende
 
 No commit or push without explicit owner approval.
 
+## 2026-10-05T14:10:00Z — AUDIT: 214 unapproved strings on the site; the copy gate never checked for them
+
+Owner reported unapproved copy on /tours/ ("Ways to ride in France with BikeTourFrance.net").
+Full audit written to `docs/2026-10-05_UNAPPROVED_COPY_AUDIT.md`.
+
+**Result: 214 user-visible strings are not in the Sheet**, across all 12 routes (213 page-specific
+plus 1 shared). 152 hardcoded source occurrences across 17 files. Worst: /canal-des-deux-mers/ 69,
+/canal-des-deux-mers/practical-info/ 54, /tours/ 17, /waitlist-2027/ 16, /terms/ 13.
+The two strings the owner quoted are `src/pages/tours/index.astro:20` and `:21`.
+
+**Cause 1 — the reverse check was removed but its documentation was left in place.**
+`scripts/copy/verify-rendered.mjs` still claims in its header to fail when visible text has no
+approved field. It does not. Line 83 declares `allBlocks` "for the no uncovered text check"; it is
+filled at line 92 and never read again — dead code. Lines 137-140 then declare the gap intentional,
+asserting the material is "verified separately by verify-dist". That is untrue: verify-dist checks
+lengths, brand spelling and accessibility, and has no concept of Sheet approval. So the gate only
+ever checked Sheet->page, never page->Sheet, which is why it reported "OK: 12 pages, 63 fields
+confirmed" on a site carrying 214 unapproved strings.
+
+**Cause 2 — the field manifest was cut from 224 fields to 64.** `copy/field-manifest.json` once
+held 224 fields, the full inventory of rendered copy, still listed in `docs/COPY_FIELD_MAP_REVIEW.md`.
+It was reduced to 57, and is 64 today. About 160 fields of real page copy left both the manifest and
+the Sheet, and because of cause 1 nothing flagged the loss.
+
+Note on measurement: a first pass under-counted because it treated any string *containing* an
+approved value as approved, so `tours/index.astro:20` was wrongly cleared (it embeds the approved
+token "BikeTourFrance.net"). A second gap missed multi-line blocks whose opening tag sits alone on
+its line, which hid `:21`. Both were corrected before the figures above were produced; the rule is
+now that a visible string is approved only if it is contained *within* an approved value.
+
+Also found: `/tours/` line 21 is a near-duplicate of approved `/about/body_4` with a different
+ending ("and John helps you plan the rest" vs the Sheet's text), the hardest drift class to spot.
+
+**Nothing was changed:** no copy edited, no Sheet row added, no component re-pointed. Report only.
+The durable fix is to restore the reverse check and rebuild the manifest to full coverage; adding
+Sheet rows without the check restored would let the same drift recur.
+
 ## 2026-10-05T13:15:00Z — Copy gate GREEN end to end; Style Guide v4.5 written; Pages deploy blocked
 
 **Approved copy check passes in full.** Run 37313264334 (push of 8165d18), 1m25s, against the live
