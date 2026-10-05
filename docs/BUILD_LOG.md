@@ -1535,3 +1535,9 @@ verify-dist: 12 pages OK
 - Local main realigned to origin/main at 4beed9596bc198a0e284cf5329b2e46b9a2a5140; prior local state preserved on backup branches (run 20261005T231718Z).
 - Live-Sheet predeploy:approved-copy passed on main; dist/index.html renders "Join the 2027 waitlist" and "Get tour updates".
 - Owner confirmed btf-production Production branch = main. This commit triggers a production deployment.
+
+## 2026-10-06 — Cloudflare Production Branch Alignment Resolution
+- **Issue:** https://btf-production.pages.dev displayed legacy copy due to Cloudflare Pages Production branch setting tracking rebuild/2026-10-02-audit-remediation.
+- **Root Cause:** Cloudflare infrastructure setting mismatch; pushes to main were generated as preview aliases (main.btf-production.pages.dev).
+- **Fix:** Updated Cloudflare Pages Settings -> Branch control -> Production branch to main. Triggered deployment via commit 5741c59.
+- **Verification:** https://btf-production.pages.dev/ verified live serving approved copy ("Join the 2027 waitlist" / "Get tour updates").
