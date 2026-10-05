@@ -61,17 +61,21 @@ const deepMerge = (target, source) => {
 };
 deepMerge(merged, nested);
 
-// Map sheet structure to expected structure where needed
+// Map sheet structure to expected code structure
+// Sheet uses snake_case nested under "404", code expects "notFound" with camelCase
+if (nested['404']) {
+  merged.notFound = {
+    heading: nested['404'].heading || fallback.notFound.heading,
+    body: nested['404'].body || fallback.notFound.body,
+    homeCta: nested['404'].home_cta || fallback.notFound.homeCta,
+    resourcesCta: nested['404'].resources_cta || fallback.notFound.resourcesCta,
+    footerNote: nested['404'].footer_note || fallback.notFound.footerNote,
+  };
+}
+
+// Sheet uses "footer.policies", code expects top-level "footerPolicies"
 if (nested.footer?.policies) {
   merged.footerPolicies = nested.footer.policies;
-}
-if (nested['404']?.home_cta) {
-  merged.notFound = merged.notFound || {};
-  merged.notFound.homeCta = nested['404'].home_cta;
-  merged.notFound.resourcesCta = nested['404'].resources_cta;
-  merged.notFound.heading = nested['404'].heading;
-  merged.notFound.body = nested['404'].body;
-  merged.notFound.footerNote = nested['404'].footer_note;
 }
 
 // Generate TypeScript code with proper formatting
