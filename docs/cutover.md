@@ -7,7 +7,7 @@ Nothing in this document is to be done during staging work.
 ## Status
 
 - **Cutover is a separate, explicitly approved task.** It does not happen as a side effect of building, reviewing, merging, or deploying the staging site.
-- Staging runs only on the `temp-btf` Cloudflare Pages project as a preview branch (`rebuild-initial`). No custom domain is attached. No DNS record has been changed.
+- Staging runs on the `temp-btf` Cloudflare Pages project at `temp-btf.pages.dev`. Its production branch is `main`; pushes to `main` auto-deploy to that staging host. No live custom domain is attached, and no production-domain DNS record has been changed for the cutover.
 - The live site stays on Framer until the owner approves cutover in a separate request.
 
 ## Future process (for the approved cutover task only)
@@ -29,7 +29,7 @@ Nothing in this document is to be done during staging work.
 - Owner decides the home page link to the CDM subdomain (currently `#` on staging).
 - Owner decides on forms, WhatsApp links, and analytics (none exist in the Framer export).
 - Owner confirms how the Framer page's broken `/resources` embeds are handled (staging links to `resources.biketourfrance.net` instead).
-- Merging `rebuild/initial` to `main` needs separate owner approval.
+- The site already builds from `main` for staging. Review the intended staging commit and approve the live-domain cutover as a separate task.
 
 ## Not in scope
 

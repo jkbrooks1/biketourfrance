@@ -1,23 +1,23 @@
 # Production cutover preflight
 
-Written 2026-10-02. **Nothing in this document has been done.** Cutover is a separate step that needs the owner's explicit approval. This file supersedes the step list in `docs/cutover.md`; that file keeps the original process and safeguards.
+Written 2026-10-02; staging status updated 2026-10-05. **The production-domain cutover has not been done.** Cutover is a separate step that needs the owner's explicit approval. This file supersedes the step list in `docs/cutover.md`; that file keeps the original process and safeguards.
 
 Read first: the system-change register entries of 2026-10-02 ("biketourfrance.net Framer cutover: DNS snapshot and prerequisites" and the temp-btf Git-integration entry).
 
-## 1. Current state (read-only checks, 2026-10-02)
+## 1. Current state (2026-10-02 DNS snapshot; staging updated 2026-10-05)
 
 | Item | State |
 |---|---|
 | Live main site | Framer. The apex has two A records (31.43.160.6 and 31.43.161.6, DNS only). `www` is a CNAME to `sites.framer.app` and answers 308 to the apex. |
 | Email | Google Workspace MX (`aspmx.l.google.com` plus `alt1` to `alt4`), SPF that includes Google and MailerLite, Google site verification, MailerLite domain verification. **None of this may change.** |
-| New site | Native Astro build in GitHub `jkbrooks1/biketourfrance`, Cloudflare Pages project `temp-btf`, branch `rebuild/2026-10-02-audit-remediation`. Production auto-deploys are off. |
+| New site | Native Astro build in GitHub `jkbrooks1/biketourfrance`, Cloudflare Pages project `temp-btf`. Its production branch is `main`, and pushes to `main` auto-deploy to the staging host `temp-btf.pages.dev`. The live custom-domain cutover remains unapproved. |
 | Staging protections | `SITE.indexingEnabled = false` (`src/data/site.ts`), `public/_headers` (`X-Robots-Tag`), `public/robots.txt` (`Disallow: /`), and a staging banner on every page. |
 | Security headers | Unchanged. The apex returns HSTS `max-age=31536000` from Framer. |
 
 ## 2. Owner decisions needed before cutover
 
-1. **Contact route.** The site's only contact method is `mailto:john@biketourfrance.net`. Approve it, or supply a form or WhatsApp destination.
-2. **Mailing list and waitlist.** No sign-up form exists. The DNS shows a MailerLite account, but its group, form endpoint, and consent wording are not documented. A form needs the endpoint, the fields, the consent text, and a proven test submission (delivery and confirmation) before the Contact page can say it works.
+1. **Contact route.** The site currently uses `mailto:contact@biketourfrance.net`. Approve that contact method for launch, or supply a form or WhatsApp destination.
+2. **Mailing list and waitlist.** A 2027 waitlist page and active n8n intake now exist on staging; see the system-change register for the workflow's test history and exact-host CORS dependency. Confirm its launch scope and consent wording. Any separate MailerLite mailing-list form still needs its endpoint, fields, consent text, and a proven submission before the Contact page can say it works.
 3. **Planning-session price.** The live site shows $250. The new pages say "by arrangement". Restore it or keep it off.
 4. **Host-dinner claim.** The live site says three dinners with local hosts at Maison d'Hôtes. It is not in the confirmed 2027 facts and was left out. Confirm or supply the wording.
 5. **Lunches.** The site says lunches are not included, inferred from the facts list. Confirm.
@@ -38,11 +38,11 @@ Read first: the system-change register entries of 2026-10-02 ("biketourfrance.ne
 
 ## 3. Technical gates
 
-0. **The approved copy gate** (`docs/APPROVED_COPY_GATE.md`) is a planned production check, not yet active. Before it is activated: the owner has reviewed `docs/COPY_FIELD_MAP_REVIEW.md`; `BTF_Approved_Site_Copy` is shared with `btf-sheets-access@btf-general.iam.gserviceaccount.com` as Viewer, populated, and approved; the GitHub secrets `BTF_COPY_GOOGLE_SA_JSON` and `BTF_COPY_SHEET_ID` exist; the workflow triggers are added; branch protection on `main` requires **Approved copy check**; and `npm run predeploy:approved-copy` passes against the real Sheet. The Cloudflare build command stays `npm run build`.
+0. **The approved copy gate** (`docs/APPROVED_COPY_GATE.md`) is active in GitHub Actions and has passed against the real Sheet. Owner review of yellow Sheet rows remains open (D8), and `main` does not yet require **Approved copy check** through branch protection (D4). Cloudflare Pages runs `npx astro build` from committed `src/data/approved-copy.ts`; it does not read the Sheet. The publishing design remains an owner decision (D3). Complete owner copy review and decide the remaining gate controls before the production-domain cutover.
 
-1. `npm run check`, `npm run build`, and `npm run verify` pass on the branch to be merged.
+1. `npm run check`, `npm run build`, and `npm run verify` pass locally on `main`; the Sheet-mode `npm run predeploy:approved-copy` also passes before the cutover build is committed.
 2. The preview deployment is checked in a browser at 320, 375, 390, 768, 1024, and 1440 px, and with the keyboard.
-3. Merging the branch to `main` is approved separately. Production auto-deploy stays off until the owner turns it on.
+3. Staging already auto-deploys from `main` to `temp-btf.pages.dev`. Confirm the intended commit is on staging before cutover; attaching the live custom domain still needs separate owner approval.
 4. Search Console and analytics data per hostname are pulled and kept as the "before" record.
 5. A fresh read-only DNS snapshot of both zones (`biketourfrance.net` and `biketourfrance.com`) is saved, including all MX and TXT records.
 

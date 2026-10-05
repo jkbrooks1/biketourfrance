@@ -1308,3 +1308,19 @@ verify-dist: 12 pages OK
 - Verified the seven D9 fields had no page or generator reader, then removed their rows from the live Sheet, fixture and manifest. Sheet, fixture and manifest now contain 351 ordered, matching fields. Removed prohibited personal name and address from the obsolete seed CSV so the `src/`, `copy/`, `dist/` scans are clean.
 - Corrected README, AGENTS, copy-gate guide, workflow header, current-state guide, and fix list. Pages still runs `npx astro build` from committed copy; D3, D4, D8 and D10 remain owner decisions. No Pages setting, DNS, Framer or live-domain change.
 - Local checks: `npm run canonical:check` PASS; `npm run build` fixture mode PASS, 12 pages; `npm run check` 0 errors, 0 warnings, 2 hints; `npm run verify` 12 pages OK; `npm run copy:test` 10 passed. Live `npm run predeploy:approved-copy` read 351 Sheet rows, confirmed 351 fields on 12 routes (source: sheet), and ended `predeploy OK`. `src/data/approved-copy.ts` was regenerated from the live Sheet for the GitHub-driven staging deployment.
+
+## 2026-10-05T17:02:00Z — Cleanup handoff: D5 documentation and required external records
+
+- Started from clean `main` at `9aa59e6`, matching `origin/main`. The general build log had not
+  recorded that commit's D1/D2/D6/D7/D9 cleanup; appended the missing catch-up note there.
+- Updated the production cutover preflight, cutover note, build/deploy guide, fix list, and
+  historical-audit banner. They now distinguish staging auto-deployment from `main` on
+  `temp-btf.pages.dev` from the still-unapproved live-domain cutover. D5 is documented as fixed;
+  D3, D4, D8, and D10 remain owner decisions.
+- Appended the corresponding system-history entry to the canonical register, including the
+  practical-info copy-authority dependency and current Pages build input.
+- Live Sheet-mode `npm run predeploy:approved-copy` passed with 351 fields on 12 routes and
+  `predeploy OK`. The first invocation lacked `BTF_COPY_SHEET_ID` and stopped before fetching;
+  the retry supplied the documented ID and passed. No secret value was printed or logged.
+- No site source, Pages setting, DNS, production domain, Framer account, or connector schema was
+  changed. Documentation changes are pending commit at the time of this note.

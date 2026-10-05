@@ -1,5 +1,10 @@
 # Current state, build and deploy process — biketourfrance.net
 
+**Historical audit snapshot.** The branch assertion, inactive marker, and workflow-header findings
+below were fixed on 2026-10-05. For the current build and deploy process, use
+`docs/BTF_MAIN_SITE_BUILD_AND_DEPLOY_DOCUMENTATION.md`; for open decisions, use
+`docs/BTF_BUILD_DEPLOY_FIX_LIST.md`.
+
 **Audit date:** 2026-10-05
 **Scope:** read-only. No commit, push, deploy, Cloudflare API call, Pages configuration change, or
 source modification was made.

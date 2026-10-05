@@ -126,33 +126,35 @@ the test suite.
 
 `copy/fixture/fixture-rows.json` mirrors the Sheet for offline work. `scripts/copy/lib.mjs`
 `resolveMode()` computes `inCI = Boolean(env.CI || env.GITHUB_ACTIONS || env.CF_PAGES)` and **refuses
-fixture copy** whenever `BTF_COPY_FIXTURE=1` coincides with `inCI` or any `BTF_DEPLOY_ENV`. Staging
-and production must read the Sheet.
+fixture copy** whenever `BTF_COPY_FIXTURE=1` coincides with `inCI` or any `BTF_DEPLOY_ENV`. The
+GitHub Actions gate reads the Sheet. Pages currently builds the committed generated file with
+`npx astro build`; it does not run the copy scripts.
 
 ---
 
 ## 6. Commands, and what actually happens on `main`
 
-### Works on `main`
+### Verified working on `main`
 
 | Command | Result on 2026-10-05 |
 |---|---|
 | `npm run check` | 0 errors, 0 warnings, 2 hints |
 | `node scripts/verify-dist.mjs` | 12 pages OK |
 | `npm run copy:test` | 10 passed, 0 failed |
+| `npm run canonical:check` | PASS (native-astro) after D1 |
+| `npm run build` | PASS locally in fixture mode after D1; refused under `CI` or `CF_PAGES` |
+| `npm run verify` | PASS, 12 pages OK after D1 |
 | `CI=true npm run canonical:check` | PASS (native-astro) |
-| `BTF_COPY_SHEET_ID=<id> npm run copy:sync && npm run copy:validate && npm run copy:generate-ts && npx astro build && node scripts/copy/verify-rendered.mjs` | full pipeline green against the live Sheet |
+| `npm run predeploy:approved-copy` | PASS against 351 live Sheet fields and 12 routes on 2026-10-05 |
 
-### Does not work on `main`
+### Local build limitation
 
-| Command | Failure | Cause |
+| Command | Result | Cause |
 |---|---|---|
-| `npm run canonical:check` | `Error: Wrong development branch: main.` | `.btf-canonical-root.json` sets `developmentBranch` to `rebuild/2026-10-02-audit-remediation`. `scripts/assert-canonical-root.mjs:21` throws when not in CI and the branch differs. Skipped when `CI` is set, so GitHub Actions is unaffected. |
-| `npm run verify` | aborts at its first sub-step | `verify` = `canonical:check && verify-dist`. `verify-dist` passes when run directly. |
-| `npm run build` | `copy:sync FAILED. Fixture copy is not allowed here.` under `CI`, or the branch error locally | `build` sets `BTF_COPY_FIXTURE=1`, which is refused in any CI or Pages context. |
+| `CI=true npm run build` or `CF_PAGES=1 npm run build` | `copy:sync FAILED. Fixture copy is not allowed here.` | `build` sets `BTF_COPY_FIXTURE=1`; fixture mode is intentionally refused in CI and Pages. Use the Sheet-mode predeploy pipeline for the gate, while Pages continues to run `npx astro build`. |
 
-This is divergence **D1/D2** in the fix list and is the single most disruptive inaccuracy in the
-repository today.
+D1 and D2 in the fix list were resolved on 2026-10-05. The previous branch assertion and stale
+copy-gate marker are historical findings, not current failures.
 
 ### Script definitions
 

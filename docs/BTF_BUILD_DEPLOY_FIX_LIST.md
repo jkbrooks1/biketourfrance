@@ -80,7 +80,7 @@ pushing through pull requests rather than straight to `main`.
 
 ---
 
-## D5 — the Pages production branch was wrong until today — **FIXED TODAY, docs still stale**
+## D5 — the Pages production branch was wrong until today — **FIXED 2026-10-05**
 
 **Intent:** earlier documents state that the Pages project is connected with production
 auto-deploys **off** pending owner approval.
@@ -90,9 +90,8 @@ from 2026-10-04T22:53Z.
 **Actual now:** `production_branch` is `main` and production deployments are enabled, changed at
 your request on 2026-10-05. Recorded in the system changes register.
 
-**Fix:** update `docs/PRODUCTION_CUTOVER_PREFLIGHT.md` and `docs/cutover.md` so the "auto-deploys
-off" statements match the new intent, and state explicitly that staging auto-deploys from `main`
-while the **production domain** cutover remains unapproved.
+**Resolution:** `docs/PRODUCTION_CUTOVER_PREFLIGHT.md` and `docs/cutover.md` now state that staging
+auto-deploys from `main`, while the **production domain** cutover remains unapproved.
 
 ---
 
@@ -108,7 +107,10 @@ while the **production domain** cutover remains unapproved.
 | `docs/APPROVED_COPY_GATE.md:108` | "the Cloudflare build command stays `npm run build`" | see D3 |
 | `.github/workflows/approved-copy-check.yml` header | gate "NOT ACTIVE", lists activation steps | active since 2026-10-05 |
 
-**Resolution:** README, AGENTS, the copy-gate guide, workflow header, and the current-state guide now describe the active gate and the Pages `npx astro build` command. This documentation change does not select a D3 publishing design.
+**Resolution:** README, AGENTS, the copy-gate guide, and workflow header now describe the active
+gate and the Pages `npx astro build` command. The dated current-state audit has a historical
+snapshot notice pointing to the current build/deploy guide. This documentation change does not
+select a D3 publishing design.
 
 ---
 
@@ -128,12 +130,13 @@ file were removed after confirming no remaining reader. The old CDMv3 export no 
 
 ---
 
-## D8 — 293 Sheet rows are unapproved
+## D8 — owner review of yellow Sheet rows remains open
 
 **Intent:** everything on the site is owner-approved copy.
-**Actual:** 293 of 357 rows are marked YELLOW, added on 2026-10-05. Their wording is the text that
-was already on the site, lifted into the Sheet so the gate could enforce it — it has not been
-through your review.
+**Actual:** At the 357-row audit checkpoint, 293 rows were marked YELLOW. Their wording was lifted
+from the existing site into the Sheet so the gate could enforce it; that import did not constitute
+owner approval. The Sheet now has 351 rows after D7 and D9. Recount yellow rows in the current Sheet
+before using a numeric review total.
 
 **Fix:** review and approve, clearing the yellow fill. The gate cannot tell approved wording from
 wording that was merely imported, so this is the one control only you can apply. **This should be
@@ -189,10 +192,10 @@ remote, never pushed. They predate the work now on `main`.
 
 ## Suggested order
 
-1. **D1, D2, D6, D7, D9** — completed 2026-10-05.
+1. **D1, D2, D5, D6, D7, D9** — completed 2026-10-05.
 2. **D3** — decide Option A or B. Everything about how copy is published depends on this.
 3. **D4** — branch protection, once you have decided how you want to push to `main`.
-4. **D8** — approve the 293 rows. The long pole, and a prerequisite for the domain cutover.
+4. **D8** — review the current yellow rows. The long pole, and a prerequisite for the domain cutover.
 5. **D10** — the retired branch decision remains open.
 
 D3, D4, D8 and D10 remain owner decisions. This cleanup does not change their scope.
