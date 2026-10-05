@@ -8,8 +8,8 @@ export const COPY = {
     heading: 'Choose your own bike adventure in France?',
     body1: 'Join us for a small group guided tour of the historic Canal des Deux Mers between Bordeaux on the Atlantic and Sète on the Mediterranean! We roll in the Spring and Fall of 2027. Or, do the same tour on your own and we\'ll help with remote support.',
     body2: 'I love bike touring in France. And I love to help fellow bike travelers have great trips! Roll with one of my small groups or buy a package so you can do the tour on your own (package coming soon!) Or, if you want a hand planning your own bike adventure in France and just want my coaching send me an email. I charge $250 for a 50-minute planning session that includes two follow up emails.',
-    mailingListCta: 'Email for tour updates',
-    waitlistCta: 'Email for 2027 waitlist',
+    mailingListCta: 'Sign up for tour updates',
+    waitlistCta: 'Join our free 2027 tour waitlist',
   },
 
   readyToRide: {
