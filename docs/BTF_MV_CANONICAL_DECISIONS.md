@@ -44,12 +44,21 @@ The workflow automatically runs on:
 1. **Checkout:** Clone repository at triggered commit
 2. **Setup:** Node.js 22, npm cache, install dependencies
 3. **Build command:** `npm run predeploy:approved-copy`
-   - Step 1: `copy:sync` — Read 57 approved fields from Google Sheet (BTF_Approved_Site_Copy)
+   - Step 1: `copy:sync` — Read the 64 approved fields from Google Sheet (BTF_Approved_Site_Copy)
    - Step 2: `copy:validate` — Validate fields against field-manifest.json
-   - Step 3: `astro build` — Generate static site in dist/
-   - Step 4: `copy:verify-rendered` — Verify approved copy text appears on rendered pages
-   - Step 5: `verify` — Run style and accessibility checks
-   - Step 6: `assert-deployable` — Final deployment readiness check
+   - Step 3: `copy:generate-ts` — Generate `src/data/approved-copy.ts` from the validated artifact
+   - Step 4: `astro build` — Generate static site in dist/
+   - Step 5: `copy:verify-rendered` — Verify approved copy text appears on rendered pages
+   - Step 6: `verify` — Run style and accessibility checks
+   - Step 7: `assert-deployable` — Final deployment readiness check
+
+**Sheet-to-code mapping (added 2026-10-05).** The Sheet names fields `/section/field_name` in
+snake_case (e.g. `/404/home_cta`); the Astro components read nested camelCase
+(e.g. `COPY.notFound.homeCta`). `scripts/copy/generate-ts.mjs` holds the declarative map between
+them and contains no copy text of its own. If the code needs a field the Sheet does not have, the
+build fails and names the exact rows to add. Fallback or placeholder copy must never be added to
+that script: only Sheet copy may ship. `npm run build` (the Cloudflare Pages command) runs
+`copy:generate-ts` as well, so Pages never builds from a stale generated file.
 
 ### Required Secrets
 Two secrets must be configured in GitHub repository settings:
@@ -63,10 +72,24 @@ Two secrets must be configured in GitHub repository settings:
 - **Build time:** ~2-5 minutes (includes all validation steps)
 
 ### Validation Gates
-- ✓ All 57 approved copy fields must be present in synced data
-- ✓ Rendered HTML must contain all approved copy text
-- ✓ No style guide violations (headings ≤60 chars, button labels ≤24 chars, brand as "BikeTourFrance.net")
+- ✓ All 64 approved copy fields must be present in synced data
+- ✓ Every field the code reads must exist in the Sheet, or the build fails naming the missing rows
+- ✓ Rendered HTML must contain all approved copy text (63 fields confirmed across 12 routes)
+- ✓ No style guide violations, as amended by the owner on 2026-10-05 (see below)
 - ✓ Build artifacts must be deployable
+
+### Style guide checks, as amended by the owner 2026-10-05
+These four amendments were made so that approved Sheet copy ships unchanged. Style Guide v4.4
+itself still needs updating to record them.
+1. Button label limit raised from 24 to 32 characters (`src/components/Button.astro`,
+   `scripts/verify-dist.mjs`), so "Join our free 2027 tour waitlist" (32) ships as approved.
+2. Brand may be written "BikeTourFrance" or "BikeTourFrance.net". The spaced form
+   "Bike Tour France" remains a violation.
+3. Heading limit raised from 60 to 100 characters, so the intentionally multi-line Canal des
+   Deux Mers heading (94) is not shortened.
+4. The no-exclamation-mark check was removed. Enforcing it would have required editing 5 approved
+   Sheet fields (6 marks), including the CDM heading line and "Send us an email!". The specific
+   audited copy defects "soon!." and "soon.)!" still fail.
 
 ### Monitoring
 - View workflow runs: https://github.com/jkbrooks1/biketourfrance/actions

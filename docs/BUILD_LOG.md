@@ -88,6 +88,31 @@ Append-only. Concise timestamped entries. No secrets. Each entry is also appende
 
 No commit or push without explicit owner approval.
 
+## 2026-10-05T13:00:00Z — Live-Sheet run: copy gate passes; predeploy env-propagation bug fixed
+
+First run that actually tested the pushed fix (run 37312835655, push of 4251258, 1m24s vs the
+14-19s failures before). Against the LIVE Sheet:
+- `astro build` — 12 pages, 0 errors
+- `copy:verify-rendered` — OK: 12 pages, 63 fields confirmed on their routes (source: **sheet**)
+- `canonical:check` — PASS (native-astro)
+- `verify-dist` — 12 pages OK
+- `assert-deployable` — BLOCKED: `BTF_DEPLOY_ENV is not "production"`
+
+So the Sheet->code mapping and all style checks pass against real approved copy. The only failure
+was a pre-existing shell bug in `package.json`: `predeploy:approved-copy` was written as
+`BTF_DEPLOY_ENV=production npm run copy:sync && ...`. A variable assignment prefix applies only to
+the one simple command it precedes, so every later command in the `&&` chain — including
+`assert-deployable.mjs`, which reads `process.env.BTF_DEPLOY_ENV` — ran without it. The gate was
+therefore unpassable regardless of copy correctness.
+
+Fix: the chain moved into `copy:production-pipeline`, with `predeploy:approved-copy` now
+`BTF_DEPLOY_ENV=production npm run copy:production-pipeline`. The outer npm process carries the
+variable and every command in the inner chain inherits it. Verified before pushing: old pattern
+yields UNSET in the second command, new pattern yields `production` in a nested child.
+
+Also updated `docs/BTF_MV_CANONICAL_DECISIONS.md`: 7-step pipeline (adds `copy:generate-ts`),
+64 Sheet fields, the Sheet->code mapping rule, and the four owner style-guide amendments.
+
 ## 2026-10-05T05:55:00Z — CORRECTION + RESOLVED: Sheet->code mapping; full pipeline green
 
 **Supersedes the 2026-10-05T03:25:00Z entry below, whose diagnosis was wrong.**
