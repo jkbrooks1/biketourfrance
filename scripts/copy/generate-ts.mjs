@@ -93,9 +93,37 @@ if (!final.notFound || typeof final.notFound !== 'object') {
   throw new Error('notFound property is required and must be an object');
 }
 
-// Generate TypeScript code with proper formatting
-// Build the COPY object with explicitly declared properties
-const copyStr = JSON.stringify(final, null, 2);
+// Generate TypeScript code by manually escaping JSON values
+// This avoids any issues with JSON.stringify embedding
+const escapeString = (s) => JSON.stringify(s);
+
+const buildObject = (obj, indent = '  ') => {
+  const lines = ['{'];
+  const entries = Object.entries(obj);
+  for (let i = 0; i < entries.length; i++) {
+    const [key, value] = entries[i];
+    let serialized;
+    if (value === null) {
+      serialized = 'null';
+    } else if (typeof value === 'string') {
+      serialized = escapeString(value);
+    } else if (typeof value === 'object' && !Array.isArray(value)) {
+      serialized = buildObject(value, indent + '  ');
+    } else if (typeof value === 'boolean') {
+      serialized = value ? 'true' : 'false';
+    } else if (typeof value === 'number') {
+      serialized = String(value);
+    } else {
+      serialized = escapeString(String(value));
+    }
+    const isLast = i === entries.length - 1;
+    lines.push(`${indent}${escapeString(key)}: ${serialized}${isLast ? '' : ','}`);
+  }
+  lines.push(indent.slice(0, -2) + '}');
+  return lines.join('\n');
+};
+
+const copyStr = buildObject(final);
 const header = `// Page copy taken from the approved-copy Google Sheet "${sheetTitle}" (tab "${tab}",
 // read from Sheet during build). The Sheet is the source of truth for this wording.
 // Fallback defaults are merged for sections not yet in the sheet.
@@ -114,12 +142,3 @@ export function footerPolicyParts(): { label: string; text: string }[] {
 
 writeFileSync(outputPath, header);
 console.log(`copy:generate-ts  OK: generated ${outputPath}`);
-
-// Log what was actually generated for debugging
-const lines = header.split('\n');
-const copyLine = lines.find(l => l.includes('export const COPY'));
-if (copyLine) {
-  const jsonPart = copyLine.substring(copyLine.indexOf('=') + 1).trim();
-  const preview = jsonPart.substring(0, Math.min(150, jsonPart.length));
-  console.error(`[DEBUG] COPY starts with: ${preview.substring(0, 50)}...`);
-}
