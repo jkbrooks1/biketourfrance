@@ -106,3 +106,16 @@ was made. The required two build logs and system register were updated before th
 For repository rollback, revert the consolidation commit after reconciling newer copy changes;
 for Sheet rollback, apply the reviewed inverse payload. Restoring the source-tab hidden flags is
 reversible. No credential values are present in evidence or logs.
+
+## Publication readback — 2026-10-05T20:30:32Z
+
+Copy commit `a5c3729bc80cff2ad915edf80ef1fb006af8eb65` was pushed to origin/main; local and
+remote-tracking main matched. GitHub Cloudflare checks reported success for both existing
+`temp-btf` and `btf-production` integrations. Direct temp-btf readback on Tours, Resources and
+Contact confirmed the exact 42-character CTA, revised Tours pricing, source annotation,
+Tourouzelle audio labels and revised contact wording. GitHub Approved copy check run
+[37369357887](https://github.com/jkbrooks1/biketourfrance/actions/runs/37369357887) was still queued
+at readback. Local live-Sheet predeploy passed; no CI success is inferred from that.
+
+This closeout adds publication evidence only; runtime source remains the locally validated
+copy commit. The unrelated hourly-sync/timestamp work will be restored intact after closeout.

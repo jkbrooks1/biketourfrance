@@ -1401,3 +1401,17 @@ verify-dist: 12 pages OK
 - Rules cadence checked: current root has no 00_PROJECT RULES.md; required cross-project canonical
   source was read and owner's explicit BTF scope applied. New tab/limit decisions are recorded in
   this result, both logs and the canonical system register; no CDM successor rules were changed.
+
+
+## 2026-10-05T20:30:32Z — Copy consolidation pushed; staging readback verified
+
+- Copy commit a5c3729bc80cff2ad915edf80ef1fb006af8eb65 pushed to origin/main and remote SHA verified.
+  GitHub Cloudflare checks for existing temp-btf and btf-production integrations both succeeded.
+  Direct temp-btf Tours/Resources/Contact readback confirmed the exact 42-character CTA and revised
+  Tours pricing, source annotation, Tourouzelle audio labels and contact wording.
+- GitHub Approved copy check run 37369357887 remained queued at readback; no CI pass claimed.
+  Live Sheet-mode predeploy and 4+10 local checks already passed. Appended publication proof to
+  docs/v02_COPY_CONSOLIDATION_RESULT.md and proof verification.json. Closeout commit is docs only.
+- All 11 hidden source tabs retain original values. 214 adopted fields approved visually; 116 yellow
+  and one pale-yellow B cell remain for separate review. Unrelated hourly-sync/timestamp work is
+  preserved and excluded; restore after closeout. No Pages/DNS/domain-routing changes were made.

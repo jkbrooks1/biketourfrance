@@ -12,5 +12,14 @@
   "astro_check": "0 errors, 0 warnings, 2 pre-existing hints",
   "copy_tests": "4 named-tab regressions plus 10 existing copy checks passed",
   "exact_self_guided_cta": "42 visible characters, no double escaping",
-  "source_tabs_values_verified_unchanged": 11
+  "source_tabs_values_verified_unchanged": 11,
+  "copy_commit": "a5c3729bc80cff2ad915edf80ef1fb006af8eb65",
+  "push_verified": "origin/main matched copy commit after successful push",
+  "cloudflare_checks": {
+    "temp-btf": "success",
+    "btf-production": "success"
+  },
+  "staging_copy_readback": "temp-btf tours/resources/contact: exact revised CTA, Tours pricing, annotation, Tourouzelle audio labels and contact wording verified",
+  "github_approved_copy_check": "queued at readback; run 37369357887",
+  "postpush_verified_utc": "2026-10-05T20:30:32Z"
 }
