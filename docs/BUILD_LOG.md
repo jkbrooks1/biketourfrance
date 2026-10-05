@@ -88,6 +88,33 @@ Append-only. Concise timestamped entries. No secrets. Each entry is also appende
 
 No commit or push without explicit owner approval.
 
+## 2026-10-05T15:46:45Z — Build/deploy documentation rewritten; 19 junk Sheet rows removed; divergence fix list produced
+
+Replaced the stale BTF_MAIN_SITE_BUILD_AND_DEPLOY_DOCUMENTATION packet (its build log stopped at
+2026-10-03, it used the retired root name, and it said the copy gate was inactive with credentials
+unset - all wrong). New version written to `docs/BTF_MAIN_SITE_BUILD_AND_DEPLOY_DOCUMENTATION.md`
+and `/Users/jkbrookspersonal/Downloads/`, every statement verified by file read or command run.
+
+Produced `docs/BTF_BUILD_DEPLOY_FIX_LIST.md` recording ten places where documented intent and
+actual behaviour disagree: D1 developmentBranch marker breaks `npm run build`/`verify` on main;
+D2 marker still says copyGateStatus inactive; D3 Pages runs `npx astro build` so it builds from the
+committed approved-copy.ts and a Sheet edit does not reach staging, contradicting two documents that
+say the build command stays `npm run build` (which would in fact fail under CF_PAGES); D4 main has
+no branch protection so the gate is bypassable; D5 Pages production branch was the old branch until
+today; D6 five files describe a system that no longer exists; D7 practical-info-data.json is an
+orphaned second copy authority; D8 293 Sheet rows unapproved; D9 seven Sheet rows have no reader;
+D10 two unpushed commits on the retired branch.
+
+FIXED in this session: removed 19 junk Sheet rows (18 `/nav/copy_*` holding TypeScript fragments
+from a codemod whose quote scanner desynchronized on an apostrophe inside a comment, one of which
+contained john@biketourfrance.net, plus `/nav/text_1`, a duplicate of `/nav/practical_info`).
+Nothing read them and their words were counting as approved copy anywhere, weakening the coverage
+check. Sheet, fixture and manifest now agree at 357 fields. Commit 2976f3c.
+
+Staging redeployed and verified: https://temp-btf.pages.dev serves commit 2976f3c matching the Sheet.
+All 11 content routes 200. verify-rendered OK 356 fields (source: sheet), verify-dist 12 pages OK,
+copy:test 10/10, astro check 0 errors. GitHub Actions run 37334636401 success.
+
 ## 2026-10-05T15:24:56Z — System process audit completed; report at Downloads/CURRENT_STATE_AND_BUILD_DEPLOY_PROCESS.md
 
 Read-only audit. No commit, push, deploy, Cloudflare API call, Pages configuration change, or source
