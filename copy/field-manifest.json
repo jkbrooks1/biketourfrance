@@ -708,12 +708,6 @@
     "codeLocation": "src/components/Footer.astro"
   },
   {
-    "field": "/nav/text_1",
-    "route": "/",
-    "required": false,
-    "codeLocation": "src/data/site.ts"
-  },
-  {
     "field": "/photos/text_1",
     "route": "/",
     "required": false,
@@ -1426,114 +1420,6 @@
     "route": "/canal-des-deux-mers/",
     "required": false,
     "codeLocation": "src/data/cdm2027.ts"
-  },
-  {
-    "field": "/nav/copy_1",
-    "route": "/",
-    "required": false,
-    "codeLocation": "src/data/site.ts"
-  },
-  {
-    "field": "/nav/copy_12",
-    "route": "/",
-    "required": false,
-    "codeLocation": "src/data/site.ts"
-  },
-  {
-    "field": "/nav/copy_14",
-    "route": "/",
-    "required": false,
-    "codeLocation": "src/data/site.ts"
-  },
-  {
-    "field": "/nav/copy_15",
-    "route": "/",
-    "required": false,
-    "codeLocation": "src/data/site.ts"
-  },
-  {
-    "field": "/nav/copy_16",
-    "route": "/",
-    "required": false,
-    "codeLocation": "src/data/site.ts"
-  },
-  {
-    "field": "/nav/copy_18",
-    "route": "/",
-    "required": false,
-    "codeLocation": "src/data/site.ts"
-  },
-  {
-    "field": "/nav/copy_2",
-    "route": "/",
-    "required": false,
-    "codeLocation": "src/data/site.ts"
-  },
-  {
-    "field": "/nav/copy_22",
-    "route": "/",
-    "required": false,
-    "codeLocation": "src/data/site.ts"
-  },
-  {
-    "field": "/nav/copy_23",
-    "route": "/",
-    "required": false,
-    "codeLocation": "src/data/site.ts"
-  },
-  {
-    "field": "/nav/copy_24",
-    "route": "/",
-    "required": false,
-    "codeLocation": "src/data/site.ts"
-  },
-  {
-    "field": "/nav/copy_25",
-    "route": "/",
-    "required": false,
-    "codeLocation": "src/data/site.ts"
-  },
-  {
-    "field": "/nav/copy_26",
-    "route": "/",
-    "required": false,
-    "codeLocation": "src/data/site.ts"
-  },
-  {
-    "field": "/nav/copy_27",
-    "route": "/",
-    "required": false,
-    "codeLocation": "src/data/site.ts"
-  },
-  {
-    "field": "/nav/copy_28",
-    "route": "/",
-    "required": false,
-    "codeLocation": "src/data/site.ts"
-  },
-  {
-    "field": "/nav/copy_29",
-    "route": "/",
-    "required": false,
-    "codeLocation": "src/data/site.ts"
-  },
-  {
-    "field": "/nav/copy_3",
-    "route": "/",
-    "required": false,
-    "codeLocation": "src/data/site.ts"
-  },
-  {
-    "field": "/nav/copy_5",
-    "route": "/",
-    "required": false,
-    "codeLocation": "src/data/site.ts"
-  },
-  {
-    "field": "/nav/copy_6",
-    "route": "/",
-    "required": false,
-    "codeLocation": "src/data/site.ts"
   },
   {
     "field": "/nav/home",

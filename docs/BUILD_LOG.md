@@ -88,6 +88,47 @@ Append-only. Concise timestamped entries. No secrets. Each entry is also appende
 
 No commit or push without explicit owner approval.
 
+## 2026-10-05T15:24:56Z — System process audit completed; report at Downloads/CURRENT_STATE_AND_BUILD_DEPLOY_PROCESS.md
+
+Read-only audit. No commit, push, deploy, Cloudflare API call, Pages configuration change, or source
+modification. Report written to `docs/CURRENT_STATE_AND_BUILD_DEPLOY_PROCESS.md` and
+`/Users/jkbrookspersonal/Downloads/CURRENT_STATE_AND_BUILD_DEPLOY_PROCESS.md` (identical copies).
+
+Git: on `main` at 24cc405, tracking origin/main, working tree clean. Branch
+`rebuild/2026-10-02-audit-remediation` sits at baba02e with 2 unpushed commits.
+
+Succeeds on main: `npm run check` (0 errors, 2 hints); `node scripts/verify-dist.mjs` (12 pages OK);
+`npm run copy:test` (10 passed); `CI=true npm run canonical:check` (PASS).
+
+Fails on main, with causes: `npm run canonical:check` throws "Wrong development branch: main"
+because `.btf-canonical-root.json` still names `rebuild/2026-10-02-audit-remediation` as
+developmentBranch; `npm run verify` aborts at that same first sub-step, although verify-dist passes
+when run directly; `CI=true npm run build` fails at copy:sync because `build` sets
+BTF_COPY_FIXTURE=1 and `resolveMode()` in scripts/copy/lib.mjs refuses fixture copy whenever
+CI, GITHUB_ACTIONS or CF_PAGES is set.
+
+Approved-copy gate: ACTIVE and credentialed, contrary to the stale `copyGateStatus`
+"inactive-blocking-deployment" in the canonical-root marker and the stale "NOT ACTIVE" comments in
+the workflow header. Secrets BTF_COPY_SHEET_ID and BTF_COPY_GOOGLE_SA_JSON both present (names and
+dates only). Five most recent workflow runs all succeeded, latest 37329982987. Manifest and fixture
+both hold 376 fields (375 non-empty). Coverage is bi-directional: Sheet -> page for required fields,
+and page -> Sheet so no rendered string contains prose no approved field supplies.
+
+Deployment: Cloudflare Pages Git integration, project temp-btf, build command `npx astro build`,
+output `dist`. Production branch `main` and staging URL https://temp-btf.pages.dev are reported from
+the build log and system changes register and were NOT verified live in this audit (Cloudflare API
+out of scope). Pages does not run the copy gate and does not read the Sheet; it builds from the
+committed src/data/approved-copy.ts, so a Sheet edit needs that file regenerated and committed to
+reach staging. The GitHub Actions workflow validates but contains no deploy step.
+
+Staging protections verified by file read: `indexingEnabled: false` (src/data/site.ts:17); noindex
+meta emitted at src/layouts/BaseLayout.astro:69 only while indexing is disabled; `X-Robots-Tag:
+noindex, nofollow, noarchive` on /* in public/_headers; `Disallow: /` in public/robots.txt.
+
+Findings to action: update `developmentBranch` and `copyGateStatus` in `.btf-canonical-root.json`;
+refresh the stale workflow header comments; decide whether Pages should read the Sheet directly;
+decide the fate of the two unpushed commits on rebuild/2026-10-02-audit-remediation.
+
 ## 2026-10-05T16:05:00Z — STAGING LIVE: temp-btf production branch set to main
 
 The staging site now serves the approved Sheet copy: https://temp-btf.pages.dev

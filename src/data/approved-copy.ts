@@ -1,6 +1,6 @@
 // GENERATED FILE - DO NOT EDIT BY HAND.
 // Written by scripts/copy/generate-ts.mjs from the approved-copy Google Sheet
-// "fixture" (tab "fixture"), read during the build. The Sheet is the source of truth.
+// "BTF_Approved_Site_Copy" (tab "Approved Site Copy"), read during the build. The Sheet is the source of truth.
 
 export const COPY = {
   metaDescription: "We help cyclists build extraordinary, self-supported bike tours in France!",
@@ -283,30 +283,11 @@ export const TEXT: Record<string, string> = {
   "/nav/cdm_tour": "Canal des Deux Mers",
   "/nav/contact": "Contact",
   "/nav/cookies": "Cookies",
-  "/nav/copy_1": "john@biketourfrance.net",
-  "/nav/copy_12": ", match: [] as readonly string[] }, ] as const; // Extra useful links shown in the footer only. export const FOOTER_TOUR_LINKS = [ { label:",
-  "/nav/copy_14": "}, { label: TEXT[",
-  "/nav/copy_15": "], href:",
-  "/nav/copy_16": "}, ] as const; export const LEGAL_NAV = [ { label:",
-  "/nav/copy_18": "}, { label:",
-  "/nav/copy_2": ", href:",
-  "/nav/copy_22": "}, ] as const; // The nav item that is current for a path: exact match, or a listed section prefix, or the longest href prefix. export function currentNavHref(path: string): string | undefined { const exact = NAV.find((item) => item.href === path); if (exact) return exact.href; const section = NAV.find((item) => item.match.some((prefix) => path.startsWith(prefix))); if (section) return section.href; return NAV.filter((item) => item.href !==",
-  "/nav/copy_23": "&& path.startsWith(item.href)).sort( (a, b) => b.href.length - a.href.length, )[0]?.href; } export function mailto(subject: string, body =",
-  "/nav/copy_24": "): string { const params = new URLSearchParams({ subject }); if (body) params.set(",
-  "/nav/copy_25": ", body); // URLSearchParams encodes spaces as \"+\"; mail clients need %20. return `mailto:${SITE.email}?${params.toString().replace(/\\+/g,",
-  "/nav/copy_26": ")}`; } // No sign-up service is configured on this site, so every \"join\" or \"ask\" action is an email to John. export const CONTACT_LINKS = { general: mailto(",
-  "/nav/copy_27": "), waitlist: mailto(",
-  "/nav/copy_28": ", ), mailingList: mailto(",
-  "/nav/copy_29": ", ), planning: mailto(",
-  "/nav/copy_3": ", match: [] as readonly string[] }, { label:",
-  "/nav/copy_5": ", match: [",
-  "/nav/copy_6": "] as readonly string[] }, { label:",
   "/nav/home": "Home",
   "/nav/practical_info": "Practical information",
   "/nav/privacy": "Privacy",
   "/nav/resources": "Resources",
   "/nav/terms": "Terms",
-  "/nav/text_1": "Practical information",
   "/nav/tours": "Tours",
   "/photos/t_1": "Créon",
   "/photos/text_1": "A cyclist riding away on a paved canal path, with water and green vegetation on both sides and trees in the distance.",
