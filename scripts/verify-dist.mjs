@@ -2,7 +2,7 @@
 // Covers: one H1, landmarks, skip link, heading order, unique titles and descriptions, canonical URLs,
 // alt text, internal links and fragments, staging noindex, banned content (prices, consent-by-use,
 // stale "upcoming 2026"), JSON-LD types, outline suppression, sitemap, robots.txt, _headers, and the 404 page.
-// Style guide v4.4 checks: headings at most 60 characters, button labels at most 24, no exclamation marks,
+// Style guide v4.4 checks (with owner amendments 2026-10-05): headings at most 100 characters, button labels at most 32,
 // no "#" or empty links, every image has alt text, the audited copy defects stay fixed, spacing and font sizes in
 // the CSS stay on the guide's scale, and no Framer files or references ship.
 import { readdirSync, readFileSync, statSync, existsSync } from 'node:fs';
@@ -134,7 +134,8 @@ for (const { rel, html } of pages) {
   if (/3,?500|2,?000/.test(text.replace(/2000/g, ''))) fail(name, 'provisional price figure found');
   // Brand spelling from the owner's style guide v4.3: always BikeTourFrance.net.
   if (/Bike Tour France/i.test(text)) fail(name, 'brand written as "Bike Tour France"');
-  if (/BikeTourFrance(?!\.net)/.test(text)) fail(name, 'brand written without .net');
+  // Owner decision 2026-10-05: "BikeTourFrance" and "BikeTourFrance.net" are both acceptable.
+  // The spaced form "Bike Tour France" above remains a violation.
   // The approved-copy Sheet's footer legal paragraph (cookie consent wording) is allowed inside the footer only.
   const textOutsideFooter = html
     .replace(/<footer[\s\S]*?<\/footer>/g, ' ')
@@ -160,11 +161,13 @@ for (const { rel, html } of pages) {
       .trim();
   for (const h of html.matchAll(/<h([1-6])\b[^>]*>([\s\S]*?)<\/h\1>/g)) {
     const t = decode(h[2]);
-    if (t.length > 60) fail(name, `heading over 60 characters (${t.length}): ${t.slice(0, 50)}...`);
+    // Owner decision 2026-10-05: limit raised from the guide's 60 so the intentionally
+    // multi-line Canal des Deux Mers heading is not shortened. Style Guide to be updated.
+    if (t.length > 100) fail(name, `heading over 100 characters (${t.length}): ${t.slice(0, 50)}...`);
   }
   for (const b of html.matchAll(/<a\b[^>]*class="[^"]*\bbtn\b[^"]*"[^>]*>([\s\S]*?)<\/a>/g)) {
     const t = decode(b[1]);
-    if (t.length === 0 || t.length > 24) fail(name, `button label length ${t.length}: "${t}"`);
+    if (t.length === 0 || t.length > 32) fail(name, `button label length ${t.length}: "${t}"`);
   }
   for (const a of html.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/g)) {
     const href = a[1].match(/\shref="([^"]*)"/)?.[1];
@@ -182,11 +185,9 @@ for (const { rel, html } of pages) {
       .replace(/<style[\s\S]*?<\/style>/g, '')
       .replace(/<head[\s\S]*?<\/head>/g, ''),
   );
-  if (/!/.test(visible))
-    fail(
-      name,
-      `exclamation mark in page text: ...${visible.slice(Math.max(0, visible.indexOf('!') - 30), visible.indexOf('!') + 10)}`,
-    );
+  // Owner decision 2026-10-05: exclamation marks are allowed in approved copy, so this is no
+  // longer checked. The specific audited defects below ("soon!.", "soon.)!") still fail.
+  // Style Guide to be updated.
   for (const bad of ["B&B's", 'Hotels & B', 'each days route', 'soon!.', 'soon.)!']) {
     if (visible.includes(bad)) fail(name, `audited copy defect present: ${bad}`);
   }

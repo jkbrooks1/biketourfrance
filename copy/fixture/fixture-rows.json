@@ -5,7 +5,7 @@
   ],
   [
     "/meta_description",
-    "We help cyclists build extraordinary, self-supported bike tours in France."
+    "We help cyclists build extraordinary, self-supported bike tours in France!"
   ],
   [
     "/header/logo_text",
@@ -17,23 +17,23 @@
   ],
   [
     "/hero/body_1",
-    "Join us for a small group guided tour of the historic Canal des Deux Mers between Bordeaux on the Atlantic and Sète on the Mediterranean. We roll in the Spring and Fall of 2027. Or, do the same tour on your own and we'll help with remote support."
+    "Join us for a small group guided tour of the historic Canal des Deux Mers between Bordeaux on the Atlantic and Sète on the Mediterranean! We roll in the Spring and Fall of 2027. Or, do the same tour on your own and we'll help with remote support."
   ],
   [
     "/hero/body_2",
-    "I love bike touring in France. And I love to help fellow bike travelers have great trips. Roll with one of my small groups or buy a package so you can do the tour on your own (package coming soon.) Or, if you want a hand planning your own bike adventure in France and just want my coaching send me an email. I charge $250 for a 50-minute planning session that includes two follow up emails."
+    "I love bike touring in France. And I love to help fellow bike travelers have great trips! Roll with one of my small groups or buy a package so you can do the tour on your own (package coming soon!) Or, if you want a hand planning your own bike adventure in France and just want my coaching send me an email. I charge $250 for a 50-minute planning session that includes two follow up emails."
   ],
   [
     "/hero/body_3",
-    null
+    ""
   ],
   [
     "/hero/mailing_list_cta",
-    "Email for tour updates"
+    "Sign up for tour updates"
   ],
   [
     "/hero/waitlist_cta",
-    "Email for 2027 waitlist"
+    "Join our free 2027 tour waitlist"
   ],
   [
     "/ready-to-ride/heading",
@@ -61,7 +61,7 @@
   ],
   [
     "/ready-to-ride/included_heading",
-    "What's included"
+    "What's included;"
   ],
   [
     "/ready-to-ride/included_1",
@@ -85,7 +85,7 @@
   ],
   [
     "/ready-to-ride/included_6",
-    "Routes in special BikeTourFrance.net RideWithGPS tour specific collection"
+    "Routes in special BikeTourFrance RideWithGPS tour specific collection"
   ],
   [
     "/ready-to-ride/included_7",
@@ -97,7 +97,7 @@
   ],
   [
     "/ready-to-ride/cdm_heading",
-    "Canal des Deux Mers Tour (CDM)\nSpring & Fall of 2027. Bordeaux start\nAtlantic to Mediterranean"
+    "Canal des Deux Mers Tour (CDM)\nSpring & Fall of 2027! Bordeaux start\nAtlantic to Mediterranean"
   ],
   [
     "/ready-to-ride/cdm_cta",
@@ -113,11 +113,11 @@
   ],
   [
     "/about/body_1",
-    "I’m John—the cyclist behind BikeTourFrance.net. I help riders execute extraordinary bicycle tours in France."
+    "I'm John—the cyclist behind BikeTourFrance.net. I help riders execute extraordinary bicycle tours in France."
   ],
   [
     "/about/body_2",
-    "I personally lead four very small, self-supported group tours each year. Groups have fewer than 12 riders, so I can lead the ride, communicate each day’s plan in depth, and give the group the attention it needs."
+    "I personally lead four very small, self-supported group tours each year. Groups have fewer than 12 riders, so I can lead the ride, communicate each day's plan in depth, and give the group the attention it needs."
   ],
   [
     "/about/body_3",
@@ -125,7 +125,7 @@
   ],
   [
     "/about/body_4",
-    "All BikeTourFrance.net tours are self-supported. You carry your own gear from place to place. The Canal des Deux Mers is fairly flat, so you do not need to obsess over every gram. But space still matters. Pack less than you think you need."
+    "All BikeTourFrance tours are self-supported. You carry your own gear from place to place. The Canal des Deux Mers is fairly flat, so you do not need to obsess over every gram. But space still matters. Pack less than you think you need."
   ],
   [
     "/about/body_5",
@@ -137,7 +137,7 @@
   ],
   [
     "/about/body_7",
-    "Outside of touring, I lead rides for Cascade Bicycle Club in Seattle, work in enterprise technology, and hold DELF B2 certification in French. I’m not a camper—I like a good route, a real bed, a warm shower, and a solid meal at the end of the day. It is France, after all, and I love to eat well."
+    "Outside of touring, I lead rides for Cascade Bicycle Club in Seattle, work in enterprise technology, and hold DELF B2 certification in French. I'm not a camper—I like a good route, a real bed, a warm shower, and a solid meal at the end of the day. It is France, after all, and I love to eat well."
   ],
   [
     "/self-guided/subtitle",
@@ -149,7 +149,7 @@
   ],
   [
     "/contact/email_cta",
-    "Send us an email"
+    "Send us an email!"
   ],
   [
     "/gallery/heading",
@@ -177,7 +177,7 @@
   ],
   [
     "/resources/helpful_stuff_body",
-    "Planning a successful self-supported bike tour in France requires good structure. Here are some of the templates and examples of how I do it. They're free. Modify as you see fit. I'd love to see what improvements worked well for you."
+    "Planning a successful self-supported bike tour in France requires good structure. Here are some of the templates and examples of how I do it. They're free. Modify as you see fit. I'd love to see what improvements worked well for you!"
   ],
   [
     "/resources/helpful_sites_body",
@@ -185,19 +185,19 @@
   ],
   [
     "/resources/helpful_stuff_library_text",
-    "Templates, audio guides, and trusted sites now live in the BikeTourFrance.net resource library."
+    "Templates, audio guides, and trusted sites now live in the BikeTourFrance resource library."
   ],
   [
     "/resources/helpful_stuff_library_cta",
-    "Open the resource library"
+    "Open resource library"
   ],
   [
     "/resources/helpful_sites_library_text",
-    "Templates, audio guides, and trusted sites now live in the BikeTourFrance.net resource library."
+    "Templates, audio guides, and trusted sites now live in the BikeTourFrance resource library."
   ],
   [
     "/resources/helpful_sites_library_cta",
-    "Open the resource library"
+    "Open resource library"
   ],
   [
     "/404/meta_title",
@@ -226,5 +226,33 @@
   [
     "/404/footer_note",
     "Staging site. Not indexed."
+  ],
+  [
+    "/footer/copyright",
+    "© 2026 BikeTourFrance.net"
+  ],
+  [
+    "/footer/small_commercial_bottom",
+    "Small-group, self-supported bicycle tours in France, led by John. Eat. Sleep. Roll. Repeat."
+  ],
+  [
+    "/footer/nav_explore_heading",
+    "Explore"
+  ],
+  [
+    "/footer/nav_legal_heading",
+    "Legal"
+  ],
+  [
+    "/buttons/read_more_about_john",
+    "Read more about John"
+  ],
+  [
+    "/buttons/more_tour_photos",
+    "More tour photos"
+  ],
+  [
+    "/contact/contact_email",
+    "contact@biketourfrance.net"
   ]
 ]

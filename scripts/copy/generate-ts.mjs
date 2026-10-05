@@ -1,5 +1,9 @@
 // Step 3 of the production check: generate src/data/approved-copy.ts from the validated artifact.
-// This ensures the build always uses the latest approved copy from the Google Sheet.
+//
+// The Google Sheet is the only source of approved copy. This script translates the Sheet's
+// field naming (/section/field_name, snake_case) into the shape the Astro components consume
+// (nested camelCase). It contains NO copy text of its own: if the Sheet is missing a value the
+// code needs, the build fails and names the missing rows.
 
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -15,121 +19,134 @@ if (!existsSync(artifactPath)) {
 const artifact = JSON.parse(readFileSync(artifactPath, 'utf8'));
 const { fields, sheetTitle, tab } = artifact;
 
-// Convert flat field names (/section/field) to nested structure
-const nested = {};
-for (const [path, value] of Object.entries(fields)) {
-  const parts = path.split('/').filter(Boolean);
-  let current = nested;
-  for (let i = 0; i < parts.length - 1; i++) {
-    if (!current[parts[i]]) current[parts[i]] = {};
-    current = current[parts[i]];
+// Sheet field -> code property. Every value the components read must appear here.
+const SCALARS = [
+  ['metaDescription', '/meta_description'],
+  ['footerPolicies', '/footer/policies'],
+  ['copyright', '/footer/copyright'],
+  ['smallCommercialBottom', '/footer/small_commercial_bottom'],
+  ['footerNav.exploreHeading', '/footer/nav_explore_heading'],
+  ['footerNav.legalHeading', '/footer/nav_legal_heading'],
+  ['hero.heading', '/hero/heading'],
+  ['hero.body1', '/hero/body_1'],
+  ['hero.body2', '/hero/body_2'],
+  ['hero.mailingListCta', '/hero/mailing_list_cta'],
+  ['hero.waitlistCta', '/hero/waitlist_cta'],
+  ['readyToRide.heading', '/ready-to-ride/heading'],
+  ['readyToRide.summary1', '/ready-to-ride/summary_1'],
+  ['readyToRide.summary2', '/ready-to-ride/summary_2'],
+  ['readyToRide.summary3', '/ready-to-ride/summary_3'],
+  ['readyToRide.summary4', '/ready-to-ride/summary_4'],
+  ['readyToRide.rideFacts', '/ready-to-ride/ride_facts'],
+  ['readyToRide.includedHeading', '/ready-to-ride/included_heading'],
+  ['readyToRide.cdmHeading', '/ready-to-ride/cdm_heading'],
+  ['readyToRide.cdmCta', '/ready-to-ride/cdm_cta'],
+  ['about.heading', '/about/heading'],
+  ['about.subheading', '/about/subheading'],
+  ['about.body1', '/about/body_1'],
+  ['about.body2', '/about/body_2'],
+  ['about.body3', '/about/body_3'],
+  ['about.body4', '/about/body_4'],
+  ['about.body5', '/about/body_5'],
+  ['about.body6', '/about/body_6'],
+  ['about.body7', '/about/body_7'],
+  ['gallery.heading', '/gallery/heading'],
+  ['buttons.readMoreAboutJohn', '/buttons/read_more_about_john'],
+  ['buttons.moreTourPhotos', '/buttons/more_tour_photos'],
+  ['contact.emailCta', '/contact/email_cta'],
+  ['contact.contactEmail', '/contact/contact_email'],
+  ['resources.metaDescription', '/resources/meta_description'],
+  ['resources.backLink', '/resources/back_link'],
+  ['resources.helpfulStuffHeading', '/resources/helpful_stuff_heading'],
+  ['resources.helpfulSitesHeading', '/resources/helpful_sites_heading'],
+  ['resources.helpfulStuffBody', '/resources/helpful_stuff_body'],
+  ['resources.helpfulSitesBody', '/resources/helpful_sites_body'],
+  ['resources.libraryText', '/resources/helpful_stuff_library_text'],
+  ['resources.libraryCta', '/resources/helpful_stuff_library_cta'],
+  ['notFound.heading', '/404/heading'],
+  ['notFound.body', '/404/body'],
+  ['notFound.homeCta', '/404/home_cta'],
+  ['notFound.resourcesCta', '/404/resources_cta'],
+  ['notFound.footerNote', '/404/footer_note'],
+];
+
+// Numbered Sheet rows that become an array, e.g. /ready-to-ride/included_1..n
+const LISTS = [['readyToRide.included', '/ready-to-ride/included_']];
+
+const copy = {};
+const missing = [];
+
+function setPath(target, path, value) {
+  const parts = path.split('.');
+  let node = target;
+  for (let i = 0; i < parts.length - 1; i += 1) {
+    if (!node[parts[i]]) node[parts[i]] = {};
+    node = node[parts[i]];
   }
-  current[parts[parts.length - 1]] = value;
+  node[parts[parts.length - 1]] = value;
 }
 
-// Fallback values for sections not yet in the sheet. These ensure the build doesn't fail
-// while the sheet is being completed. Once a section is added to the sheet, the sheet value takes precedence.
-const fallback = {
-  notFound: {
-    heading: 'Page not found',
-    body: 'We could not find that page. It may have moved, or the link may be mistyped.',
-    homeCta: 'Back to the home page',
-    resourcesCta: 'Resources',
-    footerNote: 'Staging site. Not indexed.',
-  },
-  buttons: {
-    readMoreAboutJohn: 'Read more about John',
-    moreTourPhotos: 'More tour photos',
-  },
-  footerNav: {
-    exploreHeading: 'Explore',
-    legalHeading: 'Legal',
-  },
-  footerPolicies: 'Privacy Policy: We collect email and calendar data for webinar registration and scheduling. Data is stored securely and never shared with third parties. Terms of Service: By using our site, you agree to follow all applicable laws and accept our liability limits. BikeTourFrance.net provides advisory services without warranties; users are responsible for their own tour planning and execution. Cookie Policy: We use cookies to track site usage and improve your experience. By continuing to use this site, you consent to cookie usage as required by GDPR and CCPA. Disclaimer: All content is advisory only. We are not liable for injuries, equipment failure, or planning errors resulting from our guidance.',
-};
-
-// Merge sheet data with fallback, with sheet taking precedence
-const merged = JSON.parse(JSON.stringify(fallback));
-const deepMerge = (target, source) => {
-  for (const [key, value] of Object.entries(source)) {
-    if (value !== null && typeof value === 'object' && !Array.isArray(value)) {
-      if (!target[key]) target[key] = {};
-      deepMerge(target[key], value);
-    } else {
-      target[key] = value;
-    }
+for (const [codePath, sheetPath] of SCALARS) {
+  const value = fields[sheetPath];
+  if (typeof value !== 'string' || value.trim() === '') {
+    missing.push({ sheetPath, codePath });
+    continue;
   }
-};
-deepMerge(merged, nested);
-
-// Map sheet structure to expected code structure
-// Sheet uses snake_case nested under "404", code expects "notFound" with camelCase
-// Always ensure notFound is set from either sheet or fallback
-const has404 = nested && nested['404'] && typeof nested['404'] === 'object';
-merged.notFound = has404 ? {
-  heading: nested['404'].heading ?? fallback.notFound.heading,
-  body: nested['404'].body ?? fallback.notFound.body,
-  homeCta: nested['404'].home_cta ?? fallback.notFound.homeCta,
-  resourcesCta: nested['404'].resources_cta ?? fallback.notFound.resourcesCta,
-  footerNote: nested['404'].footer_note ?? fallback.notFound.footerNote,
-} : fallback.notFound;
-
-// Sheet uses "footer.policies", code expects top-level "footerPolicies"
-// Always ensure footerPolicies is set
-merged.footerPolicies = nested?.footer?.policies ?? fallback.footerPolicies ?? merged.footerPolicies;
-
-// Ensure merged always has required top-level properties
-// These are checked by the 404 component and must exist
-const final = {
-  ...merged,
-  notFound: merged.notFound || fallback.notFound,
-  footerPolicies: merged.footerPolicies || fallback.footerPolicies,
-  buttons: merged.buttons || fallback.buttons,
-  footerNav: merged.footerNav || fallback.footerNav,
-};
-
-// Verify all required properties exist before serializing
-if (!final.notFound || typeof final.notFound !== 'object') {
-  throw new Error('notFound property is required and must be an object');
+  setPath(copy, codePath, value);
 }
 
-// Generate TypeScript code by manually escaping JSON values
-// This avoids any issues with JSON.stringify embedding
-const escapeString = (s) => JSON.stringify(s);
-
-const buildObject = (obj, indent = '  ') => {
-  const lines = ['{'];
-  const entries = Object.entries(obj);
-  for (let i = 0; i < entries.length; i++) {
-    const [key, value] = entries[i];
-    let serialized;
-    if (value === null) {
-      serialized = 'null';
-    } else if (typeof value === 'string') {
-      serialized = escapeString(value);
-    } else if (typeof value === 'object' && !Array.isArray(value)) {
-      serialized = buildObject(value, indent + '  ');
-    } else if (typeof value === 'boolean') {
-      serialized = value ? 'true' : 'false';
-    } else if (typeof value === 'number') {
-      serialized = String(value);
-    } else {
-      serialized = escapeString(String(value));
-    }
-    const isLast = i === entries.length - 1;
-    lines.push(`${indent}${escapeString(key)}: ${serialized}${isLast ? '' : ','}`);
+for (const [codePath, prefix] of LISTS) {
+  const items = [];
+  for (let i = 1; ; i += 1) {
+    const value = fields[`${prefix}${i}`];
+    if (typeof value !== 'string' || value.trim() === '') break;
+    items.push(value);
   }
-  lines.push(indent.slice(0, -2) + '}');
-  return lines.join('\n');
-};
+  if (items.length === 0) {
+    missing.push({ sheetPath: `${prefix}1`, codePath });
+    continue;
+  }
+  setPath(copy, codePath, items);
+}
 
-const copyStr = buildObject(final);
+if (missing.length > 0) {
+  const rows = missing.map((m) => `  - ${m.sheetPath}   (code reads COPY.${m.codePath})`).join('\n');
+  fail(
+    `copy:generate-ts FAILED. The Sheet is missing ${missing.length} field(s) that the site renders.\n` +
+      `Add these rows to the approved-copy Sheet (mark unapproved cells YELLOW), then re-run:\n${rows}`
+  );
+}
 
-const header = `// Page copy taken from the approved-copy Google Sheet "${sheetTitle}" (tab "${tab}",
-// read from Sheet during build). The Sheet is the source of truth for this wording.
-// Fallback defaults are merged for sections not yet in the sheet.
+// Derived: the CDM heading's first line is the title; the remaining lines render as separate lines.
+copy.readyToRide.cdmLines = copy.readyToRide.cdmHeading
+  .split('\n')
+  .slice(1)
+  .map((line) => line.trim())
+  .filter(Boolean);
 
-export const COPY = ${copyStr} as const;
+function serialize(value, indent) {
+  const pad = ' '.repeat(indent);
+  const padInner = ' '.repeat(indent + 2);
+  if (Array.isArray(value)) {
+    if (value.length === 0) return '[]';
+    return `[\n${value.map((v) => `${padInner}${serialize(v, indent + 2)}`).join(',\n')}\n${pad}]`;
+  }
+  if (value !== null && typeof value === 'object') {
+    const entries = Object.entries(value);
+    if (entries.length === 0) return '{}';
+    const body = entries
+      .map(([key, v]) => `${padInner}${key}: ${serialize(v, indent + 2)}`)
+      .join(',\n');
+    return `{\n${body}\n${pad}}`;
+  }
+  return JSON.stringify(value);
+}
+
+const source = `// GENERATED FILE - DO NOT EDIT BY HAND.
+// Written by scripts/copy/generate-ts.mjs from the approved-copy Google Sheet
+// "${sheetTitle}" (tab "${tab}"), read during the build. The Sheet is the source of truth.
+
+export const COPY = ${serialize(copy, 0)} as const;
 
 export function footerPolicyParts(): { label: string; text: string }[] {
   return COPY.footerPolicies
@@ -141,5 +158,7 @@ export function footerPolicyParts(): { label: string; text: string }[] {
 }
 `;
 
-writeFileSync(outputPath, header);
-console.log(`copy:generate-ts  OK: generated ${outputPath}`);
+writeFileSync(outputPath, source);
+console.log(
+  `copy:generate-ts  OK: ${SCALARS.length} fields + ${LISTS.length} list(s) -> ${outputPath}`
+);

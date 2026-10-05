@@ -340,5 +340,47 @@
     "route": "/404.html",
     "required": true,
     "codeLocation": "src/pages/404.astro"
+  },
+  {
+    "field": "/footer/copyright",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/components/Footer.astro"
+  },
+  {
+    "field": "/footer/small_commercial_bottom",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/components/Footer.astro"
+  },
+  {
+    "field": "/footer/nav_explore_heading",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/components/Footer.astro"
+  },
+  {
+    "field": "/footer/nav_legal_heading",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/components/Footer.astro"
+  },
+  {
+    "field": "/buttons/read_more_about_john",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "/buttons/more_tour_photos",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "/contact/contact_email",
+    "route": "/contact/",
+    "required": true,
+    "codeLocation": "src/components/ContactCta.astro"
   }
 ]

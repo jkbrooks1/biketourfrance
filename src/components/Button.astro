@@ -1,7 +1,8 @@
 ---
 // The one shared button/link-button. Every call to action on the site uses it.
 // Variants follow style guide v4.4: primary (green fill), secondary (beige fill, green border), tertiary (underlined text).
-// A label is at most 24 characters (guide text rules); the build fails if a label is longer, so a long label cannot ship.
+// A label is at most 32 characters; the build fails if a label is longer, so a long label cannot ship.
+// Owner decision 2026-10-05: raised from the guide's 24 so the approved 2027 waitlist CTA fits. Style Guide to be updated.
 interface Props {
   href: string;
   variant?: 'primary' | 'secondary' | 'tertiary';
@@ -16,8 +17,8 @@ const label = (await Astro.slots.render('default'))
   .replace(/\s+/g, ' ')
   .trim();
 if (label.length === 0) throw new Error(`Button to ${href} has no label.`);
-if (label.length > 24)
-  throw new Error(`Button label "${label}" is ${label.length} characters; the limit is 24.`);
+if (label.length > 32)
+  throw new Error(`Button label "${label}" is ${label.length} characters; the limit is 32.`);
 const external = /^https?:\/\//.test(href);
 ---
 

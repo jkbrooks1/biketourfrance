@@ -8,7 +8,7 @@
     "build:site": "python3 scripts/build_site.py",
     "dev": "astro dev",
     "canonical:check": "node scripts/assert-canonical-root.mjs",
-    "build": "npm run canonical:check && BTF_COPY_FIXTURE=1 npm run copy:sync && npm run copy:validate && astro build && npm run copy:verify-rendered && npm run verify",
+    "build": "npm run canonical:check && BTF_COPY_FIXTURE=1 npm run copy:sync && npm run copy:validate && npm run copy:generate-ts && astro build && npm run copy:verify-rendered && npm run verify",
     "preview": "astro preview",
     "check": "astro check",
     "format": "prettier --write .",
