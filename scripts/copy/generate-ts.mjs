@@ -27,11 +27,59 @@ for (const [path, value] of Object.entries(fields)) {
   current[parts[parts.length - 1]] = value;
 }
 
+// Fallback values for sections not yet in the sheet. These ensure the build doesn't fail
+// while the sheet is being completed. Once a section is added to the sheet, the sheet value takes precedence.
+const fallback = {
+  notFound: {
+    heading: 'Page not found',
+    body: 'We could not find that page. It may have moved, or the link may be mistyped.',
+    homeCta: 'Back to the home page',
+    resourcesCta: 'Resources',
+    footerNote: 'Staging site. Not indexed.',
+  },
+  buttons: {
+    readMoreAboutJohn: 'Read more about John',
+    moreTourPhotos: 'More tour photos',
+  },
+  footerNav: {
+    exploreHeading: 'Explore',
+    legalHeading: 'Legal',
+  },
+};
+
+// Merge sheet data with fallback, with sheet taking precedence
+const merged = JSON.parse(JSON.stringify(fallback));
+const deepMerge = (target, source) => {
+  for (const [key, value] of Object.entries(source)) {
+    if (value !== null && typeof value === 'object' && !Array.isArray(value)) {
+      if (!target[key]) target[key] = {};
+      deepMerge(target[key], value);
+    } else {
+      target[key] = value;
+    }
+  }
+};
+deepMerge(merged, nested);
+
+// Map sheet structure to expected structure where needed
+if (nested.footer?.policies) {
+  merged.footerPolicies = nested.footer.policies;
+}
+if (nested['404']?.home_cta) {
+  merged.notFound = merged.notFound || {};
+  merged.notFound.homeCta = nested['404'].home_cta;
+  merged.notFound.resourcesCta = nested['404'].resources_cta;
+  merged.notFound.heading = nested['404'].heading;
+  merged.notFound.body = nested['404'].body;
+  merged.notFound.footerNote = nested['404'].footer_note;
+}
+
 // Generate TypeScript code with proper formatting
 const header = `// Page copy taken from the approved-copy Google Sheet "${sheetTitle}" (tab "${tab}",
 // read from Sheet during build). The Sheet is the source of truth for this wording.
+// Fallback defaults are merged for sections not yet in the sheet.
 
-export const COPY = ${JSON.stringify(nested, null, 2)} as const;
+export const COPY = ${JSON.stringify(merged, null, 2)} as const;
 
 export function footerPolicyParts(): { label: string; text: string }[] {
   return COPY.footerPolicies
