@@ -1415,3 +1415,72 @@ verify-dist: 12 pages OK
 - All 11 hidden source tabs retain original values. 214 adopted fields approved visually; 116 yellow
   and one pale-yellow B cell remain for separate review. Unrelated hourly-sync/timestamp work is
   preserved and excluded; restore after closeout. No Pages/DNS/domain-routing changes were made.
+
+
+## 2026-10-05T21:00:48Z — Tours photo aspect ratio and shared cropping fixed
+
+- Owner request: fix the Canal des Deux Mers header photo on /tours/, verify npm run build,
+  and update both build logs. Work remains local.
+- Inspection: rendered image already used object-fit: cover, but its crop was a tall 3:4 frame.
+  Updated src/pages/tours/index.astro to use 4:3. Shared src/components/Photo.astro now puts the
+  selected aspect ratio on the picture container; src/styles/global.css makes its actual img fill
+  that box with width/height 100% and object-fit: cover, preserving source proportions. Existing
+  16:9, 1:1 and 3:4 photo shapes, responsive formats/sizes and alt text remain supported.
+- Validation: npm run build passed (12 pages; 354 approved-copy fields verified; verify-dist passed).
+  Chromium checks passed on Tours, CDM, practical-info, About and home at 375, 768 and 1440px:
+  15 page/viewport combinations, correct crop ratios, matching image/container dimensions,
+  object-fit: cover and no horizontal overflow. Desktop/mobile Tours screenshots visually checked.
+- Evidence: docs/proof/2026-10-05_tours_image_crop/build.log, browser-verification.json,
+  tours-photo-375.png and tours-photo-1440.png. Fixture build changed only generated copy provenance
+  comment; restored the original generated-source bytes after confirming all copy values unchanged.
+- Preserved pre-existing pending workflow/timestamp work. No commit, push or deployment performed.
+  This is a routine presentation change; no system configuration dependency or register entry needed.
+
+
+## 2026-10-05T21:25:04Z — Build/deploy runbook review against copy consolidation
+
+- Requested DOCS/BTF Build and Deploy Runbook v2.0.md is absent from the active root and tracked
+  main. Asked owner to clarify its location; reviewed docs/BTF_MAIN_SITE_BUILD_AND_DEPLOY_DOCUMENTATION.md
+  as the available comparison document, without editing its contents or pending work.
+- Needed corrections: 351 to 354 fields; record 11 hidden/preserved source tabs and sole named authority;
+  document lib.mjs fail-closed named-tab and conflicting override behavior; add owner 42-character
+  decoded CTA limit in Button/verify-dist; update copy:test to four named-tab tests plus ten checks;
+  use full npm run predeploy:approved-copy before manual publication. Remaining approval colors
+  (116 yellow, one pale-yellow at consolidation readback) are visual and not enforced by sync.
+- Verified remote main 7e5f80d and remote workflow list through read-only GitHub API. Hourly sync
+  is a local untracked proposal, absent from remote main; available documentation describes it as
+  active prematurely. temp-btf production branch main and npx astro build/dist remain documented
+  setup; Pages uses committed generated copy. Both temp-btf and btf-production checks succeeded
+  for current main. Main has no branch protection (API 404 Branch not protected).
+- Correction to blanket green-CI claim: latest Approved copy check run 37370178486 reports failure
+  with job cancelled/no steps because GitHub could not acquire a hosted runner. This is not evidence
+  of a copy-validation failure or a CI pass. Prior local live-Sheet predeploy proof remains valid.
+- No build, Sheet edit, source edit, workflow publication, commit, push or deployment performed
+  in this review. Logged current CI/automation dependencies in the canonical system register.
+
+
+## 2026-10-05T21:55:13Z — Runbook v2.2 approved-copy publication verified
+
+- Owner explicitly requested canonical-root checks, live-Sheet predeploy, prohibited-PII scans,
+  staging the four named copy/fixture/manifest/log paths, commit and push to main.
+- npm run check: 0 errors, 0 warnings, 2 existing hints. npm run canonical:check and npm run verify
+  passed; copy:test passed all four named-tab tests and ten existing checks.
+- Live predeploy read Approved Site Copy by name and passed for 354 fields across 12 pages.
+  Adopted 13 current Sheet field changes into generated TypeScript and mirrored the verified raw
+  two-column snapshot into the fixture. Manifest keys/count unchanged. Final fixture equals the
+  live snapshot exactly; generated output matches independently verified publication sources.
+- Verified an isolated HEAD archive plus only intended copy/fixture/manifest replacements using
+  the full live-Sheet predeploy pipeline. Both working-tree and intended-commit builds passed
+  rendered-copy coverage, dist checks, deployability and both prohibited PII scans (zero matches).
+  This isolates pending Tours image and hourly-sync/timestamp changes from publication proof.
+- Evidence retained locally: /private/tmp/btf-runbook-v22-publication/ (check, canonical-check,
+  verify, copy-test and final copy-test logs; live predeploy logs; isolated commit-tree build).
+- Only src/data/approved-copy.ts, copy/fixture/fixture-rows.json, copy/field-manifest.json and
+  docs/BUILD_LOG.md are authorized staging paths. Manifest unchanged. Other pending files and
+  untracked runbook/workflow/image proof preserved. UTC timestamp recorded in commit body.
+- Commit/push pending at this entry; append publication result to external log/register afterward.
+  Main push reaches existing temp-btf and btf-production integrations. No Sheet writes, Pages
+  settings, DNS, live-domain cutover, Framer, V1 or connector-schema changes.
+- Rules cadence reviewed: no new standing instruction requires a rules update; the active-root
+  AGENTS.md and owner's explicit BTF Sheet/publication scope apply. Cross-project canonical
+  successor rules were read; no successor project file changed.
