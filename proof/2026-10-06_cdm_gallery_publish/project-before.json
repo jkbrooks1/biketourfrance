@@ -1,0 +1,139 @@
+{
+  "readAt": "2026-10-06T17:06:48.292669+00:00",
+  "name": "btf-production",
+  "production_branch": "main",
+  "source": {
+    "type": "github",
+    "config": {
+      "owner": "jkbrooks1",
+      "repo_name": "biketourfrance",
+      "production_branch": "main",
+      "preview_deployment_setting": "all",
+      "production_deployments_enabled": true
+    }
+  },
+  "build_config": {
+    "build_command": "npx astro build",
+    "destination_dir": "dist",
+    "root_dir": "."
+  },
+  "domains": [
+    "btf-production.pages.dev",
+    "biketourfrance.net",
+    "www.biketourfrance.net"
+  ],
+  "canonical_deployment": {
+    "id": "64240a36-ecc3-4d0f-a0ec-d4de34ad78c1",
+    "url": "https://64240a36.btf-production.pages.dev",
+    "aliases": [
+      "https://biketourfrance.net",
+      "https://www.biketourfrance.net"
+    ],
+    "environment": "production",
+    "created_on": "2026-10-06T14:10:23.334919Z",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": "2026-10-06T14:15:45.796355Z",
+      "ended_on": "2026-10-06T14:15:56.579767Z",
+      "status": "success"
+    },
+    "deployment_trigger": {
+      "type": "github:push",
+      "metadata": {
+        "branch": "main",
+        "commit_hash": "1785d5f45dcd71bb84fb1f4c4c635e8485a3e96d",
+        "commit_message": "Make CDM photos visible from homepage and render both galleries immediately",
+        "commit_dirty": false
+      }
+    },
+    "stages": [
+      {
+        "name": "queued",
+        "started_on": "2026-10-06T14:10:23.639624Z",
+        "ended_on": "2026-10-06T14:10:23.645199Z",
+        "status": "success"
+      },
+      {
+        "name": "initialize",
+        "started_on": "2026-10-06T14:10:23.645199Z",
+        "ended_on": "2026-10-06T14:10:28.339318Z",
+        "status": "success"
+      },
+      {
+        "name": "clone_repo",
+        "started_on": "2026-10-06T14:10:28.339318Z",
+        "ended_on": "2026-10-06T14:10:44.145206Z",
+        "status": "success"
+      },
+      {
+        "name": "build",
+        "started_on": "2026-10-06T14:10:44.145206Z",
+        "ended_on": "2026-10-06T14:15:45.796355Z",
+        "status": "success"
+      },
+      {
+        "name": "deploy",
+        "started_on": "2026-10-06T14:15:45.796355Z",
+        "ended_on": "2026-10-06T14:15:56.579767Z",
+        "status": "success"
+      }
+    ]
+  },
+  "latest_deployment": {
+    "id": "64240a36-ecc3-4d0f-a0ec-d4de34ad78c1",
+    "url": "https://64240a36.btf-production.pages.dev",
+    "aliases": [
+      "https://biketourfrance.net",
+      "https://www.biketourfrance.net"
+    ],
+    "environment": "production",
+    "created_on": "2026-10-06T14:10:23.334919Z",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": "2026-10-06T14:15:45.796355Z",
+      "ended_on": "2026-10-06T14:15:56.579767Z",
+      "status": "success"
+    },
+    "deployment_trigger": {
+      "type": "github:push",
+      "metadata": {
+        "branch": "main",
+        "commit_hash": "1785d5f45dcd71bb84fb1f4c4c635e8485a3e96d",
+        "commit_message": "Make CDM photos visible from homepage and render both galleries immediately",
+        "commit_dirty": false
+      }
+    },
+    "stages": [
+      {
+        "name": "queued",
+        "started_on": "2026-10-06T14:10:23.639624Z",
+        "ended_on": "2026-10-06T14:10:23.645199Z",
+        "status": "success"
+      },
+      {
+        "name": "initialize",
+        "started_on": "2026-10-06T14:10:23.645199Z",
+        "ended_on": "2026-10-06T14:10:28.339318Z",
+        "status": "success"
+      },
+      {
+        "name": "clone_repo",
+        "started_on": "2026-10-06T14:10:28.339318Z",
+        "ended_on": "2026-10-06T14:10:44.145206Z",
+        "status": "success"
+      },
+      {
+        "name": "build",
+        "started_on": "2026-10-06T14:10:44.145206Z",
+        "ended_on": "2026-10-06T14:15:45.796355Z",
+        "status": "success"
+      },
+      {
+        "name": "deploy",
+        "started_on": "2026-10-06T14:15:45.796355Z",
+        "ended_on": "2026-10-06T14:15:56.579767Z",
+        "status": "success"
+      }
+    ]
+  }
+}

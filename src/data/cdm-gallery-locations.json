@@ -1,0 +1,867 @@
+{
+  "schemaVersion": 1,
+  "method": "Group both completed tours by GPS municipality, west to east using mean anchor longitude; ten owner-authorized approximate locations retain their evidence/confidence. Date/counter order within each group. No estimated coordinates are invented.",
+  "groups": [
+    {
+      "id": "creon",
+      "name": "Créon",
+      "order": 1,
+      "longitude": -0.3490291666666666,
+      "photoCount": 3
+    },
+    {
+      "id": "espiet",
+      "name": "Espiet",
+      "order": 2,
+      "longitude": -0.2669638888888889,
+      "photoCount": 1
+    },
+    {
+      "id": "saint-brice",
+      "name": "Saint-Brice",
+      "order": 3,
+      "longitude": -0.14597222222222223,
+      "photoCount": 1
+    },
+    {
+      "id": "la-reole",
+      "name": "La Réole",
+      "order": 4,
+      "longitude": -0.03501666666666667,
+      "photoCount": 3
+    },
+    {
+      "id": "montpouillan",
+      "name": "Montpouillan",
+      "order": 5,
+      "longitude": 0.12356527777777779,
+      "photoCount": 2
+    },
+    {
+      "id": "bruch",
+      "name": "Bruch",
+      "order": 6,
+      "longitude": 0.42899444444444446,
+      "photoCount": 1
+    },
+    {
+      "id": "moissac",
+      "name": "Moissac",
+      "order": 7,
+      "longitude": 1.0910494444444443,
+      "photoCount": 11
+    },
+    {
+      "id": "saint-porquier",
+      "name": "Saint-Porquier",
+      "order": 8,
+      "longitude": 1.1760333333333335,
+      "photoCount": 1
+    },
+    {
+      "id": "montech",
+      "name": "Montech",
+      "order": 9,
+      "longitude": 1.2289277777777778,
+      "photoCount": 2
+    },
+    {
+      "id": "toulouse",
+      "name": "Toulouse",
+      "order": 10,
+      "longitude": 1.4515680555555557,
+      "photoCount": 4
+    },
+    {
+      "id": "ayguesvives",
+      "name": "Ayguesvives",
+      "order": 11,
+      "longitude": 1.6125611111111111,
+      "photoCount": 1
+    },
+    {
+      "id": "vieillevigne",
+      "name": "Vieillevigne",
+      "order": 12,
+      "longitude": 1.6671027777777776,
+      "photoCount": 2
+    },
+    {
+      "id": "castelnaudary",
+      "name": "Castelnaudary",
+      "order": 13,
+      "longitude": 1.9650458333333334,
+      "photoCount": 2
+    },
+    {
+      "id": "pexiora",
+      "name": "Pexiora",
+      "order": 14,
+      "longitude": 2.0657416666666664,
+      "photoCount": 1
+    },
+    {
+      "id": "montreal",
+      "name": "Montréal",
+      "order": 15,
+      "longitude": 2.1801472222222222,
+      "photoCount": 1
+    },
+    {
+      "id": "carcassonne",
+      "name": "Carcassonne",
+      "order": 16,
+      "longitude": 2.364112037037037,
+      "photoCount": 3
+    },
+    {
+      "id": "la-redorte",
+      "name": "La Redorte",
+      "order": 17,
+      "longitude": 2.6553027777777776,
+      "photoCount": 1
+    },
+    {
+      "id": "paraza",
+      "name": "Paraza",
+      "order": 18,
+      "longitude": 2.839591666666667,
+      "photoCount": 2
+    },
+    {
+      "id": "salleles-d-aude",
+      "name": "Sallèles-d'Aude",
+      "order": 19,
+      "longitude": 2.919344444444444,
+      "photoCount": 1
+    },
+    {
+      "id": "capestang",
+      "name": "Capestang",
+      "order": 20,
+      "longitude": 3.0088305555555555,
+      "photoCount": 1
+    },
+    {
+      "id": "beziers",
+      "name": "Béziers",
+      "order": 21,
+      "longitude": 3.2069222222222225,
+      "photoCount": 3
+    },
+    {
+      "id": "sete",
+      "name": "Sète",
+      "order": 22,
+      "longitude": 3.694919444444445,
+      "photoCount": 2
+    }
+  ],
+  "photos": [
+    {
+      "id": "cdm1-7f68703ad5c23d61",
+      "filename": "IMG_4406.JPG",
+      "groupId": "espiet",
+      "locationName": "Espiet",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 44.78322222222222,
+        "longitude": -0.2669638888888889
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=-0.2669638888888889&lat=44.78322222222222&index=address&limit=1"
+    },
+    {
+      "id": "cdm1-a4d1be44bd28d570",
+      "filename": "IMG_4411.JPG",
+      "groupId": "saint-brice",
+      "locationName": "Saint-Brice",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 44.69246666666666,
+        "longitude": -0.14597222222222223
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=-0.14597222222222223&lat=44.69246666666666&index=address&limit=1"
+    },
+    {
+      "id": "cdm1-a01802f64cdb9965",
+      "filename": "IMG_4416.JPG",
+      "groupId": "la-reole",
+      "locationName": "La Réole",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 44.579686111111116,
+        "longitude": -0.03501666666666667
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=-0.03501666666666667&lat=44.579686111111116&index=address&limit=1"
+    },
+    {
+      "id": "cdm1-d5d527289de1d74a",
+      "filename": "IMG_4421.JPG",
+      "groupId": "montpouillan",
+      "locationName": "Montpouillan",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 44.46678888888889,
+        "longitude": 0.12361944444444445
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=0.12361944444444445&lat=44.46678888888889&index=address&limit=1"
+    },
+    {
+      "id": "cdm1-8f2c9ea02664e9f0",
+      "filename": "IMG_4423.JPG",
+      "groupId": "montpouillan",
+      "locationName": "Montpouillan",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 44.46685277777778,
+        "longitude": 0.12351111111111111
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=0.12351111111111111&lat=44.46685277777778&index=address&limit=1"
+    },
+    {
+      "id": "cdm1-1990d55c86fa7035",
+      "filename": "IMG_4428.JPG",
+      "groupId": "bruch",
+      "locationName": "Bruch",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 44.21784166666667,
+        "longitude": 0.42899444444444446
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=0.42899444444444446&lat=44.21784166666667&index=address&limit=1"
+    },
+    {
+      "id": "cdm1-65549a14c4c04b9e",
+      "filename": "IMG_6115.jpeg",
+      "groupId": "la-reole",
+      "locationName": "La Réole",
+      "basis": "Estimated",
+      "estimated": true,
+      "confidence": "High",
+      "evidence": "Suspension-bridge scene matches the GPS-located bridge in IMG_4416.JPG; nearby series date.",
+      "coordinates": null,
+      "sourceUrl": null
+    },
+    {
+      "id": "cdm1-df99ed89439a5013",
+      "filename": "IMG_6117.jpeg",
+      "groupId": "la-reole",
+      "locationName": "La Réole",
+      "basis": "Estimated",
+      "estimated": true,
+      "confidence": "Low",
+      "evidence": "Same early riding series as IMG_6115.jpeg and IMG_4416.JPG; church/fountain appearance. Approximate stop, not recovered GPS.",
+      "coordinates": null,
+      "sourceUrl": null
+    },
+    {
+      "id": "cdm1-88a120bab432488c",
+      "filename": "IMG_4459.JPG",
+      "groupId": "moissac",
+      "locationName": "Moissac",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 44.099450000000004,
+        "longitude": 1.0933111111111111
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=1.0933111111111111&lat=44.099450000000004&index=address&limit=1"
+    },
+    {
+      "id": "cdm1-3ce2d0eb9bd45c24",
+      "filename": "IMG_4462.JPG",
+      "groupId": "moissac",
+      "locationName": "Moissac",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 44.09216388888889,
+        "longitude": 1.1025277777777778
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=1.1025277777777778&lat=44.09216388888889&index=address&limit=1"
+    },
+    {
+      "id": "cdm1-367a2fa64cdb80f8",
+      "filename": "IMG_4463.JPG",
+      "groupId": "saint-porquier",
+      "locationName": "Saint-Porquier",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 44.01275,
+        "longitude": 1.1760333333333335
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=1.1760333333333335&lat=44.01275&index=address&limit=1"
+    },
+    {
+      "id": "cdm1-366244b380b9f863",
+      "filename": "IMG_4470.JPG",
+      "groupId": "montech",
+      "locationName": "Montech",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 43.96900277777778,
+        "longitude": 1.2289277777777778
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=1.2289277777777778&lat=43.96900277777778&index=address&limit=1"
+    },
+    {
+      "id": "cdm1-7734acb3db643db5",
+      "filename": "IMG_4471.JPG",
+      "groupId": "montech",
+      "locationName": "Montech",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 43.96899444444445,
+        "longitude": 1.2289277777777778
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=1.2289277777777778&lat=43.96899444444445&index=address&limit=1"
+    },
+    {
+      "id": "cdm1-939d5b94d4ee4664",
+      "filename": "IMG_6125.jpeg",
+      "groupId": "moissac",
+      "locationName": "Moissac",
+      "basis": "Estimated",
+      "estimated": true,
+      "confidence": "High",
+      "evidence": "Aqueduct riding scene matches IMG_4462.JPG and the Cacor route context; exact source GPS is absent.",
+      "coordinates": null,
+      "sourceUrl": null
+    },
+    {
+      "id": "cdm1-c6dfb4f9a289ce35",
+      "filename": "IMG_4484.JPG",
+      "groupId": "toulouse",
+      "locationName": "Toulouse",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 43.600566666666666,
+        "longitude": 1.4563527777777778
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=1.4563527777777778&lat=43.600566666666666&index=address&limit=1"
+    },
+    {
+      "id": "cdm1-8984f3682ed07c89",
+      "filename": "IMG_6143.jpeg",
+      "groupId": "moissac",
+      "locationName": "Moissac",
+      "basis": "Estimated",
+      "estimated": true,
+      "confidence": "High",
+      "evidence": "Circular openings and brick/stone aqueduct match Cacor architecture and IMG_6146.jpeg; comparison with the official Cacor page image.",
+      "coordinates": null,
+      "sourceUrl": "https://www.tourisme-tarnetgaronne.fr/moissac-terres-des-confluences/incontournables/le-pont-canal-du-cacor/"
+    },
+    {
+      "id": "cdm1-3e2f93340b82df4e",
+      "filename": "IMG_6146.jpeg",
+      "groupId": "moissac",
+      "locationName": "Moissac",
+      "basis": "Estimated",
+      "estimated": true,
+      "confidence": "High",
+      "evidence": "Brick/stone arches and circular openings match the official Cacor aqueduct image; source GPS is absent.",
+      "coordinates": null,
+      "sourceUrl": "https://www.tourisme-tarnetgaronne.fr/moissac-terres-des-confluences/incontournables/le-pont-canal-du-cacor/"
+    },
+    {
+      "id": "cdm1-28bda3c5ac7d2051",
+      "filename": "IMG_6155.jpeg",
+      "groupId": "moissac",
+      "locationName": "Moissac",
+      "basis": "Estimated",
+      "estimated": true,
+      "confidence": "Low",
+      "evidence": "Nearby bridge-riding series with IMG_6143.jpeg/IMG_6146.jpeg/IMG_6175.jpeg; rough area assignment, no source GPS.",
+      "coordinates": null,
+      "sourceUrl": null
+    },
+    {
+      "id": "cdm1-57ff5e48ef8d95a0",
+      "filename": "IMG_6158.jpeg",
+      "groupId": "moissac",
+      "locationName": "Moissac",
+      "basis": "Estimated",
+      "estimated": true,
+      "confidence": "Low",
+      "evidence": "Same under-bridge view as IMG_6155.jpeg; approximate area assignment, no source GPS.",
+      "coordinates": null,
+      "sourceUrl": null
+    },
+    {
+      "id": "cdm1-15a6b1ce00490898",
+      "filename": "IMG_6175.jpeg",
+      "groupId": "moissac",
+      "locationName": "Moissac",
+      "basis": "Estimated",
+      "estimated": true,
+      "confidence": "Medium",
+      "evidence": "Brick parapet and tree-lined canal match the surrounding aqueduct/bridge series; approximate Cacor/Moissac context.",
+      "coordinates": null,
+      "sourceUrl": null
+    },
+    {
+      "id": "cdm1-92a476a59d024ec7",
+      "filename": "IMG_4492.JPG",
+      "groupId": "toulouse",
+      "locationName": "Toulouse",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 43.584319444444446,
+        "longitude": 1.4614305555555556
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=1.4614305555555556&lat=43.584319444444446&index=address&limit=1"
+    },
+    {
+      "id": "cdm1-15733cee3f1e0b5a",
+      "filename": "IMG_4495.JPG",
+      "groupId": "ayguesvives",
+      "locationName": "Ayguesvives",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 43.43958333333333,
+        "longitude": 1.6125611111111111
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=1.6125611111111111&lat=43.43958333333333&index=address&limit=1"
+    },
+    {
+      "id": "cdm1-e9e6586e51dfe82a",
+      "filename": "IMG_4496.JPG",
+      "groupId": "vieillevigne",
+      "locationName": "Vieillevigne",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Retained EXIF GPS and containing municipality from French administrative-boundary API; not proof of a landmark or trip phase.",
+      "coordinates": {
+        "latitude": 43.40375833333333,
+        "longitude": 1.667086111111111
+      },
+      "sourceUrl": "https://geo.api.gouv.fr/communes?lat=43.40375833333333&lon=1.667086111111111&fields=nom%2Ccode&format=json"
+    },
+    {
+      "id": "cdm1-64137856b3da7e83",
+      "filename": "IMG_4497.JPG",
+      "groupId": "vieillevigne",
+      "locationName": "Vieillevigne",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Retained EXIF GPS and containing municipality from French administrative-boundary API; not proof of a landmark or trip phase.",
+      "coordinates": {
+        "latitude": 43.40374722222222,
+        "longitude": 1.6671194444444444
+      },
+      "sourceUrl": "https://geo.api.gouv.fr/communes?lat=43.40374722222222&lon=1.6671194444444444&fields=nom%2Ccode&format=json"
+    },
+    {
+      "id": "cdm1-a6c8e23da1df5477",
+      "filename": "IMG_4516.JPG",
+      "groupId": "castelnaudary",
+      "locationName": "Castelnaudary",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 43.31610277777777,
+        "longitude": 1.9499805555555556
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=1.9499805555555556&lat=43.31610277777777&index=address&limit=1"
+    },
+    {
+      "id": "cdm1-e7d4c77b88559971",
+      "filename": "IMG_4517.JPG",
+      "groupId": "castelnaudary",
+      "locationName": "Castelnaudary",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 43.29754722222222,
+        "longitude": 1.9801111111111112
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=1.9801111111111112&lat=43.29754722222222&index=address&limit=1"
+    },
+    {
+      "id": "cdm1-447621a90188ae9f",
+      "filename": "IMG_4518.JPG",
+      "groupId": "pexiora",
+      "locationName": "Pexiora",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Retained EXIF GPS and containing municipality from French administrative-boundary API; not proof of a landmark or trip phase.",
+      "coordinates": {
+        "latitude": 43.25803888888889,
+        "longitude": 2.0657416666666664
+      },
+      "sourceUrl": "https://geo.api.gouv.fr/communes?lat=43.25803888888889&lon=2.0657416666666664&fields=nom%2Ccode&format=json"
+    },
+    {
+      "id": "cdm1-07dbf791aa3f701d",
+      "filename": "IMG_4520.JPG",
+      "groupId": "montreal",
+      "locationName": "Montréal",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 43.23541388888889,
+        "longitude": 2.1801472222222222
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=2.1801472222222222&lat=43.23541388888889&index=address&limit=1"
+    },
+    {
+      "id": "cdm1-14c70267e3e8d32d",
+      "filename": "IMG_4528.JPG",
+      "groupId": "carcassonne",
+      "locationName": "Carcassonne",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 43.20956944444445,
+        "longitude": 2.3613055555555555
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=2.3613055555555555&lat=43.20956944444445&index=address&limit=1"
+    },
+    {
+      "id": "cdm1-46de05ddac2c6592",
+      "filename": "IMG_4529.JPG",
+      "groupId": "carcassonne",
+      "locationName": "Carcassonne",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 43.20749722222222,
+        "longitude": 2.3663055555555554
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=2.3663055555555554&lat=43.20749722222222&index=address&limit=1"
+    },
+    {
+      "id": "cdm1-fbe9c36d2b2693a7",
+      "filename": "IMG_4533.JPG",
+      "groupId": "carcassonne",
+      "locationName": "Carcassonne",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 43.20662777777778,
+        "longitude": 2.364725
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=2.364725&lat=43.20662777777778&index=address&limit=1"
+    },
+    {
+      "id": "cdm1-d3f76238429211af",
+      "filename": "IMG_4553.JPG",
+      "groupId": "la-redorte",
+      "locationName": "La Redorte",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 43.25091944444444,
+        "longitude": 2.6553027777777776
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=2.6553027777777776&lat=43.25091944444444&index=address&limit=1"
+    },
+    {
+      "id": "cdm1-c90a305ef39c58c4",
+      "filename": "IMG_4572.JPG",
+      "groupId": "paraza",
+      "locationName": "Paraza",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Retained EXIF GPS and containing municipality from French administrative-boundary API; not proof of a landmark or trip phase.",
+      "coordinates": {
+        "latitude": 43.25386944444445,
+        "longitude": 2.839213888888889
+      },
+      "sourceUrl": "https://geo.api.gouv.fr/communes?lat=43.25386944444445&lon=2.839213888888889&fields=nom%2Ccode&format=json"
+    },
+    {
+      "id": "cdm1-1b40eb892c1fc67b",
+      "filename": "IMG_4574.JPG",
+      "groupId": "paraza",
+      "locationName": "Paraza",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Retained EXIF GPS and containing municipality from French administrative-boundary API; not proof of a landmark or trip phase.",
+      "coordinates": {
+        "latitude": 43.25428333333333,
+        "longitude": 2.8399694444444448
+      },
+      "sourceUrl": "https://geo.api.gouv.fr/communes?lat=43.25428333333333&lon=2.8399694444444448&fields=nom%2Ccode&format=json"
+    },
+    {
+      "id": "cdm1-da279a6021ecb20f",
+      "filename": "IMG_4578.JPG",
+      "groupId": "salleles-d-aude",
+      "locationName": "Sallèles-d'Aude",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 43.281777777777776,
+        "longitude": 2.919344444444444
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=2.919344444444444&lat=43.281777777777776&index=address&limit=1"
+    },
+    {
+      "id": "cdm1-7c99450191c66dc6",
+      "filename": "IMG_4596.JPG",
+      "groupId": "beziers",
+      "locationName": "Béziers",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 43.331163888888895,
+        "longitude": 3.200963888888889
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=3.200963888888889&lat=43.331163888888895&index=address&limit=1"
+    },
+    {
+      "id": "cdm1-ffbca6de150fc7f1",
+      "filename": "IMG_4600.JPG",
+      "groupId": "beziers",
+      "locationName": "Béziers",
+      "basis": "Estimated",
+      "estimated": true,
+      "confidence": "Low",
+      "evidence": "Capture date 2026-09-07 and sequence between GPS-located IMG_4596.JPG in Béziers and IMG_4606.JPG in Sète; restaurant location not independently identified.",
+      "coordinates": null,
+      "sourceUrl": null
+    },
+    {
+      "id": "cdm1-7ed840d66e9ad03a",
+      "filename": "IMG_4606.JPG",
+      "groupId": "sete",
+      "locationName": "Sète",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 43.402344444444445,
+        "longitude": 3.694919444444445
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=3.694919444444445&lat=43.402344444444445&index=address&limit=1"
+    },
+    {
+      "id": "cdm1-561bafe5aff2e2c8",
+      "filename": "IMG_4607.JPG",
+      "groupId": "sete",
+      "locationName": "Sète",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 43.402344444444445,
+        "longitude": 3.694919444444445
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=3.694919444444445&lat=43.402344444444445&index=address&limit=1"
+    },
+    {
+      "id": "cdm2-72beaa14c115fb6f",
+      "filename": "IMG_4633.JPG",
+      "groupId": "creon",
+      "locationName": "Créon",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 44.776427777777776,
+        "longitude": -0.349025
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=-0.349025&lat=44.776427777777776&index=address&limit=1"
+    },
+    {
+      "id": "cdm2-197a9b403afefd6e",
+      "filename": "IMG_4634.JPG",
+      "groupId": "creon",
+      "locationName": "Créon",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 44.77643611111111,
+        "longitude": -0.3490333333333333
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=-0.3490333333333333&lat=44.77643611111111&index=address&limit=1"
+    },
+    {
+      "id": "cdm2-fd6ef587b12f46c4",
+      "filename": "9f4a9960-26b2-4d36-a8a3-4db68d666749_A4F2DBC7-C58D-460E-A289-3894F082CA8E.jpg",
+      "groupId": "creon",
+      "locationName": "Créon",
+      "basis": "Estimated",
+      "estimated": true,
+      "confidence": "Low",
+      "evidence": "Early CDM2 source series and existing estimated date near Créon bike-stop photos IMG_4633.JPG/IMG_4634.JPG; rough route-area assignment.",
+      "coordinates": null,
+      "sourceUrl": null
+    },
+    {
+      "id": "cdm2-0b2ea06efc925c01",
+      "filename": "IMG_4651.JPG",
+      "groupId": "moissac",
+      "locationName": "Moissac",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 44.10123888888889,
+        "longitude": 1.0874333333333333
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=1.0874333333333333&lat=44.10123888888889&index=address&limit=1"
+    },
+    {
+      "id": "cdm2-39394b8639cc567e",
+      "filename": "IMG_4652.JPG",
+      "groupId": "moissac",
+      "locationName": "Moissac",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 44.10123055555556,
+        "longitude": 1.087461111111111
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=1.087461111111111&lat=44.10123055555556&index=address&limit=1"
+    },
+    {
+      "id": "cdm2-a723a73dff55a956",
+      "filename": "IMG_4658.JPG",
+      "groupId": "moissac",
+      "locationName": "Moissac",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 44.10572777777778,
+        "longitude": 1.0845138888888888
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=1.0845138888888888&lat=44.10572777777778&index=address&limit=1"
+    },
+    {
+      "id": "cdm2-3de0edcfd0ab9c8a",
+      "filename": "IMG_4687.JPG",
+      "groupId": "toulouse",
+      "locationName": "Toulouse",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 43.60948611111111,
+        "longitude": 1.4450027777777779
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=1.4450027777777779&lat=43.60948611111111&index=address&limit=1"
+    },
+    {
+      "id": "cdm2-fd8524c6b040e469",
+      "filename": "IMG_4708.JPG",
+      "groupId": "toulouse",
+      "locationName": "Toulouse",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 43.594797222222226,
+        "longitude": 1.443486111111111
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=1.443486111111111&lat=43.594797222222226&index=address&limit=1"
+    },
+    {
+      "id": "cdm2-283bc34f8bd482dd",
+      "filename": "IMG_4785.JPG",
+      "groupId": "capestang",
+      "locationName": "Capestang",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Retained EXIF GPS and containing municipality from French administrative-boundary API; not proof of a landmark or trip phase.",
+      "coordinates": {
+        "latitude": 43.32777777777778,
+        "longitude": 3.0088305555555555
+      },
+      "sourceUrl": "https://geo.api.gouv.fr/communes?lat=43.32777777777778&lon=3.0088305555555555&fields=nom%2Ccode&format=json"
+    },
+    {
+      "id": "cdm2-8cdc758cbed56a24",
+      "filename": "IMG_4797.JPG",
+      "groupId": "beziers",
+      "locationName": "Béziers",
+      "basis": "GPS",
+      "estimated": false,
+      "confidence": "GPS municipality",
+      "evidence": "Inference from retained EXIF GPS and nearest IGN/BAN municipality; not confirmation of the photographed landmark or trip phase.",
+      "coordinates": {
+        "latitude": 43.34481944444445,
+        "longitude": 3.2128805555555555
+      },
+      "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=3.2128805555555555&lat=43.34481944444445&index=address&limit=1"
+    }
+  ]
+}

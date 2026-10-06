@@ -1,0 +1,3483 @@
+{
+  "schemaVersion": 1,
+  "ordering": "Stable relative filename order within each collection.",
+  "photos": [
+    {
+      "id": "cdm1-7f68703ad5c23d61",
+      "collection": "cdm1",
+      "order": 1,
+      "sourceFilename": "IMG_4406.JPG",
+      "sha256": "7f68703ad5c23d61111b6e74c217c651849b84af23d39a6ed8305f30acfb5bd7",
+      "pixelSha256": "0ca0e55d9290f8513a5571b398b8151d9421aaa8575bf0282eb98b225a1e1cc0",
+      "bytes": 7117944,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:08:29 11:40:45",
+      "altField": "/cdm-gallery/cdm1_7f68703ad5c23d61_alt",
+      "alt": "A cyclist riding away on a paved path between hedges and trees under a blue sky.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4406.BedyEo02_3aPRO.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4406.BedyEo02_ZaFAxf.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4406.BedyEo02_Z19HfW3.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4406.BedyEo02_Z1nyHn7.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4406.BedyEo02_9t3OR.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4406.BedyEo02_fqeHJ.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4406.BedyEo02_fqeHJ.webp",
+        "width": 960,
+        "height": 1280
+      }
+    },
+    {
+      "id": "cdm1-a4d1be44bd28d570",
+      "collection": "cdm1",
+      "order": 2,
+      "sourceFilename": "IMG_4411.JPG",
+      "sha256": "a4d1be44bd28d570f228bcfdc4255cd31a1de753fdfac3776bcfbf1653e5c470",
+      "pixelSha256": "d27beba312463169a2bfd842e9d68e11a3d4e9f8472447c16bca5f3c8f7e3711",
+      "bytes": 2507504,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:08:29 12:48:15",
+      "altField": "/cdm-gallery/cdm1_a4d1be44bd28d570_alt",
+      "alt": "A cycle path curves past a blue bicycle sign at a road junction.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4411.CAHVwyGW_12tXdn.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4411.CAHVwyGW_NCvMj.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4411.CAHVwyGW_Zao8Bu.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4411.CAHVwyGW_ZofA2y.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4411.CAHVwyGW_Z1RYYkx.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4411.CAHVwyGW_1eJm3i.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4411.CAHVwyGW_Z2tWIm2.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "id": "cdm1-a01802f64cdb9965",
+      "collection": "cdm1",
+      "order": 3,
+      "sourceFilename": "IMG_4416.JPG",
+      "sha256": "a01802f64cdb996563c97c889727337a63246d596bc376125321f658e18c79f9",
+      "pixelSha256": "1571f3e4472083c1028d91e209194ac2e0e633a050b6a8957ab5f9341dcca877",
+      "bytes": 3504921,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:08:30 09:31:58",
+      "altField": "/cdm-gallery/cdm1_a01802f64cdb9965_alt",
+      "alt": "A suspension bridge crosses a river beyond a stone wall under cloudy skies.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4416.C2PSCfu__Z234KAe.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4416.C2PSCfu__Z2gVd1i.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4416.C2PSCfu__1OegnP.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4416.C2PSCfu__1AmNWL.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4416.C2PSCfu__6CpEM.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4416.C2PSCfu__Z1POmKj.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4416.C2PSCfu__Z1GOK15.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "id": "cdm1-d5d527289de1d74a",
+      "collection": "cdm1",
+      "order": 4,
+      "sourceFilename": "IMG_4421.JPG",
+      "sha256": "d5d527289de1d74a1850d7957c95d8f050edcbedfa1913fa5c8186d304f73994",
+      "pixelSha256": "8c5d6a067aa5d97877f9d57e0e1b554c75725153fb1a0d8105ff943ed92bb77a",
+      "bytes": 6697690,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:08:30 11:22:44",
+      "altField": "/cdm-gallery/cdm1_d5d527289de1d74a_alt",
+      "alt": "People stand beside a white boat in a canal lock, next to a small control cabin.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4421.ClcWh94M_1rNifb.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4421.ClcWh94M_1dVPO7.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4421.ClcWh94M_eUbpj.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4421.ClcWh94M_13IYf.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4421.ClcWh94M_1y6vce.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4421.ClcWh94M_1E3G56.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4421.ClcWh94M_1E3G56.webp",
+        "width": 960,
+        "height": 1280
+      }
+    },
+    {
+      "id": "cdm1-8f2c9ea02664e9f0",
+      "collection": "cdm1",
+      "order": 5,
+      "sourceFilename": "IMG_4423.JPG",
+      "sha256": "8f2c9ea02664e9f08b244d6737fe6141a75c33798aff2361bd2ed48a6debefdb",
+      "pixelSha256": "b00e18631c127c27e3662fb46f3220871f503065a1111998ec7e07b0c70776f3",
+      "bytes": 5665225,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:08:30 11:26:15",
+      "altField": "/cdm-gallery/cdm1_8f2c9ea02664e9f0_alt",
+      "alt": "Water fills a stone-lined canal lock between grassy banks and trees.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4423.P4g3cXvK_ZaOX5W.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4423.P4g3cXvK_ZoGpw1.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4423.P4g3cXvK_Z1nI4UO.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4423.P4g3cXvK_Z1BzwlS.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4423.P4g3cXvK_1XRda4.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4423.P4g3cXvK_1ppIX.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4423.P4g3cXvK_tmCAc.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "id": "cdm1-1990d55c86fa7035",
+      "collection": "cdm1",
+      "order": 6,
+      "sourceFilename": "IMG_4428.JPG",
+      "sha256": "1990d55c86fa7035128a36012d0b7eef2f092e6c4a038fba8d303a650770b105",
+      "pixelSha256": "d744a5e2dcb49b85e0e75c617e84d219c385324dabd0727ca31b44af5ffd9561",
+      "bytes": 6713679,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:08:30 16:52:38",
+      "altField": "/cdm-gallery/cdm1_1990d55c86fa7035_alt",
+      "alt": "A gravel towpath follows a canal beneath trees, with sunlight on the water.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4428.CrjiFYBa_Z1PSUvE.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4428.CrjiFYBa_Z24KmVI.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4428.CrjiFYBa_21p6sp.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4428.CrjiFYBa_1MxE2l.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4428.CrjiFYBa_Z1JAHyB.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4428.CrjiFYBa_Z1DDwFJ.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4428.CrjiFYBa_Z1DDwFJ.webp",
+        "width": 960,
+        "height": 1280
+      }
+    },
+    {
+      "id": "cdm1-88a120bab432488c",
+      "collection": "cdm1",
+      "order": 7,
+      "sourceFilename": "IMG_4459.JPG",
+      "sha256": "88a120bab432488cf1fd973e521ef235190e3aec701de47c24f74d8fbf2c947b",
+      "pixelSha256": "8e97aad138d36b92d8ffff6135ea227399c16b09fef07e88175c30753cbbd585",
+      "bytes": 5537990,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:09:01 09:22:59",
+      "altField": "/cdm-gallery/cdm1_88a120bab432488c_alt",
+      "alt": "A cyclist rides away on a shaded paved path beside a canal.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4459.C2pIt8vd_ZlOpdI.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4459.C2pIt8vd_ZzFQDM.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4459.C2pIt8vd_Z1yHw3A.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4459.C2pIt8vd_Z1MyXtE.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4459.C2pIt8vd_1MRL2i.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4459.C2pIt8vd_Z9z1nN.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4459.C2pIt8vd_Z1Bg0GQ.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "id": "cdm1-3ce2d0eb9bd45c24",
+      "collection": "cdm1",
+      "order": 8,
+      "sourceFilename": "IMG_4462.JPG",
+      "sha256": "3ce2d0eb9bd45c246af97541ccfc2c5e843f86caaa7e2b0d10f994f30467bf80",
+      "pixelSha256": "05f34fa05173f7bdd3f0f48a420237a2cf7ad5bde3a7c6bab9e62a517eeb4a2e",
+      "bytes": 4017983,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:09:01 09:29:14",
+      "altField": "/cdm-gallery/cdm1_3ce2d0eb9bd45c24_alt",
+      "alt": "A cyclist crosses a narrow gravel bridge with water on both sides.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4462.KPNTGUad_766L7.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4462.KPNTGUad_Z6KkDW.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4462.KPNTGUad_Z15M03K.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4462.KPNTGUad_Z1jDrtO.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4462.KPNTGUad_2gNi28.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4462.KPNTGUad_jluB2.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4462.KPNTGUad_ZCSviy.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "id": "cdm1-367a2fa64cdb80f8",
+      "collection": "cdm1",
+      "order": 9,
+      "sourceFilename": "IMG_4463.JPG",
+      "sha256": "367a2fa64cdb80f8e978f94b6b0db791c1ecc4034d1b6614baea352ac23452a8",
+      "pixelSha256": "7c80fc5a27210b58bd10e610b348c391ba588ffd4a922f9e59d825c8539664f4",
+      "bytes": 7050509,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:09:01 10:14:24",
+      "altField": "/cdm-gallery/cdm1_367a2fa64cdb80f8_alt",
+      "alt": "A shaded canal path passes beneath tall trees beside a wooden railing.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4463.C5y9Aoth_291Yw8.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4463.C5y9Aoth_1Uax64.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4463.C5y9Aoth_V8RGg.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4463.C5y9Aoth_Hhqgc.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4463.C5y9Aoth_2fkctb.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4463.C5y9Aoth_2lhnm3.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4463.C5y9Aoth_2lhnm3.webp",
+        "width": 960,
+        "height": 1280
+      }
+    },
+    {
+      "id": "cdm1-366244b380b9f863",
+      "collection": "cdm1",
+      "order": 10,
+      "sourceFilename": "IMG_4470.JPG",
+      "sha256": "366244b380b9f8634af8e55ad4d55a9be0b8fe792299b98533fcdfce2e1ad119",
+      "pixelSha256": "767d78e77756710dedf207dd775b7b0d2ce810d2df33b588d8fabbc5b4f158fb",
+      "bytes": 3849726,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:09:01 11:08:00",
+      "altField": "/cdm-gallery/cdm1_366244b380b9f863_alt",
+      "alt": "A long channel of water crosses a concrete aqueduct with paths on both sides.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4470.g9WeIGs__Z1iAjk8.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4470.g9WeIGs__Z1wrKKc.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4470.g9WeIGs__Z2vtqa0.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4470.g9WeIGs__2kQgdR.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4470.g9WeIGs__Q6QUS.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4470.g9WeIGs__Z16kUud.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4470.g9WeIGs__14kvSe.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "id": "cdm1-7734acb3db643db5",
+      "collection": "cdm1",
+      "order": 11,
+      "sourceFilename": "IMG_4471.JPG",
+      "sha256": "7734acb3db643db53fb937a1c6223a417386e94eb531c5e8e796d38d28da22d9",
+      "pixelSha256": "2848107058f8da5fb036e606fea5e9c6c14f8e384bb505c9f98ab56d14eeffe0",
+      "bytes": 2542339,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:09:01 11:08:15",
+      "altField": "/cdm-gallery/cdm1_7734acb3db643db5_alt",
+      "alt": "Boats sit beside a long concrete water channel stretching toward trees.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4471.DGDfVzpY_Z24lMGa.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4471.DGDfVzpY_Z2idf7e.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4471.DGDfVzpY_1MWehT.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4471.DGDfVzpY_1z5LQP.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4471.DGDfVzpY_5lnyQ.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4471.DGDfVzpY_Z1R6oQf.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4471.DGDfVzpY_Z2ltO23.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "id": "cdm1-c6dfb4f9a289ce35",
+      "collection": "cdm1",
+      "order": 12,
+      "sourceFilename": "IMG_4484.JPG",
+      "sha256": "c6dfb4f9a289ce3561372821966830b47d15a1ce743bd8561308d980e13af514",
+      "pixelSha256": "df3ccf31e1e6f05d69ce20461641058da0b1eafa6083d653f4a16cd4a7a120f8",
+      "bytes": 1917095,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:09:02 12:10:55",
+      "altField": "/cdm-gallery/cdm1_c6dfb4f9a289ce35_alt",
+      "alt": "A riverside pub with a sign reading The Danu stands above a stone bridge arch.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4484.C3rGLf24_1l5OPS.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4484.C3rGLf24_17enpO.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4484.C3rGLf24_8cI11.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4484.C3rGLf24_Z5DIp3.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4484.C3rGLf24_Z1zo7H2.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4484.C3rGLf24_1xldFN.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4484.C3rGLf24_1RyRnM.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "id": "cdm1-92a476a59d024ec7",
+      "collection": "cdm1",
+      "order": 13,
+      "sourceFilename": "IMG_4492.JPG",
+      "sha256": "92a476a59d024ec79bb8248ff97f2a0355fbb61ba1d9bfac0bf9b9314adbc305",
+      "pixelSha256": "43a540905adcee0025ba217259984cbd843dc470ea047221c581698f9d36885b",
+      "bytes": 5082029,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:09:03 08:47:59",
+      "altField": "/cdm-gallery/cdm1_92a476a59d024ec7_alt",
+      "alt": "Two cyclists ride along a town street with a large 30 road marking.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4492.UF8NWUxM_ZnMX2m.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4492.UF8NWUxM_ZBEpsq.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4492.UF8NWUxM_Z1AG4Re.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4492.UF8NWUxM_Z1Oxwii.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4492.UF8NWUxM_1KTddE.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4492.UF8NWUxM_Zbxzcr.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4492.UF8NWUxM_5LcS6.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "id": "cdm1-15733cee3f1e0b5a",
+      "collection": "cdm1",
+      "order": 14,
+      "sourceFilename": "IMG_4495.JPG",
+      "sha256": "15733cee3f1e0b5a6103745ad34f1d005f9aff503a94c503e8c47c1550411fd0",
+      "pixelSha256": "509be06cb408559fadba57642d30a1ecfe19bcbd6ae2d5e7bcb5a16d746e7bdb",
+      "bytes": 5591149,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:09:03 10:04:31",
+      "altField": "/cdm-gallery/cdm1_15733cee3f1e0b5a_alt",
+      "alt": "A canal reflects trees and a pale building beneath a clear blue sky.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4495.CdDt0RvX_ZT1yhn.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4495.CdDt0RvX_Z17S0Hr.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4495.CdDt0RvX_Z26TF7f.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4495.CdDt0RvX_Z2kL7xj.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4495.CdDt0RvX_1fFBXD.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4495.CdDt0RvX_ZGLars.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4495.CdDt0RvX_Z1CIaVh.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "id": "cdm1-e9e6586e51dfe82a",
+      "collection": "cdm1",
+      "order": 15,
+      "sourceFilename": "IMG_4496.JPG",
+      "sha256": "e9e6586e51dfe82a0d278e9af99de036894f02bb6255ba46a699812a34a5800b",
+      "pixelSha256": "7ac5989f0f71d8fa30944f6a22e7ff794300ab9ad20d2a14bbee5f01d749802a",
+      "bytes": 6453674,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:09:03 10:31:43",
+      "altField": "/cdm-gallery/cdm1_e9e6586e51dfe82a_alt",
+      "alt": "A paved path runs straight beneath tall trees with dappled sunlight.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4496.CH2zVjX4_Z1A2I5z.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4496.CH2zVjX4_Z1NTavD.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4496.CH2zVjX4_2hgiSu.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4496.CH2zVjX4_23oQsq.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4496.CH2zVjX4_Z1tJv8w.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4496.CH2zVjX4_Z1nMkfE.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4496.CH2zVjX4_Z1nMkfE.webp",
+        "width": 960,
+        "height": 1280
+      }
+    },
+    {
+      "id": "cdm1-64137856b3da7e83",
+      "collection": "cdm1",
+      "order": 16,
+      "sourceFilename": "IMG_4497.JPG",
+      "sha256": "64137856b3da7e83a1a0231cc8b416c9407e5a6c1a1941857c16c7a437cdf07f",
+      "pixelSha256": "681d21682dca6ac007f81f37cab7aa89eec24ebe5fe92de0f050f3b5bb8edd09",
+      "bytes": 6658864,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:09:03 10:31:44",
+      "altField": "/cdm-gallery/cdm1_64137856b3da7e83_alt",
+      "alt": "Long tree shadows fall across a paved path beside green fields.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4497.CE1NVanP_ZMfevh.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4497.CE1NVanP_Z116FVl.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4497.CE1NVanP_Z208ll9.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4497.CE1NVanP_Z2dYMLd.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4497.CE1NVanP_ZFW1ye.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4497.CE1NVanP_ZzYPFm.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4497.CE1NVanP_ZzYPFm.webp",
+        "width": 960,
+        "height": 1280
+      }
+    },
+    {
+      "id": "cdm1-527093082c289f38",
+      "collection": "cdm1",
+      "order": 17,
+      "sourceFilename": "IMG_4507.PNG",
+      "sha256": "527093082c289f385f91e6e87f987d4714ff41753e97b18c54e61f68ad15bdce",
+      "pixelSha256": "1e181df2479574e60ab53c7273c2f8b2416d0830fc3d09f6b06d94c5104c4c7a",
+      "bytes": 637806,
+      "width": 1125,
+      "height": 2436,
+      "captureDate": "2026:09:03 14:44:32",
+      "altField": "/cdm-gallery/cdm1_527093082c289f38_alt",
+      "alt": "Phone screenshot of a BikeTourFrance riding guide with a Toulouse heading and an illustrated building.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 693,
+          "path": "/_astro/IMG_4507.p3H9cMhH_ZEWpAS.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 693,
+          "path": "/_astro/IMG_4507.p3H9cMhH_ZSNR1W.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 1386,
+          "path": "/_astro/IMG_4507.p3H9cMhH_Z1VHcD4.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 1386,
+          "path": "/_astro/IMG_4507.p3H9cMhH_1b28JL.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 2079,
+          "path": "/_astro/IMG_4507.p3H9cMhH_Z2aoT8Q.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 2079,
+          "path": "/_astro/IMG_4507.p3H9cMhH_WkreY.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4507.p3H9cMhH_Z2pHFj0.webp",
+        "width": 1125,
+        "height": 2436
+      }
+    },
+    {
+      "id": "cdm1-a6c8e23da1df5477",
+      "collection": "cdm1",
+      "order": 18,
+      "sourceFilename": "IMG_4516.JPG",
+      "sha256": "a6c8e23da1df5477bcdf70f011c605b6ca65f64ddbb04206d345eb987b699d9e",
+      "pixelSha256": "36f0a20ff3f2cc84741cb2af3056d91e1d7d63e24d45a4f3bbd292bcd475473a",
+      "bytes": 1863435,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:09:04 09:14:44",
+      "altField": "/cdm-gallery/cdm1_a6c8e23da1df5477_alt",
+      "alt": "Moored boats sit below an old stone bridge reflected in a canal.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4516.Cwqyx_Jo_16Na9w.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4516.Cwqyx_Jo_RVHIs.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4516.Cwqyx_Jo_Z64VFl.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4516.Cwqyx_Jo_ZjVo6p.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4516.Cwqyx_Jo_Z1NFMoo.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4516.Cwqyx_Jo_1j3xYr.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4516.Cwqyx_Jo_ZicEjs.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "id": "cdm1-e7d4c77b88559971",
+      "collection": "cdm1",
+      "order": 19,
+      "sourceFilename": "IMG_4517.JPG",
+      "sha256": "e7d4c77b88559971348f1bd12d83b050f6532b4a3a340d9d75448086ad9d3f88",
+      "pixelSha256": "03f70a5cc8fc4535e1e137869d6d02698140b236bbd7e0095f112093350fcf30",
+      "bytes": 5477225,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:09:04 09:28:57",
+      "altField": "/cdm-gallery/cdm1_e7d4c77b88559971_alt",
+      "alt": "A low building beside a road carries the sign Les Vergers du Canal.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4517.z8vlsvy4_ZVshXj.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4517.z8vlsvy4_Z1ajJon.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4517.z8vlsvy4_Z29loNb.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4517.z8vlsvy4_Z2ncQef.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4517.z8vlsvy4_1deShH.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4517.z8vlsvy4_ZJcT8o.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4517.z8vlsvy4_Z1hbS59.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "id": "cdm1-447621a90188ae9f",
+      "collection": "cdm1",
+      "order": 20,
+      "sourceFilename": "IMG_4518.JPG",
+      "sha256": "447621a90188ae9f869786f78bb3918e1a7b949bc826a38a6903bbb89ee3731a",
+      "pixelSha256": "b3e6082cc1215eb5e9646e200184519b290ae55270273188a83bfe3e3ce78fb3",
+      "bytes": 4957007,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:09:04 09:56:08",
+      "altField": "/cdm-gallery/cdm1_447621a90188ae9f_alt",
+      "alt": "A pale stone memorial stands on a square base beside a ploughed field.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4518.oYhTo_Qz_ZUXxGG.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4518.oYhTo_Qz_Z19P07K.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4518.oYhTo_Qz_Z28QEwy.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4518.oYhTo_Qz_Z2mI6WC.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4518.oYhTo_Qz_1dICyk.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4518.oYhTo_Qz_ZII9QL.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4518.oYhTo_Qz_QSfPT.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "id": "cdm1-07dbf791aa3f701d",
+      "collection": "cdm1",
+      "order": 21,
+      "sourceFilename": "IMG_4520.JPG",
+      "sha256": "07dbf791aa3f701dcbc0fbb6a43bb02fc15c4fb9b8f31141eb3fadd862427b89",
+      "pixelSha256": "1da9addf5f7e1319f13b2abc89ef11015e673e71587f545f8ee28490f3d39992",
+      "bytes": 4609575,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:09:04 10:53:58",
+      "altField": "/cdm-gallery/cdm1_07dbf791aa3f701d_alt",
+      "alt": "A stone-edged canal passes homes and a tall narrow tree beneath blue skies.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4520.BoilOXSc_QtzN2.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4520.BoilOXSc_CC8mX.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4520.BoilOXSc_Zlow1P.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4520.BoilOXSc_ZzfXrT.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4520.BoilOXSc_Z240mJS.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4520.BoilOXSc_13IXCW.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4520.BoilOXSc_Z1NSJxb.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "id": "cdm1-14c70267e3e8d32d",
+      "collection": "cdm1",
+      "order": 22,
+      "sourceFilename": "IMG_4528.JPG",
+      "sha256": "14c70267e3e8d32d39b5efa529495e2c2e678af3b51fcea271b7a9112b9ad7df",
+      "pixelSha256": "5bc907f592be5c57dd38c1b06ed68e287d9255cb7e439a9076c25d7eaf428e86",
+      "bytes": 4708136,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:09:04 11:55:19",
+      "altField": "/cdm-gallery/cdm1_14c70267e3e8d32d_alt",
+      "alt": "A town street follows a canal between old buildings, with a tower in the distance.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4528.DfnW8pUE_2ttEJo.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4528.DfnW8pUE_2fCdjk.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4528.DfnW8pUE_1gAxTw.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4528.DfnW8pUE_12J6ts.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4528.DfnW8pUE_Zr0hNw.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4528.DfnW8pUE_Z2os5eC.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4528.DfnW8pUE_1xhIm0.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "id": "cdm1-46de05ddac2c6592",
+      "collection": "cdm1",
+      "order": 23,
+      "sourceFilename": "IMG_4529.JPG",
+      "sha256": "46de05ddac2c6592f413ef483f7cfaec419cf57bde0b5f798aed32470ef1b64f",
+      "pixelSha256": "4e7863ac455f1b5127f4ef5828a78d72f769582ac15d7785a94deb7a7b014422",
+      "bytes": 2521650,
+      "width": 2316,
+      "height": 3088,
+      "captureDate": "2026:09:04 12:04:02",
+      "altField": "/cdm-gallery/cdm1_46de05ddac2c6592_alt",
+      "alt": "A smiling cyclist wearing yellow glasses takes a selfie in front of round stone towers.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4529.B66gXd1p_ZX8CG3.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4529.B66gXd1p_Z1c0577.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4529.B66gXd1p_Z2b1JvU.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4529.B66gXd1p_Z2oSbVY.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4529.B66gXd1p_1byxyX.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4529.B66gXd1p_ZKSeQ8.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4529.B66gXd1p_2t47Yu.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "id": "cdm1-fbe9c36d2b2693a7",
+      "collection": "cdm1",
+      "order": 24,
+      "sourceFilename": "IMG_4533.JPG",
+      "sha256": "fbe9c36d2b2693a75e74c1ddd2e0ea0a89b8010ce58afcfb1effc960524466e0",
+      "pixelSha256": "b8fc76a611657e6ec41dc195a043f04c6f4b5fb54812a4e14101d05056219633",
+      "bytes": 3718814,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:09:04 13:55:44",
+      "altField": "/cdm-gallery/cdm1_fbe9c36d2b2693a7_alt",
+      "alt": "A restaurant table holds a plate of meat and vegetables with sliced tomatoes and drinks.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4533.D3mbUpq3_1mqPaP.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4533.D3mbUpq3_18znJL.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4533.D3mbUpq3_9xIkX.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4533.D3mbUpq3_Z4iI56.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4533.D3mbUpq3_Z1y37n5.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4533.D3mbUpq3_1yGe0K.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4533.D3mbUpq3_Z2vW6hF.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "id": "cdm1-d3f76238429211af",
+      "collection": "cdm1",
+      "order": 25,
+      "sourceFilename": "IMG_4553.JPG",
+      "sha256": "d3f76238429211afe1db092e740060f370a5f8d2764e77668fdb6d23568982a4",
+      "pixelSha256": "d037a5ebf8c5626bf3afe1093657bbf9f76a80d834234c1ca1e8b0c0703e8944",
+      "bytes": 3389460,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:09:05 12:40:32",
+      "altField": "/cdm-gallery/cdm1_d3f76238429211af_alt",
+      "alt": "A weathered yellow building has a blue wooden garage door and a small shuttered window.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4553.OzPwM_JF_Z89FJr.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4553.OzPwM_JF_Zm18av.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4553.OzPwM_JF_Z1l2Mzj.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4553.OzPwM_JF_Z1yTf0n.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4553.OzPwM_JF_21xuvz.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4553.OzPwM_JF_45H5t.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4553.OzPwM_JF_ferlQ.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "id": "cdm1-c90a305ef39c58c4",
+      "collection": "cdm1",
+      "order": 26,
+      "sourceFilename": "IMG_4572.JPG",
+      "sha256": "c90a305ef39c58c4717130b6deed7ee45b8084172726c23c9f9a83dd6daf303b",
+      "pixelSha256": "782f07955a0ad4b7adc95ae47b7c91c747870048dc7f71f66ed45987f7ecc9e9",
+      "bytes": 4700341,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:09:06 10:55:43",
+      "altField": "/cdm-gallery/cdm1_c90a305ef39c58c4_alt",
+      "alt": "A broad gravel path crosses calm water beside reeds and trees.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4572.DRzKRdSk_Z2vb5YR.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4572.DRzKRdSk_2l9Ao0.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4572.DRzKRdSk_1m7UYc.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4572.DRzKRdSk_18gty8.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4572.DRzKRdSk_ZlsTIQ.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4572.DRzKRdSk_Z2iUH9W.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4572.DRzKRdSk_rB2Mu.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "id": "cdm1-1b40eb892c1fc67b",
+      "collection": "cdm1",
+      "order": 27,
+      "sourceFilename": "IMG_4574.JPG",
+      "sha256": "1b40eb892c1fc67b99224ad8962a5e851b962539f93f3922522452c114d19f45",
+      "pixelSha256": "0505c5119caaad68730a4712361756e90e3d0209db783b9da9cee2d1cf298513",
+      "bytes": 3506388,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:09:06 10:59:22",
+      "altField": "/cdm-gallery/cdm1_1b40eb892c1fc67b_alt",
+      "alt": "Reeds grow beside the stone wall of a canal crossing, with trees beyond.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4574.nQ7RDDjW_Z1m9xST.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4574.nQ7RDDjW_Z1A10jX.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4574.nQ7RDDjW_2v9t5a.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4574.nQ7RDDjW_2hi1E6.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4574.nQ7RDDjW_MxCm7.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4574.nQ7RDDjW_Z19Ta3Y.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4574.nQ7RDDjW_ZFbxxJ.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "id": "cdm1-da279a6021ecb20f",
+      "collection": "cdm1",
+      "order": 28,
+      "sourceFilename": "IMG_4578.JPG",
+      "sha256": "da279a6021ecb20f7cd92a2089864611e33f371dd3d7b453de66ef265a6e3162",
+      "pixelSha256": "c978a05cc3b9d2451bbf6101b0d94d2944d346893a26b41baba3f8a95acb0e25",
+      "bytes": 2723014,
+      "width": 2316,
+      "height": 3088,
+      "captureDate": "2026:09:06 11:51:56",
+      "altField": "/cdm-gallery/cdm1_da279a6021ecb20f_alt",
+      "alt": "A cyclist in yellow glasses takes a selfie beside a tree-lined canal and towpath.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4578.DX_kTIyI_Z11yIf.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4578.DX_kTIyI_ZeS19j.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4578.DX_kTIyI_Z1dTFy7.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4578.DX_kTIyI_Z1rL7Yb.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4578.DX_kTIyI_28FBwL.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4578.DX_kTIyI_bdO6F.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4578.DX_kTIyI_1usgWM.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "id": "cdm1-7c99450191c66dc6",
+      "collection": "cdm1",
+      "order": 29,
+      "sourceFilename": "IMG_4596.JPG",
+      "sha256": "7c99450191c66dc6687f2ea86564576691b8ce3978fb02febb864732a938401f",
+      "pixelSha256": "f7ab53986f832c859506f1b41151b710103245fb184d66b2c2bfb0a559d84bad",
+      "bytes": 4106326,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:09:07 11:41:29",
+      "altField": "/cdm-gallery/cdm1_7c99450191c66dc6_alt",
+      "alt": "A canal curves past a stone towpath, moored boats and tall trees.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4596.CmuQhw8M_Zg0OV8.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4596.CmuQhw8M_ZtRhmc.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4596.CmuQhw8M_Z1sSVL0.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4596.CmuQhw8M_Z1GKoc4.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4596.CmuQhw8M_1SGljS.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4596.CmuQhw8M_Z3Kr6d.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4596.CmuQhw8M_Z2d1xDj.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "id": "cdm1-ffbca6de150fc7f1",
+      "collection": "cdm1",
+      "order": 30,
+      "sourceFilename": "IMG_4600.JPG",
+      "sha256": "ffbca6de150fc7f18ac43a1754fb5a9c36c6b0d1fba1f38debf31a602cbcace3",
+      "pixelSha256": "103365eb1fdde360633fc24d721677f68571f67ca952bb9a36b7d4829d8cebde",
+      "bytes": 1694868,
+      "width": 2316,
+      "height": 3088,
+      "captureDate": "2026:09:07 20:01:29",
+      "altField": "/cdm-gallery/cdm1_ffbca6de150fc7f1_alt",
+      "alt": "Three smiling people take a selfie around a restaurant table.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4600.Bfn6dN9W_1T1VXP.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4600.Bfn6dN9W_1FauxL.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4600.Bfn6dN9W_G8P8X.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4600.Bfn6dN9W_shnHT.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4600.Bfn6dN9W_Z11s0z5.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4600.Bfn6dN9W_26hkNK.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4600.Bfn6dN9W_Z1dc4Pt.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "id": "cdm1-7ed840d66e9ad03a",
+      "collection": "cdm1",
+      "order": 31,
+      "sourceFilename": "IMG_4606.JPG",
+      "sha256": "7ed840d66e9ad03af5fc72c95d32b5abe9e3ae44e696bcee499527b57ba699da",
+      "pixelSha256": "a779178b85d35e0ae8d5144f843c12b05f2b4539f0eaa7cffa84dfe3a66c71d1",
+      "bytes": 3920723,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:09:08 12:30:15",
+      "altField": "/cdm-gallery/cdm1_7ed840d66e9ad03a_alt",
+      "alt": "A fish counter displays rows of red and silver fish on ice beneath price labels.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4606.Bnubs4Ra_K2L6V.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4606.Bnubs4Ra_wbjFR.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4606.Bnubs4Ra_ZrPkHV.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4606.Bnubs4Ra_ZFGM90.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4606.Bnubs4Ra_Z2arbqY.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4606.Bnubs4Ra_Wi9VQ.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4606.Bnubs4Ra_Z1bnzYS.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "id": "cdm1-561bafe5aff2e2c8",
+      "collection": "cdm1",
+      "order": 32,
+      "sourceFilename": "IMG_4607.JPG",
+      "sha256": "561bafe5aff2e2c88f930fdeb328dcefc739aa5e1e96954b5e18fd22240da5dc",
+      "pixelSha256": "bed391c68952413b00cac8320fe017ad01325cf308c6c48595ee8df4cfdefe90",
+      "bytes": 4403764,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:09:08 12:30:18",
+      "altField": "/cdm-gallery/cdm1_561bafe5aff2e2c8_alt",
+      "alt": "Large silver fish lie on ice at a market counter beside smaller red fish.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4607.BQ1wrx2O_Z2nWWYP.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4607.BQ1wrx2O_2smIo2.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4607.BQ1wrx2O_1tl3Ye.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4607.BQ1wrx2O_1ftBya.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4607.BQ1wrx2O_ZefLIO.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4607.BQ1wrx2O_Z2bHz9U.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4607.BQ1wrx2O_Z28XKS1.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "id": "cdm1-65549a14c4c04b9e",
+      "collection": "cdm1",
+      "order": 33,
+      "sourceFilename": "IMG_6115.jpeg",
+      "sha256": "65549a14c4c04b9e15b0607fa235fecf1629a45a3e63e93454042275b8bdec25",
+      "pixelSha256": "a2a79145821b687c594955786c526d150662355cc5f2fbf82ef8b03495809675",
+      "bytes": 1369065,
+      "width": 1512,
+      "height": 2016,
+      "captureDate": null,
+      "altField": "/cdm-gallery/cdm1_65549a14c4c04b9e_alt",
+      "alt": "A cyclist rides across a suspension bridge toward its central tower under cloudy skies.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_6115.qOO8mr6U_Z2ajOy3.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_6115.qOO8mr6U_WpvOM.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_6115.qOO8mr6U_XzCu6.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_6115.qOO8mr6U_ZXR9V0.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_6115.qOO8mr6U_Z1jkqlt.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_6115.qOO8mr6U_Z104iMj.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_6115.qOO8mr6U_ZC5X1y.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "id": "cdm1-df99ed89439a5013",
+      "collection": "cdm1",
+      "order": 34,
+      "sourceFilename": "IMG_6117.jpeg",
+      "sha256": "df99ed89439a5013eba7b2d969b1eac54c18bcaa026ec45948d77fcdb0311e13",
+      "pixelSha256": "f2cdbbdacfb3944b7ad9c32cdc453c1abd83de5f1d3f4c7230a46d58d3d06358",
+      "bytes": 1818453,
+      "width": 1512,
+      "height": 2016,
+      "captureDate": null,
+      "altField": "/cdm-gallery/cdm1_df99ed89439a5013_alt",
+      "alt": "A cyclist bends over a small stone fountain beside an old church entrance.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_6117.jZnSsUm5_ZJVPj8.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_6117.jZnSsUm5_2mMv4H.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_6117.jZnSsUm5_2nWBJ1.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_6117.jZnSsUm5_quOiU.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_6117.jZnSsUm5_2sVhSB.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_6117.jZnSsUm5_piFrB.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_6117.jZnSsUm5_piFrB.webp",
+        "width": 960,
+        "height": 1280
+      }
+    },
+    {
+      "id": "cdm1-939d5b94d4ee4664",
+      "collection": "cdm1",
+      "order": 35,
+      "sourceFilename": "IMG_6125.jpeg",
+      "sha256": "939d5b94d4ee466468c7136c33936cff0e45f427dbf047bfb06783b32f367d98",
+      "pixelSha256": "d3e3dc004ea88215e5720703d01a4ce7df02dd9b749db2739abaa5ce367326f9",
+      "bytes": 1298367,
+      "width": 2016,
+      "height": 1512,
+      "captureDate": null,
+      "altField": "/cdm-gallery/cdm1_939d5b94d4ee4664_alt",
+      "alt": "A cyclist crosses a narrow gravel aqueduct path beside a railing and water.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 240,
+          "path": "/_astro/IMG_6125.D73roLqM_2ruAt7.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 240,
+          "path": "/_astro/IMG_6125.D73roLqM_u2N31.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 480,
+          "path": "/_astro/IMG_6125.D73roLqM_Z1Lliap.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 480,
+          "path": "/_astro/IMG_6125.D73roLqM_1lo3dq.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 720,
+          "path": "/_astro/IMG_6125.D73roLqM_Z1qJtOh.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 720,
+          "path": "/_astro/IMG_6125.D73roLqM_1FYQyy.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_6125.D73roLqM_1WlzId.webp",
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "id": "cdm1-8984f3682ed07c89",
+      "collection": "cdm1",
+      "order": 36,
+      "sourceFilename": "IMG_6143.jpeg",
+      "sha256": "8984f3682ed07c895105ef2b5d409dfd05cb9fa9958b16ee654f9d9c4ee8aadc",
+      "pixelSha256": "ab3fd1467ddf9e3b6a2b8b199116718f428fabcc0dc8d4d298c302280523b719",
+      "bytes": 380683,
+      "width": 2016,
+      "height": 1512,
+      "captureDate": null,
+      "altField": "/cdm-gallery/cdm1_8984f3682ed07c89_alt",
+      "alt": "A canal reflects trees and a bridge with circular openings beneath a pale moon.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 240,
+          "path": "/_astro/IMG_6143.DXFwyN3I_1SpA6Q.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 240,
+          "path": "/_astro/IMG_6143.DXFwyN3I_Z42cjf.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 480,
+          "path": "/_astro/IMG_6143.DXFwyN3I_Z2kqiwF.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 480,
+          "path": "/_astro/IMG_6143.DXFwyN3I_Mj2Qa.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 720,
+          "path": "/_astro/IMG_6143.DXFwyN3I_Z1YOubx.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 720,
+          "path": "/_astro/IMG_6143.DXFwyN3I_17TQci.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_6143.DXFwyN3I_Z6Aa87.webp",
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "id": "cdm1-3e2f93340b82df4e",
+      "collection": "cdm1",
+      "order": 37,
+      "sourceFilename": "IMG_6146.jpeg",
+      "sha256": "3e2f93340b82df4e0f67d8018d50fd9025b58977126423b37ac01eba5755e8fa",
+      "pixelSha256": "7176c34e9bec38bfd15cea715377199ae762fff17eb37ed64b259f59f91538c6",
+      "bytes": 1133905,
+      "width": 2016,
+      "height": 1512,
+      "captureDate": null,
+      "altField": "/cdm-gallery/cdm1_3e2f93340b82df4e_alt",
+      "alt": "A brick bridge with patterned stonework crosses a canal bordered by trees.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 240,
+          "path": "/_astro/IMG_6146.BhHLjmyc_Z2iO1Re.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 240,
+          "path": "/_astro/IMG_6146.BhHLjmyc_NUjvB.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 480,
+          "path": "/_astro/IMG_6146.BhHLjmyc_Z1rsLGO.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 480,
+          "path": "/_astro/IMG_6146.BhHLjmyc_1FgyG1.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 720,
+          "path": "/_astro/IMG_6146.BhHLjmyc_Z16QXlG.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 720,
+          "path": "/_astro/IMG_6146.BhHLjmyc_20Rn29.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_6146.BhHLjmyc_1S9hBD.webp",
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "id": "cdm1-28bda3c5ac7d2051",
+      "collection": "cdm1",
+      "order": 38,
+      "sourceFilename": "IMG_6155.jpeg",
+      "sha256": "28bda3c5ac7d2051c7df56928e8b8c7fdf45d017af637ee28ce7ead2379887e3",
+      "pixelSha256": "c89849120696112824ec466658f0071f3626881748e16445e79b23d604a7f7a9",
+      "bytes": 1744157,
+      "width": 1512,
+      "height": 2016,
+      "captureDate": null,
+      "altField": "/cdm-gallery/cdm1_28bda3c5ac7d2051_alt",
+      "alt": "A cyclist in a yellow top rides through a narrow path under a graffiti-covered bridge.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_6155.BAO2tOyl_ZLibxO.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_6155.BAO2tOyl_2lr9P1.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_6155.BAO2tOyl_2mBguk.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_6155.BAO2tOyl_p9t4e.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_6155.BAO2tOyl_2rzVDU.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_6155.BAO2tOyl_nWkcU.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_6155.BAO2tOyl_nWkcU.webp",
+        "width": 960,
+        "height": 1280
+      }
+    },
+    {
+      "id": "cdm1-57ff5e48ef8d95a0",
+      "collection": "cdm1",
+      "order": 39,
+      "sourceFilename": "IMG_6158.jpeg",
+      "sha256": "57ff5e48ef8d95a02f3ac90934e50eeb7b96d3e792b98496f0aeacf4da0ed76c",
+      "pixelSha256": "43800711e4666462688c3b705aaeca86e6e7781c5d96d031baabd5f0db2da4df",
+      "bytes": 1740380,
+      "width": 1512,
+      "height": 2016,
+      "captureDate": null,
+      "altField": "/cdm-gallery/cdm1_57ff5e48ef8d95a0_alt",
+      "alt": "A cyclist in a patterned jersey approaches along a narrow canal path beneath a bridge.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_6158.CfjTh0zI_1z1kIf.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_6158.CfjTh0zI_ZnqrGQ.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_6158.CfjTh0zI_Zmgl2x.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_6158.CfjTh0zI_Z2jI8sD.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_6158.CfjTh0zI_ZhhERW.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_6158.CfjTh0zI_Z2kUhjW.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_6158.CfjTh0zI_Z2kUhjW.webp",
+        "width": 960,
+        "height": 1280
+      }
+    },
+    {
+      "id": "cdm1-15a6b1ce00490898",
+      "collection": "cdm1",
+      "order": 40,
+      "sourceFilename": "IMG_6175.jpeg",
+      "sha256": "15a6b1ce00490898fa4e0d080c4b0b666705f89815fededaed12a4474cd71e2a",
+      "pixelSha256": "fef80f489200fd6926764091faf396e23b3fadb65e69b5954344bbfd7d3938e6",
+      "bytes": 1943400,
+      "width": 2016,
+      "height": 1512,
+      "captureDate": null,
+      "altField": "/cdm-gallery/cdm1_15a6b1ce00490898_alt",
+      "alt": "A blue touring bicycle leans against a brick bridge parapet above a tree-lined canal.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 240,
+          "path": "/_astro/IMG_6175.DtkKC7r5_Z23IL0y.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 240,
+          "path": "/_astro/IMG_6175.DtkKC7r5_140znh.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 480,
+          "path": "/_astro/IMG_6175.DtkKC7r5_Z1cnvP9.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 480,
+          "path": "/_astro/IMG_6175.DtkKC7r5_1UlOxG.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 720,
+          "path": "/_astro/IMG_6175.DtkKC7r5_ZQLHu1.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 720,
+          "path": "/_astro/IMG_6175.DtkKC7r5_2fWCSO.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_6175.DtkKC7r5_oUQfm.webp",
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "id": "cdm2-fd6ef587b12f46c4",
+      "collection": "cdm2",
+      "order": 1,
+      "sourceFilename": "9f4a9960-26b2-4d36-a8a3-4db68d666749_A4F2DBC7-C58D-460E-A289-3894F082CA8E.jpg",
+      "sha256": "fd6ef587b12f46c4f5027b8bb1bcc51d2b5a02a78a8f42fdf08302cfb7c6f05a",
+      "pixelSha256": "0cf44cff7152b3d0e7aa0dda4110d45fa3ea1ac3c7010ebb0dcf9c28ddd9741c",
+      "bytes": 628190,
+      "width": 1600,
+      "height": 1600,
+      "captureDate": null,
+      "altField": "/cdm-gallery/cdm2_fd6ef587b12f46c4_alt",
+      "alt": "A group of cyclists rides toward the camera on a shaded path beneath leafy trees.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "path": "/_astro/9f4a9960-26b2-4d36-a8a3-4db68d666749_A4F2DBC7-C58D-460E-A289-3894F082CA8E.Irm5Q3lA_1im7s0.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "path": "/_astro/9f4a9960-26b2-4d36-a8a3-4db68d666749_A4F2DBC7-C58D-460E-A289-3894F082CA8E.Irm5Q3lA_Z2nvFps.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "path": "/_astro/9f4a9960-26b2-4d36-a8a3-4db68d666749_A4F2DBC7-C58D-460E-A289-3894F082CA8E.Irm5Q3lA_Z1CPzM9.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "path": "/_astro/9f4a9960-26b2-4d36-a8a3-4db68d666749_A4F2DBC7-C58D-460E-A289-3894F082CA8E.Irm5Q3lA_ZewePF.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "path": "/_astro/9f4a9960-26b2-4d36-a8a3-4db68d666749_A4F2DBC7-C58D-460E-A289-3894F082CA8E.Irm5Q3lA_v8PLD.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "path": "/_astro/9f4a9960-26b2-4d36-a8a3-4db68d666749_A4F2DBC7-C58D-460E-A289-3894F082CA8E.Irm5Q3lA_1TsbI7.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/9f4a9960-26b2-4d36-a8a3-4db68d666749_A4F2DBC7-C58D-460E-A289-3894F082CA8E.Irm5Q3lA_x0O5J.webp",
+        "width": 1200,
+        "height": 1200
+      }
+    },
+    {
+      "id": "cdm2-72beaa14c115fb6f",
+      "collection": "cdm2",
+      "order": 2,
+      "sourceFilename": "IMG_4633.JPG",
+      "sha256": "72beaa14c115fb6fb5a82ccb5baabcacc445be56d3f84652a950500f9af7607e",
+      "pixelSha256": "46da727580220d57760f24b6a1fe0dc23772a499ae0582cd1204375c3e549ecb",
+      "bytes": 4639481,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:09:12 11:04:24",
+      "altField": "/cdm-gallery/cdm2_72beaa14c115fb6f_alt",
+      "alt": "Loaded touring bicycles stand against a wooden building with the words Créon Fête le vélo.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4633.DB4uGXdB_s6IKR.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4633.DB4uGXdB_efhkN.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4633.DB4uGXdB_ZJLn40.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4633.DB4uGXdB_ZXCOu4.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4633.DB4uGXdB_Z2sndM3.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4633.DB4uGXdB_Em7AM.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4633.DB4uGXdB_Z7Xu43.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "id": "cdm2-197a9b403afefd6e",
+      "collection": "cdm2",
+      "order": 3,
+      "sourceFilename": "IMG_4634.JPG",
+      "sha256": "197a9b403afefd6e4b83ae43ea3dab160e05400b298daa989c7459a60703041c",
+      "pixelSha256": "14702133184e71a0a432d48da49453d02913786d6c9357ba0567c36c846fac6d",
+      "bytes": 3809185,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:09:12 11:04:27",
+      "altField": "/cdm-gallery/cdm2_197a9b403afefd6e_alt",
+      "alt": "Touring bicycles and a cyclist stand beside a wooden building beneath a deep roof overhang.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4634.B6jlfisJ_Z18ljfO.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4634.B6jlfisJ_Z1mcKFS.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4634.B6jlfisJ_Z2leq5G.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4634.B6jlfisJ_2v6gib.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4634.B6jlfisJ_11lR0c.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4634.B6jlfisJ_ZV5UpT.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4634.B6jlfisJ_1bKpfW.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "id": "cdm2-45b8c5be246ff253",
+      "collection": "cdm2",
+      "order": 4,
+      "sourceFilename": "IMG_4638.PNG",
+      "sha256": "45b8c5be246ff253a0c6ec6c1fa5a677e1dac1bf83ecb6911b883a853e3361ad",
+      "pixelSha256": "0b9d15b175bc2bda2c365069a9eedca8f425f0ff1ce4245a1b12ea3475a93821",
+      "bytes": 1340975,
+      "width": 1125,
+      "height": 2436,
+      "captureDate": "2026:09:12 17:42:25",
+      "altField": "/cdm-gallery/cdm2_45b8c5be246ff253_alt",
+      "alt": "Phone screenshot of a BikeTourFrance riding guide headed Bordeaux to Garonne, with an illustration and route notes.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 693,
+          "path": "/_astro/IMG_4638.CRjI6eI5_1JgpKQ.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 693,
+          "path": "/_astro/IMG_4638.CRjI6eI5_16cSfP.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 1386,
+          "path": "/_astro/IMG_4638.CRjI6eI5_xfE1h.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 1386,
+          "path": "/_astro/IMG_4638.CRjI6eI5_12fHwv.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 2079,
+          "path": "/_astro/IMG_4638.CRjI6eI5_2jya8a.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 2079,
+          "path": "/_astro/IMG_4638.CRjI6eI5_Z2gCUax.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4638.CRjI6eI5_Z1vtb6K.webp",
+        "width": 1125,
+        "height": 2436
+      }
+    },
+    {
+      "id": "cdm2-0b2ea06efc925c01",
+      "collection": "cdm2",
+      "order": 5,
+      "sourceFilename": "IMG_4651.JPG",
+      "sha256": "0b2ea06efc925c0136254b02c9a2b3b278543a334e3d371c4ef4b6e160fc0679",
+      "pixelSha256": "9a8feed8f4110f80b2c9710ff7ba56110da1224c2752a5e227ebf0a582e79365",
+      "bytes": 2069174,
+      "width": 2316,
+      "height": 3088,
+      "captureDate": "2026:09:14 14:43:16",
+      "altField": "/cdm-gallery/cdm2_0b2ea06efc925c01_alt",
+      "alt": "A smiling cyclist in sunglasses takes a selfie above a canal lined with moored boats.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4651.BBJwrqhY_ZiWCdQ.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4651.BBJwrqhY_ZwO4DU.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4651.BBJwrqhY_Z1vPJ3I.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4651.BBJwrqhY_Z1JHbtM.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4651.BBJwrqhY_1PJy2a.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4651.BBJwrqhY_Z6HenV.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4651.BBJwrqhY_1mN3ag.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "id": "cdm2-39394b8639cc567e",
+      "collection": "cdm2",
+      "order": 6,
+      "sourceFilename": "IMG_4652.JPG",
+      "sha256": "39394b8639cc567e3df02dda0e9a3ca446750492c0896eb9f6f54ff5122c4d21",
+      "pixelSha256": "dc6bf3e231f9178a6efdcda9febace42b85102d0ba2788f42dc9d626860a49d5",
+      "bytes": 3409250,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:09:14 14:43:22",
+      "altField": "/cdm-gallery/cdm2_39394b8639cc567e_alt",
+      "alt": "Moored boats line a canal bordered by trees and waterside buildings under blue skies.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4652.BYKKRqmf_PkdCH.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4652.BYKKRqmf_BsLcD.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4652.BYKKRqmf_ZmxSca.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4652.BYKKRqmf_ZApkCe.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4652.BYKKRqmf_Z259IUd.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4652.BYKKRqmf_12zBsC.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4652.BYKKRqmf_1uto90.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "id": "cdm2-a723a73dff55a956",
+      "collection": "cdm2",
+      "order": 7,
+      "sourceFilename": "IMG_4658.JPG",
+      "sha256": "a723a73dff55a956c4e8d4d31a9806cd8a7eeebf86d05f1ba3ea45dde7ab184c",
+      "pixelSha256": "3b70b71d4e08055f313e75c8a0fd6307e7d7c49c0a23f7760bb9799a9edefea7",
+      "bytes": 4706547,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:09:14 16:11:10",
+      "altField": "/cdm-gallery/cdm2_a723a73dff55a956_alt",
+      "alt": "Stone columns frame the arches and green courtyard of a cloister in sunlight.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4658.DAzwvKis_Z1wJ5Ao.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4658.DAzwvKis_Z1KAx1s.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4658.DAzwvKis_2kyVnF.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4658.DAzwvKis_26HtWB.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4658.DAzwvKis_BX5EC.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4658.DAzwvKis_Z1ktGKt.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4658.DAzwvKis_Z11UlxX.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "id": "cdm2-77ff0d20d18d2b69",
+      "collection": "cdm2",
+      "order": 8,
+      "sourceFilename": "IMG_4664.PNG",
+      "sha256": "77ff0d20d18d2b69c4e176a9a844267fbae816de0d6bf3ef62560a2d939b2194",
+      "pixelSha256": "d02c5bbb8740e72c65c45a4d2cbb2527349a79ca1b70a0d56d152cf8a5253916",
+      "bytes": 1395684,
+      "width": 1125,
+      "height": 2436,
+      "captureDate": "2026:09:14 17:44:41",
+      "altField": "/cdm-gallery/cdm2_77ff0d20d18d2b69_alt",
+      "alt": "Screenshot of a BikeTourFrance riding guide headed Marmande to Agen, with an illustration and historical notes.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 693,
+          "path": "/_astro/IMG_4664.AOtN8sR-_Z2jknLY.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 693,
+          "path": "/_astro/IMG_4664.AOtN8sR-_27NdvV.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 1386,
+          "path": "/_astro/IMG_4664.AOtN8sR-_1yPYhn.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 1386,
+          "path": "/_astro/IMG_4664.AOtN8sR-_23Q2MB.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 2079,
+          "path": "/_astro/IMG_4664.AOtN8sR-_Z1J2DpF.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 2079,
+          "path": "/_astro/IMG_4664.AOtN8sR-_Z1f2zTr.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4664.AOtN8sR-_ZdcJPj.webp",
+        "width": 1125,
+        "height": 2436
+      }
+    },
+    {
+      "id": "cdm2-16c4003fcd414a42",
+      "collection": "cdm2",
+      "order": 9,
+      "sourceFilename": "IMG_4665.PNG",
+      "sha256": "16c4003fcd414a4250022d85142317506a8926117bb483c094f78417404c0865",
+      "pixelSha256": "089d33c91519a9f3d0bed94054c2ba35565c8230ebb1be08070a315fc23e7f05",
+      "bytes": 1280762,
+      "width": 1125,
+      "height": 2436,
+      "captureDate": "2026:09:14 17:45:28",
+      "altField": "/cdm-gallery/cdm2_16c4003fcd414a42_alt",
+      "alt": "Screenshot of a BikeTourFrance riding guide headed Agen to Moissac, with an illustrated cloister and route notes.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 693,
+          "path": "/_astro/IMG_4665.lxU5lke9_ZSlg1j.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 693,
+          "path": "/_astro/IMG_4665.lxU5lke9_Z1woMwk.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 1386,
+          "path": "/_astro/IMG_4665.lxU5lke9_Z25m1KS.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 1386,
+          "path": "/_astro/IMG_4665.lxU5lke9_Z1AlXfE.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 2079,
+          "path": "/_astro/IMG_4665.lxU5lke9_Zj3vE0.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 2079,
+          "path": "/_astro/IMG_4665.lxU5lke9_aVwQe.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4665.lxU5lke9_Z1Lr6tS.webp",
+        "width": 1125,
+        "height": 2436
+      }
+    },
+    {
+      "id": "cdm2-3de0edcfd0ab9c8a",
+      "collection": "cdm2",
+      "order": 10,
+      "sourceFilename": "IMG_4687.JPG",
+      "sha256": "3de0edcfd0ab9c8ac758fe1589d104a85fcd12c054c48bfbab9e0dd77d779d11",
+      "pixelSha256": "3f9abaa8f23e21baf65fc38b74cf66c55e234d619da87c3516c8866ea5332672",
+      "bytes": 3695019,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:09:16 11:21:54",
+      "altField": "/cdm-gallery/cdm2_3de0edcfd0ab9c8a_alt",
+      "alt": "Dark purple vegetables and peppers are arranged on a market stall beside handwritten signs.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4687.DA8DVuCA_1KbKoy.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4687.DA8DVuCA_1wkiXu.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4687.DA8DVuCA_xiDyG.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4687.DA8DVuCA_jrc8C.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4687.DA8DVuCA_Z1aic9m.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4687.DA8DVuCA_1Wr9et.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4687.DA8DVuCA_ZC0NWb.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    },
+    {
+      "id": "cdm2-82dce97db2dbb916",
+      "collection": "cdm2",
+      "order": 11,
+      "sourceFilename": "IMG_4691.PNG",
+      "sha256": "82dce97db2dbb9168ddc12bb58aa9a21e10616c008567417d98a97b3542c506f",
+      "pixelSha256": "e4b63aa4143ba8589124dffa664bb288266e06c86f89032b6e5326bee6e07535",
+      "bytes": 1153199,
+      "width": 1125,
+      "height": 2436,
+      "captureDate": "2026:09:16 11:31:29",
+      "altField": "/cdm-gallery/cdm2_82dce97db2dbb916_alt",
+      "alt": "Screenshot of a BikeTourFrance riding guide headed Moissac to Toulouse, with an illustration and historical notes.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 693,
+          "path": "/_astro/IMG_4691.CPTFmibS_18hT7h.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 693,
+          "path": "/_astro/IMG_4691.CPTFmibS_uemBg.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 1386,
+          "path": "/_astro/IMG_4691.CPTFmibS_Z3HQCi.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 1386,
+          "path": "/_astro/IMG_4691.CPTFmibS_qhbRV.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 2079,
+          "path": "/_astro/IMG_4691.CPTFmibS_1HzDtA.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 2079,
+          "path": "/_astro/IMG_4691.CPTFmibS_2czGYO.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4691.CPTFmibS_24j3c.webp",
+        "width": 1125,
+        "height": 2436
+      }
+    },
+    {
+      "id": "cdm2-de858a22ac8f9fde",
+      "collection": "cdm2",
+      "order": 12,
+      "sourceFilename": "IMG_4692.PNG",
+      "sha256": "de858a22ac8f9fde5d009d506cc4411ce8fe3f15ad8009e177b722b6c5529d46",
+      "pixelSha256": "c5942030297a87179109b6e209495a9904b8b0cff768811c3ad752c670583d03",
+      "bytes": 1575810,
+      "width": 1125,
+      "height": 2436,
+      "captureDate": "2026:09:16 11:31:38",
+      "altField": "/cdm-gallery/cdm2_de858a22ac8f9fde_alt",
+      "alt": "Screenshot of a BikeTourFrance riding guide headed Toulouse to Castelnaudary, with an illustration and route notes.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 693,
+          "path": "/_astro/IMG_4692.BC5v5jiq_Z1jJYHd.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 693,
+          "path": "/_astro/IMG_4692.BC5v5jiq_Z1WNwde.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 1386,
+          "path": "/_astro/IMG_4692.BC5v5jiq_Z2vKKrM.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 1386,
+          "path": "/_astro/IMG_4692.BC5v5jiq_Z21KGVy.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 2079,
+          "path": "/_astro/IMG_4692.BC5v5jiq_ZJsfkT.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 2079,
+          "path": "/_astro/IMG_4692.BC5v5jiq_ZfsbOF.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4692.BC5v5jiq_3zBEX.webp",
+        "width": 1125,
+        "height": 2436
+      }
+    },
+    {
+      "id": "cdm2-cdec7a3cfab82c37",
+      "collection": "cdm2",
+      "order": 13,
+      "sourceFilename": "IMG_4694.PNG",
+      "sha256": "cdec7a3cfab82c3712b0d77f345e0ef87879c95eed0bca28382f11f9be099e0c",
+      "pixelSha256": "6cfdfa59e63d85e0ca880c889d38b888311bd57adfa561928b4d5f7637f65864",
+      "bytes": 594288,
+      "width": 1125,
+      "height": 2436,
+      "captureDate": "2026:09:16 11:32:02",
+      "altField": "/cdm-gallery/cdm2_cdec7a3cfab82c37_alt",
+      "alt": "Screenshot of a BikeTourFrance riding guide headed Castelnaudary to Carcassonne, with an illustration and route notes.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 693,
+          "path": "/_astro/IMG_4694.DfoUFt87_10inMD.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 693,
+          "path": "/_astro/IMG_4694.DfoUFt87_LqVmz.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 1386,
+          "path": "/_astro/IMG_4694.DfoUFt87_Zgroex.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 1386,
+          "path": "/_astro/IMG_4694.DfoUFt87_Z2dTbED.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 2079,
+          "path": "/_astro/IMG_4694.DfoUFt87_Zu95Jk.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 2079,
+          "path": "/_astro/IMG_4694.DfoUFt87_Z2rASaq.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4694.DfoUFt87_Z1iF125.webp",
+        "width": 1125,
+        "height": 2436
+      }
+    },
+    {
+      "id": "cdm2-1a0de989bbf416e5",
+      "collection": "cdm2",
+      "order": 14,
+      "sourceFilename": "IMG_4696.PNG",
+      "sha256": "1a0de989bbf416e5537fd932e6e9a8ccdf9a940e5d6db84d9d764f5e358098da",
+      "pixelSha256": "99a1df912454ff1893e162f1e465dfb70bd9092fb6793bc37b7e0ec4a1b0699e",
+      "bytes": 575071,
+      "width": 1125,
+      "height": 2436,
+      "captureDate": "2026:09:16 11:32:26",
+      "altField": "/cdm-gallery/cdm2_1a0de989bbf416e5_alt",
+      "alt": "Screenshot of a BikeTourFrance riding guide headed Carcassonne to Tourouzelle, with an illustration and historical notes.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 693,
+          "path": "/_astro/IMG_4696.C4O8Lw7s_1vTwQ4.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 693,
+          "path": "/_astro/IMG_4696.C4O8Lw7s_1i35q0.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 1386,
+          "path": "/_astro/IMG_4696.C4O8Lw7s_f9JNS.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 1386,
+          "path": "/_astro/IMG_4696.C4O8Lw7s_Z1Hi2Bd.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 2079,
+          "path": "/_astro/IMG_4696.C4O8Lw7s_1s3j6.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 2079,
+          "path": "/_astro/IMG_4696.C4O8Lw7s_Z1UYJ70.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4696.C4O8Lw7s_ZunPJF.webp",
+        "width": 1125,
+        "height": 2436
+      }
+    },
+    {
+      "id": "cdm2-ce1966cf6b8f1c25",
+      "collection": "cdm2",
+      "order": 15,
+      "sourceFilename": "IMG_4697.PNG",
+      "sha256": "ce1966cf6b8f1c25ba3b150d26b517a6584cf83e893ffeb4a01071dab927bbda",
+      "pixelSha256": "5d5a6e6ad8404e1a875ca4800e21e0ea584f64858ff13bb3b2d2fcf65105a577",
+      "bytes": 506113,
+      "width": 1125,
+      "height": 2436,
+      "captureDate": "2026:09:16 11:32:34",
+      "altField": "/cdm-gallery/cdm2_ce1966cf6b8f1c25_alt",
+      "alt": "Screenshot of a BikeTourFrance riding guide headed Capestang to Sète, with an illustrated coastal scene and route notes.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 693,
+          "path": "/_astro/IMG_4697.CKFrLhLo_1RmBA7.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 693,
+          "path": "/_astro/IMG_4697.CKFrLhLo_1Dvaa3.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 1386,
+          "path": "/_astro/IMG_4697.CKFrLhLo_ABOxV.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 1386,
+          "path": "/_astro/IMG_4697.CKFrLhLo_Z1lOWRa.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 2079,
+          "path": "/_astro/IMG_4697.CKFrLhLo_mU839.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 2079,
+          "path": "/_astro/IMG_4697.CKFrLhLo_Z1zwEmW.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4697.CKFrLhLo_etguY.webp",
+        "width": 1125,
+        "height": 2436
+      }
+    },
+    {
+      "id": "cdm2-fd8524c6b040e469",
+      "collection": "cdm2",
+      "order": 16,
+      "sourceFilename": "IMG_4708.JPG",
+      "sha256": "fd8524c6b040e4698421e7702b5b40960c20873e70351b553dd0a6e06198e11b",
+      "pixelSha256": "97576c5143f79b5326698fc8fb745361877a8db4476cff585b5eecfaf1216959",
+      "bytes": 3580357,
+      "width": 4032,
+      "height": 3024,
+      "captureDate": "2026:09:16 22:59:25",
+      "altField": "/cdm-gallery/cdm2_fd8524c6b040e469_alt",
+      "alt": "Five people sit around a restaurant table with plates, drinks and large windows behind them.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 240,
+          "path": "/_astro/IMG_4708.DEcUUvMd_1bljiD.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 240,
+          "path": "/_astro/IMG_4708.DEcUUvMd_WtQRz.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 480,
+          "path": "/_astro/IMG_4708.DEcUUvMd_xY9fL.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 480,
+          "path": "/_astro/IMG_4708.DEcUUvMd_k7GOH.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 720,
+          "path": "/_astro/IMG_4708.DEcUUvMd_Z2dtyQW.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 720,
+          "path": "/_astro/IMG_4708.DEcUUvMd_Z2rl1i1.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4708.DEcUUvMd_Z1UgbHp.webp",
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "id": "cdm2-3142d98a94b23d8c",
+      "collection": "cdm2",
+      "order": 17,
+      "sourceFilename": "IMG_4781.JPG",
+      "sha256": "3142d98a94b23d8c9bd40ec046da4711e6303582cb9a41365aad5d3c2b010019",
+      "pixelSha256": "2b63e02f90c1678eb7c6448b80c6035de2ba3e737f061ad1845dc319ed7eaa61",
+      "bytes": 6615523,
+      "width": 4032,
+      "height": 3024,
+      "captureDate": "2026:09:20 12:49:06",
+      "altField": "/cdm-gallery/cdm2_3142d98a94b23d8c_alt",
+      "alt": "A gravel path follows a canal past shrubs and a young tree supported by wooden stakes.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 240,
+          "path": "/_astro/IMG_4781.-S_6DmP1_1X49YL.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 240,
+          "path": "/_astro/IMG_4781.-S_6DmP1_1JcHyH.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 480,
+          "path": "/_astro/IMG_4781.-S_6DmP1_1kGYVT.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 480,
+          "path": "/_astro/IMG_4781.-S_6DmP1_16PxvP.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 720,
+          "path": "/_astro/IMG_4781.-S_6DmP1_Z1qKIaO.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 720,
+          "path": "/_astro/IMG_4781.-S_6DmP1_Z1ECaAS.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4781.-S_6DmP1_1YdupU.webp",
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "id": "cdm2-0bd445cb3b2f6142",
+      "collection": "cdm2",
+      "order": 18,
+      "sourceFilename": "IMG_4783.JPG",
+      "sha256": "0bd445cb3b2f61422e2117fa24989c6edc7fb689befeb77743dd71c6f2f7afea",
+      "pixelSha256": "a6f7d2bb0ea07a27c9df91ef076e979515fccae45f000e37d1ec3af1ce150238",
+      "bytes": 6110624,
+      "width": 4032,
+      "height": 3024,
+      "captureDate": "2026:09:20 12:49:08",
+      "altField": "/cdm-gallery/cdm2_0bd445cb3b2f6142_alt",
+      "alt": "A canal-side gravel path runs beside dry grass and shrubs beneath streaked white clouds.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 240,
+          "path": "/_astro/IMG_4783.CkUv47Qr_1JFi29.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 240,
+          "path": "/_astro/IMG_4783.CkUv47Qr_1vNPB5.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 480,
+          "path": "/_astro/IMG_4783.CkUv47Qr_17j7Yh.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 480,
+          "path": "/_astro/IMG_4783.CkUv47Qr_SrFyd.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 720,
+          "path": "/_astro/IMG_4783.CkUv47Qr_Z1E9A8r.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 720,
+          "path": "/_astro/IMG_4783.CkUv47Qr_Z1S12yv.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4783.CkUv47Qr_ghIrx.webp",
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "id": "cdm2-4967b506b49ae644",
+      "collection": "cdm2",
+      "order": 19,
+      "sourceFilename": "IMG_4784.JPG",
+      "sha256": "4967b506b49ae644598c15b45ef2d71e351cdfd0280f1a16139d335b5ce45cb9",
+      "pixelSha256": "3376e47059637534dc2bfbe3df13b1e38cedbad22c6841300f845b8464dc8403",
+      "bytes": 6068109,
+      "width": 4032,
+      "height": 3024,
+      "captureDate": "2026:09:20 12:49:09",
+      "altField": "/cdm-gallery/cdm2_4967b506b49ae644_alt",
+      "alt": "A sunny gravel towpath passes a staked young tree with canal water on the right.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 240,
+          "path": "/_astro/IMG_4784.CB27ZWsM_21qjaf.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 240,
+          "path": "/_astro/IMG_4784.CB27ZWsM_1MyQJb.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 480,
+          "path": "/_astro/IMG_4784.CB27ZWsM_1o497n.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 480,
+          "path": "/_astro/IMG_4784.CB27ZWsM_1acGGj.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 720,
+          "path": "/_astro/IMG_4784.CB27ZWsM_Z1noz0l.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 720,
+          "path": "/_astro/IMG_4784.CB27ZWsM_Z1Bg1qp.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4784.CB27ZWsM_Z1nHY4h.webp",
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "id": "cdm2-283bc34f8bd482dd",
+      "collection": "cdm2",
+      "order": 20,
+      "sourceFilename": "IMG_4785.JPG",
+      "sha256": "283bc34f8bd482dd3b39b680738ce579844025faf0c20e7652ca4895a8345999",
+      "pixelSha256": "3bf7bcf406eda8a4a793e4e68a3a0615bd12ad69f7a454bed560faef801bdfde",
+      "bytes": 5942682,
+      "width": 4032,
+      "height": 3024,
+      "captureDate": "2026:09:20 12:49:10",
+      "altField": "/cdm-gallery/cdm2_283bc34f8bd482dd_alt",
+      "alt": "A cyclist rides toward the camera on a gravel towpath beside shrubs and a canal.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 240,
+          "path": "/_astro/IMG_4785.DuTpuwFy_1t15Er.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 240,
+          "path": "/_astro/IMG_4785.DuTpuwFy_1f9Den.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 480,
+          "path": "/_astro/IMG_4785.DuTpuwFy_PDUBz.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 480,
+          "path": "/_astro/IMG_4785.DuTpuwFy_BMtbv.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 720,
+          "path": "/_astro/IMG_4785.DuTpuwFy_Z1UNMv9.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 720,
+          "path": "/_astro/IMG_4785.DuTpuwFy_Z29FeVd.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4785.DuTpuwFy_1XfIxy.webp",
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "id": "cdm2-8cdc758cbed56a24",
+      "collection": "cdm2",
+      "order": 21,
+      "sourceFilename": "IMG_4797.JPG",
+      "sha256": "8cdc758cbed56a24ff9afd0e882b9f4a57cb20c6413fb1a014b34b18fbcb96a3",
+      "pixelSha256": "7e854265ab66dfac3469a5d2fb38c3972dbfcad47b764bd21690a3b768370b0b",
+      "bytes": 4723923,
+      "width": 3024,
+      "height": 4032,
+      "captureDate": "2026:09:21 10:47:43",
+      "altField": "/cdm-gallery/cdm2_8cdc758cbed56a24_alt",
+      "alt": "A wall-mounted information plaque titled L’église de la Madeleine includes text, a church photograph and QR codes.",
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4797.D_0yaW5P_pxuVE.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "height": 427,
+          "path": "/_astro/IMG_4797.D_0yaW5P_bG3vA.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4797.D_0yaW5P_ZMkASd.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "height": 853,
+          "path": "/_astro/IMG_4797.D_0yaW5P_Z11c3jh.webp"
+        },
+        {
+          "format": "avif",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4797.D_0yaW5P_Z2uVrBg.avif"
+        },
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1280,
+          "path": "/_astro/IMG_4797.D_0yaW5P_BMSLz.webp"
+        }
+      ],
+      "detail": {
+        "path": "/_astro/IMG_4797.D_0yaW5P_Z1qmvzE.webp",
+        "width": 1200,
+        "height": 1600
+      }
+    }
+  ]
+}

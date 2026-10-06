@@ -1,0 +1,13 @@
+{
+  "url": "http://127.0.0.1:4322/cdm-photo-gallery/",
+  "conditions": {
+    "viewport": "375x900",
+    "cpuSlowdown": 4,
+    "downloadKbps": 1600,
+    "uploadKbps": 750,
+    "latencyMs": 150
+  },
+  "medianLcpMs": 1468,
+  "maxCls": 0.099378125,
+  "note": "Three cold Chromium lab runs at the recorded URL. This does not establish field LCP, INP or CLS; actual visitor metrics remain unmeasured."
+}

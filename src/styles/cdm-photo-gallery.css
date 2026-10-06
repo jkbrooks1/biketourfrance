@@ -4,6 +4,8 @@
 .cdm-gallery-links a { min-height: 44px; display: inline-flex; align-items: center; }
 .cdm-gallery-area { width: calc(100% - var(--s6)); margin-inline: auto; padding-bottom: var(--s7); }
 .cdm-gallery__tiles { list-style: none; padding: 0; margin: 0; max-width: none; display: flex; flex-wrap: wrap; gap: var(--s3); align-items: flex-start; }
+/* A streamed response can paint the fallback rows before the inline masonry initializer arrives. */
+.js .cdm-gallery__tiles:not([data-masonry-ready]) { visibility: hidden; }
 .cdm-gallery__tile { flex: 0 0 calc(25% - var(--s3)); margin: 0; padding: 0; min-width: 0; }
 .cdm-gallery__tiles[data-masonry-ready] { display: block; position: relative; }
 .cdm-gallery__tiles[data-masonry-ready] .cdm-gallery__tile { position: absolute; }

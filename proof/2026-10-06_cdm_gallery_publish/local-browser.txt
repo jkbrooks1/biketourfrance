@@ -1,0 +1,5 @@
+{
+  "pages": 6,
+  "lightboxCollections": 1,
+  "failures": []
+}

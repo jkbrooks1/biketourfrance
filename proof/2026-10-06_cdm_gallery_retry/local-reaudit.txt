@@ -1,0 +1,6 @@
+{
+  "url": "http://127.0.0.1:4322/cdm-photo-gallery/",
+  "viewports": 6,
+  "variants": 329,
+  "failures": []
+}
