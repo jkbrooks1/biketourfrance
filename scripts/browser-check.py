@@ -1,13 +1,15 @@
 # Browser checks for the built site (style guide v4.4). Serves dist/ locally, loads every route at 375/768/1024/1440 px
 # in Chromium, and writes docs/proof/2026-10-03/browser_report.json plus screenshots. Run after npm run build.
-import json, subprocess, sys, time, re
+import json, subprocess, sys, time, re, os
 from playwright.sync_api import sync_playwright
 
 ROUTES = ['/', '/tours/', '/about/', '/resources/', '/contact/', '/canal-des-deux-mers/',
-          '/canal-des-deux-mers/practical-info/', '/privacy/', '/terms/', '/cookies/', '/404.html']
+          '/canal-des-deux-mers/practical-info/', '/privacy/', '/terms/', '/cookies/', '/404.html',
+          '/cdm-photo-gallery/', '/cdm-photo-gallery/cdm1/', '/cdm-photo-gallery/cdm2/']
 WIDTHS = [375, 768, 1024, 1440]
-OUT = 'docs/proof/2026-10-03'
-PROBE = '/private/tmp/claude-501/-Users-jkbrookspersonal-LocalSiteBuildFiles-00-BTF-MAIN-SITE-ROOT-ON-CLOUDFLARE/91f3485f-b734-4fe4-8c77-f6ef551cb431/scratchpad/_hero_probe.png'
+OUT = os.environ.get('BTF_BROWSER_PROOF_DIR', 'docs/proof/2026-10-03')
+os.makedirs(OUT, exist_ok=True)
+PROBE = os.environ.get('BTF_BROWSER_PROBE_PATH', os.path.join(OUT, 'hero-contrast-probe.png'))
 SCALE = {0, 4, 8, 12, 16, 24, 32, 40, 48, 64}
 srv = subprocess.Popen([sys.executable, '-m', 'http.server', '4399', '-d', 'dist'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 time.sleep(1.5)

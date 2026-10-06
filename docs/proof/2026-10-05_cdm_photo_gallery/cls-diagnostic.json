@@ -1,0 +1,40 @@
+[
+  {
+    "route": "/cdm-photo-gallery/",
+    "shifts": [
+      {
+        "value": 0.031216563464506172,
+        "time": 139.30000007152557,
+        "sources": [
+          {
+            "node": "<ul class=\"cdm-gallery-landing-links\"><li><h2>CDM1 Photo Gallery</h2><p>Canal paths, bridges, riders and stops along the way. Open any photo for a closer look.</p><p>40 photos</p><",
+            "before": {
+              "x": 14,
+              "y": 466.1875,
+              "width": 286,
+              "height": 433.8125,
+              "top": 466.1875,
+              "right": 300,
+              "bottom": 900,
+              "left": 14
+            },
+            "after": {
+              "x": 14,
+              "y": 494.984375,
+              "width": 286,
+              "height": 405.015625,
+              "top": 494.984375,
+              "right": 300,
+              "bottom": 900,
+              "left": 14
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "/cdm-photo-gallery/cdm1/",
+    "shifts": []
+  }
+]

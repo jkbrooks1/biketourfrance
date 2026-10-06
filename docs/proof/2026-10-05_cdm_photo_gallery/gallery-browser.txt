@@ -1,0 +1,12 @@
+{
+  "pages": 18,
+  "lightboxCollections": 2,
+  "failures": [
+    "320/cdm-photo-gallery/: CLS 0.24961162519290125",
+    "320/cdm-photo-gallery/cdm1/: CLS 0.2183950617283951",
+    "320/cdm-photo-gallery/cdm2/: all photos eagerly loaded",
+    "375/cdm-photo-gallery/: CLS 0.1357296875",
+    "1024/cdm-photo-gallery/cdm2/: all photos eagerly loaded",
+    "1440/cdm-photo-gallery/cdm2/: all photos eagerly loaded"
+  ]
+}

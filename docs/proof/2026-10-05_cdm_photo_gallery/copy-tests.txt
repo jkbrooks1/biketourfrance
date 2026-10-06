@@ -1,0 +1,30 @@
+
+> btf-migration@0.1.0 copy:test
+> node --test scripts/copy/lib.test.mjs && node scripts/copy/negative-tests.mjs
+
+✔ reads the named copy authority when tabs are reordered (10.945792ms)
+✔ missing named tab fails without reading a substitute (1.641917ms)
+✔ a conflicting legacy tab override fails before authentication (0.129292ms)
+✔ the matching legacy override remains compatible (1.3335ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 485.248333
+PASS  fixture is structurally valid
+PASS  missing approved field fails closed
+PASS  duplicate approved field fails closed
+PASS  unknown approved field fails closed
+PASS  third Sheet column fails closed
+PASS  fixture is refused in deployment contexts
+PASS  missing credentials fail closed
+FAIL  rendered native site matches the local deterministic snapshot: Expected values to be strictly equal:
+
+1 !== 0
+
+PASS  deliberate copy mismatch fails the rendered gate
+PASS  rendered text with no approved field fails the rendered gate
+copy:test  9 passed, 1 failed

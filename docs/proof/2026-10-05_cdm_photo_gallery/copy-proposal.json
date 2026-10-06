@@ -1,0 +1,593 @@
+{
+  "status": "New gallery copy for owner review; yellow Sheet cells do not constitute approval.",
+  "fields": [
+    {
+      "field": "/cdm-gallery/heading",
+      "value": "CDM Photo Gallery",
+      "route": "*",
+      "codeLocation": "src/components/Footer.astro",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/meta_title",
+      "value": "CDM Photo Gallery",
+      "route": "/cdm-photo-gallery/",
+      "codeLocation": "src/pages/cdm-photo-gallery/index.astro",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/meta_description",
+      "value": "Explore the CDM1 and CDM2 photo collections from BikeTourFrance, with canal paths, riders, towns and moments along the way.",
+      "route": "/cdm-photo-gallery/",
+      "codeLocation": "src/pages/cdm-photo-gallery/index.astro",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/intro",
+      "value": "Two photo collections from the Canal des Deux Mers. Browse the paths, people and everyday moments along the way.",
+      "route": "/cdm-photo-gallery/",
+      "codeLocation": "src/pages/cdm-photo-gallery/index.astro",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_heading",
+      "value": "CDM1 Photo Gallery",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/pages/cdm-photo-gallery/[collection].astro",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_intro",
+      "value": "Canal paths, bridges, riders and stops along the way. Open any photo for a closer look.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/pages/cdm-photo-gallery/[collection].astro",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery-cdm1/meta_title",
+      "value": "CDM1 Photo Gallery",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/pages/cdm-photo-gallery/[collection].astro",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery-cdm1/meta_description",
+      "value": "Browse the CDM1 collection from BikeTourFrance: canal paths, bridges, riders and stops along the way, with full-size photo viewing.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/pages/cdm-photo-gallery/[collection].astro",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm2_heading",
+      "value": "CDM2 Photo Gallery",
+      "route": "/cdm-photo-gallery/cdm2/",
+      "codeLocation": "src/pages/cdm-photo-gallery/[collection].astro",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm2_intro",
+      "value": "More moments beside the canals, from bicycles and markets to riding guides and shared meals. Open any photo for a closer look.",
+      "route": "/cdm-photo-gallery/cdm2/",
+      "codeLocation": "src/pages/cdm-photo-gallery/[collection].astro",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery-cdm2/meta_title",
+      "value": "CDM2 Photo Gallery",
+      "route": "/cdm-photo-gallery/cdm2/",
+      "codeLocation": "src/pages/cdm-photo-gallery/[collection].astro",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery-cdm2/meta_description",
+      "value": "Browse the CDM2 collection from BikeTourFrance: bicycles, markets, riding guides and shared meals, with full-size photo viewing.",
+      "route": "/cdm-photo-gallery/cdm2/",
+      "codeLocation": "src/pages/cdm-photo-gallery/[collection].astro",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_link",
+      "value": "Browse CDM1 photos",
+      "route": "*",
+      "codeLocation": "src/pages/cdm-photo-gallery/index.astro",
+      "required": false
+    },
+    {
+      "field": "/cdm-gallery/cdm2_link",
+      "value": "Browse CDM2 photos",
+      "route": "*",
+      "codeLocation": "src/pages/cdm-photo-gallery/index.astro",
+      "required": false
+    },
+    {
+      "field": "/cdm-gallery/back_link",
+      "value": "All CDM photo galleries",
+      "route": "*",
+      "codeLocation": "src/pages/cdm-photo-gallery/[collection].astro",
+      "required": false
+    },
+    {
+      "field": "/cdm-gallery/photo_count_label",
+      "value": "photos",
+      "route": "*",
+      "codeLocation": "src/pages/cdm-photo-gallery/[collection].astro",
+      "required": false
+    },
+    {
+      "field": "/cdm-gallery/navigation_label",
+      "value": "CDM photo galleries",
+      "route": "*",
+      "codeLocation": "src/pages/cdm-photo-gallery/[collection].astro",
+      "required": false
+    },
+    {
+      "field": "/cdm-gallery/open_help",
+      "value": "Select a photo to open the viewer.",
+      "route": "*",
+      "codeLocation": "src/components/CdmPhotoGallery.astro",
+      "required": false
+    },
+    {
+      "field": "/cdm-gallery/lightbox_title",
+      "value": "Photo viewer",
+      "route": "*",
+      "codeLocation": "src/components/CdmPhotoGallery.astro",
+      "required": false
+    },
+    {
+      "field": "/cdm-gallery/close",
+      "value": "Close",
+      "route": "*",
+      "codeLocation": "src/components/CdmPhotoGallery.astro",
+      "required": false
+    },
+    {
+      "field": "/cdm-gallery/previous",
+      "value": "Previous photo",
+      "route": "*",
+      "codeLocation": "src/components/CdmPhotoGallery.astro",
+      "required": false
+    },
+    {
+      "field": "/cdm-gallery/next",
+      "value": "Next photo",
+      "route": "*",
+      "codeLocation": "src/components/CdmPhotoGallery.astro",
+      "required": false
+    },
+    {
+      "field": "/cdm-gallery/keyboard_help",
+      "value": "Use the arrow keys to move between photos. Press Escape to close.",
+      "route": "*",
+      "codeLocation": "src/components/CdmPhotoGallery.astro",
+      "required": false
+    },
+    {
+      "field": "/cdm-gallery/cdm1_7f68703ad5c23d61_alt",
+      "value": "A cyclist riding away on a paved path between hedges and trees under a blue sky.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_a4d1be44bd28d570_alt",
+      "value": "A cycle path curves past a blue bicycle sign at a road junction.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_a01802f64cdb9965_alt",
+      "value": "A suspension bridge crosses a river beyond a stone wall under cloudy skies.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_d5d527289de1d74a_alt",
+      "value": "People stand beside a white boat in a canal lock, next to a small control cabin.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_8f2c9ea02664e9f0_alt",
+      "value": "Water fills a stone-lined canal lock between grassy banks and trees.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_1990d55c86fa7035_alt",
+      "value": "A gravel towpath follows a canal beneath trees, with sunlight on the water.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_88a120bab432488c_alt",
+      "value": "A cyclist rides away on a shaded paved path beside a canal.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_3ce2d0eb9bd45c24_alt",
+      "value": "A cyclist crosses a narrow gravel bridge with water on both sides.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_367a2fa64cdb80f8_alt",
+      "value": "A shaded canal path passes beneath tall trees beside a wooden railing.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_366244b380b9f863_alt",
+      "value": "A long channel of water crosses a concrete aqueduct with paths on both sides.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_7734acb3db643db5_alt",
+      "value": "Boats sit beside a long concrete water channel stretching toward trees.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_c6dfb4f9a289ce35_alt",
+      "value": "A riverside pub with a sign reading The Danu stands above a stone bridge arch.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_92a476a59d024ec7_alt",
+      "value": "Two cyclists ride along a town street with a large 30 road marking.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_15733cee3f1e0b5a_alt",
+      "value": "A canal reflects trees and a pale building beneath a clear blue sky.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_e9e6586e51dfe82a_alt",
+      "value": "A paved path runs straight beneath tall trees with dappled sunlight.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_64137856b3da7e83_alt",
+      "value": "Long tree shadows fall across a paved path beside green fields.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_527093082c289f38_alt",
+      "value": "Phone screenshot of a BikeTourFrance riding guide with a Toulouse heading and an illustrated building.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_a6c8e23da1df5477_alt",
+      "value": "Moored boats sit below an old stone bridge reflected in a canal.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_e7d4c77b88559971_alt",
+      "value": "A low building beside a road carries the sign Les Vergers du Canal.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_447621a90188ae9f_alt",
+      "value": "A pale stone memorial stands on a square base beside a ploughed field.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_07dbf791aa3f701d_alt",
+      "value": "A stone-edged canal passes homes and a tall narrow tree beneath blue skies.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_14c70267e3e8d32d_alt",
+      "value": "A town street follows a canal between old buildings, with a tower in the distance.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_46de05ddac2c6592_alt",
+      "value": "A smiling cyclist wearing yellow glasses takes a selfie in front of round stone towers.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_fbe9c36d2b2693a7_alt",
+      "value": "A restaurant table holds a plate of meat and vegetables with sliced tomatoes and drinks.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_d3f76238429211af_alt",
+      "value": "A weathered yellow building has a blue wooden garage door and a small shuttered window.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_c90a305ef39c58c4_alt",
+      "value": "A broad gravel path crosses calm water beside reeds and trees.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_1b40eb892c1fc67b_alt",
+      "value": "Reeds grow beside the stone wall of a canal crossing, with trees beyond.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_da279a6021ecb20f_alt",
+      "value": "A cyclist in yellow glasses takes a selfie beside a tree-lined canal and towpath.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_7c99450191c66dc6_alt",
+      "value": "A canal curves past a stone towpath, moored boats and tall trees.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_ffbca6de150fc7f1_alt",
+      "value": "Three smiling people take a selfie around a restaurant table.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_7ed840d66e9ad03a_alt",
+      "value": "A fish counter displays rows of red and silver fish on ice beneath price labels.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_561bafe5aff2e2c8_alt",
+      "value": "Large silver fish lie on ice at a market counter beside smaller red fish.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_65549a14c4c04b9e_alt",
+      "value": "A cyclist rides across a suspension bridge toward its central tower under cloudy skies.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_df99ed89439a5013_alt",
+      "value": "A cyclist bends over a small stone fountain beside an old church entrance.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_939d5b94d4ee4664_alt",
+      "value": "A cyclist crosses a narrow gravel aqueduct path beside a railing and water.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_8984f3682ed07c89_alt",
+      "value": "A canal reflects trees and a bridge with circular openings beneath a pale moon.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_3e2f93340b82df4e_alt",
+      "value": "A brick bridge with patterned stonework crosses a canal bordered by trees.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_28bda3c5ac7d2051_alt",
+      "value": "A cyclist in a yellow top rides through a narrow path under a graffiti-covered bridge.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_57ff5e48ef8d95a0_alt",
+      "value": "A cyclist in a patterned jersey approaches along a narrow canal path beneath a bridge.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm1_15a6b1ce00490898_alt",
+      "value": "A blue touring bicycle leans against a brick bridge parapet above a tree-lined canal.",
+      "route": "/cdm-photo-gallery/cdm1/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm2_fd6ef587b12f46c4_alt",
+      "value": "A group of cyclists rides toward the camera on a shaded path beneath leafy trees.",
+      "route": "/cdm-photo-gallery/cdm2/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm2_72beaa14c115fb6f_alt",
+      "value": "Loaded touring bicycles stand against a wooden building with the words Créon Fête le vélo.",
+      "route": "/cdm-photo-gallery/cdm2/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm2_197a9b403afefd6e_alt",
+      "value": "Touring bicycles and a cyclist stand beside a wooden building beneath a deep roof overhang.",
+      "route": "/cdm-photo-gallery/cdm2/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm2_45b8c5be246ff253_alt",
+      "value": "Phone screenshot of a BikeTourFrance riding guide headed Bordeaux to Garonne, with an illustration and route notes.",
+      "route": "/cdm-photo-gallery/cdm2/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm2_0b2ea06efc925c01_alt",
+      "value": "A smiling cyclist in sunglasses takes a selfie above a canal lined with moored boats.",
+      "route": "/cdm-photo-gallery/cdm2/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm2_39394b8639cc567e_alt",
+      "value": "Moored boats line a canal bordered by trees and waterside buildings under blue skies.",
+      "route": "/cdm-photo-gallery/cdm2/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm2_a723a73dff55a956_alt",
+      "value": "Stone columns frame the arches and green courtyard of a cloister in sunlight.",
+      "route": "/cdm-photo-gallery/cdm2/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm2_77ff0d20d18d2b69_alt",
+      "value": "Screenshot of a BikeTourFrance riding guide headed Marmande to Agen, with an illustration and historical notes.",
+      "route": "/cdm-photo-gallery/cdm2/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm2_16c4003fcd414a42_alt",
+      "value": "Screenshot of a BikeTourFrance riding guide headed Agen to Moissac, with an illustrated cloister and route notes.",
+      "route": "/cdm-photo-gallery/cdm2/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm2_3de0edcfd0ab9c8a_alt",
+      "value": "Dark purple vegetables and peppers are arranged on a market stall beside handwritten signs.",
+      "route": "/cdm-photo-gallery/cdm2/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm2_82dce97db2dbb916_alt",
+      "value": "Screenshot of a BikeTourFrance riding guide headed Moissac to Toulouse, with an illustration and historical notes.",
+      "route": "/cdm-photo-gallery/cdm2/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm2_de858a22ac8f9fde_alt",
+      "value": "Screenshot of a BikeTourFrance riding guide headed Toulouse to Castelnaudary, with an illustration and route notes.",
+      "route": "/cdm-photo-gallery/cdm2/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm2_cdec7a3cfab82c37_alt",
+      "value": "Screenshot of a BikeTourFrance riding guide headed Castelnaudary to Carcassonne, with an illustration and route notes.",
+      "route": "/cdm-photo-gallery/cdm2/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm2_1a0de989bbf416e5_alt",
+      "value": "Screenshot of a BikeTourFrance riding guide headed Carcassonne to Tourouzelle, with an illustration and historical notes.",
+      "route": "/cdm-photo-gallery/cdm2/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm2_ce1966cf6b8f1c25_alt",
+      "value": "Screenshot of a BikeTourFrance riding guide headed Capestang to Sète, with an illustrated coastal scene and route notes.",
+      "route": "/cdm-photo-gallery/cdm2/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm2_fd8524c6b040e469_alt",
+      "value": "Five people sit around a restaurant table with plates, drinks and large windows behind them.",
+      "route": "/cdm-photo-gallery/cdm2/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm2_3142d98a94b23d8c_alt",
+      "value": "A gravel path follows a canal past shrubs and a young tree supported by wooden stakes.",
+      "route": "/cdm-photo-gallery/cdm2/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm2_0bd445cb3b2f6142_alt",
+      "value": "A canal-side gravel path runs beside dry grass and shrubs beneath streaked white clouds.",
+      "route": "/cdm-photo-gallery/cdm2/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm2_4967b506b49ae644_alt",
+      "value": "A sunny gravel towpath passes a staked young tree with canal water on the right.",
+      "route": "/cdm-photo-gallery/cdm2/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm2_283bc34f8bd482dd_alt",
+      "value": "A cyclist rides toward the camera on a gravel towpath beside shrubs and a canal.",
+      "route": "/cdm-photo-gallery/cdm2/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    },
+    {
+      "field": "/cdm-gallery/cdm2_8cdc758cbed56a24_alt",
+      "value": "A wall-mounted information plaque titled L’église de la Madeleine includes text, a church photograph and QR codes.",
+      "route": "/cdm-photo-gallery/cdm2/",
+      "codeLocation": "src/data/cdm-photo-gallery.ts",
+      "required": true
+    }
+  ]
+}

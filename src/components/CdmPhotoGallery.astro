@@ -1,0 +1,73 @@
+---
+import masonrySource from '../scripts/cdm-gallery-layout.js?raw';
+import { TEXT } from '../data/approved-copy';
+import { getGalleryDelivery, type Collection } from '../data/cdm-photo-gallery';
+
+interface Props { collection: Collection }
+const { collection } = Astro.props;
+const photos = (await getGalleryDelivery()).filter((photo) => photo.collection === collection);
+const sizes = '(min-width: 1024px) 34vw, (min-width: 600px) 50vw, 100vw';
+---
+
+<div class="cdm-gallery" data-cdm-gallery>
+  <ul class="cdm-gallery__tiles" data-gallery-tiles>
+    {photos.map((photo) => (
+      <li
+        class="cdm-gallery__tile"
+        data-gallery-tile
+        data-photo-id={photo.id}
+        data-ratio={photo.width / photo.height}
+        data-seed={parseInt(photo.sha256.slice(0, 4), 16) / 65535}
+      >
+        <a
+          class="cdm-gallery__open"
+          href={photo.detail.path}
+          data-gallery-open
+          data-photo-alt={photo.alt}
+          data-photo-width={photo.detail.width}
+          data-photo-height={photo.detail.height}
+          aria-haspopup="dialog"
+          aria-describedby="gallery-open-help"
+        >
+          <picture>
+            <source type="image/avif" srcset={photo.variants.filter((image) => image.format === 'avif').map((image) => `${image.path} ${image.width}w`).join(', ')} sizes={sizes} />
+            <img
+              src={photo.variants.find((image) => image.format === 'webp' && image.width === 640)?.path ?? photo.variants.find((image) => image.format === 'webp')?.path}
+              srcset={photo.variants.filter((image) => image.format === 'webp').map((image) => `${image.path} ${image.width}w`).join(', ')}
+              sizes={sizes}
+              width={photo.width}
+              height={photo.height}
+              alt={photo.alt}
+              loading="lazy"
+              decoding="async"
+              style={`aspect-ratio: ${photo.width} / ${photo.height}`}
+            />
+          </picture>
+        </a>
+      </li>
+    ))}
+  </ul>
+  <script is:inline set:html={masonrySource}></script>
+  <p id="gallery-open-help" class="cdm-gallery__help">{TEXT['/cdm-gallery/open_help']}</p>
+
+  <dialog class="cdm-lightbox" data-gallery-dialog aria-labelledby="gallery-dialog-title" aria-describedby="gallery-dialog-help">
+    <div class="cdm-lightbox__header">
+      <h2 id="gallery-dialog-title">{TEXT['/cdm-gallery/lightbox_title']}</h2>
+      <button type="button" class="btn btn--secondary" data-gallery-close autofocus>{TEXT['/cdm-gallery/close']}</button>
+    </div>
+    <figure class="cdm-lightbox__figure">
+      <div class="cdm-lightbox__media" data-gallery-media></div>
+      <figcaption data-gallery-caption></figcaption>
+    </figure>
+    <div class="cdm-lightbox__controls">
+      <button type="button" class="btn btn--secondary" data-gallery-previous>{TEXT['/cdm-gallery/previous']}</button>
+      <p class="cdm-lightbox__position" aria-live="polite" aria-atomic="true" data-gallery-position></p>
+      <button type="button" class="btn btn--secondary" data-gallery-next>{TEXT['/cdm-gallery/next']}</button>
+    </div>
+    <p class="cdm-lightbox__help" id="gallery-dialog-help">{TEXT['/cdm-gallery/keyboard_help']}</p>
+  </dialog>
+</div>
+
+<script>
+  import '../scripts/cdm-photo-gallery';
+</script>

@@ -1,0 +1,3460 @@
+{
+ "375/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 288,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 375,
+  "logoH": 40,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 25,
+  "small": [],
+  "buttons": [
+   {
+    "t": "Join the 2027 waitlist",
+    "h": 52,
+    "w": 226,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   },
+   {
+    "t": "Get tour updates",
+    "h": 52,
+    "w": 192,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   },
+   {
+    "t": "Learn about the CDM Tour",
+    "h": 52,
+    "w": 269,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "/canal-des-deux-mers/"
+   },
+   {
+    "t": "About John",
+    "h": 52,
+    "w": 148,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "/about/"
+   },
+   {
+    "t": "More tour photos",
+    "h": 44,
+    "w": 143,
+    "radius": "6px",
+    "pad": "0px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgba(0, 0, 0, 0)",
+    "href": "/canal-des-deux-mers/#gallery-heading"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 13,
+   "16": 44,
+   "18": 6,
+   "22": 1,
+   "28": 4,
+   "40": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "375/tours/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 288,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 375,
+  "logoH": 40,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 24,
+  "small": [],
+  "buttons": [
+   {
+    "t": "2027 CDM Tour Overview",
+    "h": 52,
+    "w": 259,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "/canal-des-deux-mers/"
+   },
+   {
+    "t": "Join the 2027 waitlist",
+    "h": 52,
+    "w": 226,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   },
+   {
+    "t": "I'm interested in a self-guided experience",
+    "h": 76,
+    "w": 335,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   },
+   {
+    "t": "Ask about trip planning",
+    "h": 52,
+    "w": 247,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 12,
+   "16": 33,
+   "18": 1,
+   "28": 3,
+   "40": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "375/about/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 288,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 375,
+  "logoH": 40,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 22,
+  "small": [],
+  "buttons": [
+   {
+    "t": "Question? Send us an email",
+    "h": 52,
+    "w": 281,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   },
+   {
+    "t": "Join the 2027 waitlist",
+    "h": 52,
+    "w": 226,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 11,
+   "16": 34,
+   "18": 1,
+   "28": 3,
+   "40": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "375/resources/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 288,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 375,
+  "logoH": 40,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 71,
+  "small": [],
+  "buttons": [
+   {
+    "t": "Back to the home page",
+    "h": 44,
+    "w": 193,
+    "radius": "6px",
+    "pad": "0px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgba(0, 0, 0, 0)",
+    "href": "/"
+   },
+   {
+    "t": "Open resource library",
+    "h": 52,
+    "w": 230,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "https://resources.biketourfrance.net/"
+   },
+   {
+    "t": "Question? Send us an email",
+    "h": 52,
+    "w": 281,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   },
+   {
+    "t": "Join the 2027 waitlist",
+    "h": 52,
+    "w": 226,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 28,
+   "16": 87,
+   "18": 1,
+   "22": 5,
+   "28": 3,
+   "40": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "375/contact/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 288,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 375,
+  "logoH": 40,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 25,
+  "small": [],
+  "buttons": [
+   {
+    "t": "Question? Send us an email",
+    "h": 52,
+    "w": 281,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 12,
+   "16": 33,
+   "18": 1,
+   "28": 1,
+   "40": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "375/canal-des-deux-mers/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 288,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 375,
+  "logoH": 40,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 24,
+  "small": [],
+  "buttons": [
+   {
+    "t": "Join the 2027 waitlist",
+    "h": 52,
+    "w": 226,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   },
+   {
+    "t": "Ask a question",
+    "h": 52,
+    "w": 174,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 14,
+   "16": 81,
+   "18": 1,
+   "22": 4,
+   "28": 10,
+   "40": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "375/canal-des-deux-mers/practical-info/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 288,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 375,
+  "logoH": 40,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 28,
+  "small": [],
+  "buttons": [
+   {
+    "t": "Question? Send us an email",
+    "h": 52,
+    "w": 281,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   },
+   {
+    "t": "Join the 2027 waitlist",
+    "h": 52,
+    "w": 226,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 12,
+   "16": 66,
+   "18": 1,
+   "22": 16,
+   "28": 4,
+   "40": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "375/privacy/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 288,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 375,
+  "logoH": 40,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 23,
+  "small": [],
+  "buttons": [],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 13,
+   "16": 35,
+   "18": 1,
+   "28": 5,
+   "40": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "375/terms/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 288,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 375,
+  "logoH": 40,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 21,
+  "small": [],
+  "buttons": [],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 13,
+   "16": 31,
+   "18": 1,
+   "28": 5,
+   "40": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "375/cookies/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 288,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 375,
+  "logoH": 40,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 20,
+  "small": [],
+  "buttons": [],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 13,
+   "16": 27,
+   "18": 1,
+   "28": 3,
+   "40": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "375/404.html": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 288,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 375,
+  "logoH": 40,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 26,
+  "small": [],
+  "buttons": [
+   {
+    "t": "Back to the home page",
+    "h": 52,
+    "w": 245,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "/"
+   },
+   {
+    "t": "Resources",
+    "h": 52,
+    "w": 137,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "/resources/"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 12,
+   "16": 31,
+   "18": 1,
+   "40": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "375/cdm-photo-gallery/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 288,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 375,
+  "logoH": 40,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 22,
+  "small": [],
+  "buttons": [
+   {
+    "t": "Browse CDM1 photos",
+    "h": 52,
+    "w": 226,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "/cdm-photo-gallery/cdm1/"
+   },
+   {
+    "t": "Browse CDM2 photos",
+    "h": 52,
+    "w": 229,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "/cdm-photo-gallery/cdm2/"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 11,
+   "16": 30,
+   "18": 1,
+   "28": 2,
+   "40": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "375/cdm-photo-gallery/cdm1/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   4,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 288,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 375,
+  "logoH": 40,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 62,
+  "small": [],
+  "buttons": [],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 11,
+   "16": 28,
+   "18": 1,
+   "40": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "375/cdm-photo-gallery/cdm2/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   4,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 288,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 375,
+  "logoH": 40,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 43,
+  "small": [],
+  "buttons": [],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 11,
+   "16": 28,
+   "18": 1,
+   "40": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "768/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 64,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 768,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 24,
+  "small": [],
+  "buttons": [
+   {
+    "t": "Join the 2027 waitlist",
+    "h": 52,
+    "w": 226,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   },
+   {
+    "t": "Get tour updates",
+    "h": 52,
+    "w": 192,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   },
+   {
+    "t": "Learn about the CDM Tour",
+    "h": 52,
+    "w": 269,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "/canal-des-deux-mers/"
+   },
+   {
+    "t": "About John",
+    "h": 52,
+    "w": 148,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "/about/"
+   },
+   {
+    "t": "More tour photos",
+    "h": 44,
+    "w": 143,
+    "radius": "6px",
+    "pad": "0px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgba(0, 0, 0, 0)",
+    "href": "/canal-des-deux-mers/#gallery-heading"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 13,
+   "16": 43,
+   "18": 6,
+   "22": 1,
+   "28": 4,
+   "40": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "768/tours/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 64,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 768,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 23,
+  "small": [],
+  "buttons": [
+   {
+    "t": "2027 CDM Tour Overview",
+    "h": 52,
+    "w": 259,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "/canal-des-deux-mers/"
+   },
+   {
+    "t": "Join the 2027 waitlist",
+    "h": 52,
+    "w": 226,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   },
+   {
+    "t": "I'm interested in a self-guided experience",
+    "h": 52,
+    "w": 394,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   },
+   {
+    "t": "Ask about trip planning",
+    "h": 52,
+    "w": 247,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 12,
+   "16": 32,
+   "18": 1,
+   "28": 3,
+   "40": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 1,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "768/about/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 64,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 768,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 21,
+  "small": [],
+  "buttons": [
+   {
+    "t": "Question? Send us an email",
+    "h": 52,
+    "w": 281,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   },
+   {
+    "t": "Join the 2027 waitlist",
+    "h": 52,
+    "w": 226,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 11,
+   "16": 33,
+   "18": 1,
+   "28": 3,
+   "40": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "768/resources/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 64,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 768,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 70,
+  "small": [],
+  "buttons": [
+   {
+    "t": "Back to the home page",
+    "h": 44,
+    "w": 193,
+    "radius": "6px",
+    "pad": "0px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgba(0, 0, 0, 0)",
+    "href": "/"
+   },
+   {
+    "t": "Open resource library",
+    "h": 52,
+    "w": 230,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "https://resources.biketourfrance.net/"
+   },
+   {
+    "t": "Question? Send us an email",
+    "h": 52,
+    "w": 281,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   },
+   {
+    "t": "Join the 2027 waitlist",
+    "h": 52,
+    "w": 226,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 28,
+   "16": 86,
+   "18": 1,
+   "22": 5,
+   "28": 3,
+   "40": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 1,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "768/contact/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 64,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 768,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 24,
+  "small": [],
+  "buttons": [
+   {
+    "t": "Question? Send us an email",
+    "h": 52,
+    "w": 281,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 12,
+   "16": 32,
+   "18": 1,
+   "28": 1,
+   "40": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 1,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "768/canal-des-deux-mers/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 64,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 768,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 23,
+  "small": [],
+  "buttons": [
+   {
+    "t": "Join the 2027 waitlist",
+    "h": 52,
+    "w": 226,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   },
+   {
+    "t": "Ask a question",
+    "h": 52,
+    "w": 174,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 14,
+   "16": 80,
+   "18": 1,
+   "22": 4,
+   "28": 10,
+   "40": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "768/canal-des-deux-mers/practical-info/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 64,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 768,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 27,
+  "small": [],
+  "buttons": [
+   {
+    "t": "Question? Send us an email",
+    "h": 52,
+    "w": 281,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   },
+   {
+    "t": "Join the 2027 waitlist",
+    "h": 52,
+    "w": 226,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 12,
+   "16": 65,
+   "18": 1,
+   "22": 16,
+   "28": 4,
+   "40": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "768/privacy/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 64,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 768,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 22,
+  "small": [],
+  "buttons": [],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 13,
+   "16": 34,
+   "18": 1,
+   "28": 5,
+   "40": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "768/terms/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 64,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 768,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 20,
+  "small": [],
+  "buttons": [],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 13,
+   "16": 30,
+   "18": 1,
+   "28": 5,
+   "40": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "768/cookies/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 64,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 768,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 19,
+  "small": [],
+  "buttons": [],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 13,
+   "16": 26,
+   "18": 1,
+   "28": 3,
+   "40": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "768/404.html": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 64,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 768,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 25,
+  "small": [],
+  "buttons": [
+   {
+    "t": "Back to the home page",
+    "h": 52,
+    "w": 245,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "/"
+   },
+   {
+    "t": "Resources",
+    "h": 52,
+    "w": 137,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "/resources/"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 12,
+   "16": 30,
+   "18": 1,
+   "40": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "768/cdm-photo-gallery/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 64,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 768,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 21,
+  "small": [],
+  "buttons": [
+   {
+    "t": "Browse CDM1 photos",
+    "h": 52,
+    "w": 226,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "/cdm-photo-gallery/cdm1/"
+   },
+   {
+    "t": "Browse CDM2 photos",
+    "h": 52,
+    "w": 229,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "/cdm-photo-gallery/cdm2/"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 11,
+   "16": 29,
+   "18": 1,
+   "28": 2,
+   "40": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "768/cdm-photo-gallery/cdm1/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   4,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 64,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 768,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 61,
+  "small": [],
+  "buttons": [],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 11,
+   "16": 27,
+   "18": 1,
+   "40": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "768/cdm-photo-gallery/cdm2/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   4,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 64,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 768,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 42,
+  "small": [],
+  "buttons": [],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 11,
+   "16": 27,
+   "18": 1,
+   "40": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "1024/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 72,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 1024,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 24,
+  "small": [],
+  "buttons": [
+   {
+    "t": "Join the 2027 waitlist",
+    "h": 52,
+    "w": 226,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   },
+   {
+    "t": "Get tour updates",
+    "h": 52,
+    "w": 192,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   },
+   {
+    "t": "Learn about the CDM Tour",
+    "h": 52,
+    "w": 269,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "/canal-des-deux-mers/"
+   },
+   {
+    "t": "About John",
+    "h": 52,
+    "w": 148,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "/about/"
+   },
+   {
+    "t": "More tour photos",
+    "h": 44,
+    "w": 143,
+    "radius": "6px",
+    "pad": "0px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgba(0, 0, 0, 0)",
+    "href": "/canal-des-deux-mers/#gallery-heading"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 13,
+   "16": 43,
+   "18": 6,
+   "28": 1,
+   "36": 4,
+   "56": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "1024/tours/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 72,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 1024,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 23,
+  "small": [],
+  "buttons": [
+   {
+    "t": "2027 CDM Tour Overview",
+    "h": 52,
+    "w": 259,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "/canal-des-deux-mers/"
+   },
+   {
+    "t": "Join the 2027 waitlist",
+    "h": 52,
+    "w": 226,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   },
+   {
+    "t": "I'm interested in a self-guided experience",
+    "h": 52,
+    "w": 394,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   },
+   {
+    "t": "Ask about trip planning",
+    "h": 52,
+    "w": 247,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 12,
+   "16": 32,
+   "18": 1,
+   "36": 3,
+   "56": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 1,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "1024/about/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 72,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 1024,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 21,
+  "small": [],
+  "buttons": [
+   {
+    "t": "Question? Send us an email",
+    "h": 52,
+    "w": 281,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   },
+   {
+    "t": "Join the 2027 waitlist",
+    "h": 52,
+    "w": 226,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 11,
+   "16": 33,
+   "18": 1,
+   "36": 3,
+   "56": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "1024/resources/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 72,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 1024,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 70,
+  "small": [],
+  "buttons": [
+   {
+    "t": "Back to the home page",
+    "h": 44,
+    "w": 193,
+    "radius": "6px",
+    "pad": "0px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgba(0, 0, 0, 0)",
+    "href": "/"
+   },
+   {
+    "t": "Open resource library",
+    "h": 52,
+    "w": 230,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "https://resources.biketourfrance.net/"
+   },
+   {
+    "t": "Question? Send us an email",
+    "h": 52,
+    "w": 281,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   },
+   {
+    "t": "Join the 2027 waitlist",
+    "h": 52,
+    "w": 226,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 28,
+   "16": 86,
+   "18": 1,
+   "28": 5,
+   "36": 3,
+   "56": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 43,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "1024/contact/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 72,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 1024,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 24,
+  "small": [],
+  "buttons": [
+   {
+    "t": "Question? Send us an email",
+    "h": 52,
+    "w": 281,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 12,
+   "16": 32,
+   "18": 1,
+   "36": 1,
+   "56": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 1,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "1024/canal-des-deux-mers/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 72,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 1024,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 23,
+  "small": [],
+  "buttons": [
+   {
+    "t": "Join the 2027 waitlist",
+    "h": 52,
+    "w": 226,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   },
+   {
+    "t": "Ask a question",
+    "h": 52,
+    "w": 174,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 14,
+   "16": 80,
+   "18": 1,
+   "28": 8,
+   "36": 6,
+   "56": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "1024/canal-des-deux-mers/practical-info/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 72,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 1024,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 27,
+  "small": [],
+  "buttons": [
+   {
+    "t": "Question? Send us an email",
+    "h": 52,
+    "w": 281,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   },
+   {
+    "t": "Join the 2027 waitlist",
+    "h": 52,
+    "w": 226,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 12,
+   "16": 65,
+   "18": 1,
+   "28": 16,
+   "36": 4,
+   "56": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "1024/privacy/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 72,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 1024,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 22,
+  "small": [],
+  "buttons": [],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 13,
+   "16": 34,
+   "18": 1,
+   "36": 5,
+   "56": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "1024/terms/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 72,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 1024,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 20,
+  "small": [],
+  "buttons": [],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 13,
+   "16": 30,
+   "18": 1,
+   "36": 5,
+   "56": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "1024/cookies/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 72,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 1024,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 19,
+  "small": [],
+  "buttons": [],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 13,
+   "16": 26,
+   "18": 1,
+   "36": 3,
+   "56": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "1024/404.html": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 72,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 1024,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 25,
+  "small": [],
+  "buttons": [
+   {
+    "t": "Back to the home page",
+    "h": 52,
+    "w": 245,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "/"
+   },
+   {
+    "t": "Resources",
+    "h": 52,
+    "w": 137,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "/resources/"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 12,
+   "16": 30,
+   "18": 1,
+   "56": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "1024/cdm-photo-gallery/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 72,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 1024,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 21,
+  "small": [],
+  "buttons": [
+   {
+    "t": "Browse CDM1 photos",
+    "h": 52,
+    "w": 226,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "/cdm-photo-gallery/cdm1/"
+   },
+   {
+    "t": "Browse CDM2 photos",
+    "h": 52,
+    "w": 229,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "/cdm-photo-gallery/cdm2/"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 11,
+   "16": 29,
+   "18": 1,
+   "36": 2,
+   "56": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "1024/cdm-photo-gallery/cdm1/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   4,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 72,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 1024,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 61,
+  "small": [],
+  "buttons": [],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 11,
+   "16": 27,
+   "18": 1,
+   "56": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "1024/cdm-photo-gallery/cdm2/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   4,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 72,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 1024,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 42,
+  "small": [],
+  "buttons": [],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 11,
+   "16": 27,
+   "18": 1,
+   "56": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "1440/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 72,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 1440,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 24,
+  "small": [],
+  "buttons": [
+   {
+    "t": "Join the 2027 waitlist",
+    "h": 52,
+    "w": 226,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   },
+   {
+    "t": "Get tour updates",
+    "h": 52,
+    "w": 192,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   },
+   {
+    "t": "Learn about the CDM Tour",
+    "h": 52,
+    "w": 269,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "/canal-des-deux-mers/"
+   },
+   {
+    "t": "About John",
+    "h": 52,
+    "w": 148,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "/about/"
+   },
+   {
+    "t": "More tour photos",
+    "h": 44,
+    "w": 143,
+    "radius": "6px",
+    "pad": "0px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgba(0, 0, 0, 0)",
+    "href": "/canal-des-deux-mers/#gallery-heading"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 13,
+   "16": 43,
+   "18": 6,
+   "28": 1,
+   "36": 4,
+   "56": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "1440/tours/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 72,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 1440,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 23,
+  "small": [],
+  "buttons": [
+   {
+    "t": "2027 CDM Tour Overview",
+    "h": 52,
+    "w": 259,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "/canal-des-deux-mers/"
+   },
+   {
+    "t": "Join the 2027 waitlist",
+    "h": 52,
+    "w": 226,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   },
+   {
+    "t": "I'm interested in a self-guided experience",
+    "h": 52,
+    "w": 394,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   },
+   {
+    "t": "Ask about trip planning",
+    "h": 52,
+    "w": 247,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 12,
+   "16": 32,
+   "18": 1,
+   "36": 3,
+   "56": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 1,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "1440/about/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 72,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 1440,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 21,
+  "small": [],
+  "buttons": [
+   {
+    "t": "Question? Send us an email",
+    "h": 52,
+    "w": 281,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   },
+   {
+    "t": "Join the 2027 waitlist",
+    "h": 52,
+    "w": 226,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 11,
+   "16": 33,
+   "18": 1,
+   "36": 3,
+   "56": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "1440/resources/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 72,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 1440,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 70,
+  "small": [],
+  "buttons": [
+   {
+    "t": "Back to the home page",
+    "h": 44,
+    "w": 193,
+    "radius": "6px",
+    "pad": "0px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgba(0, 0, 0, 0)",
+    "href": "/"
+   },
+   {
+    "t": "Open resource library",
+    "h": 52,
+    "w": 230,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "https://resources.biketourfrance.net/"
+   },
+   {
+    "t": "Question? Send us an email",
+    "h": 52,
+    "w": 281,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   },
+   {
+    "t": "Join the 2027 waitlist",
+    "h": 52,
+    "w": 226,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 28,
+   "16": 86,
+   "18": 1,
+   "28": 5,
+   "36": 3,
+   "56": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 43,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "1440/contact/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 72,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 1440,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 24,
+  "small": [],
+  "buttons": [
+   {
+    "t": "Question? Send us an email",
+    "h": 52,
+    "w": 281,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 12,
+   "16": 32,
+   "18": 1,
+   "36": 1,
+   "56": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 1,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "1440/canal-des-deux-mers/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 72,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 1440,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 23,
+  "small": [],
+  "buttons": [
+   {
+    "t": "Join the 2027 waitlist",
+    "h": 52,
+    "w": 226,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   },
+   {
+    "t": "Ask a question",
+    "h": 52,
+    "w": 174,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 14,
+   "16": 80,
+   "18": 1,
+   "28": 8,
+   "36": 6,
+   "56": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "1440/canal-des-deux-mers/practical-info/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 72,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 1440,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 27,
+  "small": [],
+  "buttons": [
+   {
+    "t": "Question? Send us an email",
+    "h": 52,
+    "w": 281,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   },
+   {
+    "t": "Join the 2027 waitlist",
+    "h": 52,
+    "w": 226,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "https://forms.gle/thPjnUyKGCoZb6SM7"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 12,
+   "16": 65,
+   "18": 1,
+   "28": 16,
+   "36": 4,
+   "56": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "1440/privacy/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 72,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 1440,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 22,
+  "small": [],
+  "buttons": [],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 13,
+   "16": 34,
+   "18": 1,
+   "36": 5,
+   "56": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "1440/terms/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 72,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 1440,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 20,
+  "small": [],
+  "buttons": [],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 13,
+   "16": 30,
+   "18": 1,
+   "36": 5,
+   "56": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "1440/cookies/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 72,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 1440,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 19,
+  "small": [],
+  "buttons": [],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 13,
+   "16": 26,
+   "18": 1,
+   "36": 3,
+   "56": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "1440/404.html": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 72,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 1440,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 25,
+  "small": [],
+  "buttons": [
+   {
+    "t": "Back to the home page",
+    "h": 52,
+    "w": 245,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "/"
+   },
+   {
+    "t": "Resources",
+    "h": 52,
+    "w": 137,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(245, 240, 232)",
+    "href": "/resources/"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 12,
+   "16": 30,
+   "18": 1,
+   "56": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "1440/cdm-photo-gallery/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   3,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 72,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 1440,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 21,
+  "small": [],
+  "buttons": [
+   {
+    "t": "Browse CDM1 photos",
+    "h": 52,
+    "w": 226,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "/cdm-photo-gallery/cdm1/"
+   },
+   {
+    "t": "Browse CDM2 photos",
+    "h": 52,
+    "w": 229,
+    "radius": "6px",
+    "pad": "12px 24px",
+    "fw": "600",
+    "fs": "16px",
+    "cursor": "pointer",
+    "bg": "rgb(45, 80, 22)",
+    "href": "/cdm-photo-gallery/cdm2/"
+   }
+  ],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 11,
+   "16": 29,
+   "18": 1,
+   "36": 2,
+   "56": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "1440/cdm-photo-gallery/cdm1/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   4,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 72,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 1440,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 61,
+  "small": [],
+  "buttons": [],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 11,
+   "16": 27,
+   "18": 1,
+   "56": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "1440/cdm-photo-gallery/cdm2/": {
+  "overflowX": 0,
+  "landmarks": [
+   1,
+   4,
+   1,
+   1
+  ],
+  "h1": 1,
+  "headingJumps": 0,
+  "headerH": 72,
+  "headerBg": "rgb(45, 80, 22)",
+  "headerW": 1440,
+  "logoH": 48,
+  "footerLogoH": 40,
+  "footerBg": "rgb(45, 80, 22)",
+  "imgNoAlt": 0,
+  "interactive": 42,
+  "small": [],
+  "buttons": [],
+  "badHref": 0,
+  "fontSizes": {
+   "14": 11,
+   "16": 27,
+   "18": 1,
+   "56": 1
+  },
+  "tinyText": [],
+  "fontFamily": [
+   "Montserrat, system-ui, sans-serif"
+  ],
+  "fontLoaded": true,
+  "offScale": [],
+  "longLines": 0,
+  "robots": "index, follow",
+  "framer": false,
+  "errors": [],
+  "status": 200
+ },
+ "_interaction": {
+  "hero_text_min_contrast": {
+   "375": 6.79,
+   "768": 6.94,
+   "1024": 6.93,
+   "1440": 6.93
+  },
+  "focusable": 24,
+  "tab_reached_distinct": 24,
+  "focus_style_ok": true,
+  "before": {
+   "bg": "rgb(45, 80, 22)",
+   "tr": "none",
+   "sh": "rgba(0, 0, 0, 0.1) 0px 2px 4px 0px"
+  },
+  "hover": {
+   "bg": "rgb(31, 61, 17)",
+   "tr": "matrix(1, 0, 0, 1, 0, -2)",
+   "sh": "rgba(0, 0, 0, 0.15) 0px 4px 12px 0px"
+  },
+  "active": {
+   "bg": "rgb(23, 48, 12)",
+   "tr": "matrix(1, 0, 0, 1, 0, 0)",
+   "sh": "none"
+  }
+ }
+}

@@ -1,0 +1,31 @@
+
+> btf-migration@0.1.0 check:browser
+> python3 scripts/browser-check.py
+
+failures: 0
+{
+ "hero_text_min_contrast": {
+  "375": 6.79,
+  "768": 6.94,
+  "1024": 6.93,
+  "1440": 6.93
+ },
+ "focusable": 24,
+ "tab_reached_distinct": 24,
+ "focus_style_ok": true,
+ "before": {
+  "bg": "rgb(45, 80, 22)",
+  "tr": "none",
+  "sh": "rgba(0, 0, 0, 0.1) 0px 2px 4px 0px"
+ },
+ "hover": {
+  "bg": "rgb(31, 61, 17)",
+  "tr": "matrix(1, 0, 0, 1, 0, -2)",
+  "sh": "rgba(0, 0, 0, 0.15) 0px 4px 12px 0px"
+ },
+ "active": {
+  "bg": "rgb(23, 48, 12)",
+  "tr": "matrix(1, 0, 0, 1, 0, 0)",
+  "sh": "none"
+ }
+}

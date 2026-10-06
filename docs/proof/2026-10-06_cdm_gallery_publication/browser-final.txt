@@ -1,0 +1,8 @@
+{
+  "pages": 18,
+  "lightboxCollections": 2,
+  "failures": [
+    "cdm1: scroll restored",
+    "Native lazy photo loads after entering viewport"
+  ]
+}

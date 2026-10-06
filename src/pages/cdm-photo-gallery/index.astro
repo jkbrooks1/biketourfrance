@@ -1,0 +1,27 @@
+---
+import galleryFont from '../../../node_modules/@fontsource-variable/montserrat/files/montserrat-latin-wght-normal.woff2?url';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import '../../styles/cdm-photo-gallery.css';
+import { TEXT } from '../../data/approved-copy';
+import { GALLERY_ROOT, COLLECTIONS, galleryPhotos } from '../../data/cdm-photo-gallery';
+---
+
+<BaseLayout path={GALLERY_ROOT} title={TEXT['/cdm-gallery/meta_title']} description={TEXT['/cdm-gallery/meta_description']}>
+  <link slot="head" rel="preload" href={galleryFont} as="font" type="font/woff2" crossorigin="anonymous" />
+  <section class="section">
+    <div class="container">
+      <h1>{TEXT['/cdm-gallery/heading']}</h1>
+      <p class="lede">{TEXT['/cdm-gallery/intro']}</p>
+      <ul class="cdm-gallery-landing-links">
+        {COLLECTIONS.map((collection) => (
+          <li>
+            <h2>{TEXT[`/cdm-gallery/${collection}_heading`]}</h2>
+            <p>{TEXT[`/cdm-gallery/${collection}_intro`]}</p>
+            <p>{galleryPhotos.filter((photo) => photo.collection === collection).length} {TEXT['/cdm-gallery/photo_count_label']}</p>
+            <a class="btn btn--primary" href={`${GALLERY_ROOT}${collection}/`}>{TEXT[`/cdm-gallery/${collection}_link`]}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,7 @@
+{
+  "pages": 18,
+  "lightboxCollections": 2,
+  "failures": [
+    "1024/cdm-photo-gallery/cdm1/: long gallery loaded eagerly"
+  ]
+}

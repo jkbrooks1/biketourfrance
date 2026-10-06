@@ -1,0 +1,2342 @@
+{
+  "spreadsheetId": "1vzlhoekeVcx437ajMMFU--1kIrE7DfKYvi8rKhlE9aw",
+  "warning": "Only apply after checking A356:B439 still match sheet-verified-after.json. Clears only new gallery rows, restores previous cell formats, leaves original 354 data rows unchanged. Coordinate code rollback with Sheet rollback.",
+  "requests": [
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1957325162,
+          "startRowIndex": 355,
+          "endRowIndex": 439,
+          "startColumnIndex": 0,
+          "endColumnIndex": 2
+        },
+        "rows": [
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "userEnteredFormat": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.12156863,
+                      "green": 0.16078432,
+                      "blue": 0.21568628
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.16078432,
+                        "blue": 0.21568628
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "userEnteredFormat": {}
+              },
+              {
+                "userEnteredFormat": {}
+              }
+            ]
+          }
+        ],
+        "fields": "userEnteredValue,userEnteredFormat"
+      }
+    }
+  ]
+}

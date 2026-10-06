@@ -1,0 +1,2872 @@
+{
+  "maxAssetBytes": 307200,
+  "photos": [
+    {
+      "id": "cdm1-7f68703ad5c23d61",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 37520
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 27472
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 165335
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 133086
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 62,
+          "estimatedBytes": 274730
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 302542
+        }
+      ],
+      "detail": {
+        "width": 960,
+        "format": "webp",
+        "quality": 70,
+        "estimatedBytes": 302542
+      }
+    },
+    {
+      "id": "cdm1-a4d1be44bd28d570",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 28538
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 19980
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 112021
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 85544
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 211262
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 165932
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 284670
+      }
+    },
+    {
+      "id": "cdm1-a01802f64cdb9965",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 19267
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 13836
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 69770
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 51758
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 144923
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 107486
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 200164
+      }
+    },
+    {
+      "id": "cdm1-d5d527289de1d74a",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 40046
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 30344
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 161605
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 132884
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 62,
+          "estimatedBytes": 260223
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 285584
+        }
+      ],
+      "detail": {
+        "width": 960,
+        "format": "webp",
+        "quality": 70,
+        "estimatedBytes": 285584
+      }
+    },
+    {
+      "id": "cdm1-8f2c9ea02664e9f0",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 30784
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 21644
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 125199
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 95008
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 271156
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 209222
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 55,
+        "estimatedBytes": 282824
+      }
+    },
+    {
+      "id": "cdm1-1990d55c86fa7035",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 36381
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 25672
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 158573
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 122610
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 62,
+          "estimatedBytes": 266744
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 286314
+        }
+      ],
+      "detail": {
+        "width": 960,
+        "format": "webp",
+        "quality": 70,
+        "estimatedBytes": 286314
+      }
+    },
+    {
+      "id": "cdm1-88a120bab432488c",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 33309
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 22470
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 138247
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 99590
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 282987
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 206280
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 62,
+        "estimatedBytes": 287700
+      }
+    },
+    {
+      "id": "cdm1-3ce2d0eb9bd45c24",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 22780
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 17080
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 87700
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 68822
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 185326
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 145684
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 269242
+      }
+    },
+    {
+      "id": "cdm1-367a2fa64cdb80f8",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 41476
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 30896
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 174858
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 138052
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 62,
+          "estimatedBytes": 289245
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 305416
+        }
+      ],
+      "detail": {
+        "width": 960,
+        "format": "webp",
+        "quality": 70,
+        "estimatedBytes": 305416
+      }
+    },
+    {
+      "id": "cdm1-366244b380b9f863",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 19084
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 12244
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 78077
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 53094
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 170268
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 118608
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 235570
+      }
+    },
+    {
+      "id": "cdm1-7734acb3db643db5",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 27247
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 18378
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 107738
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 78782
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 209439
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 155134
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 269976
+      }
+    },
+    {
+      "id": "cdm1-c6dfb4f9a289ce35",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 29508
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 25924
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 88080
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 76490
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 149246
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 122466
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 191642
+      }
+    },
+    {
+      "id": "cdm1-92a476a59d024ec7",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 30928
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 23562
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 114941
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 91010
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 225761
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 180562
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 70,
+        "estimatedBytes": 265122
+      }
+    },
+    {
+      "id": "cdm1-15733cee3f1e0b5a",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 35375
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 24666
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 142236
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 106032
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 300249
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 224986
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 55,
+        "estimatedBytes": 294918
+      }
+    },
+    {
+      "id": "cdm1-e9e6586e51dfe82a",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 36472
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 26916
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 155906
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 123096
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 62,
+          "estimatedBytes": 250079
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 265904
+        }
+      ],
+      "detail": {
+        "width": 960,
+        "format": "webp",
+        "quality": 70,
+        "estimatedBytes": 265904
+      }
+    },
+    {
+      "id": "cdm1-64137856b3da7e83",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 36937
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 27884
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 160897
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 128252
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 62,
+          "estimatedBytes": 258699
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 279798
+        }
+      ],
+      "detail": {
+        "width": 960,
+        "format": "webp",
+        "quality": 70,
+        "estimatedBytes": 279798
+      }
+    },
+    {
+      "id": "cdm1-527093082c289f38",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 33472
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 29468
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 104951
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 93500
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 194372
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 173732
+        }
+      ],
+      "detail": {
+        "width": 1125,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 253854
+      }
+    },
+    {
+      "id": "cdm1-a6c8e23da1df5477",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 27111
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 19076
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 87994
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 63464
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 151761
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 107500
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 175328
+      }
+    },
+    {
+      "id": "cdm1-e7d4c77b88559971",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 22625
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 16140
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 106008
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 85682
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 248165
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 212236
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 48,
+        "estimatedBytes": 295364
+      }
+    },
+    {
+      "id": "cdm1-447621a90188ae9f",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 25176
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 18632
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 108943
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 85320
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 243070
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 194968
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 62,
+        "estimatedBytes": 291108
+      }
+    },
+    {
+      "id": "cdm1-07dbf791aa3f701d",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 29137
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 21982
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 109554
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 85244
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 227685
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 180300
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 70,
+        "estimatedBytes": 277774
+      }
+    },
+    {
+      "id": "cdm1-14c70267e3e8d32d",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 22062
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 15164
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 90197
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 66744
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 198511
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 153350
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 293754
+      }
+    },
+    {
+      "id": "cdm1-46de05ddac2c6592",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 35351
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 27902
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 120397
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 101986
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 229186
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 194532
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 70,
+        "estimatedBytes": 269696
+      }
+    },
+    {
+      "id": "cdm1-fbe9c36d2b2693a7",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 26244
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 17478
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 79403
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 54312
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 142087
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 97196
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 165142
+      }
+    },
+    {
+      "id": "cdm1-d3f76238429211af",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 26737
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 17838
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 121394
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 91008
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 256286
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 206246
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 62,
+        "estimatedBytes": 286552
+      }
+    },
+    {
+      "id": "cdm1-c90a305ef39c58c4",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 27409
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 18998
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 109320
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 80004
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 233933
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 173668
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 70,
+        "estimatedBytes": 275360
+      }
+    },
+    {
+      "id": "cdm1-1b40eb892c1fc67b",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 39409
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 31310
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 150074
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 122448
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 289526
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 240274
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 55,
+        "estimatedBytes": 291398
+      }
+    },
+    {
+      "id": "cdm1-da279a6021ecb20f",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 40151
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 31822
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 138256
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 112414
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 255099
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 209598
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 70,
+        "estimatedBytes": 285452
+      }
+    },
+    {
+      "id": "cdm1-7c99450191c66dc6",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 21922
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 14656
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 85580
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 61778
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 183542
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 134898
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 262418
+      }
+    },
+    {
+      "id": "cdm1-ffbca6de150fc7f1",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 20798
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 13932
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 60924
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 37524
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 129096
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 73942
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 143014
+      }
+    },
+    {
+      "id": "cdm1-7ed840d66e9ad03a",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 27227
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 19556
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 75147
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 51540
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 129330
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 85756
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 139934
+      }
+    },
+    {
+      "id": "cdm1-561bafe5aff2e2c8",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 29913
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 22162
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 103798
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 80378
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 192603
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 145326
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 249064
+      }
+    },
+    {
+      "id": "cdm1-65549a14c4c04b9e",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 29362
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 23350
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 115319
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 97212
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 248592
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 213374
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 62,
+        "estimatedBytes": 299666
+      }
+    },
+    {
+      "id": "cdm1-df99ed89439a5013",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 37875
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 31060
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 156630
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 128650
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 62,
+          "estimatedBytes": 262322
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 297960
+        }
+      ],
+      "detail": {
+        "width": 960,
+        "format": "webp",
+        "quality": 70,
+        "estimatedBytes": 297960
+      }
+    },
+    {
+      "id": "cdm1-939d5b94d4ee4664",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 16638
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 11972
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 62139
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 46142
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 137041
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 105984
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 193646
+      }
+    },
+    {
+      "id": "cdm1-8984f3682ed07c89",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 5961
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 3956
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 17073
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 11818
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 34036
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 23918
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 41350
+      }
+    },
+    {
+      "id": "cdm1-3e2f93340b82df4e",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 15928
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 11632
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 56987
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 41686
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 124732
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 92524
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 169950
+      }
+    },
+    {
+      "id": "cdm1-28bda3c5ac7d2051",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 38047
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 30756
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 151912
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 127420
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 62,
+          "estimatedBytes": 255722
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 283476
+        }
+      ],
+      "detail": {
+        "width": 960,
+        "format": "webp",
+        "quality": 70,
+        "estimatedBytes": 283476
+      }
+    },
+    {
+      "id": "cdm1-57ff5e48ef8d95a0",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 38040
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 30710
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 152934
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 126736
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 62,
+          "estimatedBytes": 256171
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 286142
+        }
+      ],
+      "detail": {
+        "width": 960,
+        "format": "webp",
+        "quality": 70,
+        "estimatedBytes": 286142
+      }
+    },
+    {
+      "id": "cdm1-15a6b1ce00490898",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 24742
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 19572
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 97903
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 78790
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 221714
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 186062
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 70,
+        "estimatedBytes": 293092
+      }
+    },
+    {
+      "id": "cdm2-fd6ef587b12f46c4",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 36695
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 32006
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 138883
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 122878
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 266362
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 240696
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 62,
+        "estimatedBytes": 306276
+      }
+    },
+    {
+      "id": "cdm2-72beaa14c115fb6f",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 24700
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 16862
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 93769
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 68752
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 194808
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 145908
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 269574
+      }
+    },
+    {
+      "id": "cdm2-197a9b403afefd6e",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 22609
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 15052
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 82868
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 57602
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 163939
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 115280
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 209692
+      }
+    },
+    {
+      "id": "cdm2-45b8c5be246ff253",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 39484
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 35064
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 116250
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 106678
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 205800
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 185036
+        }
+      ],
+      "detail": {
+        "width": 1125,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 263404
+      }
+    },
+    {
+      "id": "cdm2-0b2ea06efc925c01",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 24358
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 17408
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 80623
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 59830
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 156172
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 115256
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 199496
+      }
+    },
+    {
+      "id": "cdm2-39394b8639cc567e",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 19207
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 12924
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 71348
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 51566
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 149116
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 110338
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 205142
+      }
+    },
+    {
+      "id": "cdm2-a723a73dff55a956",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 26311
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 17420
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 103037
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 70242
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 212930
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 147226
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 276214
+      }
+    },
+    {
+      "id": "cdm2-77ff0d20d18d2b69",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 37259
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 32512
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 110620
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 98976
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 192509
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 171112
+        }
+      ],
+      "detail": {
+        "width": 1125,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 247466
+      }
+    },
+    {
+      "id": "cdm2-16c4003fcd414a42",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 32396
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 27918
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 100864
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 88806
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 186447
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 165638
+        }
+      ],
+      "detail": {
+        "width": 1125,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 244400
+      }
+    },
+    {
+      "id": "cdm2-3de0edcfd0ab9c8a",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 26406
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 19656
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 84024
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 59116
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 155928
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 107592
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 182666
+      }
+    },
+    {
+      "id": "cdm2-82dce97db2dbb916",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 32840
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 27692
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 92074
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 81700
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 151582
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 133706
+        }
+      ],
+      "detail": {
+        "width": 1125,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 180212
+      }
+    },
+    {
+      "id": "cdm2-de858a22ac8f9fde",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 37527
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 32904
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 115850
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 103474
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 214073
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 191736
+        }
+      ],
+      "detail": {
+        "width": 1125,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 286060
+      }
+    },
+    {
+      "id": "cdm2-cdec7a3cfab82c37",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 35596
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 31748
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 107122
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 95546
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 185484
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 161768
+        }
+      ],
+      "detail": {
+        "width": 1125,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 230206
+      }
+    },
+    {
+      "id": "cdm2-1a0de989bbf416e5",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 32321
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 27934
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 99145
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 88854
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 174040
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 153336
+        }
+      ],
+      "detail": {
+        "width": 1125,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 218860
+      }
+    },
+    {
+      "id": "cdm2-ce1966cf6b8f1c25",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 29415
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 25194
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 86612
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 77130
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 148001
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 131862
+        }
+      ],
+      "detail": {
+        "width": 1125,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 185356
+      }
+    },
+    {
+      "id": "cdm2-fd8524c6b040e469",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 15294
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 11358
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 45622
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 32070
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 90604
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 60780
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 107670
+      }
+    },
+    {
+      "id": "cdm2-3142d98a94b23d8c",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 19743
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 14580
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 79939
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 63858
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 188589
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 155292
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 282340
+      }
+    },
+    {
+      "id": "cdm2-0bd445cb3b2f6142",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 18579
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 13648
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 74613
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 58210
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 173126
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 139988
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 257124
+      }
+    },
+    {
+      "id": "cdm2-4967b506b49ae644",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 18473
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 13688
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 74268
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 57774
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 172884
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 139362
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 255622
+      }
+    },
+    {
+      "id": "cdm2-283bc34f8bd482dd",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 18320
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 13620
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 73187
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 57110
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 169421
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 137154
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 251548
+      }
+    },
+    {
+      "id": "cdm2-8cdc758cbed56a24",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 27256
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 19632
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 105523
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 80804
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 212389
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 165256
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 292596
+      }
+    }
+  ]
+}

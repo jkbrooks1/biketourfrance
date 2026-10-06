@@ -1591,3 +1591,23 @@ verify-dist: 12 pages OK
 - **Image Cache Purge & Rebuild:** Completely removed `.astro`, `node_modules/.cache`, and `dist/`. Rebuilt site to physically generate all 74 `.webp` static variants in `dist/_astro/`.
 - **Playwright Crawler Audit:** 12/12 routes crawled with standard desktop viewport (1440x900). **0 release blockers found** (0 HTTP 404s, 0 broken images, 0 mailto links, 0 rendering failures).
 - **Deployment Status:** ✅ PASSED & LIVE ON CLOUDFLARE PAGES
+
+
+## 2026-10-06T04:50:52.837117+00:00 — CDM Photo Gallery preservation and authorized local guidance repair
+
+Owner authorized use of native website rules and feature-branch validation. Verified clean main/GitHub HEAD d9895e66b65c7a3118f4d612212b08a7c812a052; local tag preserve/cdm-photo-gallery-before-20261005 and /private/tmp/btf-cdm-photo-gallery-before-20261005.bundle preserve before-state. Created feature/cdm-photo-gallery. Added canonical website rules and updated wrapper/branch guard; retired remediation branches remain rejected. Local marker now names verified btf-production; no Pages configuration changed. Gallery uniqueness overrides original all-copies instruction: 64 distinct SHA-256 contents, 40 assigned to CDM1 and 24 to CDM2. No push/deployment or source-drive change.
+
+
+## 2026-10-06T04:58:04.779225+00:00 — CDM gallery unique originals and copy fields
+
+Imported and byte-verified 61 unique originals, 213695229 bytes: CDM1 40, CDM2 21. Initial 64 file-hash contents corrected after decoded RGB pixel comparison found three metadata-only duplicates (CDM2 IMG_4529.JPG, IMG_4578.JPG, IMG_4600.JPG). Exact duplicate exclusion total 39; sources remain unchanged. Full recursive inventory and retained mappings: docs/proof/2026-10-05_cdm_photo_gallery/source-inventory.json. Added 84 new Sheet fields at Approved Site Copy A356:B439; B yellow for owner review; preserved all original 354 fields. Sheet-backed fixture/manifest coordinated. The first validation correctly rejected hyphens in image field names; corrected new keys to underscores in Sheet and local data without changing the gate. Owner review and publication remain pending.
+
+
+## 2026-10-06T05:19:22.474764+00:00 — BTF approved main deployment closeout; gallery draft preserved
+
+Owner clarified yes approved Pages main/deployment, not gallery rule/branch repairs. Fresh API/GitHub readback confirms btf-production already uses main and canonical successful deployment 9aad66bd-59c3-4810-a82c-ce335874b942 at d9895e66b65c7a3118f4d612212b08a7c812a052, completed 2026-10-06T03:11:48.18403Z. No new deployment/settings write needed. Restored only 84 gallery draft Sheet rows to pre-gallery state after checking no newer edits; 354 original values unchanged, full gallery cell/value snapshots preserved. Native ARM64 isolated-main live-Sheet predeploy passes; 12 served pages match pinned deployment, 144 links/assets successful, served approved-copy gate passes. Gallery source stays uncommitted on feature/cdm-photo-gallery; archive /private/tmp/btf-gallery-draft-preserved-20261006.tar.gz; preview stopped. No main push/DNS/routing/Framer/Wrangler/secret changes. Evidence: docs/proof/2026-10-06_btf_main_deployment_closeout/REPORT.md.
+
+
+## 2026-10-06T05:30:28.864196+00:00 — Owner-approved CDM Photo Gallery publication preparation
+
+Owner explicitly instructed “publish it”. Restored the preserved 84 gallery fields to Approved Site Copy A356:B439 after verifying unchanged original 354 values; coordinated gallery manifest/fixture now has 438 fields. Kept existing review-cell formatting. Added gallery-only font preload and immediate dimension-based masonry to prevent initial layout shifts; reduced excessive gaps within the requested desktop tile widths. Lightbox dismissal restores page scroll/focus synchronously, including Escape. All 61 unique originals retained; 100 mounted supported files hash-verified unchanged; 39 exact-content copies excluded and fully mapped. Live-Sheet predeploy/15-page site gate, Astro check (0 errors/warnings, 2 prior hints), copy tests, SEO and 381-link guest journey pass. Final keyboard/mobile/lazy-loading browser verification runs before committing/publication. Existing whole-site browser suite reports zero failures across 56 route/viewport checks. Full inventory/exception/rollback report: docs/CDM_PHOTO_GALLERY_REPORT.md; release proof: docs/proof/2026-10-06_cdm_gallery_publication. No DNS/Pages setting/build-command/secret/routing/Framer/Wrangler changes.

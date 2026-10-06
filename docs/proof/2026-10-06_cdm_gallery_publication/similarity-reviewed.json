@@ -1,0 +1,11 @@
+{
+  "purpose": "Diagnostic only: similar views are not excluded unless they are the same photo. Exact SHA/RGB duplicates already excluded.",
+  "candidates": [
+    {
+      "a": "src/assets/cdm-gallery/cdm2/IMG_4783.JPG",
+      "b": "src/assets/cdm-gallery/cdm2/IMG_4784.JPG",
+      "differenceHashDistance": 2
+    }
+  ],
+  "review": "IMG_4783 and IMG_4784 show distinct exposures: the cyclist has moved and changed riding position, and the camera framing differs. Both distinct photos are retained; no perceptual similarity curation."
+}
