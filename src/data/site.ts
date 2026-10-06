@@ -54,7 +54,7 @@ export function mailto(subject: string, body = ''): string {
   const params = new URLSearchParams({ subject });
   if (body) params.set('body', body);
   // URLSearchParams encodes spaces as "+"; mail clients need %20.
-  return `mailto:${SITE.email}?${params.toString().replace(/\+/g, '%20')}`;
+  return `https://forms.gle/thPjnUyKGCoZb6SM7`;
 }
 
 // No sign-up service is configured on this site, so every "join" or "ask" action is an email.
