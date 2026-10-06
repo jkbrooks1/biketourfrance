@@ -2,6 +2,7 @@ import { getImage } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
 import manifest from './cdm-gallery-manifest.json';
 import deliveryPlan from './cdm-gallery-delivery-plan.json';
+import review from './cdm-gallery-review.json';
 import { TEXT } from './approved-copy';
 
 export type Collection = 'cdm1' | 'cdm2';
@@ -16,11 +17,25 @@ export function sourceFor(photo: (typeof manifest.photos)[number]): ImageMetadat
   return original;
 }
 
-export const galleryPhotos = manifest.photos.map((photo) => {
+export const libraryPhotos = manifest.photos.map((photo) => {
+  const state = review.photos.find((entry) => entry.id === photo.id);
+  if (!state) throw new Error(`Missing photo review: ${photo.id}`);
   const alt = TEXT[photo.altField];
   if (!alt?.trim()) throw new Error(`Missing Sheet description: ${photo.altField}`);
-  return { ...photo, collection: photo.collection as Collection, alt, src: sourceFor(photo) };
+  return { ...photo, photoId: state.photoId, estimated: state.estimated, keep: state.keep, caption: TEXT[state.captionField] ?? '', collection: photo.collection as Collection, alt, src: sourceFor(photo) };
 });
+export const galleryPhotos = libraryPhotos.filter((photo) => photo.keep);
+
+// Review thumbnails remain available when Keep is unchecked; managed originals are retained.
+export async function getReviewThumbnails() {
+  return Promise.all(libraryPhotos.map(async (photo) => {
+    const plan = deliveryPlan.photos.find((entry) => entry.id === photo.id);
+    const variant = plan?.variants.find((entry) => entry.format === 'webp' && entry.width === 320);
+    if (!variant) throw new Error(`Missing review thumbnail plan: ${photo.id}`);
+    const image = await getImage({ src: photo.src, ...variant });
+    return { id: photo.id, collection: photo.collection, thumbnail: image.src, width: 320, height: Math.round(320 * photo.height / photo.width) };
+  }));
+}
 
 // Astro's configured image service generates all delivered images; originals remain in src/assets.
 // Cache this promise so page routes and the generated delivery manifest share transforms.

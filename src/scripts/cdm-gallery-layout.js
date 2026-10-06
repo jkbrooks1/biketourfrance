@@ -41,7 +41,7 @@ for (const gallery of document.querySelectorAll('[data-cdm-gallery]')) {
       readingTop = top; // Later photos never start above earlier photos.
       return { tile, left: unit * start, top, width: tileWidth };
     });
-    list.style.height = `${Math.max(...skyline) - gap}px`;
+    list.style.height = `${Math.max(0, Math.max(...skyline) - gap)}px`;
     list.dataset.masonryReady = 'true';
     for (const { tile, left, top, width: tileWidth } of placements) {
       Object.assign(tile.style, { left: `${left}px`, top: `${top}px`, width: `${tileWidth}px` });
