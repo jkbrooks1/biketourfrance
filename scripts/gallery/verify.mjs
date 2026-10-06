@@ -42,7 +42,9 @@ for (const photo of manifest.photos) {
   if (!kept.some((entry) => entry.id === photo.id)) { assert.equal(output, undefined); continue; }
   assert.equal(output.alt, fields.get(photo.altField));
   assert.ok(output.alt?.trim());
-  assert.deepEqual([output.width, output.height], [photo.width, photo.height]);
+  const crop = JSON.parse(readFileSync('src/data/cdm-gallery-editorial.json', 'utf8')).crop;
+  assert.deepEqual([output.width, output.height], photo.sourceFilename === crop.filename ? [crop.width, crop.height] : [photo.width, photo.height]);
+  assert.deepEqual([output.originalWidth, output.originalHeight], [photo.width, photo.height]);
   for (const variant of [...output.variants, output.detail]) {
     const file = join('dist', variant.path);
     assert.ok(existsSync(file), `Missing image: ${variant.path}`);

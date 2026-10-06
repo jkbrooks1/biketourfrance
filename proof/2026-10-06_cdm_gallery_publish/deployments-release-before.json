@@ -1,0 +1,1089 @@
+[
+  {
+    "id": "64240a36-ecc3-4d0f-a0ec-d4de34ad78c1",
+    "url": "https://64240a36.btf-production.pages.dev",
+    "aliases": [
+      "https://biketourfrance.net",
+      "https://www.biketourfrance.net"
+    ],
+    "environment": "production",
+    "created_on": "2026-10-06T14:10:23.334919Z",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": "2026-10-06T14:15:45.796355Z",
+      "ended_on": "2026-10-06T14:15:56.579767Z",
+      "status": "success"
+    },
+    "deployment_trigger": {
+      "type": "github:push",
+      "metadata": {
+        "branch": "main",
+        "commit_hash": "1785d5f45dcd71bb84fb1f4c4c635e8485a3e96d",
+        "commit_message": "Make CDM photos visible from homepage and render both galleries immediately",
+        "commit_dirty": false
+      }
+    },
+    "stages": [
+      {
+        "name": "queued",
+        "started_on": "2026-10-06T14:10:23.639624Z",
+        "ended_on": "2026-10-06T14:10:23.645199Z",
+        "status": "success"
+      },
+      {
+        "name": "initialize",
+        "started_on": "2026-10-06T14:10:23.645199Z",
+        "ended_on": "2026-10-06T14:10:28.339318Z",
+        "status": "success"
+      },
+      {
+        "name": "clone_repo",
+        "started_on": "2026-10-06T14:10:28.339318Z",
+        "ended_on": "2026-10-06T14:10:44.145206Z",
+        "status": "success"
+      },
+      {
+        "name": "build",
+        "started_on": "2026-10-06T14:10:44.145206Z",
+        "ended_on": "2026-10-06T14:15:45.796355Z",
+        "status": "success"
+      },
+      {
+        "name": "deploy",
+        "started_on": "2026-10-06T14:15:45.796355Z",
+        "ended_on": "2026-10-06T14:15:56.579767Z",
+        "status": "success"
+      }
+    ]
+  },
+  {
+    "id": "865d4995-41de-4966-97cd-d11171e6a0c7",
+    "url": "https://865d4995.btf-production.pages.dev",
+    "aliases": null,
+    "environment": "production",
+    "created_on": "2026-10-06T05:35:26.141523Z",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": "2026-10-06T05:41:54.528612Z",
+      "ended_on": "2026-10-06T05:42:06.463912Z",
+      "status": "success"
+    },
+    "deployment_trigger": {
+      "type": "github:push",
+      "metadata": {
+        "branch": "main",
+        "commit_hash": "20bfe12e7c8d4400ef239c81c88c0f41e51fcbaa",
+        "commit_message": "feat: publish CDM Photo Gallery with 61 unique preserved photos",
+        "commit_dirty": false
+      }
+    },
+    "stages": [
+      {
+        "name": "queued",
+        "started_on": "2026-10-06T05:35:26.405547Z",
+        "ended_on": "2026-10-06T05:35:26.409561Z",
+        "status": "success"
+      },
+      {
+        "name": "initialize",
+        "started_on": "2026-10-06T05:35:26.409561Z",
+        "ended_on": "2026-10-06T05:35:28.47672Z",
+        "status": "success"
+      },
+      {
+        "name": "clone_repo",
+        "started_on": "2026-10-06T05:35:28.47672Z",
+        "ended_on": "2026-10-06T05:35:38.18588Z",
+        "status": "success"
+      },
+      {
+        "name": "build",
+        "started_on": "2026-10-06T05:35:38.18588Z",
+        "ended_on": "2026-10-06T05:41:54.528612Z",
+        "status": "success"
+      },
+      {
+        "name": "deploy",
+        "started_on": "2026-10-06T05:41:54.528612Z",
+        "ended_on": "2026-10-06T05:42:06.463912Z",
+        "status": "success"
+      }
+    ]
+  },
+  {
+    "id": "9aad66bd-59c3-4810-a82c-ce335874b942",
+    "url": "https://9aad66bd.btf-production.pages.dev",
+    "aliases": null,
+    "environment": "production",
+    "created_on": "2026-10-06T03:10:14.725712Z",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": "2026-10-06T03:11:40.688985Z",
+      "ended_on": "2026-10-06T03:11:48.18403Z",
+      "status": "success"
+    },
+    "deployment_trigger": {
+      "type": "github:push",
+      "metadata": {
+        "branch": "main",
+        "commit_hash": "d9895e66b65c7a3118f4d612212b08a7c812a052",
+        "commit_message": "fix(seo): update production robots.txt, json-ld schema, and audit runner",
+        "commit_dirty": false
+      }
+    },
+    "stages": [
+      {
+        "name": "queued",
+        "started_on": "2026-10-06T03:10:14.950061Z",
+        "ended_on": "2026-10-06T03:10:14.954335Z",
+        "status": "success"
+      },
+      {
+        "name": "initialize",
+        "started_on": "2026-10-06T03:10:14.954335Z",
+        "ended_on": "2026-10-06T03:10:18.006726Z",
+        "status": "success"
+      },
+      {
+        "name": "clone_repo",
+        "started_on": "2026-10-06T03:10:18.006726Z",
+        "ended_on": "2026-10-06T03:10:21.904323Z",
+        "status": "success"
+      },
+      {
+        "name": "build",
+        "started_on": "2026-10-06T03:10:21.904323Z",
+        "ended_on": "2026-10-06T03:11:40.688985Z",
+        "status": "success"
+      },
+      {
+        "name": "deploy",
+        "started_on": "2026-10-06T03:11:40.688985Z",
+        "ended_on": "2026-10-06T03:11:48.18403Z",
+        "status": "success"
+      }
+    ]
+  },
+  {
+    "id": "6513cd95-9915-4540-b1b3-3bd4aa59adba",
+    "url": "https://6513cd95.btf-production.pages.dev",
+    "aliases": null,
+    "environment": "production",
+    "created_on": "2026-10-06T02:30:57.716478Z",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": "2026-10-06T02:31:58.203454Z",
+      "ended_on": "2026-10-06T02:32:06.514746Z",
+      "status": "success"
+    },
+    "deployment_trigger": {
+      "type": "github:push",
+      "metadata": {
+        "branch": "main",
+        "commit_hash": "f9518548317cf7a9d7d6c8f0a1fe9e5c97909c3c",
+        "commit_message": "fix(copy): sync updated timeless narrative copy for /resources-library/text_18",
+        "commit_dirty": false
+      }
+    },
+    "stages": [
+      {
+        "name": "queued",
+        "started_on": "2026-10-06T02:30:57.891843Z",
+        "ended_on": "2026-10-06T02:30:57.898176Z",
+        "status": "success"
+      },
+      {
+        "name": "initialize",
+        "started_on": "2026-10-06T02:30:57.898176Z",
+        "ended_on": "2026-10-06T02:31:00.923157Z",
+        "status": "success"
+      },
+      {
+        "name": "clone_repo",
+        "started_on": "2026-10-06T02:31:00.923157Z",
+        "ended_on": "2026-10-06T02:31:05.496211Z",
+        "status": "success"
+      },
+      {
+        "name": "build",
+        "started_on": "2026-10-06T02:31:05.496211Z",
+        "ended_on": "2026-10-06T02:31:58.203454Z",
+        "status": "success"
+      },
+      {
+        "name": "deploy",
+        "started_on": "2026-10-06T02:31:58.203454Z",
+        "ended_on": "2026-10-06T02:32:06.514746Z",
+        "status": "success"
+      }
+    ]
+  },
+  {
+    "id": "912b332f-9c1e-42da-a4ae-7b7739703152",
+    "url": "https://912b332f.btf-production.pages.dev",
+    "aliases": null,
+    "environment": "production",
+    "created_on": "2026-10-06T02:24:39.719841Z",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": "2026-10-06T02:26:11.878507Z",
+      "ended_on": "2026-10-06T02:26:20.400267Z",
+      "status": "success"
+    },
+    "deployment_trigger": {
+      "type": "github:push",
+      "metadata": {
+        "branch": "main",
+        "commit_hash": "bdddf66899e323dfda56ff9a38fcbaf4cee08774",
+        "commit_message": "fix(audio): point resources page to non-offending R2 audio file name",
+        "commit_dirty": false
+      }
+    },
+    "stages": [
+      {
+        "name": "queued",
+        "started_on": "2026-10-06T02:24:39.86741Z",
+        "ended_on": "2026-10-06T02:24:39.869878Z",
+        "status": "success"
+      },
+      {
+        "name": "initialize",
+        "started_on": "2026-10-06T02:24:39.869878Z",
+        "ended_on": "2026-10-06T02:24:43.1082Z",
+        "status": "success"
+      },
+      {
+        "name": "clone_repo",
+        "started_on": "2026-10-06T02:24:43.1082Z",
+        "ended_on": "2026-10-06T02:24:48.814047Z",
+        "status": "success"
+      },
+      {
+        "name": "build",
+        "started_on": "2026-10-06T02:24:48.814047Z",
+        "ended_on": "2026-10-06T02:26:11.878507Z",
+        "status": "success"
+      },
+      {
+        "name": "deploy",
+        "started_on": "2026-10-06T02:26:11.878507Z",
+        "ended_on": "2026-10-06T02:26:20.400267Z",
+        "status": "success"
+      }
+    ]
+  },
+  {
+    "id": "10158e5a-eba2-40a9-af8a-5da574e1dd2e",
+    "url": "https://10158e5a.btf-production.pages.dev",
+    "aliases": null,
+    "environment": "production",
+    "created_on": "2026-10-06T02:02:02.989203Z",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": "2026-10-06T02:03:26.378436Z",
+      "ended_on": "2026-10-06T02:03:36.208796Z",
+      "status": "success"
+    },
+    "deployment_trigger": {
+      "type": "github:push",
+      "metadata": {
+        "branch": "main",
+        "commit_hash": "2ae7446ede5c4d6c382bb5533c8731e2f1186714",
+        "commit_message": "fix(copy): purge final hardcoded 2026 tour dates from resources page",
+        "commit_dirty": false
+      }
+    },
+    "stages": [
+      {
+        "name": "queued",
+        "started_on": "2026-10-06T02:02:03.719243Z",
+        "ended_on": "2026-10-06T02:02:03.72798Z",
+        "status": "success"
+      },
+      {
+        "name": "initialize",
+        "started_on": "2026-10-06T02:02:03.72798Z",
+        "ended_on": "2026-10-06T02:02:06.210015Z",
+        "status": "success"
+      },
+      {
+        "name": "clone_repo",
+        "started_on": "2026-10-06T02:02:06.210015Z",
+        "ended_on": "2026-10-06T02:02:11.056367Z",
+        "status": "success"
+      },
+      {
+        "name": "build",
+        "started_on": "2026-10-06T02:02:11.056367Z",
+        "ended_on": "2026-10-06T02:03:26.378436Z",
+        "status": "success"
+      },
+      {
+        "name": "deploy",
+        "started_on": "2026-10-06T02:03:26.378436Z",
+        "ended_on": "2026-10-06T02:03:36.208796Z",
+        "status": "success"
+      }
+    ]
+  },
+  {
+    "id": "3078f3b2-6c7d-4d59-bdab-1305493b7c0b",
+    "url": "https://3078f3b2.btf-production.pages.dev",
+    "aliases": null,
+    "environment": "production",
+    "created_on": "2026-10-06T01:54:57.701876Z",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": "2026-10-06T01:56:28.522661Z",
+      "ended_on": "2026-10-06T01:56:36.470882Z",
+      "status": "success"
+    },
+    "deployment_trigger": {
+      "type": "github:push",
+      "metadata": {
+        "branch": "main",
+        "commit_hash": "0d2ca99c5323c11c1449f1323c0815d457781f30",
+        "commit_message": "docs(changelog): append final production audit and image pipeline sign-off to BUILD_LOG.md",
+        "commit_dirty": false
+      }
+    },
+    "stages": [
+      {
+        "name": "queued",
+        "started_on": "2026-10-06T01:54:57.850596Z",
+        "ended_on": "2026-10-06T01:54:57.852332Z",
+        "status": "success"
+      },
+      {
+        "name": "initialize",
+        "started_on": "2026-10-06T01:54:57.852332Z",
+        "ended_on": "2026-10-06T01:55:00.523909Z",
+        "status": "success"
+      },
+      {
+        "name": "clone_repo",
+        "started_on": "2026-10-06T01:55:00.523909Z",
+        "ended_on": "2026-10-06T01:55:04.752233Z",
+        "status": "success"
+      },
+      {
+        "name": "build",
+        "started_on": "2026-10-06T01:55:04.752233Z",
+        "ended_on": "2026-10-06T01:56:28.522661Z",
+        "status": "success"
+      },
+      {
+        "name": "deploy",
+        "started_on": "2026-10-06T01:56:28.522661Z",
+        "ended_on": "2026-10-06T01:56:36.470882Z",
+        "status": "success"
+      }
+    ]
+  },
+  {
+    "id": "859a5f68-00d1-46a8-844b-d3923a31e35d",
+    "url": "https://859a5f68.btf-production.pages.dev",
+    "aliases": null,
+    "environment": "production",
+    "created_on": "2026-10-06T01:41:13.363283Z",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": "2026-10-06T01:42:31.152879Z",
+      "ended_on": "2026-10-06T01:42:39.526617Z",
+      "status": "success"
+    },
+    "deployment_trigger": {
+      "type": "github:push",
+      "metadata": {
+        "branch": "main",
+        "commit_hash": "4ed61d40f93a0f76f98fb6675d35171a0ec2c444",
+        "commit_message": "chore(governance): log final Milestone 6 contact link fix and project completion",
+        "commit_dirty": false
+      }
+    },
+    "stages": [
+      {
+        "name": "queued",
+        "started_on": "2026-10-06T01:41:13.535999Z",
+        "ended_on": "2026-10-06T01:41:13.543011Z",
+        "status": "success"
+      },
+      {
+        "name": "initialize",
+        "started_on": "2026-10-06T01:41:13.543011Z",
+        "ended_on": "2026-10-06T01:41:15.931616Z",
+        "status": "success"
+      },
+      {
+        "name": "clone_repo",
+        "started_on": "2026-10-06T01:41:15.931616Z",
+        "ended_on": "2026-10-06T01:41:19.567766Z",
+        "status": "success"
+      },
+      {
+        "name": "build",
+        "started_on": "2026-10-06T01:41:19.567766Z",
+        "ended_on": "2026-10-06T01:42:31.152879Z",
+        "status": "success"
+      },
+      {
+        "name": "deploy",
+        "started_on": "2026-10-06T01:42:31.152879Z",
+        "ended_on": "2026-10-06T01:42:39.526617Z",
+        "status": "success"
+      }
+    ]
+  },
+  {
+    "id": "551f509a-8aed-4653-9fc3-8466a74af2cd",
+    "url": "https://551f509a.btf-production.pages.dev",
+    "aliases": null,
+    "environment": "production",
+    "created_on": "2026-10-06T01:37:50.151041Z",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": "2026-10-06T01:38:57.591716Z",
+      "ended_on": "2026-10-06T01:39:05.929742Z",
+      "status": "success"
+    },
+    "deployment_trigger": {
+      "type": "github:push",
+      "metadata": {
+        "branch": "main",
+        "commit_hash": "28f64cd65652cade6e0662e7998413603d97bd7c",
+        "commit_message": "fix(site): replace mailto helper and contact links with Google Form",
+        "commit_dirty": false
+      }
+    },
+    "stages": [
+      {
+        "name": "queued",
+        "started_on": "2026-10-06T01:37:50.560624Z",
+        "ended_on": "2026-10-06T01:37:50.566107Z",
+        "status": "success"
+      },
+      {
+        "name": "initialize",
+        "started_on": "2026-10-06T01:37:50.566107Z",
+        "ended_on": "2026-10-06T01:37:52.552813Z",
+        "status": "success"
+      },
+      {
+        "name": "clone_repo",
+        "started_on": "2026-10-06T01:37:52.552813Z",
+        "ended_on": "2026-10-06T01:37:58.754133Z",
+        "status": "success"
+      },
+      {
+        "name": "build",
+        "started_on": "2026-10-06T01:37:58.754133Z",
+        "ended_on": "2026-10-06T01:38:57.591716Z",
+        "status": "success"
+      },
+      {
+        "name": "deploy",
+        "started_on": "2026-10-06T01:38:57.591716Z",
+        "ended_on": "2026-10-06T01:39:05.929742Z",
+        "status": "success"
+      }
+    ]
+  },
+  {
+    "id": "dfd86449-db32-4df2-92b8-5d43ec750c09",
+    "url": "https://dfd86449.btf-production.pages.dev",
+    "aliases": null,
+    "environment": "production",
+    "created_on": "2026-10-06T01:05:53.442289Z",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": "2026-10-06T01:07:22.184754Z",
+      "ended_on": "2026-10-06T01:07:30.727928Z",
+      "status": "success"
+    },
+    "deployment_trigger": {
+      "type": "github:push",
+      "metadata": {
+        "branch": "main",
+        "commit_hash": "6a34145838700727bbc7407439f913d1c3ed5254",
+        "commit_message": "chore(governance): log Milestone 5 qualification and completion",
+        "commit_dirty": false
+      }
+    },
+    "stages": [
+      {
+        "name": "queued",
+        "started_on": "2026-10-06T01:05:54.033817Z",
+        "ended_on": "2026-10-06T01:05:54.03659Z",
+        "status": "success"
+      },
+      {
+        "name": "initialize",
+        "started_on": "2026-10-06T01:05:54.03659Z",
+        "ended_on": "2026-10-06T01:05:56.683294Z",
+        "status": "success"
+      },
+      {
+        "name": "clone_repo",
+        "started_on": "2026-10-06T01:05:56.683294Z",
+        "ended_on": "2026-10-06T01:06:01.034514Z",
+        "status": "success"
+      },
+      {
+        "name": "build",
+        "started_on": "2026-10-06T01:06:01.034514Z",
+        "ended_on": "2026-10-06T01:07:22.184754Z",
+        "status": "success"
+      },
+      {
+        "name": "deploy",
+        "started_on": "2026-10-06T01:07:22.184754Z",
+        "ended_on": "2026-10-06T01:07:30.727928Z",
+        "status": "success"
+      }
+    ]
+  },
+  {
+    "id": "9eaa74e0-5614-4c6a-871c-8901d812a202",
+    "url": "https://9eaa74e0.btf-production.pages.dev",
+    "aliases": null,
+    "environment": "production",
+    "created_on": "2026-10-06T01:02:59.087117Z",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": "2026-10-06T01:04:01.749033Z",
+      "ended_on": "2026-10-06T01:04:10.180188Z",
+      "status": "success"
+    },
+    "deployment_trigger": {
+      "type": "github:push",
+      "metadata": {
+        "branch": "main",
+        "commit_hash": "45831477566dc668cf0593c090d307592fa058f9",
+        "commit_message": "feat(forms): bind waitlist and tour updates buttons to Google Forms",
+        "commit_dirty": false
+      }
+    },
+    "stages": [
+      {
+        "name": "queued",
+        "started_on": "2026-10-06T01:02:59.300978Z",
+        "ended_on": "2026-10-06T01:02:59.305224Z",
+        "status": "success"
+      },
+      {
+        "name": "initialize",
+        "started_on": "2026-10-06T01:02:59.305224Z",
+        "ended_on": "2026-10-06T01:03:01.808713Z",
+        "status": "success"
+      },
+      {
+        "name": "clone_repo",
+        "started_on": "2026-10-06T01:03:01.808713Z",
+        "ended_on": "2026-10-06T01:03:05.962951Z",
+        "status": "success"
+      },
+      {
+        "name": "build",
+        "started_on": "2026-10-06T01:03:05.962951Z",
+        "ended_on": "2026-10-06T01:04:01.749033Z",
+        "status": "success"
+      },
+      {
+        "name": "deploy",
+        "started_on": "2026-10-06T01:04:01.749033Z",
+        "ended_on": "2026-10-06T01:04:10.180188Z",
+        "status": "success"
+      }
+    ]
+  },
+  {
+    "id": "8d121040-94eb-42af-9e4d-e18a13e2b49f",
+    "url": "https://8d121040.btf-production.pages.dev",
+    "aliases": null,
+    "environment": "production",
+    "created_on": "2026-10-06T00:05:41.929106Z",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": "2026-10-06T00:06:46.016358Z",
+      "ended_on": "2026-10-06T00:06:53.220339Z",
+      "status": "success"
+    },
+    "deployment_trigger": {
+      "type": "github:push",
+      "metadata": {
+        "branch": "main",
+        "commit_hash": "b570e944c9a94eaa556ffe9bfa355f3419739454",
+        "commit_message": "docs(build-log): qualify Milestone 3 pass and mark Milestone 4 in progress",
+        "commit_dirty": false
+      }
+    },
+    "stages": [
+      {
+        "name": "queued",
+        "started_on": "2026-10-06T00:05:42.066316Z",
+        "ended_on": "2026-10-06T00:05:42.071334Z",
+        "status": "success"
+      },
+      {
+        "name": "initialize",
+        "started_on": "2026-10-06T00:05:42.071334Z",
+        "ended_on": "2026-10-06T00:05:44.546557Z",
+        "status": "success"
+      },
+      {
+        "name": "clone_repo",
+        "started_on": "2026-10-06T00:05:44.546557Z",
+        "ended_on": "2026-10-06T00:05:48.661836Z",
+        "status": "success"
+      },
+      {
+        "name": "build",
+        "started_on": "2026-10-06T00:05:48.661836Z",
+        "ended_on": "2026-10-06T00:06:46.016358Z",
+        "status": "success"
+      },
+      {
+        "name": "deploy",
+        "started_on": "2026-10-06T00:06:46.016358Z",
+        "ended_on": "2026-10-06T00:06:53.220339Z",
+        "status": "success"
+      }
+    ]
+  },
+  {
+    "id": "75a82d50-6588-47e3-9d33-16f056a92284",
+    "url": "https://75a82d50.btf-production.pages.dev",
+    "aliases": null,
+    "environment": "production",
+    "created_on": "2026-10-06T00:03:01.03662Z",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": "2026-10-06T00:04:22.595659Z",
+      "ended_on": "2026-10-06T00:04:30.284535Z",
+      "status": "success"
+    },
+    "deployment_trigger": {
+      "type": "github:push",
+      "metadata": {
+        "branch": "main",
+        "commit_hash": "21f116bca136426e82748036f7b655eea6a7fcbb",
+        "commit_message": "docs(build-log): qualify Milestone 2 pass and mark Milestone 3 in progress",
+        "commit_dirty": false
+      }
+    },
+    "stages": [
+      {
+        "name": "queued",
+        "started_on": "2026-10-06T00:03:01.205844Z",
+        "ended_on": "2026-10-06T00:03:01.210925Z",
+        "status": "success"
+      },
+      {
+        "name": "initialize",
+        "started_on": "2026-10-06T00:03:01.210925Z",
+        "ended_on": "2026-10-06T00:03:03.566865Z",
+        "status": "success"
+      },
+      {
+        "name": "clone_repo",
+        "started_on": "2026-10-06T00:03:03.566865Z",
+        "ended_on": "2026-10-06T00:03:08.952911Z",
+        "status": "success"
+      },
+      {
+        "name": "build",
+        "started_on": "2026-10-06T00:03:08.952911Z",
+        "ended_on": "2026-10-06T00:04:22.595659Z",
+        "status": "success"
+      },
+      {
+        "name": "deploy",
+        "started_on": "2026-10-06T00:04:22.595659Z",
+        "ended_on": "2026-10-06T00:04:30.284535Z",
+        "status": "success"
+      }
+    ]
+  },
+  {
+    "id": "f91c7b8d-7d44-4dd4-ad4c-f2c1c640ce4d",
+    "url": "https://f91c7b8d.btf-production.pages.dev",
+    "aliases": null,
+    "environment": "production",
+    "created_on": "2026-10-06T00:01:38.602277Z",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": "2026-10-06T00:02:45.827754Z",
+      "ended_on": "2026-10-06T00:02:54.460018Z",
+      "status": "success"
+    },
+    "deployment_trigger": {
+      "type": "github:push",
+      "metadata": {
+        "branch": "main",
+        "commit_hash": "990541c1a107faab872810b85b665f4d466ad3b9",
+        "commit_message": "docs(build-log): qualify Milestone 1 pass and mark Milestone 2 in progress",
+        "commit_dirty": false
+      }
+    },
+    "stages": [
+      {
+        "name": "queued",
+        "started_on": "2026-10-06T00:01:38.763643Z",
+        "ended_on": "2026-10-06T00:01:38.769115Z",
+        "status": "success"
+      },
+      {
+        "name": "initialize",
+        "started_on": "2026-10-06T00:01:38.769115Z",
+        "ended_on": "2026-10-06T00:01:41.388345Z",
+        "status": "success"
+      },
+      {
+        "name": "clone_repo",
+        "started_on": "2026-10-06T00:01:41.388345Z",
+        "ended_on": "2026-10-06T00:01:48.852109Z",
+        "status": "success"
+      },
+      {
+        "name": "build",
+        "started_on": "2026-10-06T00:01:48.852109Z",
+        "ended_on": "2026-10-06T00:02:45.827754Z",
+        "status": "success"
+      },
+      {
+        "name": "deploy",
+        "started_on": "2026-10-06T00:02:45.827754Z",
+        "ended_on": "2026-10-06T00:02:54.460018Z",
+        "status": "success"
+      }
+    ]
+  },
+  {
+    "id": "52ba5948-fec9-41b4-9cb1-ed46317bae0f",
+    "url": "https://52ba5948.btf-production.pages.dev",
+    "aliases": null,
+    "environment": "production",
+    "created_on": "2026-10-05T23:53:11.651417Z",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": "2026-10-05T23:54:17.88398Z",
+      "ended_on": "2026-10-05T23:54:28.277859Z",
+      "status": "success"
+    },
+    "deployment_trigger": {
+      "type": "github:push",
+      "metadata": {
+        "branch": "main",
+        "commit_hash": "4165363009403d0864bd8dfdb483f4db54da11e5",
+        "commit_message": "docs: append Cloudflare production branch resolution to docs/BUILD_LOG.md",
+        "commit_dirty": false
+      }
+    },
+    "stages": [
+      {
+        "name": "queued",
+        "started_on": "2026-10-05T23:53:11.775295Z",
+        "ended_on": "2026-10-05T23:53:11.779425Z",
+        "status": "success"
+      },
+      {
+        "name": "initialize",
+        "started_on": "2026-10-05T23:53:11.779425Z",
+        "ended_on": "2026-10-05T23:53:14.482549Z",
+        "status": "success"
+      },
+      {
+        "name": "clone_repo",
+        "started_on": "2026-10-05T23:53:14.482549Z",
+        "ended_on": "2026-10-05T23:53:20.351961Z",
+        "status": "success"
+      },
+      {
+        "name": "build",
+        "started_on": "2026-10-05T23:53:20.351961Z",
+        "ended_on": "2026-10-05T23:54:17.88398Z",
+        "status": "success"
+      },
+      {
+        "name": "deploy",
+        "started_on": "2026-10-05T23:54:17.88398Z",
+        "ended_on": "2026-10-05T23:54:28.277859Z",
+        "status": "success"
+      }
+    ]
+  },
+  {
+    "id": "5d2a386c-36c7-445a-9110-1302354a20de",
+    "url": "https://5d2a386c.btf-production.pages.dev",
+    "aliases": null,
+    "environment": "production",
+    "created_on": "2026-10-05T23:40:21.920773Z",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": "2026-10-05T23:41:50.54449Z",
+      "ended_on": "2026-10-05T23:42:01.08869Z",
+      "status": "success"
+    },
+    "deployment_trigger": {
+      "type": "github:push",
+      "metadata": {
+        "branch": "main",
+        "commit_hash": "5741c59070afb632a41ad5ec9bb00bc5a9106303",
+        "commit_message": "chore(deploy): production deploy of main after btf-production branch set to main",
+        "commit_dirty": false
+      }
+    },
+    "stages": [
+      {
+        "name": "queued",
+        "started_on": "2026-10-05T23:40:22.103383Z",
+        "ended_on": "2026-10-05T23:40:22.109634Z",
+        "status": "success"
+      },
+      {
+        "name": "initialize",
+        "started_on": "2026-10-05T23:40:22.109634Z",
+        "ended_on": "2026-10-05T23:40:24.933797Z",
+        "status": "success"
+      },
+      {
+        "name": "clone_repo",
+        "started_on": "2026-10-05T23:40:24.933797Z",
+        "ended_on": "2026-10-05T23:40:28.919775Z",
+        "status": "success"
+      },
+      {
+        "name": "build",
+        "started_on": "2026-10-05T23:40:28.919775Z",
+        "ended_on": "2026-10-05T23:41:50.54449Z",
+        "status": "success"
+      },
+      {
+        "name": "deploy",
+        "started_on": "2026-10-05T23:41:50.54449Z",
+        "ended_on": "2026-10-05T23:42:01.08869Z",
+        "status": "success"
+      }
+    ]
+  },
+  {
+    "id": "c5a698e6-8975-4512-bc9a-72d94a070698",
+    "url": "https://c5a698e6.btf-production.pages.dev",
+    "aliases": [
+      "https://main.btf-production.pages.dev"
+    ],
+    "environment": "preview",
+    "created_on": "2026-10-05T23:18:36.259336Z",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": "2026-10-05T23:19:35.83166Z",
+      "ended_on": "2026-10-05T23:19:43.576414Z",
+      "status": "success"
+    },
+    "deployment_trigger": {
+      "type": "github:push",
+      "metadata": {
+        "branch": "main",
+        "commit_hash": "ef15f8ebcf6226b726df6bb827a57b4cd7f546fe",
+        "commit_message": "chore(deploy): trigger btf-production production deploy from main (20261005T231718Z)",
+        "commit_dirty": false
+      }
+    },
+    "stages": [
+      {
+        "name": "queued",
+        "started_on": "2026-10-05T23:18:36.507669Z",
+        "ended_on": "2026-10-05T23:18:36.512182Z",
+        "status": "success"
+      },
+      {
+        "name": "initialize",
+        "started_on": "2026-10-05T23:18:36.512182Z",
+        "ended_on": "2026-10-05T23:18:39.357036Z",
+        "status": "success"
+      },
+      {
+        "name": "clone_repo",
+        "started_on": "2026-10-05T23:18:39.357036Z",
+        "ended_on": "2026-10-05T23:18:44.097576Z",
+        "status": "success"
+      },
+      {
+        "name": "build",
+        "started_on": "2026-10-05T23:18:44.097576Z",
+        "ended_on": "2026-10-05T23:19:35.83166Z",
+        "status": "success"
+      },
+      {
+        "name": "deploy",
+        "started_on": "2026-10-05T23:19:35.83166Z",
+        "ended_on": "2026-10-05T23:19:43.576414Z",
+        "status": "success"
+      }
+    ]
+  },
+  {
+    "id": "bff6a870-9421-4da1-bca9-dda96bdb7d79",
+    "url": "https://bff6a870.btf-production.pages.dev",
+    "aliases": null,
+    "environment": "preview",
+    "created_on": "2026-10-05T22:55:38.172904Z",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": "2026-10-05T22:56:45.127736Z",
+      "ended_on": "2026-10-05T22:56:56.733242Z",
+      "status": "success"
+    },
+    "deployment_trigger": {
+      "type": "github:push",
+      "metadata": {
+        "branch": "main",
+        "commit_hash": "4beed9596bc198a0e284cf5329b2e46b9a2a5140",
+        "commit_message": "Merge pull request #2 from jkbrooks1/feature/copy-sync-update\n\nchore(copy): sync approved site copy from Google Sheet",
+        "commit_dirty": false
+      }
+    },
+    "stages": [
+      {
+        "name": "queued",
+        "started_on": "2026-10-05T22:55:38.58109Z",
+        "ended_on": "2026-10-05T22:55:38.583608Z",
+        "status": "success"
+      },
+      {
+        "name": "initialize",
+        "started_on": "2026-10-05T22:55:38.583608Z",
+        "ended_on": "2026-10-05T22:55:41.729103Z",
+        "status": "success"
+      },
+      {
+        "name": "clone_repo",
+        "started_on": "2026-10-05T22:55:41.729103Z",
+        "ended_on": "2026-10-05T22:55:47.956868Z",
+        "status": "success"
+      },
+      {
+        "name": "build",
+        "started_on": "2026-10-05T22:55:47.956868Z",
+        "ended_on": "2026-10-05T22:56:45.127736Z",
+        "status": "success"
+      },
+      {
+        "name": "deploy",
+        "started_on": "2026-10-05T22:56:45.127736Z",
+        "ended_on": "2026-10-05T22:56:56.733242Z",
+        "status": "success"
+      }
+    ]
+  },
+  {
+    "id": "f183c4b9-ee70-462c-a343-d38e2887ebed",
+    "url": "https://f183c4b9.btf-production.pages.dev",
+    "aliases": [
+      "https://feature-copy-sync-update.btf-production.pages.dev"
+    ],
+    "environment": "preview",
+    "created_on": "2026-10-05T22:52:37.718108Z",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": "2026-10-05T22:54:00.051871Z",
+      "ended_on": "2026-10-05T22:54:08.096732Z",
+      "status": "success"
+    },
+    "deployment_trigger": {
+      "type": "github:push",
+      "metadata": {
+        "branch": "feature/copy-sync-update",
+        "commit_hash": "d175302976b1296d0d61d1d53e6d3d88d3c95780",
+        "commit_message": "chore(copy): sync approved site copy from Google Sheet",
+        "commit_dirty": false
+      }
+    },
+    "stages": [
+      {
+        "name": "queued",
+        "started_on": "2026-10-05T22:52:37.866667Z",
+        "ended_on": "2026-10-05T22:52:37.874501Z",
+        "status": "success"
+      },
+      {
+        "name": "initialize",
+        "started_on": "2026-10-05T22:52:37.874501Z",
+        "ended_on": "2026-10-05T22:52:40.653964Z",
+        "status": "success"
+      },
+      {
+        "name": "clone_repo",
+        "started_on": "2026-10-05T22:52:40.653964Z",
+        "ended_on": "2026-10-05T22:52:45.448222Z",
+        "status": "success"
+      },
+      {
+        "name": "build",
+        "started_on": "2026-10-05T22:52:45.448222Z",
+        "ended_on": "2026-10-05T22:54:00.051871Z",
+        "status": "success"
+      },
+      {
+        "name": "deploy",
+        "started_on": "2026-10-05T22:54:00.051871Z",
+        "ended_on": "2026-10-05T22:54:08.096732Z",
+        "status": "success"
+      }
+    ]
+  },
+  {
+    "id": "aeb4c36e-326f-418e-a185-ddb6f9048c26",
+    "url": "https://aeb4c36e.btf-production.pages.dev",
+    "aliases": null,
+    "environment": "preview",
+    "created_on": "2026-10-05T22:09:18.830882Z",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": "2026-10-05T22:10:17.914837Z",
+      "ended_on": "2026-10-05T22:10:26.983705Z",
+      "status": "success"
+    },
+    "deployment_trigger": {
+      "type": "github:push",
+      "metadata": {
+        "branch": "main",
+        "commit_hash": "f1f4f8b5b936072c1a0849bdc8556127f6542e50",
+        "commit_message": "chore(docs): document temp-btf project deletion and update runbook to v2.3",
+        "commit_dirty": false
+      }
+    },
+    "stages": [
+      {
+        "name": "queued",
+        "started_on": "2026-10-05T22:09:18.967102Z",
+        "ended_on": "2026-10-05T22:09:18.974058Z",
+        "status": "success"
+      },
+      {
+        "name": "initialize",
+        "started_on": "2026-10-05T22:09:18.974058Z",
+        "ended_on": "2026-10-05T22:09:20.776598Z",
+        "status": "success"
+      },
+      {
+        "name": "clone_repo",
+        "started_on": "2026-10-05T22:09:20.776598Z",
+        "ended_on": "2026-10-05T22:09:27.042319Z",
+        "status": "success"
+      },
+      {
+        "name": "build",
+        "started_on": "2026-10-05T22:09:27.042319Z",
+        "ended_on": "2026-10-05T22:10:17.914837Z",
+        "status": "success"
+      },
+      {
+        "name": "deploy",
+        "started_on": "2026-10-05T22:10:17.914837Z",
+        "ended_on": "2026-10-05T22:10:26.983705Z",
+        "status": "success"
+      }
+    ]
+  }
+]

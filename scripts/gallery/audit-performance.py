@@ -1,9 +1,10 @@
 """Cold-load lab measurements for the combined gallery; not field Core Web Vitals."""
-import json, statistics
+import json, statistics, os
 from pathlib import Path
 from playwright.sync_api import sync_playwright
-out=Path('docs/proof/2026-10-06_cdm_combined_gallery/audit')
-report={'url':'http://127.0.0.1:4322/cdm-photo-gallery/','conditions':{'viewport':'375x900','cpuSlowdown':4,'downloadKbps':1600,'uploadKbps':750,'latencyMs':150},'runs':[]}
+out=Path(os.environ.get('BTF_GALLERY_AUDIT_DIR','docs/proof/2026-10-06_cdm_combined_gallery/audit'))
+out.mkdir(parents=True,exist_ok=True)
+report={'url':os.environ.get('BTF_GALLERY_AUDIT_URL','http://127.0.0.1:4322/cdm-photo-gallery/'),'conditions':{'viewport':'375x900','cpuSlowdown':4,'downloadKbps':1600,'uploadKbps':750,'latencyMs':150},'runs':[]}
 with sync_playwright() as p:
  browser=p.chromium.launch()
  for run in range(3):
@@ -25,6 +26,6 @@ with sync_playwright() as p:
  browser.close()
 report['medianLcpMs']=statistics.median(r['lcp'] for r in report['runs'])
 report['maxCls']=max(r['cls'] for r in report['runs'])
-report['note']='Three cold local Chromium lab runs. This does not establish field LCP, INP or CLS; remote CDN and visitor data remain unmeasured.'
+report['note']='Three cold Chromium lab runs at the recorded URL. This does not establish field LCP, INP or CLS; actual visitor metrics remain unmeasured.'
 (out/'performance.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps({k:v for k,v in report.items() if k!='runs'},indent=2))

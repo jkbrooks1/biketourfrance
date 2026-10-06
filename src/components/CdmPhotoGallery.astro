@@ -18,6 +18,7 @@ const fallbackSizes = (photo: (typeof photos)[number]) => `(min-width: 1024px) 3
       <li
         class="cdm-gallery__tile"
         data-gallery-tile
+        data-gallery-lead={index === 0 ? 'true' : undefined}
         data-photo-id={photo.id}
         data-photo-number={photo.photoId}
         data-location-group={photo.locationGroup}

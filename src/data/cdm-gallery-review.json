@@ -2,6 +2,19 @@
   "schemaVersion": 1,
   "photos": [
     {
+      "id": "cdm2-fd6ef587b12f46c4",
+      "photoId": "2026091204EST",
+      "captureDate": "2026-09-12",
+      "dateSource": "Estimated from photo series",
+      "estimated": true,
+      "confidence": "Low",
+      "dateEvidence": "Undated group cycling photo from CDM2. Sep 12 is the first dated day in this collection (IMG_4633/4634); UUID filename provides no chronological evidence. Tentative collection-start estimate only, requiring owner review.",
+      "keep": true,
+      "deleted": false,
+      "captionField": "/cdm-gallery/cdm2_fd6ef587b12f46c4_caption",
+      "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "cdm2-72beaa14c115fb6f",
       "photoId": "2026091201",
       "captureDate": "2026-09-12",
@@ -25,19 +38,6 @@
       "keep": true,
       "deleted": false,
       "captionField": "/cdm-gallery/cdm2_197a9b403afefd6e_caption",
-      "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "id": "cdm2-fd6ef587b12f46c4",
-      "photoId": "2026091204EST",
-      "captureDate": "2026-09-12",
-      "dateSource": "Estimated from photo series",
-      "estimated": true,
-      "confidence": "Low",
-      "dateEvidence": "Undated group cycling photo from CDM2. Sep 12 is the first dated day in this collection (IMG_4633/4634); UUID filename provides no chronological evidence. Tentative collection-start estimate only, requiring owner review.",
-      "keep": true,
-      "deleted": false,
-      "captionField": "/cdm-gallery/cdm2_fd6ef587b12f46c4_caption",
       "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
@@ -158,97 +158,6 @@
       "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "id": "cdm1-3ce2d0eb9bd45c24",
-      "photoId": "2026090102",
-      "captureDate": "2026-09-01",
-      "dateSource": "EXIF DateTimeOriginal",
-      "estimated": false,
-      "confidence": "Metadata",
-      "dateEvidence": "EXIF DateTimeOriginal retained in managed original; date extracted without altering source metadata.",
-      "keep": true,
-      "deleted": false,
-      "captionField": "/cdm-gallery/cdm1_3ce2d0eb9bd45c24_caption",
-      "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "id": "cdm1-939d5b94d4ee4664",
-      "photoId": "2026090106EST",
-      "captureDate": "2026-09-01",
-      "dateSource": "Estimated from photo series",
-      "estimated": true,
-      "confidence": "Medium",
-      "dateEvidence": "Aqueduct crossing and canal/river setting are consistent with dated IMG_4462.JPG and IMG_4470.JPG (2026-09-01). Inferred from scenes and relative camera sequence.",
-      "keep": true,
-      "deleted": false,
-      "captionField": "/cdm-gallery/cdm1_939d5b94d4ee4664_caption",
-      "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "id": "cdm1-8984f3682ed07c89",
-      "photoId": "2026090202EST",
-      "captureDate": "2026-09-02",
-      "dateSource": "Estimated from photo series",
-      "estimated": true,
-      "confidence": "Low",
-      "dateEvidence": "Later camera sequence than estimated Sep 1 aqueduct photos; canal bridge scenes precede later canal riding. Proposed Sep 2 based on progression toward the dated Sep 2 town/bridge image IMG_4484.JPG; no exact dated scene match.",
-      "keep": true,
-      "deleted": false,
-      "captionField": "/cdm-gallery/cdm1_8984f3682ed07c89_caption",
-      "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "id": "cdm1-3e2f93340b82df4e",
-      "photoId": "2026090203EST",
-      "captureDate": "2026-09-02",
-      "dateSource": "Estimated from photo series",
-      "estimated": true,
-      "confidence": "Low",
-      "dateEvidence": "Same distinctive brick bridge/circular stonework sequence as IMG_6143.jpeg. Uses that tentative Sep 2 estimate; no exact dated scene match.",
-      "keep": true,
-      "deleted": false,
-      "captionField": "/cdm-gallery/cdm1_3e2f93340b82df4e_caption",
-      "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "id": "cdm1-28bda3c5ac7d2051",
-      "photoId": "2026090204EST",
-      "captureDate": "2026-09-02",
-      "dateSource": "Estimated from photo series",
-      "estimated": true,
-      "confidence": "Low",
-      "dateEvidence": "Same secondary-camera canal series, after the estimated brick bridge scenes. Proposed Sep 2 from sequence and the dated IMG_4484.JPG endpoint; no exact dated scene match.",
-      "keep": true,
-      "deleted": false,
-      "captionField": "/cdm-gallery/cdm1_28bda3c5ac7d2051_caption",
-      "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "id": "cdm1-57ff5e48ef8d95a0",
-      "photoId": "2026090205EST",
-      "captureDate": "2026-09-02",
-      "dateSource": "Estimated from photo series",
-      "estimated": true,
-      "confidence": "Low",
-      "dateEvidence": "Same bridge and graffiti as IMG_6155.jpeg; inherits its tentative Sep 2 estimate.",
-      "keep": true,
-      "deleted": false,
-      "captionField": "/cdm-gallery/cdm1_57ff5e48ef8d95a0_caption",
-      "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "id": "cdm1-15a6b1ce00490898",
-      "photoId": "2026090206EST",
-      "captureDate": "2026-09-02",
-      "dateSource": "Estimated from photo series",
-      "estimated": true,
-      "confidence": "Low",
-      "dateEvidence": "Later filename in the same canal/bridge camera series. Sep 2 is a tentative sequence-based estimate; scene alone does not establish the date.",
-      "keep": true,
-      "deleted": false,
-      "captionField": "/cdm-gallery/cdm1_15a6b1ce00490898_caption",
-      "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
       "id": "cdm2-0b2ea06efc925c01",
       "photoId": "2026091401",
       "captureDate": "2026-09-14",
@@ -288,6 +197,97 @@
       "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
+      "id": "cdm1-3ce2d0eb9bd45c24",
+      "photoId": "2026090102",
+      "captureDate": "2026-09-01",
+      "dateSource": "EXIF DateTimeOriginal",
+      "estimated": false,
+      "confidence": "Metadata",
+      "dateEvidence": "EXIF DateTimeOriginal retained in managed original; date extracted without altering source metadata.",
+      "keep": true,
+      "deleted": false,
+      "captionField": "/cdm-gallery/cdm1_3ce2d0eb9bd45c24_caption",
+      "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "cdm1-8984f3682ed07c89",
+      "photoId": "2026090202EST",
+      "captureDate": "2026-09-02",
+      "dateSource": "Estimated from photo series",
+      "estimated": true,
+      "confidence": "Low",
+      "dateEvidence": "Later camera sequence than estimated Sep 1 aqueduct photos; canal bridge scenes precede later canal riding. Proposed Sep 2 based on progression toward the dated Sep 2 town/bridge image IMG_4484.JPG; no exact dated scene match.",
+      "keep": true,
+      "deleted": false,
+      "captionField": "/cdm-gallery/cdm1_8984f3682ed07c89_caption",
+      "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "cdm1-939d5b94d4ee4664",
+      "photoId": "2026090106EST",
+      "captureDate": "2026-09-01",
+      "dateSource": "Estimated from photo series",
+      "estimated": true,
+      "confidence": "Medium",
+      "dateEvidence": "Aqueduct crossing and canal/river setting are consistent with dated IMG_4462.JPG and IMG_4470.JPG (2026-09-01). Inferred from scenes and relative camera sequence.",
+      "keep": true,
+      "deleted": false,
+      "captionField": "/cdm-gallery/cdm1_939d5b94d4ee4664_caption",
+      "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "cdm1-15a6b1ce00490898",
+      "photoId": "2026090206EST",
+      "captureDate": "2026-09-02",
+      "dateSource": "Estimated from photo series",
+      "estimated": true,
+      "confidence": "Low",
+      "dateEvidence": "Later filename in the same canal/bridge camera series. Sep 2 is a tentative sequence-based estimate; scene alone does not establish the date.",
+      "keep": true,
+      "deleted": false,
+      "captionField": "/cdm-gallery/cdm1_15a6b1ce00490898_caption",
+      "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "cdm1-28bda3c5ac7d2051",
+      "photoId": "2026090204EST",
+      "captureDate": "2026-09-02",
+      "dateSource": "Estimated from photo series",
+      "estimated": true,
+      "confidence": "Low",
+      "dateEvidence": "Same secondary-camera canal series, after the estimated brick bridge scenes. Proposed Sep 2 from sequence and the dated IMG_4484.JPG endpoint; no exact dated scene match.",
+      "keep": true,
+      "deleted": false,
+      "captionField": "/cdm-gallery/cdm1_28bda3c5ac7d2051_caption",
+      "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "cdm1-3e2f93340b82df4e",
+      "photoId": "2026090203EST",
+      "captureDate": "2026-09-02",
+      "dateSource": "Estimated from photo series",
+      "estimated": true,
+      "confidence": "Low",
+      "dateEvidence": "Same distinctive brick bridge/circular stonework sequence as IMG_6143.jpeg. Uses that tentative Sep 2 estimate; no exact dated scene match.",
+      "keep": true,
+      "deleted": false,
+      "captionField": "/cdm-gallery/cdm1_3e2f93340b82df4e_caption",
+      "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "cdm1-57ff5e48ef8d95a0",
+      "photoId": "2026090205EST",
+      "captureDate": "2026-09-02",
+      "dateSource": "Estimated from photo series",
+      "estimated": true,
+      "confidence": "Low",
+      "dateEvidence": "Same bridge and graffiti as IMG_6155.jpeg; inherits its tentative Sep 2 estimate.",
+      "keep": true,
+      "deleted": false,
+      "captionField": "/cdm-gallery/cdm1_57ff5e48ef8d95a0_caption",
+      "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "cdm1-367a2fa64cdb80f8",
       "photoId": "2026090103",
       "captureDate": "2026-09-01",
@@ -301,19 +301,6 @@
       "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "id": "cdm1-366244b380b9f863",
-      "photoId": "2026090104",
-      "captureDate": "2026-09-01",
-      "dateSource": "EXIF DateTimeOriginal",
-      "estimated": false,
-      "confidence": "Metadata",
-      "dateEvidence": "EXIF DateTimeOriginal retained in managed original; date extracted without altering source metadata.",
-      "keep": true,
-      "deleted": false,
-      "captionField": "/cdm-gallery/cdm1_366244b380b9f863_caption",
-      "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
       "id": "cdm1-7734acb3db643db5",
       "photoId": "2026090105",
       "captureDate": "2026-09-01",
@@ -324,6 +311,19 @@
       "keep": true,
       "deleted": false,
       "captionField": "/cdm-gallery/cdm1_7734acb3db643db5_caption",
+      "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "cdm1-366244b380b9f863",
+      "photoId": "2026090104",
+      "captureDate": "2026-09-01",
+      "dateSource": "EXIF DateTimeOriginal",
+      "estimated": false,
+      "confidence": "Metadata",
+      "dateEvidence": "EXIF DateTimeOriginal retained in managed original; date extracted without altering source metadata.",
+      "keep": true,
+      "deleted": true,
+      "captionField": "/cdm-gallery/cdm1_366244b380b9f863_caption",
       "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
@@ -413,7 +413,7 @@
       "confidence": "Metadata",
       "dateEvidence": "EXIF DateTimeOriginal retained in managed original; date extracted without altering source metadata.",
       "keep": true,
-      "deleted": false,
+      "deleted": true,
       "captionField": "/cdm-gallery/cdm1_64137856b3da7e83_caption",
       "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
@@ -587,19 +587,6 @@
       "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "id": "cdm1-ffbca6de150fc7f1",
-      "photoId": "2026090702",
-      "captureDate": "2026-09-07",
-      "dateSource": "EXIF DateTimeOriginal",
-      "estimated": false,
-      "confidence": "Metadata",
-      "dateEvidence": "EXIF DateTimeOriginal retained in managed original; date extracted without altering source metadata.",
-      "keep": true,
-      "deleted": false,
-      "captionField": "/cdm-gallery/cdm1_ffbca6de150fc7f1_caption",
-      "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
       "id": "cdm2-8cdc758cbed56a24",
       "photoId": "2026092101",
       "captureDate": "2026-09-21",
@@ -613,16 +600,16 @@
       "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "id": "cdm1-7ed840d66e9ad03a",
-      "photoId": "2026090801",
-      "captureDate": "2026-09-08",
+      "id": "cdm1-ffbca6de150fc7f1",
+      "photoId": "2026090702",
+      "captureDate": "2026-09-07",
       "dateSource": "EXIF DateTimeOriginal",
       "estimated": false,
       "confidence": "Metadata",
       "dateEvidence": "EXIF DateTimeOriginal retained in managed original; date extracted without altering source metadata.",
       "keep": true,
       "deleted": false,
-      "captionField": "/cdm-gallery/cdm1_7ed840d66e9ad03a_caption",
+      "captionField": "/cdm-gallery/cdm1_ffbca6de150fc7f1_caption",
       "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
@@ -636,6 +623,19 @@
       "keep": true,
       "deleted": false,
       "captionField": "/cdm-gallery/cdm1_561bafe5aff2e2c8_caption",
+      "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "cdm1-7ed840d66e9ad03a",
+      "photoId": "2026090801",
+      "captureDate": "2026-09-08",
+      "dateSource": "EXIF DateTimeOriginal",
+      "estimated": false,
+      "confidence": "Metadata",
+      "dateEvidence": "EXIF DateTimeOriginal retained in managed original; date extracted without altering source metadata.",
+      "keep": true,
+      "deleted": false,
+      "captionField": "/cdm-gallery/cdm1_7ed840d66e9ad03a_caption",
       "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     }
   ]

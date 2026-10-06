@@ -4,6 +4,7 @@ import manifest from './cdm-gallery-manifest.json';
 import deliveryPlan from './cdm-gallery-delivery-plan.json';
 import review from './cdm-gallery-review.json';
 import selection from './cdm-gallery-selection.json';
+import editorial from './cdm-gallery-editorial.json';
 import { TEXT } from './approved-copy';
 
 export type Collection = 'combined';
@@ -25,7 +26,8 @@ export const libraryPhotos = selection.photos.map((entry) => {
   if (!state) throw new Error(`Missing photo review: ${photo.id}`);
   const alt = TEXT[photo.altField];
   if (!alt?.trim()) throw new Error(`Missing Sheet description: ${photo.altField}`);
-  return { ...photo, order: entry.order, locationGroup: entry.locationGroup, sourceCollection: photo.collection, photoId: state.photoId, estimated: state.estimated, keep: state.keep, deleted: state.deleted, caption: TEXT[state.captionField] ?? '', collection: 'combined' as Collection, alt, src: sourceFor(photo) };
+  const crop = photo.sourceFilename === editorial.crop.filename ? editorial.crop : null;
+  return { ...photo, originalWidth: photo.width, originalHeight: photo.height, width: crop?.width ?? photo.width, height: crop?.height ?? photo.height, crop, order: entry.order, locationGroup: entry.locationGroup, sourceCollection: photo.collection, photoId: state.photoId, estimated: state.estimated, keep: state.keep, deleted: state.deleted, caption: TEXT[state.captionField] ?? '', collection: 'combined' as Collection, alt, src: sourceFor(photo) };
 });
 export const galleryPhotos = libraryPhotos.filter((photo) => photo.keep && !photo.deleted);
 
@@ -47,12 +49,13 @@ async function createDelivery() {
   return Promise.all(galleryPhotos.map(async (photo) => {
     const plan = deliveryPlan.photos.find((entry) => entry.id === photo.id);
     if (!plan) throw new Error(`Missing image delivery plan: ${photo.id}`);
+    const transformFor = (width: number) => photo.crop ? { height: Math.round(width * photo.height / photo.width), fit: 'cover', position: 'top' } : {};
     const variants = await Promise.all(plan.variants.map(async ({ width, format, quality }) => {
-      const image = await getImage({ src: photo.src, width, format, quality });
+      const image = await getImage({ src: photo.src, width, format, quality, ...transformFor(width) });
       return { format, width, height: Math.round(width * photo.height / photo.width), path: image.src };
     }));
     const detailWidth = plan.detail.width;
-    const detail = await getImage({ src: photo.src, width: detailWidth, format: 'webp', quality: plan.detail.quality });
+    const detail = await getImage({ src: photo.src, width: detailWidth, format: 'webp', quality: plan.detail.quality, ...transformFor(detailWidth) });
     return { ...photo, variants, detail: { path: detail.src, width: detailWidth, height: Math.round(detailWidth * photo.height / photo.width) } };
   }));
 }

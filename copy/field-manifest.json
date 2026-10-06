@@ -2317,7 +2317,7 @@
   },
   {
     "field": "/cdm-gallery/cdm1_366244b380b9f863_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": null,
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
@@ -2353,7 +2353,7 @@
   },
   {
     "field": "/cdm-gallery/cdm1_64137856b3da7e83_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": null,
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
@@ -2626,6 +2626,12 @@
     "route": "/cdm-photo-gallery/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
+  },
+  {
+    "field": "/cdm-gallery/future_tour_cta",
+    "route": "/cdm-photo-gallery/",
+    "required": true,
+    "codeLocation": "src/pages/cdm-photo-gallery/index.astro"
   },
   {
     "field": "/cdm-gallery/cdm1_7f68703ad5c23d61_caption",

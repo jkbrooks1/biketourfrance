@@ -65,7 +65,7 @@ test('assigned dates/IDs immutable; EST suffix and unique bases enforced', () =>
 });
 test('date allocation stops at 99 rather than expanding ten-digit base', () => {
   const input = base(), first = input.registry.photos.find((p) => p.id === input.photos[0].id), next = input.registry.photos.find((p) => p.id === input.photos[1].id);
-  first.photoId = first.captureDate.replaceAll('-', '') + '99'; input.collections.combined[1][5] = first.photoId;
+  first.photoId = first.captureDate.replaceAll('-', '') + '99' + (first.estimated ? 'EST' : ''); input.collections.combined[1][5] = first.photoId;
   next.photoId = null; next.captureDate = null; input.collections.combined[2][5] = '';
   assert.throws(() => makeReview(input), /at most 99/);
 });

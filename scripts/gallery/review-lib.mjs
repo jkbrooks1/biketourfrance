@@ -97,7 +97,7 @@ export function reviewManifest(manifest, photos, snapshot) {
     const photo = alts.get(entry.field);
     if (photo) return { ...entry, route: states.get(photo.id)?.keep && !states.get(photo.id)?.deleted ? GALLERY_ROUTE : null };
     if (entry.field.startsWith('/cdm-gallery')) {
-      const visible = ['heading', 'meta_title', 'meta_description', 'cdm1_intro', 'photo_count_label', 'open_help', 'lightbox_title', 'close', 'previous', 'next', 'keyboard_help'];
+      const visible = ['heading', 'meta_title', 'meta_description', 'cdm1_intro', 'photo_count_label', 'open_help', 'lightbox_title', 'close', 'previous', 'next', 'keyboard_help', 'future_tour_cta'];
       return { ...entry, codeLocation: entry.codeLocation === 'src/pages/cdm-photo-gallery/[collection].astro' ? 'src/pages/cdm-photo-gallery/index.astro' : entry.codeLocation, route: visible.some((key) => entry.field === '/cdm-gallery/' + key) ? GALLERY_ROUTE : null };
     }
     return entry;

@@ -1,8 +1,17 @@
 {
   "schemaVersion": 1,
   "sourceFolder": "/Volumes/JB_Tier2Storage/CDM1and2",
-  "ordering": "Group both completed tours by GPS municipality, west to east using mean anchor longitude; ten owner-authorized approximate locations retain their evidence/confidence. Date/counter order within each group. No estimated coordinates are invented.",
+  "ordering": "Owner-approved exact editorial order, geographic groups west to east; permanent capture-date IDs and original GPS/estimated-location evidence unchanged.",
   "photos": [
+    {
+      "id": "cdm2-fd6ef587b12f46c4",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/9f4a9960-26b2-4d36-a8a3-4db68d666749_A4F2DBC7-C58D-460E-A289-3894F082CA8E.jpg",
+      "sourceFilename": "9f4a9960-26b2-4d36-a8a3-4db68d666749_A4F2DBC7-C58D-460E-A289-3894F082CA8E.jpg",
+      "sha256": "fd6ef587b12f46c4f5027b8bb1bcc51d2b5a02a78a8f42fdf08302cfb7c6f05a",
+      "pixelSha256": "0cf44cff7152b3d0e7aa0dda4110d45fa3ea1ac3c7010ebb0dcf9c28ddd9741c",
+      "locationGroup": "creon",
+      "order": 1
+    },
     {
       "id": "cdm2-72beaa14c115fb6f",
       "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4633.JPG",
@@ -10,7 +19,7 @@
       "sha256": "72beaa14c115fb6fb5a82ccb5baabcacc445be56d3f84652a950500f9af7607e",
       "pixelSha256": "46da727580220d57760f24b6a1fe0dc23772a499ae0582cd1204375c3e549ecb",
       "locationGroup": "creon",
-      "order": 1
+      "order": 2
     },
     {
       "id": "cdm2-197a9b403afefd6e",
@@ -18,15 +27,6 @@
       "sourceFilename": "IMG_4634.JPG",
       "sha256": "197a9b403afefd6e4b83ae43ea3dab160e05400b298daa989c7459a60703041c",
       "pixelSha256": "14702133184e71a0a432d48da49453d02913786d6c9357ba0567c36c846fac6d",
-      "locationGroup": "creon",
-      "order": 2
-    },
-    {
-      "id": "cdm2-fd6ef587b12f46c4",
-      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/9f4a9960-26b2-4d36-a8a3-4db68d666749_A4F2DBC7-C58D-460E-A289-3894F082CA8E.jpg",
-      "sourceFilename": "9f4a9960-26b2-4d36-a8a3-4db68d666749_A4F2DBC7-C58D-460E-A289-3894F082CA8E.jpg",
-      "sha256": "fd6ef587b12f46c4f5027b8bb1bcc51d2b5a02a78a8f42fdf08302cfb7c6f05a",
-      "pixelSha256": "0cf44cff7152b3d0e7aa0dda4110d45fa3ea1ac3c7010ebb0dcf9c28ddd9741c",
       "locationGroup": "creon",
       "order": 3
     },
@@ -112,22 +112,40 @@
       "order": 12
     },
     {
+      "id": "cdm2-0b2ea06efc925c01",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4651.JPG",
+      "sourceFilename": "IMG_4651.JPG",
+      "sha256": "0b2ea06efc925c0136254b02c9a2b3b278543a334e3d371c4ef4b6e160fc0679",
+      "pixelSha256": "9a8feed8f4110f80b2c9710ff7ba56110da1224c2752a5e227ebf0a582e79365",
+      "locationGroup": "moissac",
+      "order": 13
+    },
+    {
+      "id": "cdm2-39394b8639cc567e",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4652.JPG",
+      "sourceFilename": "IMG_4652.JPG",
+      "sha256": "39394b8639cc567e3df02dda0e9a3ca446750492c0896eb9f6f54ff5122c4d21",
+      "pixelSha256": "dc6bf3e231f9178a6efdcda9febace42b85102d0ba2788f42dc9d626860a49d5",
+      "locationGroup": "moissac",
+      "order": 14
+    },
+    {
+      "id": "cdm2-a723a73dff55a956",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4658.JPG",
+      "sourceFilename": "IMG_4658.JPG",
+      "sha256": "a723a73dff55a956c4e8d4d31a9806cd8a7eeebf86d05f1ba3ea45dde7ab184c",
+      "pixelSha256": "3b70b71d4e08055f313e75c8a0fd6307e7d7c49c0a23f7760bb9799a9edefea7",
+      "locationGroup": "moissac",
+      "order": 15
+    },
+    {
       "id": "cdm1-3ce2d0eb9bd45c24",
       "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4462.JPG",
       "sourceFilename": "IMG_4462.JPG",
       "sha256": "3ce2d0eb9bd45c246af97541ccfc2c5e843f86caaa7e2b0d10f994f30467bf80",
       "pixelSha256": "05f34fa05173f7bdd3f0f48a420237a2cf7ad5bde3a7c6bab9e62a517eeb4a2e",
       "locationGroup": "moissac",
-      "order": 13
-    },
-    {
-      "id": "cdm1-939d5b94d4ee4664",
-      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_6125.jpeg",
-      "sourceFilename": "IMG_6125.jpeg",
-      "sha256": "939d5b94d4ee466468c7136c33936cff0e45f427dbf047bfb06783b32f367d98",
-      "pixelSha256": "d3e3dc004ea88215e5720703d01a4ce7df02dd9b749db2739abaa5ce367326f9",
-      "locationGroup": "moissac",
-      "order": 14
+      "order": 16
     },
     {
       "id": "cdm1-8984f3682ed07c89",
@@ -136,32 +154,14 @@
       "sha256": "8984f3682ed07c895105ef2b5d409dfd05cb9fa9958b16ee654f9d9c4ee8aadc",
       "pixelSha256": "ab3fd1467ddf9e3b6a2b8b199116718f428fabcc0dc8d4d298c302280523b719",
       "locationGroup": "moissac",
-      "order": 15
-    },
-    {
-      "id": "cdm1-3e2f93340b82df4e",
-      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_6146.jpeg",
-      "sourceFilename": "IMG_6146.jpeg",
-      "sha256": "3e2f93340b82df4e0f67d8018d50fd9025b58977126423b37ac01eba5755e8fa",
-      "pixelSha256": "7176c34e9bec38bfd15cea715377199ae762fff17eb37ed64b259f59f91538c6",
-      "locationGroup": "moissac",
-      "order": 16
-    },
-    {
-      "id": "cdm1-28bda3c5ac7d2051",
-      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_6155.jpeg",
-      "sourceFilename": "IMG_6155.jpeg",
-      "sha256": "28bda3c5ac7d2051c7df56928e8b8c7fdf45d017af637ee28ce7ead2379887e3",
-      "pixelSha256": "c89849120696112824ec466658f0071f3626881748e16445e79b23d604a7f7a9",
-      "locationGroup": "moissac",
       "order": 17
     },
     {
-      "id": "cdm1-57ff5e48ef8d95a0",
-      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_6158.jpeg",
-      "sourceFilename": "IMG_6158.jpeg",
-      "sha256": "57ff5e48ef8d95a02f3ac90934e50eeb7b96d3e792b98496f0aeacf4da0ed76c",
-      "pixelSha256": "43800711e4666462688c3b705aaeca86e6e7781c5d96d031baabd5f0db2da4df",
+      "id": "cdm1-939d5b94d4ee4664",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_6125.jpeg",
+      "sourceFilename": "IMG_6125.jpeg",
+      "sha256": "939d5b94d4ee466468c7136c33936cff0e45f427dbf047bfb06783b32f367d98",
+      "pixelSha256": "d3e3dc004ea88215e5720703d01a4ce7df02dd9b749db2739abaa5ce367326f9",
       "locationGroup": "moissac",
       "order": 18
     },
@@ -175,29 +175,29 @@
       "order": 19
     },
     {
-      "id": "cdm2-0b2ea06efc925c01",
-      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4651.JPG",
-      "sourceFilename": "IMG_4651.JPG",
-      "sha256": "0b2ea06efc925c0136254b02c9a2b3b278543a334e3d371c4ef4b6e160fc0679",
-      "pixelSha256": "9a8feed8f4110f80b2c9710ff7ba56110da1224c2752a5e227ebf0a582e79365",
+      "id": "cdm1-28bda3c5ac7d2051",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_6155.jpeg",
+      "sourceFilename": "IMG_6155.jpeg",
+      "sha256": "28bda3c5ac7d2051c7df56928e8b8c7fdf45d017af637ee28ce7ead2379887e3",
+      "pixelSha256": "c89849120696112824ec466658f0071f3626881748e16445e79b23d604a7f7a9",
       "locationGroup": "moissac",
       "order": 20
     },
     {
-      "id": "cdm2-39394b8639cc567e",
-      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4652.JPG",
-      "sourceFilename": "IMG_4652.JPG",
-      "sha256": "39394b8639cc567e3df02dda0e9a3ca446750492c0896eb9f6f54ff5122c4d21",
-      "pixelSha256": "dc6bf3e231f9178a6efdcda9febace42b85102d0ba2788f42dc9d626860a49d5",
+      "id": "cdm1-3e2f93340b82df4e",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_6146.jpeg",
+      "sourceFilename": "IMG_6146.jpeg",
+      "sha256": "3e2f93340b82df4e0f67d8018d50fd9025b58977126423b37ac01eba5755e8fa",
+      "pixelSha256": "7176c34e9bec38bfd15cea715377199ae762fff17eb37ed64b259f59f91538c6",
       "locationGroup": "moissac",
       "order": 21
     },
     {
-      "id": "cdm2-a723a73dff55a956",
-      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4658.JPG",
-      "sourceFilename": "IMG_4658.JPG",
-      "sha256": "a723a73dff55a956c4e8d4d31a9806cd8a7eeebf86d05f1ba3ea45dde7ab184c",
-      "pixelSha256": "3b70b71d4e08055f313e75c8a0fd6307e7d7c49c0a23f7760bb9799a9edefea7",
+      "id": "cdm1-57ff5e48ef8d95a0",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_6158.jpeg",
+      "sourceFilename": "IMG_6158.jpeg",
+      "sha256": "57ff5e48ef8d95a02f3ac90934e50eeb7b96d3e792b98496f0aeacf4da0ed76c",
+      "pixelSha256": "43800711e4666462688c3b705aaeca86e6e7781c5d96d031baabd5f0db2da4df",
       "locationGroup": "moissac",
       "order": 22
     },
@@ -211,20 +211,20 @@
       "order": 23
     },
     {
-      "id": "cdm1-366244b380b9f863",
-      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4470.JPG",
-      "sourceFilename": "IMG_4470.JPG",
-      "sha256": "366244b380b9f8634af8e55ad4d55a9be0b8fe792299b98533fcdfce2e1ad119",
-      "pixelSha256": "767d78e77756710dedf207dd775b7b0d2ce810d2df33b588d8fabbc5b4f158fb",
-      "locationGroup": "montech",
-      "order": 24
-    },
-    {
       "id": "cdm1-7734acb3db643db5",
       "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4471.JPG",
       "sourceFilename": "IMG_4471.JPG",
       "sha256": "7734acb3db643db53fb937a1c6223a417386e94eb531c5e8e796d38d28da22d9",
       "pixelSha256": "2848107058f8da5fb036e606fea5e9c6c14f8e384bb505c9f98ab56d14eeffe0",
+      "locationGroup": "montech",
+      "order": 24
+    },
+    {
+      "id": "cdm1-366244b380b9f863",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4470.JPG",
+      "sourceFilename": "IMG_4470.JPG",
+      "sha256": "366244b380b9f8634af8e55ad4d55a9be0b8fe792299b98533fcdfce2e1ad119",
+      "pixelSha256": "767d78e77756710dedf207dd775b7b0d2ce810d2df33b588d8fabbc5b4f158fb",
       "locationGroup": "montech",
       "order": 25
     },
@@ -409,31 +409,22 @@
       "order": 45
     },
     {
-      "id": "cdm1-ffbca6de150fc7f1",
-      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4600.JPG",
-      "sourceFilename": "IMG_4600.JPG",
-      "sha256": "ffbca6de150fc7f18ac43a1754fb5a9c36c6b0d1fba1f38debf31a602cbcace3",
-      "pixelSha256": "103365eb1fdde360633fc24d721677f68571f67ca952bb9a36b7d4829d8cebde",
-      "locationGroup": "beziers",
-      "order": 46
-    },
-    {
       "id": "cdm2-8cdc758cbed56a24",
       "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4797.JPG",
       "sourceFilename": "IMG_4797.JPG",
       "sha256": "8cdc758cbed56a24ff9afd0e882b9f4a57cb20c6413fb1a014b34b18fbcb96a3",
       "pixelSha256": "7e854265ab66dfac3469a5d2fb38c3972dbfcad47b764bd21690a3b768370b0b",
       "locationGroup": "beziers",
-      "order": 47
+      "order": 46
     },
     {
-      "id": "cdm1-7ed840d66e9ad03a",
-      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4606.JPG",
-      "sourceFilename": "IMG_4606.JPG",
-      "sha256": "7ed840d66e9ad03af5fc72c95d32b5abe9e3ae44e696bcee499527b57ba699da",
-      "pixelSha256": "a779178b85d35e0ae8d5144f843c12b05f2b4539f0eaa7cffa84dfe3a66c71d1",
-      "locationGroup": "sete",
-      "order": 48
+      "id": "cdm1-ffbca6de150fc7f1",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4600.JPG",
+      "sourceFilename": "IMG_4600.JPG",
+      "sha256": "ffbca6de150fc7f18ac43a1754fb5a9c36c6b0d1fba1f38debf31a602cbcace3",
+      "pixelSha256": "103365eb1fdde360633fc24d721677f68571f67ca952bb9a36b7d4829d8cebde",
+      "locationGroup": "beziers",
+      "order": 47
     },
     {
       "id": "cdm1-561bafe5aff2e2c8",
@@ -441,6 +432,15 @@
       "sourceFilename": "IMG_4607.JPG",
       "sha256": "561bafe5aff2e2c88f930fdeb328dcefc739aa5e1e96954b5e18fd22240da5dc",
       "pixelSha256": "bed391c68952413b00cac8320fe017ad01325cf308c6c48595ee8df4cfdefe90",
+      "locationGroup": "sete",
+      "order": 48
+    },
+    {
+      "id": "cdm1-7ed840d66e9ad03a",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4606.JPG",
+      "sourceFilename": "IMG_4606.JPG",
+      "sha256": "7ed840d66e9ad03af5fc72c95d32b5abe9e3ae44e696bcee499527b57ba699da",
+      "pixelSha256": "a779178b85d35e0ae8d5144f843c12b05f2b4539f0eaa7cffa84dfe3a66c71d1",
       "locationGroup": "sete",
       "order": 49
     }
