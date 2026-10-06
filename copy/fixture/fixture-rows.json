@@ -392,7 +392,8 @@
     "This website does not have an online sign-up form yet. To hear about exact 2027 dates and pricing when they are announced. Sign up for the free waitlist."
   ],
   [
-    "/contact-page/heading_2"
+    "/contact-page/heading_2",
+    ""
   ],
   [
     "/contact-page/heading_3",
@@ -700,7 +701,7 @@
   ],
   [
     "/terms/body_3",
-    "You cannot book or pay for a tour on this website. Asking to join the waitlist by email does not reserve a place. Any booking terms will be given to you in writing before you commit."
+    "Tours cannot be booked or paid for through this website. Joining the waitlist by email neither reserves a place on a tour nor obligates you to join. We will provide the booking terms in writing before you make any commitment."
   ],
   [
     "/terms/body_4",
@@ -772,7 +773,7 @@
   ],
   [
     "/tours/meta_description",
-    "BikeTourFrance.net offers small-group, self-supported bicycle tours in France, a self-guided tour package, and coaching re bike tour planning by John."
+    "BikeTourFrance.net offers small-group, self-supported bicycle tours in France, a self-guided tour package, and coaching re bike tour planning."
   ],
   [
     "/tours/meta_title",
@@ -784,7 +785,7 @@
   ],
   [
     "/waitlist/body_2",
-    "The waitlist is the simplest way to show interest in a 2027 tour. Tell us your name and the season you prefer. When 2027 tours are finalized, you will hear from us by email. Joining does not commit you to anything."
+    "Joining the waitlist lets us know you're interested in a 2027 tour. Tell us your name and the season you prefer. When 2027 tours are finalized, you will hear from us by email. Joining the waitlist does not commit you to anything."
   ],
   [
     "/waitlist/body_3",
@@ -832,7 +833,7 @@
   ],
   [
     "/cdm-facts/copy_12",
-    "Route notes on lunch, water, and restroom options for each riding day."
+    "On route suggestions regarding lunch, water, and restroom options for each riding day."
   ],
   [
     "/cdm-facts/copy_13",
