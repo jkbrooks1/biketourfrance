@@ -348,7 +348,7 @@ export const TEXT: Record<string, string> = {
   "/resources-library/text_15": "Bicycle Touring Pack List v2",
   "/resources-library/text_16": "A Google Sheet. Copy it and change it to fit your trip.",
   "/resources-library/text_17": "Canal des Deux Mers historical narrative, mobile version",
-  "/resources-library/text_18": "Written for the 2026 tour. The history of the route has not changed. Formatted for a phone.",
+  "/resources-library/text_18": "Written for BikeTourFrance CDM Tours. Formatted for a phone.",
   "/resources-library/text_19": "EuroVelo",
   "/resources-library/text_2": "Introduction",
   "/resources-library/text_20": "France Vélo Tourisme",
