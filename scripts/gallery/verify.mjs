@@ -1,24 +1,27 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { readFileSync, existsSync, statSync, readdirSync, lstatSync, writeFileSync } from 'node:fs';
+import { readFileSync, existsSync, statSync, readdirSync, lstatSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 import sharp from 'sharp';
 
 const proof = 'docs/proof/2026-10-05_cdm_photo_gallery';
+const outputProof = process.env.BTF_GALLERY_PROOF_DIR || proof;
 const source = JSON.parse(readFileSync(`${proof}/source-inventory.json`, 'utf8'));
 const manifest = JSON.parse(readFileSync('src/data/cdm-gallery-manifest.json', 'utf8'));
+const review = JSON.parse(readFileSync('src/data/cdm-gallery-review.json', 'utf8'));
+const kept = manifest.photos.filter((photo) => review.photos.find((entry) => entry.id === photo.id)?.keep);
 const delivered = JSON.parse(readFileSync('dist/cdm-photo-gallery/manifest.json', 'utf8'));
 const hash = (bytes) => createHash('sha256').update(bytes).digest('hex');
 assert.equal(manifest.photos.length, source.uniqueCount);
 assert.equal(new Set(manifest.photos.map((photo) => photo.sha256)).size, manifest.photos.length);
 assert.equal(new Set(manifest.photos.map((photo) => photo.pixelSha256)).size, manifest.photos.length);
-assert.equal(delivered.photos.length, manifest.photos.length);
+assert.equal(delivered.photos.length, kept.length);
 const fields = new Map(JSON.parse(readFileSync('copy/fixture/fixture-rows.json', 'utf8')));
 const summary = { routes: [], uniqueImages: manifest.photos.length, excludedDuplicates: source.duplicates.length, sourceImagesVerifiedUnchanged: 0, variantsChecked: 0, largestDeliveredImageBytes: 0, managedOriginalBytes: 0 };
 const landing = readFileSync('dist/cdm-photo-gallery/index.html', 'utf8');
 const landingIds = [...landing.matchAll(/data-photo-id="([^"]+)"/g)].map((match) => match[1]);
-assert.deepEqual(landingIds, manifest.photos.map((photo) => photo.id), 'Landing page must show every unique photo in manifest order');
-assert.equal(new Set(landingIds).size, manifest.photos.length);
+assert.deepEqual(landingIds, kept.map((photo) => photo.id), 'Landing page must show checked photos in manifest order');
+assert.equal(new Set(landingIds).size, kept.length);
 summary.routes.push({ route: '/cdm-photo-gallery/', renderedImages: landingIds.length });
 
 for (const collection of source.collections) {
@@ -27,8 +30,8 @@ for (const collection of source.collections) {
     assert.equal(hash(readFileSync(image.sourcePath)), image.sha256, `Mounted original changed: ${image.sourcePath}`);
     summary.sourceImagesVerifiedUnchanged++;
   }
-  const included = manifest.photos.filter((photo) => photo.collection === collection.collection);
-  assert.equal(included.length, collection.includedCount);
+  const included = kept.filter((photo) => photo.collection === collection.collection);
+  assert.equal(manifest.photos.filter((photo) => photo.collection === collection.collection).length, collection.includedCount);
   const route = `/cdm-photo-gallery/${collection.collection}/`;
   const html = readFileSync(`dist${route}index.html`, 'utf8');
   const ids = [...html.matchAll(/data-photo-id="([^"]+)"/g)].map((match) => match[1]);
@@ -46,6 +49,7 @@ for (const photo of manifest.photos) {
   assert.equal(hash(readFileSync(photo.managedSource)), photo.sha256, 'Managed original changed');
   summary.managedOriginalBytes += statSync(photo.managedSource).size;
   const output = delivered.photos.find((entry) => entry.id === photo.id);
+  if (!review.photos.find((entry) => entry.id === photo.id).keep) { assert.equal(output, undefined); continue; }
   assert.equal(output.alt, fields.get(photo.altField));
   assert.ok(output.alt?.trim());
   assert.deepEqual([output.width, output.height], [photo.width, photo.height]);
@@ -80,6 +84,7 @@ for (const htmlFile of distFiles.filter((file) => file.endsWith('.html'))) {
   const html = readFileSync(htmlFile, 'utf8');
   assert.ok(html.includes('href="/cdm-photo-gallery/"'), `Missing footer gallery access: ${htmlFile}`);
 }
-writeFileSync(`${proof}/manifest-verification.json`, JSON.stringify(summary, null, 2) + '\n');
+mkdirSync(outputProof, { recursive: true });
+writeFileSync(`${outputProof}/manifest-verification.json`, JSON.stringify(summary, null, 2) + '\n');
 console.log('gallery:verify PASS');
 console.log(JSON.stringify(summary, null, 2));

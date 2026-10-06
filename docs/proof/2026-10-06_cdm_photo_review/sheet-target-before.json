@@ -1,0 +1,194 @@
+{
+  "spreadsheetId": "1vzlhoekeVcx437ajMMFU--1kIrE7DfKYvi8rKhlE9aw",
+  "spreadsheetUrl": "https://docs.google.com/spreadsheets/d/1vzlhoekeVcx437ajMMFU--1kIrE7DfKYvi8rKhlE9aw/edit?ouid=117419745612447434426",
+  "properties": {
+    "title": "BTF_Approved_Site_Copy",
+    "locale": "en_US",
+    "timeZone": "America/Los_Angeles"
+  },
+  "sheets": [
+    {
+      "properties": {
+        "sheetId": 1957325162,
+        "title": "Approved Site Copy",
+        "index": 0,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 1268,
+          "columnCount": 26,
+          "frozenRowCount": 1,
+          "hideGridlines": true,
+          "rowGroupControlAfter": true,
+          "columnGroupControlAfter": true
+        }
+      },
+      "data": [
+        {
+          "startRow": 434,
+          "rowData": [
+            {
+              "values": [
+                {
+                  "userEnteredValue": {
+                    "stringValue": "/cdm-gallery/cdm2_3142d98a94b23d8c_alt"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "/cdm-gallery/cdm2_3142d98a94b23d8c_alt"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "A gravel path follows a canal past shrubs and a young tree supported by wooden stakes."
+                  },
+                  "effectiveValue": {
+                    "stringValue": "A gravel path follows a canal past shrubs and a young tree supported by wooden stakes."
+                  },
+                  "userEnteredFormat": {
+                    "backgroundColor": {
+                      "red": 1,
+                      "green": 1
+                    },
+                    "backgroundColorStyle": {
+                      "rgbColor": {
+                        "red": 1,
+                        "green": 1
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "userEnteredValue": {
+                    "stringValue": "/cdm-gallery/cdm2_0bd445cb3b2f6142_alt"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "/cdm-gallery/cdm2_0bd445cb3b2f6142_alt"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "A canal-side gravel path runs beside dry grass and shrubs beneath streaked white clouds."
+                  },
+                  "effectiveValue": {
+                    "stringValue": "A canal-side gravel path runs beside dry grass and shrubs beneath streaked white clouds."
+                  },
+                  "userEnteredFormat": {
+                    "backgroundColor": {
+                      "red": 1,
+                      "green": 1
+                    },
+                    "backgroundColorStyle": {
+                      "rgbColor": {
+                        "red": 1,
+                        "green": 1
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "userEnteredValue": {
+                    "stringValue": "/cdm-gallery/cdm2_4967b506b49ae644_alt"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "/cdm-gallery/cdm2_4967b506b49ae644_alt"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "A sunny gravel towpath passes a staked young tree with canal water on the right."
+                  },
+                  "effectiveValue": {
+                    "stringValue": "A sunny gravel towpath passes a staked young tree with canal water on the right."
+                  },
+                  "userEnteredFormat": {
+                    "backgroundColor": {
+                      "red": 1,
+                      "green": 1
+                    },
+                    "backgroundColorStyle": {
+                      "rgbColor": {
+                        "red": 1,
+                        "green": 1
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "userEnteredValue": {
+                    "stringValue": "/cdm-gallery/cdm2_283bc34f8bd482dd_alt"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "/cdm-gallery/cdm2_283bc34f8bd482dd_alt"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "A cyclist rides toward the camera on a gravel towpath beside shrubs and a canal."
+                  },
+                  "effectiveValue": {
+                    "stringValue": "A cyclist rides toward the camera on a gravel towpath beside shrubs and a canal."
+                  },
+                  "userEnteredFormat": {
+                    "backgroundColor": {
+                      "red": 1,
+                      "green": 1
+                    },
+                    "backgroundColorStyle": {
+                      "rgbColor": {
+                        "red": 1,
+                        "green": 1
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "userEnteredValue": {
+                    "stringValue": "/cdm-gallery/cdm2_8cdc758cbed56a24_alt"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "/cdm-gallery/cdm2_8cdc758cbed56a24_alt"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "A wall-mounted information plaque titled L’église de la Madeleine includes text, a church photograph and QR codes."
+                  },
+                  "effectiveValue": {
+                    "stringValue": "A wall-mounted information plaque titled L’église de la Madeleine includes text, a church photograph and QR codes."
+                  },
+                  "userEnteredFormat": {
+                    "backgroundColor": {
+                      "red": 1,
+                      "green": 1
+                    },
+                    "backgroundColorStyle": {
+                      "rgbColor": {
+                        "red": 1,
+                        "green": 1
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

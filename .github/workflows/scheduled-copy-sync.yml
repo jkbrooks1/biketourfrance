@@ -43,7 +43,7 @@ jobs:
         id: changes
         shell: bash
         run: |
-          if git status --porcelain -- src/data/approved-copy.ts copy/fixture/fixture-rows.json copy/field-manifest.json | grep -q .; then
+          if git status --porcelain -- src/data/approved-copy.ts copy/fixture/fixture-rows.json copy/field-manifest.json src/data/cdm-gallery-review.json src/data/cdm-photo-id-registry.json copy/gallery-review.fixture.json | grep -q .; then
             echo 'changed=true' >> "$GITHUB_OUTPUT"
             echo 'Approved copy changes detected'
           else
@@ -57,6 +57,6 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -- src/data/approved-copy.ts copy/fixture/fixture-rows.json copy/field-manifest.json
+          git add -- src/data/approved-copy.ts copy/fixture/fixture-rows.json copy/field-manifest.json src/data/cdm-gallery-review.json src/data/cdm-photo-id-registry.json copy/gallery-review.fixture.json
           git commit -m 'chore(copy): automated hourly sync from Google Sheet'
           git push origin HEAD:main
