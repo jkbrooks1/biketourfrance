@@ -23,7 +23,8 @@ for (const gallery of document.querySelectorAll<HTMLElement>('[data-cdm-gallery]
     image.decoding = 'async';
     image.src = link.href;
     media.replaceChildren(image);
-    caption.textContent = image.alt;
+    caption.textContent = link.closest('li')?.querySelector('[data-photo-caption]')?.textContent ?? '';
+    caption.hidden = !caption.textContent;
     position.textContent = `${active + 1} / ${links.length}`;
   }
   function open(index: number, link: HTMLAnchorElement) {
