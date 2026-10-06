@@ -60,7 +60,9 @@ for (const { rel, html } of pages) {
   const is404 = rel === '/404.html';
 
   const h1s = html.match(/<h1[\s>]/g) ?? [];
-  if (h1s.length !== 1) fail(name, `expected exactly one h1, found ${h1s.length}`);
+  // The owner removed the gallery hero heading; its browser title remains unchanged.
+  const expectedH1s = rel === '/cdm-photo-gallery/' ? 0 : 1;
+  if (h1s.length !== expectedH1s) fail(name, `expected ${expectedH1s} h1, found ${h1s.length}`);
 
   for (const tag of ['<header', '<nav', '<main', '<footer']) {
     if (!html.includes(tag)) fail(name, `missing ${tag} landmark`);

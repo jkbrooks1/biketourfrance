@@ -18,7 +18,7 @@ with sync_playwright() as p:
  page=context.new_page()
  response=page.goto(report['url'],wait_until='networkidle',timeout=90000)
  check(response.status==200,'Gallery HTTP200')
- check(page.locator('h1').inner_text()==expected['page']['heading'],'Exact H1')
+ check(page.locator('.cdm-gallery-header h1').count()==0,'Redundant hero heading absent')
  check(page.locator('.cdm-gallery-header .lede').inner_text()==expected['page']['intro'],'Exact intro')
  check(page.locator('meta[name="description"]').get_attribute('content')==expected['page']['description'],'Exact meta description')
  check(page.title()==expected['page']['heading']+' | BikeTourFrance.net','Title and existing suffix')
