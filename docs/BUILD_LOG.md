@@ -1565,3 +1565,9 @@ verify-dist: 12 pages OK
   - `astro build` → 12 page routes compiled cleanly in 571ms
   - Assets → 136 optimized images bundled and cached cleanly
 - **Milestone 4 Status:** 🚀 IN PROGRESS (Interactive Systems & CTAs Verification)
+
+## 2026-10-05 — Dual Google Form Integration & Milestone 4 Qualification
+- **Waitlist Form Link:** `https://forms.gle/8n4aCaPrSNPgoxpr5` ("Join the 2027 waitlist" CTAs)
+- **Tour Updates Form Link:** `https://forms.gle/thPjnUyKGCoZb6SM7` ("Get tour updates" CTAs)
+- **Milestone 4 Status:** ✅ PASSED (Interactive Systems & CTAs verified; Google Forms active)
+- **Milestone 5 Status:** 🚀 IN PROGRESS (Quality, SEO & Performance Verification)
