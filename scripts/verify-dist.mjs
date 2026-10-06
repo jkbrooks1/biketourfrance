@@ -98,8 +98,7 @@ for (const { rel, html } of pages) {
     fail(name, `canonical ${canonical} should be ${ORIGIN + rel}`);
   }
 
-  if (!/<meta name="robots" content="noindex, nofollow, noarchive"/.test(html))
-    fail(name, 'staging noindex meta missing');
+  
 
   for (const img of html.matchAll(/<img\b[^>]*>/g)) {
     if (!/\salt(=|\s|\/|>)/.test(img[0])) fail(name, `img without alt: ${img[0].slice(0, 80)}`);
@@ -264,10 +263,10 @@ for (const p of pages.filter((p) => p.rel !== '/404.html')) {
 }
 
 const robots = existsSync(join(DIST, 'robots.txt')) ? readFileSync(join(DIST, 'robots.txt'), 'utf8') : '';
-if (!/Disallow:\s*\/\s*$/m.test(robots)) fail('robots.txt', 'must disallow all on staging');
+if (/Disallow:\s*\/\s*$/m.test(robots)) fail("robots.txt", "must NOT disallow all on production");
+if (!/Sitemap:/.test(robots)) fail("robots.txt", "must contain Sitemap directive on production");
 const headers = existsSync(join(DIST, '_headers')) ? readFileSync(join(DIST, '_headers'), 'utf8') : '';
-if (!/X-Robots-Tag:\s*noindex, nofollow, noarchive/.test(headers))
-  fail('_headers', 'X-Robots-Tag noindex missing');
+
 if (!existsSync(join(DIST, '404.html'))) fail('404', '404.html missing');
 
 if (failures.length) {
