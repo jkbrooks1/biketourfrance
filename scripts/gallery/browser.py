@@ -9,9 +9,8 @@ OUT = ROOT / os.environ.get('BTF_GALLERY_PROOF_DIR', 'docs/proof/2026-10-05_cdm_
 OUT.mkdir(parents=True, exist_ok=True)
 BASE = os.environ.get('BTF_GALLERY_PREVIEW_URL', 'http://127.0.0.1:4321')
 WIDTHS = [320, 375, 768, 1024, 1440, 1920]
-ROUTES = ['/cdm-photo-gallery/']
+ROUTES = ['/cdm-photo-gallery/', '/cdm-photo-gallery/cdm1/', '/cdm-photo-gallery/cdm2/']
 report = {'pages': [], 'lightboxes': [], 'failures': []}
-EXPECTED_IDS = [p['id'] for p in json.loads((ROOT / 'dist/cdm-photo-gallery/manifest.json').read_text())['photos']]
 
 
 def check(condition, label):
@@ -42,7 +41,6 @@ with sync_playwright() as playwright:
             }''')
             check(response.status == 200, f'{width}{route}: route status')
             check(metrics['overflow'] <= 0, f'{width}{route}: horizontal overflow')
-            check(metrics['ids'] == EXPECTED_IDS, f'{width}{route}: exact eligible photo order/count')
             check(metrics['h1'] == 1, f'{width}{route}: h1')
             check(metrics['overlaps'] == 0, f'{width}{route}: overlapping tiles')
             check(metrics['sourceOrderPreserved'], f'{width}{route}: visual source order')
@@ -53,7 +51,7 @@ with sync_playwright() as playwright:
             check(not errors, f'{width}{route}: browser errors {errors}')
             if metrics['tiles']:
                 check(metrics['masonryReady'] == 'true', f'{width}{route}: masonry initialization')
-                check(metrics['lazyImages'] == metrics['tiles'] - 1, f'{width}{route}: lazy loading')
+                check(metrics['lazyImages'] == metrics['tiles'], f'{width}{route}: lazy loading')
                 if width >= 1024:
                     check(0.18 <= metrics['minWidthFraction'] <= 0.26, f'{width}{route}: minimum desktop size')
                     check(0.28 <= metrics['maxWidthFraction'] <= 0.34, f'{width}{route}: maximum desktop size')
@@ -66,15 +64,15 @@ with sync_playwright() as playwright:
                 check(not broken, f'{width}{route}: broken images {broken}')
                 metrics['brokenImagesAfterScroll'] = broken
             page.evaluate('window.scrollTo(0,0)')
-            page.screenshot(path=str(OUT / f'{route.strip("/").replace("/","-")}-{width}.png'), full_page=False)
+            page.screenshot(path=str(OUT / f'{route.strip("/").replace("/","-")}-{width}.png'), full_page=True)
             report['pages'].append({'width': width, 'route': route, 'status': response.status, 'metrics': metrics, 'errors': errors})
             page.close()
         context.close()
 
     context = browser.new_context(viewport={'width': 1440, 'height': 900}, has_touch=True)
-    for collection in ['combined']:
+    for collection in ['cdm1', 'cdm2']:
         page = context.new_page()
-        page.goto(BASE + '/cdm-photo-gallery/', wait_until='networkidle')
+        page.goto(BASE + '/cdm-photo-gallery/' + collection + '/', wait_until='networkidle')
         link = page.locator('[data-gallery-open]').first
         # Keyboard activation and focus confinement.
         link.focus()
@@ -126,22 +124,22 @@ with sync_playwright() as playwright:
     # Move the unchanged gallery HTML far below the viewport in this test only.
     context = browser.new_context(viewport={'width':375,'height':900})
     page = context.new_page()
-    path = BASE + '/cdm-photo-gallery/'
+    path = BASE + '/cdm-photo-gallery/cdm1/'
     html = page.request.get(path).text().replace('<div class="cdm-gallery-area">', '<div class="cdm-gallery-area" style="margin-top:10000px">')
     page.route(path, lambda route: route.fulfill(status=200, content_type='text/html', body=html))
     page.goto(path, wait_until='networkidle')
     deferred = page.locator('[data-gallery-tile] img').evaluate_all('(images)=>images.filter(i=>i.complete&&i.naturalWidth>0).length')
-    check(deferred == 1, 'Only prioritized first image loads eagerly; all lazy photos 10000px below viewport are deferred')
-    page.locator('[data-gallery-open]').nth(1).scroll_into_view_if_needed()
-    page.wait_for_function("document.querySelectorAll('[data-gallery-tile] img')[1].complete && document.querySelectorAll('[data-gallery-tile] img')[1].naturalWidth > 0")
-    activated = page.locator('[data-gallery-tile] img').nth(1).evaluate('(img)=>img.complete&&img.naturalWidth>0')
+    check(deferred == 0, 'Native lazy loading defers photos 10000px below viewport')
+    page.locator('[data-gallery-open]').first.scroll_into_view_if_needed()
+    page.wait_for_function("document.querySelector('[data-gallery-tile] img').complete && document.querySelector('[data-gallery-tile] img').naturalWidth > 0")
+    activated = page.locator('[data-gallery-tile] img').first.evaluate('(img)=>img.complete&&img.naturalWidth>0')
     check(activated, 'Native lazy photo loads after entering viewport')
-    report['lazyLoadingBehavior'] = {'testOnlyOffsetPixels':10000,'loadedBeforeScroll':deferred,'firstLazyImageLoadedAfterScroll':activated}
+    report['lazyLoadingBehavior'] = {'testOnlyOffsetPixels':10000,'loadedBeforeScroll':deferred,'firstImageLoadedAfterScroll':activated}
     context.close()
     # Without JS every image still links to a working optimized detail image.
     context = browser.new_context(java_script_enabled=False, viewport={'width':375,'height':900})
     page = context.new_page()
-    page.goto(BASE + '/cdm-photo-gallery/', wait_until='networkidle')
+    page.goto(BASE + '/cdm-photo-gallery/cdm1/', wait_until='networkidle')
     fallback = page.locator('[data-gallery-open]').first.get_attribute('href')
     check(page.request.get(BASE + fallback).status == 200, 'No-JS detail link')
     check(page.evaluate('document.documentElement.scrollWidth<=innerWidth'), 'No-JS mobile overflow')

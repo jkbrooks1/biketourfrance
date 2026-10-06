@@ -5,7 +5,7 @@ from playwright.sync_api import sync_playwright
 
 ROUTES = ['/', '/tours/', '/about/', '/resources/', '/contact/', '/canal-des-deux-mers/',
           '/canal-des-deux-mers/practical-info/', '/privacy/', '/terms/', '/cookies/', '/404.html',
-          '/cdm-photo-gallery/']
+          '/cdm-photo-gallery/', '/cdm-photo-gallery/cdm1/', '/cdm-photo-gallery/cdm2/']
 WIDTHS = [375, 768, 1024, 1440]
 OUT = os.environ.get('BTF_BROWSER_PROOF_DIR', 'docs/proof/2026-10-03')
 os.makedirs(OUT, exist_ok=True)

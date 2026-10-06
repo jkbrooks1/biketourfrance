@@ -2,10 +2,9 @@
 import galleryFont from '../../../node_modules/@fontsource-variable/montserrat/files/montserrat-latin-wght-normal.woff2?url';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CdmPhotoGallery from '../../components/CdmPhotoGallery.astro';
-import Button from '../../components/Button.astro';
 import '../../styles/cdm-photo-gallery.css';
 import { TEXT } from '../../data/approved-copy';
-import { GALLERY_ROOT, galleryPhotos } from '../../data/cdm-photo-gallery';
+import { GALLERY_ROOT, COLLECTIONS, galleryPhotos } from '../../data/cdm-photo-gallery';
 ---
 
 <BaseLayout path={GALLERY_ROOT} title={TEXT['/cdm-gallery/meta_title']} description={TEXT['/cdm-gallery/meta_description']}>
@@ -13,17 +12,24 @@ import { GALLERY_ROOT, galleryPhotos } from '../../data/cdm-photo-gallery';
   <section class="section cdm-gallery-header">
     <div class="container">
       <h1>{TEXT['/cdm-gallery/heading']}</h1>
-      <p class="lede">{TEXT['/cdm-gallery/cdm1_intro']}</p>
-      <p>{galleryPhotos.length} {TEXT['/cdm-gallery/photo_count_label']}</p>
+      <p class="lede">{TEXT['/cdm-gallery/intro']}</p>
+      <nav class="cdm-gallery-links" aria-label={TEXT['/cdm-gallery/navigation_label']}>
+        {COLLECTIONS.map((collection) => (
+          <a href={`#${collection}`}>{TEXT[`/cdm-gallery/${collection}_link`]}</a>
+        ))}
+      </nav>
     </div>
   </section>
-  <div class="cdm-gallery-area">
-    <CdmPhotoGallery collection="combined" />
-  </div>
-  <section class="section" data-gallery-cta>
-    <div class="container">
-      <p class="lede">{TEXT['/cdm-gallery/future_tour_cta']}</p>
-      <Button href="/waitlist-2027/">{TEXT['/waitlist/cta_1']}</Button>
-    </div>
-  </section>
+  {COLLECTIONS.map((collection) => (
+    <section id={collection} aria-labelledby={`${collection}-heading`}>
+      <div class="container cdm-gallery-header">
+        <h2 id={`${collection}-heading`}>{TEXT[`/cdm-gallery/${collection}_heading`]}</h2>
+        <p>{TEXT[`/cdm-gallery/${collection}_intro`]}</p>
+        <p>{galleryPhotos.filter((photo) => photo.collection === collection).length} {TEXT['/cdm-gallery/photo_count_label']}</p>
+      </div>
+      <div class="cdm-gallery-area">
+        <CdmPhotoGallery collection={collection} />
+      </div>
+    </section>
+  ))}
 </BaseLayout>

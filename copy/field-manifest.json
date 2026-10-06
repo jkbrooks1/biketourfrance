@@ -2125,7 +2125,7 @@
   },
   {
     "field": "/cdm-gallery/heading",
-    "route": "/cdm-photo-gallery/",
+    "route": "*",
     "required": true,
     "codeLocation": "src/components/Footer.astro"
   },
@@ -2143,860 +2143,488 @@
   },
   {
     "field": "/cdm-gallery/intro",
-    "route": null,
+    "route": "/cdm-photo-gallery/",
     "required": true,
     "codeLocation": "src/pages/cdm-photo-gallery/index.astro"
   },
   {
     "field": "/cdm-gallery/cdm1_heading",
-    "route": null,
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
-    "codeLocation": "src/pages/cdm-photo-gallery/index.astro"
+    "codeLocation": "src/pages/cdm-photo-gallery/[collection].astro"
   },
   {
     "field": "/cdm-gallery/cdm1_intro",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
-    "codeLocation": "src/pages/cdm-photo-gallery/index.astro"
+    "codeLocation": "src/pages/cdm-photo-gallery/[collection].astro"
   },
   {
     "field": "/cdm-gallery-cdm1/meta_title",
-    "route": null,
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
-    "codeLocation": "src/pages/cdm-photo-gallery/index.astro"
+    "codeLocation": "src/pages/cdm-photo-gallery/[collection].astro"
   },
   {
     "field": "/cdm-gallery-cdm1/meta_description",
-    "route": null,
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
-    "codeLocation": "src/pages/cdm-photo-gallery/index.astro"
+    "codeLocation": "src/pages/cdm-photo-gallery/[collection].astro"
   },
   {
     "field": "/cdm-gallery/cdm2_heading",
-    "route": null,
+    "route": "/cdm-photo-gallery/cdm2/",
     "required": true,
-    "codeLocation": "src/pages/cdm-photo-gallery/index.astro"
+    "codeLocation": "src/pages/cdm-photo-gallery/[collection].astro"
   },
   {
     "field": "/cdm-gallery/cdm2_intro",
-    "route": null,
+    "route": "/cdm-photo-gallery/cdm2/",
     "required": true,
-    "codeLocation": "src/pages/cdm-photo-gallery/index.astro"
+    "codeLocation": "src/pages/cdm-photo-gallery/[collection].astro"
   },
   {
     "field": "/cdm-gallery-cdm2/meta_title",
-    "route": null,
+    "route": "/cdm-photo-gallery/cdm2/",
     "required": true,
-    "codeLocation": "src/pages/cdm-photo-gallery/index.astro"
+    "codeLocation": "src/pages/cdm-photo-gallery/[collection].astro"
   },
   {
     "field": "/cdm-gallery-cdm2/meta_description",
-    "route": null,
+    "route": "/cdm-photo-gallery/cdm2/",
     "required": true,
-    "codeLocation": "src/pages/cdm-photo-gallery/index.astro"
+    "codeLocation": "src/pages/cdm-photo-gallery/[collection].astro"
   },
   {
     "field": "/cdm-gallery/cdm1_link",
-    "route": null,
+    "route": "*",
     "required": false,
     "codeLocation": "src/pages/cdm-photo-gallery/index.astro"
   },
   {
     "field": "/cdm-gallery/cdm2_link",
-    "route": null,
+    "route": "*",
     "required": false,
     "codeLocation": "src/pages/cdm-photo-gallery/index.astro"
   },
   {
     "field": "/cdm-gallery/back_link",
-    "route": null,
+    "route": "*",
     "required": false,
-    "codeLocation": "src/pages/cdm-photo-gallery/index.astro"
+    "codeLocation": "src/pages/cdm-photo-gallery/[collection].astro"
   },
   {
     "field": "/cdm-gallery/photo_count_label",
-    "route": "/cdm-photo-gallery/",
+    "route": "*",
     "required": false,
-    "codeLocation": "src/pages/cdm-photo-gallery/index.astro"
+    "codeLocation": "src/pages/cdm-photo-gallery/[collection].astro"
   },
   {
     "field": "/cdm-gallery/navigation_label",
-    "route": null,
+    "route": "*",
     "required": false,
-    "codeLocation": "src/pages/cdm-photo-gallery/index.astro"
+    "codeLocation": "src/pages/cdm-photo-gallery/[collection].astro"
   },
   {
     "field": "/cdm-gallery/open_help",
-    "route": "/cdm-photo-gallery/",
+    "route": "*",
     "required": false,
     "codeLocation": "src/components/CdmPhotoGallery.astro"
   },
   {
     "field": "/cdm-gallery/lightbox_title",
-    "route": "/cdm-photo-gallery/",
+    "route": "*",
     "required": false,
     "codeLocation": "src/components/CdmPhotoGallery.astro"
   },
   {
     "field": "/cdm-gallery/close",
-    "route": "/cdm-photo-gallery/",
+    "route": "*",
     "required": false,
     "codeLocation": "src/components/CdmPhotoGallery.astro"
   },
   {
     "field": "/cdm-gallery/previous",
-    "route": "/cdm-photo-gallery/",
+    "route": "*",
     "required": false,
     "codeLocation": "src/components/CdmPhotoGallery.astro"
   },
   {
     "field": "/cdm-gallery/next",
-    "route": "/cdm-photo-gallery/",
+    "route": "*",
     "required": false,
     "codeLocation": "src/components/CdmPhotoGallery.astro"
   },
   {
     "field": "/cdm-gallery/keyboard_help",
-    "route": "/cdm-photo-gallery/",
+    "route": "*",
     "required": false,
     "codeLocation": "src/components/CdmPhotoGallery.astro"
   },
   {
     "field": "/cdm-gallery/cdm1_7f68703ad5c23d61_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_a4d1be44bd28d570_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_a01802f64cdb9965_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_d5d527289de1d74a_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_8f2c9ea02664e9f0_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_1990d55c86fa7035_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_88a120bab432488c_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_3ce2d0eb9bd45c24_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_367a2fa64cdb80f8_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_366244b380b9f863_alt",
-    "route": null,
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_7734acb3db643db5_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_c6dfb4f9a289ce35_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_92a476a59d024ec7_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_15733cee3f1e0b5a_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_e9e6586e51dfe82a_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_64137856b3da7e83_alt",
-    "route": null,
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_527093082c289f38_alt",
-    "route": null,
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_a6c8e23da1df5477_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_e7d4c77b88559971_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_447621a90188ae9f_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_07dbf791aa3f701d_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_14c70267e3e8d32d_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_46de05ddac2c6592_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_fbe9c36d2b2693a7_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_d3f76238429211af_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_c90a305ef39c58c4_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_1b40eb892c1fc67b_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_da279a6021ecb20f_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_7c99450191c66dc6_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_ffbca6de150fc7f1_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_7ed840d66e9ad03a_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_561bafe5aff2e2c8_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_65549a14c4c04b9e_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_df99ed89439a5013_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_939d5b94d4ee4664_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_8984f3682ed07c89_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_3e2f93340b82df4e_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_28bda3c5ac7d2051_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_57ff5e48ef8d95a0_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm1_15a6b1ce00490898_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm1/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm2_fd6ef587b12f46c4_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm2/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm2_72beaa14c115fb6f_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm2/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm2_197a9b403afefd6e_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm2/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm2_45b8c5be246ff253_alt",
-    "route": null,
+    "route": "/cdm-photo-gallery/cdm2/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm2_0b2ea06efc925c01_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm2/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm2_39394b8639cc567e_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm2/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm2_a723a73dff55a956_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm2/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm2_77ff0d20d18d2b69_alt",
-    "route": null,
+    "route": "/cdm-photo-gallery/cdm2/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm2_16c4003fcd414a42_alt",
-    "route": null,
+    "route": "/cdm-photo-gallery/cdm2/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm2_3de0edcfd0ab9c8a_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm2/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm2_82dce97db2dbb916_alt",
-    "route": null,
+    "route": "/cdm-photo-gallery/cdm2/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm2_de858a22ac8f9fde_alt",
-    "route": null,
+    "route": "/cdm-photo-gallery/cdm2/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm2_cdec7a3cfab82c37_alt",
-    "route": null,
+    "route": "/cdm-photo-gallery/cdm2/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm2_1a0de989bbf416e5_alt",
-    "route": null,
+    "route": "/cdm-photo-gallery/cdm2/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm2_ce1966cf6b8f1c25_alt",
-    "route": null,
+    "route": "/cdm-photo-gallery/cdm2/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm2_fd8524c6b040e469_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm2/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm2_3142d98a94b23d8c_alt",
-    "route": null,
+    "route": "/cdm-photo-gallery/cdm2/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm2_0bd445cb3b2f6142_alt",
-    "route": null,
+    "route": "/cdm-photo-gallery/cdm2/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm2_4967b506b49ae644_alt",
-    "route": null,
+    "route": "/cdm-photo-gallery/cdm2/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm2_283bc34f8bd482dd_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm2/",
     "required": true,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   },
   {
     "field": "/cdm-gallery/cdm2_8cdc758cbed56a24_alt",
-    "route": "/cdm-photo-gallery/",
+    "route": "/cdm-photo-gallery/cdm2/",
     "required": true,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/future_tour_cta",
-    "route": "/cdm-photo-gallery/",
-    "required": true,
-    "codeLocation": "src/pages/cdm-photo-gallery/index.astro"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_7f68703ad5c23d61_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_a4d1be44bd28d570_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_a01802f64cdb9965_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_d5d527289de1d74a_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_8f2c9ea02664e9f0_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_1990d55c86fa7035_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_88a120bab432488c_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_3ce2d0eb9bd45c24_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_367a2fa64cdb80f8_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_366244b380b9f863_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_7734acb3db643db5_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_c6dfb4f9a289ce35_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_92a476a59d024ec7_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_15733cee3f1e0b5a_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_e9e6586e51dfe82a_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_64137856b3da7e83_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_527093082c289f38_caption",
-    "route": null,
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_a6c8e23da1df5477_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_e7d4c77b88559971_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_447621a90188ae9f_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_07dbf791aa3f701d_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_14c70267e3e8d32d_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_46de05ddac2c6592_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_fbe9c36d2b2693a7_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_d3f76238429211af_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_c90a305ef39c58c4_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_1b40eb892c1fc67b_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_da279a6021ecb20f_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_7c99450191c66dc6_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_ffbca6de150fc7f1_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_7ed840d66e9ad03a_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_561bafe5aff2e2c8_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_65549a14c4c04b9e_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_df99ed89439a5013_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_939d5b94d4ee4664_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_8984f3682ed07c89_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_3e2f93340b82df4e_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_28bda3c5ac7d2051_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_57ff5e48ef8d95a0_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm1_15a6b1ce00490898_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm2_fd6ef587b12f46c4_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm2_72beaa14c115fb6f_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm2_197a9b403afefd6e_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm2_45b8c5be246ff253_caption",
-    "route": null,
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm2_0b2ea06efc925c01_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm2_39394b8639cc567e_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm2_a723a73dff55a956_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm2_77ff0d20d18d2b69_caption",
-    "route": null,
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm2_16c4003fcd414a42_caption",
-    "route": null,
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm2_3de0edcfd0ab9c8a_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm2_82dce97db2dbb916_caption",
-    "route": null,
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm2_de858a22ac8f9fde_caption",
-    "route": null,
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm2_cdec7a3cfab82c37_caption",
-    "route": null,
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm2_1a0de989bbf416e5_caption",
-    "route": null,
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm2_ce1966cf6b8f1c25_caption",
-    "route": null,
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm2_fd8524c6b040e469_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm2_3142d98a94b23d8c_caption",
-    "route": null,
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm2_0bd445cb3b2f6142_caption",
-    "route": null,
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm2_4967b506b49ae644_caption",
-    "route": null,
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm2_283bc34f8bd482dd_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
-    "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/cdm-gallery/cdm2_8cdc758cbed56a24_caption",
-    "route": "/cdm-photo-gallery/",
-    "required": false,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
   }
 ]

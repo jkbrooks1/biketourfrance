@@ -1,6 +1,4 @@
-# Historical BikeTourFrance.net Build & Deployment Runbook v2.2
-
-Superseded on 2026-10-06 by `docs/BUILD_AND_DEPLOY_RUNBOOK.md`, reconciled with read-only current deployment facts under owner authorization. The branch-alignment and Framer-hosting statements below are historical. Do not execute them as current operational instructions.
+# BikeTourFrance.net Build & Deployment Runbook v2.2
 
 **Status:** Operational reference  
 **Last updated:** 2026-10-05  

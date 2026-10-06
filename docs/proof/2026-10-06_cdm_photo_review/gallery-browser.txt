@@ -1,5 +1,0 @@
-{
-  "pages": 18,
-  "lightboxCollections": 2,
-  "failures": []
-}
