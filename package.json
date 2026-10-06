@@ -8,7 +8,7 @@
     "build:site": "python3 scripts/build_site.py",
     "dev": "astro dev",
     "canonical:check": "node scripts/assert-canonical-root.mjs",
-    "build": "npm run canonical:check && BTF_COPY_FIXTURE=1 npm run copy:sync && npm run copy:validate && npm run copy:generate-ts && astro build && npm run copy:verify-rendered && npm run verify",
+    "build": "npm run canonical:check && BTF_COPY_FIXTURE=1 npm run gallery:sync && BTF_COPY_FIXTURE=1 npm run copy:sync && npm run copy:validate && npm run copy:generate-ts && astro build && npm run copy:verify-rendered && npm run gallery:verify && npm run verify",
     "preview": "astro preview",
     "check": "astro check",
     "format": "prettier --write .",
@@ -21,10 +21,13 @@
     "copy:check-local": "BTF_COPY_FIXTURE=1 npm run copy:sync && npm run copy:validate && npm run copy:generate-ts && npm run copy:verify-rendered",
     "copy:test": "node --test scripts/copy/lib.test.mjs && node scripts/copy/negative-tests.mjs",
     "copy:field-map": "node scripts/copy/generate-field-map-review.mjs",
-    "copy:production-pipeline": "npm run copy:sync && npm run copy:validate && npm run copy:generate-ts && astro build && npm run copy:verify-rendered && npm run verify && node scripts/copy/assert-deployable.mjs",
+    "copy:production-pipeline": "npm run gallery:sync && npm run copy:sync && npm run copy:validate && npm run copy:generate-ts && astro build && npm run copy:verify-rendered && npm run gallery:verify && npm run verify && node scripts/copy/assert-deployable.mjs",
     "predeploy:approved-copy": "BTF_DEPLOY_ENV=production npm run copy:production-pipeline",
-    "test": "npm run check && npm run build && npm run verify && npm run copy:test",
-    "check:browser": "python3 scripts/browser-check.py"
+    "test": "npm run check && npm run build && npm run verify && npm run copy:test && npm run gallery:test",
+    "check:browser": "python3 scripts/browser-check.py",
+    "gallery:sync": "node scripts/gallery/sync-review.mjs",
+    "gallery:test": "node --test scripts/gallery/review.test.mjs",
+    "gallery:verify": "node scripts/gallery/verify-review.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
