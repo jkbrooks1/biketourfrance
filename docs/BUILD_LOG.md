@@ -1675,3 +1675,33 @@ Commit: 2c8152e3f05b186661f8c6723b0f972a73579f8c. Evidence: /Users/jkbrooksperso
 
 PASS: owner approved BikeTourFrance CTA spelling; Sheet B501 updated with native before/after snapshots. Final live predeploy passes 439 fields/13 pages/47 of49 photos, all61 IDs/thumbnails retained. Astro check0errors0warnings; eight gallery tests; copy unit/negative checks; six widths/lightbox;329 variants <=300KiB; source hashes/provenance unchanged; guest journey/SEO pass. Stable three cold mobile labs: medianLCP1468ms,maxCLS0.099378125,next27.3-30.3ms. Earlier overlapping-build measurement timed out and was repeated on stable output; diagnostics retained. No preview/main publication yet.
 Commit: 2c8152e3f05b186661f8c6723b0f972a73579f8c. Evidence: /Users/jkbrookspersonal/LocalSiteBuildFiles/00_BTF_MAIN_SITE_CLOUDFLARE_ROOT/proof/2026-10-06_cdm_gallery_publish.
+
+
+## 2026-10-06T22:14:55.483770+00:00 — CDM gallery publication — MERGE_TO_MAIN
+
+PASS: preview0166b870 at adce296 passes47exact order/alts/identity/CTA/crop,329variants,six widths and keyboard/focus. Normal main merge98be1d38cbe6835f9c5591c8cac96354e62f4270 from prior1785d5f pushed without force. Unrelated earlier closeout notes restored from retained stashd232465. Production deployment and GitHub approved-copy check pending; no DNS/Pages/build/secrets/Framer/Wrangler changes.
+Commit: 98be1d38cbe6835f9c5591c8cac96354e62f4270. Evidence: /Users/jkbrookspersonal/LocalSiteBuildFiles/00_BTF_MAIN_SITE_CLOUDFLARE_ROOT/proof/2026-10-06_cdm_gallery_publish.
+
+
+## 2026-10-06T22:43:40.288273+00:00 — CDM gallery publication — STOP_LIVE_REGRESSION_ROLLBACK
+
+FAIL: owner-required public-domain browser regression at1440px measuredCLS0.2900604167, limit0.1; Pages-host browser passed, both47-photo manifests and both329variant editorial audits passed. Per owner STOP/rollback rule, merged release98be1d3 reverted normally as eb462fd76771669af1731146d794188d65dc5dfe and pushed without force. First revert was blocked by dirty evidence/logs; all notes and proofs preserved in stashfddd8f9 and /private/tmp/btf-cdm-gallery-failed-release-preserved-20261006 before successful revert. Featureadce296 and Sheet editorial state preserved. Rollback deployment confirmation pending; remote cold-mobile labs not started because required regression failed. No further gallery correction attempted; no DNS/settings/Framer/Wrangler action.
+Commit: eb462fd76771669af1731146d794188d65dc5dfe. Evidence: /Users/jkbrookspersonal/LocalSiteBuildFiles/00_BTF_MAIN_SITE_CLOUDFLARE_ROOT/proof/2026-10-06_cdm_gallery_publish.
+
+
+## 2026-10-06T22:48:44.362926+00:00 — CDM gallery publication — POST_DEPLOY_VERIFICATION_STOP_ROLLBACK_CONFIRMED
+
+STOP/ROLLBACK CONFIRMED: canonical btf-production deploymentf250aecf-1d52-47e5-b1aa-b1057eca54e3 succeeded at2026-10-06T22:34:39Z for reverteb462fd76771669af1731146d794188d65dc5dfe. Bothpublic/Pages hosts return61-photo manifests byte-structure-identical to saved pre-release; versionedGit tree equals prior1785d5f.47-release GitHub gate37539296726 succeeded; restoredoldmain GitHub gate37540897359 fails solely on Sheet row501 new /cdm-gallery/future_tour_cta, absent from old438-field manifest. Sheet/editorial feature retained; no silent rollback of newer Sheet decisions. Full failure/preview/release/revert proofs retained; remote mobile labs not run due STOP. Further gallery fixes/publication stopped per owner instruction. No DNS/config/build/secrets/Framer/Wrangler/force-push.
+Commit: eb462fd76771669af1731146d794188d65dc5dfe. Evidence: /Users/jkbrookspersonal/LocalSiteBuildFiles/00_BTF_MAIN_SITE_CLOUDFLARE_ROOT/proof/2026-10-06_cdm_gallery_publish.
+
+
+## 2026-10-06T22:58:43.407620+00:00 — CDM gallery publication — RETRY_START_REPAIR
+
+Owner explicitly renewed47gallery deployment approval. Restored47source/schema on feature/cdm-gallery-live-fix from eb462fd; preserved localnotes/evidence in stash1190b3a and/tmp. Exact1440 liveCLS0.2900604167 reproduced with interruptedHTML; gallery-scoped pre-masonry visibility fixes samecase to0. No image/copy/ID/provenance changes or Sheet writes. New evidence proof/2026-10-06_cdm_gallery_retry; live gate/checks running.
+Commit: 241a08a610297b2efad57e0f7edd21180898e7f4. Evidence: /Users/jkbrookspersonal/LocalSiteBuildFiles/00_BTF_MAIN_SITE_CLOUDFLARE_ROOT/proof/2026-10-06_cdm_gallery_publish.
+
+
+## 2026-10-06T23:00:39.139404+00:00 — CDM gallery publication — RETRY_BUILD_REAUDIT_COMPLETE
+
+PASS: exact streamed1440 regression0.2900604167 ->0 on built repairedpage. Final liveSheet predeploy439fields/47photos/13pages passes; Astro0errors0warnings,eightgallerytests,copytests,sixwidths/lightbox/329variants pass. Threecoldmobilelocal medianLCP1452ms,maxCLS0.0759. Onlygalleryinitialvisibility changed; preservedcopy/photo/order/IDs/provenance. Gitfeaturepreview next.
+Commit: 241a08a610297b2efad57e0f7edd21180898e7f4. Evidence: /Users/jkbrookspersonal/LocalSiteBuildFiles/00_BTF_MAIN_SITE_CLOUDFLARE_ROOT/proof/2026-10-06_cdm_gallery_publish.

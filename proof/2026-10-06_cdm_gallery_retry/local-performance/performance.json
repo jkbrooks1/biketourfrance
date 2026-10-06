@@ -1,0 +1,434 @@
+{
+  "url": "http://127.0.0.1:4322/cdm-photo-gallery/",
+  "conditions": {
+    "viewport": "375x900",
+    "cpuSlowdown": 4,
+    "downloadKbps": 1600,
+    "uploadKbps": 750,
+    "latencyMs": 150
+  },
+  "runs": [
+    {
+      "lcp": 1692,
+      "cls": 0.0759,
+      "longTasks": [
+        170
+      ],
+      "paint": [
+        {
+          "name": "first-paint",
+          "ms": 896
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 896
+        }
+      ],
+      "requests": [
+        {
+          "url": "montserrat-latin-wght-normal.l_AIctKy.woff2",
+          "type": "link",
+          "bytes": 37956,
+          "ms": 782
+        },
+        {
+          "url": "BaseLayout.C0lFe5rX.css",
+          "type": "link",
+          "bytes": 12851,
+          "ms": 427.39999997615814
+        },
+        {
+          "url": "btf-logo-white.Bbmk7X9J_ZxQNiT.webp",
+          "type": "img",
+          "bytes": 3216,
+          "ms": 247.89999997615814
+        },
+        {
+          "url": "9f4a9960-26b2-4d36-a8a3-4db68d666749_A4F2DBC7-C58D-460E-A289-3894F082CA8E.Irm5Q3lA_1im7s0.avif",
+          "type": "img",
+          "bytes": 36695,
+          "ms": 767.3000000715256
+        },
+        {
+          "url": "IMG_4633.DB4uGXdB_s6IKR.avif",
+          "type": "img",
+          "bytes": 24721,
+          "ms": 790.1000000238419
+        },
+        {
+          "url": "IMG_4634.B6jlfisJ_Z18ljfO.avif",
+          "type": "img",
+          "bytes": 22636,
+          "ms": 745.5999999046326
+        },
+        {
+          "url": "IMG_4411.CAHVwyGW_12tXdn.avif",
+          "type": "img",
+          "bytes": 28529,
+          "ms": 941.8999999761581
+        },
+        {
+          "url": "IMG_4406.BedyEo02_3aPRO.avif",
+          "type": "img",
+          "bytes": 37499,
+          "ms": 1051.3999999761581
+        },
+        {
+          "url": "IMG_4416.C2PSCfu__Z234KAe.avif",
+          "type": "img",
+          "bytes": 19235,
+          "ms": 782
+        },
+        {
+          "url": "IMG_6115.qOO8mr6U_Z2ajOy3.avif",
+          "type": "img",
+          "bytes": 29388,
+          "ms": 971.8999999761581
+        },
+        {
+          "url": "IMG_6117.jZnSsUm5_ZJVPj8.avif",
+          "type": "img",
+          "bytes": 37988,
+          "ms": 1870.8999999761581
+        },
+        {
+          "url": "IMG_4423.P4g3cXvK_ZaOX5W.avif",
+          "type": "img",
+          "bytes": 30718,
+          "ms": 1739.6000000238419
+        },
+        {
+          "url": "IMG_4421.ClcWh94M_1rNifb.avif",
+          "type": "img",
+          "bytes": 40037,
+          "ms": 1944.8999999761581
+        },
+        {
+          "url": "IMG_4428.CrjiFYBa_Z1PSUvE.avif",
+          "type": "img",
+          "bytes": 36446,
+          "ms": 2024.5999999046326
+        },
+        {
+          "url": "IMG_4459.C2pIt8vd_ZlOpdI.avif",
+          "type": "img",
+          "bytes": 33347,
+          "ms": 2009.6999999284744
+        },
+        {
+          "url": "IMG_4651.BBJwrqhY_ZiWCdQ.avif",
+          "type": "img",
+          "bytes": 24341,
+          "ms": 1907.8000000715256
+        },
+        {
+          "url": "IMG_4652.BYKKRqmf_PkdCH.avif",
+          "type": "img",
+          "bytes": 19174,
+          "ms": 2171.8000000715256
+        },
+        {
+          "url": "IMG_4658.DAzwvKis_Z1wJ5Ao.avif",
+          "type": "img",
+          "bytes": 26316,
+          "ms": 2324.4000000953674
+        },
+        {
+          "url": "IMG_4462.KPNTGUad_766L7.avif",
+          "type": "img",
+          "bytes": 22745,
+          "ms": 2332.100000023842
+        }
+      ],
+      "firstImage": {
+        "loading": "eager",
+        "fetchPriority": "high"
+      },
+      "loadedGalleryImages": 16,
+      "nextButtonLabResponseMs": 32,
+      "initialResourceBytes": 523838,
+      "javascriptBytes": 0
+    },
+    {
+      "lcp": 1440,
+      "cls": 0.0759,
+      "longTasks": [],
+      "paint": [
+        {
+          "name": "first-paint",
+          "ms": 744
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 744
+        }
+      ],
+      "requests": [
+        {
+          "url": "montserrat-latin-wght-normal.l_AIctKy.woff2",
+          "type": "link",
+          "bytes": 37956,
+          "ms": 858.3000000715256
+        },
+        {
+          "url": "BaseLayout.C0lFe5rX.css",
+          "type": "link",
+          "bytes": 12851,
+          "ms": 415.2000000476837
+        },
+        {
+          "url": "btf-logo-white.Bbmk7X9J_ZxQNiT.webp",
+          "type": "img",
+          "bytes": 3216,
+          "ms": 247.79999995231628
+        },
+        {
+          "url": "9f4a9960-26b2-4d36-a8a3-4db68d666749_A4F2DBC7-C58D-460E-A289-3894F082CA8E.Irm5Q3lA_1im7s0.avif",
+          "type": "img",
+          "bytes": 36695,
+          "ms": 856.1999999284744
+        },
+        {
+          "url": "IMG_4634.B6jlfisJ_Z18ljfO.avif",
+          "type": "img",
+          "bytes": 22636,
+          "ms": 702.3999999761581
+        },
+        {
+          "url": "IMG_4633.DB4uGXdB_s6IKR.avif",
+          "type": "img",
+          "bytes": 24721,
+          "ms": 761.6999999284744
+        },
+        {
+          "url": "IMG_4406.BedyEo02_3aPRO.avif",
+          "type": "img",
+          "bytes": 37499,
+          "ms": 1054.7000000476837
+        },
+        {
+          "url": "IMG_4416.C2PSCfu__Z234KAe.avif",
+          "type": "img",
+          "bytes": 19235,
+          "ms": 936.7000000476837
+        },
+        {
+          "url": "IMG_4411.CAHVwyGW_12tXdn.avif",
+          "type": "img",
+          "bytes": 28529,
+          "ms": 1133.2000000476837
+        },
+        {
+          "url": "IMG_6115.qOO8mr6U_Z2ajOy3.avif",
+          "type": "img",
+          "bytes": 29388,
+          "ms": 1206.3999999761581
+        },
+        {
+          "url": "IMG_6117.jZnSsUm5_ZJVPj8.avif",
+          "type": "img",
+          "bytes": 37988,
+          "ms": 1844.8999999761581
+        },
+        {
+          "url": "IMG_4423.P4g3cXvK_ZaOX5W.avif",
+          "type": "img",
+          "bytes": 30718,
+          "ms": 1895.2999999523163
+        },
+        {
+          "url": "IMG_4421.ClcWh94M_1rNifb.avif",
+          "type": "img",
+          "bytes": 40037,
+          "ms": 1931.8999999761581
+        },
+        {
+          "url": "IMG_4428.CrjiFYBa_Z1PSUvE.avif",
+          "type": "img",
+          "bytes": 36446,
+          "ms": 2107.9000000953674
+        },
+        {
+          "url": "IMG_4651.BBJwrqhY_ZiWCdQ.avif",
+          "type": "img",
+          "bytes": 24341,
+          "ms": 2011.8000000715256
+        },
+        {
+          "url": "IMG_4459.C2pIt8vd_ZlOpdI.avif",
+          "type": "img",
+          "bytes": 33347,
+          "ms": 2121.8000000715256
+        },
+        {
+          "url": "IMG_4652.BYKKRqmf_PkdCH.avif",
+          "type": "img",
+          "bytes": 19174,
+          "ms": 2303.7000000476837
+        },
+        {
+          "url": "IMG_4658.DAzwvKis_Z1wJ5Ao.avif",
+          "type": "img",
+          "bytes": 26316,
+          "ms": 2413.899999976158
+        },
+        {
+          "url": "IMG_4462.KPNTGUad_766L7.avif",
+          "type": "img",
+          "bytes": 22745,
+          "ms": 2406.7000000476837
+        }
+      ],
+      "firstImage": {
+        "loading": "eager",
+        "fetchPriority": "high"
+      },
+      "loadedGalleryImages": 16,
+      "nextButtonLabResponseMs": 30.699999928474426,
+      "initialResourceBytes": 523838,
+      "javascriptBytes": 0
+    },
+    {
+      "lcp": 1452,
+      "cls": 0.0759,
+      "longTasks": [],
+      "paint": [
+        {
+          "name": "first-paint",
+          "ms": 744
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 744
+        }
+      ],
+      "requests": [
+        {
+          "url": "montserrat-latin-wght-normal.l_AIctKy.woff2",
+          "type": "link",
+          "bytes": 37956,
+          "ms": 861.0999999046326
+        },
+        {
+          "url": "BaseLayout.C0lFe5rX.css",
+          "type": "link",
+          "bytes": 12851,
+          "ms": 416.60000002384186
+        },
+        {
+          "url": "btf-logo-white.Bbmk7X9J_ZxQNiT.webp",
+          "type": "img",
+          "bytes": 3216,
+          "ms": 248
+        },
+        {
+          "url": "9f4a9960-26b2-4d36-a8a3-4db68d666749_A4F2DBC7-C58D-460E-A289-3894F082CA8E.Irm5Q3lA_1im7s0.avif",
+          "type": "img",
+          "bytes": 36695,
+          "ms": 856.1000000238419
+        },
+        {
+          "url": "IMG_4633.DB4uGXdB_s6IKR.avif",
+          "type": "img",
+          "bytes": 24721,
+          "ms": 748.1999999284744
+        },
+        {
+          "url": "IMG_4634.B6jlfisJ_Z18ljfO.avif",
+          "type": "img",
+          "bytes": 22636,
+          "ms": 712
+        },
+        {
+          "url": "IMG_4406.BedyEo02_3aPRO.avif",
+          "type": "img",
+          "bytes": 37499,
+          "ms": 1070.3999999761581
+        },
+        {
+          "url": "IMG_4411.CAHVwyGW_12tXdn.avif",
+          "type": "img",
+          "bytes": 28529,
+          "ms": 1136
+        },
+        {
+          "url": "IMG_4416.C2PSCfu__Z234KAe.avif",
+          "type": "img",
+          "bytes": 19235,
+          "ms": 944.2999999523163
+        },
+        {
+          "url": "IMG_6115.qOO8mr6U_Z2ajOy3.avif",
+          "type": "img",
+          "bytes": 29388,
+          "ms": 1200.8999999761581
+        },
+        {
+          "url": "IMG_6117.jZnSsUm5_ZJVPj8.avif",
+          "type": "img",
+          "bytes": 37988,
+          "ms": 1845
+        },
+        {
+          "url": "IMG_4423.P4g3cXvK_ZaOX5W.avif",
+          "type": "img",
+          "bytes": 30718,
+          "ms": 1905
+        },
+        {
+          "url": "IMG_4421.ClcWh94M_1rNifb.avif",
+          "type": "img",
+          "bytes": 40037,
+          "ms": 1926.7999999523163
+        },
+        {
+          "url": "IMG_4428.CrjiFYBa_Z1PSUvE.avif",
+          "type": "img",
+          "bytes": 36446,
+          "ms": 2102.7000000476837
+        },
+        {
+          "url": "IMG_4459.C2pIt8vd_ZlOpdI.avif",
+          "type": "img",
+          "bytes": 33347,
+          "ms": 2123.399999976158
+        },
+        {
+          "url": "IMG_4651.BBJwrqhY_ZiWCdQ.avif",
+          "type": "img",
+          "bytes": 24341,
+          "ms": 2006
+        },
+        {
+          "url": "IMG_4652.BYKKRqmf_PkdCH.avif",
+          "type": "img",
+          "bytes": 19174,
+          "ms": 2306
+        },
+        {
+          "url": "IMG_4658.DAzwvKis_Z1wJ5Ao.avif",
+          "type": "img",
+          "bytes": 26316,
+          "ms": 2415.6999999284744
+        },
+        {
+          "url": "IMG_4462.KPNTGUad_766L7.avif",
+          "type": "img",
+          "bytes": 22745,
+          "ms": 2401.6999999284744
+        }
+      ],
+      "firstImage": {
+        "loading": "eager",
+        "fetchPriority": "high"
+      },
+      "loadedGalleryImages": 16,
+      "nextButtonLabResponseMs": 28.899999976158142,
+      "initialResourceBytes": 523838,
+      "javascriptBytes": 0
+    }
+  ],
+  "medianLcpMs": 1452,
+  "maxCls": 0.0759,
+  "note": "Three cold Chromium lab runs at the recorded URL. This does not establish field LCP, INP or CLS; actual visitor metrics remain unmeasured."
+}

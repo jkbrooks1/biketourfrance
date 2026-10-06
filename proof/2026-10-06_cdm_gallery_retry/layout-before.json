@@ -1,0 +1,220 @@
+[
+  {
+    "fontDelayMs": 0,
+    "shifts": []
+  },
+  {
+    "fontDelayMs": 1500,
+    "shifts": [
+      {
+        "value": 0.013848069380144032,
+        "time": 2723.3000000715256,
+        "sources": [
+          {
+            "tag": "UL",
+            "class": "cdm-gallery__tiles",
+            "before": {
+              "x": 24,
+              "y": 374.578125,
+              "width": 1392,
+              "height": 525.421875,
+              "top": 374.578125,
+              "right": 1416,
+              "bottom": 900,
+              "left": 24
+            },
+            "after": {
+              "x": 24,
+              "y": 403.375,
+              "width": 1392,
+              "height": 496.625,
+              "top": 403.375,
+              "right": 1416,
+              "bottom": 900,
+              "left": 24
+            }
+          },
+          {
+            "tag": "P",
+            "class": "",
+            "before": {
+              "x": 80,
+              "y": 300.984375,
+              "width": 705.46875,
+              "height": 25.59375,
+              "top": 300.984375,
+              "right": 785.46875,
+              "bottom": 326.578125,
+              "left": 80
+            },
+            "after": {
+              "x": 80,
+              "y": 329.78125,
+              "width": 741.65625,
+              "height": 25.59375,
+              "top": 329.78125,
+              "right": 821.65625,
+              "bottom": 355.375,
+              "left": 80
+            }
+          },
+          {
+            "tag": null,
+            "class": null,
+            "before": {
+              "x": 0,
+              "y": 10,
+              "width": 1440,
+              "height": 18,
+              "top": 10,
+              "right": 1440,
+              "bottom": 28,
+              "left": 0
+            },
+            "after": {
+              "x": 0,
+              "y": 9,
+              "width": 1440,
+              "height": 18,
+              "top": 9,
+              "right": 1440,
+              "bottom": 27,
+              "left": 0
+            }
+          },
+          {
+            "tag": "NAV",
+            "class": "site-nav",
+            "before": {
+              "x": 823.515625,
+              "y": 51,
+              "width": 536.484375,
+              "height": 44,
+              "top": 51,
+              "right": 1360,
+              "bottom": 95,
+              "left": 823.515625
+            },
+            "after": {
+              "x": 792,
+              "y": 51,
+              "width": 568,
+              "height": 44,
+              "top": 51,
+              "right": 1360,
+              "bottom": 95,
+              "left": 792
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "fontDelayMs": 3000,
+    "shifts": [
+      {
+        "value": 0.013848069380144032,
+        "time": 3699.8000000715256,
+        "sources": [
+          {
+            "tag": "UL",
+            "class": "cdm-gallery__tiles",
+            "before": {
+              "x": 24,
+              "y": 374.578125,
+              "width": 1392,
+              "height": 525.421875,
+              "top": 374.578125,
+              "right": 1416,
+              "bottom": 900,
+              "left": 24
+            },
+            "after": {
+              "x": 24,
+              "y": 403.375,
+              "width": 1392,
+              "height": 496.625,
+              "top": 403.375,
+              "right": 1416,
+              "bottom": 900,
+              "left": 24
+            }
+          },
+          {
+            "tag": "P",
+            "class": "",
+            "before": {
+              "x": 80,
+              "y": 300.984375,
+              "width": 705.46875,
+              "height": 25.59375,
+              "top": 300.984375,
+              "right": 785.46875,
+              "bottom": 326.578125,
+              "left": 80
+            },
+            "after": {
+              "x": 80,
+              "y": 329.78125,
+              "width": 741.65625,
+              "height": 25.59375,
+              "top": 329.78125,
+              "right": 821.65625,
+              "bottom": 355.375,
+              "left": 80
+            }
+          },
+          {
+            "tag": null,
+            "class": null,
+            "before": {
+              "x": 0,
+              "y": 10,
+              "width": 1440,
+              "height": 18,
+              "top": 10,
+              "right": 1440,
+              "bottom": 28,
+              "left": 0
+            },
+            "after": {
+              "x": 0,
+              "y": 9,
+              "width": 1440,
+              "height": 18,
+              "top": 9,
+              "right": 1440,
+              "bottom": 27,
+              "left": 0
+            }
+          },
+          {
+            "tag": "NAV",
+            "class": "site-nav",
+            "before": {
+              "x": 823.515625,
+              "y": 51,
+              "width": 536.484375,
+              "height": 44,
+              "top": 51,
+              "right": 1360,
+              "bottom": 95,
+              "left": 823.515625
+            },
+            "after": {
+              "x": 792,
+              "y": 51,
+              "width": 568,
+              "height": 44,
+              "top": 51,
+              "right": 1360,
+              "bottom": 95,
+              "left": 792
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

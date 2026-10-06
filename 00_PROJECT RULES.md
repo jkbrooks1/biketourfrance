@@ -31,3 +31,5 @@ This native website's rules govern the CDM Photo Gallery task. The CDM Status Su
 - Consult and append material system dependencies/warnings to `/Users/jkbrookspersonal/LocalSiteBuildFiles/00_A.SYSTEMS_CHANGES_REGISTER/SYSTEM_CHANGES_REGISTER.md`; never replace its history or record secrets.
 - Every ten interactions, review this file and existing `AGENTS.md`, `AGENTS.override.md`, `CLAUDE.md`, and `GEMINI.md` wrappers. Update this canonical file first if needed and log the update in both build logs. Do not create unused wrappers.
 - Report actual counts, exceptions, before/after commits, changed files, validation evidence, preview state, rollback, and deployment boundaries. A build alone is not completion.
+
+- 2026-10-06: Owner renewed explicit47-photo deployment approval after regression rollback. Repair branch feature/cdm-gallery-live-fix from verified revertedmain restores the approved source/Sheet schema and fixes gallery-only first-paint CLS under streamedHTML. Keep all editorial/asset/ID/provenance guardrails and unchanged gates; publish through verified featurepreview/main, not retired paths.
