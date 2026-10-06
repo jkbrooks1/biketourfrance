@@ -1577,3 +1577,9 @@ verify-dist: 12 pages OK
 - **Copy Validation:** 354 fields matched against approved copy sheet.
 - **SEO & Canonical:** Sitemap index generated, canonical roots verified.
 - **Milestone 5 Status:** ✅ PASSED
+
+## 2026-10-05 — Milestone 6 Final Sign-Off (Contact Links & Form Endpoints)
+- **Primary Domain:** `https://biketourfrance.net`
+- **Contact Page Clean-Up:** Removed hardcoded eyebrow, converted all mailto/email CTAs to active Google Form (`https://forms.gle/thPjnUyKGCoZb6SM7`).
+- **Codebase Verification:** 0 mailto links remaining in `src/`. All 12 pages build and validate against approved copy sheet.
+- **Milestone 6 Status:** ✅ PASSED & COMPLETE
