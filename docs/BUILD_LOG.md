@@ -1541,3 +1541,12 @@ verify-dist: 12 pages OK
 - **Root Cause:** Cloudflare infrastructure setting mismatch; pushes to main were generated as preview aliases (main.btf-production.pages.dev).
 - **Fix:** Updated Cloudflare Pages Settings -> Branch control -> Production branch to main. Triggered deployment via commit 5741c59.
 - **Verification:** https://btf-production.pages.dev/ verified live serving approved copy ("Join the 2027 waitlist" / "Get tour updates").
+
+## 2026-10-05 — Milestone 1 Gate Qualification & M2 Commencement
+- **Milestone 1 Status:** ✅ PASSED (100% Exit Code 0 across all 5 gate criteria)
+  - `canonical:check` → PASS (native-astro)
+  - `astro check` → 0 errors, 0 warnings (28 files verified)
+  - `astro build` → 12 pages generated in 844ms
+  - `npm run verify` → PASS (354 fields confirmed on routes)
+  - `npm run copy:test` → PASS (4 unit tests, 10 negative pipeline assertions passed)
+- **Milestone 2 Status:** 🚀 IN PROGRESS (Content & Asset Inventory Audit across all 12 static routes)
