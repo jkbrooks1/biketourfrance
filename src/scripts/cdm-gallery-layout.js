@@ -22,7 +22,7 @@ for (const gallery of document.querySelectorAll('[data-cdm-gallery]')) {
       const seed = Number(tile.dataset.seed);
       const aspect = Math.max(0, Math.min(1, (ratio - 0.45) / 0.9));
       const preferredSpan = desktop
-        ? Math.max(12, Math.min(20, Math.round(12 + aspect * 5.6 + seed * 2.4)))
+        ? Math.max(12, Math.min(20, Math.round(12 + aspect * 6 + seed * 4)))
         : tablet ? Math.max(4, Math.min(6, Math.round(4 + aspect + seed))) : ratio > 1.2 ? 2 : 1;
       let start = 0;
       let top = Infinity;

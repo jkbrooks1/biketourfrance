@@ -1,0 +1,522 @@
+{
+  "schemaVersion": 1,
+  "sourceFolder": "/Volumes/JB_Tier2Storage/CDM1and2",
+  "ordering": "Group both completed tours by GPS municipality, west to east using mean anchor longitude; ten owner-authorized approximate locations retain their evidence/confidence. Date/counter order within each group. No estimated coordinates are invented.",
+  "photos": [
+    {
+      "id": "cdm2-72beaa14c115fb6f",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4633.JPG",
+      "sourceFilename": "IMG_4633.JPG",
+      "sha256": "72beaa14c115fb6fb5a82ccb5baabcacc445be56d3f84652a950500f9af7607e",
+      "pixelSha256": "46da727580220d57760f24b6a1fe0dc23772a499ae0582cd1204375c3e549ecb",
+      "locationGroup": "creon",
+      "order": 1
+    },
+    {
+      "id": "cdm2-197a9b403afefd6e",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4634.JPG",
+      "sourceFilename": "IMG_4634.JPG",
+      "sha256": "197a9b403afefd6e4b83ae43ea3dab160e05400b298daa989c7459a60703041c",
+      "pixelSha256": "14702133184e71a0a432d48da49453d02913786d6c9357ba0567c36c846fac6d",
+      "locationGroup": "creon",
+      "order": 2
+    },
+    {
+      "id": "cdm2-fd6ef587b12f46c4",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/9f4a9960-26b2-4d36-a8a3-4db68d666749_A4F2DBC7-C58D-460E-A289-3894F082CA8E.jpg",
+      "sourceFilename": "9f4a9960-26b2-4d36-a8a3-4db68d666749_A4F2DBC7-C58D-460E-A289-3894F082CA8E.jpg",
+      "sha256": "fd6ef587b12f46c4f5027b8bb1bcc51d2b5a02a78a8f42fdf08302cfb7c6f05a",
+      "pixelSha256": "0cf44cff7152b3d0e7aa0dda4110d45fa3ea1ac3c7010ebb0dcf9c28ddd9741c",
+      "locationGroup": "creon",
+      "order": 3
+    },
+    {
+      "id": "cdm1-7f68703ad5c23d61",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4406.JPG",
+      "sourceFilename": "IMG_4406.JPG",
+      "sha256": "7f68703ad5c23d61111b6e74c217c651849b84af23d39a6ed8305f30acfb5bd7",
+      "pixelSha256": "0ca0e55d9290f8513a5571b398b8151d9421aaa8575bf0282eb98b225a1e1cc0",
+      "locationGroup": "espiet",
+      "order": 4
+    },
+    {
+      "id": "cdm1-a4d1be44bd28d570",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4411.JPG",
+      "sourceFilename": "IMG_4411.JPG",
+      "sha256": "a4d1be44bd28d570f228bcfdc4255cd31a1de753fdfac3776bcfbf1653e5c470",
+      "pixelSha256": "d27beba312463169a2bfd842e9d68e11a3d4e9f8472447c16bca5f3c8f7e3711",
+      "locationGroup": "saint-brice",
+      "order": 5
+    },
+    {
+      "id": "cdm1-a01802f64cdb9965",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4416.JPG",
+      "sourceFilename": "IMG_4416.JPG",
+      "sha256": "a01802f64cdb996563c97c889727337a63246d596bc376125321f658e18c79f9",
+      "pixelSha256": "1571f3e4472083c1028d91e209194ac2e0e633a050b6a8957ab5f9341dcca877",
+      "locationGroup": "la-reole",
+      "order": 6
+    },
+    {
+      "id": "cdm1-65549a14c4c04b9e",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_6115.jpeg",
+      "sourceFilename": "IMG_6115.jpeg",
+      "sha256": "65549a14c4c04b9e15b0607fa235fecf1629a45a3e63e93454042275b8bdec25",
+      "pixelSha256": "a2a79145821b687c594955786c526d150662355cc5f2fbf82ef8b03495809675",
+      "locationGroup": "la-reole",
+      "order": 7
+    },
+    {
+      "id": "cdm1-df99ed89439a5013",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_6117.jpeg",
+      "sourceFilename": "IMG_6117.jpeg",
+      "sha256": "df99ed89439a5013eba7b2d969b1eac54c18bcaa026ec45948d77fcdb0311e13",
+      "pixelSha256": "f2cdbbdacfb3944b7ad9c32cdc453c1abd83de5f1d3f4c7230a46d58d3d06358",
+      "locationGroup": "la-reole",
+      "order": 8
+    },
+    {
+      "id": "cdm1-d5d527289de1d74a",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4421.JPG",
+      "sourceFilename": "IMG_4421.JPG",
+      "sha256": "d5d527289de1d74a1850d7957c95d8f050edcbedfa1913fa5c8186d304f73994",
+      "pixelSha256": "8c5d6a067aa5d97877f9d57e0e1b554c75725153fb1a0d8105ff943ed92bb77a",
+      "locationGroup": "montpouillan",
+      "order": 9
+    },
+    {
+      "id": "cdm1-8f2c9ea02664e9f0",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4423.JPG",
+      "sourceFilename": "IMG_4423.JPG",
+      "sha256": "8f2c9ea02664e9f08b244d6737fe6141a75c33798aff2361bd2ed48a6debefdb",
+      "pixelSha256": "b00e18631c127c27e3662fb46f3220871f503065a1111998ec7e07b0c70776f3",
+      "locationGroup": "montpouillan",
+      "order": 10
+    },
+    {
+      "id": "cdm1-1990d55c86fa7035",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4428.JPG",
+      "sourceFilename": "IMG_4428.JPG",
+      "sha256": "1990d55c86fa7035128a36012d0b7eef2f092e6c4a038fba8d303a650770b105",
+      "pixelSha256": "d744a5e2dcb49b85e0e75c617e84d219c385324dabd0727ca31b44af5ffd9561",
+      "locationGroup": "bruch",
+      "order": 11
+    },
+    {
+      "id": "cdm1-88a120bab432488c",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4459.JPG",
+      "sourceFilename": "IMG_4459.JPG",
+      "sha256": "88a120bab432488cf1fd973e521ef235190e3aec701de47c24f74d8fbf2c947b",
+      "pixelSha256": "8e97aad138d36b92d8ffff6135ea227399c16b09fef07e88175c30753cbbd585",
+      "locationGroup": "moissac",
+      "order": 12
+    },
+    {
+      "id": "cdm1-3ce2d0eb9bd45c24",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4462.JPG",
+      "sourceFilename": "IMG_4462.JPG",
+      "sha256": "3ce2d0eb9bd45c246af97541ccfc2c5e843f86caaa7e2b0d10f994f30467bf80",
+      "pixelSha256": "05f34fa05173f7bdd3f0f48a420237a2cf7ad5bde3a7c6bab9e62a517eeb4a2e",
+      "locationGroup": "moissac",
+      "order": 13
+    },
+    {
+      "id": "cdm1-939d5b94d4ee4664",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_6125.jpeg",
+      "sourceFilename": "IMG_6125.jpeg",
+      "sha256": "939d5b94d4ee466468c7136c33936cff0e45f427dbf047bfb06783b32f367d98",
+      "pixelSha256": "d3e3dc004ea88215e5720703d01a4ce7df02dd9b749db2739abaa5ce367326f9",
+      "locationGroup": "moissac",
+      "order": 14
+    },
+    {
+      "id": "cdm1-8984f3682ed07c89",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_6143.jpeg",
+      "sourceFilename": "IMG_6143.jpeg",
+      "sha256": "8984f3682ed07c895105ef2b5d409dfd05cb9fa9958b16ee654f9d9c4ee8aadc",
+      "pixelSha256": "ab3fd1467ddf9e3b6a2b8b199116718f428fabcc0dc8d4d298c302280523b719",
+      "locationGroup": "moissac",
+      "order": 15
+    },
+    {
+      "id": "cdm1-3e2f93340b82df4e",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_6146.jpeg",
+      "sourceFilename": "IMG_6146.jpeg",
+      "sha256": "3e2f93340b82df4e0f67d8018d50fd9025b58977126423b37ac01eba5755e8fa",
+      "pixelSha256": "7176c34e9bec38bfd15cea715377199ae762fff17eb37ed64b259f59f91538c6",
+      "locationGroup": "moissac",
+      "order": 16
+    },
+    {
+      "id": "cdm1-28bda3c5ac7d2051",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_6155.jpeg",
+      "sourceFilename": "IMG_6155.jpeg",
+      "sha256": "28bda3c5ac7d2051c7df56928e8b8c7fdf45d017af637ee28ce7ead2379887e3",
+      "pixelSha256": "c89849120696112824ec466658f0071f3626881748e16445e79b23d604a7f7a9",
+      "locationGroup": "moissac",
+      "order": 17
+    },
+    {
+      "id": "cdm1-57ff5e48ef8d95a0",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_6158.jpeg",
+      "sourceFilename": "IMG_6158.jpeg",
+      "sha256": "57ff5e48ef8d95a02f3ac90934e50eeb7b96d3e792b98496f0aeacf4da0ed76c",
+      "pixelSha256": "43800711e4666462688c3b705aaeca86e6e7781c5d96d031baabd5f0db2da4df",
+      "locationGroup": "moissac",
+      "order": 18
+    },
+    {
+      "id": "cdm1-15a6b1ce00490898",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_6175.jpeg",
+      "sourceFilename": "IMG_6175.jpeg",
+      "sha256": "15a6b1ce00490898fa4e0d080c4b0b666705f89815fededaed12a4474cd71e2a",
+      "pixelSha256": "fef80f489200fd6926764091faf396e23b3fadb65e69b5954344bbfd7d3938e6",
+      "locationGroup": "moissac",
+      "order": 19
+    },
+    {
+      "id": "cdm2-0b2ea06efc925c01",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4651.JPG",
+      "sourceFilename": "IMG_4651.JPG",
+      "sha256": "0b2ea06efc925c0136254b02c9a2b3b278543a334e3d371c4ef4b6e160fc0679",
+      "pixelSha256": "9a8feed8f4110f80b2c9710ff7ba56110da1224c2752a5e227ebf0a582e79365",
+      "locationGroup": "moissac",
+      "order": 20
+    },
+    {
+      "id": "cdm2-39394b8639cc567e",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4652.JPG",
+      "sourceFilename": "IMG_4652.JPG",
+      "sha256": "39394b8639cc567e3df02dda0e9a3ca446750492c0896eb9f6f54ff5122c4d21",
+      "pixelSha256": "dc6bf3e231f9178a6efdcda9febace42b85102d0ba2788f42dc9d626860a49d5",
+      "locationGroup": "moissac",
+      "order": 21
+    },
+    {
+      "id": "cdm2-a723a73dff55a956",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4658.JPG",
+      "sourceFilename": "IMG_4658.JPG",
+      "sha256": "a723a73dff55a956c4e8d4d31a9806cd8a7eeebf86d05f1ba3ea45dde7ab184c",
+      "pixelSha256": "3b70b71d4e08055f313e75c8a0fd6307e7d7c49c0a23f7760bb9799a9edefea7",
+      "locationGroup": "moissac",
+      "order": 22
+    },
+    {
+      "id": "cdm1-367a2fa64cdb80f8",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4463.JPG",
+      "sourceFilename": "IMG_4463.JPG",
+      "sha256": "367a2fa64cdb80f8e978f94b6b0db791c1ecc4034d1b6614baea352ac23452a8",
+      "pixelSha256": "7c80fc5a27210b58bd10e610b348c391ba588ffd4a922f9e59d825c8539664f4",
+      "locationGroup": "saint-porquier",
+      "order": 23
+    },
+    {
+      "id": "cdm1-366244b380b9f863",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4470.JPG",
+      "sourceFilename": "IMG_4470.JPG",
+      "sha256": "366244b380b9f8634af8e55ad4d55a9be0b8fe792299b98533fcdfce2e1ad119",
+      "pixelSha256": "767d78e77756710dedf207dd775b7b0d2ce810d2df33b588d8fabbc5b4f158fb",
+      "locationGroup": "montech",
+      "order": 24
+    },
+    {
+      "id": "cdm1-7734acb3db643db5",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4471.JPG",
+      "sourceFilename": "IMG_4471.JPG",
+      "sha256": "7734acb3db643db53fb937a1c6223a417386e94eb531c5e8e796d38d28da22d9",
+      "pixelSha256": "2848107058f8da5fb036e606fea5e9c6c14f8e384bb505c9f98ab56d14eeffe0",
+      "locationGroup": "montech",
+      "order": 25
+    },
+    {
+      "id": "cdm1-c6dfb4f9a289ce35",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4484.JPG",
+      "sourceFilename": "IMG_4484.JPG",
+      "sha256": "c6dfb4f9a289ce3561372821966830b47d15a1ce743bd8561308d980e13af514",
+      "pixelSha256": "df3ccf31e1e6f05d69ce20461641058da0b1eafa6083d653f4a16cd4a7a120f8",
+      "locationGroup": "toulouse",
+      "order": 26
+    },
+    {
+      "id": "cdm1-92a476a59d024ec7",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4492.JPG",
+      "sourceFilename": "IMG_4492.JPG",
+      "sha256": "92a476a59d024ec79bb8248ff97f2a0355fbb61ba1d9bfac0bf9b9314adbc305",
+      "pixelSha256": "43a540905adcee0025ba217259984cbd843dc470ea047221c581698f9d36885b",
+      "locationGroup": "toulouse",
+      "order": 27
+    },
+    {
+      "id": "cdm2-3de0edcfd0ab9c8a",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4687.JPG",
+      "sourceFilename": "IMG_4687.JPG",
+      "sha256": "3de0edcfd0ab9c8ac758fe1589d104a85fcd12c054c48bfbab9e0dd77d779d11",
+      "pixelSha256": "3f9abaa8f23e21baf65fc38b74cf66c55e234d619da87c3516c8866ea5332672",
+      "locationGroup": "toulouse",
+      "order": 28
+    },
+    {
+      "id": "cdm2-fd8524c6b040e469",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4708.JPG",
+      "sourceFilename": "IMG_4708.JPG",
+      "sha256": "fd8524c6b040e4698421e7702b5b40960c20873e70351b553dd0a6e06198e11b",
+      "pixelSha256": "97576c5143f79b5326698fc8fb745361877a8db4476cff585b5eecfaf1216959",
+      "locationGroup": "toulouse",
+      "order": 29
+    },
+    {
+      "id": "cdm1-15733cee3f1e0b5a",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4495.JPG",
+      "sourceFilename": "IMG_4495.JPG",
+      "sha256": "15733cee3f1e0b5a6103745ad34f1d005f9aff503a94c503e8c47c1550411fd0",
+      "pixelSha256": "509be06cb408559fadba57642d30a1ecfe19bcbd6ae2d5e7bcb5a16d746e7bdb",
+      "locationGroup": "ayguesvives",
+      "order": 30
+    },
+    {
+      "id": "cdm1-e9e6586e51dfe82a",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4496.JPG",
+      "sourceFilename": "IMG_4496.JPG",
+      "sha256": "e9e6586e51dfe82a0d278e9af99de036894f02bb6255ba46a699812a34a5800b",
+      "pixelSha256": "7ac5989f0f71d8fa30944f6a22e7ff794300ab9ad20d2a14bbee5f01d749802a",
+      "locationGroup": "vieillevigne",
+      "order": 31
+    },
+    {
+      "id": "cdm1-64137856b3da7e83",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4497.JPG",
+      "sourceFilename": "IMG_4497.JPG",
+      "sha256": "64137856b3da7e83a1a0231cc8b416c9407e5a6c1a1941857c16c7a437cdf07f",
+      "pixelSha256": "681d21682dca6ac007f81f37cab7aa89eec24ebe5fe92de0f050f3b5bb8edd09",
+      "locationGroup": "vieillevigne",
+      "order": 32
+    },
+    {
+      "id": "cdm1-a6c8e23da1df5477",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4516.JPG",
+      "sourceFilename": "IMG_4516.JPG",
+      "sha256": "a6c8e23da1df5477bcdf70f011c605b6ca65f64ddbb04206d345eb987b699d9e",
+      "pixelSha256": "36f0a20ff3f2cc84741cb2af3056d91e1d7d63e24d45a4f3bbd292bcd475473a",
+      "locationGroup": "castelnaudary",
+      "order": 33
+    },
+    {
+      "id": "cdm1-e7d4c77b88559971",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4517.JPG",
+      "sourceFilename": "IMG_4517.JPG",
+      "sha256": "e7d4c77b88559971348f1bd12d83b050f6532b4a3a340d9d75448086ad9d3f88",
+      "pixelSha256": "03f70a5cc8fc4535e1e137869d6d02698140b236bbd7e0095f112093350fcf30",
+      "locationGroup": "castelnaudary",
+      "order": 34
+    },
+    {
+      "id": "cdm1-447621a90188ae9f",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4518.JPG",
+      "sourceFilename": "IMG_4518.JPG",
+      "sha256": "447621a90188ae9f869786f78bb3918e1a7b949bc826a38a6903bbb89ee3731a",
+      "pixelSha256": "b3e6082cc1215eb5e9646e200184519b290ae55270273188a83bfe3e3ce78fb3",
+      "locationGroup": "pexiora",
+      "order": 35
+    },
+    {
+      "id": "cdm1-07dbf791aa3f701d",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4520.JPG",
+      "sourceFilename": "IMG_4520.JPG",
+      "sha256": "07dbf791aa3f701dcbc0fbb6a43bb02fc15c4fb9b8f31141eb3fadd862427b89",
+      "pixelSha256": "1da9addf5f7e1319f13b2abc89ef11015e673e71587f545f8ee28490f3d39992",
+      "locationGroup": "montreal",
+      "order": 36
+    },
+    {
+      "id": "cdm1-14c70267e3e8d32d",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4528.JPG",
+      "sourceFilename": "IMG_4528.JPG",
+      "sha256": "14c70267e3e8d32d39b5efa529495e2c2e678af3b51fcea271b7a9112b9ad7df",
+      "pixelSha256": "5bc907f592be5c57dd38c1b06ed68e287d9255cb7e439a9076c25d7eaf428e86",
+      "locationGroup": "carcassonne",
+      "order": 37
+    },
+    {
+      "id": "cdm1-46de05ddac2c6592",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4529.JPG",
+      "sourceFilename": "IMG_4529.JPG",
+      "sha256": "46de05ddac2c6592f413ef483f7cfaec419cf57bde0b5f798aed32470ef1b64f",
+      "pixelSha256": "4e7863ac455f1b5127f4ef5828a78d72f769582ac15d7785a94deb7a7b014422",
+      "locationGroup": "carcassonne",
+      "order": 38
+    },
+    {
+      "id": "cdm1-fbe9c36d2b2693a7",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4533.JPG",
+      "sourceFilename": "IMG_4533.JPG",
+      "sha256": "fbe9c36d2b2693a75e74c1ddd2e0ea0a89b8010ce58afcfb1effc960524466e0",
+      "pixelSha256": "b8fc76a611657e6ec41dc195a043f04c6f4b5fb54812a4e14101d05056219633",
+      "locationGroup": "carcassonne",
+      "order": 39
+    },
+    {
+      "id": "cdm1-d3f76238429211af",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4553.JPG",
+      "sourceFilename": "IMG_4553.JPG",
+      "sha256": "d3f76238429211afe1db092e740060f370a5f8d2764e77668fdb6d23568982a4",
+      "pixelSha256": "d037a5ebf8c5626bf3afe1093657bbf9f76a80d834234c1ca1e8b0c0703e8944",
+      "locationGroup": "la-redorte",
+      "order": 40
+    },
+    {
+      "id": "cdm1-c90a305ef39c58c4",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4572.JPG",
+      "sourceFilename": "IMG_4572.JPG",
+      "sha256": "c90a305ef39c58c4717130b6deed7ee45b8084172726c23c9f9a83dd6daf303b",
+      "pixelSha256": "782f07955a0ad4b7adc95ae47b7c91c747870048dc7f71f66ed45987f7ecc9e9",
+      "locationGroup": "paraza",
+      "order": 41
+    },
+    {
+      "id": "cdm1-1b40eb892c1fc67b",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4574.JPG",
+      "sourceFilename": "IMG_4574.JPG",
+      "sha256": "1b40eb892c1fc67b99224ad8962a5e851b962539f93f3922522452c114d19f45",
+      "pixelSha256": "0505c5119caaad68730a4712361756e90e3d0209db783b9da9cee2d1cf298513",
+      "locationGroup": "paraza",
+      "order": 42
+    },
+    {
+      "id": "cdm1-da279a6021ecb20f",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4578.JPG",
+      "sourceFilename": "IMG_4578.JPG",
+      "sha256": "da279a6021ecb20f7cd92a2089864611e33f371dd3d7b453de66ef265a6e3162",
+      "pixelSha256": "c978a05cc3b9d2451bbf6101b0d94d2944d346893a26b41baba3f8a95acb0e25",
+      "locationGroup": "salleles-d-aude",
+      "order": 43
+    },
+    {
+      "id": "cdm2-283bc34f8bd482dd",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4785.JPG",
+      "sourceFilename": "IMG_4785.JPG",
+      "sha256": "283bc34f8bd482dd3b39b680738ce579844025faf0c20e7652ca4895a8345999",
+      "pixelSha256": "3bf7bcf406eda8a4a793e4e68a3a0615bd12ad69f7a454bed560faef801bdfde",
+      "locationGroup": "capestang",
+      "order": 44
+    },
+    {
+      "id": "cdm1-7c99450191c66dc6",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4596.JPG",
+      "sourceFilename": "IMG_4596.JPG",
+      "sha256": "7c99450191c66dc6687f2ea86564576691b8ce3978fb02febb864732a938401f",
+      "pixelSha256": "f7ab53986f832c859506f1b41151b710103245fb184d66b2c2bfb0a559d84bad",
+      "locationGroup": "beziers",
+      "order": 45
+    },
+    {
+      "id": "cdm1-ffbca6de150fc7f1",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4600.JPG",
+      "sourceFilename": "IMG_4600.JPG",
+      "sha256": "ffbca6de150fc7f18ac43a1754fb5a9c36c6b0d1fba1f38debf31a602cbcace3",
+      "pixelSha256": "103365eb1fdde360633fc24d721677f68571f67ca952bb9a36b7d4829d8cebde",
+      "locationGroup": "beziers",
+      "order": 46
+    },
+    {
+      "id": "cdm2-8cdc758cbed56a24",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4797.JPG",
+      "sourceFilename": "IMG_4797.JPG",
+      "sha256": "8cdc758cbed56a24ff9afd0e882b9f4a57cb20c6413fb1a014b34b18fbcb96a3",
+      "pixelSha256": "7e854265ab66dfac3469a5d2fb38c3972dbfcad47b764bd21690a3b768370b0b",
+      "locationGroup": "beziers",
+      "order": 47
+    },
+    {
+      "id": "cdm1-7ed840d66e9ad03a",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4606.JPG",
+      "sourceFilename": "IMG_4606.JPG",
+      "sha256": "7ed840d66e9ad03af5fc72c95d32b5abe9e3ae44e696bcee499527b57ba699da",
+      "pixelSha256": "a779178b85d35e0ae8d5144f843c12b05f2b4539f0eaa7cffa84dfe3a66c71d1",
+      "locationGroup": "sete",
+      "order": 48
+    },
+    {
+      "id": "cdm1-561bafe5aff2e2c8",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_4607.JPG",
+      "sourceFilename": "IMG_4607.JPG",
+      "sha256": "561bafe5aff2e2c88f930fdeb328dcefc739aa5e1e96954b5e18fd22240da5dc",
+      "pixelSha256": "bed391c68952413b00cac8320fe017ad01325cf308c6c48595ee8df4cfdefe90",
+      "locationGroup": "sete",
+      "order": 49
+    }
+  ],
+  "excluded": [
+    {
+      "id": "cdm1-527093082c289f38",
+      "sourceFilename": "IMG_4507.PNG",
+      "managedSource": "src/assets/cdm-gallery/cdm1/IMG_4507.PNG",
+      "reason": "Absent from the owner-selected CDM1and2 folder; retained for recovery."
+    },
+    {
+      "id": "cdm2-45b8c5be246ff253",
+      "sourceFilename": "IMG_4638.PNG",
+      "managedSource": "src/assets/cdm-gallery/cdm2/IMG_4638.PNG",
+      "reason": "Absent from the owner-selected CDM1and2 folder; retained for recovery."
+    },
+    {
+      "id": "cdm2-77ff0d20d18d2b69",
+      "sourceFilename": "IMG_4664.PNG",
+      "managedSource": "src/assets/cdm-gallery/cdm2/IMG_4664.PNG",
+      "reason": "Absent from the owner-selected CDM1and2 folder; retained for recovery."
+    },
+    {
+      "id": "cdm2-16c4003fcd414a42",
+      "sourceFilename": "IMG_4665.PNG",
+      "managedSource": "src/assets/cdm-gallery/cdm2/IMG_4665.PNG",
+      "reason": "Absent from the owner-selected CDM1and2 folder; retained for recovery."
+    },
+    {
+      "id": "cdm2-82dce97db2dbb916",
+      "sourceFilename": "IMG_4691.PNG",
+      "managedSource": "src/assets/cdm-gallery/cdm2/IMG_4691.PNG",
+      "reason": "Absent from the owner-selected CDM1and2 folder; retained for recovery."
+    },
+    {
+      "id": "cdm2-de858a22ac8f9fde",
+      "sourceFilename": "IMG_4692.PNG",
+      "managedSource": "src/assets/cdm-gallery/cdm2/IMG_4692.PNG",
+      "reason": "Absent from the owner-selected CDM1and2 folder; retained for recovery."
+    },
+    {
+      "id": "cdm2-cdec7a3cfab82c37",
+      "sourceFilename": "IMG_4694.PNG",
+      "managedSource": "src/assets/cdm-gallery/cdm2/IMG_4694.PNG",
+      "reason": "Absent from the owner-selected CDM1and2 folder; retained for recovery."
+    },
+    {
+      "id": "cdm2-1a0de989bbf416e5",
+      "sourceFilename": "IMG_4696.PNG",
+      "managedSource": "src/assets/cdm-gallery/cdm2/IMG_4696.PNG",
+      "reason": "Absent from the owner-selected CDM1and2 folder; retained for recovery."
+    },
+    {
+      "id": "cdm2-ce1966cf6b8f1c25",
+      "sourceFilename": "IMG_4697.PNG",
+      "managedSource": "src/assets/cdm-gallery/cdm2/IMG_4697.PNG",
+      "reason": "Absent from the owner-selected CDM1and2 folder; retained for recovery."
+    },
+    {
+      "id": "cdm2-3142d98a94b23d8c",
+      "sourceFilename": "IMG_4781.JPG",
+      "managedSource": "src/assets/cdm-gallery/cdm2/IMG_4781.JPG",
+      "reason": "Absent from the owner-selected CDM1and2 folder; retained for recovery."
+    },
+    {
+      "id": "cdm2-0bd445cb3b2f6142",
+      "sourceFilename": "IMG_4783.JPG",
+      "managedSource": "src/assets/cdm-gallery/cdm2/IMG_4783.JPG",
+      "reason": "Absent from the owner-selected CDM1and2 folder; retained for recovery."
+    },
+    {
+      "id": "cdm2-4967b506b49ae644",
+      "sourceFilename": "IMG_4784.JPG",
+      "managedSource": "src/assets/cdm-gallery/cdm2/IMG_4784.JPG",
+      "reason": "Absent from the owner-selected CDM1and2 folder; retained for recovery."
+    }
+  ]
+}

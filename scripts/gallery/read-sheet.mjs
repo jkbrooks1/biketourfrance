@@ -24,9 +24,9 @@ export async function readReviewSheet(env = process.env) {
   if (meta.properties.title !== SHEET_TITLE) throw new Error('Photo review must use BTF_Approved_Site_Copy');
   const tabs = meta.sheets.map((sheet) => sheet.properties.title);
   if (!Object.values(TABS).every((tab) => tabs.includes(tab))) throw new Error('Photo review tabs are missing; build stops without a stale fallback');
-  const ranges = [...Object.values(TABS).map((tab) => `'${tab}'!A1:K500`), "'Approved Site Copy'!A1:B1268"];
+  const ranges = [...Object.values(TABS).map((tab) => `'${tab}'!A1:L500`), "'Approved Site Copy'!A1:B1268"];
   const query = new URLSearchParams({ valueRenderOption: 'UNFORMATTED_VALUE' });
   ranges.forEach((range) => query.append('ranges', range));
   const values = await json(base + '/values:batchGet?' + query, auth);
-  return { collections: Object.fromEntries(Object.keys(TABS).map((key, index) => [key, values.valueRanges[index].values || []])), approved: values.valueRanges[2].values || [] };
+  return { collections: Object.fromEntries(Object.keys(TABS).map((key, index) => [key, values.valueRanges[index].values || []])), approved: values.valueRanges[Object.keys(TABS).length].values || [] };
 }

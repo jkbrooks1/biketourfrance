@@ -9,17 +9,18 @@ const helpId = `gallery-open-help-${collection}`;
 const titleId = `gallery-dialog-title-${collection}`;
 const keyboardHelpId = `gallery-dialog-help-${collection}`;
 const photos = (await getGalleryDelivery()).filter((photo) => photo.collection === collection);
-const sizes = '(min-width: 1024px) 34vw, (min-width: 600px) 50vw, 100vw';
+const fallbackSizes = (photo: (typeof photos)[number]) => `(min-width: 1024px) 34vw, (min-width: 600px) 50vw, ${photo.width / photo.height > 1.2 ? '100vw' : '50vw'}`;
 ---
 
 <div class="cdm-gallery" data-cdm-gallery>
   <ul class="cdm-gallery__tiles" data-gallery-tiles>
-    {photos.map((photo) => (
+    {photos.map((photo, index) => (
       <li
         class="cdm-gallery__tile"
         data-gallery-tile
         data-photo-id={photo.id}
         data-photo-number={photo.photoId}
+        data-location-group={photo.locationGroup}
         data-ratio={photo.width / photo.height}
         data-seed={parseInt(photo.sha256.slice(0, 4), 16) / 65535}
       >
@@ -34,15 +35,16 @@ const sizes = '(min-width: 1024px) 34vw, (min-width: 600px) 50vw, 100vw';
           aria-describedby={helpId}
         >
           <picture>
-            <source type="image/avif" srcset={photo.variants.filter((image) => image.format === 'avif').map((image) => `${image.path} ${image.width}w`).join(', ')} sizes={sizes} />
+            <source type="image/avif" srcset={photo.variants.filter((image) => image.format === 'avif').map((image) => `${image.path} ${image.width}w`).join(', ')} sizes={`${index ? 'auto, ' : ''}${fallbackSizes(photo)}`} />
             <img
               src={photo.variants.find((image) => image.format === 'webp' && image.width === 640)?.path ?? photo.variants.find((image) => image.format === 'webp')?.path}
               srcset={photo.variants.filter((image) => image.format === 'webp').map((image) => `${image.path} ${image.width}w`).join(', ')}
-              sizes={sizes}
+              sizes={`${index ? 'auto, ' : ''}${fallbackSizes(photo)}`}
               width={photo.width}
               height={photo.height}
               alt={photo.alt}
-              loading="lazy"
+              loading={index ? 'lazy' : 'eager'}
+              fetchpriority={index ? undefined : 'high'}
               decoding="async"
               style={`aspect-ratio: ${photo.width} / ${photo.height}`}
             />
