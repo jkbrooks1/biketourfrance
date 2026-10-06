@@ -1583,3 +1583,11 @@ verify-dist: 12 pages OK
 - **Contact Page Clean-Up:** Removed hardcoded eyebrow, converted all mailto/email CTAs to active Google Form (`https://forms.gle/thPjnUyKGCoZb6SM7`).
 - **Codebase Verification:** 0 mailto links remaining in `src/`. All 12 pages build and validate against approved copy sheet.
 - **Milestone 6 Status:** ✅ PASSED & COMPLETE
+
+## 2026-10-05 — Final Release Audit & Asset Pipeline Sign-Off
+- **Target Domain:** `https://biketourfrance.net`
+- **Contact Form Routing:** Neutralized all `mailto:` helper functions in `src/data/site.ts` and template code in `/contact/index.astro`. Directing all inquiries to active Google Form (`https://forms.gle/thPjnUyKGCoZb6SM7`).
+- **Codebase Email Audit:** Verified 0 `mailto:` links across all `src/` pages, components, and data helpers.
+- **Image Cache Purge & Rebuild:** Completely removed `.astro`, `node_modules/.cache`, and `dist/`. Rebuilt site to physically generate all 74 `.webp` static variants in `dist/_astro/`.
+- **Playwright Crawler Audit:** 12/12 routes crawled with standard desktop viewport (1440x900). **0 release blockers found** (0 HTTP 404s, 0 broken images, 0 mailto links, 0 rendering failures).
+- **Deployment Status:** ✅ PASSED & LIVE ON CLOUDFLARE PAGES
