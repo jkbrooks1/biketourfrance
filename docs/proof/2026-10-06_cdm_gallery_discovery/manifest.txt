@@ -1,3 +1,4 @@
+gallery:verify PASS
 {
   "routes": [
     {

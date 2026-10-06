@@ -25,6 +25,7 @@ export const NAV = [
   { label: TEXT['/nav/about'], href: '/about/', match: [] as readonly string[] },
   { label: TEXT['/nav/resources'], href: '/resources/', match: [] as readonly string[] },
   { label: TEXT['/nav/contact'], href: '/contact/', match: [] as readonly string[] },
+  { label: TEXT['/gallery/heading'], href: '/cdm-photo-gallery/', match: [] as readonly string[] },
 ] as const;
 
 // Extra useful links shown in the footer only.

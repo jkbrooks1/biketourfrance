@@ -5,6 +5,9 @@ import { getGalleryDelivery, type Collection } from '../data/cdm-photo-gallery';
 
 interface Props { collection: Collection }
 const { collection } = Astro.props;
+const helpId = `gallery-open-help-${collection}`;
+const titleId = `gallery-dialog-title-${collection}`;
+const keyboardHelpId = `gallery-dialog-help-${collection}`;
 const photos = (await getGalleryDelivery()).filter((photo) => photo.collection === collection);
 const sizes = '(min-width: 1024px) 34vw, (min-width: 600px) 50vw, 100vw';
 ---
@@ -27,7 +30,7 @@ const sizes = '(min-width: 1024px) 34vw, (min-width: 600px) 50vw, 100vw';
           data-photo-width={photo.detail.width}
           data-photo-height={photo.detail.height}
           aria-haspopup="dialog"
-          aria-describedby="gallery-open-help"
+          aria-describedby={helpId}
         >
           <picture>
             <source type="image/avif" srcset={photo.variants.filter((image) => image.format === 'avif').map((image) => `${image.path} ${image.width}w`).join(', ')} sizes={sizes} />
@@ -48,11 +51,11 @@ const sizes = '(min-width: 1024px) 34vw, (min-width: 600px) 50vw, 100vw';
     ))}
   </ul>
   <script is:inline set:html={masonrySource}></script>
-  <p id="gallery-open-help" class="cdm-gallery__help">{TEXT['/cdm-gallery/open_help']}</p>
+  <p id={helpId} class="cdm-gallery__help">{TEXT['/cdm-gallery/open_help']}</p>
 
-  <dialog class="cdm-lightbox" data-gallery-dialog aria-labelledby="gallery-dialog-title" aria-describedby="gallery-dialog-help">
+  <dialog class="cdm-lightbox" data-gallery-dialog aria-labelledby={titleId} aria-describedby={keyboardHelpId}>
     <div class="cdm-lightbox__header">
-      <h2 id="gallery-dialog-title">{TEXT['/cdm-gallery/lightbox_title']}</h2>
+      <h2 id={titleId}>{TEXT['/cdm-gallery/lightbox_title']}</h2>
       <button type="button" class="btn btn--secondary" data-gallery-close autofocus>{TEXT['/cdm-gallery/close']}</button>
     </div>
     <figure class="cdm-lightbox__figure">
@@ -64,7 +67,7 @@ const sizes = '(min-width: 1024px) 34vw, (min-width: 600px) 50vw, 100vw';
       <p class="cdm-lightbox__position" aria-live="polite" aria-atomic="true" data-gallery-position></p>
       <button type="button" class="btn btn--secondary" data-gallery-next>{TEXT['/cdm-gallery/next']}</button>
     </div>
-    <p class="cdm-lightbox__help" id="gallery-dialog-help">{TEXT['/cdm-gallery/keyboard_help']}</p>
+    <p class="cdm-lightbox__help" id={keyboardHelpId}>{TEXT['/cdm-gallery/keyboard_help']}</p>
   </dialog>
 </div>
 

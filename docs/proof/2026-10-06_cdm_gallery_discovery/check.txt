@@ -1,0 +1,20 @@
+
+> btf-migration@0.1.0 check
+> astro check
+
+22:55:59 [types] Generated 33ms
+22:55:59 [check] Getting diagnostics for Astro files in /Users/jkbrookspersonal/LocalSiteBuildFiles/00_BTF_MAIN_SITE_CLOUDFLARE_ROOT...
+src/data/photos.ts:8:1 - warning ts(6133): 'canalTowpath' is declared but its value is never read.
+
+8 import canalTowpath from '../assets/photos/canal-towpath-gravel.jpg';
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/pages/waitlist-2027.astro:207:17 - warning ts(80006): This may be converted to an async function.
+
+207           .then(function (response) {
+                    ~~~~~~~~
+
+Result (35 files):
+- 0 errors
+- 0 warnings
+- 2 hints

@@ -15,6 +15,11 @@ assert.equal(new Set(manifest.photos.map((photo) => photo.pixelSha256)).size, ma
 assert.equal(delivered.photos.length, manifest.photos.length);
 const fields = new Map(JSON.parse(readFileSync('copy/fixture/fixture-rows.json', 'utf8')));
 const summary = { routes: [], uniqueImages: manifest.photos.length, excludedDuplicates: source.duplicates.length, sourceImagesVerifiedUnchanged: 0, variantsChecked: 0, largestDeliveredImageBytes: 0, managedOriginalBytes: 0 };
+const landing = readFileSync('dist/cdm-photo-gallery/index.html', 'utf8');
+const landingIds = [...landing.matchAll(/data-photo-id="([^"]+)"/g)].map((match) => match[1]);
+assert.deepEqual(landingIds, manifest.photos.map((photo) => photo.id), 'Landing page must show every unique photo in manifest order');
+assert.equal(new Set(landingIds).size, manifest.photos.length);
+summary.routes.push({ route: '/cdm-photo-gallery/', renderedImages: landingIds.length });
 
 for (const collection of source.collections) {
   assert.equal(collection.images.length + collection.corruptOrUnreadable.length, collection.supportedCount);
@@ -32,7 +37,7 @@ for (const collection of source.collections) {
   summary.routes.push({ route, renderedImages: ids.length });
   const lazy = [...html.matchAll(/<img\b[^>]*loading="lazy"[^>]*>/g)];
   assert.ok(lazy.length >= included.length, 'Missing lazy loading');
-  assert.ok(html.includes('aria-describedby="gallery-open-help"'));
+  assert.ok(html.includes(`aria-describedby="gallery-open-help-${collection.collection}"`));
   assert.ok(html.includes('data-gallery-dialog'));
 }
 for (const photo of manifest.photos) {

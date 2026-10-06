@@ -105,3 +105,14 @@ Rollback: preserve current edits, revert the gallery integration commit through 
 Project log: docs/BUILD_LOG.md. General log: /Users/jkbrookspersonal/JBLocalBuildLogs/00_GENERAL_BUILDLOG.md. Single systems register: /Users/jkbrookspersonal/LocalSiteBuildFiles/00_A.SYSTEMS_CHANGES_REGISTER/SYSTEM_CHANGES_REGISTER.md. Publication completion/readback will be appended to all three.
 
 No DNS, Pages settings, secrets, live-domain routing, Framer work or Wrangler deployment is part of this release. Main publication is explicitly owner-approved.
+
+
+## Published and verified
+
+Owner-approved main commit: `20bfe12e7c8d4400ef239c81c88c0f41e51fcbaa`. Before commit: `d9895e66b65c7a3118f4d612212b08a7c812a052`. Current branch: main. Canonical successful production deployment: `865d4995-41de-4966-97cd-d11171e6a0c7`, https://865d4995.btf-production.pages.dev; completed 2026-10-06T05:42:06.463912Z.
+
+Live gallery: https://biketourfrance.net/cdm-photo-gallery/ ; CDM1: https://biketourfrance.net/cdm-photo-gallery/cdm1/ ; CDM2: https://biketourfrance.net/cdm-photo-gallery/cdm2/ . Stable Pages host also verified. Counts: 40 CDM1 + 21 CDM2 = 61 unique photos. All 427 deployed derivatives passed HTTP/content-type/300 KiB checks, maximum 306276 bytes. Live browser checks: 18 route/viewport combinations, both lightboxes, native lazy loading, keyboard/touch/focus, zero failures. GitHub approved-copy workflow passed: https://github.com/jkbrooks1/biketourfrance/actions/runs/37419292932.
+
+Publication proof: docs/proof/2026-10-06_cdm_gallery_publication/RELEASE.json, live-verification.json, live-browser/gallery-browser-verification.json and live-browser screenshots. Exact committed changed-file list: published-file-list.txt. No preview branch deployment was created; this is the owner-approved production release. Logs/register completion entries and final live evidence are local post-publication documentation, so no extra documentation deployment was triggered. Source and assets are committed on main; additional unstaged files are preserved proof/screenshots.
+
+No DNS, Pages configuration, build-command, secret, live-domain routing, Framer or Wrangler change occurred. Main publication was explicitly approved. Rollback commit `20bfe12e7c8d4400ef239c81c88c0f41e51fcbaa` through Git and coordinate restoration of new Sheet rows using the preserved rollback request after checking newer edits.

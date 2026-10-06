@@ -38,7 +38,7 @@ const policies = footerPolicyParts();
       <nav aria-label="Site">
         <h2>{COPY.footerNav.exploreHeading}</h2>
         <ul>
-          {NAV.map((item) => (
+          {NAV.filter((item) => item.href !== '/cdm-photo-gallery/').map((item) => (
             <li>
               <a class="footer-link" href={item.href}>
                 {item.label}

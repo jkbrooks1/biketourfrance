@@ -1,0 +1,130 @@
+{
+  "base": "http://127.0.0.1:4321",
+  "views": [
+    {
+      "width": 320,
+      "overflow": 0,
+      "headerHeight": 96,
+      "h1": 1,
+      "duplicateIds": [],
+      "uniquePhotos": 61,
+      "counts": [
+        40,
+        21
+      ],
+      "missingAriaTargets": [],
+      "missingAlt": 0,
+      "lazy": true,
+      "dimensions": true,
+      "activeNav": "/cdm-photo-gallery/"
+    },
+    {
+      "width": 375,
+      "overflow": 0,
+      "headerHeight": 56,
+      "h1": 1,
+      "duplicateIds": [],
+      "uniquePhotos": 61,
+      "counts": [
+        40,
+        21
+      ],
+      "missingAriaTargets": [],
+      "missingAlt": 0,
+      "lazy": true,
+      "dimensions": true,
+      "activeNav": "/cdm-photo-gallery/"
+    },
+    {
+      "width": 768,
+      "overflow": 0,
+      "headerHeight": 64,
+      "h1": 1,
+      "duplicateIds": [],
+      "uniquePhotos": 61,
+      "counts": [
+        40,
+        21
+      ],
+      "missingAriaTargets": [],
+      "missingAlt": 0,
+      "lazy": true,
+      "dimensions": true,
+      "activeNav": "/cdm-photo-gallery/"
+    },
+    {
+      "width": 1024,
+      "overflow": 0,
+      "headerHeight": 72,
+      "h1": 1,
+      "duplicateIds": [],
+      "uniquePhotos": 61,
+      "counts": [
+        40,
+        21
+      ],
+      "missingAriaTargets": [],
+      "missingAlt": 0,
+      "lazy": true,
+      "dimensions": true,
+      "activeNav": "/cdm-photo-gallery/"
+    },
+    {
+      "width": 1440,
+      "overflow": 0,
+      "headerHeight": 72,
+      "h1": 1,
+      "duplicateIds": [],
+      "uniquePhotos": 61,
+      "counts": [
+        40,
+        21
+      ],
+      "missingAriaTargets": [],
+      "missingAlt": 0,
+      "lazy": true,
+      "dimensions": true,
+      "activeNav": "/cdm-photo-gallery/"
+    },
+    {
+      "width": 1920,
+      "overflow": 0,
+      "headerHeight": 72,
+      "h1": 1,
+      "duplicateIds": [],
+      "uniquePhotos": 61,
+      "counts": [
+        40,
+        21
+      ],
+      "missingAriaTargets": [],
+      "missingAlt": 0,
+      "lazy": true,
+      "dimensions": true,
+      "activeNav": "/cdm-photo-gallery/"
+    }
+  ],
+  "lightboxes": [
+    {
+      "width": 375,
+      "collection": "cdm1",
+      "checked": true
+    },
+    {
+      "width": 375,
+      "collection": "cdm2",
+      "checked": true
+    },
+    {
+      "width": 1440,
+      "collection": "cdm1",
+      "checked": true
+    },
+    {
+      "width": 1440,
+      "collection": "cdm2",
+      "checked": true
+    }
+  ],
+  "failures": []
+}
