@@ -14,7 +14,7 @@ export interface AudioItem {
 export const AUDIO_GUIDES: readonly AudioItem[] = [
   {
     title: TEXT['/resources-library/text_1'],
-    url: `${AUDIO_BASE}/CDM_BTF_TourAudioOverview/00.CDM2026_CompleteAudio.m4b`,
+    url: `${AUDIO_BASE}/CDM_BTF_TourAudioOverview/CDM_BTF_TourAudioOverview_00.CDM_BTFv1_CompleteAudio.m4b`,
   },
   { title: TEXT['/resources-library/text_2'], url: `${AUDIO_BASE}/CDM_BTF_TourAudioOverview/001.CDM_Intro.mp3` },
   {
