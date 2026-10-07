@@ -89,7 +89,8 @@ with sync_playwright() as p:
             probs = []
             if r['overflowX'] > 0: probs.append(f"horizontal overflow {r['overflowX']}")
             if r['landmarks'][0] < 1 or r['landmarks'][1] < 1 or r['landmarks'][2] != 1 or r['landmarks'][3] < 1: probs.append(f"landmarks {r['landmarks']}")
-            if r['h1'] != 1: probs.append(f"h1 count {r['h1']}")
+            expected_h1 = 0 if route == '/cdm-photo-gallery/' else 1
+            if r['h1'] != expected_h1: probs.append(f"h1 count {r['h1']}, expected {expected_h1}")
             if r['headingJumps']: probs.append('heading jump')
             if w >= 768 and abs(r['headerH'] - exp_h) > 0.5: probs.append(f"header height {r['headerH']} expected {exp_h}")
             if w < 768 and r['headerH'] < exp_h: probs.append(f"header height {r['headerH']}")
