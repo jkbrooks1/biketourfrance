@@ -85,7 +85,7 @@ const jsonLd = [
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     {!notFound && <link rel="canonical" href={canonical} />}
-    {!SITE.indexingEnabled && <meta name="robots" content="index, follow" />}
+    {!SITE.indexingEnabled && <meta name="robots" content="noindex, nofollow, noarchive" />}
     <meta property="og:site_name" content={SITE.name} />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={fullTitle} />

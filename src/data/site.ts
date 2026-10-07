@@ -12,9 +12,10 @@ export const SITE = {
   // Contact address. The owner's personal address must never appear on the site.
   email: TEXT['/contact/contact_email'],
   tagline: TEXT['/about/subheading'],
-  // Staging protection. Stays false until the owner approves production launch.
-  // When false, every page carries a noindex meta tag (public/_headers and public/robots.txt also block crawlers).
-  indexingEnabled: false,
+  // Main is the approved production branch; other Pages branches and local dev stay non-indexable.
+  indexingEnabled:
+    import.meta.env.PROD &&
+    (!process.env.CF_PAGES_BRANCH || process.env.CF_PAGES_BRANCH === 'main'),
 } as const;
 
 // Site-level navigation labels (owner decision 2026-10-03).
