@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { generateKeyPairSync } from 'node:crypto';
 import test from 'node:test';
-import { APPROVED_COPY_TAB, EXPECTED_SERVICE_ACCOUNT, HEADERS, readSheetGrid } from './lib.mjs';
+import { APPROVED_COPY_TAB, EXPECTED_SERVICE_ACCOUNT, HEADERS, readSheetGrid, validateGrid } from './lib.mjs';
 
 // A fresh in-memory key exercises the real JWT signing path without reading or storing credentials.
 const { privateKey } = generateKeyPairSync('rsa', { modulusLength: 2048 });
@@ -66,4 +66,26 @@ test('the matching legacy override remains compatible', async () => {
     { fetchImpl: mock.fetchImpl },
   );
   assert.equal(result.tab, APPROVED_COPY_TAB);
+});
+
+const dupManifest = [{ field: '/x/a', route: '/', required: true, codeLocation: 'src/pages/index.astro' }];
+
+test('identical duplicate keys are kept once with a warning and no error', () => {
+  const grid = [HEADERS, ['/x/a', 'Same text'], [], ['/x/a', 'Same text']];
+  const { errors, fields, warnings } = validateGrid(grid, dupManifest);
+  assert.deepEqual(errors, []);
+  assert.equal(fields['/x/a'], 'Same text');
+  assert.equal(warnings.length, 1);
+  assert.equal(warnings[0].field, '/x/a');
+  assert.match(warnings[0].issue, /rows 2 and 4/);
+});
+
+test('conflicting duplicate keys are rejected and the first row wins', () => {
+  const grid = [HEADERS, ['/x/a', 'First text'], ['/x/a', 'Second text']];
+  const { errors, fields, warnings } = validateGrid(grid, dupManifest);
+  assert.equal(errors.length, 1);
+  assert.equal(errors[0].field, '/x/a');
+  assert.match(errors[0].issue, /duplicate field name \(rows 2 and 3\)/);
+  assert.equal(fields['/x/a'], 'First text');
+  assert.equal(warnings.length, 0);
 });

@@ -1712,3 +1712,56 @@ Commit: 241a08a610297b2efad57e0f7edd21180898e7f4. Evidence: /Users/jkbrooksperso
 Feature branch feature/home-testimonials, created from origin/main ef0cf9a in a clean worktree. Files changed: src/pages/index.astro, src/data/site.ts, src/styles/global.css, src/data/approved-copy.ts, copy/fixture/fixture-rows.json, copy/field-manifest.json, docs/BTF_MV_CANONICAL_DECISIONS.md, docs/BUILD_LOG.md. Approved Site Copy Sheet: 13 rows appended (/nav/testimonials and /home-testimonials/*). Decision document updated with a 2026-10-07 entry.
 Validation: astro check 0 errors 0 warnings; astro build 13 pages; copy:verify-rendered OK 448 fields (fixture source); verify-dist 13 pages OK; copy:test 10 passed; gallery:verify PASS; gallery:test pass. Layout checked at 1280, 1024, 820, 768 and 390 px: three cards across from 1024 px, one column below, no horizontal overflow, one nav row from 768 px up (tablet link gap and padding trimmed to keep it), mobile menu opens with all seven links.
 Notes: Sheet-mode copy:validate fails on two older Sheet problems not caused by this change (duplicate /cdm-gallery/future_tour_cta, blank /resources/helpful_stuff_library_text); approved-copy.ts was generated in fixture mode and differs from origin/main only by the 12 new fields.
+
+
+## 2026-10-08T03:10:54+00:00 — Sheet copy range and duplicate fix — STEP_1_PREFLIGHT
+
+Read-only. Drive get_file_metadata: modifiedTime 2026-10-08T02:36:01.222Z (unchanged from discovery; no stop condition). Command: BTF_COPY_SHEET_ID=<sheet id> node scripts/copy/sync.mjs (service account, spreadsheets.readonly, A:Z) -> 1267 data rows. Snapshot written to docs/discovery/backup/2026-10-08_approved-copy-A-B-pre-fix.json: 2000 {row,A,B} objects, parses, 452 non-blank rows, no data in column C or later, rows 1269-2000 blank.
+Checks: B45 empty (A45 = /resources/helpful_stuff_library_text); row 501 and row 1268 both hold /cdm-gallery/future_tour_cta with the exact text in src/data/approved-copy.ts; rows 503-514 match approved-copy.ts exactly.
+Drive revisions (files.revisions.list): unavailable. The Drive connector has no revisions tool and the service account has only the Sheets read-only scope. Revision count and latest revision timestamp not recorded.
+Sheet-write audit: every Sheets request in scripts/copy and scripts/gallery is GET or batchGet with the spreadsheets.readonly scope; the only POST is the OAuth token exchange. scripts/gallery/sync-review.mjs writes local JSON files only, not the CDM Photo Review tab, and cannot write to the Sheet with that scope.
+
+## 2026-10-08T03:10:54+00:00 — Sheet copy range and duplicate fix — STEP_2_BRANCH
+
+Command: git worktree add -b fix/sheet-copy-range-and-duplicate-check <scratch>/wt_fix 5cd852c1cb5cded1b74ef77ca32a8661356c6f0f. Result: git branch --show-current = fix/sheet-copy-range-and-duplicate-check, HEAD 5cd852c1cb5cded1b74ef77ca32a8661356c6f0f. origin/main was still 5cd852c at fetch. A separate worktree was used because the canonical root is dirty and on a different local main.
+
+## 2026-10-08T03:12:00+00:00 — Sheet copy range and duplicate fix — STEP_3_B45_RESTORED
+
+Pre-write: Drive modifiedTime 2026-10-08T02:36:01.222Z; B45 re-read immediately before writing, empty. Sheet write (the only one in this task): Sheets values update on 'Approved Site Copy'!B45, 1 cell, text "Templates, audio guides, and trusted sites now live in the BikeTourFrance resource library." (91 characters).
+Read-back: userEnteredValue and formattedValue match exactly, no trailing whitespace; cell already carried Arial 11 formatting (unchanged by this write). Full A1:B2000 re-pull via scripts/copy/sync.mjs compared with the Step 1 snapshot: exactly one cell differs, B45 (empty -> approved text). No data in column C or later.
+
+## 2026-10-08T03:12:51+00:00 — Sheet copy range and duplicate fix — STEP_4_READER_WIDENED
+
+Edited scripts/gallery/read-sheet.mjs: the literal 'Approved Site Copy'!A1:B1268 replaced by constant COPY_RANGE = "'Approved Site Copy'!A1:B5000"; 'CDM Photo Review'!A1:L500 unchanged; after the batch read, if the approved-copy grid has 5000 or more rows the reader throws "range ceiling reached". Not yet exercised against the live Sheet (see Step 6).
+
+## 2026-10-08T03:12:51+00:00 — Sheet copy range and duplicate fix — STEP_5_DUPLICATE_HANDLING
+
+Edited scripts/copy/lib.mjs validateGrid: first row always wins; a repeated key with identical raw copy is skipped and returned in a new warnings array ("identical duplicate field name (rows X and Y); first row kept"); a repeated key with different copy keeps the existing error "duplicate field name (rows X and Y)". validateGrid now returns { errors, fields, warnings }. Callers scripts/copy/validate.mjs and scripts/gallery/sync-review.mjs print warnings with console.warn. Added two tests to scripts/copy/lib.test.mjs (identical duplicates: no error, one warning, first value kept; conflicting duplicates: one error, first value kept, no warning).
+Command: node --test scripts/copy/lib.test.mjs. Result: the two new tests pass along with the existing ones in that file.
+
+## 2026-10-08T03:15:29+00:00 — Sheet copy range and duplicate fix — STEP_6_VALIDATION_AND_STOP
+
+Commands and results (all in the scratch worktree; every Sheet access is read-only):
+- npm run check: 0 errors, 0 warnings, 2 hints.
+- npm run gallery:test: 8 passed, 0 failed.
+- npm run copy:test: first run 8 passed, 2 failed. Failure 1: negative test "duplicate approved field fails closed" appended an identical copy of an existing row and expected an error; invalidated by the requested behaviour change. Updated scripts/copy/negative-tests.mjs to use a conflicting duplicate (still must fail) and added a test that an identical duplicate passes with one warning. Failure 2: "rendered native site matches the local deterministic snapshot" failed only because dist/ did not exist yet. After npx astro build (exit 0), npm run copy:test: 11 passed, 0 failed.
+- Sheet-mode pipeline (BTF_COPY_SHEET_ID set, BTF_DEPLOY_ENV=production), steps run individually because npm run verify and canonical:check refuse a worktree path: gallery:sync PASS (sheet), read A1:B5000 on the live Sheet without error, WARNING identical duplicate /cdm-gallery/future_tour_cta rows 501 and 1268; copy:sync 1267 data rows; copy:validate OK 450 fields with the same warning; copy:generate-ts OK; astro build exit 0 (13 pages); copy:verify-rendered OK 448 fields (source: sheet); gallery:verify PASS; assert-deployable OK; node scripts/verify-dist.mjs exit 1 with 2 problems.
+verify-dist problems: (1) "/resources/: description length 260 outside 50-200": the live Sheet value of /resources/meta_description is now 260 characters (committed copy had 178). (2) "css: padding-inline: 3px is not on the spacing scale": from src/styles/global.css:491, added in commit 53e3e97 (content: add rider testimonials, the 2026-10-07 release) when the tablet nav was tightened; verify-dist was not re-run after that edit. Neither is caused by this branch's edits.
+Also found: the live Sheet differs from the committed approved-copy.ts in 17 fields (list in the final report); these accumulated because the scheduled sync could not run.
+STOP: a validator fails and the fixes (a Sheet copy decision and a CSS change in a file outside this task's scope) are outside scope. Step 7 (project build) not completed as a single command: npm run build refuses non-canonical roots and would end at the same verify-dist failure. Nothing committed or pushed. The branch fix/sheet-copy-range-and-duplicate-check exists locally only. The only Sheet write was B45 (Step 3).
+
+## 2026-10-08T03:32:54+00:00 — Bundled update pass — PARTIAL_NO_COMMIT
+
+Done locally on fix/sheet-copy-range-and-duplicate-check (nothing committed or pushed):
+- Sheet re-pulled read-only (scripts/copy/sync.mjs): /resources/meta_description is now 169 characters. Sheet still differs from committed copy in 17 fields. Per owner direction only /resources/meta_description was applied; the other 16 (helpful_sites_heading, helpful_sites_body, footer/small_commercial_bottom, about-page/meta_description, cdm-facts/text_7, contact-page/meta_description, photos/text_3, privacy/body_2, privacy/heading_2, tours/body_4, cdm/frag_1, about-x/p_2, canal-des-deux-mers-practical-info-x/p_2, resources-x/p_3, cdm-gallery/meta_description, cdm-gallery-cdm1/meta_description) were discarded by git restore of copy/fixture/fixture-rows.json, copy/field-manifest.json, src/data/approved-copy.ts followed by a one-field change. approved-copy.ts diff vs 5cd852c: 2 lines (COPY.resources.metaDescription and TEXT['/resources/meta_description']); fixture diff: 1 line.
+- src/styles/global.css tablet nav: column-gap 0 -> var(--s1) (4px) and padding-inline 3px -> 0. Preview iframes at 768, 800, 1023, 1024 and 1280 px: one nav row, header 64/72 px, link height 44 px, no overflow.
+- Validation, fixture mode (Sheet carries unreviewed edits so Sheet-mode deployability cannot match): astro check 0; astro build 0 (13 pages); copy:verify-rendered OK 448 fields; gallery:verify PASS; node scripts/verify-dist.mjs 13 pages OK; copy:test 11 passed, 0 failed; gallery:test pass. npm run verify/build/test not run as written because canonical:check refuses a worktree path.
+Not done, awaiting owner decisions: La Reole -> Meilhan-sur-Garonne route update (requires edits to existing Sheet cells /cdm-facts/t_8, /resources-library/text_3, /resources-library/text_4 and a decision on audio guide labels); commit, push and deployment (push target rebuild/2026-10-02-audit-remediation is not the production branch).
+
+## 2026-10-08T03:35:57+00:00 — Bundled update pass — ROUTE_STOP_AND_VALIDATED
+
+Owner decisions (chat, 2026-10-08): route change limited to the stop list; feature branch then main with main merge approved for this release.
+Sheet write: Drive modifiedTime before write 2026-10-08T03:22:19.625Z (owner's meta-description edit). Sheets values update on 'Approved Site Copy'!B262 (/cdm-facts/t_8): "La Réole" -> "Meilhan-sur-Garonne". Whole-sheet diff before vs after: exactly one row changed (262). /resources-library/text_3 and text_4 (audio-guide titles, rows 164-165), the La Réole bridge photo alt (row 381) and photo location data intentionally unchanged.
+Repo: copy/fixture/fixture-rows.json 2 rows changed (meta_description, t_8); src/data/approved-copy.ts 4 lines (the same two fields, COPY and TEXT). Rendered /canal-des-deux-mers/ contains Meilhan-sur-Garonne and no La Réole; La Réole remains only in dist/resources/ (audio titles) and dist/cdm-photo-gallery/ (photo alt).
+Validation (fixture mode): astro check 0; astro build 0; copy:verify-rendered OK 448 fields; gallery:verify PASS; node scripts/verify-dist.mjs 13 pages OK; copy:test 11 passed; gallery:test pass.
+Note: 16 other Sheet fields differ from committed copy and are NOT in this release; the hourly scheduled sync will ingest them once it can run.

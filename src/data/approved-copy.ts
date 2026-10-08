@@ -66,7 +66,7 @@ export const COPY = {
     contactEmail: "contact@biketourfrance.net"
   },
   resources: {
-    metaDescription: "For cyclists who value authenticity and agency over curated experiences: plan your own bike tour in France with practical guidance on routes, decisions, and real-world tradeoffs.",
+    metaDescription: "BikeTourFrance is built for cyclists who value authenticity and agency over curated experiences. Join our guided trips or get help planning your own bike tour in France.",
     backLink: "Back to the home page",
     helpfulStuffHeading: "Helpful Stuff",
     helpfulSitesHeading: "Helpful Sites (from approved-copy)",
@@ -151,7 +151,7 @@ export const TEXT: Record<string, string> = {
   "/cdm-facts/t_5": "Monday:",
   "/cdm-facts/t_6": "Tuesday:",
   "/cdm-facts/t_7": "Bordeaux",
-  "/cdm-facts/t_8": "La Réole",
+  "/cdm-facts/t_8": "Meilhan-sur-Garonne",
   "/cdm-facts/t_9": "Agen",
   "/cdm-facts/text_1": "departures in 2027",
   "/cdm-facts/text_2": "riding days",
@@ -487,7 +487,7 @@ export const TEXT: Record<string, string> = {
   "/resources/helpful_stuff_heading": "Helpful Stuff",
   "/resources/helpful_stuff_library_cta": "Open resource library",
   "/resources/helpful_stuff_library_text": "Templates, audio guides, and trusted sites now live in the BikeTourFrance resource library.",
-  "/resources/meta_description": "For cyclists who value authenticity and agency over curated experiences: plan your own bike tour in France with practical guidance on routes, decisions, and real-world tradeoffs.",
+  "/resources/meta_description": "BikeTourFrance is built for cyclists who value authenticity and agency over curated experiences. Join our guided trips or get help planning your own bike tour in France.",
   "/terms/body_1": "How to read the information on this website. Last updated October 2, 2026.",
   "/terms/body_2": "The tour descriptions on this website are plans, and they can change. Exact dates and pricing for the 2027 tours have not been announced. Deposit, payment, and cancellation terms have not been published.",
   "/terms/body_3": "Tours cannot be booked or paid for through this website. Joining the waitlist by email neither reserves a place on a tour nor obligates you to join. We will provide the booking terms in writing before you make any commitment.",

@@ -10,7 +10,8 @@ if (existsSync(PATHS.artifact)) unlinkSync(PATHS.artifact);
 
 const fetched = JSON.parse(readFileSync(PATHS.rows, 'utf8'));
 const manifest = loadManifest();
-const { errors, fields } = validateGrid(fetched.grid, manifest, loadRules());
+const { errors, fields, warnings } = validateGrid(fetched.grid, manifest, loadRules());
+for (const w of warnings) console.warn(`copy:validate  WARNING: ${w.field}: ${w.issue}`);
 
 // Every manifest code location must be a real file.
 errors.push(...checkManifestLocations(manifest));

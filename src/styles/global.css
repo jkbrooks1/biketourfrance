@@ -483,12 +483,12 @@ a:active {
 /* Keep the expanded link list on one line within the existing tablet header. */
 @media (min-width: 768px) and (max-width: 1023px) {
   .site-nav ul {
-    column-gap: 0;
+    column-gap: var(--s1);
   }
   .site-nav a {
     font-size: 14px;
     min-width: 44px;
-    padding-inline: 3px;
+    padding-inline: 0;
   }
 }
 
