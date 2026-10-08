@@ -285,7 +285,8 @@ function fieldKind(field) {
 /**
  * Validate a sheet grid against the manifest. Returns {errors, fields}. An error has
  * {field, route, code, issue}. fields maps field name to normalized copy, and is only meant to be
- * used when errors is empty.
+ * used when errors is empty. A repeated field name whose copy is identical to the first row is kept
+ * once and reported in warnings; a repeated name with different copy is an error. The first row always wins.
  */
 export function validateGrid(grid, manifest, rules = []) {
   const errors = [];
@@ -315,7 +316,9 @@ export function validateGrid(grid, manifest, rules = []) {
     });
 
   const fields = {};
+  const warnings = [];
   const seen = new Map();
+  const firstRaw = new Map();
   grid.slice(1).forEach((row, i) => {
     const sheetRow = i + 2;
     const name = String(row[0] ?? '').trim();
@@ -335,8 +338,19 @@ export function validateGrid(grid, manifest, rules = []) {
         code: '-',
         issue: `row ${sheetRow}: not a valid page/field_name (lowercase letters, digits, hyphen, then "/" and lowercase letters, digits, underscore)`,
       });
-    if (seen.has(name)) return add(name, `duplicate field name (rows ${seen.get(name)} and ${sheetRow})`);
+    const raw = String(row[1] ?? '');
+    if (seen.has(name)) {
+      if (firstRaw.get(name) === raw) {
+        warnings.push({
+          field: name,
+          issue: `identical duplicate field name (rows ${seen.get(name)} and ${sheetRow}); first row kept`,
+        });
+        return;
+      }
+      return add(name, `duplicate field name (rows ${seen.get(name)} and ${sheetRow})`);
+    }
     seen.set(name, sheetRow);
+    firstRaw.set(name, raw);
     if (!byName.has(name))
       return add(
         name,
@@ -403,7 +417,7 @@ export function validateGrid(grid, manifest, rules = []) {
       }
     }
   }
-  return { errors, fields };
+  return { errors, fields, warnings };
 }
 
 export function formatReport(errors) {

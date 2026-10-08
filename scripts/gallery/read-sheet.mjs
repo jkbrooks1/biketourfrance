@@ -3,6 +3,9 @@ import { createSign } from 'node:crypto';
 import { readCredentials, SHEET_TITLE } from '../copy/lib.mjs';
 import { TABS } from './review-lib.mjs';
 
+// Approved-copy rows are read up to this ceiling. Hitting it is an error, never a silent truncation.
+const COPY_RANGE = "'Approved Site Copy'!A1:B5000";
+
 export async function readReviewSheet(env = process.env) {
   const id = env.BTF_COPY_SHEET_ID;
   if (!id) throw new Error('BTF_COPY_SHEET_ID is required to read the photo-review tabs');
@@ -24,9 +27,11 @@ export async function readReviewSheet(env = process.env) {
   if (meta.properties.title !== SHEET_TITLE) throw new Error('Photo review must use BTF_Approved_Site_Copy');
   const tabs = meta.sheets.map((sheet) => sheet.properties.title);
   if (!Object.values(TABS).every((tab) => tabs.includes(tab))) throw new Error('Photo review tabs are missing; build stops without a stale fallback');
-  const ranges = [...Object.values(TABS).map((tab) => `'${tab}'!A1:L500`), "'Approved Site Copy'!A1:B1268"];
+  const ranges = [...Object.values(TABS).map((tab) => `'${tab}'!A1:L500`), COPY_RANGE];
   const query = new URLSearchParams({ valueRenderOption: 'UNFORMATTED_VALUE' });
   ranges.forEach((range) => query.append('ranges', range));
   const values = await json(base + '/values:batchGet?' + query, auth);
-  return { collections: Object.fromEntries(Object.keys(TABS).map((key, index) => [key, values.valueRanges[index].values || []])), approved: values.valueRanges[Object.keys(TABS).length].values || [] };
+  const approved = values.valueRanges[Object.keys(TABS).length].values || [];
+  if (approved.length >= 5000) throw new Error('Approved Site Copy range ceiling reached: ' + COPY_RANGE + ' returned 5000 rows, so rows may have been cut off. Raise COPY_RANGE and re-run.');
+  return { collections: Object.fromEntries(Object.keys(TABS).map((key, index) => [key, values.valueRanges[index].values || []])), approved };
 }

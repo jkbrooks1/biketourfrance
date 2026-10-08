@@ -12,7 +12,8 @@ try {
   const registry = read('src/data/cdm-photo-id-registry.json');
   const result = makeReview({ photos, collections: input.collections, registry, approvedFields: new Map(input.approved.slice(1)) });
   const manifest = reviewManifest(read('copy/field-manifest.json'), library, result.snapshot);
-  const { errors } = validateGrid(input.approved, manifest, loadRules());
+  const { errors, warnings } = validateGrid(input.approved, manifest, loadRules());
+  for (const w of warnings) console.warn(`gallery:sync  WARNING: ${w.field}: ${w.issue}`);
   if (errors.length) throw new Error(`Approved copy failed validation before saving photo review: ${errors.map((e) => e.field + ': ' + e.issue).join('; ')}`);
   const save = (path, value) => writeFileSync(path, JSON.stringify(value, null, 2) + '\n');
   save('src/data/cdm-gallery-review.json', result.snapshot);
