@@ -1705,3 +1705,10 @@ Commit: 241a08a610297b2efad57e0f7edd21180898e7f4. Evidence: /Users/jkbrooksperso
 
 PASS: exact streamed1440 regression0.2900604167 ->0 on built repairedpage. Final liveSheet predeploy439fields/47photos/13pages passes; Astro0errors0warnings,eightgallerytests,copytests,sixwidths/lightbox/329variants pass. Threecoldmobilelocal medianLCP1452ms,maxCLS0.0759. Onlygalleryinitialvisibility changed; preservedcopy/photo/order/IDs/provenance. Gitfeaturepreview next.
 Commit: 241a08a610297b2efad57e0f7edd21180898e7f4. Evidence: /Users/jkbrookspersonal/LocalSiteBuildFiles/00_BTF_MAIN_SITE_CLOUDFLARE_ROOT/proof/2026-10-06_cdm_gallery_publish.
+
+
+## 2026-10-08T02:23:16.557352+00:00 — Home rider testimonials and nav link — BUILD_VALIDATED
+
+Feature branch feature/home-testimonials, created from origin/main ef0cf9a in a clean worktree. Files changed: src/pages/index.astro, src/data/site.ts, src/styles/global.css, src/data/approved-copy.ts, copy/fixture/fixture-rows.json, copy/field-manifest.json, docs/BTF_MV_CANONICAL_DECISIONS.md, docs/BUILD_LOG.md. Approved Site Copy Sheet: 13 rows appended (/nav/testimonials and /home-testimonials/*). Decision document updated with a 2026-10-07 entry.
+Validation: astro check 0 errors 0 warnings; astro build 13 pages; copy:verify-rendered OK 448 fields (fixture source); verify-dist 13 pages OK; copy:test 10 passed; gallery:verify PASS; gallery:test pass. Layout checked at 1280, 1024, 820, 768 and 390 px: three cards across from 1024 px, one column below, no horizontal overflow, one nav row from 768 px up (tablet link gap and padding trimmed to keep it), mobile menu opens with all seven links.
+Notes: Sheet-mode copy:validate fails on two older Sheet problems not caused by this change (duplicate /cdm-gallery/future_tour_cta, blank /resources/helpful_stuff_library_text); approved-copy.ts was generated in fixture mode and differs from origin/main only by the 12 new fields.

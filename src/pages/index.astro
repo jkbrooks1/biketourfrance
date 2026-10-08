@@ -119,6 +119,30 @@ const { hero, readyToRide, about, gallery, buttons } = COPY;
     </div>
   </section>
 
+  <section class="section testimonials" id="testimonials" aria-labelledby="testimonials-heading">
+    <div class="container">
+      <h2 id="testimonials-heading">{TEXT['/home-testimonials/heading']}</h2>
+      <ul class="testimonials__list">
+        {[1, 2, 3].map((n) => (
+          <li>
+            <figure class="testimonial">
+              <blockquote class="testimonial__quote">
+                <p>{TEXT[`/home-testimonials/quote_${n}`]}</p>
+              </blockquote>
+              <figcaption class="testimonial__source">
+                <span class="testimonial__author">{TEXT[`/home-testimonials/author_${n}`]}</span>
+                <span class="testimonial__context">{TEXT[`/home-testimonials/context_${n}`]}</span>
+              </figcaption>
+            </figure>
+          </li>
+        ))}
+      </ul>
+      <p class="testimonials__cta">
+        <a href={CONTACT_LINKS.waitlist}>{TEXT['/home-testimonials/cta']}</a>
+      </p>
+    </div>
+  </section>
+
   <section class="section section--beige" aria-labelledby="gallery-heading">
     <div class="container">
       <h2 id="gallery-heading">{gallery.heading}</h2>
