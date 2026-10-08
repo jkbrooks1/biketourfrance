@@ -2628,6 +2628,78 @@
     "codeLocation": "src/pages/cdm-photo-gallery/index.astro"
   },
   {
+    "field": "/nav/testimonials",
+    "route": "/",
+    "required": false,
+    "codeLocation": "src/data/site.ts"
+  },
+  {
+    "field": "/home-testimonials/heading",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "/home-testimonials/quote_1",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "/home-testimonials/author_1",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "/home-testimonials/context_1",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "/home-testimonials/quote_2",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "/home-testimonials/author_2",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "/home-testimonials/context_2",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "/home-testimonials/quote_3",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "/home-testimonials/author_3",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "/home-testimonials/context_3",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "/home-testimonials/cta",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
     "field": "/cdm-gallery/cdm1_7f68703ad5c23d61_caption",
     "route": "/cdm-photo-gallery/",
     "required": false,
@@ -2992,77 +3064,5 @@
     "route": "/cdm-photo-gallery/",
     "required": false,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
-  },
-  {
-    "field": "/nav/testimonials",
-    "route": "/",
-    "required": false,
-    "codeLocation": "src/data/site.ts"
-  },
-  {
-    "field": "/home-testimonials/heading",
-    "route": "/",
-    "required": true,
-    "codeLocation": "src/pages/index.astro"
-  },
-  {
-    "field": "/home-testimonials/quote_1",
-    "route": "/",
-    "required": true,
-    "codeLocation": "src/pages/index.astro"
-  },
-  {
-    "field": "/home-testimonials/author_1",
-    "route": "/",
-    "required": true,
-    "codeLocation": "src/pages/index.astro"
-  },
-  {
-    "field": "/home-testimonials/context_1",
-    "route": "/",
-    "required": true,
-    "codeLocation": "src/pages/index.astro"
-  },
-  {
-    "field": "/home-testimonials/quote_2",
-    "route": "/",
-    "required": true,
-    "codeLocation": "src/pages/index.astro"
-  },
-  {
-    "field": "/home-testimonials/author_2",
-    "route": "/",
-    "required": true,
-    "codeLocation": "src/pages/index.astro"
-  },
-  {
-    "field": "/home-testimonials/context_2",
-    "route": "/",
-    "required": true,
-    "codeLocation": "src/pages/index.astro"
-  },
-  {
-    "field": "/home-testimonials/quote_3",
-    "route": "/",
-    "required": true,
-    "codeLocation": "src/pages/index.astro"
-  },
-  {
-    "field": "/home-testimonials/author_3",
-    "route": "/",
-    "required": true,
-    "codeLocation": "src/pages/index.astro"
-  },
-  {
-    "field": "/home-testimonials/context_3",
-    "route": "/",
-    "required": true,
-    "codeLocation": "src/pages/index.astro"
-  },
-  {
-    "field": "/home-testimonials/cta",
-    "route": "/",
-    "required": true,
-    "codeLocation": "src/pages/index.astro"
   }
 ]

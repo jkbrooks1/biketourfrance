@@ -161,7 +161,7 @@
   ],
   [
     "/resources/helpful_sites_heading",
-    "Helpful Sites (from approved-copy)"
+    "Helpful Sites"
   ],
   [
     "/resources/helpful_stuff_body",
@@ -169,7 +169,7 @@
   ],
   [
     "/resources/helpful_sites_body",
-    "These are cycling and travel resources I trust for their accuracy, depth, and real-world relevance. I selected them because they provide reliable information riders use to plan better bike tours."
+    "These are cycling and travel resources I trust for their accuracy, depth, and real-world relevance. I selected them because they provide reliable information riders can use to plan better bike tours."
   ],
   [
     "/resources/helpful_stuff_library_text",
@@ -205,7 +205,7 @@
   ],
   [
     "/footer/small_commercial_bottom",
-    "Small-group, self-supported bicycle tours in France, led by John. Eat. Sleep. Roll. Repeat."
+    "Small-group, self-supported bicycle tours in France, led by me (John.) Eat. Sleep. Roll. Repeat."
   ],
   [
     "/footer/nav_explore_heading",
@@ -245,7 +245,7 @@
   ],
   [
     "/about-page/meta_description",
-    "John leads small, self-supported bicycle tours in France. Learn who he is, how the tours work, and why he plans each day in detail."
+    "John leads small, self-supported bicycle tours in France. Learn how it works and what gets prepared."
   ],
   [
     "/about-page/meta_title",
@@ -277,7 +277,7 @@
   ],
   [
     "/cdm-facts/text_7",
-    "Participants on their own from the morning. I have had many suggestions that people plan an extra day in Sète because it is a very cool Mediterranean beach town with lots of canals!"
+    "Participants on their own from the morning. I have had many suggestions that people plan an extra day in Sète because it is a very cool Mediterranean beach town with lots of canals! (Sète is sometimes called \"The Venice of France!\")"
   ],
   [
     "/cdm-facts/text_8",
@@ -397,7 +397,7 @@
   ],
   [
     "/contact-page/meta_description",
-    "Email John with questions about the 2027 Canal des Deux Mers tours, the waitlist, or planning your own bike trip in France."
+    "Email questions about the 2027 Canal des Deux Mers tours, the waitlist, or planning your own bike trip in France."
   ],
   [
     "/contact-page/meta_title",
@@ -493,7 +493,7 @@
   ],
   [
     "/photos/text_3",
-    "John and friends seated together at a table, smiling at the camera."
+    "John and participants seated together at a table, smiling at the camera."
   ],
   [
     "/photos/text_4",
@@ -525,7 +525,7 @@
   ],
   [
     "/privacy/body_2",
-    "Web servers normally record technical details of each visit, such as the page requested and the visitor IP address. This website is hosted on Cloudflare Pages, which handles those records. John does not receive a copy of them through this website."
+    "Web servers normally record technical details of each visit, such as the page requested and the visitor IP address. This website is hosted on Cloudflare Pages, which handles those records. We do not receive a copy of them through this website."
   ],
   [
     "/privacy/body_3",
@@ -537,7 +537,7 @@
   ],
   [
     "/privacy/heading_2",
-    "When you email John"
+    "When you email us"
   ],
   [
     "/privacy/heading_3",
@@ -741,7 +741,7 @@
   ],
   [
     "/tours/body_4",
-    "Want to plan your own adventure in France and only need coaching? Send me an email. I love helping fellow bike travelers plan a great trip. Materials and support for independent tours are coming soon."
+    "Want to plan your own adventure in France and only need coaching? Send me an email. I love helping fellow bike travelers plan a great trip. Materials and support for independent tours are available. Or, if you just want coaching, I'll do a 50-minute remote session with you and a couple follow-up emails. I will always schedule 15-minutes for free to meet and talk through your ideas to see if I can help. Send me an email; contact@biketourfrance.net"
   ],
   [
     "/tours/cta_1",
@@ -1073,7 +1073,7 @@
   ],
   [
     "/cdm/frag_1",
-    "Nine riding days, one rest day in Toulouse, and 11 nights, led by John"
+    "Nine riding days, one rest day in Toulouse, and 11 nights."
   ],
   [
     "/cdm/frag_2",
@@ -1197,7 +1197,7 @@
   ],
   [
     "/about-x/p_2",
-    "Email John with your questions about the 2027 tours or about planning your own trip."
+    "Email your questions about the 2027 tours or about planning your own trip."
   ],
   [
     "/canal-des-deux-mers-practical-info-x/p_1",
@@ -1205,7 +1205,7 @@
   ],
   [
     "/canal-des-deux-mers-practical-info-x/p_2",
-    "Email John and he will help you plan your arrival."
+    "Email us. We can help you plan your arrival."
   ],
   [
     "/resources-x/p_1",
@@ -1217,7 +1217,7 @@
   ],
   [
     "/resources-x/p_3",
-    "Tell John what would make planning easier and he will consider adding it."
+    "Tell me what would make planning easier. I appreciate suggestions!"
   ],
   [
     "/cdm-practical/list_1",
@@ -1421,7 +1421,7 @@
   ],
   [
     "/cdm-gallery/meta_description",
-    "Photos from two Canal des Deux Mers cycling tours along the Bordeaux-to-Sète route, grouped by location from Créon to Sète."
+    "Photos from two 2026 Canal des Deux Mers cycling tours along the Bordeaux-to-Sète route."
   ],
   [
     "/cdm-gallery/intro",
@@ -1441,7 +1441,7 @@
   ],
   [
     "/cdm-gallery-cdm1/meta_description",
-    "Photos from two Canal des Deux Mers cycling tours along the Bordeaux-to-Sète route, grouped by location from Créon to Sète."
+    "Photos from two 2026 Canal des Deux Mers cycling tours along the Bordeaux-to-Sète route."
   ],
   [
     "/cdm-gallery/cdm2_heading",
@@ -1798,5 +1798,9 @@
   [
     "/home-testimonials/cta",
     "Thinking about riding with us? Join the 2027 waitlist."
+  ],
+  [
+    "/cdm-gallery/future_tour_cta",
+    "Interested in riding the Canal des Deux Mers with us? Join the waitlist for a future BikeTourFrance trip."
   ]
 ]
