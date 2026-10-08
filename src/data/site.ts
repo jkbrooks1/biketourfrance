@@ -24,6 +24,7 @@ export const NAV = [
   { label: TEXT['/nav/home'], href: '/', match: [] as readonly string[] },
   { label: TEXT['/nav/tours'], href: '/tours/', match: ['/canal-des-deux-mers/'] as readonly string[] },
   { label: TEXT['/nav/about'], href: '/about/', match: [] as readonly string[] },
+  { label: TEXT['/nav/testimonials'], href: '/#testimonials', match: [] as readonly string[] },
   { label: TEXT['/nav/resources'], href: '/resources/', match: [] as readonly string[] },
   { label: TEXT['/nav/contact'], href: '/contact/', match: [] as readonly string[] },
   { label: TEXT['/gallery/heading'], href: '/cdm-photo-gallery/', match: [] as readonly string[] },

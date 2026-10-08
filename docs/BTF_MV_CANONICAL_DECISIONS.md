@@ -109,3 +109,18 @@ Any changes to the workflow, secrets, or branch triggers require updating this d
 ## Rollback, supersession, and future changes
 
 Use the verified preservation set and dated archive for rollback. Earlier present-tense claims that the remediation worktree was active, the wrapper was the destination, Drive was missing, or consolidation was pending are superseded. Any root, branch, Drive, GitHub, or Cloudflare change requires this decision and the system register to be updated.
+
+---
+
+## 2026-10-07 — Home page rider testimonials and Testimonials navigation link
+
+Decision, owner-directed on 2026-10-07:
+
+1. The Home page has a static section titled "What riders say" (anchor `#testimonials`). It sits immediately above the Tour Gallery section.
+2. The section shows three named past-rider testimonials, each with its route and year context: Christopher J (Atlantic France tour, 2024), Andrea B (ViaRhôna tour) and Catherine D (EV6 Loire tour, 2025). One modest call to action beneath the cards reads "Thinking about riding with us? Join the 2027 waitlist." and links to the existing 2027 waitlist destination.
+3. The main navigation includes `Testimonials`, placed after About and before Resources, and linking to `/#testimonials` so it works from every page.
+4. Static, accessible cards were chosen over a carousel. There is no slider, auto-rotation, star rating, headshot or review-platform badge.
+5. The testimonial wording, names, context lines, call-to-action text and nav label were added to the `Approved Site Copy` Sheet as 13 appended rows, field names `/nav/testimonials` and `/home-testimonials/*`, and flow through the existing approved-copy gate. The Sheet remains the only copy authority.
+6. Scope limit: this change covers testimonial content and navigation only. It does not represent a new tour offering and does not claim that these riders completed the 2027 Canal des Deux Mers tour.
+
+Operational notes: the production branch is `main` (Cloudflare Pages project `btf-production`), not the older `rebuild/2026-10-02-audit-remediation` branch named in the request. The owner approved the feature-branch, preview, then `main` merge route on 2026-10-07. The live Sheet also has two older validation problems that this change did not cause or fix: a duplicate `/cdm-gallery/future_tour_cta` row (rows 501 and 1268) and a blank `/resources/helpful_stuff_library_text`. They make `copy:validate` fail in Sheet mode and the scheduled sync fail. They need an owner decision.
