@@ -8,7 +8,7 @@ const photos = selectLibrary(library, selection);
 const locations = read('src/data/cdm-gallery-locations.json');
 assert.equal(locations.photos.length, photos.length);
 assert.equal(locations.photos.filter((p) => p.basis === 'GPS').length, 39);
-assert.equal(locations.photos.filter((p) => p.estimated).length, 10);
+assert.equal(locations.photos.filter((p) => p.estimated).length, 14);
 let lastGroup = 0;
 for (const photo of photos) {
   const location = locations.photos.find((p) => p.id === photo.id);

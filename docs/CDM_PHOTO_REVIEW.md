@@ -18,6 +18,10 @@ Order is GPS municipality from west to east, combining photos from both tours at
 
 Earlier CDM1/CDM2 review tabs remain hidden with their prior owner decisions intact. Their snapshot included 40 checked CDM1 photos and nine checked CDM2 photos. The new authoritative folder selection starts all 49 eligible photos checked and Delete? blank, as requested; it supersedes earlier exclusions only for this new active gallery. No old rows were discarded.
 
+## Additional source (2026-10-15)
+
+The owner authorized four photos from `/Volumes/JB_Tier2Storage/CDM2-green-dan` (IMG_2698.jpg, IMG_2711.jpg, IMG_2898.jpg, IMG_2976.jpg). They are managed originals in `src/assets/cdm-gallery/cdm2dan/`, appear in the review tab at their editorial rows, and use Estimated dates, Photo IDs and locations (Low confidence) because the supplied exports hold no EXIF or GPS. The library now has 65 photos, 53 eligible and 51 visible (two remain Delete?=Y). Good_John_Pic_CDM.jpg is not part of the gallery. Evidence: `docs/proof/2026-10-15_cdm_gallery_four_photos/`.
+
 ## Activation and build
 
 The Sheet controls and the 47-photo editorial build are tested. Activation follows the owner-approved feature preview and normal main merge. See ../../proof/2026-10-06_cdm_gallery_publish/REPORT.md for the actual publication SHA and host verification; a local build alone does not activate Sheet controls.

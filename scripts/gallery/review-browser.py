@@ -44,7 +44,7 @@ with sync_playwright() as p:
         page.close()
     page = browser.new_page()
     thumbs = page.request.get(base + '/cdm-photo-gallery/review-thumbnails.json').json()['photos']
-    assert len(thumbs) == 61
+    assert len(thumbs) == 65
     for thumb in thumbs:
         assert page.request.get(base + thumb['thumbnail']).status == 200
         report['thumbnailLinks'] += 1

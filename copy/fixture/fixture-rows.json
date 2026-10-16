@@ -385,7 +385,7 @@
   ],
   [
     "/contact-page/body_2",
-    "This website does not have an online sign-up form yet. To hear about exact 2027 dates and pricing when they are announced, sign up for the free waitlist."
+    "Looking for our upcoming tours? Please use the 2027 Tours Waitlist form to get notified when dates are finalized."
   ],
   [
     "/contact-page/heading_2",
@@ -409,7 +409,7 @@
   ],
   [
     "/cookies/body_2",
-    "This website's code does not set cookies, and it runs no analytics, advertising, or social-media tracking tools. Because of that, it shows no cookie banner and asks for no consent."
+    "We use basic, essential cookies to ensure our website functions correctly and securely. We do not use invasive third-party tracking cookies, bot-tracking scripts (like reCAPTCHA), or cross-site advertising pixels. By using our site, you consent to these essential functional cookies."
   ],
   [
     "/cookies/body_3",
@@ -521,7 +521,7 @@
   ],
   [
     "/privacy/body_1",
-    "This page describes what this website does today. Last updated October 2, 2026."
+    "When you join a waitlist or request free resources from BikeTourFrance, we collect your name, email address, and tour preferences. By submitting these forms, you consent to receive the requested materials as well as occasional email updates about our tours, route guides, and services. We respect your inbox and never sell your personal data to third parties."
   ],
   [
     "/privacy/body_2",
@@ -785,7 +785,7 @@
   ],
   [
     "/waitlist/body_3",
-    "Thank you for joining the 2027 waitlist. A confirmation email is on its way. If you don't see it within a few minutes, check your spam folder."
+    "Thank you for joining! You are officially on the waitlist for our 2027 tours. We've sent a confirmation email to your inbox—you'll hear from us as soon as dates and details are finalized."
   ],
   [
     "/waitlist/cta_1",
@@ -1113,7 +1113,7 @@
   ],
   [
     "/contact-page/frag_6",
-    "Each link opens a form you can fill in. You can also just send us an email directly at contact@biketourfrance.net"
+    "For all other inquiries, custom planning requests, or to unsubscribe and manage your data, please email John at john@biketourfrance.net."
   ],
   [
     "/contact-page/frag_7",
@@ -1800,7 +1800,31 @@
     "Thinking about riding with us? Join the 2027 waitlist."
   ],
   [
+    "/cdm-gallery/cdm2dan_50c84e427dc99278_alt",
+    "Two cyclists with panniers ride away along a shaded paved path beside a calm canal, with wooded hills ahead."
+  ],
+  [
+    "/cdm-gallery/cdm2dan_4c9ae1f2b13ee98a_alt",
+    "A long brick bridge with round arches crosses a wide river at dusk under a pink and blue sky, with a gravel path in the foreground."
+  ],
+  [
+    "/cdm-gallery/cdm2dan_b982400b33e70790_alt",
+    "A smiling cyclist in a helmet and sunglasses takes a selfie on a gravel path while two riders with luggage approach behind, beside a dry hillside."
+  ],
+  [
+    "/cdm-gallery/cdm2dan_45b25f0ec88210c6_alt",
+    "Four cyclists with loaded touring bikes pause beside a country road near a stone cross and vineyards."
+  ],
+  [
     "/cdm-gallery/future_tour_cta",
     "Interested in riding the Canal des Deux Mers with us? Join the waitlist for a future BikeTourFrance trip."
+  ],
+  [
+    "/waitlist/duplicate_state",
+    "We may have gotten your information twice, but we'll make sure we have you down regardless. Thanks for signing up for more information!"
+  ],
+  [
+    "/privacy/data_retention",
+    "We retain your consent records and personal data only for as long as you wish to remain on our list. You can withdraw your consent and request data deletion at any time by replying 'Unsubscribe' to any of our emails, or by contacting us directly."
   ]
 ]

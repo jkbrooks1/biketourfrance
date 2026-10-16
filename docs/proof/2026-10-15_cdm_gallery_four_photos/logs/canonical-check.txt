@@ -1,0 +1,5 @@
+
+> btf-migration@0.1.0 canonical:check
+> node scripts/assert-canonical-root.mjs
+
+canonical-root: PASS (native-astro)

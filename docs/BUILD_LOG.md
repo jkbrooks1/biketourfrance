@@ -1765,3 +1765,11 @@ Sheet write: Drive modifiedTime before write 2026-10-08T03:22:19.625Z (owner's m
 Repo: copy/fixture/fixture-rows.json 2 rows changed (meta_description, t_8); src/data/approved-copy.ts 4 lines (the same two fields, COPY and TEXT). Rendered /canal-des-deux-mers/ contains Meilhan-sur-Garonne and no La Réole; La Réole remains only in dist/resources/ (audio titles) and dist/cdm-photo-gallery/ (photo alt).
 Validation (fixture mode): astro check 0; astro build 0; copy:verify-rendered OK 448 fields; gallery:verify PASS; node scripts/verify-dist.mjs 13 pages OK; copy:test 11 passed; gallery:test pass.
 Note: 16 other Sheet fields differ from committed copy and are NOT in this release; the hourly scheduled sync will ingest them once it can run.
+
+## 2026-10-16T09:38:16+00:00 — BTF-GALLERY-PUBLISH-202610150806 — IMPLEMENTED_PRE_MERGE
+
+Owner-authorized (chat 2026-10-15/16): add IMG_2698, IMG_2711, IMG_2898, IMG_2976 from /Volumes/JB_Tier2Storage/CDM2-green-dan to the combined /cdm-photo-gallery/ (collection key cdm2dan). The one other file in that folder is reserved for a separate task and is not used. Prior planning run BTF-GALLERY-PLAN-202610142203.
+Owner chose "everything": the production build also takes the Sheet's other pending copy (contact-page/body_2 and frag_6, cookies/body_2, privacy/body_1, waitlist/body_3) plus two unrouted LMS fields (/waitlist/duplicate_state, /privacy/data_retention) registered in copy/field-manifest.json with route null, required false.
+Dates and places are Estimated, Low confidence (no EXIF or GPS). Gallery: 53 reviewed, 51 shown, 65 permanent IDs. Worktree branch feature/cdm-gallery-four-photos-20261015 from origin/main 4c0f148. Sheet BTF_Approved_Site_Copy: 4 rows added to CDM Photo Review; Approved Site Copy rows 515-522 added.
+Validation: canonical check, astro check 0 errors, verify-dist 13 pages, copy:test 11/11, gallery:test, gallery:verify, browser checks (6 widths plus lightbox), live-Sheet pipeline all pass; predeploy blocked only by local BTF_DEPLOY_ENV (expected).
+Evidence: docs/proof/2026-10-15_cdm_gallery_four_photos/

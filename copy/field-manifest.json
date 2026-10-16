@@ -2700,6 +2700,42 @@
     "codeLocation": "src/pages/index.astro"
   },
   {
+    "field": "/cdm-gallery/cdm2dan_50c84e427dc99278_alt",
+    "route": "/cdm-photo-gallery/",
+    "required": true,
+    "codeLocation": "src/data/cdm-photo-gallery.ts"
+  },
+  {
+    "field": "/cdm-gallery/cdm2dan_4c9ae1f2b13ee98a_alt",
+    "route": "/cdm-photo-gallery/",
+    "required": true,
+    "codeLocation": "src/data/cdm-photo-gallery.ts"
+  },
+  {
+    "field": "/cdm-gallery/cdm2dan_b982400b33e70790_alt",
+    "route": "/cdm-photo-gallery/",
+    "required": true,
+    "codeLocation": "src/data/cdm-photo-gallery.ts"
+  },
+  {
+    "field": "/cdm-gallery/cdm2dan_45b25f0ec88210c6_alt",
+    "route": "/cdm-photo-gallery/",
+    "required": true,
+    "codeLocation": "src/data/cdm-photo-gallery.ts"
+  },
+  {
+    "field": "/waitlist/duplicate_state",
+    "route": null,
+    "required": false,
+    "codeLocation": "src/pages/waitlist-2027.astro"
+  },
+  {
+    "field": "/privacy/data_retention",
+    "route": null,
+    "required": false,
+    "codeLocation": "src/pages/privacy/index.astro"
+  },
+  {
     "field": "/cdm-gallery/cdm1_7f68703ad5c23d61_caption",
     "route": "/cdm-photo-gallery/",
     "required": false,
@@ -3061,6 +3097,30 @@
   },
   {
     "field": "/cdm-gallery/cdm2_8cdc758cbed56a24_caption",
+    "route": "/cdm-photo-gallery/",
+    "required": false,
+    "codeLocation": "src/data/cdm-photo-gallery.ts"
+  },
+  {
+    "field": "/cdm-gallery/cdm2dan_50c84e427dc99278_caption",
+    "route": "/cdm-photo-gallery/",
+    "required": false,
+    "codeLocation": "src/data/cdm-photo-gallery.ts"
+  },
+  {
+    "field": "/cdm-gallery/cdm2dan_4c9ae1f2b13ee98a_caption",
+    "route": "/cdm-photo-gallery/",
+    "required": false,
+    "codeLocation": "src/data/cdm-photo-gallery.ts"
+  },
+  {
+    "field": "/cdm-gallery/cdm2dan_b982400b33e70790_caption",
+    "route": "/cdm-photo-gallery/",
+    "required": false,
+    "codeLocation": "src/data/cdm-photo-gallery.ts"
+  },
+  {
+    "field": "/cdm-gallery/cdm2dan_45b25f0ec88210c6_caption",
     "route": "/cdm-photo-gallery/",
     "required": false,
     "codeLocation": "src/data/cdm-photo-gallery.ts"

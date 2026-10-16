@@ -16,7 +16,9 @@ from PIL import Image, ImageOps
 ROOT = Path(__file__).resolve().parents[2]
 PROOF = ROOT / 'docs/proof/2026-10-05_cdm_photo_gallery'
 EXTENSIONS = {'.jpg', '.jpeg', '.png', '.webp', '.avif', '.gif', '.tif', '.tiff', '.heic', '.heif', '.bmp'}
-COLLECTIONS = [('cdm1', Path('/Volumes/JB_Tier2Storage/CDM1-green')), ('cdm2', Path('/Volumes/JB_Tier2Storage/CDM2-green'))]
+COLLECTIONS = [('cdm1', Path('/Volumes/JB_Tier2Storage/CDM1-green')), ('cdm2', Path('/Volumes/JB_Tier2Storage/CDM2-green')), ('cdm2dan', Path('/Volumes/JB_Tier2Storage/CDM2-green-dan'))]
+# Owner-authorized additional source (2026-10-15): only these files are gallery photos; Good_John_Pic_CDM.jpg is reserved for the About John task.
+ALLOWED_FILES = {'cdm2dan': {'IMG_2698.jpg', 'IMG_2711.jpg', 'IMG_2898.jpg', 'IMG_2976.jpg'}}
 
 
 def main():
@@ -30,7 +32,7 @@ def main():
     for collection, folder in COLLECTIONS:
         if not folder.is_dir() or not os.access(folder, os.R_OK | os.X_OK):
             raise RuntimeError(f'Source folder unavailable or unreadable: {folder}')
-        files = sorted((p for p in folder.rglob('*') if p.is_file()), key=lambda p: (str(p.relative_to(folder)).casefold(), str(p.relative_to(folder))))
+        files = sorted((p for p in folder.rglob('*') if p.is_file() and (collection not in ALLOWED_FILES or p.name in ALLOWED_FILES[collection])), key=lambda p: (str(p.relative_to(folder)).casefold(), str(p.relative_to(folder))))
         record = {'collection': collection, 'folder': str(folder), 'readable': True, 'totalFiles': len(files), 'totalBytes': sum(p.stat().st_size for p in files), 'supportedByExtension': dict(Counter(p.suffix.lower() for p in files if p.suffix.lower() in EXTENSIONS)), 'unsupported': [], 'corruptOrUnreadable': [], 'images': []}
         for path in files:
             if path.suffix.lower() not in EXTENSIONS:

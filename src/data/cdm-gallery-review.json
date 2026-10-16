@@ -210,6 +210,19 @@
       "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
+      "id": "cdm2dan-50c84e427dc99278",
+      "photoId": "2026091406EST",
+      "captureDate": "2026-09-14",
+      "dateSource": "Estimated from photo series",
+      "estimated": true,
+      "confidence": "Low",
+      "dateEvidence": "No capture date in the supplied 2048x1536 export (no EXIF block; XMP holds only pick labels). Estimated 2026-09-14: camera frame IMG_2698 is 13 frames before IMG_2711, so likely the same day; the second tour is GPS-dated at Moissac on 2026-09-14 (IMG_4651, IMG_4652, IMG_4658); the teal bike matches IMG_4633 and IMG_4634. Not a confirmed timestamp.",
+      "keep": true,
+      "deleted": false,
+      "captionField": "/cdm-gallery/cdm2dan_50c84e427dc99278_caption",
+      "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "cdm1-8984f3682ed07c89",
       "photoId": "2026090202EST",
       "captureDate": "2026-09-02",
@@ -220,6 +233,19 @@
       "keep": true,
       "deleted": false,
       "captionField": "/cdm-gallery/cdm1_8984f3682ed07c89_caption",
+      "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "cdm2dan-4c9ae1f2b13ee98a",
+      "photoId": "2026091407EST",
+      "captureDate": "2026-09-14",
+      "dateSource": "Estimated from photo series",
+      "estimated": true,
+      "confidence": "Low",
+      "dateEvidence": "No capture date in the supplied 2048x1536 export (no EXIF block; XMP holds only pick labels). Estimated 2026-09-14: same Moissac stop as GPS-dated IMG_4651, IMG_4652 and IMG_4658 (2026-09-14) and 13 camera frames after IMG_2698. Not a confirmed timestamp.",
+      "keep": true,
+      "deleted": false,
+      "captionField": "/cdm-gallery/cdm2dan_4c9ae1f2b13ee98a_caption",
       "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
@@ -571,6 +597,32 @@
       "keep": true,
       "deleted": false,
       "captionField": "/cdm-gallery/cdm2_283bc34f8bd482dd_caption",
+      "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "cdm2dan-b982400b33e70790",
+      "photoId": "2026092005EST",
+      "captureDate": "2026-09-20",
+      "dateSource": "Estimated from photo series",
+      "estimated": true,
+      "confidence": "Low",
+      "dateEvidence": "No capture date in the supplied 2048x1536 export (no EXIF block; XMP holds only pick labels). Estimated 2026-09-20: gravel path, reeds and dry scrub match GPS-dated IMG_4785.JPG (2026-09-20); same riders and teal bike as second-tour photos. Not a confirmed timestamp.",
+      "keep": true,
+      "deleted": false,
+      "captionField": "/cdm-gallery/cdm2dan_b982400b33e70790_caption",
+      "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "cdm2dan-45b25f0ec88210c6",
+      "photoId": "2026092006EST",
+      "captureDate": "2026-09-20",
+      "dateSource": "Estimated from photo series",
+      "estimated": true,
+      "confidence": "Low",
+      "dateEvidence": "No capture date in the supplied 2048x1536 export (no EXIF block; XMP holds only pick labels). Estimated 2026-09-20: same riders as IMG_2898.jpg, 78 camera frames later; assumed the same ride day as the neighboring series. Not a confirmed timestamp.",
+      "keep": true,
+      "deleted": false,
+      "captionField": "/cdm-gallery/cdm2dan_45b25f0ec88210c6_caption",
       "captionHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {

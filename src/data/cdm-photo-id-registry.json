@@ -549,6 +549,42 @@
       "estimated": false,
       "confidence": "Metadata",
       "dateEvidence": "EXIF DateTimeOriginal retained in managed original; date extracted without altering source metadata."
+    },
+    {
+      "id": "cdm2dan-50c84e427dc99278",
+      "photoId": "2026091406EST",
+      "captureDate": "2026-09-14",
+      "dateSource": "Estimated from photo series",
+      "estimated": true,
+      "confidence": "Low",
+      "dateEvidence": "No capture date in the supplied 2048x1536 export (no EXIF block; XMP holds only pick labels). Estimated 2026-09-14: camera frame IMG_2698 is 13 frames before IMG_2711, so likely the same day; the second tour is GPS-dated at Moissac on 2026-09-14 (IMG_4651, IMG_4652, IMG_4658); the teal bike matches IMG_4633 and IMG_4634. Not a confirmed timestamp."
+    },
+    {
+      "id": "cdm2dan-4c9ae1f2b13ee98a",
+      "photoId": "2026091407EST",
+      "captureDate": "2026-09-14",
+      "dateSource": "Estimated from photo series",
+      "estimated": true,
+      "confidence": "Low",
+      "dateEvidence": "No capture date in the supplied 2048x1536 export (no EXIF block; XMP holds only pick labels). Estimated 2026-09-14: same Moissac stop as GPS-dated IMG_4651, IMG_4652 and IMG_4658 (2026-09-14) and 13 camera frames after IMG_2698. Not a confirmed timestamp."
+    },
+    {
+      "id": "cdm2dan-b982400b33e70790",
+      "photoId": "2026092005EST",
+      "captureDate": "2026-09-20",
+      "dateSource": "Estimated from photo series",
+      "estimated": true,
+      "confidence": "Low",
+      "dateEvidence": "No capture date in the supplied 2048x1536 export (no EXIF block; XMP holds only pick labels). Estimated 2026-09-20: gravel path, reeds and dry scrub match GPS-dated IMG_4785.JPG (2026-09-20); same riders and teal bike as second-tour photos. Not a confirmed timestamp."
+    },
+    {
+      "id": "cdm2dan-45b25f0ec88210c6",
+      "photoId": "2026092006EST",
+      "captureDate": "2026-09-20",
+      "dateSource": "Estimated from photo series",
+      "estimated": true,
+      "confidence": "Low",
+      "dateEvidence": "No capture date in the supplied 2048x1536 export (no EXIF block; XMP holds only pick labels). Estimated 2026-09-20: same riders as IMG_2898.jpg, 78 camera frames later; assumed the same ride day as the neighboring series. Not a confirmed timestamp."
     }
   ]
 }
