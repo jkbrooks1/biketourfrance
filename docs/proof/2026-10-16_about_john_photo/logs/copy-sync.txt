@@ -1,0 +1,22 @@
+
+> btf-migration@0.1.0 gallery:sync
+> node scripts/gallery/sync-review.mjs
+
+gallery:sync  WARNING: /cdm-gallery/future_tour_cta: identical duplicate field name (rows 501 and 1268); first row kept
+gallery:sync PASS (sheet): 51/53 shown; 2 marked Delete?=Y; captions never control inclusion; 65 permanent IDs retained
+
+> btf-migration@0.1.0 copy:sync
+> node scripts/copy/sync.mjs
+
+copy:sync  read "BTF_Approved_Site_Copy" (tab "Approved Site Copy"), 1269 data rows
+
+> btf-migration@0.1.0 copy:validate
+> node scripts/copy/validate.mjs
+
+copy:validate  WARNING: /cdm-gallery/future_tour_cta: identical duplicate field name (rows 501 and 1268); first row kept
+copy:validate  OK: 456 fields from sheet
+
+> btf-migration@0.1.0 copy:generate-ts
+> node scripts/copy/generate-ts.mjs
+
+copy:generate-ts  OK: 47 fields + 1 list(s) -> /private/tmp/btf-gallery-publish-20261015/src/data/approved-copy.ts

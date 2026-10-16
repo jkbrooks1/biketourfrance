@@ -400,7 +400,7 @@ export const TEXT: Record<string, string> = {
   "/photos/text_19": "Illustration of a panda arriving at Bordeaux Airport with a bike case and a backpack.",
   "/photos/text_2": "Five riders in cycling jerseys sharing coffee at a café table.",
   "/photos/text_20": "Illustration of a panda in an orange scarf standing beside a loaded touring bike, with the words BikeTourFrance.net.",
-  "/photos/text_3": "John and participants seated together at a table, smiling at the camera.",
+  "/photos/text_3": "John in an orange cycling jersey, helmet and tinted glasses smiles and points to a road sign that reads le canal des deux mers, with trees and a road behind.",
   "/photos/text_4": "Two loaded touring bikes parked in front of a wooden building with a sign reading \"Créon fête le vélo\".",
   "/photos/text_5": "Two green signs for the Canal du Midi cycle route, one pointing left and one pointing right.",
   "/photos/text_6": "Canal du Midi route signs",
