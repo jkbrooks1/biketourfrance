@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/private/tmp/btf-gallery-publish-20261015/scripts/gallery/review-browser.py", line 22, in <module>
+    assert tiles.count() == 48
+           ^^^^^^^^^^^^^^^^^^^
+AssertionError

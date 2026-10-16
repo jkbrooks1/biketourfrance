@@ -1,0 +1,17 @@
+{
+  "routes": [
+    {
+      "route": "/cdm-photo-gallery/",
+      "renderedImages": 51
+    }
+  ],
+  "eligibleImages": 53,
+  "retainedLibraryImages": 65,
+  "excludedDuplicates": 0,
+  "sourceImagesVerifiedUnchanged": 53,
+  "variantsChecked": 357,
+  "largestDeliveredImageBytes": 306276,
+  "managedOriginalBytes": 216815645,
+  "pagesFileCount": 544,
+  "pagesBytes": 56888180
+}

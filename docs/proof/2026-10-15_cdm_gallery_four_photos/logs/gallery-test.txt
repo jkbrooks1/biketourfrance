@@ -1,0 +1,20 @@
+
+> btf-migration@0.1.0 gallery:test
+> node --test scripts/gallery/review.test.mjs
+
+✔ 53 folder photos with blank captions; all 65 permanent IDs stay reserved (5.606959ms)
+✔ Delete?=Y overrides Keep and caption; blank/N restores without renumbering IDs (16.918ms)
+✔ unchecked Keep excludes regardless of caption; caption linkage is checked (1.910708ms)
+✔ missing/duplicate/outside-folder/reordered/nonboolean rows and invalid Delete? fail closed (6.084417ms)
+✔ assigned dates/IDs immutable; EST suffix and unique bases enforced (1.827625ms)
+✔ date allocation stops at 99 rather than expanding ten-digit base (0.837417ms)
+✔ all eligible photos may be Y; registry and originals remain retained (0.977167ms)
+✔ selection rejects changed hashes, duplicate assets and unstable order (0.35025ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 87.744625

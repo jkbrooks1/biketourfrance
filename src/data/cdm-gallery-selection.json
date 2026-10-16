@@ -148,13 +148,31 @@
       "order": 16
     },
     {
+      "id": "cdm2dan-50c84e427dc99278",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM2-green-dan/IMG_2698.jpg",
+      "sourceFilename": "IMG_2698.jpg",
+      "sha256": "50c84e427dc99278dbadc0423b4cb8c4b4da706ab3f90b00bf386699e050d45e",
+      "pixelSha256": "2219014f752a07370775b9218cc8b71dd8b4208fd8e73b96aaab677d1e7dffec",
+      "locationGroup": "moissac",
+      "order": 17
+    },
+    {
       "id": "cdm1-8984f3682ed07c89",
       "sourcePath": "/Volumes/JB_Tier2Storage/CDM1and2/IMG_6143.jpeg",
       "sourceFilename": "IMG_6143.jpeg",
       "sha256": "8984f3682ed07c895105ef2b5d409dfd05cb9fa9958b16ee654f9d9c4ee8aadc",
       "pixelSha256": "ab3fd1467ddf9e3b6a2b8b199116718f428fabcc0dc8d4d298c302280523b719",
       "locationGroup": "moissac",
-      "order": 17
+      "order": 18
+    },
+    {
+      "id": "cdm2dan-4c9ae1f2b13ee98a",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM2-green-dan/IMG_2711.jpg",
+      "sourceFilename": "IMG_2711.jpg",
+      "sha256": "4c9ae1f2b13ee98a4f391d3367df25e4d11b8e082e1b8b83cc2623cfb694df91",
+      "pixelSha256": "0c157879ba05155963695f8b6836309b3c4ee8e651dbf8b11375a268487355d8",
+      "locationGroup": "moissac",
+      "order": 19
     },
     {
       "id": "cdm1-939d5b94d4ee4664",
@@ -163,7 +181,7 @@
       "sha256": "939d5b94d4ee466468c7136c33936cff0e45f427dbf047bfb06783b32f367d98",
       "pixelSha256": "d3e3dc004ea88215e5720703d01a4ce7df02dd9b749db2739abaa5ce367326f9",
       "locationGroup": "moissac",
-      "order": 18
+      "order": 20
     },
     {
       "id": "cdm1-15a6b1ce00490898",
@@ -172,7 +190,7 @@
       "sha256": "15a6b1ce00490898fa4e0d080c4b0b666705f89815fededaed12a4474cd71e2a",
       "pixelSha256": "fef80f489200fd6926764091faf396e23b3fadb65e69b5954344bbfd7d3938e6",
       "locationGroup": "moissac",
-      "order": 19
+      "order": 21
     },
     {
       "id": "cdm1-28bda3c5ac7d2051",
@@ -181,7 +199,7 @@
       "sha256": "28bda3c5ac7d2051c7df56928e8b8c7fdf45d017af637ee28ce7ead2379887e3",
       "pixelSha256": "c89849120696112824ec466658f0071f3626881748e16445e79b23d604a7f7a9",
       "locationGroup": "moissac",
-      "order": 20
+      "order": 22
     },
     {
       "id": "cdm1-3e2f93340b82df4e",
@@ -190,7 +208,7 @@
       "sha256": "3e2f93340b82df4e0f67d8018d50fd9025b58977126423b37ac01eba5755e8fa",
       "pixelSha256": "7176c34e9bec38bfd15cea715377199ae762fff17eb37ed64b259f59f91538c6",
       "locationGroup": "moissac",
-      "order": 21
+      "order": 23
     },
     {
       "id": "cdm1-57ff5e48ef8d95a0",
@@ -199,7 +217,7 @@
       "sha256": "57ff5e48ef8d95a02f3ac90934e50eeb7b96d3e792b98496f0aeacf4da0ed76c",
       "pixelSha256": "43800711e4666462688c3b705aaeca86e6e7781c5d96d031baabd5f0db2da4df",
       "locationGroup": "moissac",
-      "order": 22
+      "order": 24
     },
     {
       "id": "cdm1-367a2fa64cdb80f8",
@@ -208,7 +226,7 @@
       "sha256": "367a2fa64cdb80f8e978f94b6b0db791c1ecc4034d1b6614baea352ac23452a8",
       "pixelSha256": "7c80fc5a27210b58bd10e610b348c391ba588ffd4a922f9e59d825c8539664f4",
       "locationGroup": "saint-porquier",
-      "order": 23
+      "order": 25
     },
     {
       "id": "cdm1-7734acb3db643db5",
@@ -217,7 +235,7 @@
       "sha256": "7734acb3db643db53fb937a1c6223a417386e94eb531c5e8e796d38d28da22d9",
       "pixelSha256": "2848107058f8da5fb036e606fea5e9c6c14f8e384bb505c9f98ab56d14eeffe0",
       "locationGroup": "montech",
-      "order": 24
+      "order": 26
     },
     {
       "id": "cdm1-366244b380b9f863",
@@ -226,7 +244,7 @@
       "sha256": "366244b380b9f8634af8e55ad4d55a9be0b8fe792299b98533fcdfce2e1ad119",
       "pixelSha256": "767d78e77756710dedf207dd775b7b0d2ce810d2df33b588d8fabbc5b4f158fb",
       "locationGroup": "montech",
-      "order": 25
+      "order": 27
     },
     {
       "id": "cdm1-c6dfb4f9a289ce35",
@@ -235,7 +253,7 @@
       "sha256": "c6dfb4f9a289ce3561372821966830b47d15a1ce743bd8561308d980e13af514",
       "pixelSha256": "df3ccf31e1e6f05d69ce20461641058da0b1eafa6083d653f4a16cd4a7a120f8",
       "locationGroup": "toulouse",
-      "order": 26
+      "order": 28
     },
     {
       "id": "cdm1-92a476a59d024ec7",
@@ -244,7 +262,7 @@
       "sha256": "92a476a59d024ec79bb8248ff97f2a0355fbb61ba1d9bfac0bf9b9314adbc305",
       "pixelSha256": "43a540905adcee0025ba217259984cbd843dc470ea047221c581698f9d36885b",
       "locationGroup": "toulouse",
-      "order": 27
+      "order": 29
     },
     {
       "id": "cdm2-3de0edcfd0ab9c8a",
@@ -253,7 +271,7 @@
       "sha256": "3de0edcfd0ab9c8ac758fe1589d104a85fcd12c054c48bfbab9e0dd77d779d11",
       "pixelSha256": "3f9abaa8f23e21baf65fc38b74cf66c55e234d619da87c3516c8866ea5332672",
       "locationGroup": "toulouse",
-      "order": 28
+      "order": 30
     },
     {
       "id": "cdm2-fd8524c6b040e469",
@@ -262,7 +280,7 @@
       "sha256": "fd8524c6b040e4698421e7702b5b40960c20873e70351b553dd0a6e06198e11b",
       "pixelSha256": "97576c5143f79b5326698fc8fb745361877a8db4476cff585b5eecfaf1216959",
       "locationGroup": "toulouse",
-      "order": 29
+      "order": 31
     },
     {
       "id": "cdm1-15733cee3f1e0b5a",
@@ -271,7 +289,7 @@
       "sha256": "15733cee3f1e0b5a6103745ad34f1d005f9aff503a94c503e8c47c1550411fd0",
       "pixelSha256": "509be06cb408559fadba57642d30a1ecfe19bcbd6ae2d5e7bcb5a16d746e7bdb",
       "locationGroup": "ayguesvives",
-      "order": 30
+      "order": 32
     },
     {
       "id": "cdm1-e9e6586e51dfe82a",
@@ -280,7 +298,7 @@
       "sha256": "e9e6586e51dfe82a0d278e9af99de036894f02bb6255ba46a699812a34a5800b",
       "pixelSha256": "7ac5989f0f71d8fa30944f6a22e7ff794300ab9ad20d2a14bbee5f01d749802a",
       "locationGroup": "vieillevigne",
-      "order": 31
+      "order": 33
     },
     {
       "id": "cdm1-64137856b3da7e83",
@@ -289,7 +307,7 @@
       "sha256": "64137856b3da7e83a1a0231cc8b416c9407e5a6c1a1941857c16c7a437cdf07f",
       "pixelSha256": "681d21682dca6ac007f81f37cab7aa89eec24ebe5fe92de0f050f3b5bb8edd09",
       "locationGroup": "vieillevigne",
-      "order": 32
+      "order": 34
     },
     {
       "id": "cdm1-a6c8e23da1df5477",
@@ -298,7 +316,7 @@
       "sha256": "a6c8e23da1df5477bcdf70f011c605b6ca65f64ddbb04206d345eb987b699d9e",
       "pixelSha256": "36f0a20ff3f2cc84741cb2af3056d91e1d7d63e24d45a4f3bbd292bcd475473a",
       "locationGroup": "castelnaudary",
-      "order": 33
+      "order": 35
     },
     {
       "id": "cdm1-e7d4c77b88559971",
@@ -307,7 +325,7 @@
       "sha256": "e7d4c77b88559971348f1bd12d83b050f6532b4a3a340d9d75448086ad9d3f88",
       "pixelSha256": "03f70a5cc8fc4535e1e137869d6d02698140b236bbd7e0095f112093350fcf30",
       "locationGroup": "castelnaudary",
-      "order": 34
+      "order": 36
     },
     {
       "id": "cdm1-447621a90188ae9f",
@@ -316,7 +334,7 @@
       "sha256": "447621a90188ae9f869786f78bb3918e1a7b949bc826a38a6903bbb89ee3731a",
       "pixelSha256": "b3e6082cc1215eb5e9646e200184519b290ae55270273188a83bfe3e3ce78fb3",
       "locationGroup": "pexiora",
-      "order": 35
+      "order": 37
     },
     {
       "id": "cdm1-07dbf791aa3f701d",
@@ -325,7 +343,7 @@
       "sha256": "07dbf791aa3f701dcbc0fbb6a43bb02fc15c4fb9b8f31141eb3fadd862427b89",
       "pixelSha256": "1da9addf5f7e1319f13b2abc89ef11015e673e71587f545f8ee28490f3d39992",
       "locationGroup": "montreal",
-      "order": 36
+      "order": 38
     },
     {
       "id": "cdm1-14c70267e3e8d32d",
@@ -334,7 +352,7 @@
       "sha256": "14c70267e3e8d32d39b5efa529495e2c2e678af3b51fcea271b7a9112b9ad7df",
       "pixelSha256": "5bc907f592be5c57dd38c1b06ed68e287d9255cb7e439a9076c25d7eaf428e86",
       "locationGroup": "carcassonne",
-      "order": 37
+      "order": 39
     },
     {
       "id": "cdm1-46de05ddac2c6592",
@@ -343,7 +361,7 @@
       "sha256": "46de05ddac2c6592f413ef483f7cfaec419cf57bde0b5f798aed32470ef1b64f",
       "pixelSha256": "4e7863ac455f1b5127f4ef5828a78d72f769582ac15d7785a94deb7a7b014422",
       "locationGroup": "carcassonne",
-      "order": 38
+      "order": 40
     },
     {
       "id": "cdm1-fbe9c36d2b2693a7",
@@ -352,7 +370,7 @@
       "sha256": "fbe9c36d2b2693a75e74c1ddd2e0ea0a89b8010ce58afcfb1effc960524466e0",
       "pixelSha256": "b8fc76a611657e6ec41dc195a043f04c6f4b5fb54812a4e14101d05056219633",
       "locationGroup": "carcassonne",
-      "order": 39
+      "order": 41
     },
     {
       "id": "cdm1-d3f76238429211af",
@@ -361,7 +379,7 @@
       "sha256": "d3f76238429211afe1db092e740060f370a5f8d2764e77668fdb6d23568982a4",
       "pixelSha256": "d037a5ebf8c5626bf3afe1093657bbf9f76a80d834234c1ca1e8b0c0703e8944",
       "locationGroup": "la-redorte",
-      "order": 40
+      "order": 42
     },
     {
       "id": "cdm1-c90a305ef39c58c4",
@@ -370,7 +388,7 @@
       "sha256": "c90a305ef39c58c4717130b6deed7ee45b8084172726c23c9f9a83dd6daf303b",
       "pixelSha256": "782f07955a0ad4b7adc95ae47b7c91c747870048dc7f71f66ed45987f7ecc9e9",
       "locationGroup": "paraza",
-      "order": 41
+      "order": 43
     },
     {
       "id": "cdm1-1b40eb892c1fc67b",
@@ -379,7 +397,7 @@
       "sha256": "1b40eb892c1fc67b99224ad8962a5e851b962539f93f3922522452c114d19f45",
       "pixelSha256": "0505c5119caaad68730a4712361756e90e3d0209db783b9da9cee2d1cf298513",
       "locationGroup": "paraza",
-      "order": 42
+      "order": 44
     },
     {
       "id": "cdm1-da279a6021ecb20f",
@@ -388,7 +406,7 @@
       "sha256": "da279a6021ecb20f7cd92a2089864611e33f371dd3d7b453de66ef265a6e3162",
       "pixelSha256": "c978a05cc3b9d2451bbf6101b0d94d2944d346893a26b41baba3f8a95acb0e25",
       "locationGroup": "salleles-d-aude",
-      "order": 43
+      "order": 45
     },
     {
       "id": "cdm2-283bc34f8bd482dd",
@@ -397,7 +415,25 @@
       "sha256": "283bc34f8bd482dd3b39b680738ce579844025faf0c20e7652ca4895a8345999",
       "pixelSha256": "3bf7bcf406eda8a4a793e4e68a3a0615bd12ad69f7a454bed560faef801bdfde",
       "locationGroup": "capestang",
-      "order": 44
+      "order": 46
+    },
+    {
+      "id": "cdm2dan-b982400b33e70790",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM2-green-dan/IMG_2898.jpg",
+      "sourceFilename": "IMG_2898.jpg",
+      "sha256": "b982400b33e707901d8b908321c820da6d0f29d4b63bd467f07571e12e85931b",
+      "pixelSha256": "9da6ad2b20411d725066585405c13fc57aa0f777b6dce6adfd08212055a8f259",
+      "locationGroup": "capestang",
+      "order": 47
+    },
+    {
+      "id": "cdm2dan-45b25f0ec88210c6",
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM2-green-dan/IMG_2976.jpg",
+      "sourceFilename": "IMG_2976.jpg",
+      "sha256": "45b25f0ec88210c6f79bffa4b189b60443b7fcbdba3363a19856421c0c923a59",
+      "pixelSha256": "ddb05f1985de67559d20ae3f0e72b37a75b0ee8ffd00d6a91c74e68e3d1da37f",
+      "locationGroup": "capestang",
+      "order": 48
     },
     {
       "id": "cdm1-7c99450191c66dc6",
@@ -406,7 +442,7 @@
       "sha256": "7c99450191c66dc6687f2ea86564576691b8ce3978fb02febb864732a938401f",
       "pixelSha256": "f7ab53986f832c859506f1b41151b710103245fb184d66b2c2bfb0a559d84bad",
       "locationGroup": "beziers",
-      "order": 45
+      "order": 49
     },
     {
       "id": "cdm2-8cdc758cbed56a24",
@@ -415,7 +451,7 @@
       "sha256": "8cdc758cbed56a24ff9afd0e882b9f4a57cb20c6413fb1a014b34b18fbcb96a3",
       "pixelSha256": "7e854265ab66dfac3469a5d2fb38c3972dbfcad47b764bd21690a3b768370b0b",
       "locationGroup": "beziers",
-      "order": 46
+      "order": 50
     },
     {
       "id": "cdm1-ffbca6de150fc7f1",
@@ -424,7 +460,7 @@
       "sha256": "ffbca6de150fc7f18ac43a1754fb5a9c36c6b0d1fba1f38debf31a602cbcace3",
       "pixelSha256": "103365eb1fdde360633fc24d721677f68571f67ca952bb9a36b7d4829d8cebde",
       "locationGroup": "beziers",
-      "order": 47
+      "order": 51
     },
     {
       "id": "cdm1-561bafe5aff2e2c8",
@@ -433,7 +469,7 @@
       "sha256": "561bafe5aff2e2c88f930fdeb328dcefc739aa5e1e96954b5e18fd22240da5dc",
       "pixelSha256": "bed391c68952413b00cac8320fe017ad01325cf308c6c48595ee8df4cfdefe90",
       "locationGroup": "sete",
-      "order": 48
+      "order": 52
     },
     {
       "id": "cdm1-7ed840d66e9ad03a",
@@ -442,7 +478,7 @@
       "sha256": "7ed840d66e9ad03af5fc72c95d32b5abe9e3ae44e696bcee499527b57ba699da",
       "pixelSha256": "a779178b85d35e0ae8d5144f843c12b05f2b4539f0eaa7cffa84dfe3a66c71d1",
       "locationGroup": "sete",
-      "order": 49
+      "order": 53
     }
   ],
   "excluded": [
@@ -518,5 +554,9 @@
       "managedSource": "src/assets/cdm-gallery/cdm2/IMG_4784.JPG",
       "reason": "Absent from the owner-selected CDM1and2 folder; retained for recovery."
     }
-  ]
+  ],
+  "additionalSourceFolders": [
+    "/Volumes/JB_Tier2Storage/CDM2-green-dan"
+  ],
+  "additionalSourceNote": "Owner authorized CDM2-green-dan on 2026-10-15 (BTF-GALLERY-PUBLISH-202610150806); only IMG_2698.jpg, IMG_2711.jpg, IMG_2898.jpg and IMG_2976.jpg are included."
 }

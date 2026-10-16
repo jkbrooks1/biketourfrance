@@ -1,0 +1,15 @@
+
+> btf-migration@0.1.0 predeploy:approved-copy
+> BTF_DEPLOY_ENV=production npm run copy:production-pipeline
+
+
+> btf-migration@0.1.0 copy:production-pipeline
+> npm run gallery:sync && npm run copy:sync && npm run copy:validate && npm run copy:generate-ts && astro build && npm run copy:verify-rendered && npm run gallery:verify && npm run verify && node scripts/copy/assert-deployable.mjs
+
+
+> btf-migration@0.1.0 gallery:sync
+> node scripts/gallery/sync-review.mjs
+
+gallery:sync  WARNING: /cdm-gallery/future_tour_cta: identical duplicate field name (rows 501 and 1268); first row kept
+gallery:sync FAILED: Approved copy failed validation before saving photo review: /waitlist/duplicate_state: unrecognized field: it is in the sheet (row 1269) but not in copy/field-manifest.json; /privacy/data_retention: unrecognized field: it is in the sheet (row 1270) but not in copy/field-manifest.json
+exit 1

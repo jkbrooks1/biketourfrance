@@ -1,0 +1,10 @@
+
+> btf-migration@0.1.0 verify
+> npm run canonical:check && node scripts/verify-dist.mjs
+
+
+> btf-migration@0.1.0 canonical:check
+> node scripts/assert-canonical-root.mjs
+
+canonical-root: PASS (native-astro)
+verify-dist: 13 pages OK

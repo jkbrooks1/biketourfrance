@@ -2867,6 +2867,194 @@
         "quality": 78,
         "estimatedBytes": 292596
       }
+    },
+    {
+      "id": "cdm2dan-50c84e427dc99278",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 23072
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 18812
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 87751
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 73062
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 188033
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 160180
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 268862
+      }
+    },
+    {
+      "id": "cdm2dan-4c9ae1f2b13ee98a",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 9360
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 5638
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 31991
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 19118
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 70547
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 43230
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 82534
+      }
+    },
+    {
+      "id": "cdm2dan-b982400b33e70790",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 23323
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 19342
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 89075
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 76994
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 194607
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 168732
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 291268
+      }
+    },
+    {
+      "id": "cdm2dan-45b25f0ec88210c6",
+      "variants": [
+        {
+          "width": 320,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 15532
+        },
+        {
+          "width": 320,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 11688
+        },
+        {
+          "width": 640,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 65612
+        },
+        {
+          "width": 640,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 50778
+        },
+        {
+          "width": 960,
+          "format": "avif",
+          "quality": 70,
+          "estimatedBytes": 148603
+        },
+        {
+          "width": 960,
+          "format": "webp",
+          "quality": 70,
+          "estimatedBytes": 120356
+        }
+      ],
+      "detail": {
+        "width": 1200,
+        "format": "webp",
+        "quality": 78,
+        "estimatedBytes": 211442
+      }
     }
   ]
 }

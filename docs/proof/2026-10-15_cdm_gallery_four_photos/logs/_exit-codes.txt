@@ -1,0 +1,21 @@
+canonical-check exit 0
+astro-check exit 0
+verify-dist exit 0
+copy-test exit 1
+gallery-test exit 0
+gallery-verify-manifest exit 1
+technical-seo exit 0
+guest-journey exit 0
+assert-deployable exit 1
+copy-test exit 0
+final-live-gate exit 0
+gallery-browser exit 1
+gallery-browser exit 1
+gallery-browser exit 0
+browser-check-site exit 1
+browser-check-site exit 1
+browser-check-site exit 0
+review-browser exit 1
+gallery-verify-manifest exit 0
+exit 1
+exit 1

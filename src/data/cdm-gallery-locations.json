@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "method": "Group both completed tours by GPS municipality, west to east using mean anchor longitude; ten owner-authorized approximate locations retain their evidence/confidence. Date/counter order within each group. No estimated coordinates are invented.",
+  "method": "Group both completed tours by GPS municipality, west to east using mean anchor longitude; ten owner-authorized approximate locations retain their evidence/confidence. Date/counter order within each group. No estimated coordinates are invented. Four photos added 2026-10-15 from the owner-authorized CDM2-green-dan folder carry Low-confidence estimated locations and dates with stated evidence.",
   "groups": [
     {
       "id": "creon",
@@ -49,7 +49,7 @@
       "name": "Moissac",
       "order": 7,
       "longitude": 1.0910494444444443,
-      "photoCount": 11
+      "photoCount": 13
     },
     {
       "id": "saint-porquier",
@@ -140,7 +140,7 @@
       "name": "Capestang",
       "order": 20,
       "longitude": 3.0088305555555555,
-      "photoCount": 1
+      "photoCount": 3
     },
     {
       "id": "beziers",
@@ -303,6 +303,18 @@
       "sourceUrl": "https://data.geopf.fr/geocodage/reverse?lon=1.1025277777777778&lat=44.09216388888889&index=address&limit=1"
     },
     {
+      "id": "cdm2dan-50c84e427dc99278",
+      "filename": "IMG_2698.jpg",
+      "groupId": "moissac",
+      "locationName": "Moissac",
+      "basis": "Estimated",
+      "estimated": true,
+      "confidence": "Low",
+      "evidence": "Estimated area only. Frame number is 13 before IMG_2711.jpg (same day likely); canal towpath with wooded hills is consistent with the Moissac reach; same riders and teal bike as second-tour photos IMG_4633/IMG_4634. No GPS; place not independently confirmed.",
+      "coordinates": null,
+      "sourceUrl": null
+    },
+    {
       "id": "cdm1-367a2fa64cdb80f8",
       "filename": "IMG_4463.JPG",
       "groupId": "saint-porquier",
@@ -385,6 +397,18 @@
       "evidence": "Circular openings and brick/stone aqueduct match Cacor architecture and IMG_6146.jpeg; comparison with the official Cacor page image.",
       "coordinates": null,
       "sourceUrl": "https://www.tourisme-tarnetgaronne.fr/moissac-terres-des-confluences/incontournables/le-pont-canal-du-cacor/"
+    },
+    {
+      "id": "cdm2dan-4c9ae1f2b13ee98a",
+      "filename": "IMG_2711.jpg",
+      "groupId": "moissac",
+      "locationName": "Moissac",
+      "basis": "Estimated",
+      "estimated": true,
+      "confidence": "Low",
+      "evidence": "Estimated area only. Lit brick-arch bridge at dusk resembles the Moissac-area bridge in IMG_6143.jpeg; the bridge is not independently identified. No GPS.",
+      "coordinates": null,
+      "sourceUrl": null
     },
     {
       "id": "cdm1-3e2f93340b82df4e",
@@ -847,6 +871,30 @@
         "longitude": 3.0088305555555555
       },
       "sourceUrl": "https://geo.api.gouv.fr/communes?lat=43.32777777777778&lon=3.0088305555555555&fields=nom%2Ccode&format=json"
+    },
+    {
+      "id": "cdm2dan-b982400b33e70790",
+      "filename": "IMG_2898.jpg",
+      "groupId": "capestang",
+      "locationName": "Capestang",
+      "basis": "Estimated",
+      "estimated": true,
+      "confidence": "Low",
+      "evidence": "Estimated area only. Gravel path, reeds and dry scrub match IMG_4785.JPG (GPS between Sallèles-d’Aude and Béziers); same riders. No GPS; place not independently confirmed.",
+      "coordinates": null,
+      "sourceUrl": null
+    },
+    {
+      "id": "cdm2dan-45b25f0ec88210c6",
+      "filename": "IMG_2976.jpg",
+      "groupId": "capestang",
+      "locationName": "Capestang",
+      "basis": "Estimated",
+      "estimated": true,
+      "confidence": "Low",
+      "evidence": "Estimated area only. Same riders as IMG_2898.jpg (78 frames earlier); Languedoc vineyard country is consistent with the Capestang to Béziers reach; stone cross not independently identified. No GPS.",
+      "coordinates": null,
+      "sourceUrl": null
     },
     {
       "id": "cdm2-8cdc758cbed56a24",

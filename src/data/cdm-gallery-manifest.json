@@ -916,6 +916,66 @@
       "height": 4032,
       "captureDate": "2026:09:21 10:47:43",
       "altField": "/cdm-gallery/cdm2_8cdc758cbed56a24_alt"
+    },
+    {
+      "id": "cdm2dan-50c84e427dc99278",
+      "collection": "cdm2dan",
+      "order": 1,
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM2-green-dan/IMG_2698.jpg",
+      "sourceFilename": "IMG_2698.jpg",
+      "managedSource": "src/assets/cdm-gallery/cdm2dan/IMG_2698.jpg",
+      "sha256": "50c84e427dc99278dbadc0423b4cb8c4b4da706ab3f90b00bf386699e050d45e",
+      "pixelSha256": "2219014f752a07370775b9218cc8b71dd8b4208fd8e73b96aaab677d1e7dffec",
+      "bytes": 919144,
+      "width": 2048,
+      "height": 1536,
+      "captureDate": null,
+      "altField": "/cdm-gallery/cdm2dan_50c84e427dc99278_alt"
+    },
+    {
+      "id": "cdm2dan-4c9ae1f2b13ee98a",
+      "collection": "cdm2dan",
+      "order": 2,
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM2-green-dan/IMG_2711.jpg",
+      "sourceFilename": "IMG_2711.jpg",
+      "managedSource": "src/assets/cdm-gallery/cdm2dan/IMG_2711.jpg",
+      "sha256": "4c9ae1f2b13ee98a4f391d3367df25e4d11b8e082e1b8b83cc2623cfb694df91",
+      "pixelSha256": "0c157879ba05155963695f8b6836309b3c4ee8e651dbf8b11375a268487355d8",
+      "bytes": 412708,
+      "width": 2048,
+      "height": 1536,
+      "captureDate": null,
+      "altField": "/cdm-gallery/cdm2dan_4c9ae1f2b13ee98a_alt"
+    },
+    {
+      "id": "cdm2dan-b982400b33e70790",
+      "collection": "cdm2dan",
+      "order": 3,
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM2-green-dan/IMG_2898.jpg",
+      "sourceFilename": "IMG_2898.jpg",
+      "managedSource": "src/assets/cdm-gallery/cdm2dan/IMG_2898.jpg",
+      "sha256": "b982400b33e707901d8b908321c820da6d0f29d4b63bd467f07571e12e85931b",
+      "pixelSha256": "9da6ad2b20411d725066585405c13fc57aa0f777b6dce6adfd08212055a8f259",
+      "bytes": 1033076,
+      "width": 2048,
+      "height": 1536,
+      "captureDate": null,
+      "altField": "/cdm-gallery/cdm2dan_b982400b33e70790_alt"
+    },
+    {
+      "id": "cdm2dan-45b25f0ec88210c6",
+      "collection": "cdm2dan",
+      "order": 4,
+      "sourcePath": "/Volumes/JB_Tier2Storage/CDM2-green-dan/IMG_2976.jpg",
+      "sourceFilename": "IMG_2976.jpg",
+      "managedSource": "src/assets/cdm-gallery/cdm2dan/IMG_2976.jpg",
+      "sha256": "45b25f0ec88210c6f79bffa4b189b60443b7fcbdba3363a19856421c0c923a59",
+      "pixelSha256": "ddb05f1985de67559d20ae3f0e72b37a75b0ee8ffd00d6a91c74e68e3d1da37f",
+      "bytes": 755488,
+      "width": 2048,
+      "height": 1536,
+      "captureDate": null,
+      "altField": "/cdm-gallery/cdm2dan_45b25f0ec88210c6_alt"
     }
   ]
 }

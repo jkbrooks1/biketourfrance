@@ -7,11 +7,12 @@ ROUTES = ['/', '/tours/', '/about/', '/resources/', '/contact/', '/canal-des-deu
           '/canal-des-deux-mers/practical-info/', '/privacy/', '/terms/', '/cookies/', '/404.html',
           '/cdm-photo-gallery/']
 WIDTHS = [375, 768, 1024, 1440]
+PORT = os.environ.get('BTF_BROWSER_PORT', '4399')
 OUT = os.environ.get('BTF_BROWSER_PROOF_DIR', 'docs/proof/2026-10-03')
 os.makedirs(OUT, exist_ok=True)
 PROBE = os.environ.get('BTF_BROWSER_PROBE_PATH', os.path.join(OUT, 'hero-contrast-probe.png'))
 SCALE = {0, 4, 8, 12, 16, 24, 32, 40, 48, 64}
-srv = subprocess.Popen([sys.executable, '-m', 'http.server', '4399', '-d', 'dist'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+srv = subprocess.Popen([sys.executable, '-m', 'http.server', PORT, '-d', 'dist'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 time.sleep(1.5)
 
 JS = r"""
@@ -75,7 +76,7 @@ with sync_playwright() as p:
             errs = []
             page.on('pageerror', lambda e: errs.append(str(e)))
             page.on('console', lambda m: errs.append(m.text) if m.type == 'error' else None)
-            resp = page.goto(f'http://localhost:4399{route}', wait_until='networkidle')
+            resp = page.goto(f'http://localhost:{PORT}{route}', wait_until='networkidle')
             page.evaluate('document.fonts.ready')
             # open the mobile menu so its links are measured
             if w < 768:
@@ -122,7 +123,7 @@ with sync_playwright() as p:
 
     # Interaction tests at 1440 on the home page: keyboard order, focus style, hover, active.
     ctx = b.new_context(viewport={'width': 1440, 'height': 900})
-    page = ctx.new_page(); page.goto('http://localhost:4399/', wait_until='networkidle')
+    page = ctx.new_page(); page.goto(f'http://localhost:{PORT}/', wait_until='networkidle')
     total = page.evaluate("[...document.querySelectorAll('a[href], button, summary')].filter(e=>e.getBoundingClientRect().width>0).length")
     seen = []; focus_ok = True
     for i in range(total + 3):
@@ -140,7 +141,7 @@ with sync_playwright() as p:
     contrast = {}
     from PIL import Image
     for w in (375, 768, 1024, 1440):
-        pg = ctx.new_page(); pg.set_viewport_size({'width': w, 'height': 900}); pg.goto('http://localhost:4399/', wait_until='networkidle')
+        pg = ctx.new_page(); pg.set_viewport_size({'width': w, 'height': 900}); pg.goto(f'http://localhost:{PORT}/', wait_until='networkidle')
         boxes = pg.evaluate("[...document.querySelectorAll('.hero h1, .hero p')].map(e => { const r = e.getBoundingClientRect(); return [r.x, r.y + scrollY, r.width, r.height]; })")
         pg.add_style_tag(content='.hero h1,.hero p{color:transparent !important}')
         pg.screenshot(path=PROBE, full_page=True)

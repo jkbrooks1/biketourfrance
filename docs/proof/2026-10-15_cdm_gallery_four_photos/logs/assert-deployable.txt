@@ -1,0 +1,5 @@
+predeploy BLOCKED. This build must not be deployed:
+  - the approved copy source is "fixture", not "sheet"
+  - the artifact did not come from BTF_Approved_Site_Copy
+  - the rendered-page check was run against a different snapshot
+  - dist/ is older than the Sheet snapshot (build it after the sync)

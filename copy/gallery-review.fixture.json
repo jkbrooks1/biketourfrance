@@ -246,6 +246,20 @@
         17,
         "",
         "",
+        "2026091406EST",
+        "2026-09-14",
+        "IMG_2698.jpg",
+        "cdm2dan-50c84e427dc99278",
+        "Estimated",
+        "Low",
+        "No capture date in the supplied 2048x1536 export (no EXIF block; XMP holds only pick labels). Estimated 2026-09-14: camera frame IMG_2698 is 13 frames before IMG_2711, so likely the same day; the second tour is GPS-dated at Moissac on 2026-09-14 (IMG_4651, IMG_4652, IMG_4658); the teal bike matches IMG_4633 and IMG_4634. Not a confirmed timestamp."
+      ],
+      [
+        true,
+        "",
+        18,
+        "",
+        "",
         "2026090202EST",
         "2026-09-02",
         "IMG_6143.jpeg",
@@ -257,7 +271,21 @@
       [
         true,
         "",
-        18,
+        19,
+        "",
+        "",
+        "2026091407EST",
+        "2026-09-14",
+        "IMG_2711.jpg",
+        "cdm2dan-4c9ae1f2b13ee98a",
+        "Estimated",
+        "Low",
+        "No capture date in the supplied 2048x1536 export (no EXIF block; XMP holds only pick labels). Estimated 2026-09-14: same Moissac stop as GPS-dated IMG_4651, IMG_4652 and IMG_4658 (2026-09-14) and 13 camera frames after IMG_2698. Not a confirmed timestamp."
+      ],
+      [
+        true,
+        "",
+        20,
         "",
         "",
         "2026090106EST",
@@ -271,7 +299,7 @@
       [
         true,
         "",
-        19,
+        21,
         "",
         "",
         "2026090206EST",
@@ -285,7 +313,7 @@
       [
         true,
         "",
-        20,
+        22,
         "",
         "",
         "2026090204EST",
@@ -299,7 +327,7 @@
       [
         true,
         "",
-        21,
+        23,
         "",
         "",
         "2026090203EST",
@@ -313,7 +341,7 @@
       [
         true,
         "",
-        22,
+        24,
         "",
         "",
         "2026090205EST",
@@ -327,7 +355,7 @@
       [
         true,
         "",
-        23,
+        25,
         "",
         "",
         "2026090103",
@@ -341,7 +369,7 @@
       [
         true,
         "",
-        24,
+        26,
         "",
         "",
         "2026090105",
@@ -369,7 +397,7 @@
       [
         true,
         "",
-        25,
+        27,
         "",
         "",
         "2026090201",
@@ -383,7 +411,7 @@
       [
         true,
         "",
-        26,
+        28,
         "",
         "",
         "2026090301",
@@ -397,7 +425,7 @@
       [
         true,
         "",
-        27,
+        29,
         "",
         "",
         "2026091601",
@@ -411,7 +439,7 @@
       [
         true,
         "",
-        28,
+        30,
         "",
         "",
         "2026091607",
@@ -425,7 +453,7 @@
       [
         true,
         "",
-        29,
+        31,
         "",
         "",
         "2026090302",
@@ -439,7 +467,7 @@
       [
         true,
         "",
-        30,
+        32,
         "",
         "",
         "2026090303",
@@ -467,7 +495,7 @@
       [
         true,
         "",
-        31,
+        33,
         "",
         "",
         "2026090401",
@@ -481,7 +509,7 @@
       [
         true,
         "",
-        32,
+        34,
         "",
         "",
         "2026090402",
@@ -495,7 +523,7 @@
       [
         true,
         "",
-        33,
+        35,
         "",
         "",
         "2026090403",
@@ -509,7 +537,7 @@
       [
         true,
         "",
-        34,
+        36,
         "",
         "",
         "2026090404",
@@ -523,7 +551,7 @@
       [
         true,
         "",
-        35,
+        37,
         "",
         "",
         "2026090405",
@@ -537,7 +565,7 @@
       [
         true,
         "",
-        36,
+        38,
         "",
         "",
         "2026090406",
@@ -551,7 +579,7 @@
       [
         true,
         "",
-        37,
+        39,
         "",
         "",
         "2026090407",
@@ -565,7 +593,7 @@
       [
         true,
         "",
-        38,
+        40,
         "",
         "",
         "2026090501",
@@ -579,7 +607,7 @@
       [
         true,
         "",
-        39,
+        41,
         "",
         "",
         "2026090601",
@@ -593,7 +621,7 @@
       [
         true,
         "",
-        40,
+        42,
         "",
         "",
         "2026090602",
@@ -607,7 +635,7 @@
       [
         true,
         "",
-        41,
+        43,
         "",
         "",
         "2026090603",
@@ -621,7 +649,7 @@
       [
         true,
         "",
-        42,
+        44,
         "",
         "",
         "2026092004",
@@ -635,7 +663,35 @@
       [
         true,
         "",
-        43,
+        45,
+        "",
+        "",
+        "2026092005EST",
+        "2026-09-20",
+        "IMG_2898.jpg",
+        "cdm2dan-b982400b33e70790",
+        "Estimated",
+        "Low",
+        "No capture date in the supplied 2048x1536 export (no EXIF block; XMP holds only pick labels). Estimated 2026-09-20: gravel path, reeds and dry scrub match GPS-dated IMG_4785.JPG (2026-09-20); same riders and teal bike as second-tour photos. Not a confirmed timestamp."
+      ],
+      [
+        true,
+        "",
+        46,
+        "",
+        "",
+        "2026092006EST",
+        "2026-09-20",
+        "IMG_2976.jpg",
+        "cdm2dan-45b25f0ec88210c6",
+        "Estimated",
+        "Low",
+        "No capture date in the supplied 2048x1536 export (no EXIF block; XMP holds only pick labels). Estimated 2026-09-20: same riders as IMG_2898.jpg, 78 camera frames later; assumed the same ride day as the neighboring series. Not a confirmed timestamp."
+      ],
+      [
+        true,
+        "",
+        47,
         "",
         "",
         "2026090701",
@@ -649,7 +705,7 @@
       [
         true,
         "",
-        44,
+        48,
         "",
         "",
         "2026092101",
@@ -663,7 +719,7 @@
       [
         true,
         "",
-        45,
+        49,
         "",
         "",
         "2026090702",
@@ -677,7 +733,7 @@
       [
         true,
         "",
-        46,
+        50,
         "",
         "",
         "2026090802",
@@ -691,7 +747,7 @@
       [
         true,
         "",
-        47,
+        51,
         "",
         "",
         "2026090801",

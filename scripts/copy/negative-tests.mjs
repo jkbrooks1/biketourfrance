@@ -15,7 +15,7 @@ function run(script, env = {}, args = []) { return spawnSync(process.execPath, [
 check('fixture is structurally valid', () => assert.equal(validateGrid(grid(rows), manifest, rules).errors.length, 0));
 check('missing approved field fails closed', () => assert.match(JSON.stringify(validateGrid(grid(rows.filter(([f]) => f !== '/hero/heading')), manifest, rules).errors), /required field is missing/));
 check('conflicting duplicate approved field fails closed', () => assert.match(JSON.stringify(validateGrid(grid([...rows, [rows[3][0], rows[3][1] + ' (changed)']]), manifest, rules).errors), /duplicate field/));
-check('identical duplicate approved field is allowed with a warning', () => { const result = validateGrid(grid([...rows, rows[3]]), manifest, rules); assert.equal(result.errors.length, 0); assert.equal(result.warnings.length, 1); });
+check('identical duplicate approved field is allowed with a warning', () => { const baseline = validateGrid(grid(rows), manifest, rules); const result = validateGrid(grid([...rows, rows[3]]), manifest, rules); assert.equal(result.errors.length, 0); assert.equal(result.warnings.length, baseline.warnings.length + 1); });
 check('unknown approved field fails closed', () => assert.match(JSON.stringify(validateGrid(grid([...rows, ['/unknown/value', 'x']]), manifest, rules).errors), /unrecognized field/));
 check('third Sheet column fails closed', () => { const bad = grid(rows); bad[1] = [...bad[1], 'x']; assert.match(JSON.stringify(validateGrid(bad, manifest, rules).errors), /exactly two columns/); });
 check('fixture is refused in deployment contexts', () => assert.notEqual(run('scripts/copy/sync.mjs', { BTF_COPY_FIXTURE: '1', CI: 'true' }).status, 0));

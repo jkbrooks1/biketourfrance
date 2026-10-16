@@ -3,8 +3,12 @@ import sharp from 'sharp';
 import { readFileSync, writeFileSync } from 'node:fs';
 const manifest = JSON.parse(readFileSync('src/data/cdm-gallery-manifest.json', 'utf8'));
 const limit = 300 * 1024;
-const plans = [];
+// --only-new keeps every existing plan entry byte-for-byte and plans only photos that are missing from the plan.
+const onlyNew = process.argv.includes('--only-new');
+const existing = onlyNew ? JSON.parse(readFileSync('src/data/cdm-gallery-delivery-plan.json', 'utf8')).photos : [];
+const plans = [...existing];
 for (const photo of manifest.photos) {
+  if (existing.some((entry) => entry.id === photo.id)) continue;
   const variants = [];
   for (const width of [320, 640, 960].filter((value) => value <= photo.width)) {
     for (const format of ['avif', 'webp']) {

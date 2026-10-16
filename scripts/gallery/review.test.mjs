@@ -11,11 +11,11 @@ const base = () => {
   return input;
 };
 const shown = (result) => result.snapshot.photos.filter((p) => p.keep && !p.deleted);
-test('49 folder photos with blank captions; all 61 permanent IDs stay reserved', () => {
+test('53 folder photos with blank captions; all 65 permanent IDs stay reserved', () => {
   const input = base(), result = makeReview(input);
-  assert.equal(shown(result).length, 49);
-  assert.equal(result.snapshot.photos.filter((p) => p.estimated).length, 9);
-  assert.equal(new Set(result.snapshot.photos.map((p) => p.photoId.replace(/EST$/, ''))).size, 49);
+  assert.equal(shown(result).length, 53);
+  assert.equal(result.snapshot.photos.filter((p) => p.estimated).length, 13);
+  assert.equal(new Set(result.snapshot.photos.map((p) => p.photoId.replace(/EST$/, ''))).size, 53);
   assert.ok(result.snapshot.photos.every((p) => /^\d{10}(?:EST)?$/.test(p.photoId)));
   assert.deepEqual(result.registry, input.registry);
 });
@@ -28,7 +28,7 @@ test('Delete?=Y overrides Keep and caption; blank/N restores without renumbering
     const result = makeReview(input), deleted = value.toUpperCase() === 'Y';
     assert.equal(result.snapshot.photos[0].keep, true);
     assert.equal(result.snapshot.photos[0].deleted, deleted);
-    assert.equal(shown(result).length, deleted ? 48 : 49);
+    assert.equal(shown(result).length, deleted ? 52 : 53);
     assert.deepEqual(result.registry, input.registry);
     const field = reviewManifest(read('copy/field-manifest.json'), library, result.snapshot).find((p) => p.field === photo.altField);
     assert.equal(field.route, deleted ? null : '/cdm-photo-gallery/');
@@ -41,7 +41,7 @@ test('unchecked Keep excludes regardless of caption; caption linkage is checked'
   input.collections.combined[1][3] = 'A cycling memory.';
   assert.throws(() => makeReview(input), /differs from its Approved/);
   input.approvedFields.set(captionField(photo), 'A cycling memory.');
-  assert.equal(shown(makeReview(input)).length, 48);
+  assert.equal(shown(makeReview(input)).length, 52);
 });
 test('missing/duplicate/outside-folder/reordered/nonboolean rows and invalid Delete? fail closed', () => {
   for (const edit of [

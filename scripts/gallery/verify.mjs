@@ -6,7 +6,9 @@ import sharp from 'sharp';
 
 const proof = 'docs/proof/2026-10-05_cdm_photo_gallery';
 const outputProof = process.env.BTF_GALLERY_PROOF_DIR || proof;
-const source = JSON.parse(readFileSync('docs/proof/2026-10-06_cdm_combined_gallery/source-inventory.json', 'utf8'));
+const combinedSource = JSON.parse(readFileSync('docs/proof/2026-10-06_cdm_combined_gallery/source-inventory.json', 'utf8'));
+const danSource = JSON.parse(readFileSync('docs/proof/2026-10-15_cdm_gallery_four_photos/source-inventory.json', 'utf8'));
+const source = { ...combinedSource, uniqueCount: combinedSource.uniqueCount + danSource.uniqueCount, duplicates: [...combinedSource.duplicates, ...danSource.duplicates], photos: [...combinedSource.photos, ...danSource.photos] };
 const selection = JSON.parse(readFileSync('src/data/cdm-gallery-selection.json', 'utf8'));
 const manifest = JSON.parse(readFileSync('src/data/cdm-gallery-manifest.json', 'utf8'));
 const eligible = selection.photos.map((entry) => manifest.photos.find((p) => p.id === entry.id));
