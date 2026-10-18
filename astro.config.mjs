@@ -1,5 +1,29 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import { readFileSync, readdirSync, unlinkSync } from 'node:fs';
+import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const omitUnusedMapOriginal = {
+  name: 'omit-unused-map-original',
+  hooks: {
+    'astro:build:done': ({ dir }) => {
+      const output = fileURLToPath(dir);
+      const files = readdirSync(output, { recursive: true });
+      const originals = files.filter((file) =>
+        /^_astro\/canal-des-deux-mers-illustrated-map\.[^.]+\.png$/.test(file),
+      );
+      const textFiles = files.filter((file) => /\.(?:html|css|js|json|xml)$/.test(file));
+      for (const original of originals) {
+        const name = original.split('/').at(-1);
+        if (textFiles.some((file) => readFileSync(join(output, file), 'utf8').includes(name))) {
+          throw new Error(`The original map PNG is referenced by ${name}; it cannot be omitted.`);
+        }
+        unlinkSync(join(output, original));
+      }
+    },
+  },
+};
 
 // Native Astro build for biketourfrance.net, deployed from GitHub to the Cloudflare Pages project temp-btf.
 // Static files that must be served as-is (robots.txt, _headers, favicon) live in public/.
@@ -11,5 +35,5 @@ export default defineConfig({
   trailingSlash: 'always',
   build: { format: 'directory' },
   devToolbar: { enabled: false },
-  integrations: [sitemap({ filter: (page) => !page.endsWith('/404/') })],
+  integrations: [sitemap({ filter: (page) => !page.endsWith('/404/') }), omitUnusedMapOriginal],
 });
