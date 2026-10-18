@@ -157,13 +157,13 @@ const { hero, readyToRide, about, gallery, buttons } = COPY;
 
   <section class="section section--beige" aria-labelledby="gallery-heading">
     <div class="container">
-      <h2 id="gallery-heading">{gallery.heading}</h2>
       <figure class="contextual-quote">
         <blockquote>
           <p>{TEXT['/rider-quotes/canal_scenery_quote']}</p>
         </blockquote>
         <figcaption>{TEXT['/rider-quotes/canal_scenery_credit']}</figcaption>
       </figure>
+      <h2 id="gallery-heading">{gallery.heading}</h2>
       <Gallery photos={GALLERY.slice(0, 8)} />
       <div class="btn-row">
         <Button href="/cdm-photo-gallery/" variant="tertiary">
