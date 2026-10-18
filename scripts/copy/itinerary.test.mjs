@@ -197,13 +197,15 @@ test('every string the page may render comes from a trace entry', () => {
 
 test('no retired itinerary source text exists in source or copy files', () => {
   const skip = new Set(['node_modules', '.git', 'dist', '.copy', '.astro', 'proof', 'docs']);
+  // The list itself and the two tests that inject banned text are the only files allowed to name it.
+  const namesBannedText = new Set(['itinerary.mjs', 'itinerary.test.mjs', 'negative-tests.mjs']);
   const hits = [];
   const walk = (dir) => {
     for (const name of readdirSync(dir)) {
       if (skip.has(name)) continue;
       const full = join(dir, name);
       if (statSync(full).isDirectory()) walk(full);
-      else if (/\.(astro|ts|json|mjs|css|csv|yml)$/.test(name) && !full.endsWith('itinerary.mjs') && !full.endsWith('itinerary.test.mjs')) {
+      else if (/\.(astro|ts|json|mjs|css|csv|yml)$/.test(name) && !namesBannedText.has(name)) {
         const text = readFileSync(full, 'utf8');
         for (const banned of FORBIDDEN_ITINERARY_SOURCES) if (text.includes(banned)) hits.push(`${full}: ${banned}`);
       }
