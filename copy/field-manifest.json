@@ -2736,6 +2736,42 @@
     "codeLocation": "src/pages/privacy/index.astro"
   },
   {
+    "field": "/rider-quotes/pace_distance_quote",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "/rider-quotes/pace_distance_credit",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "/rider-quotes/route_lodging_quote",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "/rider-quotes/route_lodging_credit",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "/rider-quotes/canal_scenery_quote",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
+    "field": "/rider-quotes/canal_scenery_credit",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
     "field": "/cdm-gallery/cdm1_7f68703ad5c23d61_caption",
     "route": "/cdm-photo-gallery/",
     "required": false,
