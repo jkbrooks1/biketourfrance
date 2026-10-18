@@ -3160,5 +3160,11 @@
     "route": "/cdm-photo-gallery/",
     "required": false,
     "codeLocation": "src/data/cdm-photo-gallery.ts"
+  },
+  {
+    "field": "/home/canal_map_alt",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
   }
 ]
