@@ -1,6 +1,6 @@
 # BikeTourFrance native Astro build and deploy runbook
 
-Verified 2026-10-06 against GitHub main and read-only Cloudflare Pages API; extended 2026-10-18 for the governed itinerary tab (BTF-CDM-MAP-ITIN-20261018-002). This is the current procedure; older v2.3/v2.2 documents are historical. Owner authorized this reconciliation and the specific CDM 47-photo publication.
+Verified 2026-10-06 against GitHub main and read-only Cloudflare Pages API; extended 2026-10-18 for the governed itinerary tab (BTF-CDM-MAP-ITIN-20261018-002) and for the France locator and `Lodging Label` key (BTF-CDM-MAP-ITIN-202610181637). This is the current procedure; older v2.3/v2.2 documents are historical. Owner authorized this reconciliation and the specific CDM 47-photo publication.
 
 ## Current facts
 
@@ -11,13 +11,16 @@ Verified 2026-10-06 against GitHub main and read-only Cloudflare Pages API; exte
 - Pages domains include `btf-production.pages.dev`, `biketourfrance.net`, `www.biketourfrance.net`. A main push can update the public website. Old statements that the domain remains on Framer or branch alignment is pending must not be acted on.
 - Before the 2026-10-18 itinerary release, production deployment `4395bdb2-88ce-4826-8eea-6340af91b95b` served commit `b38f670ebfa7eb61435d739fcfb85533c872d836` (illustrated map release). Re-read before any later release (`wrangler pages deployment list --project-name btf-production` is read-only).
 - The local `main` in the canonical checkout can be stale and carry unrelated uncommitted work. When it does, release from a registered git worktree of `origin/main` using `BTF_RELEASE_WORKTREE` (see `docs/CANONICAL_ROOT_GUARD.md`); the guard needs a clean tree, so commit work before running the gate there.
-- Proof: `proof/2026-10-06_cdm_gallery_publish/project-before.json`; itinerary release `proof/2026-10-18_cdm_map_itinerary/`.
+- Before the locator and lodging-label release, production deployment `2673816a-5406-4655-bd92-2e495bd4a77f` served merge commit `05147720e4543b2203d7e00d2d927b0aa4f6cfd1`.
+- Proof: `proof/2026-10-06_cdm_gallery_publish/project-before.json`; itinerary release `proof/2026-10-18_cdm_map_itinerary/`; locator and lodging-label release `proof/2026-10-18_cdm_locator_lodging_label_02/`.
 
 ## Authority and preservation
 
 Read `00_PROJECT RULES.md` and the single global systems-change register first. Work on a descriptive feature branch based on current verified main. Preserve existing changes; never stage unrelated files or rewrite main history. This release uses the existing `feature/cdm-combined-gallery` branch and a selective pre-editorial checkpoint. Preserve older untracked evidence and unrelated closeout edits separately; a dirty tree is not permission to publish everything in it.
 
 ## Governed copy sources (two tabs, one workbook)
+
+Live Sheet copy always wins. Publish exactly what the workbook says, spelled exactly as the workbook spells its keys and text. When live copy differs from what production shows, publish the Sheet's version and list every difference in the release report; a difference is not a reason to stop. Stop on copy only when a required key or field is absent or empty. Never edit the Sheet from a release.
 
 All public prose and alts come from the workbook `BTF_Approved_Site_Copy`, id `1vzlhoekeVcx437ajMMFU--1kIrE7DfKYvi8rKhlE9aw`, through two governed tabs:
 
@@ -31,14 +34,23 @@ Caption and Keep/Delete decisions come from `CDM Photo Review`. Do not weaken th
 ### Itinerary tab: how it flows
 
 1. `npm run copy:sync` reads both tabs in one run with the existing read-only service account and writes `.copy/sheet-rows.json` and `.copy/itinerary-rows.json`. In Sheet mode it also refreshes the offline fixture `copy/fixture/cdm-itinerary-rows.json`. Fixture mode (local only) reads that fixture.
-2. `npm run copy:validate` matches columns by header name (`Ride Day`, `Start Town`, `End Town`, `Distance (miles)`, `Elevation (feet)`, `Destination Lodging`, `Day highlights`, `Route description`, `UI Copy Key`, `Approved Text`) and fails on: a missing, duplicate or unknown header; data in an unlabelled column; a duplicate, missing or extra day id; row order other than `1,2,3,4,REST,5,6,7,8,9` (the rest day sits between ride days 4 and 5); a blank required field; a route description that is not exactly 30 words; a highlights cell that is not exactly two `• Name — note` bullets; a non-numeric distance or elevation; a rest row that carries distance, elevation or lodging; a missing, duplicate, unknown or blank UI key (`Itinerary section heading`, `Details control`, `Rest day title`); HTML in any cell.
+2. `npm run copy:validate` matches columns by header name (`Ride Day`, `Start Town`, `End Town`, `Distance (miles)`, `Elevation (feet)`, `Destination Lodging`, `Day highlights`, `Route description`, `UI Copy Key`, `Approved Text`) and fails on: a missing, duplicate or unknown header; data in an unlabelled column; a duplicate, missing or extra day id; row order other than `1,2,3,4,REST,5,6,7,8,9` (the rest day sits between ride days 4 and 5); a blank required field; a route description that is not exactly 30 words; a highlights cell that is not exactly two `• Name — note` bullets; a non-numeric distance or elevation; a rest row that carries distance, elevation or lodging; a missing, duplicate, unknown (including a differently spelled) or blank UI key. The required UI keys are `Itinerary section heading`, `Details control`, `Rest day title` and `Lodging Label`, spelled exactly so; HTML in any cell.
 3. `npm run copy:generate-ts` writes `src/data/cdm-itinerary.ts` (committed, deterministic) and `copy/cdm-itinerary-trace.json` (every value with its tab, sheet row and header).
-4. `src/components/CdmItinerary.astro` renders the module on the home page directly beneath the illustrated map (native `<details>` and `<summary>`). Distance and elevation units come from the tab headers; the component adds no wording.
+4. `src/components/CdmItinerary.astro` renders the module on the home page directly beneath the map group (native `<details>` and `<summary>`). Distance and elevation units come from the tab headers; the component adds no wording. In each expanded ride-day row the `Lodging Label` text is the `<dt>` and the lodging text its `<dd>` in one `<dl>`; the rest day shows no label. The generated trace records tab, key and exact cell for every UI value.
 5. `npm run copy:verify-rendered` adds every itinerary string to the approved set (so the two-way "no uncovered text" check covers it), checks the ten rows, their order, closed content (distance visible, elevation and notes not) and expanded content, checks the itinerary sits directly after the map block, and fails if retired sources (`Ride Highlights`, `RDE_Highlights`, the archived workbook name or its old spreadsheet id) appear on any page.
 6. `npm run copy:test` runs `scripts/copy/itinerary.test.mjs` (schema, fixture, generation, trace, rendered check) and the itinerary cases in `scripts/copy/negative-tests.mjs`. `scripts/cdm-itinerary-ui-audit.py` is the browser audit (map spacing, closed and expanded rows, keyboard, overlap, overflow, console, text outside the itinerary unchanged); run it against `dist/` or a deployed `--base-url`.
 7. `.github/workflows/scheduled-copy-sync.yml` also commits the itinerary fixture, module and trace when the tab changes. The hourly job therefore publishes tab edits to `main` through the same gate.
 
 Future dependency: renaming the tab, renaming a header, or reordering rows fails the gate by design. Change the tab and `scripts/copy/itinerary.mjs` together. Rollback: revert the release merge (below); the tab itself is never written by this pipeline.
+
+## Map group: canal map and France locator
+
+The home page map group is one row with the canal map on the left and the France locator on the right.
+
+- Assets (committed in `src/assets/photos/`, rendered through `Photo.astro`): `canal-des-deux-mers-illustrated-map.png` (sha256 `b8f992127919d88bda81ebe6acd47456805dac9eca3938fc90e37e48aa9575b2`, 2058x764) and `btf-cdm-france-locator-map.png` (sha256 `990e78ecd0e6b8f5a98a560313d3e0ae7da86b6834032f5f7c913c3b4f29d41c`, 1254x1254, copied byte for byte from the Drive copy `BTF_Marketing/Artwork/Illustrations/BTF_CDM_France_Locator_Map.png`). Do not recompress or resize the sources. `astro.config.mjs` omits both unreferenced original PNGs from `dist`.
+- Layout rule: canal map 80% and locator 20% of the row's content box, zero gap, so the locator is exactly 1:4 of the canal map width. Both keep their aspect ratios. The locator is vertically centered against the canal map. The side-by-side arrangement holds at every viewport width, phones included.
+- Outer spacing: 30px left and right, 5px top and bottom. No border, frame, background, shadow, caption or title. The locator has `alt=""` (decorative; no approved alt copy exists).
+- `scripts/cdm-itinerary-ui-audit.py` measures all of this at 1440, 1024, 768 and 390 px.
 
 ## Local validation and preview
 

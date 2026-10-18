@@ -26,12 +26,14 @@ export const ITINERARY: {
   heading: string;
   detailsControl: string;
   restDayTitle: string;
+  lodgingLabel: string;
   days: ItineraryDay[];
 } = {
   "tab": "CDM_Itinerary_for_BTF_Site",
-  "heading": "Your journey, day by day",
+  "heading": "The tour day by day",
   "detailsControl": "View day details",
   "restDayTitle": "Toulouse · Two nights and a rest day",
+  "lodgingLabel": "Where we'll stay",
   "days": [
     {
       "id": "1",
@@ -41,7 +43,7 @@ export const ITINERARY: {
       "endTown": "Meilhan-sur-Garonne",
       "distance": "53.6 miles",
       "elevation": "2122 feet",
-      "lodging": "We are welcomed to the \"Maison d'Hôtes\" (B&B that serves dinner) by Pascale and Giles. Lovely farm estate in the midst of vineyards and agritcultural land. The comfortable estate includes some rooms with private baths and others with shared bathrooms. We will have a lovely meal on the terrace near the pool. Riders are encouraged to bring a swim suit so they can enjoy the pool.",
+      "lodging": "We are welcomed to the \"Maison d'Hôtes\" (B&B that serves dinner) by Pascale and Giles. Lovely farm estate in the midst of vineyards and agricultural land. The comfortable estate includes some rooms with private baths and others with shared bathrooms. We will have a lovely meal on the terrace near the pool. Riders are encouraged to bring a swim suit so they can enjoy the pool.",
       "highlights": [
         {
           "name": "Roger Lapébie Greenway",
