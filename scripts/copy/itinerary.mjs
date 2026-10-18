@@ -31,6 +31,7 @@ const UI_KEYS = {
   heading: 'Itinerary section heading',
   details: 'Details control',
   rest: 'Rest day title',
+  lodgingLabel: 'Lodging Label',
 };
 
 export const REST_ID = 'REST';
@@ -216,10 +217,13 @@ export function validateItineraryGrid(grid) {
   });
 
   if (errors.length) return { errors, itinerary: null };
-  const uiNote = (path, key) => note(path, uiRows[key], COLUMNS.uiText, { key });
+  // UI values trace to their key and their exact cell (tab, key, cell).
+  const uiNote = (path, key) =>
+    note(path, uiRows[key], COLUMNS.uiText, { key, cell: `${columnLetter(col.uiText)}${uiRows[key]}` });
   uiNote('heading', UI_KEYS.heading);
   uiNote('detailsControl', UI_KEYS.details);
   uiNote('restDayTitle', UI_KEYS.rest);
+  uiNote('lodgingLabel', UI_KEYS.lodgingLabel);
   return {
     errors,
     itinerary: {
@@ -227,6 +231,7 @@ export function validateItineraryGrid(grid) {
       heading: ui[UI_KEYS.heading],
       detailsControl: ui[UI_KEYS.details],
       restDayTitle: ui[UI_KEYS.rest],
+      lodgingLabel: ui[UI_KEYS.lodgingLabel],
       days,
       trace,
     },
@@ -241,7 +246,7 @@ const valueAt = (data, path) =>
 
 /** Every approved string the page may render for the itinerary, in display order. */
 export function itineraryStrings(itinerary) {
-  const out = [itinerary.heading, itinerary.detailsControl, itinerary.restDayTitle];
+  const out = [itinerary.heading, itinerary.detailsControl, itinerary.restDayTitle, itinerary.lodgingLabel];
   for (const d of itinerary.days) {
     out.push(d.startTown, d.endTown);
     if (d.distance) out.push(d.distance);
@@ -289,6 +294,7 @@ export const ITINERARY: {
   heading: string;
   detailsControl: string;
   restDayTitle: string;
+  lodgingLabel: string;
   days: ItineraryDay[];
 } = ${JSON.stringify(data, null, 2)};
 `;
@@ -394,10 +400,13 @@ export function checkRenderedItinerary(html, itinerary) {
       inClosed('distance', day.distance);
       inPanel('elevation', day.elevation);
       inPanel('destination lodging', day.lodging);
+      inPanel('lodging label directly before the lodging text', itinerary.lodgingLabel + day.lodging);
+      notClosed('lodging label', itinerary.lodgingLabel);
       notClosed('elevation', day.elevation);
       notClosed('destination lodging', day.lodging);
     } else {
       inClosed('rest day title', itinerary.restDayTitle);
+      if (panel.includes(squash(itinerary.lodgingLabel))) bad(`row ${day.id}: the rest day must not show the lodging label`);
     }
   }
   return problems;

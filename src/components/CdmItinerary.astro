@@ -4,7 +4,7 @@
 // Native <details>/<summary> gives keyboard access and expanded state without extra labels.
 import { ITINERARY } from '../data/cdm-itinerary';
 
-const { heading, detailsControl, restDayTitle, days } = ITINERARY;
+const { heading, detailsControl, restDayTitle, lodgingLabel, days } = ITINERARY;
 ---
 
 <section class="section itinerary" aria-labelledby="itinerary-heading" data-cdm-itinerary>
@@ -44,7 +44,12 @@ const { heading, detailsControl, restDayTitle, days } = ITINERARY;
                     </div>
                   ))}
                 </dl>
-                {day.lodging && <p class="itin-day__lodging">{day.lodging}</p>}
+                {day.lodging && (
+                  <dl class="itin-day__stay">
+                    <dt class="itin-day__label">{lodgingLabel}</dt>
+                    <dd class="itin-day__lodging">{day.lodging}</dd>
+                  </dl>
+                )}
                 {day.elevation && <p class="itin-day__elevation">{day.elevation}</p>}
               </div>
             </details>
@@ -178,7 +183,17 @@ const { heading, detailsControl, restDayTitle, days } = ITINERARY;
   .itin-day__highlights dd {
     margin: 0;
   }
-  .itin-day__lodging,
+  .itin-day__stay {
+    margin: 0 0 var(--s3);
+    max-width: var(--measure);
+  }
+  .itin-day__label {
+    font-weight: 600;
+    color: var(--green);
+  }
+  .itin-day__lodging {
+    margin: 0;
+  }
   .itin-day__elevation {
     max-width: var(--measure);
   }

@@ -9,6 +9,7 @@ import { COPY, TEXT } from '../data/approved-copy';
 import { GALLERY, PHOTOS } from '../data/photos';
 import { CONTACT_LINKS } from '../data/site';
 import canalMap from '../assets/photos/canal-des-deux-mers-illustrated-map.png';
+import franceLocator from '../assets/photos/btf-cdm-france-locator-map.png';
 
 const { hero, readyToRide, about, gallery, buttons } = COPY;
 ---
@@ -85,13 +86,24 @@ const { hero, readyToRide, about, gallery, buttons } = COPY;
   </section>
 
   <div class="journey-map">
-    <Photo
-      src={canalMap}
-      alt={TEXT['/home/canal_map_alt']}
-      sizes="calc(100vw - 60px)"
-      widths={[330, 768, 1380, 2058]}
-      quality={70}
-    />
+    <div class="journey-map__canal">
+      <Photo
+        src={canalMap}
+        alt={TEXT['/home/canal_map_alt']}
+        sizes="calc((100vw - 60px) * 0.8)"
+        widths={[264, 614, 1104, 1646]}
+        quality={70}
+      />
+    </div>
+    <div class="journey-map__locator">
+      <Photo
+        src={franceLocator}
+        alt=""
+        sizes="calc((100vw - 60px) * 0.2)"
+        widths={[66, 154, 276, 552]}
+        quality={70}
+      />
+    </div>
   </div>
 
   <CdmItinerary />
@@ -189,9 +201,23 @@ const { hero, readyToRide, about, gallery, buttons } = COPY;
 </BaseLayout>
 
 <style>
+  /* Map group: canal map 80% and France locator 20% of one row (locator = 1:4 of the canal map width),
+     locator vertically centered, at every viewport width. Outer spacing 30px sides, 5px top and bottom. */
   .journey-map {
+    display: flex;
+    align-items: center;
     width: calc(100% - 60px);
     margin: 5px 30px;
+  }
+
+  .journey-map__canal {
+    flex: 0 0 80%;
+    width: 80%;
+  }
+
+  .journey-map__locator {
+    flex: 0 0 20%;
+    width: 20%;
   }
 
   .journey-map :global(picture),

@@ -46,6 +46,8 @@ function artifactWith(change) {
   return file;
 }
 check('itinerary fixture is structurally valid', () => assert.equal(validateItineraryGrid(JSON.parse(readFileSync(PATHS.itineraryFixture, 'utf8'))).errors.length, 0));
+check('lodging label key missing from the itinerary tab fails validation', () => { const bad = JSON.parse(readFileSync(PATHS.itineraryFixture, 'utf8')); const at = bad[0].indexOf('UI Copy Key'); const row = bad.find((r, i) => i > 0 && r[at] === 'Lodging Label'); row[at] = ''; assert.match(JSON.stringify(validateItineraryGrid(bad).errors), /required UI copy key \\"Lodging Label\\" is missing/); });
+check('lodging label missing from the approved artifact fails the rendered gate', () => assert.notEqual(run('scripts/copy/verify-rendered.mjs', {}, ['--artifact', artifactWith((a) => { a.itinerary.lodgingLabel = 'Invented label'; })]).status, 0));
 check('itinerary row missing from the approved artifact fails the rendered gate', () => assert.notEqual(run('scripts/copy/verify-rendered.mjs', {}, ['--artifact', artifactWith((a) => a.itinerary.days.splice(6, 1))]).status, 0));
 check('itinerary text that differs from the workbook fails the rendered gate', () => assert.notEqual(run('scripts/copy/verify-rendered.mjs', {}, ['--artifact', artifactWith((a) => { a.itinerary.days[2].description = 'Deliberate mismatch ' + a.itinerary.days[2].description; })]).status, 0));
 check('missing itinerary in the approved artifact fails the rendered gate', () => assert.notEqual(run('scripts/copy/verify-rendered.mjs', {}, ['--artifact', artifactWith((a) => { delete a.itinerary; })]).status, 0));

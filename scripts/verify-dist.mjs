@@ -106,7 +106,10 @@ for (const { rel, html } of pages) {
     if (!/\salt(=|\s|\/|>)/.test(img[0])) fail(name, `img without alt: ${img[0].slice(0, 80)}`);
   }
   // The minifier writes alt="" as a bare alt attribute.
-  const emptyAlt = [...html.matchAll(/<img\b[^>]*\salt(=""|(?=[\s/>]))[^>]*>/g)].length;
+  // Owner decision (BTF-CDM-MAP-ITIN-202610181637): the France locator beside the canal map is decorative
+  // (alt=""; no approved alt copy exists). It is the only exempt image, and only inside its map-group wrapper.
+  const withoutLocator = html.replace(/<div class="journey-map__locator\b[^>]*>[\s\S]*?<\/div>/, '');
+  const emptyAlt = [...withoutLocator.matchAll(/<img\b[^>]*\salt(=""|(?=[\s/>]))[^>]*>/g)].length;
   if (emptyAlt > 0) fail(name, `${emptyAlt} images with empty alt (every image on this site is informative)`);
 
   for (const m of html.matchAll(/<a\b[^>]*\shref="([^"]+)"/g)) {

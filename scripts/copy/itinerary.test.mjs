@@ -161,6 +161,34 @@ test('UI copy keys are all required, unique, known and non-blank', () => {
   assert.match(messages(blank), /has blank "Approved Text"/);
 });
 
+test('the "Lodging Label" UI key is required, unique and non-blank, spelled exactly as the Sheet spells it', () => {
+  const grid = fixture();
+  const keyAt = (name) => grid.findIndex((r, i) => i > 0 && r[COL['UI Copy Key']] === name);
+  assert.ok(keyAt('Lodging Label') > 0, 'the fixture holds the live key "Lodging Label"');
+  const missing = structuredClone(grid);
+  missing[keyAt('Lodging Label')][COL['UI Copy Key']] = '';
+  missing[keyAt('Lodging Label')][COL['Approved Text']] = '';
+  assert.match(messages(missing), /required UI copy key "Lodging Label" is missing/);
+  const dup = structuredClone(grid);
+  dup[keyAt('Rest day title')][COL['UI Copy Key']] = 'Lodging Label';
+  assert.match(messages(dup), /duplicate UI copy key "Lodging Label"/);
+  const empty = structuredClone(grid);
+  empty[keyAt('Lodging Label')][COL['Approved Text']] = '';
+  assert.match(messages(empty), /UI copy key "Lodging Label" has blank "Approved Text"/);
+  const respelled = structuredClone(grid);
+  respelled[keyAt('Lodging Label')][COL['UI Copy Key']] = 'Lodging label';
+  assert.match(messages(respelled), /unrecognized UI copy key "Lodging label"/);
+});
+
+test('the lodging label traces to its tab, key and exact cell', () => {
+  const { itinerary } = validateItineraryGrid(fixture());
+  const entry = JSON.parse(renderItineraryTrace(itinerary)).values.find((t) => t.path === 'lodgingLabel');
+  assert.equal(entry.tab, ITINERARY_TAB);
+  assert.equal(entry.key, 'Lodging Label');
+  assert.match(entry.cell, /^L\d+$/);
+  assert.equal(entry.value, itinerary.lodgingLabel);
+});
+
 test('HTML in a cell is rejected', () => {
   assert.match(messages(edit(fixture(), '1', 'Start Town', '<b>Bordeaux</b>')), /contains HTML/);
 });
@@ -177,9 +205,9 @@ test('every generated value traces to a tab, row and header of the fixture, and 
   const grid = fixture();
   const { itinerary } = validateItineraryGrid(grid);
   const trace = JSON.parse(renderItineraryTrace(itinerary)).values;
-  // 3 UI values + 9 ride days x 10 (start, end, distance, elevation, lodging, 2x2 highlight parts,
+  // 4 UI values (heading, details control, rest day title, lodging label) + 9 ride days x 10 (start, end, distance, elevation, lodging, 2x2 highlight parts,
   // description) + the rest day x 7 (start, end, 2x2 highlight parts, description).
-  assert.equal(trace.length, 3 + 9 * 10 + 7);
+  assert.equal(trace.length, 4 + 9 * 10 + 7);
   for (const t of trace) {
     assert.equal(t.tab, ITINERARY_TAB);
     assert.ok(ITINERARY_HEADERS.includes(t.header), t.header);
@@ -264,7 +292,8 @@ function page(itinerary, tweak = {}) {
     const summary = tweak.summaryExtra?.(d) ?? '';
     const panel =
       `<p>${d.description}</p><dl>${d.highlights.map((h) => `<div><dt>${h.name}</dt><dd>${h.note}</dd></div>`).join('')}</dl>` +
-      (d.lodging ? `<p>${d.lodging}</p><p>${d.elevation}</p>` : '');
+      (d.lodging ? `${tweak.noLabel ? `<p>${d.lodging}</p>` : `<dl><dt>${itinerary.lodgingLabel}</dt><dd>${d.lodging}</dd></dl>`}<p>${d.elevation}</p>` : '') +
+      (d.kind === 'rest' && tweak.restLabel ? `<dl><dt>${itinerary.lodgingLabel}</dt></dl>` : '');
     return `<li><details${tweak.open ? ' open' : ''} data-itin-day="${d.id}"><summary>${head}${names}<span>${itinerary.detailsControl}</span>${summary}</summary><div>${panel}</div></details></li>`;
   };
   const days = tweak.days ?? itinerary.days;
@@ -301,4 +330,10 @@ test('the rendered-page check requires the itinerary directly below the map', ()
   const map = '<div class="journey-map"><picture></picture></div>';
   const above = page(itinerary).replace(map, '').replace('</body>', `${map}</body>`);
   assert.match(checkRenderedItinerary(above, itinerary).join('\n'), /not below the map/);
+});
+
+test('the rendered-page check requires the lodging label directly before the lodging text on ride days only', () => {
+  const { itinerary } = validateItineraryGrid(fixture());
+  assert.match(checkRenderedItinerary(page(itinerary, { noLabel: true }), itinerary).join('\n'), /lodging label directly before the lodging text/);
+  assert.match(checkRenderedItinerary(page(itinerary, { restLabel: true }), itinerary).join('\n'), /rest day must not show the lodging label/);
 });

@@ -38,7 +38,7 @@
    "tab": "CDM_Itinerary_for_BTF_Site",
    "row": 2,
    "header": "Destination Lodging",
-   "value": "We are welcomed to the \"Maison d'Hôtes\" (B&B that serves dinner) by Pascale and Giles. Lovely farm estate in the midst of vineyards and agritcultural land. The comfortable estate includes some rooms with private baths and others with shared bathrooms. We will have a lovely meal on the terrace near the pool. Riders are encouraged to bring a swim suit so they can enjoy the pool."
+   "value": "We are welcomed to the \"Maison d'Hôtes\" (B&B that serves dinner) by Pascale and Giles. Lovely farm estate in the midst of vineyards and agricultural land. The comfortable estate includes some rooms with private baths and others with shared bathrooms. We will have a lovely meal on the terrace near the pool. Riders are encouraged to bring a swim suit so they can enjoy the pool."
   },
   {
    "path": "days[0].highlights[0].name",
@@ -746,7 +746,8 @@
    "row": 2,
    "header": "Approved Text",
    "key": "Itinerary section heading",
-   "value": "Your journey, day by day"
+   "cell": "L2",
+   "value": "The tour day by day"
   },
   {
    "path": "detailsControl",
@@ -754,6 +755,7 @@
    "row": 3,
    "header": "Approved Text",
    "key": "Details control",
+   "cell": "L3",
    "value": "View day details"
   },
   {
@@ -762,7 +764,17 @@
    "row": 4,
    "header": "Approved Text",
    "key": "Rest day title",
+   "cell": "L4",
    "value": "Toulouse · Two nights and a rest day"
+  },
+  {
+   "path": "lodgingLabel",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 5,
+   "header": "Approved Text",
+   "key": "Lodging Label",
+   "cell": "L5",
+   "value": "Where we'll stay"
   }
  ]
 }

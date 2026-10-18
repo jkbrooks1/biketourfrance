@@ -44,10 +44,14 @@ for row in grid[1:]:
         lodging=None if ident == 'REST' else cell(row, 'Destination Lodging'),
         highlights=bullets, description=cell(row, 'Route description')))
 HEADING, DETAILS, RESTTITLE = ui['Itinerary section heading'], ui['Details control'], ui['Rest day title']
+# The live Sheet spells the key "Lodging Label"; find it without assuming the spelling.
+LABEL = next(v for k, v in ui.items() if k.lower() == 'lodging label')
+DAY1_LODGING = next(d['lodging'] for d in days if d['id'] == '1')
+STAGING_BANNER = 'Staging preview. This site is not indexed by search engines and is not the live BikeTourFrance.net site.'
 fixture_rows = dict(json.load(open(os.path.join(ROOT, 'copy/fixture/fixture-rows.json'), encoding='utf8')))
 MAP_ALT = fixture_rows['/home/canal_map_alt']
 
-results, failures = [], []
+results, failures, measured, notes = [], [], [], []
 def check(name, ok, detail=''):
     results.append(dict(name=name, ok=bool(ok), detail=str(detail)[:400]))
     if not ok:
@@ -71,7 +75,8 @@ def run():
             tag = f'{width}px'
             ctx = browser.new_context(viewport={'width': width, 'height': 900}, device_scale_factor=1)
             page = ctx.new_page()
-            console, failed = [], []
+            console, failed, img_status = [], [], {}
+            page.on('response', lambda r: img_status.__setitem__(r.url, r.status) if r.request.resource_type == 'image' else None)
             page.on('console', lambda m: console.append(f'{m.type}: {m.text}') if m.type in ('error', 'warning') else None)
             page.on('pageerror', lambda e: console.append(f'pageerror: {e}'))
             page.on('requestfailed', lambda r: failed.append(f'{r.url} {r.failure}'))
@@ -80,23 +85,40 @@ def run():
             page.add_style_tag(content='html{scroll-behavior:auto !important}')
             check(f'[{tag}] home page loads with HTTP success', resp and resp.ok, resp.status if resp else 'none')
 
-            # ---- map: position, spacing, no added border, correct asset and alt
+            # ---- map group: canal map left, France locator right (1:4), centered, outer spacing, no extras
+            page.evaluate("document.querySelector('.journey-map').scrollIntoView({block:'center'})")
+            page.wait_for_function("(() => [...document.querySelectorAll('.journey-map img')].every(i => i.complete && i.naturalWidth > 0))()", timeout=15000)
             m = page.evaluate("""() => {
-              const box = document.querySelector('.journey-map'); const img = box.querySelector('img');
-              const r = box.getBoundingClientRect(); const cs = getComputedStyle(box);
-              return { left: r.left, rightGap: document.documentElement.clientWidth - r.right, top: r.top + scrollY, bottom: r.bottom + scrollY,
-                marginTop: cs.marginTop, marginBottom: cs.marginBottom, borders: ['Top','Right','Bottom','Left'].map(s => cs['border'+s+'Width']),
-                outline: cs.outlineStyle, alt: img.alt, complete: img.complete, natural: img.naturalWidth, src: img.currentSrc, imgW: img.getBoundingClientRect().width,
-                boxW: r.width, prevIsReady: box.previousElementSibling && box.previousElementSibling.getAttribute('aria-labelledby'),
-                nextIsItinerary: box.nextElementSibling && box.nextElementSibling.hasAttribute('data-cdm-itinerary'),
-                gapToItinerary: document.querySelector('[data-cdm-itinerary]').getBoundingClientRect().top + scrollY - (r.bottom + scrollY) } }""")
-            check(f'[{tag}] map has 30px left and right spacing', abs(m['left'] - 30) < 0.6 and abs(m['rightGap'] - 30) < 0.6, f"left={m['left']} right={m['rightGap']}")
-            check(f'[{tag}] map has 5px top and bottom spacing', m['marginTop'] == '5px' and m['marginBottom'] == '5px', f"{m['marginTop']} {m['marginBottom']}")
-            check(f'[{tag}] map has no added visible border', all(b == '0px' for b in m['borders']) and m['outline'] == 'none', m['borders'])
-            check(f'[{tag}] map image loaded and fills the one-column width', m['complete'] and m['natural'] > 0 and abs(m['imgW'] - m['boxW']) < 1, f"natural={m['natural']} w={m['imgW']}/{m['boxW']}")
-            check(f'[{tag}] map is the Agen aqueduct asset with the approved alt text', 'canal-des-deux-mers-illustrated-map' in m['src'] and m['alt'] == MAP_ALT, m['src'])
-            check(f'[{tag}] map sits after the Ready to ride section', m['prevIsReady'] == 'ready-heading', m['prevIsReady'])
-            check(f'[{tag}] itinerary section is the next element after the map', m['nextIsItinerary'], m['gapToItinerary'])
+              const box = document.querySelector('.journey-map'); const canal = box.querySelector('.journey-map__canal img'); const loc = box.querySelector('.journey-map__locator img');
+              const rect = (e) => { const r = e.getBoundingClientRect(); return { l: r.left, r: r.right, t: r.top, b: r.bottom, w: r.width, h: r.height }; };
+              const r = rect(box); const c = rect(canal); const l = rect(loc); const cs = getComputedStyle(box);
+              const borders = [...box.querySelectorAll('*')].concat([box]).map(e => ['Top','Right','Bottom','Left'].map(s => getComputedStyle(e)['border'+s+'Width']).join(',') + '|' + getComputedStyle(e).boxShadow + '|' + getComputedStyle(e).outlineStyle);
+              return { left: r.l, rightGap: document.documentElement.clientWidth - r.r, marginTop: cs.marginTop, marginBottom: cs.marginBottom,
+                canal: c, loc: l, row: r, borders, boxText: box.innerText.trim(), figcaptions: box.querySelectorAll('figcaption,h1,h2,h3,h4,p,span').length,
+                canalAlt: canal.alt, locAlt: loc.getAttribute('alt'), canalNat: canal.naturalWidth, locNat: loc.naturalWidth, canalSrc: canal.currentSrc, locSrc: loc.currentSrc,
+                prevIsReady: box.previousElementSibling && box.previousElementSibling.getAttribute('aria-labelledby'),
+                nextIsItinerary: box.nextElementSibling && box.nextElementSibling.hasAttribute('data-cdm-itinerary') } }""")
+            ratio = m['loc']['w'] / m['canal']['w']
+            record = dict(width=width, ratio=round(ratio, 5), locW=round(m['loc']['w'], 2), canalW=round(m['canal']['w'], 2),
+                          locCenterY=round((m['loc']['t'] + m['loc']['b']) / 2, 2), canalCenterY=round((m['canal']['t'] + m['canal']['b']) / 2, 2),
+                          left=round(m['left'], 2), rightGap=round(m['rightGap'], 2), marginTop=m['marginTop'], marginBottom=m['marginBottom'],
+                          gapBetween=round(m['loc']['l'] - m['canal']['r'], 2))
+            measured.append(record)
+            check(f'[{tag}] locator is present and to the right of the canal map', m['loc']['l'] >= m['canal']['r'] - 0.5 and m['loc']['w'] > 0, record)
+            check(f'[{tag}] locator width is 0.25 of canal map width within 1px', abs(m['loc']['w'] - 0.25 * m['canal']['w']) <= 1, f"loc={m['loc']['w']} canal={m['canal']['w']} ratio={ratio}")
+            check(f'[{tag}] locator vertical center equals canal map vertical center within 1px', abs((m['loc']['t'] + m['loc']['b']) / 2 - (m['canal']['t'] + m['canal']['b']) / 2) <= 1, record)
+            check(f'[{tag}] canal map and locator have no gap between them', abs(m['loc']['l'] - m['canal']['r']) <= 0.6, record['gapBetween'])
+            check(f'[{tag}] map group fills the row: canal map 80%, locator 20%', abs(m['canal']['w'] / m['row']['w'] - 0.8) < 0.005 and abs(m['loc']['w'] / m['row']['w'] - 0.2) < 0.005, f"{m['canal']['w']/m['row']['w']:.4f} {m['loc']['w']/m['row']['w']:.4f}")
+            check(f'[{tag}] map group has 30px left and right spacing', abs(m['left'] - 30) < 0.6 and abs(m['rightGap'] - 30) < 0.6, f"left={m['left']} right={m['rightGap']}")
+            check(f'[{tag}] map group has 5px top and bottom spacing', m['marginTop'] == '5px' and m['marginBottom'] == '5px', f"{m['marginTop']} {m['marginBottom']}")
+            check(f'[{tag}] no visible border, shadow, caption or text in the map group', all(b.startswith('0px,0px,0px,0px|none|none') for b in m['borders']) and m['boxText'] == '' and m['figcaptions'] == 0, m['borders'][:3])
+            check(f'[{tag}] canal map has the approved alt text and the locator has empty alt', m['canalAlt'] == MAP_ALT and m['locAlt'] == '', f"{m['canalAlt'][:40]!r} {m['locAlt']!r}")
+            check(f'[{tag}] both images loaded (HTTP 200, naturalWidth > 0)', m['canalNat'] > 0 and m['locNat'] > 0 and img_status.get(m['canalSrc']) == 200 and img_status.get(m['locSrc']) == 200, f"{img_status.get(m['canalSrc'])} {img_status.get(m['locSrc'])}")
+            check(f'[{tag}] canal map is the Agen aqueduct asset and the locator is the France locator asset', 'canal-des-deux-mers-illustrated-map' in m['canalSrc'] and 'btf-cdm-france-locator-map' in m['locSrc'], f"{m['canalSrc']} | {m['locSrc']}")
+            check(f'[{tag}] map group sits after Ready to ride and is followed by the itinerary', m['prevIsReady'] == 'ready-heading' and m['nextIsItinerary'], '')
+            if width in SHOT_WIDTHS:
+                page.wait_for_timeout(800)
+                page.screenshot(path=os.path.join(args.out, f'{args.label}_{width}_map_group.png'))
 
             sec = page.locator('section[data-cdm-itinerary]')
             check(f'[{tag}] itinerary heading is the approved heading', ws(sec.locator('h2').inner_text()) == HEADING, ws(sec.locator('h2').inner_text()))
@@ -131,6 +153,7 @@ def run():
                       if (w > 1 && h > 1) bad.push(kids[a][0].className + ' x ' + kids[b][0].className); } });
                   return bad; }""", selector)
             check(f'[{tag}] no overlapping elements in closed rows', overlap_report('.itin-day__summary') == [], overlap_report('.itin-day__summary'))
+            check(f'[{tag}] canal map and locator do not overlap', overlap_report('.journey-map') == [], overlap_report('.journey-map'))
             ov = page.evaluate("""() => { const w = document.documentElement.clientWidth; const bad = [];
               document.querySelectorAll('[data-cdm-itinerary] *').forEach(e => { const r = e.getBoundingClientRect(); if (r.width && (r.right > w + 0.5 || r.left < -0.5)) bad.push(e.className || e.tagName); });
               return { page: document.documentElement.scrollWidth - w, bad }; }""")
@@ -152,6 +175,11 @@ def run():
                 label = f'[{tag}] row {d["id"]} expanded'
                 want = [d['description']] + [x for h in d['highlights'] for x in h] + ([] if d['rest'] else [d['lodging'], d['elevation']])
                 check(f'{label}: opens on click', opened, '')
+                if d['rest']:
+                    check(f'{label}: no lodging label on the rest day', panel.locator('.itin-day__label').count() == 0, '')
+                else:
+                    lab = panel.evaluate("p => { const dt = p.querySelector('.itin-day__label'); const dd = dt && dt.nextElementSibling; return { label: dt && dt.innerText.trim(), lodging: dd && dd.innerText.trim(), isDd: !!dd && dd.tagName === 'DD', pair: !!dt && dt.parentElement.tagName === 'DL' }; }")
+                    check(f'{label}: live Lodging Label is immediately before the lodging text', lab['label'] == LABEL and lab['lodging'] == d['lodging'] and lab['isDd'] and lab['pair'], lab)
                 check(f'{label}: shows description, both notes{"" if d["rest"] else ", lodging and elevation"}', all(ws(x) in ptxt for x in want), ptxt[:120])
                 if not d['rest']:
                     check(f'{label}: elevation is visible inside the details', panel.locator('.itin-day__elevation').evaluate(JS_VISIBLE) and ws(panel.locator('.itin-day__elevation').inner_text()) == d['elevation'], '')
@@ -188,6 +216,9 @@ def run():
             ov = page.evaluate("""() => { const w = document.documentElement.clientWidth; const bad = [];
               document.querySelectorAll('[data-cdm-itinerary] *').forEach(e => { const r = e.getBoundingClientRect(); if (r.width && (r.right > w + 0.5 || r.left < -0.5)) bad.push(e.className || e.tagName); });
               return { page: document.documentElement.scrollWidth - w, bad }; }""")
+            labels = page.eval_on_selector_all('[data-cdm-itinerary] .itin-day__label', 'els => els.map(e => e.innerText.trim())')
+            check(f'[{tag}] the live Lodging Label text appears exactly 9 times with all rows expanded', labels == [LABEL] * 9, labels)
+            check(f'[{tag}] Day 1 lodging shows "agricultural" and the page has no "agritcultural"', 'agricultural' in DAY1_LODGING and page.locator('[data-itin-day="1"] .itin-day__lodging').inner_text().strip() == DAY1_LODGING and 'agritcultural' not in page.content(), '')
             check(f'[{tag}] no horizontal overflow (all rows expanded)', ov['page'] <= 0 and not ov['bad'], ov)
             check(f'[{tag}] no overlapping elements in expanded rows', overlap_report('.itin-day__panel') == [] and overlap_report('.itin-day__summary') == [], '')
             if width in SHOT_WIDTHS:
@@ -203,14 +234,18 @@ def run():
 
             # ---- nothing outside the itinerary changed (text compared with the baseline page)
             if args.baseline_html and width == 1440:
-                strip = """() => { const c = document.body.cloneNode(true); c.querySelectorAll('script,style,[data-cdm-itinerary]').forEach(e => e.remove());
+                strip = """() => { const c = document.body.cloneNode(true); c.querySelectorAll('script,style,[data-cdm-itinerary],.journey-map').forEach(e => e.remove());
                   return c.textContent.replace(/\\s+/g, ' ').replace(/updated [\\d-]+ \\d\\d:\\d\\d Heure de Paris/g, 'updated [stamp]')
                   .replace(/\\[email.protected\\]|contact@biketourfrance\\.net/g, '[email]').trim(); }"""
                 now_text = page.evaluate(strip)
+                banner_seen = STAGING_BANNER in now_text
+                if args.label == 'preview' and banner_seen:
+                    now_text = now_text.replace(STAGING_BANNER, '').strip()
+                    notes.append('preview-only staging banner text removed before comparison')
                 base_page = ctx.new_page()
                 base_page.set_content(open(args.baseline_html, encoding='utf8').read())
                 base_text = base_page.evaluate(strip)
-                check('[1440px] all text outside the itinerary is identical to the page before this release', now_text == base_text, f'now={len(now_text)} before={len(base_text)}')
+                check('[1440px] all text outside the map group and itinerary is identical to production before this release', now_text == base_text, f'now={len(now_text)} before={len(base_text)}')
                 base_page.close()
             ctx.close()
         browser.close()
@@ -220,7 +255,7 @@ try:
 finally:
     if server:
         server.terminate()
-json.dump(dict(label=args.label, base=base, passed=len(results) - len(failures), failed=len(failures), failures=failures, results=results), open(os.path.join(args.out, f'{args.label}_results.json'), 'w'), indent=1, ensure_ascii=False)
+json.dump(dict(label=args.label, base=base, measured=measured, notes=notes, passed=len(results) - len(failures), failed=len(failures), failures=failures, results=results), open(os.path.join(args.out, f'{args.label}_results.json'), 'w'), indent=1, ensure_ascii=False)
 print(f'ui-audit[{args.label}] {len(results) - len(failures)} passed, {len(failures)} failed')
 for f in failures[:30]:
     print('  FAIL', f)
