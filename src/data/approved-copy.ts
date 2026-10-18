@@ -14,7 +14,7 @@ export const COPY = {
   hero: {
     heading: "Choose your own bike adventure in France?",
     body1: "Join us for a small group cycling tour of the historic Canal des Deux Mers between Bordeaux on the Atlantic and Sète on the Mediterranean. We roll in the Spring and Fall of 2027. Or, do the same tour on your own and we'll help with remote support.",
-    body2: "I love bike touring in France. And I love to help fellow bike travelers have great trips. Join one of my small groups or buy a package so you can do the tour on your own; email contact@biketourfrance.net for more information. Or, if you want a hand planning your own bike adventure in France and just want my coaching, let's jump on a call. Send an email. I charge $250 for a 50-minute planning session that includes two follow up emails.",
+    body2: "I love bike touring in France. And I love to help fellow bike travelers have great trips. Join one of my small groups or buy a package so you can do the tour on your own; email contact@biketourfrance.net for more information. Or, if you want a hand planning your own bike adventure in France and just want my coaching, let's jump on a call. Send me an email and I'll respond with details.",
     mailingListCta: "Get tour updates",
     waitlistCta: "Join the 2027 waitlist"
   },
@@ -31,7 +31,7 @@ export const COPY = {
     included: [
       "Ride briefing every morning at breakfast",
       "Lodging for duration of the tour; Ride Day Zero (RD00 - arrival) in Bordeaux through Ride Day 09 (RD09) in Sète.",
-      "Dinners together for all Ride Days except RD04 arrival in Toulouse and RD06, arrival in Carcassonne which are \"Dine on your own\" nights. I've learned these are the places people most want to explore on their own.",
+      "Three dinners together; night before departure in Bordeaux, rest day in Toulouse, and our final night together in Sète. You will get dinner suggestions or you can go explore on your own!",
       "All dinner reservations and host coordination",
       "Three dinners with local hosts when we are staying at \"Maison d'Hôtes\" (B&B that serves half-board meaning breakfast and dinner.) We won't eat family style but they will join us for conversation before or after our meal. One couple are British ex-pats and have a great perspective on living in Southwest France.",
       "Routes in special BikeTourFrance.net RideWithGPS tour specific collection",
@@ -358,7 +358,7 @@ export const TEXT: Record<string, string> = {
   "/gallery/heading": "Tour Gallery",
   "/header/logo_text": "BikeTourFrance.net",
   "/hero/body_1": "Join us for a small group cycling tour of the historic Canal des Deux Mers between Bordeaux on the Atlantic and Sète on the Mediterranean. We roll in the Spring and Fall of 2027. Or, do the same tour on your own and we'll help with remote support.",
-  "/hero/body_2": "I love bike touring in France. And I love to help fellow bike travelers have great trips. Join one of my small groups or buy a package so you can do the tour on your own; email contact@biketourfrance.net for more information. Or, if you want a hand planning your own bike adventure in France and just want my coaching, let's jump on a call. Send an email. I charge $250 for a 50-minute planning session that includes two follow up emails.",
+  "/hero/body_2": "I love bike touring in France. And I love to help fellow bike travelers have great trips. Join one of my small groups or buy a package so you can do the tour on your own; email contact@biketourfrance.net for more information. Or, if you want a hand planning your own bike adventure in France and just want my coaching, let's jump on a call. Send me an email and I'll respond with details.",
   "/hero/heading": "Choose your own bike adventure in France?",
   "/hero/mailing_list_cta": "Get tour updates",
   "/hero/waitlist_cta": "Join the 2027 waitlist",
@@ -426,7 +426,7 @@ export const TEXT: Record<string, string> = {
   "/ready-to-ride/heading": "Ready to ride?",
   "/ready-to-ride/included_1": "Ride briefing every morning at breakfast",
   "/ready-to-ride/included_2": "Lodging for duration of the tour; Ride Day Zero (RD00 - arrival) in Bordeaux through Ride Day 09 (RD09) in Sète.",
-  "/ready-to-ride/included_3": "Dinners together for all Ride Days except RD04 arrival in Toulouse and RD06, arrival in Carcassonne which are \"Dine on your own\" nights. I've learned these are the places people most want to explore on their own.",
+  "/ready-to-ride/included_3": "Three dinners together; night before departure in Bordeaux, rest day in Toulouse, and our final night together in Sète. You will get dinner suggestions or you can go explore on your own!",
   "/ready-to-ride/included_4": "All dinner reservations and host coordination",
   "/ready-to-ride/included_5": "Three dinners with local hosts when we are staying at \"Maison d'Hôtes\" (B&B that serves half-board meaning breakfast and dinner.) We won't eat family style but they will join us for conversation before or after our meal. One couple are British ex-pats and have a great perspective on living in Southwest France.",
   "/ready-to-ride/included_6": "Routes in special BikeTourFrance.net RideWithGPS tour specific collection",
