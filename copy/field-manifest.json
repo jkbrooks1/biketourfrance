@@ -2772,6 +2772,12 @@
     "codeLocation": "src/pages/index.astro"
   },
   {
+    "field": "/home/canal_map_alt",
+    "route": "/",
+    "required": true,
+    "codeLocation": "src/pages/index.astro"
+  },
+  {
     "field": "/cdm-gallery/cdm1_7f68703ad5c23d61_caption",
     "route": "/cdm-photo-gallery/",
     "required": false,

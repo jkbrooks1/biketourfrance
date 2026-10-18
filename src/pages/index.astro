@@ -7,6 +7,7 @@ import Gallery from '../components/Gallery.astro';
 import { COPY, TEXT } from '../data/approved-copy';
 import { GALLERY, PHOTOS } from '../data/photos';
 import { CONTACT_LINKS } from '../data/site';
+import canalMap from '../assets/photos/canal-des-deux-mers-illustrated-map.png';
 
 const { hero, readyToRide, about, gallery, buttons } = COPY;
 ---
@@ -81,6 +82,16 @@ const { hero, readyToRide, about, gallery, buttons } = COPY;
       </div>
     </div>
   </section>
+
+  <div class="journey-map">
+    <Photo
+      src={canalMap}
+      alt={TEXT['/home/canal_map_alt']}
+      sizes="calc(100vw - 60px)"
+      widths={[330, 768, 1380, 2058]}
+      quality={70}
+    />
+  </div>
 
   <section class="section section--beige" aria-labelledby="cdm-heading">
     <div class="container split split--reverse">
@@ -173,3 +184,17 @@ const { hero, readyToRide, about, gallery, buttons } = COPY;
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .journey-map {
+    width: calc(100% - 60px);
+    margin: 5px 30px;
+  }
+
+  .journey-map :global(picture),
+  .journey-map :global(img) {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+</style>

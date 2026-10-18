@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "projectId": "biketourfrance-native-astro",
   "effectiveDate": "2026-10-04",
-  "canonicalLocalRoot": "/Users/jkbrookspersonal/LocalSiteBuildFiles/00_BTF_MAIN_SITE_CLOUDFLARE_ROOT",
+  "canonicalLocalRoot": "/Users/jkbrookspersonal/LocalSiteBuildFiles/00_BTF_MAIN_ROOT",
   "developmentBranch": "main",
   "productionBranch": "main",
   "githubRemote": "https://github.com/jkbrooks1/biketourfrance.git",
