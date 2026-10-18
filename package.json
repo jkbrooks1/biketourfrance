@@ -27,7 +27,8 @@
     "check:browser": "python3 scripts/browser-check.py",
     "gallery:sync": "node scripts/gallery/sync-review.mjs",
     "gallery:test": "node --test scripts/gallery/review.test.mjs",
-    "gallery:verify": "node scripts/gallery/verify-review.mjs"
+    "gallery:verify": "node scripts/gallery/verify-review.mjs",
+    "guard:test": "node --test scripts/guard/assert-canonical-root.test.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
