@@ -6,6 +6,7 @@ import { resolve, dirname, join } from 'node:path';
 import { homedir } from 'node:os';
 import { fileURLToPath } from 'node:url';
 import { normalizeCell, parseBlocks, linkTargets, MAIL_TARGETS } from './markup.mjs';
+import { ITINERARY_TAB } from './itinerary.mjs';
 
 export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 // BTF_COPY_OUT_DIR lets the test suite write its artifacts somewhere else; normal builds never set it.
@@ -16,6 +17,9 @@ export const PATHS = {
   fixture: resolve(ROOT, 'copy/fixture/fixture-rows.json'),
   outDir: OUT_DIR,
   rows: resolve(OUT_DIR, 'sheet-rows.json'),
+  // The second governed tab (CDM_Itinerary_for_BTF_Site): offline fixture and fetched rows.
+  itineraryFixture: resolve(ROOT, 'copy/fixture/cdm-itinerary-rows.json'),
+  itineraryRows: resolve(OUT_DIR, 'itinerary-rows.json'),
   artifact: resolve(OUT_DIR, 'approved-copy.generated.json'),
   stamp: resolve(OUT_DIR, 'rendered-verified.json'),
   // BTF_COPY_DIST_DIR lets the test suite point the checks at a copy of dist/; normal runs never set it.
@@ -63,7 +67,8 @@ export function loadRules() {
 }
 
 export function cleanArtifacts() {
-  for (const file of [PATHS.rows, PATHS.artifact, PATHS.stamp]) if (existsSync(file)) unlinkSync(file);
+  for (const file of [PATHS.rows, PATHS.itineraryRows, PATHS.artifact, PATHS.stamp])
+    if (existsSync(file)) unlinkSync(file);
 }
 
 export function writeJson(file, data) {
@@ -205,17 +210,8 @@ async function getJson(url, init, fetchImpl, what) {
   return body;
 }
 
-/** Read the raw A:Z grid of the approved copy sheet with a read-only service account. */
-export async function readSheetGrid(
-  env = process.env,
-  { inCI = false, fetchImpl = fetch, now = () => Date.now() } = {},
-) {
-  const requestedTab = (env.BTF_COPY_SHEET_TAB || '').trim();
-  if (requestedTab && requestedTab !== APPROVED_COPY_TAB) {
-    throw new CopyError(
-      `BTF_COPY_SHEET_TAB cannot select another tab. The copy authority is "${APPROVED_COPY_TAB}".`,
-    );
-  }
+/** Sign in with the read-only service account and read the workbook's title and tab names. */
+async function openWorkbook(env, { inCI, fetchImpl, now }) {
   const sheetId = (env.BTF_COPY_SHEET_ID || '').trim();
   if (!sheetId)
     throw new CopyError(
@@ -248,11 +244,13 @@ export async function readSheetGrid(
     );
   }
   const tabs = (meta.sheets || []).map((s) => s.properties.title);
-  const tab = APPROVED_COPY_TAB;
-  if (!tabs.includes(tab)) {
-    throw new CopyError(`The spreadsheet has no tab named "${APPROVED_COPY_TAB}". No copy was read.`);
-  }
+  return { sheetId, auth, title: meta.properties.title, tabs };
+}
 
+async function readTab({ sheetId, auth, tabs }, tab, fetchImpl) {
+  if (!tabs.includes(tab)) {
+    throw new CopyError(`The spreadsheet has no tab named "${tab}". No copy was read.`);
+  }
   const range = encodeURIComponent(`'${tab.replace(/'/g, "''")}'!A:Z`);
   const values = await getJson(
     `${SHEETS_URL}/${encodeURIComponent(sheetId)}/values/${range}?valueRenderOption=FORMATTED_VALUE&majorDimension=ROWS`,
@@ -260,7 +258,33 @@ export async function readSheetGrid(
     fetchImpl,
     'Reading spreadsheet values',
   );
-  return { title: meta.properties.title, tab, grid: values.values || [] };
+  return values.values || [];
+}
+
+/** Read the raw A:Z grid of the approved copy sheet with a read-only service account. */
+export async function readSheetGrid(
+  env = process.env,
+  { inCI = false, fetchImpl = fetch, now = () => Date.now() } = {},
+) {
+  const requestedTab = (env.BTF_COPY_SHEET_TAB || '').trim();
+  if (requestedTab && requestedTab !== APPROVED_COPY_TAB) {
+    throw new CopyError(
+      `BTF_COPY_SHEET_TAB cannot select another tab. The copy authority is "${APPROVED_COPY_TAB}".`,
+    );
+  }
+  const workbook = await openWorkbook(env, { inCI, fetchImpl, now });
+  const grid = await readTab(workbook, APPROVED_COPY_TAB, fetchImpl);
+  return { title: workbook.title, tab: APPROVED_COPY_TAB, grid };
+}
+
+/** Read the raw A:Z grid of the structured itinerary tab, with the same read-only service account. */
+export async function readItineraryGrid(
+  env = process.env,
+  { inCI = false, fetchImpl = fetch, now = () => Date.now() } = {},
+) {
+  const workbook = await openWorkbook(env, { inCI, fetchImpl, now });
+  const grid = await readTab(workbook, ITINERARY_TAB, fetchImpl);
+  return { title: workbook.title, tab: ITINERARY_TAB, grid };
 }
 
 // ---------------------------------------------------------------------------------- validation

@@ -1,0 +1,768 @@
+{
+ "workbook": "BTF_Approved_Site_Copy",
+ "tab": "CDM_Itinerary_for_BTF_Site",
+ "note": "Each generated value in src/data/cdm-itinerary.ts, with the workbook tab, sheet row and header it came from.",
+ "values": [
+  {
+   "path": "days[0].startTown",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 2,
+   "header": "Start Town",
+   "value": "Bordeaux"
+  },
+  {
+   "path": "days[0].endTown",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 2,
+   "header": "End Town",
+   "value": "Meilhan-sur-Garonne"
+  },
+  {
+   "path": "days[0].distance",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 2,
+   "header": "Distance (miles)",
+   "unitFromHeader": "miles",
+   "value": "53.6 miles"
+  },
+  {
+   "path": "days[0].elevation",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 2,
+   "header": "Elevation (feet)",
+   "unitFromHeader": "feet",
+   "value": "2122 feet"
+  },
+  {
+   "path": "days[0].lodging",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 2,
+   "header": "Destination Lodging",
+   "value": "We are welcomed to the \"Maison d'Hôtes\" (B&B that serves dinner) by Pascale and Giles. Lovely farm estate in the midst of vineyards and agritcultural land. The comfortable estate includes some rooms with private baths and others with shared bathrooms. We will have a lovely meal on the terrace near the pool. Riders are encouraged to bring a swim suit so they can enjoy the pool."
+  },
+  {
+   "path": "days[0].highlights[0].name",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 2,
+   "header": "Day highlights",
+   "part": "bullet 1 name",
+   "value": "Roger Lapébie Greenway"
+  },
+  {
+   "path": "days[0].highlights[0].note",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 2,
+   "header": "Day highlights",
+   "part": "bullet 1 note",
+   "value": "a former railway named for the 1937 Tour de France winner."
+  },
+  {
+   "path": "days[0].highlights[1].name",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 2,
+   "header": "Day highlights",
+   "part": "bullet 2 name",
+   "value": "La Sauve-Majeure Abbey"
+  },
+  {
+   "path": "days[0].highlights[1].note",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 2,
+   "header": "Day highlights",
+   "part": "bullet 2 note",
+   "value": "Romanesque ruins on the UNESCO pilgrimage routes; optional detour."
+  },
+  {
+   "path": "days[0].description",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 2,
+   "header": "Route description",
+   "value": "Leave Bordeaux on the Roger Lapébie cycle path through Créon and Sauveterre-de-Guyenne. Cross vineyards toward La Réole, join the Canal de Garonne at Fontet, and enjoy Meilhan-sur-Garonne’s sweeping valley views."
+  },
+  {
+   "path": "days[1].startTown",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 3,
+   "header": "Start Town",
+   "value": "Meilhan-sur-Garonne"
+  },
+  {
+   "path": "days[1].endTown",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 3,
+   "header": "End Town",
+   "value": "Agen"
+  },
+  {
+   "path": "days[1].distance",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 3,
+   "header": "Distance (miles)",
+   "unitFromHeader": "miles",
+   "value": "49.6 miles"
+  },
+  {
+   "path": "days[1].elevation",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 3,
+   "header": "Elevation (feet)",
+   "unitFromHeader": "feet",
+   "value": "600 feet"
+  },
+  {
+   "path": "days[1].lodging",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 3,
+   "header": "Destination Lodging",
+   "value": "We are in a modernized family run three-star hotel that has been run by the same family for generations. Expect a comfortable stay and an incredibly warm welcome."
+  },
+  {
+   "path": "days[1].highlights[0].name",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 3,
+   "header": "Day highlights",
+   "part": "bullet 1 name",
+   "value": "Canal de Garonne"
+  },
+  {
+   "path": "days[1].highlights[0].note",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 3,
+   "header": "Day highlights",
+   "part": "bullet 1 note",
+   "value": "historic locks and bridges along the former freight towpath."
+  },
+  {
+   "path": "days[1].highlights[1].name",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 3,
+   "header": "Day highlights",
+   "part": "bullet 2 name",
+   "value": "Le Mas-d’Agenais"
+  },
+  {
+   "path": "days[1].highlights[1].note",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 3,
+   "header": "Day highlights",
+   "part": "bullet 2 note",
+   "value": "Rembrandt’s Christ on the Cross in the village church."
+  },
+  {
+   "path": "days[1].description",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 3,
+   "header": "Route description",
+   "value": "Follow the Canal de Garonne greenway past locks, quiet villages and rural scenery. Pass Damazan and Buzet-sur-Baïse before crossing the canal bridge over the Garonne to reach Agen’s historic centre."
+  },
+  {
+   "path": "days[2].startTown",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 4,
+   "header": "Start Town",
+   "value": "Agen"
+  },
+  {
+   "path": "days[2].endTown",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 4,
+   "header": "End Town",
+   "value": "Moissac"
+  },
+  {
+   "path": "days[2].distance",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 4,
+   "header": "Distance (miles)",
+   "unitFromHeader": "miles",
+   "value": "30.4 miles"
+  },
+  {
+   "path": "days[2].elevation",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 4,
+   "header": "Elevation (feet)",
+   "unitFromHeader": "feet",
+   "value": "100 feet"
+  },
+  {
+   "path": "days[2].lodging",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 4,
+   "header": "Destination Lodging",
+   "value": "Sitting along the Garonne river we will find ourselves in a lovely modern three-star hotel with terrific storage and beautiful river views."
+  },
+  {
+   "path": "days[2].highlights[0].name",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 4,
+   "header": "Day highlights",
+   "part": "bullet 1 name",
+   "value": "Agen Canal-Bridge"
+  },
+  {
+   "path": "days[2].highlights[0].note",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 4,
+   "header": "Day highlights",
+   "part": "bullet 1 note",
+   "value": "ride beside the canal high above the Garonne on stone arches."
+  },
+  {
+   "path": "days[2].highlights[1].name",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 4,
+   "header": "Day highlights",
+   "part": "bullet 2 name",
+   "value": "Moissac Abbey"
+  },
+  {
+   "path": "days[2].highlights[1].note",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 4,
+   "header": "Day highlights",
+   "part": "bullet 2 note",
+   "value": "UNESCO-listed Romanesque portal and sculpted cloister."
+  },
+  {
+   "path": "days[2].description",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 4,
+   "header": "Route description",
+   "value": "Ride a flat, paved canal greenway through Lot-et-Garonne orchards, crossing Agen’s canal bridge. Follow the towpath toward the Tarn, with some coarser sections near Moissac’s port and its Romanesque cloisters."
+  },
+  {
+   "path": "days[3].startTown",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 5,
+   "header": "Start Town",
+   "value": "Moissac"
+  },
+  {
+   "path": "days[3].endTown",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 5,
+   "header": "End Town",
+   "value": "Toulouse"
+  },
+  {
+   "path": "days[3].distance",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 5,
+   "header": "Distance (miles)",
+   "unitFromHeader": "miles",
+   "value": "44.8 miles"
+  },
+  {
+   "path": "days[3].elevation",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 5,
+   "header": "Elevation (feet)",
+   "unitFromHeader": "feet",
+   "value": "70 feet"
+  },
+  {
+   "path": "days[3].lodging",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 5,
+   "header": "Destination Lodging",
+   "value": "We'll end our day in central Toulouse in a lovely 3-star hotel run by an incredibly welcoming team and very comfortable rooms"
+  },
+  {
+   "path": "days[3].highlights[0].name",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 5,
+   "header": "Day highlights",
+   "part": "bullet 1 name",
+   "value": "Pont-Canal du Cacor"
+  },
+  {
+   "path": "days[3].highlights[0].note",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 5,
+   "header": "Day highlights",
+   "part": "bullet 1 note",
+   "value": "a brick and stone canal bridge across the Tarn."
+  },
+  {
+   "path": "days[3].highlights[1].name",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 5,
+   "header": "Day highlights",
+   "part": "bullet 2 name",
+   "value": "Toulouse, the Pink City"
+  },
+  {
+   "path": "days[3].highlights[1].note",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 5,
+   "header": "Day highlights",
+   "part": "bullet 2 note",
+   "value": "terracotta streets and historic churches; first of two nights."
+  },
+  {
+   "path": "days[3].description",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 5,
+   "header": "Route description",
+   "value": "Cross the Cacor canal bridge and continue toward Montech’s water slope. Follow smooth canal greenways and dedicated urban cycle tracks into Toulouse, finishing where three canals meet at Ponts-Jumeaux junction."
+  },
+  {
+   "path": "days[4].startTown",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 6,
+   "header": "Start Town",
+   "value": "Toulouse"
+  },
+  {
+   "path": "days[4].endTown",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 6,
+   "header": "End Town",
+   "value": "Toulouse"
+  },
+  {
+   "path": "days[4].highlights[0].name",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 6,
+   "header": "Day highlights",
+   "part": "bullet 1 name",
+   "value": "Place du Capitole"
+  },
+  {
+   "path": "days[4].highlights[0].note",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 6,
+   "header": "Day highlights",
+   "part": "bullet 1 note",
+   "value": "Toulouse’s grand city square with its Occitan cross."
+  },
+  {
+   "path": "days[4].highlights[1].name",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 6,
+   "header": "Day highlights",
+   "part": "bullet 2 name",
+   "value": "Saint-Sernin Basilica"
+  },
+  {
+   "path": "days[4].highlights[1].note",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 6,
+   "header": "Day highlights",
+   "part": "bullet 2 note",
+   "value": "a Romanesque pilgrimage church with an altar consecrated in 1096."
+  },
+  {
+   "path": "days[4].description",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 6,
+   "header": "Route description",
+   "value": "Spend a full rest day in Toulouse between two nights in the city. Explore Place du Capitole and Saint-Sernin Basilica at your own pace, with no scheduled ride or transfer."
+  },
+  {
+   "path": "days[5].startTown",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 7,
+   "header": "Start Town",
+   "value": "Toulouse"
+  },
+  {
+   "path": "days[5].endTown",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 7,
+   "header": "End Town",
+   "value": "Castelnaudary"
+  },
+  {
+   "path": "days[5].distance",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 7,
+   "header": "Distance (miles)",
+   "unitFromHeader": "miles",
+   "value": "39.9 miles"
+  },
+  {
+   "path": "days[5].elevation",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 7,
+   "header": "Elevation (feet)",
+   "unitFromHeader": "feet",
+   "value": "731 feet"
+  },
+  {
+   "path": "days[5].lodging",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 7,
+   "header": "Destination Lodging",
+   "value": "Our day ends at a very comfortable and tidy family run two-star hotel. Cassoulet diner in the hotel restaurant that has been making the dish for more than 100 years is an option that shouldn't be missed."
+  },
+  {
+   "path": "days[5].highlights[0].name",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 7,
+   "header": "Day highlights",
+   "part": "bullet 1 name",
+   "value": "Canal du Midi"
+  },
+  {
+   "path": "days[5].highlights[0].note",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 7,
+   "header": "Day highlights",
+   "part": "bullet 1 note",
+   "value": "UNESCO-listed waterway with historic locks, bridges and changing tree cover."
+  },
+  {
+   "path": "days[5].highlights[1].name",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 7,
+   "header": "Day highlights",
+   "part": "bullet 2 name",
+   "value": "Grand Bassin, Castelnaudary"
+  },
+  {
+   "path": "days[5].highlights[1].note",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 7,
+   "header": "Day highlights",
+   "part": "bullet 2 note",
+   "value": "the broad canal port that hosted the canal’s opening in 1681."
+  },
+  {
+   "path": "days[5].description",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 7,
+   "header": "Route description",
+   "value": "Leave Toulouse along the Canal du Midi, following paved greenways toward the Seuil de Naurouze watershed. Expect gravel and older asphalt sections, with uneven surfaces and root damage on towpaths."
+  },
+  {
+   "path": "days[6].startTown",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 8,
+   "header": "Start Town",
+   "value": "Castelnaudary"
+  },
+  {
+   "path": "days[6].endTown",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 8,
+   "header": "End Town",
+   "value": "Carcassonne"
+  },
+  {
+   "path": "days[6].distance",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 8,
+   "header": "Distance (miles)",
+   "unitFromHeader": "miles",
+   "value": "23.9 miles"
+  },
+  {
+   "path": "days[6].elevation",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 8,
+   "header": "Elevation (feet)",
+   "unitFromHeader": "feet",
+   "value": "266 feet"
+  },
+  {
+   "path": "days[6].lodging",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 8,
+   "header": "Destination Lodging",
+   "value": "We stay in a lovely, comfortable two-star hotel 300m from the gates to the walled city of Carcassonne."
+  },
+  {
+   "path": "days[6].highlights[0].name",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 8,
+   "header": "Day highlights",
+   "part": "bullet 1 name",
+   "value": "Lauragais farmland"
+  },
+  {
+   "path": "days[6].highlights[0].note",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 8,
+   "header": "Day highlights",
+   "part": "bullet 1 note",
+   "value": "canal views across the region’s cereal plains."
+  },
+  {
+   "path": "days[6].highlights[1].name",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 8,
+   "header": "Day highlights",
+   "part": "bullet 2 name",
+   "value": "Carcassonne’s Cité"
+  },
+  {
+   "path": "days[6].highlights[1].note",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 8,
+   "header": "Day highlights",
+   "part": "bullet 2 note",
+   "value": "two rings of medieval walls shaped by centuries of building and restoration."
+  },
+  {
+   "path": "days[6].description",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 8,
+   "header": "Route description",
+   "value": "Follow the Canal du Midi on earth and gravel towpaths, passing Bram’s port, historic locks and the Fresquel aqueducts. Ride toward Carcassonne on narrow tracks with roots and uneven ground."
+  },
+  {
+   "path": "days[7].startTown",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 9,
+   "header": "Start Town",
+   "value": "Carcassonne"
+  },
+  {
+   "path": "days[7].endTown",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 9,
+   "header": "End Town",
+   "value": "Tourouzelle"
+  },
+  {
+   "path": "days[7].distance",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 9,
+   "header": "Distance (miles)",
+   "unitFromHeader": "miles",
+   "value": "28.7 miles"
+  },
+  {
+   "path": "days[7].elevation",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 9,
+   "header": "Elevation (feet)",
+   "unitFromHeader": "feet",
+   "value": "453 feet"
+  },
+  {
+   "path": "days[7].lodging",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 9,
+   "header": "Destination Lodging",
+   "value": "We end our day at the lovely \"Maison d'Hôtes\" of British ex-pats Wendy & Simon. Expect a lovely dinner and a chance to learn first hand what it's like to live in a small town in rural southwest France as an Anglophone."
+  },
+  {
+   "path": "days[7].highlights[0].name",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 9,
+   "header": "Day highlights",
+   "part": "bullet 1 name",
+   "value": "Canal at Carcassonne"
+  },
+  {
+   "path": "days[7].highlights[0].note",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 9,
+   "header": "Day highlights",
+   "part": "bullet 1 note",
+   "value": "the city gained its own canal port when the new line opened in 1810."
+  },
+  {
+   "path": "days[7].highlights[1].name",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 9,
+   "header": "Day highlights",
+   "part": "bullet 2 name",
+   "value": "Argens-Minervois"
+  },
+  {
+   "path": "days[7].highlights[1].note",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 9,
+   "header": "Day highlights",
+   "part": "bullet 2 note",
+   "value": "the start of the canal’s longest lock-free reach."
+  },
+  {
+   "path": "days[7].description",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 9,
+   "header": "Route description",
+   "value": "Ride through the Minervois on dirt and gravel towpaths beside the Canal du Midi. Pass locks and aqueducts near Trèbes, then take quiet paved roads through vineyards to reach Tourouzelle."
+  },
+  {
+   "path": "days[8].startTown",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 10,
+   "header": "Start Town",
+   "value": "Tourouzelle"
+  },
+  {
+   "path": "days[8].endTown",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 10,
+   "header": "End Town",
+   "value": "Capestang"
+  },
+  {
+   "path": "days[8].distance",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 10,
+   "header": "Distance (miles)",
+   "unitFromHeader": "miles",
+   "value": "26.4 miles"
+  },
+  {
+   "path": "days[8].elevation",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 10,
+   "header": "Elevation (feet)",
+   "unitFromHeader": "feet",
+   "value": "670 feet"
+  },
+  {
+   "path": "days[8].lodging",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 10,
+   "header": "Destination Lodging",
+   "value": "We meet our hostess in her lovely 17th century manor house next to the town hall and 100m from the town's famous (almost) cathedral!"
+  },
+  {
+   "path": "days[8].highlights[0].name",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 10,
+   "header": "Day highlights",
+   "part": "bullet 1 name",
+   "value": "Minervois"
+  },
+  {
+   "path": "days[8].highlights[0].note",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 10,
+   "header": "Day highlights",
+   "part": "bullet 1 note",
+   "value": "wine country between the Montagne Noire foothills and the canal."
+  },
+  {
+   "path": "days[8].highlights[1].name",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 10,
+   "header": "Day highlights",
+   "part": "bullet 2 name",
+   "value": "Le Somail"
+  },
+  {
+   "path": "days[8].highlights[1].note",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 10,
+   "header": "Day highlights",
+   "part": "bullet 2 note",
+   "value": "a historic canal port with its bridge, inn, chapel and ice house."
+  },
+  {
+   "path": "days[8].description",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 10,
+   "header": "Route description",
+   "value": "Follow the Canal du Midi through Homps and Le Somail toward Capestang. Expect narrow dirt and stone towpaths, tree roots and historic bridges, with Capestang’s great church rising above vineyards."
+  },
+  {
+   "path": "days[9].startTown",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 11,
+   "header": "Start Town",
+   "value": "Capestang"
+  },
+  {
+   "path": "days[9].endTown",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 11,
+   "header": "End Town",
+   "value": "Sète"
+  },
+  {
+   "path": "days[9].distance",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 11,
+   "header": "Distance (miles)",
+   "unitFromHeader": "miles",
+   "value": "44.5 miles"
+  },
+  {
+   "path": "days[9].elevation",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 11,
+   "header": "Elevation (feet)",
+   "unitFromHeader": "feet",
+   "value": "400 feet"
+  },
+  {
+   "path": "days[9].lodging",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 11,
+   "header": "Destination Lodging",
+   "value": "Our voyage ends at a lovely, family run two-star hotel along the canals of Sète. Expect comfortable and well air conditioned rooms with convenient access to all sites and services."
+  },
+  {
+   "path": "days[9].highlights[0].name",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 11,
+   "header": "Day highlights",
+   "part": "bullet 1 name",
+   "value": "Étang de Thau"
+  },
+  {
+   "path": "days[9].highlights[0].note",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 11,
+   "header": "Day highlights",
+   "part": "bullet 1 note",
+   "value": "a vast coastal lagoon known for oyster farming."
+  },
+  {
+   "path": "days[9].highlights[1].name",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 11,
+   "header": "Day highlights",
+   "part": "bullet 2 name",
+   "value": "Sète Harbor"
+  },
+  {
+   "path": "days[9].highlights[1].note",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 11,
+   "header": "Day highlights",
+   "part": "bullet 2 note",
+   "value": "the fishing and trading port founded as the canal’s Mediterranean outlet."
+  },
+  {
+   "path": "days[9].description",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 11,
+   "header": "Route description",
+   "value": "Pass Malpas Tunnel and Fonserannes locks before joining paved greenways east of Béziers. Continue through Portiragnes and Agde, then follow the coastal Lido cycleway between lagoon and sea to Sète."
+  },
+  {
+   "path": "heading",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 2,
+   "header": "Approved Text",
+   "key": "Itinerary section heading",
+   "value": "Your journey, day by day"
+  },
+  {
+   "path": "detailsControl",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 3,
+   "header": "Approved Text",
+   "key": "Details control",
+   "value": "View day details"
+  },
+  {
+   "path": "restDayTitle",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 4,
+   "header": "Approved Text",
+   "key": "Rest day title",
+   "value": "Toulouse · Two nights and a rest day"
+  }
+ ]
+}

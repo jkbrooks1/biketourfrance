@@ -7,6 +7,13 @@ import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import { PATHS, fail, loadManifest, writeJson } from './lib.mjs';
 import { fragmentTexts as blockTexts } from './markup.mjs';
+import {
+  FORBIDDEN_ITINERARY_SOURCES,
+  ITINERARY_MODULE,
+  ITINERARY_ROUTE,
+  checkRenderedItinerary,
+  itineraryStrings,
+} from './itinerary.mjs';
 
 const args = process.argv.slice(2);
 const opt = (name, fallback) => (args.includes(name) ? args[args.indexOf(name) + 1] : fallback);
@@ -93,11 +100,29 @@ for (const m of manifest) {
   if (m.field.endsWith('_alt')) altSet.add(ws(blocks.join(' ')));
 }
 
+// The structured itinerary tab (CDM_Itinerary_for_BTF_Site) is a second governed source. Its strings join
+// the approved set, so the "no uncovered text" check below also covers itinerary prose, and a page that
+// renders itinerary text the tab does not supply fails.
+const itinerary = artifact.itinerary;
+if (!itinerary || !Array.isArray(itinerary.days))
+  problems.push(
+    `  - (itinerary) | ${ITINERARY_ROUTE} | ${ITINERARY_MODULE} | the approved copy artifact has no itinerary`,
+  );
+else allBlocks.push(...itineraryStrings(itinerary).map(ws));
+if (itinerary && !pages.has(ITINERARY_ROUTE))
+  problems.push(`  - (itinerary) | ${ITINERARY_ROUTE} | - | the home page that carries the itinerary is not in dist/`);
+
 // ----------------------------------------------------------------------------- per-route checks
 const routeFields = (route) => manifest.filter((m) => m.route === route || m.route === '*');
 for (const [route, page] of pages) {
   const fields = routeFields(route);
   let cursor = 0;
+  if (itinerary && Array.isArray(itinerary.days) && route === ITINERARY_ROUTE)
+    for (const issue of checkRenderedItinerary(page.html, itinerary))
+      problems.push(`  - (itinerary) | ${route} | src/components/CdmItinerary.astro | ${issue}`);
+  for (const banned of FORBIDDEN_ITINERARY_SOURCES)
+    if (page.html.includes(banned))
+      problems.push(`  - (retired source) | ${route} | - | the page contains retired itinerary source text "${banned}"`);
   for (const m of fields) {
     const value = artifact.fields[m.field];
     if (value === undefined || value === '') continue; // absence already reported above when required

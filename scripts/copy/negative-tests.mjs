@@ -1,9 +1,10 @@
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
-import { mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
+import { cpSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { HEADERS, PATHS, ROOT, loadManifest, loadRules, validateGrid } from './lib.mjs';
+import { validateItineraryGrid } from './itinerary.mjs';
 
 const rows = JSON.parse(readFileSync(PATHS.fixture, 'utf8'));
 const grid = (value) => [HEADERS, ...value];
@@ -34,5 +35,35 @@ check('rendered text with no approved field fails the rendered gate', () => {
   writeFileSync(file, JSON.stringify(artifact));
   assert.notEqual(run('scripts/copy/verify-rendered.mjs', {}, ['--artifact', file]).status, 0);
 });
+// Itinerary (second governed tab) gates. Each case damages a copy of the artifact or of dist/ and requires
+// the rendered gate to fail. The first run above leaves a valid fixture artifact in .copy/.
+function artifactWith(change) {
+  const dir = mkdtempSync(join(tmpdir(), 'btf-copy-'));
+  const artifact = JSON.parse(readFileSync(PATHS.artifact, 'utf8'));
+  change(artifact);
+  const file = join(dir, 'artifact.json');
+  writeFileSync(file, JSON.stringify(artifact));
+  return file;
+}
+check('itinerary fixture is structurally valid', () => assert.equal(validateItineraryGrid(JSON.parse(readFileSync(PATHS.itineraryFixture, 'utf8'))).errors.length, 0));
+check('itinerary row missing from the approved artifact fails the rendered gate', () => assert.notEqual(run('scripts/copy/verify-rendered.mjs', {}, ['--artifact', artifactWith((a) => a.itinerary.days.splice(6, 1))]).status, 0));
+check('itinerary text that differs from the workbook fails the rendered gate', () => assert.notEqual(run('scripts/copy/verify-rendered.mjs', {}, ['--artifact', artifactWith((a) => { a.itinerary.days[2].description = 'Deliberate mismatch ' + a.itinerary.days[2].description; })]).status, 0));
+check('missing itinerary in the approved artifact fails the rendered gate', () => assert.notEqual(run('scripts/copy/verify-rendered.mjs', {}, ['--artifact', artifactWith((a) => { delete a.itinerary; })]).status, 0));
+check('rendered itinerary prose absent from the workbook fails the rendered gate', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'btf-dist-'));
+  cpSync(PATHS.dist, dir, { recursive: true });
+  const file = join(dir, 'index.html');
+  const first = JSON.parse(readFileSync(PATHS.artifact, 'utf8')).itinerary.days[0].highlights[0].note;
+  writeFileSync(file, readFileSync(file, 'utf8').replace(first, 'Invented itinerary prose that the workbook does not contain.'));
+  assert.notEqual(run('scripts/copy/verify-rendered.mjs', {}, ['--dist', dir]).status, 0);
+});
+check('retired Ride Highlights text on a page fails the rendered gate', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'btf-dist-'));
+  cpSync(PATHS.dist, dir, { recursive: true });
+  const file = join(dir, 'index.html');
+  writeFileSync(file, readFileSync(file, 'utf8').replace('</body>', '<!-- Ride Highlights --></body>'));
+  assert.notEqual(run('scripts/copy/verify-rendered.mjs', {}, ['--dist', dir]).status, 0);
+});
+check('unmodified dist still passes after the itinerary cases', () => assert.equal(run('scripts/copy/verify-rendered.mjs').status, 0));
 for (const [ok, name] of checks) console.log(`${ok ? 'PASS' : 'FAIL'}  ${name}`);
 const failed = checks.filter(([ok]) => !ok); console.log(`copy:test  ${checks.length - failed.length} passed, ${failed.length} failed`); if (failed.length) process.exit(1);
