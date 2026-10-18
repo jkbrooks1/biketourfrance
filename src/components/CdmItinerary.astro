@@ -1,0 +1,211 @@
+---
+// Canal des Deux Mers day-by-day itinerary. Every word comes from the generated itinerary module, which is
+// written from tab "CDM_Itinerary_for_BTF_Site" of BTF_Approved_Site_Copy. This component adds no copy.
+// Native <details>/<summary> gives keyboard access and expanded state without extra labels.
+import { ITINERARY } from '../data/cdm-itinerary';
+
+const { heading, detailsControl, restDayTitle, days } = ITINERARY;
+---
+
+<section class="section itinerary" aria-labelledby="itinerary-heading" data-cdm-itinerary>
+  <div class="container">
+    <h2 id="itinerary-heading">{heading}</h2>
+    <ul class="itinerary__list" role="list">
+      {
+        days.map((day) => (
+          <li>
+            <details class:list={['itin-day', { 'itin-day--rest': day.kind === 'rest' }]} data-itin-day={day.id}>
+              <summary class="itin-day__summary">
+                {day.kind === 'ride' ? (
+                  <>
+                    <span class="itin-day__num">{day.id}</span>
+                    <span class="itin-day__route">
+                      {day.startTown} <span aria-hidden="true">→</span> {day.endTown}
+                    </span>
+                    <span class="itin-day__distance">{day.distance}</span>
+                  </>
+                ) : (
+                  <span class="itin-day__title">{restDayTitle}</span>
+                )}
+                <span class="itin-day__names">
+                  {day.highlights.map((h) => (
+                    <span class="itin-day__name">{h.name}</span>
+                  ))}
+                </span>
+                <span class="itin-day__toggle">{detailsControl}</span>
+              </summary>
+              <div class="itin-day__panel">
+                <p class="itin-day__description">{day.description}</p>
+                <dl class="itin-day__highlights">
+                  {day.highlights.map((h) => (
+                    <div>
+                      <dt>{h.name}</dt>
+                      <dd>{h.note}</dd>
+                    </div>
+                  ))}
+                </dl>
+                {day.lodging && <p class="itin-day__lodging">{day.lodging}</p>}
+                {day.elevation && <p class="itin-day__elevation">{day.elevation}</p>}
+              </div>
+            </details>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<style>
+  .itinerary__list {
+    list-style: none;
+    margin: var(--s4) 0 0;
+    padding: 0;
+    max-width: none;
+    border-top: 1px solid var(--line);
+  }
+  .itinerary__list li {
+    margin: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .itin-day--rest {
+    background: var(--beige);
+  }
+
+  .itin-day__summary {
+    display: grid;
+    gap: var(--s1) var(--s3);
+    align-items: start;
+    padding: var(--s3);
+    min-height: 44px;
+    cursor: pointer;
+    list-style: none;
+    grid-template-columns: 44px minmax(0, 1fr);
+    grid-template-areas:
+      'num route'
+      'num distance'
+      'num names'
+      'num toggle';
+  }
+  .itin-day__summary::-webkit-details-marker {
+    display: none;
+  }
+  .itin-day__summary:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: -2px;
+  }
+  .itin-day--rest .itin-day__summary {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      'title'
+      'names'
+      'toggle';
+  }
+
+  .itin-day__num {
+    grid-area: num;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--green);
+    color: var(--white);
+    font-weight: 600;
+  }
+  .itin-day__route {
+    grid-area: route;
+    font-weight: 600;
+    color: var(--green);
+  }
+  .itin-day__title {
+    grid-area: title;
+    font-weight: 600;
+    color: var(--green);
+  }
+  .itin-day__distance {
+    grid-area: distance;
+    color: var(--ink-muted);
+  }
+  .itin-day__names {
+    grid-area: names;
+    display: flex;
+    flex-direction: column;
+    gap: var(--s1);
+    min-width: 0;
+  }
+  .itin-day__toggle {
+    grid-area: toggle;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s2);
+    min-height: 44px;
+    font-weight: 600;
+    color: var(--green);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+  }
+  .itin-day__toggle::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg);
+    transition: transform var(--ease);
+  }
+  .itin-day[open] .itin-day__toggle::after {
+    transform: rotate(-135deg);
+  }
+
+  .itin-day__panel {
+    padding: 0 var(--s3) var(--s4);
+  }
+  .itin-day__description {
+    max-width: var(--measure);
+  }
+  .itin-day__highlights {
+    margin: 0 0 var(--s3);
+    display: grid;
+    gap: var(--s3);
+    max-width: var(--measure);
+  }
+  .itin-day__highlights dt {
+    font-weight: 600;
+    color: var(--green);
+  }
+  .itin-day__highlights dd {
+    margin: 0;
+  }
+  .itin-day__lodging,
+  .itin-day__elevation {
+    max-width: var(--measure);
+  }
+  .itin-day__elevation {
+    margin-bottom: 0;
+    font-weight: 600;
+  }
+
+  @media (min-width: 900px) {
+    .itin-day__summary {
+      align-items: center;
+      padding: var(--s3) var(--s4);
+      grid-template-columns: 44px minmax(0, 1.2fr) 110px minmax(0, 1.6fr) auto;
+      grid-template-areas: 'num route distance names toggle';
+    }
+    .itin-day--rest .itin-day__summary {
+      grid-template-columns: 44px minmax(0, 1.2fr) 110px minmax(0, 1.6fr) auto;
+      grid-template-areas: 'title title title names toggle';
+    }
+    .itin-day__panel {
+      padding: 0 var(--s4) var(--s4) calc(var(--s4) + 44px + var(--s3));
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .itin-day__toggle::after {
+      transition: none;
+    }
+  }
+</style>

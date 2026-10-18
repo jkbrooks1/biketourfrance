@@ -8,6 +8,12 @@
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { PATHS, fail } from './lib.mjs';
+import {
+  ITINERARY_MODULE,
+  ITINERARY_TRACE_FILE,
+  renderItineraryModule,
+  renderItineraryTrace,
+} from './itinerary.mjs';
 
 const artifactPath = PATHS.artifact;
 const outputPath = resolve(process.cwd(), 'src/data/approved-copy.ts');
@@ -171,4 +177,17 @@ export function footerPolicyParts(): { label: string; text: string }[] {
 writeFileSync(outputPath, source);
 console.log(
   `copy:generate-ts  OK: ${SCALARS.length} fields + ${LISTS.length} list(s) -> ${outputPath}`
+);
+
+// The structured itinerary tab becomes its own committed module plus a per-value trace.
+const { itinerary } = artifact;
+if (!itinerary || !Array.isArray(itinerary.days) || itinerary.days.length === 0) {
+  fail(
+    'copy:generate-ts FAILED. The validated artifact has no itinerary. Run "npm run copy:validate" first.',
+  );
+}
+writeFileSync(resolve(process.cwd(), ITINERARY_MODULE), renderItineraryModule(itinerary));
+writeFileSync(resolve(process.cwd(), ITINERARY_TRACE_FILE), renderItineraryTrace(itinerary));
+console.log(
+  `copy:generate-ts  OK: ${itinerary.days.length} itinerary rows -> ${ITINERARY_MODULE} and ${ITINERARY_TRACE_FILE}`
 );
