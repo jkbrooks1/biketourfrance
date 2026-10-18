@@ -1816,15 +1816,35 @@
     "Four cyclists with loaded touring bikes pause beside a country road near a stone cross and vineyards."
   ],
   [
-    "/cdm-gallery/future_tour_cta",
-    "Interested in riding the Canal des Deux Mers with us? Join the waitlist for a future BikeTourFrance trip."
-  ],
-  [
     "/waitlist/duplicate_state",
     "We may have gotten your information twice, but we'll make sure we have you down regardless. Thanks for signing up for more information!"
   ],
   [
     "/privacy/data_retention",
     "We retain your consent records and personal data only for as long as you wish to remain on our list. You can withdraw your consent and request data deletion at any time by replying 'Unsubscribe' to any of our emails, or by contacting us directly."
+  ],
+  [
+    "/rider-quotes/pace_distance_quote",
+    "“I loved the pacing and distance.”"
+  ],
+  [
+    "/rider-quotes/pace_distance_credit",
+    "Jeannette"
+  ],
+  [
+    "/rider-quotes/route_lodging_quote",
+    "“I loved that all of the decisions about route distance and lodging were made by you! Fantastic.”"
+  ],
+  [
+    "/rider-quotes/route_lodging_credit",
+    "Colleen"
+  ],
+  [
+    "/rider-quotes/canal_scenery_quote",
+    "“Riding along the Garonne canal sometimes felt like riding through a Monet painting.”"
+  ],
+  [
+    "/rider-quotes/canal_scenery_credit",
+    "Eric"
   ]
 ]

@@ -783,6 +783,29 @@ picture.ratio-3x4 {
   padding-top: var(--s2);
 }
 
+/* Contextual rider quotes beside homepage facts, inclusions, and the gallery intro. */
+.contextual-quote {
+  margin: var(--s4) 0;
+  padding-left: var(--s3);
+  border-left: 4px solid var(--green);
+}
+.contextual-quote blockquote {
+  margin: 0;
+}
+.contextual-quote p {
+  margin: 0;
+  max-width: 62ch;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink);
+}
+.contextual-quote figcaption {
+  margin-top: var(--s3);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-muted);
+}
+
 /* Home testimonials: three static cards, one column on phones, three across from 1024px. */
 .testimonials {
   scroll-margin-top: var(--s7);

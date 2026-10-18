@@ -52,12 +52,24 @@ const { hero, readyToRide, about, gallery, buttons } = COPY;
           <li>{readyToRide.summary4}</li>
         </ul>
         <p class="ready__facts">{readyToRide.rideFacts}</p>
+        <figure class="contextual-quote">
+          <blockquote>
+            <p>{TEXT['/rider-quotes/pace_distance_quote']}</p>
+          </blockquote>
+          <figcaption>{TEXT['/rider-quotes/pace_distance_credit']}</figcaption>
+        </figure>
         <h3>{readyToRide.includedHeading}</h3>
         <ul>
           {readyToRide.included.map((item) => (
             <li>{item}</li>
           ))}
         </ul>
+        <figure class="contextual-quote">
+          <blockquote>
+            <p>{TEXT['/rider-quotes/route_lodging_quote']}</p>
+          </blockquote>
+          <figcaption>{TEXT['/rider-quotes/route_lodging_credit']}</figcaption>
+        </figure>
       </div>
       <div class="rounded">
         <Photo
@@ -146,6 +158,12 @@ const { hero, readyToRide, about, gallery, buttons } = COPY;
   <section class="section section--beige" aria-labelledby="gallery-heading">
     <div class="container">
       <h2 id="gallery-heading">{gallery.heading}</h2>
+      <figure class="contextual-quote">
+        <blockquote>
+          <p>{TEXT['/rider-quotes/canal_scenery_quote']}</p>
+        </blockquote>
+        <figcaption>{TEXT['/rider-quotes/canal_scenery_credit']}</figcaption>
+      </figure>
       <Gallery photos={GALLERY.slice(0, 8)} />
       <div class="btn-row">
         <Button href="/cdm-photo-gallery/" variant="tertiary">
