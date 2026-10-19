@@ -41,13 +41,17 @@ for row in grid[1:]:
     bullets = [re.match(r'^•\s+(.+?)\s+—\s+(.+)$', l.strip()).groups() for l in cell(row, 'Day highlights').split('\n') if l.strip()]
     days.append(dict(
         id=ident, rest=ident == 'REST', start=cell(row, 'Start Town'), end=cell(row, 'End Town'),
-        distance=None if ident == 'REST' else cell(row, 'Distance (miles)') + ' miles',
-        elevation=None if ident == 'REST' else cell(row, 'Elevation (feet)') + ' feet',
+        distance=None if ident == 'REST' else cell(row, 'Distance (miles)'),
+        elevation=None if ident == 'REST' else cell(row, 'Elevation (feet)'),
         lodging=None if ident == 'REST' else cell(row, 'Destination Lodging'),
         highlights=bullets, description=cell(row, 'Route description')))
 HEADING, DETAILS, RESTTITLE = ui['Itinerary section heading'], ui['Details control'], ui['Rest day title']
 # The live Sheet spells the key "Lodging Label"; find it without assuming the spelling.
 LABEL = next(v for k, v in ui.items() if k.lower() == 'lodging label')
+# Unit text comes only from the Sheet keys; closed-row stats are "<distance> <Distance Unit> / <elevation> <Elevation Unit>".
+DIST_UNIT, ELEV_UNIT = ui['Distance Unit'], ui['Elevation Unit']
+for _d in days:
+    _d['stats'] = None if _d['rest'] else f"{_d['distance']} {DIST_UNIT} / {_d['elevation']} {ELEV_UNIT}"
 DAY1_LODGING = next(d['lodging'] for d in days if d['id'] == '1')
 STAGING_BANNER = 'Staging preview. This site is not indexed by search engines and is not the live BikeTourFrance.net site.'
 fixture_rows = dict(json.load(open(os.path.join(ROOT, 'copy/fixture/fixture-rows.json'), encoding='utf8')))
@@ -132,6 +136,7 @@ def run():
             check(f'[{tag}] nine ride rows and one rest row', sum(1 for d in days if not d['rest']) == 9 and ids.count('REST') == 1, '')
             check(f'[{tag}] all rows start closed', page.eval_on_selector_all('section[data-cdm-itinerary] details', 'els => els.every(e => !e.open)'), '')
 
+            stats_seen = []
             # ---- closed state per row
             for i, d in enumerate(days):
                 row = rows.nth(i)
@@ -140,14 +145,23 @@ def run():
                 panel = row.locator('.itin-day__panel')
                 label = f'[{tag}] row {d["id"]} closed'
                 parts = [DETAILS] + [h[0] for h in d['highlights']]
-                parts += [RESTTITLE] if d['rest'] else [d['start'], d['end'], d['distance']]
+                parts += [RESTTITLE] if d['rest'] else [d['start'], d['end'], d['stats']]
                 check(f'{label}: shows approved closed fields', all(ws(x) in text for x in parts), text[:160])
                 if not d['rest']:
                     check(f'{label}: starts with the ride day', text.split(' ')[0] == d['id'], text[:20])
-                    check(f'{label}: distance is visible', summ.locator('.itin-day__distance').evaluate(JS_VISIBLE), '')
-                    check(f'{label}: elevation, lodging and notes are not shown', not any(x in text for x in [d['elevation'], d['lodging'][:30]] + [h[1] for h in d['highlights']]), '')
+                    stat = summ.locator('.itin-day__distance')
+                    stats_text = ws(stat.inner_text())
+                    stats_seen.append(stats_text)
+                    check(f'{label}: distance and elevation stats are visible', stat.evaluate(JS_VISIBLE), '')
+                    check(f'{label}: stats text is exactly "{d["stats"]}"', stats_text == d['stats'], repr(stats_text))
+                    one = stat.evaluate("e => { const r = e.getBoundingClientRect(); const lh = parseFloat(getComputedStyle(e).lineHeight); return { h: r.height, lh: lh, lines: Math.round(r.height / lh), nowrap: getComputedStyle(e).whiteSpace }; }")
+                    check(f'{label}: stats occupy a single line', one['lines'] == 1 and one['nowrap'] == 'nowrap', one)
+                    check(f'{label}: lodging and notes are not shown', not any(x in text for x in [d['lodging'][:30]] + [h[1] for h in d['highlights']]), '')
+                else:
+                    check(f'{label}: rest-day row unchanged (title, two highlight names, details control only)', text == ws(' '.join([RESTTITLE] + [h[0] for h in d['highlights']] + [DETAILS])), text[:120])
                 check(f'{label}: expanded panel hidden', not panel.evaluate('el => el.checkVisibility()'), '')
 
+            measured[-1]['stats'] = stats_seen
             # ---- overlap and overflow, closed
             def overlap_report(selector):
                 return page.evaluate("""sel => { const bad = [];
@@ -177,16 +191,16 @@ def run():
                 panel = row.locator('.itin-day__panel')
                 ptxt = ws(panel.inner_text())
                 label = f'[{tag}] row {d["id"]} expanded'
-                want = [d['description']] + [x for h in d['highlights'] for x in h] + ([] if d['rest'] else [d['lodging'], d['elevation']])
+                want = [d['description']] + [x for h in d['highlights'] for x in h] + ([] if d['rest'] else [d['lodging']])
                 check(f'{label}: opens on click', opened, '')
                 if d['rest']:
                     check(f'{label}: no lodging label on the rest day', panel.locator('.itin-day__label').count() == 0, '')
                 else:
                     lab = panel.evaluate("p => { const dt = p.querySelector('.itin-day__label'); const dd = dt && dt.nextElementSibling; return { label: dt && dt.innerText.trim(), lodging: dd && dd.innerText.trim(), isDd: !!dd && dd.tagName === 'DD', pair: !!dt && dt.parentElement.tagName === 'DL' }; }")
                     check(f'{label}: live Lodging Label is immediately before the lodging text', lab['label'] == LABEL and lab['lodging'] == d['lodging'] and lab['isDd'] and lab['pair'], lab)
-                check(f'{label}: shows description, both notes{"" if d["rest"] else ", lodging and elevation"}', all(ws(x) in ptxt for x in want), ptxt[:120])
+                check(f'{label}: shows description, both notes{"" if d["rest"] else " and lodging"}', all(ws(x) in ptxt for x in want), ptxt[:120])
                 if not d['rest']:
-                    check(f'{label}: elevation is visible inside the details', panel.locator('.itin-day__elevation').evaluate(JS_VISIBLE) and ws(panel.locator('.itin-day__elevation').inner_text()) == d['elevation'], '')
+                    check(f'{label}: the expanded details contain no elevation figure', f"{d['elevation']} {ELEV_UNIT}" not in ptxt and panel.locator('.itin-day__elevation').count() == 0, ptxt[-80:])
                 check(f'{label}: description is 30 words', len(d['description'].split()) == 30, len(d['description'].split()))
                 row.locator('summary').click()
                 check(f'{label}: closes on click', not row.evaluate('e => e.open'), '')
@@ -222,6 +236,8 @@ def run():
               return { page: document.documentElement.scrollWidth - w, bad }; }""")
             labels = page.eval_on_selector_all('[data-cdm-itinerary] .itin-day__label', 'els => els.map(e => e.innerText.trim())')
             check(f'[{tag}] the live Lodging Label text appears exactly 9 times with all rows expanded', labels == [LABEL] * 9, labels)
+            itin_text = page.eval_on_selector('[data-cdm-itinerary]', 'e => e.textContent')
+            check(f'[{tag}] the words "miles" and "feet" appear nowhere in the itinerary', not re.search(r'\b(miles|feet)\b', itin_text, re.I), re.findall(r'\b(?:miles|feet)\b', itin_text, re.I))
             rest_labels = page.locator('[data-itin-day="REST"] .itin-day__label').count()
             measured[-1].update(labelCount=len(labels), restDayLabelCount=rest_labels)
             check(f'[{tag}] no lodging label on the rest-day row with all rows expanded', rest_labels == 0, rest_labels)

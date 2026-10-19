@@ -14,8 +14,8 @@ export interface ItineraryDay {
   row: number;
   startTown: string;
   endTown: string;
-  distance?: string;
-  elevation?: string;
+  distance?: string; // value as the Sheet gives it; unit text is itinerary.distanceUnit
+  elevation?: string; // value as the Sheet gives it; unit text is itinerary.elevationUnit
   lodging?: string;
   highlights: ItineraryHighlight[];
   description: string;
@@ -27,6 +27,8 @@ export const ITINERARY: {
   detailsControl: string;
   restDayTitle: string;
   lodgingLabel: string;
+  distanceUnit: string;
+  elevationUnit: string;
   days: ItineraryDay[];
 } = {
   "tab": "CDM_Itinerary_for_BTF_Site",
@@ -34,6 +36,8 @@ export const ITINERARY: {
   "detailsControl": "View day details",
   "restDayTitle": "Toulouse · Two nights and a rest day",
   "lodgingLabel": "Where we'll stay",
+  "distanceUnit": "mi",
+  "elevationUnit": "ft",
   "days": [
     {
       "id": "1",
@@ -41,8 +45,8 @@ export const ITINERARY: {
       "row": 2,
       "startTown": "Bordeaux",
       "endTown": "Meilhan-sur-Garonne",
-      "distance": "53.6 miles",
-      "elevation": "2122 feet",
+      "distance": "53.6",
+      "elevation": "2122",
       "lodging": "We are welcomed to the \"Maison d'Hôtes\" (B&B that serves dinner) by Pascale and Giles. Lovely farm estate in the midst of vineyards and agricultural land. The comfortable estate includes some rooms with private baths and others with shared bathrooms. We will have a lovely meal on the terrace near the pool. Riders are encouraged to bring a swim suit so they can enjoy the pool.",
       "highlights": [
         {
@@ -62,8 +66,8 @@ export const ITINERARY: {
       "row": 3,
       "startTown": "Meilhan-sur-Garonne",
       "endTown": "Agen",
-      "distance": "49.6 miles",
-      "elevation": "600 feet",
+      "distance": "49.6",
+      "elevation": "600",
       "lodging": "We are in a modernized family run three-star hotel that has been run by the same family for generations. Expect a comfortable stay and an incredibly warm welcome.",
       "highlights": [
         {
@@ -83,8 +87,8 @@ export const ITINERARY: {
       "row": 4,
       "startTown": "Agen",
       "endTown": "Moissac",
-      "distance": "30.4 miles",
-      "elevation": "100 feet",
+      "distance": "30.4",
+      "elevation": "100",
       "lodging": "Sitting along the Garonne river we will find ourselves in a lovely modern three-star hotel with terrific storage and beautiful river views.",
       "highlights": [
         {
@@ -104,8 +108,8 @@ export const ITINERARY: {
       "row": 5,
       "startTown": "Moissac",
       "endTown": "Toulouse",
-      "distance": "44.8 miles",
-      "elevation": "70 feet",
+      "distance": "44.8",
+      "elevation": "70",
       "lodging": "We'll end our day in central Toulouse in a lovely 3-star hotel run by an incredibly welcoming team and very comfortable rooms",
       "highlights": [
         {
@@ -143,8 +147,8 @@ export const ITINERARY: {
       "row": 7,
       "startTown": "Toulouse",
       "endTown": "Castelnaudary",
-      "distance": "39.9 miles",
-      "elevation": "731 feet",
+      "distance": "39.9",
+      "elevation": "731",
       "lodging": "Our day ends at a very comfortable and tidy family run two-star hotel. Cassoulet diner in the hotel restaurant that has been making the dish for more than 100 years is an option that shouldn't be missed.",
       "highlights": [
         {
@@ -164,8 +168,8 @@ export const ITINERARY: {
       "row": 8,
       "startTown": "Castelnaudary",
       "endTown": "Carcassonne",
-      "distance": "23.9 miles",
-      "elevation": "266 feet",
+      "distance": "23.9",
+      "elevation": "266",
       "lodging": "We stay in a lovely, comfortable two-star hotel 300m from the gates to the walled city of Carcassonne.",
       "highlights": [
         {
@@ -185,8 +189,8 @@ export const ITINERARY: {
       "row": 9,
       "startTown": "Carcassonne",
       "endTown": "Tourouzelle",
-      "distance": "28.7 miles",
-      "elevation": "453 feet",
+      "distance": "28.7",
+      "elevation": "453",
       "lodging": "We end our day at the lovely \"Maison d'Hôtes\" of British ex-pats Wendy & Simon. Expect a lovely dinner and a chance to learn first hand what it's like to live in a small town in rural southwest France as an Anglophone.",
       "highlights": [
         {
@@ -206,8 +210,8 @@ export const ITINERARY: {
       "row": 10,
       "startTown": "Tourouzelle",
       "endTown": "Capestang",
-      "distance": "26.4 miles",
-      "elevation": "670 feet",
+      "distance": "26.4",
+      "elevation": "670",
       "lodging": "We meet our hostess in her lovely 17th century manor house next to the town hall and 100m from the town's famous (almost) cathedral!",
       "highlights": [
         {
@@ -227,8 +231,8 @@ export const ITINERARY: {
       "row": 11,
       "startTown": "Capestang",
       "endTown": "Sète",
-      "distance": "44.5 miles",
-      "elevation": "400 feet",
+      "distance": "44.5",
+      "elevation": "400",
       "lodging": "Our voyage ends at a lovely, family run two-star hotel along the canals of Sète. Expect comfortable and well air conditioned rooms with convenient access to all sites and services.",
       "highlights": [
         {

@@ -15,6 +15,7 @@ import {
   itineraryStrings,
   renderItineraryModule,
   renderItineraryTrace,
+  statsText,
   validateItineraryGrid,
 } from './itinerary.mjs';
 
@@ -58,10 +59,19 @@ test('every row keeps the sheet order and has two highlights and a 30-word descr
   });
 });
 
-test('distance and elevation take their units from the tab headers and the rest day has neither', () => {
-  const { itinerary } = validateItineraryGrid(fixture());
-  assert.match(itinerary.days[0].distance, /^\d+(\.\d+)? miles$/);
-  assert.match(itinerary.days[0].elevation, /^\d+ feet$/);
+test('distance and elevation are the Sheet values, the units come from the Distance Unit and Elevation Unit keys, and the rest day has neither', () => {
+  const grid = fixture();
+  const { itinerary } = validateItineraryGrid(grid);
+  const uiText = (key) => grid.find((r, i) => i > 0 && r[COL['UI Copy Key']] === key)[COL['Approved Text']];
+  assert.equal(itinerary.distanceUnit, uiText('Distance Unit'));
+  assert.equal(itinerary.elevationUnit, uiText('Elevation Unit'));
+  assert.match(itinerary.days[0].distance, /^\d+(\.\d+)?$/);
+  assert.match(itinerary.days[0].elevation, /^\d+$/);
+  assert.equal(
+    statsText(itinerary, itinerary.days[0]),
+    `${itinerary.days[0].distance} ${uiText('Distance Unit')} / ${itinerary.days[0].elevation} ${uiText('Elevation Unit')}`,
+  );
+  assert.match(statsText(itinerary, itinerary.days[0]), /^\d+(\.\d+)? \S+ \/ \d+ \S+$/);
   assert.equal(itinerary.days[4].distance, undefined);
   assert.equal(itinerary.days[4].elevation, undefined);
   assert.equal(itinerary.days[4].lodging, undefined);
@@ -180,6 +190,39 @@ test('the "Lodging Label" UI key is required, unique and non-blank, spelled exac
   assert.match(messages(respelled), /unrecognized UI copy key "Lodging label"/);
 });
 
+test('the "Distance Unit" and "Elevation Unit" UI keys are required, unique, non-blank and exactly spelled', () => {
+  const grid = fixture();
+  const keyAt = (name) => grid.findIndex((r, i) => i > 0 && r[COL['UI Copy Key']] === name);
+  for (const key of ['Distance Unit', 'Elevation Unit']) {
+    assert.ok(keyAt(key) > 0, `the fixture holds the live key "${key}"`);
+    const missing = structuredClone(grid);
+    missing[keyAt(key)][COL['UI Copy Key']] = '';
+    missing[keyAt(key)][COL['Approved Text']] = '';
+    assert.match(messages(missing), new RegExp(`required UI copy key "${key}" is missing`));
+    const dup = structuredClone(grid);
+    dup[keyAt('Rest day title')][COL['UI Copy Key']] = key;
+    assert.match(messages(dup), new RegExp(`duplicate UI copy key "${key}"`));
+    const empty = structuredClone(grid);
+    empty[keyAt(key)][COL['Approved Text']] = '';
+    assert.match(messages(empty), new RegExp(`UI copy key "${key}" has blank "Approved Text"`));
+    const respelled = structuredClone(grid);
+    respelled[keyAt(key)][COL['UI Copy Key']] = key.toLowerCase();
+    assert.match(messages(respelled), /unrecognized UI copy key/);
+  }
+});
+
+test('both unit keys trace to their tab, key and exact cell', () => {
+  const { itinerary } = validateItineraryGrid(fixture());
+  const values = JSON.parse(renderItineraryTrace(itinerary)).values;
+  for (const [path, key, text] of [['distanceUnit', 'Distance Unit', itinerary.distanceUnit], ['elevationUnit', 'Elevation Unit', itinerary.elevationUnit]]) {
+    const entry = values.find((t) => t.path === path);
+    assert.equal(entry.tab, ITINERARY_TAB);
+    assert.equal(entry.key, key);
+    assert.match(entry.cell, /^L\d+$/);
+    assert.equal(entry.value, text);
+  }
+});
+
 test('the lodging label traces to its tab, key and exact cell', () => {
   const { itinerary } = validateItineraryGrid(fixture());
   const entry = JSON.parse(renderItineraryTrace(itinerary)).values.find((t) => t.path === 'lodgingLabel');
@@ -205,9 +248,9 @@ test('every generated value traces to a tab, row and header of the fixture, and 
   const grid = fixture();
   const { itinerary } = validateItineraryGrid(grid);
   const trace = JSON.parse(renderItineraryTrace(itinerary)).values;
-  // 4 UI values (heading, details control, rest day title, lodging label) + 9 ride days x 10 (start, end, distance, elevation, lodging, 2x2 highlight parts,
+  // 6 UI values (heading, details control, rest day title, lodging label, distance unit, elevation unit) + 9 ride days x 10 (start, end, distance, elevation, lodging, 2x2 highlight parts,
   // description) + the rest day x 7 (start, end, 2x2 highlight parts, description).
-  assert.equal(trace.length, 4 + 9 * 10 + 7);
+  assert.equal(trace.length, 6 + 9 * 10 + 7);
   for (const t of trace) {
     assert.equal(t.tab, ITINERARY_TAB);
     assert.ok(ITINERARY_HEADERS.includes(t.header), t.header);
@@ -220,7 +263,14 @@ test('every generated value traces to a tab, row and header of the fixture, and 
 test('every string the page may render comes from a trace entry', () => {
   const { itinerary } = validateItineraryGrid(fixture());
   const traced = new Set(JSON.parse(renderItineraryTrace(itinerary)).values.map((t) => t.value));
-  for (const s of itineraryStrings(itinerary)) assert.ok(traced.has(s), s);
+  const stats = new Set(itinerary.days.filter((d) => d.kind === 'ride').map((d) => statsText(itinerary, d)));
+  for (const s of itineraryStrings(itinerary)) {
+    if (stats.has(s)) continue; // composed from three traced values: distance, unit, elevation, unit
+    assert.ok(traced.has(s), s);
+  }
+  for (const d of itinerary.days.filter((x) => x.kind === 'ride')) {
+    for (const v of [d.distance, d.elevation, itinerary.distanceUnit, itinerary.elevationUnit]) assert.ok(traced.has(v), v);
+  }
 });
 
 test('no retired itinerary source text exists in source or copy files', () => {
@@ -287,12 +337,12 @@ function page(itinerary, tweak = {}) {
     const names = d.highlights.map((h) => `<span>${h.name}</span>`).join('');
     const head =
       d.kind === 'ride'
-        ? `<span>${d.id}</span><span>${d.startTown} → ${d.endTown}</span><span>${d.distance}</span>`
+        ? `<span>${d.id}</span><span>${d.startTown} → ${d.endTown}</span><span>${statsText(itinerary, d)}</span>`
         : `<span>${itinerary.restDayTitle}</span>`;
     const summary = tweak.summaryExtra?.(d) ?? '';
     const panel =
       `<p>${d.description}</p><dl>${d.highlights.map((h) => `<div><dt>${h.name}</dt><dd>${h.note}</dd></div>`).join('')}</dl>` +
-      (d.lodging ? `${tweak.noLabel ? `<p>${d.lodging}</p>` : `<dl><dt>${itinerary.lodgingLabel}</dt><dd>${d.lodging}</dd></dl>`}<p>${d.elevation}</p>` : '') +
+      (d.lodging ? `${tweak.noLabel ? `<p>${d.lodging}</p>` : `<dl><dt>${itinerary.lodgingLabel}</dt><dd>${d.lodging}</dd></dl>`}${tweak.panelExtra ? tweak.panelExtra(d) : ''}` : '') +
       (d.kind === 'rest' && tweak.restLabel ? `<dl><dt>${itinerary.lodgingLabel}</dt></dl>` : '');
     return `<li><details${tweak.open ? ' open' : ''} data-itin-day="${d.id}"><summary>${head}${names}<span>${itinerary.detailsControl}</span>${summary}</summary><div>${panel}</div></details></li>`;
   };
@@ -315,12 +365,15 @@ test('the rendered-page check rejects a missing, reordered or open row and a wro
   assert.match(checkRenderedItinerary(page(itinerary, { heading: 'Invented heading' }), itinerary).join('\n'), /approved heading/);
 });
 
-test('the rendered-page check requires distance when closed and elevation only when expanded', () => {
+test('the rendered-page check requires the stats string when closed and no elevation in the expanded panel', () => {
   const { itinerary } = validateItineraryGrid(fixture());
-  const leaksElevation = page(itinerary, { summaryExtra: (d) => (d.elevation ? `<span>${d.elevation}</span>` : '') });
-  assert.match(checkRenderedItinerary(leaksElevation, itinerary).join('\n'), /elevation must appear only in the expanded panel/);
-  const noDistance = page(itinerary).replace(/<span>\d+(\.\d+)? miles<\/span>/g, '');
-  assert.match(checkRenderedItinerary(noDistance, itinerary).join('\n'), /closed row is missing distance/);
+  assert.deepEqual(checkRenderedItinerary(page(itinerary), itinerary), []);
+  const leaksElevation = page(itinerary, { panelExtra: (d) => (d.elevation ? `<p>${d.elevation} ${itinerary.elevationUnit}</p>` : '') });
+  assert.match(checkRenderedItinerary(leaksElevation, itinerary).join('\n'), /elevation must appear only in the closed row stats/);
+  const noStats = page(itinerary).replace(/<span>\d+(\.\d+)? \S+ \/ \d+ \S+<\/span>/g, '');
+  assert.match(checkRenderedItinerary(noStats, itinerary).join('\n'), /closed row is missing distance and elevation stats/);
+  const wrongUnit = page(itinerary).replace(new RegExp(` ${itinerary.distanceUnit} / `, 'g'), ' xx / ');
+  assert.match(checkRenderedItinerary(wrongUnit, itinerary).join('\n'), /closed row is missing distance and elevation stats/);
 });
 
 test('the rendered-page check requires the itinerary directly below the map', () => {

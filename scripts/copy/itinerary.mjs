@@ -32,6 +32,8 @@ const UI_KEYS = {
   details: 'Details control',
   rest: 'Rest day title',
   lodgingLabel: 'Lodging Label',
+  distanceUnit: 'Distance Unit',
+  elevationUnit: 'Elevation Unit',
 };
 
 export const REST_ID = 'REST';
@@ -48,7 +50,6 @@ export const FORBIDDEN_ITINERARY_SOURCES = [
 ];
 
 const columnLetter = (index) => String.fromCharCode(65 + index);
-const unitOf = (header) => header.match(/\(([^)]+)\)\s*$/)?.[1] ?? '';
 const wordCount = (text) => text.split(/\s+/).filter(Boolean).length;
 
 /** "• Name — note" -> {name, note}, or null when the bullet is not in that shape. */
@@ -146,8 +147,6 @@ export function validateItineraryGrid(grid) {
       );
   }
 
-  const distanceUnit = unitOf(COLUMNS.distance);
-  const elevationUnit = unitOf(COLUMNS.elevation);
   const days = [];
   rows.forEach(({ id, sheetRow, row }, index) => {
     const rest = id === REST_ID;
@@ -177,13 +176,13 @@ export function validateItineraryGrid(grid) {
       const distance = need('distance');
       if (distance && !/^\d+(\.\d+)?$/.test(distance))
         err(label, `row ${sheetRow}: "${COLUMNS.distance}" must be a number; found "${distance}"`);
-      day.distance = `${distance} ${distanceUnit}`;
-      note(path('distance'), sheetRow, COLUMNS.distance, { unitFromHeader: distanceUnit });
+      day.distance = distance;
+      note(path('distance'), sheetRow, COLUMNS.distance);
       const elevation = need('elevation');
       if (elevation && !/^\d+$/.test(elevation))
         err(label, `row ${sheetRow}: "${COLUMNS.elevation}" must be a whole number; found "${elevation}"`);
-      day.elevation = `${elevation} ${elevationUnit}`;
-      note(path('elevation'), sheetRow, COLUMNS.elevation, { unitFromHeader: elevationUnit });
+      day.elevation = elevation;
+      note(path('elevation'), sheetRow, COLUMNS.elevation);
       day.lodging = need('lodging');
       note(path('lodging'), sheetRow, COLUMNS.lodging);
     }
@@ -224,6 +223,8 @@ export function validateItineraryGrid(grid) {
   uiNote('detailsControl', UI_KEYS.details);
   uiNote('restDayTitle', UI_KEYS.rest);
   uiNote('lodgingLabel', UI_KEYS.lodgingLabel);
+  uiNote('distanceUnit', UI_KEYS.distanceUnit);
+  uiNote('elevationUnit', UI_KEYS.elevationUnit);
   return {
     errors,
     itinerary: {
@@ -232,6 +233,8 @@ export function validateItineraryGrid(grid) {
       detailsControl: ui[UI_KEYS.details],
       restDayTitle: ui[UI_KEYS.rest],
       lodgingLabel: ui[UI_KEYS.lodgingLabel],
+      distanceUnit: ui[UI_KEYS.distanceUnit],
+      elevationUnit: ui[UI_KEYS.elevationUnit],
       days,
       trace,
     },
@@ -244,13 +247,27 @@ const valueAt = (data, path) =>
     .filter(Boolean)
     .reduce((node, part) => node?.[part], data);
 
+/**
+ * The closed-row stats string: "<distance> <Distance Unit> / <elevation> <Elevation Unit>". Values and unit
+ * text come only from the workbook; the separator is a single space, a slash and a single space.
+ */
+export function statsText(itinerary, day) {
+  return `${day.distance} ${itinerary.distanceUnit} / ${day.elevation} ${itinerary.elevationUnit}`;
+}
+
 /** Every approved string the page may render for the itinerary, in display order. */
 export function itineraryStrings(itinerary) {
-  const out = [itinerary.heading, itinerary.detailsControl, itinerary.restDayTitle, itinerary.lodgingLabel];
+  const out = [
+    itinerary.heading,
+    itinerary.detailsControl,
+    itinerary.restDayTitle,
+    itinerary.lodgingLabel,
+    itinerary.distanceUnit,
+    itinerary.elevationUnit,
+  ];
   for (const d of itinerary.days) {
     out.push(d.startTown, d.endTown);
-    if (d.distance) out.push(d.distance);
-    if (d.elevation) out.push(d.elevation);
+    if (d.kind === 'ride') out.push(statsText(itinerary, d));
     if (d.lodging) out.push(d.lodging);
     for (const h of d.highlights) out.push(h.name, h.note);
     out.push(d.description);
@@ -282,8 +299,8 @@ export interface ItineraryDay {
   row: number;
   startTown: string;
   endTown: string;
-  distance?: string;
-  elevation?: string;
+  distance?: string; // value as the Sheet gives it; unit text is itinerary.distanceUnit
+  elevation?: string; // value as the Sheet gives it; unit text is itinerary.elevationUnit
   lodging?: string;
   highlights: ItineraryHighlight[];
   description: string;
@@ -295,6 +312,8 @@ export const ITINERARY: {
   detailsControl: string;
   restDayTitle: string;
   lodgingLabel: string;
+  distanceUnit: string;
+  elevationUnit: string;
   days: ItineraryDay[];
 } = ${JSON.stringify(data, null, 2)};
 `;
@@ -397,12 +416,12 @@ export function checkRenderedItinerary(html, itinerary) {
       inClosed('start town', day.startTown);
       inClosed('end town', day.endTown);
       if (spaced(summary[1]).split(' ')[0] !== day.id) bad(`row ${day.id}: closed row does not start with the ride day`);
-      inClosed('distance', day.distance);
-      inPanel('elevation', day.elevation);
+      inClosed('distance and elevation stats', statsText(itinerary, day));
       inPanel('destination lodging', day.lodging);
       inPanel('lodging label directly before the lodging text', itinerary.lodgingLabel + day.lodging);
       notClosed('lodging label', itinerary.lodgingLabel);
-      notClosed('elevation', day.elevation);
+      if (panel.includes(squash(`${day.elevation} ${itinerary.elevationUnit}`)))
+        bad(`row ${day.id}: elevation must appear only in the closed row stats, not in the expanded panel`);
       notClosed('destination lodging', day.lodging);
     } else {
       inClosed('rest day title', itinerary.restDayTitle);
