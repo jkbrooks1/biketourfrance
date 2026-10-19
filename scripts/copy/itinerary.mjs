@@ -34,6 +34,9 @@ const UI_KEYS = {
   lodgingLabel: 'Lodging Label',
   distanceUnit: 'Distance Unit',
   elevationUnit: 'Elevation Unit',
+  columnHeaderRoute: 'Column header route',
+  columnHeaderDistance: 'Column header distance',
+  columnHeaderSights: 'Column header sights',
 };
 
 export const REST_ID = 'REST';
@@ -225,6 +228,9 @@ export function validateItineraryGrid(grid) {
   uiNote('lodgingLabel', UI_KEYS.lodgingLabel);
   uiNote('distanceUnit', UI_KEYS.distanceUnit);
   uiNote('elevationUnit', UI_KEYS.elevationUnit);
+  uiNote('columnHeaders.route', UI_KEYS.columnHeaderRoute);
+  uiNote('columnHeaders.distance', UI_KEYS.columnHeaderDistance);
+  uiNote('columnHeaders.sights', UI_KEYS.columnHeaderSights);
   return {
     errors,
     itinerary: {
@@ -235,6 +241,11 @@ export function validateItineraryGrid(grid) {
       lodgingLabel: ui[UI_KEYS.lodgingLabel],
       distanceUnit: ui[UI_KEYS.distanceUnit],
       elevationUnit: ui[UI_KEYS.elevationUnit],
+      columnHeaders: {
+        route: ui[UI_KEYS.columnHeaderRoute],
+        distance: ui[UI_KEYS.columnHeaderDistance],
+        sights: ui[UI_KEYS.columnHeaderSights],
+      },
       days,
       trace,
     },
@@ -264,6 +275,9 @@ export function itineraryStrings(itinerary) {
     itinerary.lodgingLabel,
     itinerary.distanceUnit,
     itinerary.elevationUnit,
+    itinerary.columnHeaders.route,
+    itinerary.columnHeaders.distance,
+    itinerary.columnHeaders.sights,
   ];
   for (const d of itinerary.days) {
     out.push(d.startTown, d.endTown);
@@ -314,6 +328,7 @@ export const ITINERARY: {
   lodgingLabel: string;
   distanceUnit: string;
   elevationUnit: string;
+  columnHeaders: { route: string; distance: string; sights: string };
   days: ItineraryDay[];
 } = ${JSON.stringify(data, null, 2)};
 `;
@@ -376,6 +391,16 @@ export function checkRenderedItinerary(html, itinerary) {
 
   const heading = section.match(/<h2\b[^>]*>([\s\S]*?)<\/h2>/);
   if (!heading || spaced(heading[1]) !== itinerary.heading) bad('the itinerary heading is not the approved heading');
+
+  // One column header row (route, distance/climb, sights) between the heading and the first day row; not per row.
+  const heads = [...section.matchAll(/<div class="itin-head[^"]*"[^>]*>([\s\S]*?)<\/div>/g)];
+  if (heads.length !== 1) bad(`expected exactly one column header row; found ${heads.length}`);
+  else {
+    const labels = [...heads[0][1].matchAll(/<span[^>]*>([\s\S]*?)<\/span>/g)].map((m) => spaced(m[1]));
+    const want = [itinerary.columnHeaders.route, itinerary.columnHeaders.distance, itinerary.columnHeaders.sights];
+    if (labels.join('|') !== want.join('|')) bad(`column header labels are "${labels.join('", "')}"; expected "${want.join('", "')}"`);
+    if (heads[0].index > section.indexOf('<details')) bad('the column header row is not above the first day row');
+  }
 
   const found = [...section.matchAll(/<details\b[^>]*data-itin-day="([^"]*)"[^>]*>([\s\S]*?)<\/details>/g)];
   const ids = found.map((m) => m[1]);

@@ -211,6 +211,38 @@ test('the "Distance Unit" and "Elevation Unit" UI keys are required, unique, non
   }
 });
 
+test('the three column header keys are required, unique, non-blank and exactly spelled', () => {
+  const grid = fixture();
+  const keyAt = (name) => grid.findIndex((r, i) => i > 0 && r[COL['UI Copy Key']] === name);
+  for (const key of ['Column header route', 'Column header distance', 'Column header sights']) {
+    assert.ok(keyAt(key) > 0, `the fixture holds the live key "${key}"`);
+    const missing = structuredClone(grid);
+    missing[keyAt(key)][COL['UI Copy Key']] = '';
+    missing[keyAt(key)][COL['Approved Text']] = '';
+    assert.match(messages(missing), new RegExp(`required UI copy key "${key}" is missing`));
+    const dup = structuredClone(grid);
+    dup[keyAt('Rest day title')][COL['UI Copy Key']] = key;
+    assert.match(messages(dup), new RegExp(`duplicate UI copy key "${key}"`));
+    const empty = structuredClone(grid);
+    empty[keyAt(key)][COL['Approved Text']] = '';
+    assert.match(messages(empty), new RegExp(`UI copy key "${key}" has blank "Approved Text"`));
+    const respelled = structuredClone(grid);
+    respelled[keyAt(key)][COL['UI Copy Key']] = key.replace('Column header', 'Column Header');
+    assert.match(messages(respelled), /unrecognized UI copy key/);
+  }
+});
+
+test('the column header keys trace to their tab, key and exact cell', () => {
+  const { itinerary } = validateItineraryGrid(fixture());
+  const values = JSON.parse(renderItineraryTrace(itinerary)).values;
+  for (const [path, key, text] of [['columnHeaders.route', 'Column header route', itinerary.columnHeaders.route], ['columnHeaders.distance', 'Column header distance', itinerary.columnHeaders.distance], ['columnHeaders.sights', 'Column header sights', itinerary.columnHeaders.sights]]) {
+    const entry = values.find((t) => t.path === path);
+    assert.equal(entry.key, key);
+    assert.match(entry.cell, /^L\d+$/);
+    assert.equal(entry.value, text);
+  }
+});
+
 test('both unit keys trace to their tab, key and exact cell', () => {
   const { itinerary } = validateItineraryGrid(fixture());
   const values = JSON.parse(renderItineraryTrace(itinerary)).values;
@@ -248,9 +280,9 @@ test('every generated value traces to a tab, row and header of the fixture, and 
   const grid = fixture();
   const { itinerary } = validateItineraryGrid(grid);
   const trace = JSON.parse(renderItineraryTrace(itinerary)).values;
-  // 6 UI values (heading, details control, rest day title, lodging label, distance unit, elevation unit) + 9 ride days x 10 (start, end, distance, elevation, lodging, 2x2 highlight parts,
+  // 9 UI values (heading, details control, rest day title, lodging label, distance unit, elevation unit, three column headers) + 9 ride days x 10 (start, end, distance, elevation, lodging, 2x2 highlight parts,
   // description) + the rest day x 7 (start, end, 2x2 highlight parts, description).
-  assert.equal(trace.length, 6 + 9 * 10 + 7);
+  assert.equal(trace.length, 9 + 9 * 10 + 7);
   for (const t of trace) {
     assert.equal(t.tab, ITINERARY_TAB);
     assert.ok(ITINERARY_HEADERS.includes(t.header), t.header);
@@ -347,7 +379,7 @@ function page(itinerary, tweak = {}) {
     return `<li><details${tweak.open ? ' open' : ''} data-itin-day="${d.id}"><summary>${head}${names}<span>${itinerary.detailsControl}</span>${summary}</summary><div>${panel}</div></details></li>`;
   };
   const days = tweak.days ?? itinerary.days;
-  return `<body><section id="ready-heading"></section><div class="journey-map"><picture></picture></div><section data-cdm-itinerary><h2>${tweak.heading ?? itinerary.heading}</h2><ul>${days.map(row).join('')}</ul></section><section id="cdm-heading"></section></body>`;
+  return `<body><section id="ready-heading"></section><div class="journey-map"><picture></picture></div><section data-cdm-itinerary><h2>${tweak.heading ?? itinerary.heading}</h2>${tweak.noHead ? '' : `<div class="itin-head" aria-hidden="true"><span>${tweak.headRoute ?? itinerary.columnHeaders.route}</span><span>${itinerary.columnHeaders.distance}</span><span>${itinerary.columnHeaders.sights}</span></div>`}${tweak.dupHead ? '<div class="itin-head"><span>x</span></div>' : ''}<ul>${days.map(row).join('')}</ul></section><section id="cdm-heading"></section></body>`;
 }
 
 test('the rendered-page check accepts a correct itinerary', () => {
@@ -389,4 +421,12 @@ test('the rendered-page check requires the lodging label directly before the lod
   const { itinerary } = validateItineraryGrid(fixture());
   assert.match(checkRenderedItinerary(page(itinerary, { noLabel: true }), itinerary).join('\n'), /lodging label directly before the lodging text/);
   assert.match(checkRenderedItinerary(page(itinerary, { restLabel: true }), itinerary).join('\n'), /rest day must not show the lodging label/);
+});
+
+test('the rendered-page check requires exactly one column header row with the three Sheet labels above the first day row', () => {
+  const { itinerary } = validateItineraryGrid(fixture());
+  assert.deepEqual(checkRenderedItinerary(page(itinerary), itinerary), []);
+  assert.match(checkRenderedItinerary(page(itinerary, { noHead: true }), itinerary).join('\n'), /exactly one column header row; found 0/);
+  assert.match(checkRenderedItinerary(page(itinerary, { dupHead: true }), itinerary).join('\n'), /exactly one column header row; found 2/);
+  assert.match(checkRenderedItinerary(page(itinerary, { headRoute: 'Invented label' }), itinerary).join('\n'), /column header labels are/);
 });

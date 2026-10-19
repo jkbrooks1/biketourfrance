@@ -50,6 +50,9 @@ HEADING, DETAILS, RESTTITLE = ui['Itinerary section heading'], ui['Details contr
 LABEL = next(v for k, v in ui.items() if k.lower() == 'lodging label')
 # Unit text comes only from the Sheet keys; closed-row stats are "<distance> <Distance Unit> / <elevation> <Elevation Unit>".
 DIST_UNIT, ELEV_UNIT = ui['Distance Unit'], ui['Elevation Unit']
+# Column header labels come only from these Sheet keys, spelled exactly as the Sheet spells them.
+HEAD_ROUTE, HEAD_DIST, HEAD_SIGHTS = ui['Column header route'], ui['Column header distance'], ui['Column header sights']
+COLUMNAR_MIN = 900  # day rows are columnar from this viewport width up; below it they stack and the header is hidden
 for _d in days:
     _d['stats'] = None if _d['rest'] else f"{_d['distance']} {DIST_UNIT} / {_d['elevation']} {ELEV_UNIT}"
 DAY1_LODGING = next(d['lodging'] for d in days if d['id'] == '1')
@@ -162,6 +165,32 @@ def run():
                 check(f'{label}: expanded panel hidden', not panel.evaluate('el => el.checkVisibility()'), '')
 
             measured[-1]['stats'] = stats_seen
+            # ---- one column header row, exact Sheet text, aligned with the day-row columns (or hidden when rows stack)
+            head = page.evaluate("""() => {
+              const sec = document.querySelector('[data-cdm-itinerary]'); const heads = sec.querySelectorAll('.itin-head');
+              const h = heads[0]; const vis = !!h && h.checkVisibility();
+              const left = (e) => e ? e.getBoundingClientRect().left : null;
+              const rows = [...sec.querySelectorAll('details.itin-day:not(.itin-day--rest)')];
+              const first = rows[0];
+              return { count: heads.length, labels: h ? [...h.children].map(c => c.textContent.trim()) : [], visible: vis,
+                headLeft: h ? [left(h.querySelector('.itin-head__route')), left(h.querySelector('.itin-head__distance')), left(h.querySelector('.itin-head__sights'))] : [],
+                rowLefts: rows.map(r => [left(r.querySelector('.itin-day__route')), left(r.querySelector('.itin-day__distance')), left(r.querySelector('.itin-day__names'))]),
+                headBottom: h ? h.getBoundingClientRect().bottom : null, firstTop: first ? first.getBoundingClientRect().top : null,
+                headTop: h ? h.getBoundingClientRect().top : null, h2Bottom: sec.querySelector('h2').getBoundingClientRect().bottom,
+                text: sec.textContent }; }""")
+            check(f'[{tag}] exactly one column header row, not duplicated per row', head['count'] == 1, head['count'])
+            check(f'[{tag}] column header labels equal the live Sheet text', head['labels'] == [HEAD_ROUTE, HEAD_DIST, HEAD_SIGHTS], head['labels'])
+            check(f'[{tag}] each header label appears exactly once in the itinerary', all(head['text'].count(t) == 1 for t in [HEAD_ROUTE, HEAD_DIST, HEAD_SIGHTS]), '')
+            if width >= COLUMNAR_MIN:
+                check(f'[{tag}] column header row is visible where the day rows are columnar', head['visible'], '')
+                deltas = [[round(hl - rl, 2) for hl, rl in zip(head['headLeft'], r)] for r in head['rowLefts']]
+                worst = max(abs(x) for d in deltas for x in d)
+                measured[-1]['headerAlign'] = dict(headerLeft=[round(x, 2) for x in head['headLeft']], firstRowLeft=[round(x, 2) for x in head['rowLefts'][0]], worstDelta=worst)
+                check(f'[{tag}] each header label left edge aligns with its column in all nine ride rows within 1px', worst <= 1, measured[-1]['headerAlign'])
+                check(f'[{tag}] header row sits between the section heading and the first day row', head['h2Bottom'] <= head['headTop'] + 0.5 and head['headBottom'] <= head['firstTop'] + 0.5, f"{head['h2Bottom']} {head['headTop']} {head['headBottom']} {head['firstTop']}")
+            else:
+                measured[-1]['headerAlign'] = 'hidden: day rows are stacked below %dpx' % COLUMNAR_MIN
+                check(f'[{tag}] column header row is hidden where the day rows are stacked', not head['visible'], '')
             # ---- overlap and overflow, closed
             def overlap_report(selector):
                 return page.evaluate("""sel => { const bad = [];
