@@ -21,6 +21,8 @@ os.makedirs(args.out, exist_ok=True)
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 WIDTHS = [1440, 1024, 768, 390]
+# Owner-approved expected rendered widths (canal map, locator), +/-1px: canal 5/6 and locator 1/6 of (viewport - 60px).
+EXPECTED_W = {1440: (1150, 230), 1024: (803.33, 160.67), 768: (590, 118), 390: (275, 55)}
 SHOT_WIDTHS = {1440, 390}
 
 # ------------------------------------------------------------------ expected data from the raw tab grid
@@ -85,7 +87,7 @@ def run():
             page.add_style_tag(content='html{scroll-behavior:auto !important}')
             check(f'[{tag}] home page loads with HTTP success', resp and resp.ok, resp.status if resp else 'none')
 
-            # ---- map group: canal map left, France locator right (1:4), centered, outer spacing, no extras
+            # ---- map group: canal map left, France locator right (1:5, 20% of canal width), top-aligned, outer spacing, no extras
             page.evaluate("document.querySelector('.journey-map').scrollIntoView({block:'center'})")
             page.wait_for_function("(() => [...document.querySelectorAll('.journey-map img')].every(i => i.complete && i.naturalWidth > 0))()", timeout=15000)
             m = page.evaluate("""() => {
@@ -100,15 +102,17 @@ def run():
                 nextIsItinerary: box.nextElementSibling && box.nextElementSibling.hasAttribute('data-cdm-itinerary') } }""")
             ratio = m['loc']['w'] / m['canal']['w']
             record = dict(width=width, ratio=round(ratio, 5), locW=round(m['loc']['w'], 2), canalW=round(m['canal']['w'], 2),
-                          locCenterY=round((m['loc']['t'] + m['loc']['b']) / 2, 2), canalCenterY=round((m['canal']['t'] + m['canal']['b']) / 2, 2),
+                          canalTop=round(m['canal']['t'], 2), locTop=round(m['loc']['t'], 2), expectedCanalW=EXPECTED_W[width][0], expectedLocW=EXPECTED_W[width][1],
                           left=round(m['left'], 2), rightGap=round(m['rightGap'], 2), marginTop=m['marginTop'], marginBottom=m['marginBottom'],
                           gapBetween=round(m['loc']['l'] - m['canal']['r'], 2))
             measured.append(record)
             check(f'[{tag}] locator is present and to the right of the canal map', m['loc']['l'] >= m['canal']['r'] - 0.5 and m['loc']['w'] > 0, record)
-            check(f'[{tag}] locator width is 0.25 of canal map width within 1px', abs(m['loc']['w'] - 0.25 * m['canal']['w']) <= 1, f"loc={m['loc']['w']} canal={m['canal']['w']} ratio={ratio}")
-            check(f'[{tag}] locator vertical center equals canal map vertical center within 1px', abs((m['loc']['t'] + m['loc']['b']) / 2 - (m['canal']['t'] + m['canal']['b']) / 2) <= 1, record)
+            check(f'[{tag}] locator width is 0.20 of canal map width within 1px', abs(m['loc']['w'] - 0.20 * m['canal']['w']) <= 1, f"loc={m['loc']['w']} canal={m['canal']['w']} ratio={ratio}")
+            check(f'[{tag}] locator top edge equals canal map top edge within 1px', abs(m['loc']['t'] - m['canal']['t']) <= 1, f"locTop={m['loc']['t']} canalTop={m['canal']['t']}")
+            check(f'[{tag}] canal map width matches the expected value within 1px', abs(m['canal']['w'] - EXPECTED_W[width][0]) <= 1, f"{m['canal']['w']} vs {EXPECTED_W[width][0]}")
+            check(f'[{tag}] locator width matches the expected value within 1px', abs(m['loc']['w'] - EXPECTED_W[width][1]) <= 1, f"{m['loc']['w']} vs {EXPECTED_W[width][1]}")
             check(f'[{tag}] canal map and locator have no gap between them', abs(m['loc']['l'] - m['canal']['r']) <= 0.6, record['gapBetween'])
-            check(f'[{tag}] map group fills the row: canal map 80%, locator 20%', abs(m['canal']['w'] / m['row']['w'] - 0.8) < 0.005 and abs(m['loc']['w'] / m['row']['w'] - 0.2) < 0.005, f"{m['canal']['w']/m['row']['w']:.4f} {m['loc']['w']/m['row']['w']:.4f}")
+            check(f'[{tag}] map group fills the row: canal map 5/6, locator 1/6', abs(m['canal']['w'] / m['row']['w'] - 5 / 6) < 0.005 and abs(m['loc']['w'] / m['row']['w'] - 1 / 6) < 0.005, f"{m['canal']['w']/m['row']['w']:.4f} {m['loc']['w']/m['row']['w']:.4f}")
             check(f'[{tag}] map group has 30px left and right spacing', abs(m['left'] - 30) < 0.6 and abs(m['rightGap'] - 30) < 0.6, f"left={m['left']} right={m['rightGap']}")
             check(f'[{tag}] map group has 5px top and bottom spacing', m['marginTop'] == '5px' and m['marginBottom'] == '5px', f"{m['marginTop']} {m['marginBottom']}")
             check(f'[{tag}] no visible border, shadow, caption or text in the map group', all(b.startswith('0px,0px,0px,0px|none|none') for b in m['borders']) and m['boxText'] == '' and m['figcaptions'] == 0, m['borders'][:3])
@@ -218,6 +222,9 @@ def run():
               return { page: document.documentElement.scrollWidth - w, bad }; }""")
             labels = page.eval_on_selector_all('[data-cdm-itinerary] .itin-day__label', 'els => els.map(e => e.innerText.trim())')
             check(f'[{tag}] the live Lodging Label text appears exactly 9 times with all rows expanded', labels == [LABEL] * 9, labels)
+            rest_labels = page.locator('[data-itin-day="REST"] .itin-day__label').count()
+            measured[-1].update(labelCount=len(labels), restDayLabelCount=rest_labels)
+            check(f'[{tag}] no lodging label on the rest-day row with all rows expanded', rest_labels == 0, rest_labels)
             check(f'[{tag}] Day 1 lodging shows "agricultural" and the page has no "agritcultural"', 'agricultural' in DAY1_LODGING and page.locator('[data-itin-day="1"] .itin-day__lodging').inner_text().strip() == DAY1_LODGING and 'agritcultural' not in page.content(), '')
             check(f'[{tag}] no horizontal overflow (all rows expanded)', ov['page'] <= 0 and not ov['bad'], ov)
             check(f'[{tag}] no overlapping elements in expanded rows', overlap_report('.itin-day__panel') == [] and overlap_report('.itin-day__summary') == [], '')

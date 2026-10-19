@@ -90,8 +90,8 @@ const { hero, readyToRide, about, gallery, buttons } = COPY;
       <Photo
         src={canalMap}
         alt={TEXT['/home/canal_map_alt']}
-        sizes="calc((100vw - 60px) * 0.8)"
-        widths={[264, 614, 1104, 1646]}
+        sizes="calc((100vw - 60px) * 5 / 6)"
+        widths={[275, 640, 1150, 1715]}
         quality={70}
       />
     </div>
@@ -99,8 +99,8 @@ const { hero, readyToRide, about, gallery, buttons } = COPY;
       <Photo
         src={franceLocator}
         alt=""
-        sizes="calc((100vw - 60px) * 0.2)"
-        widths={[66, 154, 276, 552]}
+        sizes="calc((100vw - 60px) / 6)"
+        widths={[55, 118, 230, 460]}
         quality={70}
       />
     </div>
@@ -201,23 +201,23 @@ const { hero, readyToRide, about, gallery, buttons } = COPY;
 </BaseLayout>
 
 <style>
-  /* Map group: canal map 80% and France locator 20% of one row (locator = 1:4 of the canal map width),
-     locator vertically centered, at every viewport width. Outer spacing 30px sides, 5px top and bottom. */
+  /* Map group: canal map 5/6 and France locator 1/6 of one row (locator = 1:5, 20% of the canal map width),
+     locator top-aligned with the canal map, at every viewport width. Outer spacing 30px sides, 5px top and bottom. */
   .journey-map {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     width: calc(100% - 60px);
     margin: 5px 30px;
   }
 
   .journey-map__canal {
-    flex: 0 0 80%;
-    width: 80%;
+    flex: 0 0 calc(100% * 5 / 6);
+    width: calc(100% * 5 / 6);
   }
 
   .journey-map__locator {
-    flex: 0 0 20%;
-    width: 20%;
+    flex: 0 0 calc(100% / 6);
+    width: calc(100% / 6);
   }
 
   .journey-map :global(picture),
