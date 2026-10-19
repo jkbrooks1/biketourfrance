@@ -4,7 +4,10 @@
 // Native <details>/<summary> gives keyboard access and expanded state without extra labels.
 import { ITINERARY } from '../data/cdm-itinerary';
 
-const { heading, detailsControl, restDayTitle, lodgingLabel, days } = ITINERARY;
+const { heading, detailsControl, restDayTitle, lodgingLabel, distanceUnit, elevationUnit, days } = ITINERARY;
+// Closed-row stats: "<distance> <Distance Unit> / <elevation> <Elevation Unit>", values and units from the Sheet.
+const stats = (day: (typeof days)[number]) =>
+  `${day.distance} ${distanceUnit} / ${day.elevation} ${elevationUnit}`;
 ---
 
 <section class="section itinerary" aria-labelledby="itinerary-heading" data-cdm-itinerary>
@@ -22,7 +25,7 @@ const { heading, detailsControl, restDayTitle, lodgingLabel, days } = ITINERARY;
                     <span class="itin-day__route">
                       {day.startTown} <span aria-hidden="true">→</span> {day.endTown}
                     </span>
-                    <span class="itin-day__distance">{day.distance}</span>
+                    <span class="itin-day__distance">{stats(day)}</span>
                   </>
                 ) : (
                   <span class="itin-day__title">{restDayTitle}</span>
@@ -50,7 +53,6 @@ const { heading, detailsControl, restDayTitle, lodgingLabel, days } = ITINERARY;
                     <dd class="itin-day__lodging">{day.lodging}</dd>
                   </dl>
                 )}
-                {day.elevation && <p class="itin-day__elevation">{day.elevation}</p>}
               </div>
             </details>
           </li>
@@ -131,6 +133,7 @@ const { heading, detailsControl, restDayTitle, lodgingLabel, days } = ITINERARY;
   .itin-day__distance {
     grid-area: distance;
     color: var(--ink-muted);
+    white-space: nowrap;
   }
   .itin-day__names {
     grid-area: names;
@@ -194,23 +197,19 @@ const { heading, detailsControl, restDayTitle, lodgingLabel, days } = ITINERARY;
   .itin-day__lodging {
     margin: 0;
   }
-  .itin-day__elevation {
-    max-width: var(--measure);
-  }
-  .itin-day__elevation {
+  .itin-day__stay:last-child {
     margin-bottom: 0;
-    font-weight: 600;
   }
 
   @media (min-width: 900px) {
     .itin-day__summary {
       align-items: center;
       padding: var(--s3) var(--s4);
-      grid-template-columns: 44px minmax(0, 1.2fr) 110px minmax(0, 1.6fr) auto;
+      grid-template-columns: 44px minmax(0, 1.2fr) 150px minmax(0, 1.6fr) auto;
       grid-template-areas: 'num route distance names toggle';
     }
     .itin-day--rest .itin-day__summary {
-      grid-template-columns: 44px minmax(0, 1.2fr) 110px minmax(0, 1.6fr) auto;
+      grid-template-columns: 44px minmax(0, 1.2fr) 150px minmax(0, 1.6fr) auto;
       grid-template-areas: 'title title title names toggle';
     }
     .itin-day__panel {

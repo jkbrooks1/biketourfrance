@@ -22,16 +22,14 @@
    "tab": "CDM_Itinerary_for_BTF_Site",
    "row": 2,
    "header": "Distance (miles)",
-   "unitFromHeader": "miles",
-   "value": "53.6 miles"
+   "value": "53.6"
   },
   {
    "path": "days[0].elevation",
    "tab": "CDM_Itinerary_for_BTF_Site",
    "row": 2,
    "header": "Elevation (feet)",
-   "unitFromHeader": "feet",
-   "value": "2122 feet"
+   "value": "2122"
   },
   {
    "path": "days[0].lodging",
@@ -98,16 +96,14 @@
    "tab": "CDM_Itinerary_for_BTF_Site",
    "row": 3,
    "header": "Distance (miles)",
-   "unitFromHeader": "miles",
-   "value": "49.6 miles"
+   "value": "49.6"
   },
   {
    "path": "days[1].elevation",
    "tab": "CDM_Itinerary_for_BTF_Site",
    "row": 3,
    "header": "Elevation (feet)",
-   "unitFromHeader": "feet",
-   "value": "600 feet"
+   "value": "600"
   },
   {
    "path": "days[1].lodging",
@@ -174,16 +170,14 @@
    "tab": "CDM_Itinerary_for_BTF_Site",
    "row": 4,
    "header": "Distance (miles)",
-   "unitFromHeader": "miles",
-   "value": "30.4 miles"
+   "value": "30.4"
   },
   {
    "path": "days[2].elevation",
    "tab": "CDM_Itinerary_for_BTF_Site",
    "row": 4,
    "header": "Elevation (feet)",
-   "unitFromHeader": "feet",
-   "value": "100 feet"
+   "value": "100"
   },
   {
    "path": "days[2].lodging",
@@ -250,16 +244,14 @@
    "tab": "CDM_Itinerary_for_BTF_Site",
    "row": 5,
    "header": "Distance (miles)",
-   "unitFromHeader": "miles",
-   "value": "44.8 miles"
+   "value": "44.8"
   },
   {
    "path": "days[3].elevation",
    "tab": "CDM_Itinerary_for_BTF_Site",
    "row": 5,
    "header": "Elevation (feet)",
-   "unitFromHeader": "feet",
-   "value": "70 feet"
+   "value": "70"
   },
   {
    "path": "days[3].lodging",
@@ -379,16 +371,14 @@
    "tab": "CDM_Itinerary_for_BTF_Site",
    "row": 7,
    "header": "Distance (miles)",
-   "unitFromHeader": "miles",
-   "value": "39.9 miles"
+   "value": "39.9"
   },
   {
    "path": "days[5].elevation",
    "tab": "CDM_Itinerary_for_BTF_Site",
    "row": 7,
    "header": "Elevation (feet)",
-   "unitFromHeader": "feet",
-   "value": "731 feet"
+   "value": "731"
   },
   {
    "path": "days[5].lodging",
@@ -455,16 +445,14 @@
    "tab": "CDM_Itinerary_for_BTF_Site",
    "row": 8,
    "header": "Distance (miles)",
-   "unitFromHeader": "miles",
-   "value": "23.9 miles"
+   "value": "23.9"
   },
   {
    "path": "days[6].elevation",
    "tab": "CDM_Itinerary_for_BTF_Site",
    "row": 8,
    "header": "Elevation (feet)",
-   "unitFromHeader": "feet",
-   "value": "266 feet"
+   "value": "266"
   },
   {
    "path": "days[6].lodging",
@@ -531,16 +519,14 @@
    "tab": "CDM_Itinerary_for_BTF_Site",
    "row": 9,
    "header": "Distance (miles)",
-   "unitFromHeader": "miles",
-   "value": "28.7 miles"
+   "value": "28.7"
   },
   {
    "path": "days[7].elevation",
    "tab": "CDM_Itinerary_for_BTF_Site",
    "row": 9,
    "header": "Elevation (feet)",
-   "unitFromHeader": "feet",
-   "value": "453 feet"
+   "value": "453"
   },
   {
    "path": "days[7].lodging",
@@ -607,16 +593,14 @@
    "tab": "CDM_Itinerary_for_BTF_Site",
    "row": 10,
    "header": "Distance (miles)",
-   "unitFromHeader": "miles",
-   "value": "26.4 miles"
+   "value": "26.4"
   },
   {
    "path": "days[8].elevation",
    "tab": "CDM_Itinerary_for_BTF_Site",
    "row": 10,
    "header": "Elevation (feet)",
-   "unitFromHeader": "feet",
-   "value": "670 feet"
+   "value": "670"
   },
   {
    "path": "days[8].lodging",
@@ -683,16 +667,14 @@
    "tab": "CDM_Itinerary_for_BTF_Site",
    "row": 11,
    "header": "Distance (miles)",
-   "unitFromHeader": "miles",
-   "value": "44.5 miles"
+   "value": "44.5"
   },
   {
    "path": "days[9].elevation",
    "tab": "CDM_Itinerary_for_BTF_Site",
    "row": 11,
    "header": "Elevation (feet)",
-   "unitFromHeader": "feet",
-   "value": "400 feet"
+   "value": "400"
   },
   {
    "path": "days[9].lodging",
@@ -775,6 +757,24 @@
    "key": "Lodging Label",
    "cell": "L5",
    "value": "Where we'll stay"
+  },
+  {
+   "path": "distanceUnit",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 6,
+   "header": "Approved Text",
+   "key": "Distance Unit",
+   "cell": "L6",
+   "value": "mi"
+  },
+  {
+   "path": "elevationUnit",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 7,
+   "header": "Approved Text",
+   "key": "Elevation Unit",
+   "cell": "L7",
+   "value": "ft"
   }
  ]
 }
