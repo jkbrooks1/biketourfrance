@@ -4,7 +4,7 @@
 // Native <details>/<summary> gives keyboard access and expanded state without extra labels.
 import { ITINERARY } from '../data/cdm-itinerary';
 
-const { heading, detailsControl, restDayTitle, lodgingLabel, distanceUnit, elevationUnit, days } = ITINERARY;
+const { heading, detailsControl, restDayTitle, lodgingLabel, distanceUnit, elevationUnit, columnHeaders, days } = ITINERARY;
 // Closed-row stats: "<distance> <Distance Unit> / <elevation> <Elevation Unit>", values and units from the Sheet.
 const stats = (day: (typeof days)[number]) =>
   `${day.distance} ${distanceUnit} / ${day.elevation} ${elevationUnit}`;
@@ -13,6 +13,11 @@ const stats = (day: (typeof days)[number]) =>
 <section class="section itinerary" aria-labelledby="itinerary-heading" data-cdm-itinerary>
   <div class="container">
     <h2 id="itinerary-heading">{heading}</h2>
+    <div class="itin-head" aria-hidden="true">
+      <span class="itin-head__route">{columnHeaders.route}</span>
+      <span class="itin-head__distance">{columnHeaders.distance}</span>
+      <span class="itin-head__sights">{columnHeaders.sights}</span>
+    </div>
     <ul class="itinerary__list" role="list">
       {
         days.map((day) => (
@@ -63,6 +68,17 @@ const stats = (day: (typeof days)[number]) =>
 </section>
 
 <style>
+  /* One column track definition, shared by the day rows and the column header row, so they always align.
+     The details control track is fixed (not auto) so the header, which has no control, gets identical tracks. */
+  .itinerary {
+    --itin-cols: 44px minmax(0, 1.2fr) 150px minmax(0, 1.6fr) 150px;
+  }
+
+  /* Column header row: shown only where the day rows are columnar (900px and up); hidden where they stack. */
+  .itin-head {
+    display: none;
+  }
+
   .itinerary__list {
     list-style: none;
     margin: var(--s4) 0 0;
@@ -202,14 +218,36 @@ const stats = (day: (typeof days)[number]) =>
   }
 
   @media (min-width: 900px) {
+    .itin-head {
+      display: grid;
+      grid-template-columns: var(--itin-cols);
+      gap: var(--s1) var(--s3);
+      padding: 0 var(--s4);
+      margin: var(--s4) 0 var(--s2);
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--ink-muted);
+    }
+    .itin-head__route {
+      grid-column: 2;
+    }
+    .itin-head__distance {
+      grid-column: 3;
+    }
+    .itin-head__sights {
+      grid-column: 4;
+    }
+    .itinerary__list {
+      margin-top: 0;
+    }
     .itin-day__summary {
       align-items: center;
       padding: var(--s3) var(--s4);
-      grid-template-columns: 44px minmax(0, 1.2fr) 150px minmax(0, 1.6fr) auto;
+      grid-template-columns: var(--itin-cols);
       grid-template-areas: 'num route distance names toggle';
     }
     .itin-day--rest .itin-day__summary {
-      grid-template-columns: 44px minmax(0, 1.2fr) 150px minmax(0, 1.6fr) auto;
+      grid-template-columns: var(--itin-cols);
       grid-template-areas: 'title title title names toggle';
     }
     .itin-day__panel {

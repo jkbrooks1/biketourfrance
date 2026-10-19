@@ -230,7 +230,9 @@ for (const m of css.matchAll(/font-size\s*:\s*([\d.]+)px/g)) {
   if (Number(m[1]) < 12) fail('css', `font-size ${m[1]}px is below the 12px UI minimum`);
 }
 // 12px is the guide's own button padding (12px 24px).
-const SCALE = new Set([0, 4, 8, 12, 16, 24, 32, 48, 64, 40]);
+// Owner-specified values, allowed explicitly (BTF-CDM-MAP-ITIN): 30px and 5px are the home map group's outer
+// spacing (30px sides, 5px top and bottom); 44px is the itinerary number-badge column and touch-target size.
+const SCALE = new Set([0, 4, 8, 12, 16, 24, 32, 48, 64, 40, 30, 5, 44]);
 for (const m of css.matchAll(
   /(?:^|[;{}])\s*((?:padding|margin|gap|row-gap|column-gap)(?:-[a-z]+)?)\s*:\s*([^;}]+)/g,
 )) {
