@@ -775,6 +775,33 @@
    "key": "Elevation Unit",
    "cell": "L7",
    "value": "ft"
+  },
+  {
+   "path": "columnHeaders.route",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 8,
+   "header": "Approved Text",
+   "key": "Column header route",
+   "cell": "L8",
+   "value": "Route"
+  },
+  {
+   "path": "columnHeaders.distance",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 9,
+   "header": "Approved Text",
+   "key": "Column header distance",
+   "cell": "L9",
+   "value": "Distance / Elevation"
+  },
+  {
+   "path": "columnHeaders.sights",
+   "tab": "CDM_Itinerary_for_BTF_Site",
+   "row": 10,
+   "header": "Approved Text",
+   "key": "Column header sights",
+   "cell": "L10",
+   "value": "Sights"
   }
  ]
 }

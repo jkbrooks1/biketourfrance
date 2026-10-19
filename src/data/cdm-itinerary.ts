@@ -29,6 +29,7 @@ export const ITINERARY: {
   lodgingLabel: string;
   distanceUnit: string;
   elevationUnit: string;
+  columnHeaders: { route: string; distance: string; sights: string };
   days: ItineraryDay[];
 } = {
   "tab": "CDM_Itinerary_for_BTF_Site",
@@ -38,6 +39,11 @@ export const ITINERARY: {
   "lodgingLabel": "Where we'll stay",
   "distanceUnit": "mi",
   "elevationUnit": "ft",
+  "columnHeaders": {
+    "route": "Route",
+    "distance": "Distance / Elevation",
+    "sights": "Sights"
+  },
   "days": [
     {
       "id": "1",
