@@ -48,8 +48,8 @@ Future dependency: renaming the tab, renaming a header, or reordering rows fails
 The home page map group is one row with the canal map on the left and the France locator on the right.
 
 - Assets (committed in `src/assets/photos/`, rendered through `Photo.astro`): `canal-des-deux-mers-illustrated-map.png` (sha256 `b8f992127919d88bda81ebe6acd47456805dac9eca3938fc90e37e48aa9575b2`, 2058x764) and `btf-cdm-france-locator-map.png` (sha256 `990e78ecd0e6b8f5a98a560313d3e0ae7da86b6834032f5f7c913c3b4f29d41c`, 1254x1254, copied byte for byte from the Drive copy `BTF_Marketing/Artwork/Illustrations/BTF_CDM_France_Locator_Map.png`). Do not recompress or resize the sources. `astro.config.mjs` omits both unreferenced original PNGs from `dist`.
-- Layout rule: canal map 80% and locator 20% of the row's content box, zero gap, so the locator is exactly 1:4 of the canal map width. Both keep their aspect ratios. The locator is vertically centered against the canal map. The side-by-side arrangement holds at every viewport width, phones included.
-- Outer spacing: 30px left and right, 5px top and bottom. No border, frame, background, shadow, caption or title. The locator has `alt=""` (decorative; no approved alt copy exists).
+- Layout rule: the locator is 20% of the canal map's rendered width (1:5). The row is filled with zero gap: canal map 5/6 and locator 1/6 of the map group's content box. The locator sits on the right and is top-aligned (its top edge equals the canal map's top edge). Both keep their aspect ratios. The side-by-side arrangement holds at every viewport width, phones included. Expected widths: 1440 px canal 1150 / locator 230; 1024 px 803.33 / 160.67; 768 px 590 / 118; 390 px 275 / 55 (±1 px).
+- Outer spacing: 30px left and right, 5px top and bottom. No border, frame, background, shadow, caption or title. The locator is decorative: `alt=""` (no approved alt copy exists).
 - `scripts/cdm-itinerary-ui-audit.py` measures all of this at 1440, 1024, 768 and 390 px.
 
 ## Local validation and preview
