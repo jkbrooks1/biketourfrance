@@ -4,7 +4,7 @@
 
 export const COPY = {
   metaDescription: "We help cyclists build extraordinary, self-supported bike tours in France!",
-  footerPolicies: "Privacy Policy: We collect email and calendar data for webinar registration and scheduling. Data is stored securely and never shared with third parties. Terms of Service: By using our site, you agree to follow all applicable laws and accept our liability limits. BikeTourFrance.net provides advisory services without warranties; users are responsible for their own tour planning and execution. Cookie Policy: We use cookies to track site usage and improve your experience. By continuing to use this site, you consent to cookie usage as required by GDPR and CCPA. Disclaimer: All content is advisory only. We are not liable for injuries, equipment failure, or planning errors resulting from our guidance.",
+  footerPolicies: "Privacy Policy: This website does not let you reserve or pay for a tour space, has no user accounts, and has no analytics or advertising tools. If you join the waitlist or email us, we use your name, email address, and tour preferences to reply and to send the updates you asked for. We never sell or share your contact details. Terms of Service: By using our site, you agree to follow all applicable laws and accept our liability limits. BikeTourFrance.net provides advisory services without warranties; users are responsible for their own tour planning and execution. Cookie Policy: This website does not set cookies of its own. Sites we link to may set their own cookies once you open them. Disclaimer: All content is advisory only. We are not liable for injuries, equipment failure, or planning errors resulting from our guidance.",
   copyright: "© 2026 BikeTourFrance.net",
   smallCommercialBottom: "Small-group, self-supported bicycle tours in France, led by me (John.) Eat. Sleep. Roll. Repeat.",
   footerNav: {
@@ -80,7 +80,7 @@ export const COPY = {
     body: "We could not find that page. It may have moved, or the link may be mistyped.",
     homeCta: "Back to the home page",
     resourcesCta: "Resources",
-    footerNote: "Staging site. Not indexed."
+    footerNote: "Still lost? Write to contact@biketourfrance.net."
   }
 } as const;
 
@@ -88,7 +88,7 @@ export const TEXT: Record<string, string> = {
   "/404-page/body_1": "These pages can help:",
   "/404-page/meta_description": "That page is not on the BikeTourFrance.net website. Use these links to find the tour, resources, or contact page.",
   "/404/body": "We could not find that page. It may have moved, or the link may be mistyped.",
-  "/404/footer_note": "Staging site. Not indexed.",
+  "/404/footer_note": "Still lost? Write to contact@biketourfrance.net.",
   "/404/heading": "Page not found",
   "/404/home_cta": "Back to the home page",
   "/404/resources_cta": "Resources",
@@ -353,7 +353,7 @@ export const TEXT: Record<string, string> = {
   "/footer/copyright": "© 2026 BikeTourFrance.net",
   "/footer/nav_explore_heading": "Explore",
   "/footer/nav_legal_heading": "Legal",
-  "/footer/policies": "Privacy Policy: We collect email and calendar data for webinar registration and scheduling. Data is stored securely and never shared with third parties. Terms of Service: By using our site, you agree to follow all applicable laws and accept our liability limits. BikeTourFrance.net provides advisory services without warranties; users are responsible for their own tour planning and execution. Cookie Policy: We use cookies to track site usage and improve your experience. By continuing to use this site, you consent to cookie usage as required by GDPR and CCPA. Disclaimer: All content is advisory only. We are not liable for injuries, equipment failure, or planning errors resulting from our guidance.",
+  "/footer/policies": "Privacy Policy: This website does not let you reserve or pay for a tour space, has no user accounts, and has no analytics or advertising tools. If you join the waitlist or email us, we use your name, email address, and tour preferences to reply and to send the updates you asked for. We never sell or share your contact details. Terms of Service: By using our site, you agree to follow all applicable laws and accept our liability limits. BikeTourFrance.net provides advisory services without warranties; users are responsible for their own tour planning and execution. Cookie Policy: This website does not set cookies of its own. Sites we link to may set their own cookies once you open them. Disclaimer: All content is advisory only. We are not liable for injuries, equipment failure, or planning errors resulting from our guidance.",
   "/footer/small_commercial_bottom": "Small-group, self-supported bicycle tours in France, led by me (John.) Eat. Sleep. Roll. Repeat.",
   "/gallery/heading": "Tour Gallery",
   "/header/logo_text": "BikeTourFrance.net",
@@ -412,7 +412,7 @@ export const TEXT: Record<string, string> = {
   "/privacy/body_2": "Web servers normally record technical details of each visit, such as the page requested and the visitor IP address. This website is hosted on Cloudflare Pages, which handles those records. We do not receive a copy of them through this website.",
   "/privacy/body_3": "The Resources page plays audio files from BikeTourFrance.net via your browser when you press play. Audio files may also be downloaded by pressing \"download.\" It also links to Google Docs and Google Sheets and to other websites. Those sites have their own privacy practices.",
   "/privacy/data_retention": "We retain your consent records and personal data only for as long as you wish to remain on our list. You can withdraw your consent and request data deletion at any time by replying 'Unsubscribe' to any of our emails, or by contacting us directly.",
-  "/privacy/frag_1": "This website has no sign-up form, no account system, and no analytics or advertising tools. It does not set cookies of its own. See the",
+  "/privacy/frag_1": "This website does not let you reserve or pay for a tour space, has no user accounts, and has no analytics or advertising tools. It does not set cookies of its own. See the",
   "/privacy/frag_2": "Cookies page",
   "/privacy/frag_3": "If you write to us,",
   "/privacy/frag_4": "we receive your message and your email address in our BikeTourFrance.net email account. We use them to reply to you. Nothing in this website code sends your message anywhere else. Your contact info will not be shared or sold",
