@@ -2,16 +2,9 @@
 import { TEXT } from '../data/approved-copy';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-// 2027 Tour Waitlist page. Static form that POSTs JSON to the n8n intake webhook
-// (workflow "v0001 BTF 2027 Waitlist Intake"). No build-time data fetching.
-// Staging protections: noindex meta via SITE.indexingEnabled, X-Robots-Tag via site/_headers, robots.txt.
-// Remove the noindex meta only at launch, after the owner approves the copy and the cutover.
-//
-// Build-time setting (optional): PUBLIC_WAITLIST_WEBHOOK_URL overrides the webhook URL below.
-// The URL is public by design: it is visible to every visitor's browser.
-const webhookUrl =
-  import.meta.env.PUBLIC_WAITLIST_WEBHOOK_URL ||
-  'https://n8n.biketourfrance.net/webhook/btf-waitlist-2027-intake';
+// 2027 Tour Waitlist staging page. It POSTs the governed JSON contract to the
+// inactive T06 test webhook. No build-time data fetching and no production intake.
+const webhookUrl = 'https://n8n.biketourfrance.net/webhook-test/btf-waitlist-2027-intake';
 
 const consentNotice = TEXT['/waitlist/consent_notice'];
 
@@ -21,6 +14,9 @@ const pagePath = '/waitlist-2027/';
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription} path={pagePath}>
+  <Fragment slot="head">
+    <meta name="robots" content="noindex, nofollow" />
+  </Fragment>
   <style>
     .waitlist-hero {
       background: var(--green);
@@ -122,20 +118,18 @@ const pagePath = '/waitlist-2027/';
         <p class="waitlist-error" id="email-error" aria-live="polite"></p>
       </div>
 
-      <fieldset class="waitlist-fieldset" aria-describedby="interest-error">
+      <fieldset class="waitlist-fieldset" aria-describedby="tour_interest-error">
         <legend class="waitlist-legend">{TEXT['/waitlist/frag_2']}</legend>
-        <div class="waitlist-choice"><input type="radio" id="interest-spring" name="interest" value="Spring 2027" required /><label class="waitlist-choice-label" for="interest-spring">{TEXT['/waitlist/frag_3']}</label></div>
-        <div class="waitlist-choice"><input type="radio" id="interest-fall" name="interest" value="Fall 2027" /><label class="waitlist-choice-label" for="interest-fall">{TEXT['/waitlist/frag_4']}</label></div>
-        <div class="waitlist-choice"><input type="radio" id="interest-either" name="interest" value="Either" /><label class="waitlist-choice-label" for="interest-either">{TEXT['/waitlist/label_2']}</label></div>
-        <p class="waitlist-error" id="interest-error" aria-live="polite"></p>
+        <div class="waitlist-choice"><input type="radio" id="interest-spring" name="tour_interest" value="Spring 2027" required /><label class="waitlist-choice-label" for="interest-spring">{TEXT['/waitlist/frag_3']}</label></div>
+        <div class="waitlist-choice"><input type="radio" id="interest-fall" name="tour_interest" value="Fall 2027" /><label class="waitlist-choice-label" for="interest-fall">{TEXT['/waitlist/frag_4']}</label></div>
+        <div class="waitlist-choice"><input type="radio" id="interest-either" name="tour_interest" value="Either" /><label class="waitlist-choice-label" for="interest-either">{TEXT['/waitlist/label_2']}</label></div>
+        <p class="waitlist-error" id="tour_interest-error" aria-live="polite"></p>
       </fieldset>
 
-      <div class="waitlist-field">
-        <div class="waitlist-choice">
-          <input type="checkbox" id="marketing_consent" name="marketing_consent" />
-          <label class="waitlist-choice-label" for="marketing_consent">{TEXT['/waitlist/label_3']}</label>
-        </div>
-      </div>
+      <input type="hidden" name="offer_id" value="btf-2027-tours-waitlist" />
+      <input type="hidden" name="marketing_consent" value="true" />
+      <input type="hidden" name="consent_version" value="btf-marketing-consent-v1" />
+      <input type="hidden" name="source" value="biketourfrance.net-waitlist" />
 
       <div class="waitlist-hp" aria-hidden="true">
         <label class="waitlist-label" for="company_website">{TEXT['/waitlist/label_4']}</label>
@@ -169,11 +163,11 @@ const pagePath = '/waitlist-2027/';
         var ok = true;
         var firstName = form.elements.first_name.value.trim();
         var email = form.elements.email.value.trim();
-        var interest = form.querySelector('input[name="interest"]:checked');
+        var tourInterest = form.querySelector('input[name="tour_interest"]:checked');
         setError('first_name', firstName ? '' : 'Please enter your first name.');
         setError('email', emailPattern.test(email) && email.length <= 254 ? '' : 'Please enter a valid email address.');
-        document.getElementById('interest-error').textContent = interest ? '' : 'Please choose Spring 2027, Fall 2027, or Either.';
-        if (!firstName || !emailPattern.test(email) || email.length > 254 || !interest) ok = false;
+        document.getElementById('tour_interest-error').textContent = tourInterest ? '' : 'Please choose Spring 2027, Fall 2027, or Either.';
+        if (!firstName || !emailPattern.test(email) || email.length > 254 || !tourInterest) ok = false;
         return ok;
       }
 
@@ -182,7 +176,7 @@ const pagePath = '/waitlist-2027/';
         statusEl.textContent = '';
         statusEl.className = 'waitlist-status';
         if (!validate()) {
-          var firstInvalid = form.querySelector('[aria-invalid="true"]') || form.querySelector('input[name="interest"]');
+          var firstInvalid = form.querySelector('[aria-invalid="true"]') || form.querySelector('input[name="tour_interest"]');
           if (firstInvalid) firstInvalid.focus();
           return;
         }
@@ -190,9 +184,11 @@ const pagePath = '/waitlist-2027/';
         var payload = {
           first_name: form.elements.first_name.value.trim(),
           email: form.elements.email.value.trim(),
-          interest: form.querySelector('input[name="interest"]:checked').value,
-          marketing_consent: form.elements.marketing_consent.checked,
-          source: 'biketourfrance.net-waitlist',
+          offer_id: form.elements.offer_id.value,
+          tour_interest: form.querySelector('input[name="tour_interest"]:checked').value,
+          source: form.elements.source.value,
+          marketing_consent: form.elements.marketing_consent.value === 'true',
+          consent_version: form.elements.consent_version.value,
           company_website: form.elements.company_website.value
         };
 
