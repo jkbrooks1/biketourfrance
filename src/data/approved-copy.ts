@@ -335,7 +335,7 @@ export const TEXT: Record<string, string> = {
   "/contact/contact_email": "contact@biketourfrance.net",
   "/contact/email_cta": "Question? Send us an email",
   "/cookies/body_1": "What this website stores in your browser. Last updated October 2, 2026.",
-  "/cookies/body_2": "We use basic, essential cookies to ensure our website functions correctly and securely. We do not use invasive third-party tracking cookies, bot-tracking scripts (like reCAPTCHA), or cross-site advertising pixels. By using our site, you consent to these essential functional cookies.",
+  "/cookies/body_2": "This website does not set cookies of its own, and it runs no analytics or advertising tools.",
   "/cookies/body_3": "If analytics or marketing tools are added later, this page will be updated first, and the site will ask for your choice before any non-essential tool runs.",
   "/cookies/body_4": "Links on the Resources page lead to Google Docs, Google Sheets, and other websites. Those sites may set their own cookies once you open them.",
   "/cookies/heading_1": "Cookies and tracking on this site",
